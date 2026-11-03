@@ -1,0 +1,122 @@
+"""Command line: python -m wtl <command>.
+
+  analyze TITLE [--revid N] [--area A-I]   one article -> out/<article>/<revid>.json + .html
+  testset [--refresh]                      every article in data/articles.csv, then summary
+  render                                   rebuild HTML and summary from the stored JSON
+  verify-sanctions                         check every seed-list row against its link
+  check                                    totals, anonymity and reproducibility checks
+  spotcheck [--n 20] [--seed 1]            sentence-level authorship hand-check helper
+"""
+
+import argparse
+import csv
+import json
+import sys
+
+from . import checks, pipeline
+from .config import ARTICLES_CSV, OUT_DIR
+from .report import html, json_writer, summary
+
+TESTSET = OUT_DIR / "testset.json"
+
+
+def article_rows():
+    with open(ARTICLES_CSV, newline="", encoding="utf-8") as f:
+        return list(csv.DictReader(f))
+
+
+def area_for(title: str) -> str:
+    for r in article_rows():
+        if r["title"].lower() == title.lower():
+            return r["topic_area"]
+    return ""
+
+
+def write_outputs(rec: dict, baseline=None) -> None:
+    p = json_writer.write(rec)
+    p.with_suffix(".html").write_text(
+        html.render(rec, baseline, summary_href="../summary.html" if TESTSET.exists() else None),
+        encoding="utf-8")
+    print(f"wrote {p} and {p.with_suffix('.html').name}")
+
+
+def cmd_analyze(a):
+    area = a.area if a.area is not None else area_for(a.title)
+    rec = pipeline.analyse(a.title, a.revid, area=area)
+    if not a.area and not area:
+        area = area_for(rec["article"])
+        if area:
+            rec = pipeline.analyse(revid=rec["revision"], area=area)
+    write_outputs(rec)
+
+
+def load_testset():
+    if not TESTSET.exists():
+        return {}
+    return json.loads(TESTSET.read_text(encoding="utf-8"))
+
+
+def cmd_testset(a):
+    pinned = {} if a.refresh else load_testset()
+    entries = {}
+    for row in article_rows():
+        t = row["title"]
+        print(f"[{row['group']}] {t}", file=sys.stderr)
+        revid = pinned.get(t, {}).get("revision")
+        rec = pipeline.analyse(t, revid, area=row["topic_area"])
+        json_writer.write(rec)
+        entries[t] = {"article": rec["article"], "revision": rec["revision"],
+                      "group": row["group"], "topic_area": row["topic_area"]}
+    OUT_DIR.mkdir(parents=True, exist_ok=True)
+    TESTSET.write_text(json.dumps(entries, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    cmd_render(a)
+
+
+def stored_records():
+    recs, groups = [], {}
+    for t, e in load_testset().items():
+        p = OUT_DIR / json_writer.slug(e["article"]) / f"{e['revision']}.json"
+        rec = json.loads(p.read_text(encoding="utf-8"))
+        rec["_href"] = f"{json_writer.slug(e['article'])}/{e['revision']}.html"
+        recs.append(rec)
+        groups[rec["article"]] = e["group"]
+    return recs, groups
+
+
+def cmd_render(a):
+    recs, groups = stored_records()
+    base = summary.baseline(recs, groups)
+    for r in recs:
+        clean = {k: v for k, v in r.items() if not k.startswith("_")}
+        b = base if groups[r["article"]] == "topic" else summary.baseline(
+            [x for x in recs if x["article"] != r["article"]], groups)
+        p = OUT_DIR / json_writer.slug(r["article"]) / f"{r['revision']}.html"
+        p.write_text(html.render(clean, b, summary_href="../summary.html"), encoding="utf-8")
+    (OUT_DIR / "summary.html").write_text(summary.render(recs, groups), encoding="utf-8")
+    (OUT_DIR / "summary.json").write_text(
+        json.dumps(summary.summary_json(recs, groups), ensure_ascii=False, indent=1) + "\n",
+        encoding="utf-8")
+    print(f"rendered {len(recs)} reports and {OUT_DIR / 'summary.html'}")
+
+
+def main(argv=None):
+    ap = argparse.ArgumentParser(prog="wtl", description=__doc__,
+                                 formatter_class=argparse.RawDescriptionHelpFormatter)
+    sub = ap.add_subparsers(dest="cmd", required=True)
+    p = sub.add_parser("analyze")
+    p.add_argument("title")
+    p.add_argument("--revid", type=int)
+    p.add_argument("--area", help="topic area code (A-I, EE, SA); default from data/articles.csv")
+    p.set_defaults(fn=cmd_analyze)
+    p = sub.add_parser("testset")
+    p.add_argument("--refresh", action="store_true", help="re-pin every article to its latest revision")
+    p.set_defaults(fn=cmd_testset)
+    sub.add_parser("render").set_defaults(fn=cmd_render)
+    sub.add_parser("verify-sanctions").set_defaults(fn=lambda a: checks.verify_sanctions())
+    sub.add_parser("check").set_defaults(fn=lambda a: checks.run_checks(load_testset()))
+    p = sub.add_parser("spotcheck")
+    p.add_argument("--n", type=int, default=20)
+    p.add_argument("--seed", type=int, default=1)
+    p.set_defaults(fn=lambda a: checks.spotcheck(load_testset(), a.n, a.seed))
+    a = ap.parse_args(argv)
+    a.fn(a)
