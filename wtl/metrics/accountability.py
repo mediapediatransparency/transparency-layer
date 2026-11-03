@@ -16,12 +16,27 @@ def earliest(sanctions: list[Sanction]) -> Sanction | None:
     return min(sanctions, key=lambda s: (s.date, s.type)) if sanctions else None
 
 
-def word_timing(w: Word, s: Sanction, hist: History) -> str:
-    """'before' if the word's origin revision predates the sanction date, else 'after'."""
+def word_timing(w: Word, ss: list[Sanction] | Sanction, hist: History) -> str:
+    """When the word's origin revision was saved, relative to the editor's sanctions:
+    'before'      before the first sanction started;
+    'during'      while a sanction with a known end date was in force;
+    'during_open' while an open-ended sanction was in force with no end on record (it may have
+                  been lifted without our list recording it);
+    'after_ended' after a sanction started, but when none was in force;
+    'unknown'     the origin revision's date is not known."""
+    ss = [ss] if isinstance(ss, Sanction) else ss
     t = hist.time_of(w.o_rev_id)
     if t is None:
         return "unknown"
-    return "before" if t.date().isoformat() < s.date else "after"
+    d = t.date().isoformat()
+    if d < min(s.date for s in ss):
+        return "before"
+    active = [s for s in ss if s.date <= d and (not s.end or d < s.end)]
+    if any(s.end for s in active):
+        return "during"
+    if active:
+        return "during_open"
+    return "after_ended"
 
 
 def compute(words: list[Word], applicable: dict[str, list[Sanction]], hist: History) -> dict:
@@ -36,8 +51,7 @@ def compute(words: list[Word], applicable: dict[str, list[Sanction]], hist: Hist
             continue
         sanctioned += 1
         lead_sanctioned += w.lead
-        first = earliest(ss)
-        when = word_timing(w, first, hist)
+        when = word_timing(w, ss, hist)
         timing[when] += 1
         if w.lead:
             lead_timing[when] += 1
@@ -64,10 +78,16 @@ def compute(words: list[Word], applicable: dict[str, list[Sanction]], hist: Hist
                       for s in ("seed_list", "block_log")},
         "timing": {
             "added_before_sanction_words": timing["before"],
-            "added_after_sanction_words": timing["after"],
+            "added_after_sanction_words": timing["during"] + timing["during_open"] + timing["after_ended"],
+            "added_during_sanction_words": timing["during"],
+            "added_during_open_ended_sanction_words": timing["during_open"],
+            "added_after_sanction_ended_words": timing["after_ended"],
             "unknown_words": timing["unknown"],
             "lead_added_before_sanction_words": lead_timing["before"],
-            "lead_added_after_sanction_words": lead_timing["after"],
+            "lead_added_after_sanction_words": (lead_timing["during"] + lead_timing["during_open"]
+                                                + lead_timing["after_ended"]),
+            "lead_added_during_sanction_words": lead_timing["during"],
+            "lead_added_during_open_ended_sanction_words": lead_timing["during_open"],
         },
         "sanctioned_editors": len([k for k in applicable if applicable[k]]),
     }

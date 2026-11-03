@@ -61,14 +61,14 @@ def load_testset():
 
 def cmd_testset(a):
     pinned = {} if a.refresh else load_testset()
-    entries = {}
+    entries = dict(load_testset())   # keep batch-added articles; test-set rows are refreshed below
     for row in article_rows():
         t = row["title"]
         print(f"[{row['group']}] {t}", file=sys.stderr)
         revid = pinned.get(t, {}).get("revision")
         rec = pipeline.analyse(t, revid, area=row["topic_area"])
         json_writer.write(rec)
-        entries[t] = {"article": rec["article"], "revision": rec["revision"],
+        entries[t] = {**entries.get(t, {}), "article": rec["article"], "revision": rec["revision"],
                       "group": row["group"], "topic_area": row["topic_area"]}
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     TESTSET.write_text(json.dumps(entries, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")

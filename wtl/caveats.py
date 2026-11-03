@@ -84,14 +84,15 @@ def compute(rec: dict) -> list[dict]:
         })
 
     t = acc["timing"]
-    if t["added_after_sanction_words"]:
+    if t.get("added_during_open_ended_sanction_words"):
         out.append({
-            "code": "text_after_sanction",
+            "code": "open_ended_sanctions",
             "applies_to": "timing",
-            "text": ("Some text was added after its editor's sanction date. This can be an edit "
-                     "the ban forbade, but also text restored by someone else, an edit outside "
-                     "the ban's scope, or a ban that had already ended. Check the linked diffs "
-                     "before drawing conclusions."),
+            "text": ("Indefinite sanctions are counted as in force from their start date unless "
+                     "the list records that they were lifted or overturned on appeal. Some may "
+                     "have ended without that being recorded yet, so part of the “while an "
+                     "open-ended sanction was in force” figure may belong under “after the "
+                     "sanctions had ended”."),
         })
 
     q = rec["quality"]

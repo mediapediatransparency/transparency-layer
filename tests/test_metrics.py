@@ -78,3 +78,29 @@ def test_block_classification():
     assert sanc.classify_block({**base, "reason": "Disruptive editing"}) is None
     assert sanc.classify_block({**base, "reason": "sock", "expiry": "2025-01-01T00:00:00Z"}) is None
     assert sanc.classify_block({**base, "reason": "sock", "partial": True}) is None
+
+
+def test_sanction_end_dates():
+    assert sanc.end_from_duration("2024-01-31", "1 month") == "2024-02-29"
+    assert sanc.end_from_duration("2024-03-01", "90 days") == "2024-05-30"
+    assert sanc.end_from_duration("2024-03-01", "6 months and 500 edits") == "2024-09-01"
+    assert sanc.end_from_duration("2023-01-01", "until 2023-08-31") == "2023-08-31"
+    assert sanc.end_from_duration("2023-01-01", "indefinite") == ""
+    assert sanc.end_from_duration("2023-01-01", "not stated") == ""
+
+
+def test_timing_during_versus_after_ban_ended():
+    # HIST has revisions dated so that W(...,10) is before 2020-02-01 and W(...,40) after it.
+    fixed = sanc.Sanction("x", "topic_ban", "A-I", "1 day", "2020-02-01", "AE", "https://x",
+                          "seed_list", "2020-02-02", "duration")
+    w_after = W("u1", 40)
+    t = HIST.time_of(40).date().isoformat()
+    long = sanc.Sanction("x", "topic_ban", "A-I", "until", "2020-02-01", "AE", "https://x",
+                         "seed_list", "2999-01-01", "duration")
+    openended = sanc.Sanction("x", "topic_ban", "A-I", "indefinite", "2020-02-01", "AE",
+                              "https://x", "seed_list")
+    assert accountability.word_timing(W("u1", 10), [fixed], HIST) == "before"
+    assert accountability.word_timing(w_after, [long], HIST) == "during"
+    assert accountability.word_timing(w_after, [openended], HIST) == "during_open"
+    if t >= "2020-02-02":
+        assert accountability.word_timing(w_after, [fixed], HIST) == "after_ended"

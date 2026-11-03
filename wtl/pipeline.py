@@ -98,8 +98,11 @@ def analyse(title: str | None = None, revid: int | None = None, area: str = "",
 
     # --- editors ---
     top_revs = defaultdict(Counter)
+    by_year = defaultdict(Counter)
     for w in words:
         top_revs[w.editor][w.o_rev_id] += 1
+        t = hist.time_of(w.o_rev_id)
+        by_year[w.editor][str(t.year) if t else "unknown"] += 1
     editors = []
     for k, label in sorted(labels.items(), key=lambda kv: int(kv[1].split()[1])):
         ss = applicable.get(k, [])
@@ -115,6 +118,8 @@ def analyse(title: str | None = None, revid: int | None = None, area: str = "",
             "sanctions": [s.public() for s in ss],
             "survival": au.survival_block(surv["per_editor"][k], surv["article"]),
             "top_revisions": revs,
+            # when this editor's surviving words were first added, by calendar year (UTC)
+            "added_by_year": dict(sorted(by_year[k].items())),
             "evidence": [diff_url(r) for r in revs] + [s.url for s in ss],
         })
 
@@ -133,9 +138,8 @@ def analyse(title: str | None = None, revid: int | None = None, area: str = "",
         by_rev = Counter(w.o_rev_id for w in ws)
         rev_order = sorted(by_rev, key=lambda r: (-by_rev[r], r))
         sw = [w for w in ws if w.editor in applicable]
-        before = sum(1 for w in sw
-                     if accountability.word_timing(w, accountability.earliest(applicable[w.editor]),
-                                                   hist) == "before")
+        timing = Counter(accountability.word_timing(w, applicable[w.editor], hist) for w in sw)
+        before = timing["before"]
         after = len(sw) - before
         sent_out.append({
             "id": s.id,
@@ -152,6 +156,7 @@ def analyse(title: str | None = None, revid: int | None = None, area: str = "",
             "added_before_sanction": (None if not sw or (before and after) else after == 0),
             "sanctioned_words_before": before,
             "sanctioned_words_after": after,
+            "sanctioned_words_during": timing["during"] + timing["during_open"],
         })
 
     conc = au.concentration(count)

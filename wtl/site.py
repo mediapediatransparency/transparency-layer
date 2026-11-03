@@ -25,6 +25,22 @@ WIKI = "https://en.wikipedia.org"
 
 GROUP_NAMES = {"topic": "Arab–Israeli conflict articles", "control": "comparison articles"}
 GROUP_ONE = {"topic": "Arab–Israeli conflict article", "control": "Comparison article"}
+MIN_PEERS = 3   # fewest other articles of the same kind before a "typical" figure is given
+
+
+def area_name(code):
+    from .candidates import AREAS
+    return AREAS.get(code, (code,))[0] if code else "No contentious topic area"
+
+
+def kind_name(kind, plural=True):
+    from .candidates import KIND_NAMES
+    n = KIND_NAMES.get(kind, "Other articles")
+    if plural:
+        return n
+    return {"journalist": "Journalist or commentator", "person": "Public figure",
+            "media": "News outlet or media", "organisation": "Organisation",
+            "idea": "Idea, ideology or movement", "event": "Event"}.get(kind, "Article")
 
 
 def cap(s):
@@ -91,7 +107,8 @@ footer .in{max-width:860px;margin:0 auto;padding:16px}
 @media (max-width:520px){h1{font-size:1.6rem}.bars .row{grid-template-columns:70px 1fr 48px}}
 """
 
-PAGES = [("index.html", "Home"), ("compare.html", "All articles"), ("editors.html", "Editors across articles"),
+PAGES = [("index.html", "Home"), ("compare.html", "All articles"), ("articles.html", "Which articles"),
+         ("editors.html", "Editors across articles"),
          ("how-it-works.html", "How it works"), ("objective.html", "Objective"),
          ("about.html", "About")]
 
@@ -142,9 +159,18 @@ def median(vals):
 class Context:
     """All records plus the typical (median) values per group, for comparisons."""
 
-    def __init__(self, recs, groups, patterns=None):
+    def __init__(self, recs, groups, patterns=None, areas=None, kinds=None, candidates=None):
         self.recs, self.groups, self.patterns = recs, groups, patterns
+        self.areas, self.kinds = areas or {}, kinds or {}
+        self.candidates = candidates or []
         self.by_group = {g: [r for r in recs if groups[r["article"]] == g] for g in GROUP_NAMES}
+
+    def peers(self, rec, same_area=True):
+        """Other analysed articles of the same kind (and, by default, the same area)."""
+        t = rec["article"]
+        k = self.kinds.get(t)
+        return [r for r in self.recs if r["article"] != t and self.kinds.get(r["article"]) == k
+                and (not same_area or self.areas.get(r["article"]) == self.areas.get(t))]
 
     def med(self, group, path):
         return median([get(r, path) for r in self.by_group[group]])
@@ -162,6 +188,8 @@ class Context:
         if sanction and rec is not None and any(c["code"] in THIN for c in rec.get("caveats", [])):
             return ("Not compared: the sanctions list for this article's area is not yet as "
                     "thorough as for the Arab–Israeli conflict.")
+        if rec is not None and self.kinds.get(rec["article"]):
+            return self.cmp_like(path, fmt, rec, sanction)
         nt, nc = len(self.by_group["topic"]), len(self.by_group["control"])
         bits = []
         t = self.med("topic", path)
@@ -175,6 +203,24 @@ class Context:
             out += (" Not compared with the comparison articles: their sanctions lists are not "
                     "yet as thorough.")
         return out.strip()
+
+
+    def cmp_like(self, path, fmt, rec, sanction):
+        """Like-for-like: the median over other analysed articles of the same kind, first in the
+        same topic area, then across all areas (sanction figures only where lists are thorough)."""
+        kind = self.kinds[rec["article"]]
+        bits = []
+        for same_area in (True, False):
+            ps = self.peers(rec, same_area)
+            if sanction:
+                ps = [r for r in ps if not any(c["code"] in THIN for c in r.get("caveats", []))]
+            m = median([get(r, path) for r in ps])
+            if m is None or len(ps) < MIN_PEERS:
+                continue
+            where = (f"in {area_name(self.areas.get(rec['article']))}" if same_area
+                     else "across all areas" + (" with thorough sanctions lists" if sanction else ""))
+            bits.append(f"{fmt(m)} for the {len(ps)} other {kind_name(kind).lower()} analysed {where}")
+        return ("Typical (median): " + "; ".join(bits) + ".") if bits else ""
 
 
 THIN = {"thin_sanctions_list", "no_topic_area"}
@@ -232,7 +278,10 @@ def article_page(rec, ctx: Context):
     date = rec["revision_timestamp"][:10]
     wp = f"{WIKI}/wiki/{title.replace(' ', '_')}"
     h = []
-    h.append(f"<p class='meta'>{escape(GROUP_ONE[group])} · "
+    kind = ctx.kinds.get(title)
+    label = (f"{kind_name(kind, plural=False)} · {area_name(ctx.areas.get(title))}" if kind
+             else GROUP_ONE.get(group, area_name(ctx.areas.get(title))))
+    h.append(f"<p class='meta'>{escape(label)} · "
              f"{link(wp, 'Read it on Wikipedia')}</p>")
     h.append(f"<h1>{escape(title)}</h1>")
     h.append(f"<p class='meta'>Figures describe the article as it stood on {escape(date)} "
@@ -266,11 +315,11 @@ def article_page(rec, ctx: Context):
              "shares below are shares of the article's current words.</p>")
     h.append("<div class='fig'>")
     h.append(fig(str(a["editors_for_50pct"]), "editors wrote half of the text",
-                 ctx.cmp("authorship.editors_for_50pct", fmt=lambda v: f"{v:g} editors")))
+                 ctx.cmp("authorship.editors_for_50pct", fmt=lambda v: f"{v:g} editors", rec=rec)))
     h.append(fig(p1(a["top_shares"]["1"]), "of the text is by the single largest contributor",
-                 ctx.cmp("authorship.top_shares.1")))
+                 ctx.cmp("authorship.top_shares.1", rec=rec)))
     h.append(fig(p1(a["top_shares"]["10"]), "of the text is by the top 10 editors together",
-                 ctx.cmp("authorship.top_shares.10")))
+                 ctx.cmp("authorship.top_shares.10", rec=rec)))
     h.append("</div>")
     h.append("<p class='small'>“Editors who wrote half” is the smallest number of editors whose "
              "words together make up half of the article's current text.</p>")
@@ -286,6 +335,25 @@ def article_page(rec, ctx: Context):
                  f"width:{w:.1f}%'></span></span><span class='v'>{p1(e['share'])}</span></div>")
     h.append("</div>")
 
+    h.append("<h3>When the largest contributors' text was added</h3>")
+    h.append("<p class='small'>For each of the ten largest contributors: the years in which "
+             "the words of theirs still in the article were first added, with the number of words "
+             "from each year. Years with under 1% of that editor's surviving words are grouped "
+             "as “other years”.</p>")
+    h.append("<div class='scroll'><table><tr><th>Editor</th><th class='n'>Words</th>"
+             "<th>First added, by year</th></tr>")
+    for e in top:
+        yrs = e.get("added_by_year") or {}
+        tot = sum(yrs.values()) or 1
+        main = [(y, n) for y, n in yrs.items() if n / tot >= 0.01]
+        rest = tot - sum(n for _, n in main)
+        cells = " · ".join(f"{escape(y)}: {num(n)}" for y, n in main)
+        if rest > 0 and yrs:
+            cells += f" · other years: {num(rest)}"
+        h.append(f"<tr><td>{escape(e['label'])}{' <span class=\'tag\'>sanctioned</span>' if e['sanctioned'] else ''}"
+                 f"</td><td class='n'>{num(e['words'])}</td><td class='small'>{cells or '–'}</td></tr>")
+    h.append("</table></div>")
+
     # ---- lead
     h.append("<h2>The opening section</h2>")
     h.append(f"<p>The opening section (Wikipedia calls it the lead) is the summary at the top. "
@@ -293,7 +361,7 @@ def article_page(rec, ctx: Context):
              f"{num(a['lead_words'])} words by {a['lead_editor_count']} editors.</p>")
     h.append("<div class='fig'>")
     h.append(fig(p1(lead["top_shares"]["3"]), "of the opening was written by its top 3 editors",
-                 ctx.cmp("authorship.lead.top_shares.3")))
+                 ctx.cmp("authorship.lead.top_shares.3", rec=rec)))
     h.append(fig(str(lead["editors_for_50pct"]), "editors wrote half of the opening"))
     h.append(fig(p1(acc["sanctioned_lead_share"]), "of the opening's words are by sanctioned editors",
                  ctx.cmp("authorship.sanctioned_lead_share", rec=rec)))
@@ -326,10 +394,21 @@ def article_page(rec, ctx: Context):
              f"</b></td><td class='n'><b>{p1(acc['sanctioned_lead_share'])}</b></td></tr>"
              "</table></div>")
     if tot_t:
-        h.append("<h3>Before or after the sanction</h3>")
-        h.append(f"<p>Of the words by sanctioned editors, {p1(t['added_before_sanction_words'] / tot_t)} "
-                 f"were added before that editor's first sanction and "
-                 f"{p1(t['added_after_sanction_words'] / tot_t)} after it.</p>")
+        h.append("<h3>When the sanctioned editors' text was added</h3>")
+        h.append("<p class='small'>Each word is dated by the edit that first added it, which was "
+                 "made by the sanctioned editor's own account.</p>")
+        h.append("<div class='scroll'><table><tr><th>Added</th><th class='n'>Words</th>"
+                 "<th class='n'>Share of their words</th></tr>")
+        for key, lbl in (("added_before_sanction_words", "Before the editor's first sanction"),
+                         ("added_during_sanction_words", "While a sanction with a set end date was in force"),
+                         ("added_during_open_ended_sanction_words",
+                          "While an open-ended sanction was in force (no end on record)"),
+                         ("added_after_sanction_ended_words", "After the editor's sanctions had ended")):
+            n = t.get(key)
+            if n is None:
+                continue
+            h.append(f"<tr><td>{lbl}</td><td class='n'>{num(n)}</td><td class='n'>{p1(n / tot_t)}</td></tr>")
+        h.append("</table></div>")
         h.append(caveats_for(rec, "timing"))
 
     # ---- survival
@@ -340,7 +419,7 @@ def article_page(rec, ctx: Context):
     h.append("<div class='fig'>")
     for key, lbl in (("48h", "still there after 2 days"), ("30d", "still there after 30 days"),
                      ("365d", "still there after a year")):
-        h.append(fig(p1(surv[key]["rate"]), lbl, ctx.cmp(f"authorship.survival_article.{key}.rate")))
+        h.append(fig(p1(surv[key]["rate"]), lbl, ctx.cmp(f"authorship.survival_article.{key}.rate", rec=rec)))
     h.append("</div>")
 
     # ---- editors table
@@ -359,9 +438,16 @@ def article_page(rec, ctx: Context):
         s30 = e["survival"]["30d"]
         surv_txt = "–" if s30["rate"] is None else p0(s30["rate"]) + (
             "" if s30["vs_article"] is None else f" <span class='small'>×{s30['vs_article']:.2f}</span>")
+        def period(s):
+            if s.get("end"):
+                how = " (lifted)" if s.get("end_basis") == "lifted" else ""
+                return f"{escape(s['date'])} to {escape(s['end'])}{how}"
+            return f"from {escape(s['date'])} (open-ended)"
         sanc = "<br>".join(
             f"<span class='tag'>{escape(TYPE_NAMES.get(s['type'], s['type']))}</span> "
-            f"{escape(s['date'])} {link(s['evidence'], 'decision')}" for s in e["sanctions"])
+            f"{period(s)} {link(s['evidence'], 'decision')}"
+            + (f" {link(s['lift_evidence'], 'lifted')}" if s.get("lift_evidence") else "")
+            for s in e["sanctions"])
         kind = "" if e["account_type"] == "registered" else f" <span class='small'>({escape(e['account_type'])})</span>"
         ev = " ".join(link(f"{WIKI}/w/index.php?diff=prev&oldid={r}", "edit") for r in e["top_revisions"])
         h.append(f"<tr><td>{escape(e['label'])}{kind}</td><td class='n'>{num(e['words'])}</td>"
@@ -382,8 +468,11 @@ def article_page(rec, ctx: Context):
                 authors += f", and {len(s['authors']) - 4} more"
             sanc = ""
             if s["author_sanctioned"]:
-                when = {True: "added before the sanction", False: "added after the sanction",
+                during = s.get("sanctioned_words_during", 0)
+                when = {True: "added before the sanction", False: "added after the sanction started",
                         None: "some before, some after"}[s["added_before_sanction"]]
+                if during:
+                    when += f"; {during} while a sanction was in force"
                 sanc = f"{s['sanctioned_words']} of {s['words']} <span class='small'>({when})</span>"
             out.append(f"<tr><td>{escape(s['text'])}</td><td class='small'>{authors}</td>"
                        f"<td class='small'>{sanc}</td><td class='small'>"
@@ -464,43 +553,144 @@ def fmt(v, kind):
     return p1(v) if kind == "pct" else f"{v:,.0f}"
 
 
+def _area_order(ctx):
+    from .candidates import AREAS
+    present = {ctx.areas.get(r["article"], "") for r in ctx.recs}
+    return [a for a in list(AREAS) + [""] if a in present]
+
+
+def _is_thin(r):
+    return any(c["code"] in THIN for c in r.get("caveats", []))
+
+
+TABLE_COLS = [
+    ("authorship.total_words", "Words", "int"),
+    ("authorship.editor_count", "Editors", "int"),
+    ("authorship.editors_for_50pct", "Half the text by", "int"),
+    ("authorship.top_shares.1", "Largest contributor", "pct"),
+    ("authorship.top_shares.10", "Top 10 editors", "pct"),
+    ("authorship.survival_article.30d.rate", "Still there after 30 days", "pct"),
+    ("authorship.sanctioned_share", "Text by sanctioned editors", "pct"),
+    ("accountability.sanctioned_editors", "Sanctioned editors", "int"),
+]
+
+
 def compare_page(ctx: Context):
-    cols = ctx.by_group["topic"] + ctx.by_group["control"]
-    h = ["<h1>All articles side by side</h1>",
-         "<p>Every figure is computed the same way for every article. The six Arab–Israeli "
-         "conflict articles are shown next to three comparison articles: two on other contested "
-         "subjects and one quiet science article. That way no figure is read in isolation.</p>",
+    order = _area_order(ctx)
+    h = ["<h1>All articles</h1>",
+         f"<p class='lede'>{len(ctx.recs):,} articles analysed so far, grouped by Wikipedia's "
+         "contentious topic area and, within each area, by kind of subject, so that people are "
+         "shown next to people and news outlets next to news outlets.</p>",
+         "<p>Every figure is computed the same way for every article. "
+         f"{link('articles.html', 'Which articles are included, and why')}.</p>",
          note("Sanction figures are only comparable between articles whose sanctions lists were "
-              "built equally thoroughly (last row). Where they were not, the figure is marked † "
-              "and no group median is given.", "Sanction figures"),
-         "<div class='scroll'><table><tr><th>Figure</th>"]
-    for r in cols:
-        h.append(f"<th class='n'><a href='articles/{slug(r['article'])}.html'>{escape(r['article'])}</a></th>")
-    h.append("<th class='n'>Typical, Arab–Israeli</th><th class='n'>Typical, comparison</th>"
-             "<th>What it means</th></tr>")
+              "built equally thoroughly. Where an area's list is not yet as thorough as the "
+              "Arab–Israeli conflict list, the figure is marked † and no median is given.",
+              "Sanction figures"),
+         "<p><b>Jump to:</b> " + " · ".join(
+             f"<a href='#area-{escape(a or 'none')}'>{escape(area_name(a))}</a>" for a in order)
+         + "</p>",
+         "<details><summary>What each column means</summary><dl>"]
     for path, name, kind, expl in COMPARE_ROWS:
-        sanction = path in SANCTION_PATHS
-        h.append(f"<tr><td>{escape(name)}</td>")
-        for r in cols:
-            mark = " †" if sanction and any(c["code"] in THIN for c in r.get("caveats", [])) else ""
-            h.append(f"<td class='n'>{fmt(get(r, path), kind)}{mark}</td>")
-        med = {g: ("not compared" if sanction and ctx.thin(g) else fmt(ctx.med(g, path), kind))
-               for g in ("topic", "control")}
-        h.append(f"<td class='n'><b>{med['topic']}</b></td><td class='n'><b>{med['control']}</b></td>"
-                 f"<td class='expl'>{escape(expl)}</td></tr>")
-    h.append("<tr><td>Version analysed</td>" + "".join(
-        f"<td class='n small'>{link(r['permalink'], r['revision_timestamp'][:10])}</td>" for r in cols)
-        + "<td></td><td></td><td></td></tr></table></div>")
+        if expl:
+            h.append(f"<dt><b>{escape(name)}</b></dt><dd>{escape(expl)}</dd>")
+    h.append("<dt><b>Typical</b></dt><dd>The median: the middle value of the articles in that "
+             "table. Given only when the table has at least four articles.</dd></dl></details>")
+    head = ("<tr><th>Article</th>" + "".join(f"<th class='n'>{escape(n)}</th>" for _, n, _ in TABLE_COLS)
+            + "</tr>")
+    for a in order:
+        in_area = [r for r in ctx.recs if ctx.areas.get(r["article"], "") == a]
+        h.append(f"<h2 id='area-{escape(a or 'none')}'>{escape(area_name(a))} "
+                 f"<span class='small'>({len(in_area)} articles)</span></h2>")
+        from .candidates import KINDS
+        for kind in KINDS + [""]:
+            rows = sorted((r for r in in_area if (ctx.kinds.get(r["article"]) or "") == kind),
+                          key=lambda r: r["article"])
+            if not rows:
+                continue
+            h.append(f"<h3>{escape(kind_name(kind))}</h3><div class='scroll'><table>{head}")
+            for r in rows:
+                h.append(f"<tr><td><a href='articles/{slug(r['article'])}.html'>{escape(r['article'])}</a></td>")
+                for path, _, k in TABLE_COLS:
+                    mark = " †" if path in SANCTION_PATHS and _is_thin(r) else ""
+                    h.append(f"<td class='n'>{fmt(get(r, path), k)}{mark}</td>")
+                h.append("</tr>")
+            if len(rows) > MIN_PEERS:
+                h.append("<tr><td><b>Typical (median)</b></td>")
+                for path, _, k in TABLE_COLS:
+                    if path in SANCTION_PATHS and any(_is_thin(r) for r in rows):
+                        h.append("<td class='n small'>not compared</td>")
+                    else:
+                        h.append(f"<td class='n'><b>{fmt(median([get(r, path) for r in rows]), k)}</b></td>")
+                h.append("</tr>")
+            h.append("</table></div>")
     h.append("<p class='small'>† Sanctions list for this article's area not yet as thorough as "
              "for the Arab–Israeli conflict (or the article is in no sanctioned area), so the "
-             "figure is likely an undercount. Medians for sanction figures are not shown for a "
-             "group containing such articles.</p>")
-    h.append("<p class='small'>“Typical” is the median: the middle value of the group. With "
-             "only six and three articles, treat the comparison as a first indication, not a "
-             "measurement of whole topic areas.</p>")
+             "figure is likely an undercount.</p>")
     h.append(f"<p class='small'>{link('data/summary.json', 'All figures as JSON')}.</p>")
     return page(f"All articles · {NAME}", "".join(h), "compare.html",
-                json_alt="data/summary.json", description="Wikipedia articles compared side by side.")
+                json_alt="data/summary.json", description="Wikipedia articles compared, like with like.")
+
+
+def choose_page(ctx: Context):
+    from .candidates import AREAS, KINDS
+    done = {r["article"] for r in ctx.recs}
+    where = {r["article"]: ctx.areas.get(r["article"], "") for r in ctx.recs}
+    cands = ctx.candidates
+    h = ["<h1>Which articles, and why</h1>",
+         "<p class='lede'>Articles are chosen by a fixed rule, not by hand, so the selection does "
+         "not depend on what anyone expects to find.</p>",
+         "<h2>The rule</h2><ol>",
+         "<li><b>Contentious topic areas.</b> Wikipedia itself marks articles in subject areas "
+         "where editing is under special rules (for example the Arab–Israeli conflict, US "
+         "politics, gender and sexuality, Eastern Europe). It does this with notices on the "
+         "articles' talk pages. Every article carrying such a notice is a candidate.</li>",
+         "<li><b>Kind of subject.</b> Each candidate is classed as a journalist or commentator, "
+         "another public figure, a news outlet, an organisation, an idea or movement, or an event, "
+         "using Wikidata (Wikipedia's sister database). Articles that fit none of these, and "
+         "“List of…” articles, are left out.</li>",
+         "<li><b>Most read.</b> In each area, for each kind, the 25 articles with the most page "
+         "views over the previous 60 days are chosen.</li>",
+         "<li><b>On request.</b> A few articles are added on request. They are marked as such.</li>",
+         "</ol>",
+         note("Wikidata's classification is used as it stands, and is sometimes surprising (for "
+              "example, an ideology recorded as an organisation). An article can appear in more "
+              "than one area; it is analysed once and listed in each.", "About the classes"),
+         f"<p>{len(done):,} articles analysed so far; the rest are queued and are analysed in "
+         "batches.</p>",
+         "<p><b>Jump to:</b> " + " · ".join(
+             f"<a href='#list-{escape(a)}'>{escape(n)}</a>" for a, (n, _) in AREAS.items()
+             if any(c["area"] == a for c in cands)) + "</p>"]
+    for a, (name, _) in AREAS.items():
+        in_area = [c for c in cands if c["area"] == a]
+        if not in_area:
+            continue
+        h.append(f"<h2 id='list-{escape(a)}'>{escape(name)}</h2>")
+        for kind in KINDS + [""]:
+            rows = [c for c in in_area if (c.get("kind") or "") == kind]
+            if not rows:
+                continue
+            of = next((c["of"] for c in rows if c.get("of")), "")
+            h.append(f"<h3>{escape(kind_name(kind))}"
+                     + (f" <span class='small'>(top {sum(1 for c in rows if c['reason'] == 'most-read')}"
+                        f" of {int(of):,} tagged)</span>" if of else "") + "</h3>")
+            h.append("<div class='scroll'><table><tr><th class='n'>Rank</th><th>Article</th>"
+                     "<th class='n'>Page views, 60 days</th><th>Status</th></tr>")
+            for c in rows:
+                t = c["title"]
+                if t in done:
+                    st = f"<a href='articles/{slug(t)}.html'>analysed</a>"
+                    if where.get(t) != a:
+                        st += f" <span class='small'>(shown under {escape(area_name(where.get(t)))})</span>"
+                else:
+                    st = "<span class='small'>queued</span>"
+                rank = c.get("rank") or "on request"
+                views = f"{int(c['views_60d']):,}" if c.get("views_60d") else "–"
+                h.append(f"<tr><td class='n'>{escape(str(rank))}</td><td>{escape(t)}</td>"
+                         f"<td class='n'>{views}</td><td>{st}</td></tr>")
+            h.append("</table></div>")
+    return page(f"Which articles · {NAME}", "".join(h), "articles.html",
+                description="How articles are chosen for analysis.")
 
 
 # ---------------------------------------------------------------- editors across articles
@@ -595,6 +785,7 @@ def editors_page(ctx: Context):
 
 # ---------------------------------------------------------------- home
 def home_page(ctx: Context):
+    from .candidates import KINDS
     h = [f"<h1>Who wrote what you read on Wikipedia?</h1>",
          "<p class='lede'>Wikipedia shows the current text of an article but not, at a glance, "
          "how it came to say it. This project works that out from Wikipedia's own public "
@@ -603,28 +794,26 @@ def home_page(ctx: Context):
          "<p>It does not judge whether articles are right or wrong, or whether editors are good "
          "or bad. It shows where the text came from, with a link to the evidence for every "
          f"number. {link('how-it-works.html', 'How it works')} · "
-         f"{link('objective.html', 'Why this matters for AI')}</p>"]
-    for g in ("topic", "control"):
-        h.append(f"<h2>{escape(cap(GROUP_NAMES[g]))}</h2>")
-        if g == "control":
-            h.append("<p class='small'>Included so the figures above can be compared with articles "
-                     "outside the Arab–Israeli topic area.</p>")
-        h.append("<div class='cards'>")
-        for r in ctx.by_group[g]:
-            a, acc = r["authorship"], r["accountability"]
-            c = acc.get("concentration")
-            extra = ""
-            if c and acc["sanctioned_editors"] > 1 and c["share_of_sanctioned_text"] >= 0.5:
-                extra = f" Most of it ({p0(c['share_of_sanctioned_text'])}) is from one editor."
-            h.append(f"<div class='card'><h3><a href='articles/{slug(r['article'])}.html'>"
-                     f"{escape(r['article'])}</a></h3>"
-                     f"<p>Half the text by <b>{a['editors_for_50pct']}</b> of {num(a['editor_count'])} editors.</p>"
-                     f"<p><b>{p1(acc['sanctioned_share'])}</b> of the words by "
-                     f"{acc['sanctioned_editors']} sanctioned editors.{escape(extra)}</p>"
-                     f"<p class='small'>As of {escape(r['revision_timestamp'][:10])}</p></div>")
-        h.append("</div>")
-    h.append(f"<p>{link('compare.html', 'See all figures side by side')}, with the comparison "
-             "articles and an explanation of each figure.</p>")
+         f"{link('articles.html', 'Which articles, and why')} · "
+         f"{link('objective.html', 'Why this matters for AI')}</p>",
+         f"<h2>Topic areas</h2><p>{len(ctx.recs):,} articles analysed so far.</p><div class='cards'>"]
+    queued = {}
+    done = {r["article"] for r in ctx.recs}
+    for c in ctx.candidates:
+        if c["title"] not in done:
+            queued.setdefault(c["area"], set()).add(c["title"])
+    for a in _area_order(ctx):
+        rows = [r for r in ctx.recs if ctx.areas.get(r["article"], "") == a]
+        counts = [(kind_name(k), sum(1 for r in rows if (ctx.kinds.get(r["article"]) or "") == k))
+                  for k in KINDS + [""]]
+        parts = " · ".join(f"{name} {n}" for name, n in counts if n)
+        q = len(queued.get(a, ()))
+        h.append(f"<div class='card'><h3><a href='compare.html#area-{escape(a or 'none')}'>"
+                 f"{escape(area_name(a))}</a></h3><p><b>{len(rows)}</b> analysed</p><p class='small'>{escape(parts)}</p>"
+                 + (f"<p class='small'>{q} more queued.</p>" if q else "") + "</div>")
+    h.append("</div>")
+    h.append(f"<p>{link('compare.html', 'See all articles and their figures')}, grouped like with "
+             "like, with an explanation of each figure.</p>")
     return page(NAME, "".join(h), "index.html",
                 description="Who wrote the text of Wikipedia articles, from Wikipedia's public records.")
 
@@ -672,8 +861,10 @@ def how_page(ctx: Context):
          "Wikipedia log, so they come from a hand-checked list built from Wikipedia's arbitration "
          "and enforcement records. Every entry links to the decision and quotes it. Site bans and "
          "sockpuppetry findings also come from Wikipedia's block log.</li>",
-         "<li><b>Compare.</b> The same figures are computed for comparison articles outside the "
-         "topic, so a number is never read without context.</li></ol>",
+         "<li><b>Compare like with like.</b> Each figure is shown next to the typical value for "
+         "other articles of the same kind (people with people, news outlets with news outlets), "
+         "first in the same topic area and then across all areas, so a number is never read "
+         "without context.</li></ol>",
          "<h2>What is and isn't AI</h2>",
          "<p>The analysis itself contains no AI model: it is counting and matching, the same each "
          "time it runs. AI was used in building the project: the code and the first drafts of "
@@ -723,8 +914,9 @@ def how_page(ctx: Context):
              "found, not that none exists. Article pages flag where this matters.</li>"
              "<li><b>A sanction is about conduct, not content.</b> It is a finding about how an editor "
              "behaved, not about the accuracy of any text they wrote.</li>"
-             "<li><b>Few comparison articles.</b> Three comparison articles give context, not a "
-             "full baseline for a topic area.</li>"
+             "<li><b>Comparisons are between analysed articles.</b> A “typical” figure is the "
+             "median of the other analysed articles of the same kind, which are the most-read "
+             "ones, not a sample of everything Wikipedia has on the subject.</li>"
              "<li><b>A snapshot.</b> Each page describes one version. Wikipedia keeps changing, "
              "and the date is shown on every page.</li></ul>")
     h.append(f"<p>Full method, definitions and code: {link(REPO, 'the project repository')}.</p>")
@@ -757,7 +949,8 @@ def objective_page():
          "one of AI's main sources more transparent, so that people and machines can judge "
          "for themselves.</p>",
          "<h2>Where it is going</h2><ol>"
-         "<li><b>Now:</b> authorship and sanctions for a test set of articles (this site).</li>"
+         "<li><b>Now:</b> authorship and sanctions for the most-read articles in Wikipedia's "
+         "contentious topic areas (this site).</li>"
          "<li><b>Next:</b> a free browser add-on that shows this panel on the Wikipedia page "
          "itself, plus edit wars, removed content and source inventories.</li>"
          "<li><b>Later:</b> who set Wikipedia's source ratings, coordination signals, and checks "
@@ -771,7 +964,7 @@ def about_page():
          f"<p class='lede'>{escape(NAME)} is an independent, non-commercial project that shows how "
          "Wikipedia articles came to say what they say.</p>",
          "<h2>Status</h2>",
-         "<p>This is an early prototype covering a small test set of articles. Figures and wording "
+         "<p>This is an early prototype. Articles are being added in batches. Figures and wording "
          "may change as the method is refined; every change to the code is public.</p>",
          "<h2>Independence</h2>",
          "<p>The project is not affiliated with Wikipedia or the Wikimedia Foundation and does not "
@@ -790,8 +983,18 @@ def build(recs, groups, areas=None, elsewhere=False, out_dir=None, kinds=None):
     # and swap it in, so the existing site stays in place until the new one is complete.
     clean = [{k: v for k, v in r.items() if not k.startswith("_")} for r in recs]
     from . import patterns as patterns_mod
-    pt = patterns_mod.compute(clean, groups, areas or {}, elsewhere=elsewhere, kinds=kinds)
-    ctx = Context(clean, groups, pt)
+    cands = []
+    from . import candidates as cd
+    if cd.CANDIDATES_CSV.exists():
+        import csv
+        with open(cd.CANDIDATES_CSV, newline="", encoding="utf-8") as f:
+            cands = list(csv.DictReader(f))
+    areas, kinds = dict(areas or {}), dict(kinds or {})
+    for c in cands:   # articles analysed before they were in the list get their kind from it
+        if c["title"] in areas and not kinds.get(c["title"]) and c["area"] == areas[c["title"]]:
+            kinds[c["title"]] = c["kind"]
+    pt = patterns_mod.compute(clean, groups, areas, elsewhere=elsewhere, kinds=kinds)
+    ctx = Context(clean, groups, pt, areas=areas, kinds=kinds, candidates=cands)
     final = SITE_DIR if out_dir is None else Path(out_dir)
     stage = final.with_name(final.name + ".new")
     if stage.exists():
@@ -812,6 +1015,7 @@ def _write(SITE_DIR, clean, ctx):
     shutil.copy(OUT_DIR / "summary.json", SITE_DIR / "data" / "summary.json")
     (SITE_DIR / "index.html").write_text(home_page(ctx), encoding="utf-8")
     (SITE_DIR / "compare.html").write_text(compare_page(ctx), encoding="utf-8")
+    (SITE_DIR / "articles.html").write_text(choose_page(ctx), encoding="utf-8")
     (SITE_DIR / "editors.html").write_text(editors_page(ctx), encoding="utf-8")
     (SITE_DIR / "how-it-works.html").write_text(how_page(ctx), encoding="utf-8")
     (SITE_DIR / "objective.html").write_text(objective_page(), encoding="utf-8")
