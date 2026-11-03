@@ -1,0 +1,80 @@
+# Nightly run in GitHub's cloud, so nothing depends on the maintainer's computer being on.
+#  1. If there is no article list yet, build it (`wtl candidates`); otherwise analyse the next
+#     batch of articles from it (`wtl batch`).
+#  2. Rebuild the website from all stored records and save the new records to the repository.
+#  3. Publish the website to GitHub Pages (only once the repository is public).
+# Downloaded Wikipedia data is kept between runs in the Actions cache, never in the repository.
+name: Nightly analysis
+on:
+  schedule:
+    - cron: "15 1 * * *"
+  workflow_dispatch:
+    inputs:
+      task:
+        description: "batch (next articles) or candidates (rebuild the article list)"
+        default: batch
+      n:
+        description: "articles per batch"
+        default: "25"
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+concurrency:
+  group: nightly
+  cancel-in-progress: false
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+    environment:
+      name: github-pages
+    env:
+      WTL_CONTACT: ${{ secrets.WTL_CONTACT }}
+      WTL_SECRET: ${{ secrets.WTL_SECRET }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Restore downloaded data
+        uses: actions/cache/restore@v4
+        with:
+          path: cache
+          key: wtl-cache-${{ github.run_id }}
+          restore-keys: wtl-cache-
+      - name: Unit tests
+        run: python -m pytest -q
+      - name: Build the article list or analyse the next batch
+        run: |
+          TASK="${{ github.event.inputs.task || 'batch' }}"
+          if [ "$TASK" = "candidates" ] || [ ! -f data/candidates.csv ]; then
+            python -m wtl candidates --per-kind 25
+          else
+            python -m wtl batch --n "${{ github.event.inputs.n || '25' }}"
+          fi
+      - name: Save downloaded data
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: cache
+          key: wtl-cache-${{ github.run_id }}
+      - name: Build the website
+        run: python -m wtl site --elsewhere
+      - name: Save new records to the repository
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data out
+          git diff --cached --quiet || git commit -m "Nightly analysis $(date -u +%F)"
+          git push
+      - name: Package the website
+        if: ${{ !github.event.repository.private }}
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - name: Publish the website
+        if: ${{ !github.event.repository.private }}
+        uses: actions/deploy-pages@v4

@@ -3,7 +3,7 @@
 import sys
 from collections import Counter, defaultdict
 
-from . import __version__, sanctions as sanc
+from . import __version__, caveats, sanctions as sanc
 from .config import WIKIWHO_URL
 from .fetch import cache, mediawiki as mw, wikiwho as ww
 from .metrics import accountability, authorship as au
@@ -217,6 +217,8 @@ def analyse(title: str | None = None, revid: int | None = None, area: str = "",
             "survival_tokens_without_history": surv["skipped_unknown_revision"],
         },
     }
+    record["accountability"]["concentration"] = caveats.sanctioned_concentration(record)
+    record["caveats"] = caveats.compute(record)
     if internals:
         return record, {"labels": labels, "who": who}
     return record

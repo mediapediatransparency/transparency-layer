@@ -5,3 +5,8 @@ cache/
 .pytest_cache/
 out/checks.json
 .wtl-contact
+.wtl-secret
+# Built output: regenerated from the JSON records on every run
+site/
+out/**/*.html
+out/site-preview/

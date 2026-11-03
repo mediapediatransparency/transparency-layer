@@ -7,7 +7,7 @@ import re
 from collections import Counter
 from html.parser import HTMLParser
 
-from . import pipeline
+from . import pipeline, site as site_mod
 from .config import OUT_DIR, ROOT, SANCTIONS_CSV
 from .fetch import mediawiki as mw
 from .report import html as html_mod, json_writer
@@ -131,6 +131,8 @@ def visible_text(html: str) -> str:
 
 
 TEMPLATE_TEXT = open(html_mod.__file__, encoding="utf-8").read()
+TEMPLATE_TEXT += open(site_mod.__file__, encoding="utf-8").read()
+SITE_DIR = site_mod.SITE_DIR
 
 
 def run_checks(testset: dict):
@@ -160,6 +162,12 @@ def run_checks(testset: dict):
         names = {h["user"] for h in mw.get_history(rev["pageid"], rec["revision"]) if h.get("user")}
         names |= sanction_names
         text = visible_text((d / f"{e['revision']}.html").read_text(encoding="utf-8"))
+        site_page = SITE_DIR / "articles" / f"{json_writer.slug(e['article'])}.html"
+        if site_page.exists():   # the public website's page for this article
+            text += " " + visible_text(site_page.read_text(encoding="utf-8"))
+        for extra in ("editors.html", "index.html", "compare.html"):
+            if (SITE_DIR / extra).exists():
+                text += " " + visible_text((SITE_DIR / extra).read_text(encoding="utf-8"))
         article_text = " ".join(s["text"] for s in rec["sentences"])
         hits, coincidental, too_short = [], [], 0
         for nm in names:
@@ -195,35 +203,63 @@ def run_checks(testset: dict):
     return ok_all
 
 
-# ---------------------------------------------------------------- check 1: hand-check helper
 class _Diff(HTMLParser):
+    """Words a MediaWiki diff inserted and removed.
+
+    A changed line comes as the old and new paragraph side by side, with the actual change wrapped
+    in <ins>/<del>; only those parts count. A wholly new or wholly removed line counts in full.
+    """
     def __init__(self):
         super().__init__()
-        self.added, self.deleted, self._cell = [], [], []
+        self.new_lines, self.ins, self.gone_lines, self.dels = [], [], [], []
+        self._side = None          # "a" or "d" while inside an added/deleted cell
+        self._buf, self._mark, self._depth = [], [], 0
 
     def handle_starttag(self, tag, attrs):
         if tag == "td":
             cls = dict(attrs).get("class", "")
-            self._cell.append("a" if "diff-addedline" in cls else
-                              "d" if "diff-deletedline" in cls else "")
+            self._side = ("a" if "diff-addedline" in cls else
+                          "d" if "diff-deletedline" in cls else None)
+            self._buf, self._mark, self._depth = [], [], 0
+        elif self._side and tag in ("ins", "del"):
+            self._depth += 1
 
     def handle_endtag(self, tag):
-        if tag == "td" and self._cell:
-            self._cell.pop()
+        if tag == "td" and self._side:
+            if self._mark:   # changed line: keep only the highlighted change
+                (self.ins if self._side == "a" else self.dels).append(" ".join(self._mark))
+            else:            # wholly new or wholly removed line
+                (self.new_lines if self._side == "a" else self.gone_lines).append(" ".join(self._buf))
+            self._side = None
+        elif self._side and tag in ("ins", "del") and self._depth:
+            self._depth -= 1
 
     def handle_data(self, data):
-        if self._cell and self._cell[-1] == "a":
-            self.added.append(data)
-        elif self._cell and self._cell[-1] == "d":
-            self.deleted.append(data)
+        if self._side:
+            self._buf.append(data)
+            if self._depth:
+                self._mark.append(data)
 
 
+# ---------------------------------------------------------------- check 1: hand-check helper
 def inserted_words(revid: int) -> Counter:
+    """Words this revision inserted. A wholly new line that closely matches a wholly removed one
+    is a moved paragraph and is skipped, so moving text does not count as writing it. (Netting all
+    removed words against all new ones would wrongly cancel new text in edits that also delete
+    a section.)"""
     c = mw.compare(revid)
     p = _Diff()
     p.feed(c.get("body", ""))
     words = lambda parts: Counter(re.findall(r"\w+", " ".join(parts).lower()))
-    return words(p.added) - words(p.deleted), c
+    gone = [words([g]) for g in p.gone_lines]
+    out = words(p.ins)
+    for line in p.new_lines:
+        w = words([line])
+        size = sum(w.values())
+        moved = size and any(sum((w & g).values()) >= 0.9 * max(size, sum(g.values())) for g in gone)
+        if not moved:
+            out += w
+    return out, c
 
 
 def spotcheck(testset: dict, n: int = 20, seed: int = 1):
@@ -258,7 +294,7 @@ def spotcheck(testset: dict, n: int = 20, seed: int = 1):
         key = f"u{uid}" if uid else f"n:{cmp.get('touser')}"
         rev_label = labels.get(key, "(editor has no surviving words)")
         same_editor = rev_label == s["authors"][0]
-        ok = frac >= expected - 0.15
+        ok = same_editor and frac >= expected - 0.15
         passed += ok
         rows.append((art, s, r, expected, frac, rev_label, same_editor, ok))
     lines = ["# Authorship hand-check", "",
@@ -266,9 +302,10 @@ def spotcheck(testset: dict, n: int = 20, seed: int = 1):
              "(6+ words) across the test set. For each, the revision credited with most of the "
              "sentence's words is opened as a diff against its parent, and the script counts how "
              "many of the sentence's words that diff inserted. *Expected* is the share of the "
-             "sentence WikiWho credits to that revision; the row passes if the diff inserts at "
-             "least that share, less 15 points (tokenisation differs slightly). *Editor of revision* "
-             "is the label of the account that saved it.", "",
+             "sentence WikiWho credits to that revision. The row passes if the account that saved "
+             "the revision is the credited author *and* the diff inserts at least that share, less "
+             "15 points (tokenisation differs slightly). *Editor of revision* is the label of the "
+             "account that saved it. Moved paragraphs are not counted as inserted.", "",
              f"**{passed} of {n} pass.**", "",
              "| # | Article | Sentence | Credited author | Revision | Editor of revision | "
              "Expected | Found in diff | Pass |", "|---|---|---|---|---|---|---|---|---|"]

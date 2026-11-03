@@ -6,6 +6,9 @@
   verify-sanctions                         check every seed-list row against its link
   check                                    totals, anonymity and reproducibility checks
   spotcheck [--n 20] [--seed 1]            sentence-level authorship hand-check helper
+  site                                     build the public website in site/ from the stored JSON
+  candidates [--per-kind 25]               choose articles by rule -> data/candidates.csv
+  batch [--n 25] [--area A-I]              analyse the next N candidates not yet done, then rebuild
 """
 
 import argparse
@@ -99,6 +102,62 @@ def cmd_render(a):
     print(f"rendered {len(recs)} reports and {OUT_DIR / 'summary.html'}")
 
 
+def cmd_site(a):
+    from . import site
+    recs, groups = stored_records()
+    areas = {e["article"]: e.get("topic_area") or "" for e in load_testset().values()}
+    kinds = {e["article"]: e.get("kind") or "" for e in load_testset().values()}
+    d = site.build(recs, groups, areas, elsewhere=a.elsewhere, kinds=kinds)
+    print(f"built site in {d} ({len(recs)} article pages); open {d / 'index.html'}")
+
+
+def cmd_candidates(a):
+    from . import candidates as cd
+    chosen, counts = cd.build(a.per_kind)
+    for area, (name, _) in cd.AREAS.items():
+        row = ", ".join(f"{cd.KIND_NAMES[k].split(',')[0].lower()} {counts.get((area, k), 0):,}"
+                        for k in cd.KINDS)
+        print(f"{area:4} {name}: {row}")
+    print(f"wrote {cd.CANDIDATES_CSV} ({len(chosen):,} articles)")
+
+
+def cmd_batch(a):
+    """Next N rule-chosen candidates, interleaved so each batch spans every kind: area order,
+    then rank, then kind. Results join out/testset.json, so the site and checks include them."""
+    from . import candidates as cd
+    with open(cd.CANDIDATES_CSV, newline="", encoding="utf-8") as f:
+        rows = list(csv.DictReader(f))
+    area_order = {k: i for i, k in enumerate(cd.AREAS)}
+    kind_order = {k: i for i, k in enumerate(cd.KINDS)}
+    rows.sort(key=lambda r: (area_order.get(r["area"], 99), r["reason"] != "requested",
+                             int(r["rank"] or 0), kind_order.get(r["kind"], 9)))
+    entries = load_testset()
+    done = {e["article"] for e in entries.values()} | set(entries)
+    todo = [r for r in rows if r["title"] not in done and (not a.area or r["area"] == a.area)]
+    picked = []
+    for r in todo:
+        if len(picked) >= a.n:
+            break
+        if any(p["title"] == r["title"] for p in picked):
+            continue
+        picked.append(r)
+    for i, r in enumerate(picked, 1):
+        print(f"[{i}/{len(picked)}] {r['area']} {r['kind']} {r['title']}", file=sys.stderr)
+        try:
+            rec = pipeline.analyse(r["title"], None, area=r["area"])
+        except Exception as e:   # one bad page must not stop the batch
+            print(f"  skipped: {e}", file=sys.stderr)
+            continue
+        json_writer.write(rec)
+        entries[r["title"]] = {"article": rec["article"], "revision": rec["revision"],
+                               "group": "topic" if r["area"] == "A-I" else r["area"],
+                               "topic_area": r["area"], "kind": r["kind"], "reason": r["reason"]}
+        TESTSET.write_text(json.dumps(entries, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    print(f"analysed {len(picked)}; {len(todo) - len(picked)} candidates left"
+          + (f" in {a.area}" if a.area else ""))
+    cmd_render(a)
+
+
 def main(argv=None):
     ap = argparse.ArgumentParser(prog="wtl", description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -112,6 +171,17 @@ def main(argv=None):
     p.add_argument("--refresh", action="store_true", help="re-pin every article to its latest revision")
     p.set_defaults(fn=cmd_testset)
     sub.add_parser("render").set_defaults(fn=cmd_render)
+    p = sub.add_parser("site")
+    p.add_argument("--elsewhere", action="store_true",
+                   help="also fetch each listed editor's recent edits across Wikipedia (slow)")
+    p.set_defaults(fn=cmd_site)
+    p = sub.add_parser("batch")
+    p.add_argument("--n", type=int, default=25)
+    p.add_argument("--area", help="only candidates from this area code")
+    p.set_defaults(fn=cmd_batch)
+    p = sub.add_parser("candidates")
+    p.add_argument("--per-kind", type=int, default=25)
+    p.set_defaults(fn=cmd_candidates)
     sub.add_parser("verify-sanctions").set_defaults(fn=lambda a: checks.verify_sanctions())
     sub.add_parser("check").set_defaults(fn=lambda a: checks.run_checks(load_testset()))
     p = sub.add_parser("spotcheck")

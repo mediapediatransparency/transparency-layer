@@ -147,3 +147,6 @@ above.
 - Run with `.venv/bin/python -m wtl --help`. Tests: `.venv/bin/python -m pytest`.
 - Set `WTL_CONTACT` (an email or URL) before fetching, so the User-Agent carries contact details.
 - See `README.md` for method definitions and `docs/phase1-results.md` for the check results.
+- Caveats that change how a figure reads are computed in `wtl/caveats.py` and stored in each record
+  (`caveats`, `accountability.concentration`). The public site is built by `wtl/site.py`
+  (`python -m wtl site` -> `site/`); `check` scans site pages for usernames too.

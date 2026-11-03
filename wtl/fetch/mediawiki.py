@@ -173,7 +173,9 @@ def compare(torev: int) -> dict:
     hit = cache.load(p)
     if hit is not None:
         return hit
-    data = api({"action": "compare", "torev": str(torev), "torelative": "prev",
+    # torelative is resolved against the from* revision; for "prev" the API swaps the two, so the
+    # result runs parent -> torev (a page's first revision comes back with no "from" side).
+    data = api({"action": "compare", "fromrev": str(torev), "torelative": "prev",
                 "prop": "diff|ids|user|timestamp"})
     out = data["compare"]
     cache.save(p, out)

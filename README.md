@@ -29,6 +29,7 @@ export WTL_CONTACT="you@example.org"        # required (or put it in a git-ignor
 | `verify-sanctions` | Open every row's link in `data/sanctions.csv` and confirm it; writes `docs/sanctions-verification.md`. |
 | `check` | Totals, anonymity and byte-for-byte reproducibility for the test set; writes `out/checks.json`. |
 | `spotcheck [--n 20] [--seed 1]` | Random sentences checked against the diff that added them; writes `docs/spotcheck.md`. |
+| `site` | Build the public website in `site/` (home, article pages, comparison, method, objective, about) from the stored JSON. Built and published nightly by `.github/workflows/nightly.yml`, which also analyses the next batch. |
 
 ## Method
 

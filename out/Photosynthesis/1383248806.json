@@ -8789,6 +8789,13 @@
    "seed_rows_in_topic_area": 0,
    "seed_rows_unresolved_accounts": 0,
    "block_log_snapshot": "2026-11-03"
+  },
+  "concentration": {
+   "editor": "Editor 5",
+   "words": 296,
+   "share_of_article": 0.040032,
+   "share_of_sanctioned_text": 0.89697,
+   "sanctioned_editors": 5
   }
  },
  "sentences": [
@@ -19807,5 +19814,22 @@
   "skipped_chars": 0,
   "words_outside_sentences": 0,
   "survival_tokens_without_history": 0
- }
+ },
+ "caveats": [
+  {
+   "code": "one_editor_dominates",
+   "applies_to": "sanctioned_share",
+   "text": "Most of this figure comes from one editor. Editor 5 alone wrote 4.0% of the article, which is 90% of all the text by sanctioned editors. Read it as one editor's contribution, not a pattern across many editors."
+  },
+  {
+   "code": "no_topic_area",
+   "applies_to": "sanctioned_share",
+   "text": "This article is not in a topic area under special sanctions, so only Wikipedia-wide bans and sockpuppetry findings can count here. Topic bans do not apply."
+  },
+  {
+   "code": "text_after_sanction",
+   "applies_to": "timing",
+   "text": "Some text was added after its editor's sanction date. This can be an edit the ban forbade, but also text restored by someone else, an edit outside the ban's scope, or a ban that had already ended. Check the linked diffs before drawing conclusions."
+  }
+ ]
 }
