@@ -15,7 +15,9 @@ usually name the body behind it (about, legal notice or imprint, privacy policy)
   Manager, Google AdSense, Facebook pixel, Yandex Metrica). Sites that carry the same account
   ID are run from the same account; this is how researchers find networks of websites;
 - the domain's registration date and registrant organisation from RDAP, where the registry
-  publishes them (an organisation's name only; a person's name is never recorded).
+  publishes them. A registrant name is kept only when it contains a word that marks an
+  organisation (ORG_WORD: Ltd, Inc, Foundation, Ministry, Media and so on), so a private
+  person's name is never recorded.
 
 Results are saved per site as soon as each site is done (cache/siteprobe/), so a run can stop
 and resume. `wtl siteprobe --batch N` probes the next N sites; `data/siteprobe.json` is
@@ -266,6 +268,16 @@ def extract(pages: list[dict]) -> dict:
 
 
 IANA_RDAP = "https://data.iana.org/rdap/dns.json"
+# a registrant is recorded only when its name contains one of these words, so that a private
+# person's name is never recorded
+ORG_WORD = re.compile(
+    r"\b(ltd|limited|inc|incorporated|llc|llp|plc|gmbh|ag|s\.?a\.?|s\.?r\.?l|b\.?v|n\.?v|pvt|pty|"
+    r"corp|corporation|company|co\.|group|holdings?|foundation|fund|trust|association|society|"
+    r"institute|institution|university|college|academy|council|committee|ministry|department|"
+    r"government|agency|authority|commission|office|centre|center|network|media|press|news|"
+    r"publishing|publishers?|broadcasting|radio|television|tv|party|union|federation|league|"
+    r"organi[sz]ation|ngo|church|mission|stiftung|verein|fondation|fundaci[oó]n|associa[cç][aã]o|"
+    r"société|sociedad|ООО|АО|ОАО|ЗАО|фонд|агентство|ltd\.)\b", re.I)
 _rdap_servers = None
 _rdap_lock = threading.Lock()
 _rdap_last = {}
@@ -327,7 +339,7 @@ def rdap(domain: str) -> dict | None:
         if "registrant" in (ent.get("roles") or []):
             for f in (ent.get("vcardArray") or [None, []])[1]:
                 # organisations only: a registrant's personal name is never recorded
-                if f[0] == "org" and isinstance(f[3], str) and f[3].strip():
+                if f[0] in ("org", "fn") and isinstance(f[3], str) and ORG_WORD.search(f[3]):
                     v = f[3].strip()
                     if not re.search(r"redacted|privacy|proxy|withheld|domains by proxy|whois", v, re.I):
                         out.setdefault("registrant", v[:EXCERPT])
@@ -436,6 +448,9 @@ def summary() -> dict:
         except (OSError, ValueError):
             continue
         if isinstance(x, dict) and x.get("domain"):
+            rd = x.get("rdap") or {}
+            if rd.get("registrant") and not ORG_WORD.search(rd["registrant"]):
+                x["rdap"] = {k: v for k, v in rd.items() if k != "registrant"}   # see ORG_WORD
             sites[x["domain"]] = x
     by_id = {}
     for dom, x in sites.items():
