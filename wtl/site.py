@@ -1754,8 +1754,11 @@ def websites_section(ctx, top=600):
                  "or more cited websites whose pages carry the same Google Analytics, Google Tag "
                  "Manager, AdSense, Facebook pixel or Yandex Metrica account ID. The same account "
                  "means the sites are measured or monetised from one account, which usually means "
-                 "one operator; a shared web agency or a copied template can also cause it. The "
-                 "account IDs are shown so the match can be checked in each site's page source.</p>"
+                 "one operator; a shared web agency or a copied template can also cause it. "
+                 "Accounts that belong to a platform rather than a site (such as the host account "
+                 "Google's Site Kit plugin puts on every site that uses it), and any ID found on "
+                 "more than 25 cited sites, are left out as shared services. The account IDs are "
+                 "shown so the match can be checked in each site's page source.</p>"
                  f"<details><summary>Show {len(nets):,} groups</summary><div class='scroll'><table>"
                  "<tr><th>Account</th><th class='n'>Sites</th><th>Sites (citations)</th></tr>")
         for (svc, i), sites in sorted(nets.items(), key=lambda x: (-len(x[1]), -sum(cites[d] for d in x[1]), x[0])):
