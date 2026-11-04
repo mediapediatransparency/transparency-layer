@@ -48,8 +48,9 @@ def analyse(title: str | None = None, revid: int | None = None, area: str = "",
     words, who = au.collect_words(rc["tokens"], al.spans, lay, sent_of, hist)
     labels = au.label_editors(words)
     count = Counter(w.editor for w in words)
+    names, names_sha = sources.load_names()
     src_block, src_labels, cites_by_key = sources.compute(text, lay, rc["tokens"], al.spans, hist,
-                                                          who, labels)
+                                                          who, labels, names)
     lead_count = Counter(w.editor for w in words if w.lead)
     total, lead_total = len(words), sum(lead_count.values())
 
@@ -217,6 +218,7 @@ def analyse(title: str | None = None, revid: int | None = None, area: str = "",
             "history_revisions": len(hist.revs),
             "sanctions_csv_sha256": sanc.file_sha256(sanctions_path) if sanctions_path
             else sanc.file_sha256(),
+            "source_names_sha256": names_sha,
         },
         "quality": {
             "wikiwho_tokens": len(rc["tokens"]),

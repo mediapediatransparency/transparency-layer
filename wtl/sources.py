@@ -7,7 +7,13 @@ Everything here comes from the analysed revision itself, so records stay reprodu
   entry that is counted once;
 - the source of a citation is the website it links to (url=, or the first link in the
   footnote), reduced to its main domain; without a link, the publication name it gives
-  (work=, newspaper=, publisher=, …); otherwise "unidentified";
+  (work=, newspaper=, publisher=, …); a name that the fixed name list (data/source_names.json)
+  links to one website counts as that website;
+- a footnote written as plain text, without a citation template, is matched in this order:
+  a link to a bibliography anchor ([[#id|…]]); an author and year that match a bibliography
+  entry ("Morris, 2001, p. 259"); a publication in italics that is on the name list
+  (''New York Times''); a publisher on the name list named in the text; an ISBN (a book with
+  no publisher given); otherwise "unidentified";
 - a citation is credited to the editor who added the words of its domain (or of its
   publication name), using the same WikiWho token authorship as the prose.
 
@@ -27,7 +33,7 @@ CITE_START = re.compile(r"\{\{\s*(?:cite\s+[a-z ]+?|citation|vcite\s+\w+)\s*\|",
 URL_PARAM = re.compile(r"\|\s*(?:url|chapter-url|contribution-url)\s*=\s*(https?://[^\s|}<\]]+)", re.I)
 BARE_URL = re.compile(r"https?://[^\s|}<\]\"']+", re.I)
 NAME_PARAM = re.compile(r"\|\s*(work|website|newspaper|magazine|journal|periodical|agency|publisher)"
-                        r"\s*=\s*([^|}]*)", re.I)
+                        r"\s*=\s*((?:\[\[[^\]]*\]\]|[^|}\[]|\[(?!\[))*)", re.I)   # piped links kept whole
 ISBN = re.compile(r"\|\s*isbn\s*=|\{\{\s*cite\s+book", re.I)
 ARCHIVE = re.compile(r"^https?://(?:web\.)?archive\.(?:org|today|is|ph)/(?:web/)?[\d*a-z_]*/?(https?://.+)$", re.I)
 WIKILINK = re.compile(r"\[\[(?:[^|\]]*\|)?([^\]]*)\]\]")
@@ -159,20 +165,183 @@ def _bib_keys(text, s, e):
     return keys
 
 
-def find(text: str) -> list[dict]:
+# ------------------------------------------------------------- fixed name list (free text)
+PERIODICAL_FIELDS = ("journal", "newspaper", "magazine", "work", "website", "periodical", "agency")
+MIN_ARTICLES_PERIODICAL = 3
+MIN_ARTICLES_PUBLISHER = 5
+MIN_DOMAIN_SHARE = 0.8
+ITALIC = re.compile(r"(?<!')''(?!')(.+?)(?<!')''(?!')")
+ANCHOR_LINK = re.compile(r"\[\[\s*#([^|\]]+)")
+REF_PLAIN = re.compile(r"\|\s*ref\s*=\s*([^|{}\n]+?)\s*(?=\||\}\})", re.I)
+CAP_WORD = re.compile(r"\b[A-Z][\w'’-]{2,}")
+ISBN_TEXT = re.compile(r"\{\{\s*ISBN\s*\||\bISBN(?:-1[03])?[\s:]", re.I)
+UNMATCHED = ("unidentified", "book (no publisher given)")
+NOT_FOUND = "short footnote (entry not found)"
+BIB_UNKNOWN = "in the article's bibliography, source not named"
+NOT_A_SOURCE = UNMATCHED + (NOT_FOUND, BIB_UNKNOWN)   # shown as coverage, never ranked
+PLAIN_BIB_LINE = re.compile(r"^\*+[ \t]*(.+)$", re.M)
+ANCHOR_TPL = re.compile(r"\{\{\s*[Aa]nchor\s*\|([^}]*)\}\}|\bid\s*=\s*\"([^\"]+)\"")
+
+
+def _head_surname(text: str):
+    """(first capitalised word before the first year, year or "") at the start of a citation."""
+    head = WIKILINK.sub(r"\1", text[:160])
+    head = re.sub(r"\{\{[^{}]*\}\}", " ", head)
+    y = YEAR_IN.search(head)
+    w = CAP_WORD.search(head[:80])
+    if not w or (y and w.start() > y.start()):
+        return None, None
+    return w.group(0).lower(), (y.group(1) if y else "")
+_NAMES = None   # the name list in use by find(); None = no list
+
+
+def norm_name(name: str) -> str:
+    n = clean_name(name).lower().strip()
+    n = re.sub(r"^the\s+", "", n)
+    return re.sub(r"[^\w]+", " ", n).strip()
+
+
+def build_names(texts: list[str]) -> dict:
+    """The fixed name list, from citation templates in the given article texts: publications
+    named in at least MIN_ARTICLES_PERIODICAL articles, publishers in at least
+    MIN_ARTICLES_PUBLISHER, and for each name the one website it links to in at least
+    MIN_DOMAIN_SHARE of its linked uses (at least 3)."""
+    per_art = {"p": Counter(), "pub": Counter()}
+    spell = {}
+    doms = {}
+    for text in texts:
+        seen_p, seen_pub = set(), set()
+        for s0, e0 in _templates(text, 0, len(text), CITE_START):
+            body = text[s0:e0]
+            m = URL_PARAM.search(body)
+            host = host_of(m.group(1)) if m else ""
+            reg = registrable(host) if host else ""
+            for nm in NAME_PARAM.finditer(body):
+                field, v = nm.group(1).lower(), clean_name(nm.group(2))
+                n = norm_name(v)
+                if len(n) < 4 or n.isdigit():
+                    continue
+                spell.setdefault(n, Counter())[v] += 1
+                (seen_p if field in PERIODICAL_FIELDS else seen_pub).add(n)
+                if reg and reg not in PLATFORMS and host not in PLATFORMS:
+                    doms.setdefault(n, Counter())[reg] += 1
+        per_art["p"].update(seen_p)
+        per_art["pub"].update(seen_pub)
+    canon = lambda n: min(spell[n], key=lambda x: (-spell[n][x], x))  # noqa: E731
+    periodicals = {n: canon(n) for n, k in per_art["p"].items() if k >= MIN_ARTICLES_PERIODICAL}
+    publishers = {n: canon(n) for n, k in per_art["pub"].items()
+                  if k >= MIN_ARTICLES_PUBLISHER and len(n) >= 6 and n not in periodicals}
+    domains = {}
+    for n, c in doms.items():
+        if n not in periodicals and n not in publishers:
+            continue
+        d, k = min(c.items(), key=lambda x: (-x[1], x[0]))
+        if k >= 3 and k / sum(c.values()) >= MIN_DOMAIN_SHARE:
+            domains[n] = d
+    return {"rule": {"min_articles_periodical": MIN_ARTICLES_PERIODICAL,
+                     "min_articles_publisher": MIN_ARTICLES_PUBLISHER,
+                     "min_domain_share": MIN_DOMAIN_SHARE},
+            "articles": len(texts), "periodicals": dict(sorted(periodicals.items())),
+            "publishers": dict(sorted(publishers.items())), "domains": dict(sorted(domains.items()))}
+
+
+def load_names():
+    import json
+    from .config import ROOT
+    p = ROOT / "data" / "source_names.json"
+    if not p.exists():
+        return None, None
+    raw = p.read_bytes()
+    import hashlib
+    names = json.loads(raw)
+    pubs = sorted(names["publishers"].values(), key=lambda x: (-len(x), x))
+    names["_pub_re"] = (re.compile(r"(?<![\w&])(" + "|".join(re.escape(x) for x in pubs) + r")(?![\w&])")
+                        if pubs else None)
+    return names, hashlib.sha256(raw).hexdigest()
+
+
+def _named(name: str) -> str:
+    """Source key for a publication name: its website when the name list links it to one."""
+    n = norm_name(name)
+    if _NAMES and n in _NAMES["domains"]:
+        return _NAMES["domains"][n]
+    return "name:" + name.lower()
+
+
+def _free(text, a, b, bib, anchors):
+    """A footnote without a citation template: see the module notes for the order of matching."""
+    c = _one(text, a, b)
+    if c["source"] not in UNMATCHED:
+        return c
+    body = text[a:b]
+    m = ANCHOR_LINK.search(body)
+    if m and m.group(1).strip() in anchors:
+        return {**anchors[m.group(1).strip()], "start": a, "end": b,
+                "attr": (a + m.start(1), a + m.end(1)), "short": True}
+    head = WIKILINK.sub(r"\1", body[:160])
+    y = YEAR_IN.search(head)
+    for n, w in enumerate(CAP_WORD.finditer(head[:80])):
+        if n >= 2 or (y and w.start() > y.start()):   # the author's name only
+            break
+        t = bib.get((w.group(0).lower(), y.group(1) if y else ""))
+        if t:
+            i = body.find(w.group(0))
+            span = (a + i, a + i + len(w.group(0))) if i >= 0 else (a, b)
+            return {**t, "start": a, "end": b, "attr": span, "short": True}
+    if _NAMES:
+        for m in ITALIC.finditer(body):
+            n = norm_name(m.group(1))
+            if n in _NAMES["periodicals"]:
+                return {**c, "source": _named(_NAMES["periodicals"][n]),
+                        "name": _NAMES["periodicals"][n], "attr": (a + m.start(1), a + m.end(1))}
+        if _NAMES.get("_pub_re"):
+            m = _NAMES["_pub_re"].search(body)
+            if m:
+                return {**c, "source": _named(m.group(1)), "name": m.group(1),
+                        "attr": (a + m.start(1), a + m.end(1))}
+    if ISBN_TEXT.search(body):
+        return {**c, "source": "book (no publisher given)"}
+    return c
+
+
+def find(text: str, names: dict | None = None) -> list[dict]:
     """Citations in the wikitext, one per source cited: each cite template or short footnote
     inside a footnote, else the footnote itself; plus bibliography entries outside footnotes
-    that no short footnote points to. Each: {start, end, source, name, url_host, attr, short}."""
+    that no short footnote points to. Each: {start, end, source, name, url_host, attr, short}.
+    `names` is the fixed name list (load_names()); without it, free text is only matched by
+    bibliography and ISBN."""
+    global _NAMES
+    _NAMES = names
     refs = [(m.start(1), m.end(1)) for m in REF.finditer(text)]
     in_ref = lambda x: any(a <= x < b for a, b in refs)  # noqa: E731
     outside = [(s, e) for s, e in _templates(text, 0, len(text), CITE_START) if not in_ref(s)]
-    bib, bib_entry = {}, []
+    bib, bib_entry, anchors = {}, [], {}
     for s, e in outside:
         c = _one(text, s, e)
         bib_entry.append(c)
+        rm = REF_PLAIN.search(text[s:e])
+        if rm:
+            anchors.setdefault(rm.group(1).strip(), c)
         for k in _bib_keys(text, s, e):
             bib.setdefault(k, c)
             bib.setdefault((k[0], ""), c)
+    # bibliography written as plain text: bulleted lines outside footnotes without a citation
+    # template, used only when a short reference points to them and they name a known source
+    for m in PLAIN_BIB_LINE.finditer(text):
+        s0, e0 = m.start(1), m.end(1)
+        if in_ref(s0) or CITE_START.search(text, s0, e0) or not YEAR_IN.search(text, s0, e0):
+            continue
+        c = _free(text, s0, e0, {}, {})
+        if c["source"] in UNMATCHED:
+            c = {**c, "source": BIB_UNKNOWN}
+        sn, yr = _head_surname(re.sub(ANCHOR_TPL, " ", text[s0:e0]))
+        if sn:
+            bib.setdefault((sn, yr), c)
+            bib.setdefault((sn, ""), c)
+        for am in ANCHOR_TPL.finditer(text, s0, e0):
+            for x in (am.group(1) or am.group(2) or "").split("|"):
+                if x.strip():
+                    anchors.setdefault(x.strip(), c)
     used = set()
     cites = []
 
@@ -182,8 +351,8 @@ def find(text: str) -> list[dict]:
         if target:
             used.add(id(target))
             return {**target, "start": s, "end": e, "attr": span, "short": True}
-        return {"start": s, "end": e, "source": "short footnote (entry not found)", "name": "",
-                "url_host": "", "attr": span, "short": True}
+        return {"start": s, "end": e, "source": NOT_FOUND, "name": "",
+                "url_host": "", "attr": span, "short": True, "surname": k[0]}
 
     for a, b in refs:
         items = []
@@ -191,11 +360,31 @@ def find(text: str) -> list[dict]:
             items.append(_one(text, s, e))
         for s, e in _templates(text, a, b, SHORT):
             items.append(short_cite(s, e))
-        cites += items or [_one(text, a, b)]
+        if not items:
+            c = _free(text, a, b, bib, anchors)
+            for t in bib_entry:   # resolved to a bibliography entry: that entry is now cited
+                if c.get("short") and t["start"] == c.get("bib_start"):
+                    used.add(id(t))
+            items = [c]
+        cites += items
     for s, e in _templates(text, 0, len(text), SHORT):   # {{sfn}} outside <ref> makes its own footnote
         if not in_ref(s):
             cites.append(short_cite(s, e))
     cites += [c for c in bib_entry if id(c) not in used]
+    # a short reference that names only an author ("Poe, pp. 171–172") counts as the source of
+    # that author's full citation elsewhere in the article, when the author has exactly one
+    by_author = {}
+    for c in cites:
+        if c["source"] not in NOT_A_SOURCE and c.get("surname"):
+            by_author.setdefault(c["surname"], set()).add((c["source"], c["name"]))
+    for i, c in enumerate(cites):
+        if c["source"] in UNMATCHED or c["source"] == NOT_FOUND:
+            sn = c.get("surname") or (_head_surname(text[c["start"]:c["end"]])[0]
+                                      if c["end"] - c["start"] <= 120 else None)
+            hit = by_author.get(sn) if sn else None
+            if hit and len(hit) == 1:
+                src, nm = next(iter(hit))
+                cites[i] = {**c, "source": src, "name": nm, "short": True}
     cites.sort(key=lambda c: (c["start"], c["end"]))
     return cites
 
@@ -232,13 +421,16 @@ def _one(text: str, a: int, b: int) -> dict:
         hs = text.find(host, upos, b) if not ARCHIVE.match(url) else -1
         attr = (hs, hs + len(host)) if hs >= 0 else (upos, upos + len(url))
     elif name:
-        source, attr = "name:" + name.lower(), npos
+        source, attr = _named(name), npos
     elif ISBN.search(body):
         source, attr = "book (no publisher given)", (a, b)
     else:
         source, attr = "unidentified", (a, b)
+    am = AUTHOR.search(body) if CITE_START.match(body) else None
+    surname = (clean_name(am.group(1)).split(",")[0].strip().lower() if am
+               else _head_surname(body)[0] if source not in UNMATCHED else None)
     return {"start": a, "end": b, "source": source, "name": name, "url_host": host, "attr": attr,
-            "short": False}
+            "short": False, "bib_start": a, "surname": surname}
 
 
 def credit(cites, tokens, spans, hist, who):
@@ -264,12 +456,12 @@ def credit(cites, tokens, spans, hist, who):
     return out
 
 
-def compute(text, lay, tokens, spans, hist, who, labels):
+def compute(text, lay, tokens, spans, hist, who, labels, names=None):
     """The record's "sources" block and per-editor citation counts. `labels` maps editor key to
     label for prose editors; editors who only added citations get further labels, numbered on
     from the last prose editor in order of citations added. Returns (block, labels_added,
     count_by_key)."""
-    cites = find(text)
+    cites = find(text, names)
     keys = credit(cites, tokens, spans, hist, who)
     by_key = Counter(k for k in keys if k)
     extra = {}

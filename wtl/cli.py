@@ -173,6 +173,25 @@ def cmd_reanalyse(a):
     cmd_render(a)
 
 
+def cmd_source_names(a):
+    """Rebuild data/source_names.json from the citation templates of every analysed article."""
+    from .config import ROOT
+    from .fetch import mediawiki as mw
+    from . import sources
+    entries = load_testset()
+    texts = []
+    for e in entries.values():
+        try:
+            texts.append(mw.get_revision(e["revision"])["content"])
+        except Exception as ex:
+            print(f"  skipped {e['article']}: {ex}", file=sys.stderr)
+    names = sources.build_names(texts)
+    p = ROOT / "data" / "source_names.json"
+    p.write_text(json.dumps(names, ensure_ascii=False, indent=1, sort_keys=True) + "\n", encoding="utf-8")
+    print(f"wrote {p}: {len(names['periodicals']):,} publications, {len(names['publishers']):,} "
+          f"publishers, {len(names['domains']):,} linked to a website, from {names['articles']:,} articles")
+
+
 def cmd_outlets(a):
     from . import outlets
     recs, _ = stored_records()
@@ -200,6 +219,7 @@ def main(argv=None):
     sub.add_parser("render").set_defaults(fn=cmd_render)
     sub.add_parser("reanalyse").set_defaults(fn=cmd_reanalyse)
     sub.add_parser("outlets").set_defaults(fn=cmd_outlets)
+    sub.add_parser("source-names").set_defaults(fn=cmd_source_names)
     p = sub.add_parser("site")
     p.add_argument("--elsewhere", action="store_true",
                    help="also fetch each listed editor's recent edits across Wikipedia (slow)")

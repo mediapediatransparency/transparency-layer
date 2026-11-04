@@ -72,6 +72,7 @@ a{color:var(--link)}
 .sans,table,.meta,.small,.note,.fig,details summary,footer{font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
 .meta{color:var(--muted);font-size:.9rem}
 .small{font-size:.88rem;color:var(--muted)}
+tr.sum td{background:var(--soft);border-top:1px solid var(--line)}
 .lede{font-size:1.12rem}
 .brief{background:var(--soft);border:1px solid var(--line);border-radius:8px;padding:6px 20px;margin:18px 0}
 .brief li{margin:8px 0}
@@ -856,6 +857,62 @@ ASSESSOR_HEAD = ("<th>Wikipedia's rating</th><th class='n'>Independent quality</
                  "<th class='n'>Audience leaning</th><th>AllSides (2018)</th><th>Wikidata</th>")
 
 
+MEANS_NOTE = (
+    "<p class='small'><b>How the summary rows are calculated.</b> For the sources in scope that "
+    "have a score s (independent quality, 0 to 1; or audience leaning, −1 to +1), each cited c "
+    "times: <b>mean per source</b> = (s<sub>1</sub> + … + s<sub>n</sub>) ÷ n, each source counted "
+    "once; <b>mean per citation</b> = (c<sub>1</sub>·s<sub>1</sub> + … + c<sub>n</sub>·s<sub>n</sub>)"
+    " ÷ (c<sub>1</sub> + … + c<sub>n</sub>), each source counted as often as it is cited. Both cover "
+    "only scored sources: the share of citations they cover is given beside them. The rows "
+    "cover every citation in scope, not only the sources listed in the table.</p>")
+
+
+def _non_source_line(cites, tot):
+    from .sources import NOT_A_SOURCE
+    bits = [f"{escape(k)} {cites[k]:,} ({p0(cites[k] / tot)})" for k in NOT_A_SOURCE if cites.get(k)]
+    if not bits:
+        return ""
+    return ("<p class='small'>Not listed as sources, because the citation does not identify one: "
+            + "; ".join(bits) + f". Shares are of all {tot:,} citations.</p>")
+
+
+def summary_rows(cites, ctx, lead, tail):
+    """Summary rows for a sources table: `cites` is {source: citations} for everything in scope;
+    `lead` columns come before the Wikipedia-rating column and `tail` after the audience column."""
+    from collections import Counter
+    tot = sum(cites.values())
+    if not tot:
+        return ""
+    rating, q, a = Counter(), [], []
+    for k, n in cites.items():
+        o = ctx.outlets.get(k) or {}
+        wr = o.get("wikipedia_rating")
+        rating[wr["status"] if wr else None] += n
+        if o.get("independent_quality"):
+            q.append((o["independent_quality"]["score"], n))
+        if o.get("audience_leaning"):
+            a.append((o["audience_leaning"]["score"], n))
+
+    def cells(v, fmt):
+        if not v:
+            return "<td class='n'>–</td>", "<td class='n'>–</td>"
+        per_src = sum(x for x, _ in v) / len(v)
+        cov = sum(n for _, n in v)
+        per_cit = sum(x * n for x, n in v) / cov
+        return (f"<td class='n'>{format(per_src, fmt)}<div class='small'>{len(v):,} sources</div></td>",
+                f"<td class='n'>{format(per_cit, fmt)}<div class='small'>{p0(cov / tot)} of "
+                f"citations</div></td>")
+    q1, q2 = cells(q, ".2f")
+    a1, a2 = cells(a, "+.2f")
+    pad = "<td></td>" * tail
+    lab = lambda t: f"<td colspan='{lead}'><b>{t}</b></td>"  # noqa: E731
+    return ("<tr class='sum'>" + lab(f"All {tot:,} citations: share by Wikipedia's rating")
+            + f"<td class='small' colspan='3'>{_shares(rating, tot, RATING_ORDER, RATING_NAMES)}</td>"
+            + pad + "</tr>"
+            + "<tr class='sum'>" + lab("Mean per source") + "<td></td>" + q1 + a1 + pad + "</tr>"
+            + "<tr class='sum'>" + lab("Mean per citation") + "<td></td>" + q2 + a2 + pad + "</tr>")
+
+
 def sources_section(rec, ctx):
     s = rec.get("sources")
     if not s:
@@ -879,17 +936,25 @@ def sources_section(rec, ctx):
     h.append("<h3>Most-cited sources</h3><div class='scroll'><table><tr><th>Source</th>"
              "<th class='n'>Citations</th><th class='n'>In opening</th>"
              + (ASSESSOR_HEAD if ctx.outlets else "") + "<th>Added by</th></tr>")
-    for x in s["list"][:25]:
+    from .sources import NOT_A_SOURCE
+    listed = [x for x in s["list"] if x["source"] not in NOT_A_SOURCE]
+    for x in listed[:25]:
         by = ", ".join(f"{escape(k)} ({v})" for k, v in list(x["added_by"].items())[:3])
         more = len(x["added_by"]) - 3
         h.append(f"<tr><td>{source_label(x['source'], ctx)}</td><td class='n'>{x['citations']}</td>"
                  f"<td class='n'>{x['lead_citations']}</td>"
                  + (_assessor_cells(x["source"], ctx) if ctx.outlets else "")
                  + f"<td class='small'>{by}{f' and {more} more' if more > 0 else ''}</td></tr>")
+    allc = {x["source"]: x["citations"] for x in s["list"]}
+    if ctx.outlets:
+        h.append(summary_rows(allc, ctx, 3, 3))
     h.append("</table></div>")
-    if len(s["list"]) > 25:
+    h.append(_non_source_line(allc, s["citations"]))
+    if len(listed) > 25:
         data = link(f"../data/{slug(rec['article'])}.json", "full data")
-        h.append(f"<p class='small'>{len(s['list']) - 25} further sources are in the {data}.</p>")
+        h.append(f"<p class='small'>{len(listed) - 25} further sources are in the {data}.</p>")
+    if ctx.outlets:
+        h.append(MEANS_NOTE)
     # who added the citations
     if ctx.outlets:
         from collections import defaultdict
@@ -1014,20 +1079,43 @@ def sources_page(ctx):
                  f"<td class='small'>{escape(x['allsides_2018'] or '–')}</td></tr>")
     h.append("</table></div></details>")
 
-    # most-cited across the analysed articles
-    cites, arts = Counter(), Counter()
-    for r in ctx.recs:
-        for x in (r.get("sources") or {}).get("list", []):
-            cites[x["source"]] += x["citations"]
-            arts[x["source"]] += 1
-    if cites:
-        h.append(f"<h2>Most-cited sources across the {len(ctx.recs):,} analysed articles</h2>"
-                 "<div class='scroll'><table><tr><th>Source</th><th class='n'>Citations</th>"
-                 f"<th class='n'>Articles</th>{ASSESSOR_HEAD}</tr>")
-        for k, n in sorted(cites.items(), key=lambda x: (-x[1], x[0]))[:100]:
-            h.append(f"<tr><td>{source_label(k, ctx)}</td><td class='n'>{n:,}</td>"
-                     f"<td class='n'>{arts[k]}</td>{_assessor_cells(k, ctx)}</tr>")
-        h.append("</table></div>")
+    # most-cited, by topic area, then across all areas
+    from .sources import NOT_A_SOURCE
+
+    def cited_table(recs, top):
+        cites, arts = Counter(), Counter()
+        for r in recs:
+            for x in (r.get("sources") or {}).get("list", []):
+                cites[x["source"]] += x["citations"]
+                arts[x["source"]] += 1
+        tot = sum(cites.values())
+        out = ["<div class='scroll'><table><tr><th>Source</th><th class='n'>Citations</th>"
+               f"<th class='n'>Articles</th>{ASSESSOR_HEAD}</tr>"]
+        ranked = sorted(((k, n) for k, n in cites.items() if k not in NOT_A_SOURCE),
+                        key=lambda x: (-x[1], x[0]))
+        for k, n in ranked[:top]:
+            out.append(f"<tr><td>{source_label(k, ctx)}</td><td class='n'>{n:,}</td>"
+                       f"<td class='n'>{arts[k]}</td>{_assessor_cells(k, ctx)}</tr>")
+        out.append(summary_rows(cites, ctx, 3, 2))
+        out.append("</table></div>")
+        out.append(_non_source_line(cites, tot))
+        return "".join(out), tot, len(ranked)
+
+    if any(r.get("sources") for r in ctx.recs):
+        h.append("<h2>Most-cited sources, by topic area</h2><p>Each table lists the 50 sources "
+                 "cited most often in that area's analysed articles. An article in several areas "
+                 "is counted under the area it is shown under.</p>" + MEANS_NOTE)
+        for a in _area_order(ctx):
+            recs = [r for r in ctx.recs if ctx.areas.get(r["article"], "") == a]
+            if not any(r.get("sources") for r in recs):
+                continue
+            tbl, tot, nsrc = cited_table(recs, 50)
+            h.append(f"<details><summary><b>{escape(area_name(a))}</b>: {len(recs):,} "
+                     f"article{'s' if len(recs) != 1 else ''}, "
+                     f"{tot:,} citations, {nsrc:,} sources</summary>{tbl}</details>")
+        tbl, tot, nsrc = cited_table(ctx.recs, 100)
+        h.append(f"<h3>All areas together</h3><details><summary>{len(ctx.recs):,} articles, "
+                 f"{tot:,} citations, {nsrc:,} sources (top 100)</summary>{tbl}</details>")
     h.append(f"<p class='small'>{link('data/outlets.json', 'All ratings as JSON')}.</p>")
     return page(f"Sources · {NAME}", "".join(h), "sources.html", json_alt="data/outlets.json",
                 description="Sources cited in the analysed articles, and how several assessors rate them.")
