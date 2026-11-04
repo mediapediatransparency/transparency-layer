@@ -3,7 +3,7 @@
 import sys
 from collections import Counter, defaultdict
 
-from . import __version__, caveats, sanctions as sanc
+from . import __version__, caveats, sanctions as sanc, sources
 from .config import WIKIWHO_URL
 from .fetch import cache, mediawiki as mw, wikiwho as ww
 from .metrics import accountability, authorship as au
@@ -48,6 +48,8 @@ def analyse(title: str | None = None, revid: int | None = None, area: str = "",
     words, who = au.collect_words(rc["tokens"], al.spans, lay, sent_of, hist)
     labels = au.label_editors(words)
     count = Counter(w.editor for w in words)
+    src_block, src_labels, cites_by_key = sources.compute(text, lay, rc["tokens"], al.spans, hist,
+                                                          who, labels)
     lead_count = Counter(w.editor for w in words if w.lead)
     total, lead_total = len(words), sum(lead_count.values())
 
@@ -120,6 +122,8 @@ def analyse(title: str | None = None, revid: int | None = None, area: str = "",
             "top_revisions": revs,
             # when this editor's surviving words were first added, by calendar year (UTC)
             "added_by_year": dict(sorted(by_year[k].items())),
+            # citations in today's text that this editor added (see wtl/sources.py)
+            "citations_added": cites_by_key.get(k, 0),
             "evidence": [diff_url(r) for r in revs] + [s.url for s in ss],
         })
 
@@ -223,7 +227,8 @@ def analyse(title: str | None = None, revid: int | None = None, area: str = "",
         },
     }
     record["accountability"]["concentration"] = caveats.sanctioned_concentration(record)
+    record["sources"] = src_block
     record["caveats"] = caveats.compute(record)
     if internals:
-        return record, {"labels": labels, "who": who}
+        return record, {"labels": labels, "who": who, "source_labels": src_labels}
     return record

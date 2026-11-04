@@ -108,7 +108,7 @@ footer .in{max-width:860px;margin:0 auto;padding:16px}
 """
 
 PAGES = [("index.html", "Home"), ("compare.html", "All articles"), ("articles.html", "Which articles"),
-         ("editors.html", "Editors across articles"),
+         ("editors.html", "Editors across articles"), ("sources.html", "Sources"),
          ("how-it-works.html", "How it works"), ("objective.html", "Objective"),
          ("about.html", "About")]
 
@@ -159,10 +159,13 @@ def median(vals):
 class Context:
     """All records plus the typical (median) values per group, for comparisons."""
 
-    def __init__(self, recs, groups, patterns=None, areas=None, kinds=None, candidates=None):
+    def __init__(self, recs, groups, patterns=None, areas=None, kinds=None, candidates=None,
+                 outlets=None):
         self.recs, self.groups, self.patterns = recs, groups, patterns
         self.areas, self.kinds = areas or {}, kinds or {}
         self.candidates = candidates or []
+        self.outlets_snap = outlets or {}
+        self.outlets = self.outlets_snap.get("sources", {})
         self.by_group = {g: [r for r in recs if groups[r["article"]] == g] for g in GROUP_NAMES}
 
     def peers(self, rec, same_area=True):
@@ -422,6 +425,9 @@ def article_page(rec, ctx: Context):
         h.append(fig(p1(surv[key]["rate"]), lbl, ctx.cmp(f"authorship.survival_article.{key}.rate", rec=rec)))
     h.append("</div>")
 
+    # ---- sources
+    h.append(sources_section(rec, ctx))
+
     # ---- editors table
     h.append("<h2>Editors in detail</h2>")
     h.append("<p class='small'><b>Words</b> and <b>Share</b>: this editor's words in today's "
@@ -633,7 +639,7 @@ def compare_page(ctx: Context):
 
 
 def choose_page(ctx: Context):
-    from .candidates import AREAS, KINDS
+    from .candidates import AREAS, KINDS, SUBJECTS
     done = {r["article"] for r in ctx.recs}
     where = {r["article"]: ctx.areas.get(r["article"], "") for r in ctx.recs}
     cands = ctx.candidates
@@ -653,6 +659,18 @@ def choose_page(ctx: Context):
          "views over the previous 60 days are chosen.</li>",
          "<li><b>On request.</b> A few articles are added on request. They are marked as such.</li>",
          "</ol>",
+         "<h2>A second rule, for subjects Wikipedia does not tag</h2>"
+         "<p>Some subjects have no contentious-topic designation on Wikipedia: China beyond the "
+         "Uyghur and Xinjiang area, socialism, communism and Marxism, and Islam. For these, the "
+         "candidates are the articles whose talk pages carry the banner of the WikiProject for "
+         "the subject (a WikiProject is a group of Wikipedia editors who look after a subject; "
+         "the editors who add a banner decide which articles belong). Steps 2 and 3 above are "
+         "then the same. These areas are marked “chosen by subject”, because here the project "
+         "chose the subjects, not Wikipedia.</p><ul>"
+         + "".join(f"<li><b>{escape(n.split(' (')[0])}</b>: "
+                   + ", ".join(escape(c.split(':', 1)[1].replace(' articles', '')) for c in cats)
+                   + "</li>" for n, cats in SUBJECTS.values())
+         + "</ul>",
          note("Wikidata's classification is used as it stands, and is sometimes surprising (for "
               "example, an ideology recorded as an organisation). An article can appear in more "
               "than one area; it is analysed once and listed in each.", "About the classes"),
@@ -693,6 +711,328 @@ def choose_page(ctx: Context):
                 description="How articles are chosen for analysis.")
 
 
+# ---------------------------------------------------------------- sources
+RATING_NAMES = {"gr": "generally reliable", "nc": "no consensus", "gu": "generally unreliable",
+                "d": "deprecated", "b": "blacklisted", "m": "varies by period or topic",
+                None: "not on Wikipedia's list"}
+RATING_ORDER = ["gr", "nc", "m", "gu", "d", "b", None]
+AUD_BINS = [(-1.0001, -0.6, "−1 to −0.6"), (-0.6, -0.2, "−0.6 to −0.2"), (-0.2, 0.2, "−0.2 to +0.2"),
+            (0.2, 0.6, "+0.2 to +0.6"), (0.6, 1.0001, "+0.6 to +1")]
+SOURCE_NOTES = [
+    "Wikipedia's Perennial sources list rates about 530 sources that Wikipedia editors discuss "
+    "often. A source not on the list has not been rated there; it is not rated unreliable.",
+    "The independent quality score (Lin et al. 2023) covers news websites. Books and academic "
+    "journals usually have no score.",
+    "The audience score (Robertson et al. 2018) measures which US voters shared a site's links on "
+    "Twitter in 2017, not what the site publishes. It is centred on the United States and "
+    "covers only sites shared widely enough.",
+    "Wikidata records a political alignment or ideology for few outlets, and those entries are "
+    "made by volunteers.",
+    "All ratings are as of the date of the ratings snapshot, not as of when a citation was added.",
+]
+
+
+def aud_bin(x):
+    return next(lbl for lo, hi, lbl in AUD_BINS if lo <= x < hi)
+
+
+def source_label(key, ctx):
+    """Source name for a table cell, with the web domain underneath when the name is not it."""
+    n = src_name(key, ctx)
+    dom = "" if key.startswith("name:") or " " in key or n == key else key
+    return escape(n) + (f"<br><span class='small'>{escape(dom)}</span>" if dom else "")
+
+
+def src_name(key, ctx):
+    o = ctx.outlets.get(key)
+    if o and o.get("name") and not key.startswith("name:"):
+        return o["name"]
+    if not hasattr(ctx, "_cited_names"):   # most common spelling as cited, across all records
+        from collections import Counter
+        c = {}
+        for r in ctx.recs:
+            for x in (r.get("sources") or {}).get("list", []):
+                if x.get("name_as_cited"):
+                    c.setdefault(x["source"], Counter())[x["name_as_cited"]] += x["citations"]
+        ctx._cited_names = {k: min(v, key=lambda s: (-v[s], s)) for k, v in c.items()}
+    if key in ctx._cited_names and key.startswith("name:"):
+        return ctx._cited_names[key]
+    if o and o.get("name"):
+        return o["name"]
+    return key[5:] if key.startswith("name:") else key
+
+
+def profile(pairs, ctx):
+    """Citation-weighted summary of (source key, citations) pairs, one entry per assessor."""
+    from collections import Counter
+    tot = sum(n for _, n in pairs)
+    rating, align, cls, bins = Counter(), Counter(), Counter(), Counter()
+    q, a = [], []
+    for k, n in pairs:
+        o = ctx.outlets.get(k) or {}
+        wr = o.get("wikipedia_rating")
+        rating[wr["status"] if wr else None] += n
+        if o.get("independent_quality"):
+            q += [o["independent_quality"]["score"]] * n
+        if o.get("audience_leaning"):
+            s = o["audience_leaning"]["score"]
+            a += [s] * n
+            bins[aud_bin(s)] += n
+        al = o.get("political_alignment") or []
+        for x in al:
+            align[x] += n
+        if not al:
+            align[None] += n
+        for x in o.get("classed_as") or []:
+            cls[x] += n
+    return {"total": tot, "rating": rating, "quality": q, "audience": a, "bins": bins,
+            "alignment": align, "classed": cls}
+
+
+def _shares(counter, tot, order=None, names=None, none_label="none recorded"):
+    keys = order or sorted(counter, key=lambda k: (k is None, -counter[k], str(k)))
+    bits = []
+    for k in keys:
+        n = counter.get(k, 0)
+        if n:
+            lbl = (names or {}).get(k, k if k is not None else none_label)
+            bits.append(f"{escape(str(lbl))} {p0(n / tot)}")
+    return " · ".join(bits) or "–"
+
+
+def profile_rows(pf):
+    tot = pf["total"]
+    if not tot:
+        return []
+    rows = [("Wikipedia's own rating", "Perennial sources list",
+             _shares(pf["rating"], tot, RATING_ORDER, RATING_NAMES))]
+    if pf["quality"]:
+        rows.append(("Independent quality score", "Lin et al. 2023; 0 lowest, 1 highest",
+                     f"median {median(pf['quality']):.2f}, for the {p0(len(pf['quality']) / tot)} of "
+                     f"citations that have a score"))
+    else:
+        rows.append(("Independent quality score", "Lin et al. 2023", "no cited source has a score"))
+    if pf["audience"]:
+        rows.append(("Audience leaning", "Robertson et al. 2018; −1 shared only by Democrats, "
+                     "+1 only by Republicans",
+                     _shares(pf["bins"], len(pf["audience"]), [b[2] for b in AUD_BINS])
+                     + f"; median {median(pf['audience']):+.2f}, for the "
+                     f"{p0(len(pf['audience']) / tot)} of citations that have a score"))
+    rows.append(("Political alignment recorded on Wikidata", "as entered on Wikidata",
+                 _shares(pf["alignment"], tot)))
+    if pf["classed"]:
+        rows.append(("Classed on Wikidata as", "state media, public broadcaster, state-owned",
+                     _shares(pf["classed"], tot)))
+    return rows
+
+
+def _assessor_cells(key, ctx):
+    o = ctx.outlets.get(key) or {}
+    wr = o.get("wikipedia_rating")
+    iq = o.get("independent_quality")
+    al = o.get("audience_leaning")
+    wd = []
+    if o.get("country"):
+        wd.append(", ".join(o["country"]))
+    if o.get("owned_by"):
+        wd.append("owner: " + ", ".join(o["owned_by"][:2]))
+    if o.get("political_alignment"):
+        wd.append("alignment: " + ", ".join(o["political_alignment"]))
+    if o.get("classed_as"):
+        wd.append(", ".join(o["classed_as"]))
+    rating = RATING_NAMES[wr["status"]] if wr else "–"
+    ents = [e for e in (wr or {}).get("entries", []) if isinstance(e, list)]
+    if len(ents) > 1:   # several list entries match this source: show each with its rating
+        rating += " (" + "; ".join(f"{n}: {RATING_NAMES.get(st, st)}" for n, st in ents) + ")"
+    quality = f"{iq['score']:.2f}" if iq else "–"
+    audience = f"{al['score']:+.2f}" if al else "–"
+    return (f"<td class='small'>{escape(rating)}</td><td class='n'>{quality}</td>"
+            f"<td class='n'>{audience}</td>"
+            f"<td class='small'>{escape(o.get('allsides_2018') or '–')}</td>"
+            f"<td class='small'>{escape(' · '.join(wd) or '–')}</td>")
+
+
+ASSESSOR_HEAD = ("<th>Wikipedia's rating</th><th class='n'>Independent quality</th>"
+                 "<th class='n'>Audience leaning</th><th>AllSides (2018)</th><th>Wikidata</th>")
+
+
+def sources_section(rec, ctx):
+    s = rec.get("sources")
+    if not s:
+        return ""
+    h = ["<h2>Sources cited</h2>",
+         f"<p>The article has <b>{num(s['citations'])}</b> citations to {num(s['distinct_sources'])} "
+         f"different sources, {num(s['lead_citations'])} of them in the opening section. Each "
+         "citation is credited to the editor who added it: the editor of the words of its web "
+         "address or, without one, of its publication name. A short footnote such as “Morris "
+         "2004, p. 12” counts as a citation of the book it points to.</p>"]
+    if ctx.outlets:
+        pf = profile([(x["source"], x["citations"]) for x in s["list"]], ctx)
+        h.append("<h3>How the cited sources are rated</h3><p class='small'>Several assessors side "
+                 "by side; none of them is this project's. Shares are of the article's "
+                 f"{num(s['citations'])} citations. {link('../sources.html', 'About the assessors')}.</p>")
+        h.append("<div class='scroll'><table><tr><th>Assessor</th><th>Result</th></tr>")
+        for name, sub, val in profile_rows(pf):
+            h.append(f"<tr><td>{escape(name)}<div class='small'>{escape(sub)}</div></td>"
+                     f"<td class='small'>{val}</td></tr>")
+        h.append("</table></div>")
+    h.append("<h3>Most-cited sources</h3><div class='scroll'><table><tr><th>Source</th>"
+             "<th class='n'>Citations</th><th class='n'>In opening</th>"
+             + (ASSESSOR_HEAD if ctx.outlets else "") + "<th>Added by</th></tr>")
+    for x in s["list"][:25]:
+        by = ", ".join(f"{escape(k)} ({v})" for k, v in list(x["added_by"].items())[:3])
+        more = len(x["added_by"]) - 3
+        h.append(f"<tr><td>{source_label(x['source'], ctx)}</td><td class='n'>{x['citations']}</td>"
+                 f"<td class='n'>{x['lead_citations']}</td>"
+                 + (_assessor_cells(x["source"], ctx) if ctx.outlets else "")
+                 + f"<td class='small'>{by}{f' and {more} more' if more > 0 else ''}</td></tr>")
+    h.append("</table></div>")
+    if len(s["list"]) > 25:
+        data = link(f"../data/{slug(rec['article'])}.json", "full data")
+        h.append(f"<p class='small'>{len(s['list']) - 25} further sources are in the {data}.</p>")
+    # who added the citations
+    if ctx.outlets:
+        from collections import defaultdict
+        per = defaultdict(list)
+        for x in s["list"]:
+            for lbl, n in x["added_by"].items():
+                per[lbl].append((x["source"], n))
+        top = sorted(per, key=lambda l: (-sum(n for _, n in per[l]), _lbl_no(l)))[:10]
+        h.append("<h3>Who added the citations</h3><p class='small'>The ten editors who added the "
+                 "most citations still in the article, with how the sources they cited are rated "
+                 "(shares of that editor's citations).</p><div class='scroll'><table><tr>"
+                 "<th>Editor</th><th class='n'>Citations</th><th>Wikipedia's rating</th>"
+                 "<th>Independent quality (median)</th><th>Audience leaning (median)</th>"
+                 "<th>Most cited by them</th></tr>")
+        for lbl in top:
+            pf = profile(per[lbl], ctx)
+            t = pf["total"]
+            top_src = ", ".join(f"{escape(src_name(k, ctx))} ({n})" for k, n in
+                                sorted(per[lbl], key=lambda x: (-x[1], x[0]))[:3])
+            q = (f"{median(pf['quality']):.2f} ({p0(len(pf['quality']) / t)} scored)"
+                 if pf["quality"] else "–")
+            au = (f"{median(pf['audience']):+.2f} ({p0(len(pf['audience']) / t)} scored)"
+                  if pf["audience"] else "–")
+            h.append(f"<tr><td>{escape(lbl)}</td><td class='n'>{t}</td>"
+                     f"<td class='small'>{_shares(pf['rating'], t, RATING_ORDER, RATING_NAMES)}</td>"
+                     f"<td class='small'>{q}</td><td class='small'>{au}</td>"
+                     f"<td class='small'>{top_src}</td></tr>")
+        h.append("</table></div>")
+        h.append("".join(note(x, "About the ratings") for x in SOURCE_NOTES[:1])
+                 + "<ul class='small'>" + "".join(f"<li>{escape(x)}</li>" for x in SOURCE_NOTES[1:])
+                 + "</ul>")
+    return "".join(h)
+
+
+def _lbl_no(label):
+    try:
+        return int(label.split()[-1])
+    except ValueError:
+        return 10 ** 9
+
+
+def sources_page(ctx):
+    from collections import Counter
+    snap = ctx.outlets_snap or {}
+    asr = snap.get("assessors", {})
+    h = ["<h1>Sources and how they are rated</h1>",
+         "<p class='lede'>Each article page lists the sources the article cites, who added each "
+         "citation, and how several assessors rate those sources. No assessor is treated as the "
+         "truth, and this project adds no rating of its own.</p>"]
+    if not snap:
+        h.append("<p>The ratings snapshot has not been built yet.</p>")
+        return page(f"Sources · {NAME}", "".join(h), "sources.html")
+    wr = asr.get("wikipedia_rating", {})
+    h.append("<h2>The assessors</h2><ul>")
+    h.append(f"<li><b>Wikipedia's own rating.</b> The {link(wr.get('url', ''), 'Perennial sources list')}, "
+             "where Wikipedia editors record their consensus on sources they discuss often: "
+             "generally reliable, no consensus, generally unreliable, deprecated or blacklisted. "
+             "About 530 entries. Some people argue that these ratings lean in one political "
+             "direction, which is one reason the independent assessments are shown beside them. "
+             f"Snapshot of {len(wr.get('revisions', {}))} list pages taken {escape(snap['built'])}.</li>")
+    h.append("<li><b>Independent quality score.</b> " + escape(asr.get("independent_quality", {}).get("reference", ""))
+             + " It combines six independent rating sets from fact-checkers, journalists and "
+             "researchers into one score per news website, from 0 (lowest quality) to 1 (highest). "
+             "Wikipedia is not one of the six. 11,520 websites.</li>")
+    h.append("<li><b>Audience leaning.</b> " + escape(asr.get("audience_leaning", {}).get("reference", ""))
+             + " For each website, whether its links were shared more by registered Democrats "
+             "(towards −1) or Republicans (towards +1) among about 500,000 US voters on Twitter in "
+             "2017. It describes who shared a site, not what the site publishes. 19,022 websites.</li>")
+    h.append("<li><b>AllSides (2018).</b> " + escape(asr.get("allsides_2018", {}).get("reference", ""))
+             + " Left, lean left, centre, lean right or right, for a few hundred outlets.</li>")
+    h.append("<li><b>Wikidata.</b> Facts entered by volunteers on Wikidata, Wikipedia's sister "
+             "database: country, current owner, political alignment and ideology where recorded, "
+             "and whether it is classed as state media, a public broadcaster or a state-owned "
+             f"enterprise. Retrieved {escape(snap['built'])}.</li></ul>")
+    h.append(note(" ".join(SOURCE_NOTES), "Read with care"))
+
+    # Wikipedia's list compared with the independent assessments
+    L = snap.get("wikipedia_list_compared", [])
+    h.append("<h2>Wikipedia's ratings next to independent ratings</h2>"
+             f"<p>All {len(L)} entries on Wikipedia's list, cited in the analysed articles or not, "
+             "with the independent scores for their websites where those exist. Each entry counts "
+             "once. Entries without a website (for example, books) have no independent score.</p>")
+    h.append("<h3>By Wikipedia's rating</h3><div class='scroll'><table><tr><th>Wikipedia's rating</th>"
+             "<th class='n'>Entries</th><th class='n'>With an independent quality score</th>"
+             "<th class='n'>Median independent quality</th><th class='n'>With an audience score</th>"
+             "<th class='n'>Median audience leaning</th></tr>")
+    for st in [x for x in RATING_ORDER if x]:
+        rows = [x for x in L if x["status"] == st]
+        if not rows:
+            continue
+        q = [x["independent_quality"] for x in rows if x["independent_quality"] is not None]
+        a = [x["audience_leaning"] for x in rows if x["audience_leaning"] is not None]
+        h.append(f"<tr><td>{escape(RATING_NAMES[st])}</td><td class='n'>{len(rows)}</td>"
+                 f"<td class='n'>{len(q)}</td><td class='n'>{f'{median(q):.2f}' if q else '–'}</td>"
+                 f"<td class='n'>{len(a)}</td><td class='n'>{f'{median(a):+.2f}' if a else '–'}</td></tr>")
+    h.append("</table></div>")
+    h.append("<h3>By audience leaning</h3><p class='small'>Entries on Wikipedia's list that have an "
+             "audience score, grouped into five equal ranges of that score, with how Wikipedia "
+             "rates them and their median independent quality score.</p>"
+             "<div class='scroll'><table><tr><th>Audience leaning</th><th class='n'>Entries</th>"
+             + "".join(f"<th class='n'>{escape(RATING_NAMES[x])}</th>" for x in RATING_ORDER if x)
+             + "<th class='n'>Median independent quality</th></tr>")
+    for lo, hi, lbl in AUD_BINS:
+        rows = [x for x in L if x["audience_leaning"] is not None and lo <= x["audience_leaning"] < hi]
+        c = Counter(x["status"] for x in rows)
+        q = [x["independent_quality"] for x in rows if x["independent_quality"] is not None]
+        h.append(f"<tr><td>{escape(lbl)}</td><td class='n'>{len(rows)}</td>"
+                 + "".join(f"<td class='n'>{p0(c[x] / len(rows)) if rows else '–'}</td>"
+                           for x in RATING_ORDER if x)
+                 + f"<td class='n'>{f'{median(q):.2f}' if q else '–'} "
+                   f"<span class='small'>({len(q)})</span></td></tr>")
+    h.append("</table></div><p class='small'>−1 means shared only by Democrats and +1 only by "
+             "Republicans. Percentages are shares of the entries in that row.</p>")
+    h.append("<details><summary>All entries on Wikipedia's list</summary><div class='scroll'><table>"
+             "<tr><th>Entry</th><th>Wikipedia's rating</th><th class='n'>Independent quality</th>"
+             "<th class='n'>Audience leaning</th><th>AllSides (2018)</th></tr>")
+    for x in L:
+        qv = f"{x['independent_quality']:.2f}" if x["independent_quality"] is not None else "–"
+        av = f"{x['audience_leaning']:+.2f}" if x["audience_leaning"] is not None else "–"
+        h.append(f"<tr><td>{escape(x['entry'])}</td><td class='small'>{escape(RATING_NAMES.get(x['status'], x['status']))}</td>"
+                 f"<td class='n'>{qv}</td><td class='n'>{av}</td>"
+                 f"<td class='small'>{escape(x['allsides_2018'] or '–')}</td></tr>")
+    h.append("</table></div></details>")
+
+    # most-cited across the analysed articles
+    cites, arts = Counter(), Counter()
+    for r in ctx.recs:
+        for x in (r.get("sources") or {}).get("list", []):
+            cites[x["source"]] += x["citations"]
+            arts[x["source"]] += 1
+    if cites:
+        h.append(f"<h2>Most-cited sources across the {len(ctx.recs):,} analysed articles</h2>"
+                 "<div class='scroll'><table><tr><th>Source</th><th class='n'>Citations</th>"
+                 f"<th class='n'>Articles</th>{ASSESSOR_HEAD}</tr>")
+        for k, n in sorted(cites.items(), key=lambda x: (-x[1], x[0]))[:100]:
+            h.append(f"<tr><td>{source_label(k, ctx)}</td><td class='n'>{n:,}</td>"
+                     f"<td class='n'>{arts[k]}</td>{_assessor_cells(k, ctx)}</tr>")
+        h.append("</table></div>")
+    h.append(f"<p class='small'>{link('data/outlets.json', 'All ratings as JSON')}.</p>")
+    return page(f"Sources · {NAME}", "".join(h), "sources.html", json_alt="data/outlets.json",
+                description="Sources cited in the analysed articles, and how several assessors rate them.")
+
+
 # ---------------------------------------------------------------- editors across articles
 def editors_page(ctx: Context):
     pt = ctx.patterns
@@ -728,13 +1068,35 @@ def editors_page(ctx: Context):
     from .candidates import AREAS
     area_name = {k: v[0] for k, v in AREAS.items()} | {"outside": "outside these areas"}
     show_else = rule.get("elsewhere")
+    show_src = bool(ctx.outlets)
+
+    def src_cell(x):
+        if not x:
+            return "–"
+        wr = "; ".join(f"{escape(RATING_NAMES.get(k, k) if k != 'not listed' else 'not on the list')} {escape(v)}"
+                       for k, v in x["wikipedia_rating"].items())
+        bits = [f"{escape(x['citations'])} citations.", f"Wikipedia's rating: {wr}."]
+        if x["independent_quality_median"] is not None:
+            bits.append(f"Independent quality: median {x['independent_quality_median']:.1f} "
+                        f"({escape(x['independent_quality_coverage'])} scored).")
+        if x["audience_leaning_median"] is not None:
+            bits.append(f"Audience leaning: median {x['audience_leaning_median']:+.1f} "
+                        f"({escape(x['audience_leaning_coverage'])} scored).")
+        al = {k: v for k, v in x["alignment"].items() if k != "none recorded"}
+        if al:
+            bits.append("Wikidata alignment: " + "; ".join(f"{escape(k)} {escape(v)}" for k, v in al.items()) + ".")
+        if x["most_cited"]:
+            bits.append("Most cited: " + "; ".join(f"{escape(k)} {escape(v)}" for k, v in x["most_cited"].items()) + ".")
+        return " ".join(bits)
 
     def table(rows, by_topic=False):
         out = ["<div class='scroll'><table><tr><th>Pattern ID</th><th class='n'>Articles</th>"
                + ("<th>Topic groups where they wrote at least 1% of an article</th>" if by_topic
                   else "<th>Share of each article's text</th>")
                + ("<th>Where they edit across Wikipedia (share of their article edits)</th>"
-                  if show_else else "") + "</tr>"]
+                  if show_else else "")
+               + ("<th>Sources they cited in the analysed articles</th>" if show_src else "")
+               + "</tr>"]
         for e in rows:
             if by_topic:
                 sh = "; ".join(f"{n} of the {m} analysed articles in {escape(g)}"
@@ -747,8 +1109,9 @@ def editors_page(ctx: Context):
                 el = "<td class='small'>" + ("–" if not x else
                      f"{escape(x['edits'])} article edits. " + "; ".join(
                          f"{escape(area_name.get(a, a))}: {escape(v)}" for a, v in x["areas"].items())) + "</td>"
+            sc = f"<td class='small'>{src_cell(e.get('sources'))}</td>" if show_src else ""
             out.append(f"<tr><td><code>{e['id']}</code></td><td class='n'>{e['articles_with_text']}"
-                       f"</td><td class='small'>{sh}</td>{el}</tr>")
+                       f"</td><td class='small'>{sh}</td>{el}{sc}</tr>")
         out.append("</table></div>")
         return "".join(out)
 
@@ -993,8 +1356,11 @@ def build(recs, groups, areas=None, elsewhere=False, out_dir=None, kinds=None):
     for c in cands:   # articles analysed before they were in the list get their kind from it
         if c["title"] in areas and not kinds.get(c["title"]) and c["area"] == areas[c["title"]]:
             kinds[c["title"]] = c["kind"]
-    pt = patterns_mod.compute(clean, groups, areas, elsewhere=elsewhere, kinds=kinds)
-    ctx = Context(clean, groups, pt, areas=areas, kinds=kinds, candidates=cands)
+    from .outlets import OUTLETS_JSON
+    snap = json.loads(OUTLETS_JSON.read_text(encoding="utf-8")) if OUTLETS_JSON.exists() else None
+    pt = patterns_mod.compute(clean, groups, areas, elsewhere=elsewhere, kinds=kinds,
+                              outlets=(snap or {}).get("sources"))
+    ctx = Context(clean, groups, pt, areas=areas, kinds=kinds, candidates=cands, outlets=snap)
     final = SITE_DIR if out_dir is None else Path(out_dir)
     stage = final.with_name(final.name + ".new")
     if stage.exists():
@@ -1016,6 +1382,10 @@ def _write(SITE_DIR, clean, ctx):
     (SITE_DIR / "index.html").write_text(home_page(ctx), encoding="utf-8")
     (SITE_DIR / "compare.html").write_text(compare_page(ctx), encoding="utf-8")
     (SITE_DIR / "articles.html").write_text(choose_page(ctx), encoding="utf-8")
+    (SITE_DIR / "sources.html").write_text(sources_page(ctx), encoding="utf-8")
+    from .outlets import OUTLETS_JSON
+    if OUTLETS_JSON.exists():
+        shutil.copy(OUTLETS_JSON, SITE_DIR / "data" / "outlets.json")
     (SITE_DIR / "editors.html").write_text(editors_page(ctx), encoding="utf-8")
     (SITE_DIR / "how-it-works.html").write_text(how_page(ctx), encoding="utf-8")
     (SITE_DIR / "objective.html").write_text(objective_page(), encoding="utf-8")

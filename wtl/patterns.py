@@ -75,6 +75,68 @@ def editor_shares(rec: dict, area: str) -> dict:
 EDIT_CAP = 10000
 
 
+def editor_sources(rec: dict, area: str) -> dict:
+    """{account key: {source key: citations}} for one stored record (cached, never published)."""
+    if not (rec.get("sources") or {}).get("list"):
+        return {}   # record predates source data (run `wtl reanalyse`); don't cache an empty map
+    p = cache.path("patterns", "sources", str(rec["revision"]))
+    hit = cache.load(p)
+    if hit is None:
+        _, intr = pipeline.analyse(revid=rec["revision"], area=area, internals=True)
+        by_label = {v: k for k, v in {**intr["labels"], **intr.get("source_labels", {})}.items()}
+        hit = {}
+        for x in (rec.get("sources") or {}).get("list", []):
+            for lbl, n in x["added_by"].items():
+                k = by_label.get(lbl)
+                if k:
+                    hit.setdefault(k, {})[x["source"]] = n
+        cache.save(p, hit)
+    return hit
+
+
+def citations_range(n: int) -> str:
+    for lo, hi in ((1, 10), (10, 50), (50, 100), (100, 500), (500, 1000)):
+        if n < hi:
+            return f"{lo}–{hi - 1}"
+    return "1,000 or more"
+
+
+def source_profile(cites: dict, outlets: dict) -> dict:
+    """Across-article profile of the sources one editor cited, coarsened like the rest of the
+    page: counts as ranges, shares as ranges, medians to one decimal place."""
+    from collections import Counter
+    tot = sum(cites.values())
+    rating, q, a, align = Counter(), [], [], Counter()
+    for k, n in cites.items():
+        o = outlets.get(k) or {}
+        wr = o.get("wikipedia_rating")
+        rating[wr["status"] if wr else "not listed"] += n
+        if o.get("independent_quality"):
+            q += [o["independent_quality"]["score"]] * n
+        if o.get("audience_leaning"):
+            a += [o["audience_leaning"]["score"]] * n
+        for x in o.get("political_alignment") or ["none recorded"]:
+            align[x] += n
+
+    def med(v):
+        v = sorted(v)
+        m = len(v) // 2
+        return round((v[m] if len(v) % 2 else (v[m - 1] + v[m]) / 2), 1) if v else None
+    named = [(k, n) for k, n in cites.items()
+             if (outlets.get(k) or {}).get("wikidata") or (outlets.get(k) or {}).get("wikipedia_rating")]
+    top = sorted(named, key=lambda x: (-x[1], x[0]))[:5]
+    return {
+        "citations": citations_range(tot),
+        "wikipedia_rating": {k: share_range(v / tot) for k, v in rating.most_common()},
+        "independent_quality_median": med(q),
+        "independent_quality_coverage": share_range(len(q) / tot),
+        "audience_leaning_median": med(a),
+        "audience_leaning_coverage": share_range(len(a) / tot),
+        "alignment": {k: share_range(v / tot) for k, v in align.most_common() if v / tot >= MIN_SHARE},
+        "most_cited": {(outlets.get(k) or {}).get("name") or k: share_range(n / tot) for k, n in top},
+    }
+
+
 def _topic_counts(articles: list[str], buckets: dict) -> dict:
     """{group label: [articles of this editor in it, articles in the group]}; groups too small
     to show are left out."""
@@ -180,10 +242,17 @@ def topic_buckets(arts: list[str], areas: dict, kinds: dict) -> dict:
 
 
 def compute(recs: list[dict], groups: dict, areas: dict, elsewhere: bool = False,
-            kinds: dict | None = None) -> dict:
+            kinds: dict | None = None, outlets: dict | None = None) -> dict:
     secret = _secret()
     arts = [r["article"] for r in recs]
     per = {r["article"]: editor_shares(r, areas.get(r["article"], "")) for r in recs}
+    cites = {}
+    if outlets:
+        for r in recs:
+            for k, d in editor_sources(r, areas.get(r["article"], "")).items():
+                c = cites.setdefault(k, {})
+                for src, n in d.items():
+                    c[src] = c.get(src, 0) + n
 
     # level 1: overlap between articles
     overlap = {a: {b: round(sum(v["share"] for k, v in per[a].items() if k in per[b]), 6)
@@ -218,6 +287,7 @@ def compute(recs: list[dict], groups: dict, areas: dict, elsewhere: bool = False
                 shown.items(), key=lambda x: -x[1]["share"])} if sanctioned else {},
             "topics": {} if sanctioned else _topic_counts(substantial, buckets),
             "groups": sorted({groups.get(a, "") for a in substantial}),
+            "sources": source_profile(cites[k], outlets) if cites.get(k) else None,
             "_key": k,
             "_order": (-len(substantial), -sum(v["share"] for v in present.values())),
         })

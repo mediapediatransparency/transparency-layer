@@ -5,6 +5,11 @@ into kinds (people, news outlets, organisations, ideas and movements, events) by
 ranked by readership over the last 60 days. The top N of each kind in each area are taken.
 Pages a person asks for are added on top and marked as requested.
 
+Second rule, for subjects Wikipedia has no contentious-topic tag for (SUBJECTS below): every
+article whose talk page carries the banner of the named WikiProjects, the groups of editors who
+look after a subject. Kinds and ranking are the same. These areas are labelled "chosen by
+subject" throughout, because here the project picks the subject, not Wikipedia.
+
 Sources, all public:
 - Talk pages in Category:Wikipedia pages about contentious topics, and the Arab-Israeli
   extended-confirmed category; the topic codes are read from their talk-page notices.
@@ -48,6 +53,18 @@ AREAS = {
     "HA": ("Horn of Africa", {"horn"}),
     "TT": ("The Troubles (Northern Ireland)", {"tt"}),
 }
+# Second rule: areas chosen by subject. WikiProject banners on talk pages place an article under
+# a subject; Wikipedia gives these subjects no contentious-topic designation.
+SUBJECTS = {
+    "CNX": ("China, Taiwan, Hong Kong and Tibet (chosen by subject)",
+            ["Category:WikiProject China articles", "Category:WikiProject Taiwan articles",
+             "Category:WikiProject Hong Kong articles", "Category:WikiProject Tibet articles"]),
+    "SOC": ("Socialism, communism and Marxism (chosen by subject)",
+            ["Category:WikiProject Socialism articles"]),
+    "ISL": ("Islam (chosen by subject)", ["Category:WikiProject Islam articles"]),
+}
+AREAS.update({k: (name, set()) for k, (name, _) in SUBJECTS.items()})
+RULE = {k: ("subject" if k in SUBJECTS else "contentious tag") for k in AREAS}
 CODE_AREA = {c: k for k, (_, cs) in AREAS.items() for c in cs}
 AI_TEMPLATES = re.compile(r"\{\{\s*(?:ArbCom Arab-Israeli enforcement|Contentious topics/Arab-Israeli"
                           r"|ARBPIA|Arab-Israeli Arbitration Enforcement)", re.I)
@@ -147,6 +164,63 @@ def tagged_talk_pages(category: str) -> dict[str, str]:
     cache.save(p, out)
     part.unlink(missing_ok=True)
     return out
+
+
+def project_articles(category: str) -> list[str]:
+    """Article titles whose talk pages are in a WikiProject's article category (namespace 1)."""
+    name = re.sub(r"\W+", "_", category)[:80]
+    p = cache.path("candidates", "projects", name)
+    hit = cache.load(p)
+    if hit is not None:
+        return hit
+    out, cont = [], {}
+    while True:
+        d = _api_retry({"action": "query", "list": "categorymembers", "cmtitle": category,
+                        "cmnamespace": "1", "cmlimit": "500", "cmprop": "title", **cont})
+        out += [m["title"][len("Talk:"):] for m in d["query"]["categorymembers"]]
+        if "continue" not in d:
+            break
+        cont = d["continue"]
+        if len(out) % 10000 < 500:
+            log(f"  {category[9:]}: {len(out):,}")
+    out = sorted(set(out))
+    cache.save(p, out)
+    return out
+
+
+def subject_rows(per_kind: int) -> list[dict]:
+    """Rows for the subject areas. Kinds are looked up from the most-read article down until
+    every kind has per_kind articles (or the subject runs out), so the result is the same as
+    classifying every article, at a fraction of the Wikidata queries."""
+    rows = []
+    for area, (_, cats) in SUBJECTS.items():
+        titles = sorted({t for c in cats for t in project_articles(c)})
+        log(f"{area}: {len(titles):,} articles under {len(cats)} WikiProject banner(s)")
+        info = article_info(titles)
+        pool, seen = [], set()
+        for t in titles:
+            i = info.get(t)
+            if (not i or i["missing"] or i["title"].startswith(("List of ", "Lists of "))
+                    or i["title"] in seen):
+                continue
+            seen.add(i["title"])
+            pool.append(i)
+        pool.sort(key=lambda i: (-i["views"], i["title"]))
+        got, j, step = {k: 0 for k in KINDS}, 0, 1500
+        while j < len(pool) and min(got.values()) < per_kind:
+            chunk = pool[j:j + step]
+            kd = kinds([i["qid"] for i in chunk if i["qid"]])
+            for i in chunk:
+                k = (kd.get(i["qid"]) if i["qid"] else None) or {"kind": "other", "journalist": False}
+                kind = "journalist" if k["kind"] == "person" and k["journalist"] else k["kind"]
+                rows.append({"area": area, "kind": kind, "title": i["title"], "views_60d": i["views"],
+                             "wikidata": i["qid"] or "", "journalist": k["journalist"]})
+                if kind in got:
+                    got[kind] += 1
+            j += step
+        # kinds still short were classified to the end of the pool; the rest are not needed
+        log(f"  {area}: classified {min(j, len(pool)):,} of {len(pool):,} by readership")
+    return rows
 
 
 def article_info(titles: list[str]) -> dict[str, dict]:
@@ -261,20 +335,26 @@ def build(per_kind: int = 25) -> list[dict]:
             seen_title.add((a, i["title"]))
             rows.append({"area": a, "kind": kind, "title": i["title"], "views_60d": i["views"],
                          "wikidata": i["qid"] or "", "journalist": k["journalist"]})
+    rows += subject_rows(per_kind)
     chosen, seen = [], set()
     for a in AREAS:
         for kind in KINDS:
             pool = sorted((r for r in rows if r["area"] == a and r["kind"] == kind),
                           key=lambda r: (-r["views_60d"], r["title"]))
             for rank, r in enumerate(pool[:per_kind], 1):
-                chosen.append({**r, "rank": rank, "of": len(pool), "reason": "most-read"})
+                # subject pools are classified only as far down as needed, so their size per
+                # kind is not known and is left blank
+                chosen.append({**r, "rank": rank, "of": "" if a in SUBJECTS else len(pool),
+                               "reason": "most-read",
+                               "rule": RULE[a]})
                 seen.add((a, r["title"]))
     for q in requested():
         if (q["area"], q["title"]) not in seen:
             chosen.append({"area": q["area"], "kind": q.get("kind", ""), "title": q["title"],
                            "views_60d": "", "wikidata": "", "journalist": "", "rank": "", "of": "",
-                           "reason": "requested"})
-    cols = ["area", "kind", "rank", "of", "title", "views_60d", "journalist", "wikidata", "reason"]
+                           "reason": "requested", "rule": RULE.get(q["area"], "")})
+    cols = ["area", "kind", "rank", "of", "title", "views_60d", "journalist", "wikidata", "reason",
+            "rule"]
     with open(CANDIDATES_CSV, "w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=cols, extrasaction="ignore")
         w.writeheader()

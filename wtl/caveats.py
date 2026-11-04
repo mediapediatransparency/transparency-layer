@@ -55,7 +55,17 @@ def compute(rec: dict) -> list[dict]:
             "text": f"This figure comes from a single editor ({conc['editor']}).",
         })
 
-    if not area:
+    from .candidates import SUBJECTS
+    if area in SUBJECTS:
+        out.append({
+            "code": "chosen_by_subject",
+            "applies_to": "sanctioned_share",
+            "text": (f"This article was chosen by subject ({SUBJECTS[area][0].split(' (')[0]}), "
+                     "not because Wikipedia marks it as a contentious topic. Wikipedia has no "
+                     "special sanctions area for this subject, so only Wikipedia-wide bans and "
+                     "sockpuppetry findings can count here. Topic bans do not apply."),
+        })
+    elif not area:
         out.append({
             "code": "no_topic_area",
             "applies_to": "sanctioned_share",
@@ -74,7 +84,7 @@ def compute(rec: dict) -> list[dict]:
                      f"better-covered areas would overstate the difference."),
         })
 
-    if area:
+    if area and area not in SUBJECTS:
         out.append({
             "code": "minimum_figure",
             "applies_to": "sanctioned_share",

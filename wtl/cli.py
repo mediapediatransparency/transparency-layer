@@ -158,6 +158,33 @@ def cmd_batch(a):
     cmd_render(a)
 
 
+def cmd_reanalyse(a):
+    """Recompute every stored record at its pinned revision (cached data; few or no requests),
+    so all records carry the current pipeline's fields."""
+    entries = load_testset()
+    for i, (t, e) in enumerate(entries.items(), 1):
+        print(f"[{i}/{len(entries)}] {t}", file=sys.stderr)
+        try:
+            rec = pipeline.analyse(revid=e["revision"], area=e.get("topic_area") or "")
+        except Exception as ex:   # keep going; the old record stays in place
+            print(f"  skipped: {ex}", file=sys.stderr)
+            continue
+        json_writer.write(rec)
+    cmd_render(a)
+
+
+def cmd_outlets(a):
+    from . import outlets
+    recs, _ = stored_records()
+    snap = outlets.build(recs)
+    s = snap["sources"].values()
+    print(f"wrote {outlets.OUTLETS_JSON}: {len(snap['sources']):,} sources; "
+          f"{sum(1 for x in s if x['wikipedia_rating']):,} on Wikipedia's list, "
+          f"{sum(1 for x in s if x['independent_quality']):,} with an independent quality score, "
+          f"{sum(1 for x in s if x['audience_leaning']):,} with an audience score, "
+          f"{sum(1 for x in s if x['wikidata']):,} matched on Wikidata")
+
+
 def main(argv=None):
     ap = argparse.ArgumentParser(prog="wtl", description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -171,6 +198,8 @@ def main(argv=None):
     p.add_argument("--refresh", action="store_true", help="re-pin every article to its latest revision")
     p.set_defaults(fn=cmd_testset)
     sub.add_parser("render").set_defaults(fn=cmd_render)
+    sub.add_parser("reanalyse").set_defaults(fn=cmd_reanalyse)
+    sub.add_parser("outlets").set_defaults(fn=cmd_outlets)
     p = sub.add_parser("site")
     p.add_argument("--elsewhere", action="store_true",
                    help="also fetch each listed editor's recent edits across Wikipedia (slow)")
