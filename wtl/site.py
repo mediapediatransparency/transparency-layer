@@ -429,6 +429,10 @@ def article_page(rec, ctx: Context):
     # ---- sources
     h.append(sources_section(rec, ctx))
 
+    # ---- removals, wording changes, declared interests
+    h.append(changes_section(rec, ctx))
+    h.append(interests_section(rec))
+
     # ---- editors table
     h.append("<h2>Editors in detail</h2>")
     h.append("<p class='small'><b>Words</b> and <b>Share</b>: this editor's words in today's "
@@ -979,6 +983,124 @@ def summary_rows(cites, ctx, lead, tail):
             + "<tr class='sum'>" + lab("Mean per citation") + "<td></td>" + q2 + a2 + pad + "</tr>")
 
 
+FLAG_NAMES = {"opinion": "opinion, comment or blog section", "no_link": "no web link",
+              "book_without_page": "book with no page number", "not_english": "not in English",
+              "dead_link_no_archive": "dead link with no archived copy",
+              "paywall_or_registration": "behind a paywall or registration"}
+
+
+def flags_html(s):
+    f = s.get("flags")
+    if not f:
+        return ""
+    tot = s["citations"]
+    bits = " · ".join(f"{escape(FLAG_NAMES[k])} {num(v)} ({p0(v / tot)})" for k, v in f.items() if v)
+    out = [f"<h3>Opinion and harder-to-check citations</h3><p class='small'>Of the article's "
+           f"{num(tot)} citations: {bits or 'none'}. Opinion is recognised from the web address "
+           "(sections such as /opinion/, /commentisfree/ or blogs) or the citation template; the "
+           "others from the citation's own details. These are facts about how a citation can be "
+           "checked, not about whether it is right.</p>"]
+    rows = [(l, e) for l, e in s.get("flags_by_editor", {}).items() if l != "unknown"][:10]
+    if rows:
+        out.append("<div class='scroll'><table><tr><th>Editor</th><th class='n'>Citations added</th>"
+                   + "".join(f"<th class='n'>{escape(FLAG_NAMES[k])}</th>" for k in FLAG_NAMES) + "</tr>")
+        for l, e in rows:
+            out.append(f"<tr><td>{escape(l)}</td><td class='n'>{e['citations']}</td>"
+                       + "".join(f"<td class='n'>{e[k] or '–'}</td>" for k in FLAG_NAMES) + "</tr>")
+        out.append("</table></div><p class='small'>The ten editors who added the most citations "
+                   "still in the article.</p>")
+    return "".join(out)
+
+
+def changes_section(rec, ctx):
+    c = rec.get("changes")
+    if not c or not c.get("editors"):
+        return ""
+    h = ["<h2>Text removed</h2>",
+         f"<p>Over the article's history up to this version, <b>{num(c['words_removed'])}</b> "
+         f"words were removed by {num(c['editors_removing'])} editors; "
+         f"{num(c['words_removed_later_restored'])} of them "
+         f"({p0(c['words_removed_later_restored'] / c['words_removed']) if c['words_removed'] else '0%'}) "
+         f"were later put back. {num(c['source_links_removed'])} web links to sources were removed "
+         "with that text. Each removal is credited to the editor of the revision that made it.</p>",
+         "<div class='scroll'><table><tr><th>Editor</th><th class='n'>Words removed</th>"
+         "<th class='n'>Of them, others' words</th><th class='n'>Later put back</th>"
+         "<th class='n'>Edits that removed text</th><th>Sources whose links they removed</th>"
+         "<th>Largest removals</th></tr>"]
+    for e in c["editors"][:25]:
+        if not e["words_removed"]:
+            continue
+        srcs = ", ".join(f"{escape(src_name(k, ctx))} ({n})" for k, n in list(e["sources_removed"].items())[:4])
+        more = len(e["sources_removed"]) - 4
+        ev = " ".join(f"<a href='{escape(u)}'>diff</a>" for u in e["evidence"][:3])
+        h.append(f"<tr><td>{escape(e['label'])}</td><td class='n'>{num(e['words_removed'])}</td>"
+                 f"<td class='n'>{num(e['others_words_removed'])}</td>"
+                 f"<td class='n'>{num(e['words_removed_later_restored'])}</td>"
+                 f"<td class='n'>{num(e['removing_revisions'])}</td>"
+                 f"<td class='small'>{srcs or '–'}{f' and {more} more' if more > 0 else ''}</td>"
+                 f"<td class='small'>{ev}</td></tr>")
+    h.append("</table></div><p class='small'>The 25 editors who removed the most words. Text "
+             "that WikiWho cannot follow when it is moved counts as removed and re-added; it "
+             "follows most moves within an article.</p>")
+
+    # wording
+    lt = c.get("listed_terms") or {}
+    groups = sorted(set(lt.get("inserted", {})) | set(lt.get("removed", {})))
+    if groups:
+        L = c.get("lists") or {}
+        wtw = (L.get("words_to_watch") or {}).get("url", "")
+        h.append("<h2>Words to watch and contested terms</h2>"
+                 f"<p>Terms from two lists, counted when an editor added them (in today's text or "
+                 f"in text later removed) and when an editor removed them. "
+                 f"<b>WTW</b> is Wikipedia's own guideline {link(wtw, 'Words to watch')} (labels, "
+                 "expressions of doubt, puffery, editorializing and so on). <b>Contested</b> terms "
+                 f"are groups of alternative words for the same thing, published in "
+                 f"{link('../data/contested_terms.json', 'this list')}; every member of a group is "
+                 "counted the same way. A count says a word was added or removed, not whether it "
+                 "was right.</p><div class='scroll'><table><tr><th>List and group</th>"
+                 "<th class='n'>Added</th><th class='n'>Removed</th></tr>")
+        for g in groups:
+            h.append(f"<tr><td>{escape(g)}</td><td class='n'>{num(lt.get('inserted', {}).get(g, 0))}</td>"
+                     f"<td class='n'>{num(lt.get('removed', {}).get(g, 0))}</td></tr>")
+        h.append("</table></div>")
+        eds = [e for e in c["editors"] if e["terms_inserted"] or e["terms_removed"]]
+        eds.sort(key=lambda e: (-(sum(sum(v.values()) for v in e["terms_inserted"].values())
+                                  + sum(sum(v.values()) for v in e["terms_removed"].values())),
+                                int(e["label"].split()[1])))
+
+        def terms(d):
+            flat = sorted(((t, n, g) for g, v in d.items() for t, n in v.items()), key=lambda x: (-x[1], x[0]))
+            return ", ".join(f"{escape(t)} {n}" for t, n, _ in flat[:8]) + (
+                f" and {len(flat) - 8} more" if len(flat) > 8 else "") if flat else "–"
+        h.append("<h3>By editor</h3><div class='scroll'><table><tr><th>Editor</th>"
+                 "<th>Listed terms they added</th><th>Listed terms they removed</th></tr>")
+        for e in eds[:20]:
+            h.append(f"<tr><td>{escape(e['label'])}</td><td class='small'>{terms(e['terms_inserted'])}</td>"
+                     f"<td class='small'>{terms(e['terms_removed'])}</td></tr>")
+        h.append("</table></div><p class='small'>The 20 editors with the most listed terms added "
+                 "or removed; all of them are in the article's data file.</p>")
+    return "".join(h)
+
+
+def interests_section(rec):
+    d = rec.get("declared_interests")
+    if not d or not (d.get("article_tags") or d.get("notices")):
+        return ""
+    h = ["<h2>Declared conflicts of interest</h2><ul>"]
+    for t in d.get("article_tags", []):
+        h.append(f"<li>The article carries a maintenance notice: <b>{escape(t)}</b>.</li>")
+    for n in d.get("notices", []):
+        who = ", ".join(n["editors"]) or "no editor listed on this page"
+        other = n["accounts_not_among_listed_editors"]
+        h.append(f"<li>The talk page has a <b>{escape(n['notice'])}</b> notice naming {escape(who)}"
+                 + (f" and {other} other account{'s' if other != 1 else ''}" if other else "") + ".</li>")
+    h.append("</ul>")
+    if d.get("evidence"):
+        h.append(f"<p class='small'>{link(d['evidence'], 'The talk page as it stood')} when this "
+                 "version was saved. These notices are Wikipedia's own records.</p>")
+    return "".join(h)
+
+
 def sources_section(rec, ctx):
     s = rec.get("sources")
     if not s:
@@ -1021,6 +1143,7 @@ def sources_section(rec, ctx):
         h.append(f"<p class='small'>{len(listed) - 25} further sources are in the {data}.</p>")
     if ctx.outlets:
         h.append(MEANS_NOTE)
+    h.append(flags_html(s))
     # who added the citations
     if ctx.outlets:
         from collections import defaultdict
@@ -1635,6 +1758,10 @@ def _write(SITE_DIR, clean, ctx):
     from .outlets import OUTLETS_JSON
     if OUTLETS_JSON.exists():
         shutil.copy(OUTLETS_JSON, SITE_DIR / "data" / "outlets.json")
+    from .config import ROOT
+    for name in ("contested_terms.json", "words_to_watch.json", "source_names.json"):
+        if (ROOT / "data" / name).exists():   # the lists every record's fingerprints refer to
+            shutil.copy(ROOT / "data" / name, SITE_DIR / "data" / name)
     (SITE_DIR / "editors.html").write_text(editors_page(ctx), encoding="utf-8")
     (SITE_DIR / "how-it-works.html").write_text(how_page(ctx), encoding="utf-8")
     (SITE_DIR / "objective.html").write_text(objective_page(), encoding="utf-8")

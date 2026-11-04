@@ -3,7 +3,8 @@
 import sys
 from collections import Counter, defaultdict
 
-from . import __version__, caveats, sanctions as sanc, sources
+from . import __version__, caveats, coi, sanctions as sanc, sources, words as wl
+from .metrics import changes as chg
 from .config import WIKIWHO_URL
 from .fetch import cache, mediawiki as mw, wikiwho as ww
 from .metrics import accountability, authorship as au
@@ -18,6 +19,9 @@ def diff_url(revid: int) -> str:
 
 def log(msg: str) -> None:
     print(msg, file=sys.stderr)
+
+
+CHANGE_EDITORS = 100   # per record: the top removers plus the top listed-term changers
 
 
 def analyse(title: str | None = None, revid: int | None = None, area: str = "",
@@ -55,7 +59,7 @@ def analyse(title: str | None = None, revid: int | None = None, area: str = "",
     total, lead_total = len(words), sum(lead_count.values())
 
     # --- survival (all words ever added, from WikiWho all_content) ---
-    p = cache.path("wikiwho", "all_content", str(pageid))
+    p = cache.path("wikiwho", "all_content_v2", str(pageid))
     hit = cache.load(p)
     if hit is None or hit["covers_revid"] < revid:
         if latest is None:
@@ -71,7 +75,7 @@ def analyse(title: str | None = None, revid: int | None = None, area: str = "",
             key_cache[o] = au.editor_key(o, "", hist)[0]
         return key_cache[o]
 
-    surv = au.survival(allc["tokens"], hist, revid, key_of_rev)
+    surv = au.survival(ww.word_view(allc), hist, revid, key_of_rev)
 
     # --- sanctions: seed list + block log, one rule for everyone ---
     rows = sanc.load(sanctions_path) if sanctions_path else sanc.load()
@@ -127,6 +131,62 @@ def analyse(title: str | None = None, revid: int | None = None, area: str = "",
             "citations_added": cites_by_key.get(k, 0),
             "evidence": [diff_url(r) for r in revs] + [s.url for s in ss],
         })
+
+    # --- removals and wording changes (WikiWho full history; see wtl/metrics/changes.py) ---
+    matcher, lists_info = wl.load()
+    per_chg, art_chg, chg_ev = chg.compute(allc["tokens"], rc["tokens"], revid, key_of_rev, matcher)
+    lab_all = {**labels, **src_labels}
+    n_lab = max((int(v.split()[1]) for v in lab_all.values()), default=0)
+    by_removed = sorted(per_chg, key=lambda k: (-per_chg[k]["words_removed"], k))[:CHANGE_EDITORS]
+    by_terms = sorted((k for k in per_chg if per_chg[k]["terms_inserted"] or per_chg[k]["terms_removed"]),
+                      key=lambda k: (-(sum(per_chg[k]["terms_inserted"].values())
+                                       + sum(per_chg[k]["terms_removed"].values())), k))[:CHANGE_EDITORS]
+    keep = list(dict.fromkeys(by_removed + by_terms))
+    chg_labels = {}
+    for k in keep:   # editors not yet labelled get the next numbers, most words removed first
+        if k not in lab_all:
+            n_lab += 1
+            chg_labels[k] = f"Editor {n_lab}"
+    lab_all.update(chg_labels)
+
+    def grouped(c):
+        out = defaultdict(dict)
+        for (g, term), n in sorted(c.items()):
+            out[g][term] = n
+        return dict(out)
+    change_editors = []
+    for k in keep:
+        e = per_chg[k]
+        change_editors.append({
+            "label": lab_all[k],
+            "words_removed": e["words_removed"],
+            "others_words_removed": e["others_words_removed"],
+            "words_removed_later_restored": e["words_removed_later_restored"],
+            "removing_revisions": e["removing_revisions"],
+            "sources_removed": dict(sorted(e["sources_removed"].items(), key=lambda x: (-x[1], x[0]))),
+            "terms_inserted": grouped(e["terms_inserted"]),
+            "terms_removed": grouped(e["terms_removed"]),
+            "evidence": [diff_url(r) for r in chg_ev.get(k, [])],
+        })
+    change_editors.sort(key=lambda e: (-e["words_removed"], int(e["label"].split()[1])))
+    terms_total = {"inserted": Counter(), "removed": Counter()}
+    for e in per_chg.values():
+        for (g, _), n in e["terms_inserted"].items():
+            terms_total["inserted"][g] += n
+        for (g, _), n in e["terms_removed"].items():
+            terms_total["removed"][g] += n
+    changes_block = {
+        "words_removed": art_chg["words_removed"],
+        "words_removed_later_restored": art_chg["words_removed_later_restored"],
+        "source_links_removed": art_chg["source_links_removed"],
+        "editors_removing": len(per_chg),
+        "listed_terms": {x: dict(sorted(c.items())) for x, c in terms_total.items()},
+        "lists": lists_info,
+        "editors": change_editors,
+        "editors_shown": len(change_editors),
+    }
+
+    declared = coi.compute(title, rev["timestamp"], text, lab_all.get)
 
     # --- sentences ---
     per_sent = defaultdict(list)
@@ -230,7 +290,10 @@ def analyse(title: str | None = None, revid: int | None = None, area: str = "",
     }
     record["accountability"]["concentration"] = caveats.sanctioned_concentration(record)
     record["sources"] = src_block
+    record["changes"] = changes_block
+    record["declared_interests"] = declared
     record["caveats"] = caveats.compute(record)
     if internals:
-        return record, {"labels": labels, "who": who, "source_labels": src_labels}
+        return record, {"labels": labels, "who": who, "source_labels": src_labels,
+                        "change_labels": chg_labels}
     return record

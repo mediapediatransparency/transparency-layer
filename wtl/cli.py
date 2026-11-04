@@ -162,6 +162,14 @@ def cmd_reanalyse(a):
     """Recompute every stored record at its pinned revision (cached data; few or no requests),
     so all records carry the current pipeline's fields."""
     entries = load_testset()
+    if getattr(a, "missing", None):   # only records that lack a given top-level field
+        def has(e):
+            p = OUT_DIR / json_writer.slug(e["article"]) / f"{e['revision']}.json"
+            try:
+                return a.missing in json.loads(p.read_text(encoding="utf-8"))
+            except (OSError, ValueError):
+                return False
+        entries = {t: e for t, e in entries.items() if not has(e)}
     for i, (t, e) in enumerate(entries.items(), 1):
         print(f"[{i}/{len(entries)}] {t}", file=sys.stderr)
         try:
@@ -217,7 +225,10 @@ def main(argv=None):
     p.add_argument("--refresh", action="store_true", help="re-pin every article to its latest revision")
     p.set_defaults(fn=cmd_testset)
     sub.add_parser("render").set_defaults(fn=cmd_render)
-    sub.add_parser("reanalyse").set_defaults(fn=cmd_reanalyse)
+    p = sub.add_parser("reanalyse")
+    p.add_argument("--missing", metavar="FIELD",
+                   help="only records that lack this top-level field, e.g. --missing changes")
+    p.set_defaults(fn=cmd_reanalyse)
     sub.add_parser("outlets").set_defaults(fn=cmd_outlets)
     sub.add_parser("source-names").set_defaults(fn=cmd_source_names)
     p = sub.add_parser("site")

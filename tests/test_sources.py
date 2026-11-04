@@ -71,3 +71,16 @@ def test_short_refs_to_plain_bibliography_and_to_other_footnotes():
          "* {{anchor|morris birth}}Morris, Benny (2003). ''The Birth''. Vintage Books.\n")
     got = [c["source"] for c in sources.find(t, names)]
     assert got == ["name:vintage books", "example.org", "example.org"]
+
+
+def test_opinion_and_hard_to_check_flags():
+    t = ("A.<ref>{{cite web |url=https://www.nytimes.com/2024/01/02/opinion/x.html |title=T}}</ref> "
+         "B.<ref>{{cite news |url=https://www.theguardian.com/commentisfree/2020/x |title=T}}</ref> "
+         "C.<ref>{{cite book |title=T |publisher=Zed Books |year=2001}}</ref> "
+         "D.<ref>{{cite book |title=T |publisher=Zed Books |year=2001 |page=12}}</ref> "
+         "E.<ref>{{cite web |url=https://www.haaretz.co.il/x |language=he |url-status=dead |title=T}}</ref> "
+         "F.<ref>{{cite news |url=https://www.wsj.com/articles/x |url-access=subscription |title=T}}</ref>")
+    cs = sources.find(t)
+    got = [sorted(sources.flags_of(t, c)) for c in cs]
+    assert got == [["opinion"], ["opinion"], ["book_without_page", "no_link"], ["no_link"],
+                   ["dead_link_no_archive", "not_english"], ["paywall_or_registration"]]

@@ -175,6 +175,60 @@ ANCHOR_LINK = re.compile(r"\[\[\s*#([^|\]]+)")
 REF_PLAIN = re.compile(r"\|\s*ref\s*=\s*([^|{}\n]+?)\s*(?=\||\}\})", re.I)
 CAP_WORD = re.compile(r"\b[A-Z][\w'’-]{2,}")
 ISBN_TEXT = re.compile(r"\{\{\s*ISBN\s*\||\bISBN(?:-1[03])?[\s:]", re.I)
+# Opinion, comment and blog sections, recognised from the web address or the template.
+OPINION_PATH = re.compile(r"/(opinions?|commentisfree|comment|commentary|op-?eds?|editorials?|"
+                          r"columnists?|columns?|blogs?|voices|views|perspectives?|ideas)(/|$)",
+                          re.I)
+OPINION_HOST = re.compile(r"^(blogs?|opinion|opinions)\.", re.I)
+OPINION_PARAM = re.compile(r"\|\s*(?:type|department|section)\s*=\s*[^|}]*\b(op-?ed|opinion|editorial|"
+                           r"column|commentary|blog)", re.I)
+PAGE_PARAM = re.compile(r"\|\s*(?:pages?|p|pp|at|loc|location|quote)\s*=\s*[^|}\s]", re.I)
+LANG_PARAM = re.compile(r"\|\s*language\s*=\s*([^|}]*)", re.I)
+DEAD = re.compile(r"\|\s*url-status\s*=\s*(dead|usurped|unfit)", re.I)
+ARCHIVED = re.compile(r"\|\s*archive-?url\s*=\s*\S", re.I)
+ACCESS = re.compile(r"\|\s*(?:url-access|access)\s*=\s*(subscription|registration|limited)", re.I)
+BOOKISH = re.compile(r"\{\{\s*(?:cite\s+book|citation)\b|\|\s*isbn\s*=", re.I)
+CHECK_FLAGS = ["opinion", "no_link", "book_without_page", "not_english", "dead_link_no_archive",
+               "paywall_or_registration"]
+
+
+def flags_of(text: str, c: dict) -> set[str]:
+    """Facts about a citation that make it opinion, or harder for a reader to check. Read from
+    its own wikitext (template parameters and web address)."""
+    body = text[c["start"]:c["end"]]
+    f = set()
+    url = None
+    m = URL_PARAM.search(body) or BARE_URL.search(body)
+    if m:
+        url = m.group(1) if m.re is URL_PARAM else m.group(0)
+    path = ""
+    if url:
+        a = ARCHIVE.match(url)
+        u = a.group(1) if a else url
+        try:
+            sp = urlsplit(u)
+            path, host = sp.path or "", (sp.hostname or "").lower()
+        except ValueError:
+            host = ""
+        if OPINION_PATH.search(path) or OPINION_HOST.match(host):
+            f.add("opinion")
+    if OPINION_PARAM.search(body):
+        f.add("opinion")
+    if not url and not c.get("url_host"):
+        f.add("no_link")
+    if (BOOKISH.search(body) or c["source"] == "book (no publisher given)") and not url \
+            and not PAGE_PARAM.search(body):
+        f.add("book_without_page")
+    lm = LANG_PARAM.search(body)
+    if lm and lm.group(1).strip().lower() not in ("", "en", "english", "en-us", "en-gb"):
+        f.add("not_english")
+    if DEAD.search(body) and not ARCHIVED.search(body):
+        f.add("dead_link_no_archive")
+    if ACCESS.search(body):
+        f.add("paywall_or_registration")
+    return f
+
+
 UNMATCHED = ("unidentified", "book (no publisher given)")
 NOT_FOUND = "short footnote (entry not found)"
 BIB_UNKNOWN = "in the article's bibliography, source not named"
@@ -471,10 +525,20 @@ def compute(text, lay, tokens, spans, hist, who, labels, names=None):
         extra[k] = f"Editor {n}"
     lab = {**labels, **extra}
     per = {}
+    flag_tot = Counter()
+    by_ed = {}
     for c, k in zip(cites, keys):
         s = per.setdefault(c["source"], {"source": c["source"], "names": Counter(), "citations": 0,
-                                         "lead_citations": 0, "added_by": Counter()})
+                                         "lead_citations": 0, "added_by": Counter(),
+                                         "opinion_citations": 0})
         s["citations"] += 1
+        fl = flags_of(text, c)
+        if "opinion" in fl:
+            s["opinion_citations"] += 1
+        flag_tot.update(fl)
+        e = by_ed.setdefault(lab[k] if k else "unknown", Counter())
+        e["citations"] += 1
+        e.update(fl)
         if lay.section_of[min(c["start"], len(lay.section_of) - 1)] == 0:
             s["lead_citations"] += 1
         if c["name"]:
@@ -487,6 +551,7 @@ def compute(text, lay, tokens, spans, hist, who, labels, names=None):
             "name_as_cited": (min(s["names"], key=lambda x: (-s["names"][x], x)) if s["names"] else ""),
             "citations": s["citations"],
             "lead_citations": s["lead_citations"],
+            "opinion_citations": s["opinion_citations"],
             "added_by": dict(sorted(s["added_by"].items(),
                                     key=lambda x: (-x[1], _label_no(x[0])))),
         })
@@ -499,6 +564,10 @@ def compute(text, lay, tokens, spans, hist, who, labels, names=None):
         "distinct_sources": len(per),
         "editors_adding_citations": len(by_key),
         "citation_only_editors": len(extra),
+        # opinion and harder-to-check citations (see flags_of), for the article and per editor
+        "flags": {f: flag_tot[f] for f in CHECK_FLAGS},
+        "flags_by_editor": {l: {x: e[x] for x in ["citations"] + CHECK_FLAGS}
+                            for l, e in sorted(by_ed.items(), key=lambda x: (-x[1]["citations"], _label_no(x[0])))},
         "list": rows,
     }
     return block, extra, by_key

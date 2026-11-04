@@ -46,6 +46,10 @@ def offline(monkeypatch, tmp_path):
     monkeypatch.setattr(mw, "block_snapshot", lambda r, names: {"date": "2026-11-03", "blocks": {
         "Founder": [{"id": 1, "timestamp": "2024-01-01T00:00:00Z", "expiry": "infinity",
                      "reason": "{{checkuserblock-account}}", "partial": False}]}})
+    monkeypatch.setattr(pipeline.coi, "talk_at", lambda title, ts: {
+        "revid": 99, "content": "{{Connected contributor|User1=Writer|U1-declared=yes}}"})
+    monkeypatch.setattr(pipeline.coi, "resolve_users", lambda names: {
+        n: {"userid": {"Sourcer": 22, "Writer": 33}[n], "name": n, "missing": False} for n in names})
     return csvp
 
 
@@ -80,3 +84,11 @@ def test_json_is_byte_identical_and_html_is_anonymous(offline):
     for name in ("Founder", "Sourcer", "Writer"):
         assert name not in visible
         assert name not in r1
+
+
+def test_declared_connection_is_matched_to_the_editor_label(offline):
+    rec = pipeline.analyse(revid=3, area="A-I", sanctions_path=offline)
+    d = rec["declared_interests"]
+    assert d["talk_page_revision"] == 99
+    assert d["notices"][0]["notice"] == "connected contributor"
+    assert d["notices"][0]["editors"] and "Writer" not in str(d)
