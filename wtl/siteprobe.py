@@ -90,10 +90,17 @@ TRACKERS = [
     ("Google Analytics (UA)", re.compile(r"\b(UA-\d{4,10})-\d{1,4}\b")),       # the account, not the property
     ("Google Analytics 4", re.compile(r"\b(G-[A-Z0-9]{8,12})\b")),
     ("Google Tag Manager", re.compile(r"\b(GTM-[A-Z0-9]{5,8})\b")),
-    ("Google AdSense", re.compile(r"\b(?:ca-)?(pub-\d{16})\b")),
+    # "ca-host-pub-..." is a platform's account (e.g. Google Site Kit), not the site's own
+    ("Google AdSense", re.compile(r"\b(?<!host-)(?:ca-)?(pub-\d{16})\b")),
     ("Facebook pixel", re.compile(r"fbq\(\s*['\"]init['\"]\s*,\s*['\"](\d{12,20})['\"]")),
     ("Yandex Metrica", re.compile(r"(?:mc\.yandex\.ru/watch/|ym\(\s*)(\d{6,10})")),
 ]
+
+# Account IDs that belong to a platform rather than to any one site: left out everywhere.
+PLATFORM_IDS = {"pub-2644536267352236": "Google Site Kit (WordPress plugin) host account"}
+# An ID on more sites than this is treated as a shared service, not one operator, and left out
+# of the groups (listed separately).
+MAX_GROUP = 25
 
 STATEMENT = re.compile(
     r"((?:is\s+)?(?:a|an)\s+(?:project|initiative|programme|program|publication|service|"
@@ -454,12 +461,16 @@ def summary() -> dict:
             sites[x["domain"]] = x
     by_id = {}
     for dom, x in sites.items():
-        for t in x.get("trackers", []):
+        x["trackers"] = [t for t in x.get("trackers", []) if t["id"] not in PLATFORM_IDS]
+        for t in x["trackers"]:
             by_id.setdefault((t["service"], t["id"]), set()).add(dom)
     networks = [{"service": s, "id": i, "sites": sorted(v)} for (s, i), v in sorted(by_id.items())
-                if len(v) >= 2]
+                if 2 <= len(v) <= MAX_GROUP]
+    common = [{"service": s, "id": i, "sites": len(v)} for (s, i), v in sorted(by_id.items())
+              if len(v) > MAX_GROUP]
     return {"built": dt.date.today().isoformat(), "rule": __doc__.strip(), "sites": sites,
-            "shared_ids": networks}
+            "shared_ids": networks, "common_ids_left_out": common,
+            "platform_ids_left_out": PLATFORM_IDS}
 
 
 def write_summary() -> dict:
