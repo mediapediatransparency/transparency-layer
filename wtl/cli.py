@@ -224,11 +224,13 @@ def cmd_siteprobe(a):
     from . import outlets, siteprobe
     recs, _ = stored_records()
     snap = json.loads(outlets.OUTLETS_JSON.read_text(encoding="utf-8")) if outlets.OUTLETS_JSON.exists() else {}
-    if a.summary_only:
+    if a.fill_rdap:
+        print(f"  RDAP looked up again for {siteprobe.fill_rdap():,} sites")
+    if a.summary_only or a.fill_rdap:
         s = siteprobe.write_summary()
         print(f"wrote {siteprobe.SITEPROBE_JSON}: {len(s['sites']):,} sites")
         return
-    siteprobe.run(recs, snap.get("sources", {}), a.batch)
+    siteprobe.run(recs, snap.get("sources", {}), a.batch, retry=a.retry)
 
 
 def cmd_wpdiscuss(a):
@@ -310,6 +312,10 @@ def main(argv=None):
     p = sub.add_parser("siteprobe")
     p.add_argument("--batch", type=int, default=100, help="sites to probe in this run")
     p.add_argument("--summary-only", action="store_true", help="only rewrite data/siteprobe.json")
+    p.add_argument("--retry", action="store_true",
+                   help="also probe again sites marked for retry (archive unavailable)")
+    p.add_argument("--fill-rdap", action="store_true",
+                   help="look up domain registration again where none was recorded")
     p.set_defaults(fn=cmd_siteprobe)
     p = sub.add_parser("site")
     p.add_argument("--elsewhere", action="store_true",

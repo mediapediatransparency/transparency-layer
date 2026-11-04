@@ -15,7 +15,7 @@ usually name the body behind it (about, legal notice or imprint, privacy policy)
   Manager, Google AdSense, Facebook pixel, Yandex Metrica). Sites that carry the same account
   ID are run from the same account; this is how researchers find networks of websites;
 - the domain's registration date and registrant organisation from RDAP, where the registry
-  publishes them.
+  publishes them (an organisation's name only; a person's name is never recorded).
 
 Results are saved per site as soon as each site is done (cache/siteprobe/), so a run can stop
 and resume. `wtl siteprobe --batch N` probes the next N sites; `data/siteprobe.json` is
@@ -127,6 +127,24 @@ def _get(url: str):
 
 
 ARCHIVE_PREFIX = "https://web.archive.org/web/2026id_/"
+import threading  # noqa: E402
+_ARCHIVE = threading.Semaphore(2)      # the Internet Archive refuses clients that ask too fast
+_ARCHIVE_GAP = 2.0
+_archive_last = [0.0]
+_archive_lock = threading.Lock()
+
+
+def _archive_get(url: str):
+    with _ARCHIVE:
+        with _archive_lock:
+            wait = _ARCHIVE_GAP - (time.monotonic() - _archive_last[0])
+            if wait > 0:
+                time.sleep(wait)
+            _archive_last[0] = time.monotonic()
+        a = _get(ARCHIVE_PREFIX + url)
+    if (a.get("error") and "ConnectionError" in a["error"]) or a.get("status") == 429:
+        a["archive_unavailable"] = True
+    return a
 
 
 def _get_or_archive(url: str):
@@ -134,11 +152,13 @@ def _get_or_archive(url: str):
     g = _get(url)
     if g.get("status") and g["status"] < 400 and g.get("text") is not None:
         return g
-    a = _get(ARCHIVE_PREFIX + url)
+    a = _archive_get(url)
     if a.get("status") and a["status"] < 400 and a.get("text") is not None:
         a["archive"] = True
         a["live_error"] = g.get("error") or f"HTTP {g.get('status')}"
         return a
+    if a.get("archive_unavailable"):
+        g["archive_unavailable"] = True
     return g
 
 
@@ -245,17 +265,59 @@ def extract(pages: list[dict]) -> dict:
             "statements": statements, "copyright": copyright_, "declared_organisation": org}
 
 
+IANA_RDAP = "https://data.iana.org/rdap/dns.json"
+_rdap_servers = None
+_rdap_lock = threading.Lock()
+_rdap_last = {}
+
+
+def _rdap_base(tld: str) -> str | None:
+    """The registry's own RDAP server for a top-level domain, from IANA's bootstrap file."""
+    global _rdap_servers
+    with _rdap_lock:
+        if _rdap_servers is None:
+            p = cache.path("siteprobe_meta", "iana_rdap_dns")
+            d = cache.load(p)
+            if d is None:
+                import requests
+                d = requests.get(IANA_RDAP, headers={"User-Agent": user_agent()}, timeout=60).json()
+                cache.save(p, d)
+            _rdap_servers = {t: urls[0] for tlds, urls in d.get("services", []) for t in tlds if urls}
+    return _rdap_servers.get(tld)
+
+
 def rdap(domain: str) -> dict | None:
-    """Registration date and registrant organisation from RDAP (rdap.org redirects to the
-    registry's server); None when the registry publishes no RDAP."""
+    """Registration date and registrant organisation from the registry's RDAP server (found
+    through IANA's bootstrap list); None when the registry publishes no RDAP. Requests to each
+    server are spaced one second apart."""
     import requests
-    try:
-        r = requests.get(f"https://rdap.org/domain/{domain}", headers={"User-Agent": user_agent(),
-                         "Accept": "application/rdap+json"}, timeout=TIMEOUT)
+    base = _rdap_base(domain.rsplit(".", 1)[-1])
+    if not base:
+        return None
+    host = urlsplit(base).hostname
+    r = d = None
+    for attempt in range(3):
+        with _rdap_lock:
+            wait = 1.0 - (time.monotonic() - _rdap_last.get(host, 0))
+            _rdap_last[host] = time.monotonic() + max(wait, 0)
+        if wait > 0:
+            time.sleep(wait)
+        try:
+            r = requests.get(base.rstrip("/") + f"/domain/{domain}", headers={
+                "User-Agent": user_agent(), "Accept": "application/rdap+json"}, timeout=TIMEOUT)
+        except Exception:  # noqa: BLE001
+            return None
+        if r.status_code == 429:
+            time.sleep(5 * (attempt + 1))
+            continue
         if r.status_code != 200:
             return None
-        d = r.json()
-    except Exception:  # noqa: BLE001
+        try:
+            d = r.json()
+        except ValueError:
+            return None
+        break
+    if d is None:
         return None
     out = {"url": r.url}
     for e in d.get("events", []):
@@ -264,11 +326,27 @@ def rdap(domain: str) -> dict | None:
     for ent in d.get("entities", []):
         if "registrant" in (ent.get("roles") or []):
             for f in (ent.get("vcardArray") or [None, []])[1]:
-                if f[0] in ("org", "fn") and isinstance(f[3], str) and f[3].strip():
+                # organisations only: a registrant's personal name is never recorded
+                if f[0] == "org" and isinstance(f[3], str) and f[3].strip():
                     v = f[3].strip()
                     if not re.search(r"redacted|privacy|proxy|withheld|domains by proxy|whois", v, re.I):
                         out.setdefault("registrant", v[:EXCERPT])
     return out
+
+
+def fill_rdap() -> int:
+    """Look up RDAP again for sites read before the direct registry lookup (no date recorded)."""
+    from .config import CACHE_DIR
+    n = 0
+    for f in sorted((CACHE_DIR / "siteprobe").glob("*.json.gz")):
+        x = cache.load(f)
+        if not isinstance(x, dict) or (x.get("rdap") or {}).get("registered") or x.get("rdap_checked"):
+            continue
+        x["rdap"] = rdap(x["domain"])
+        x["rdap_checked"] = dt.date.today().isoformat()
+        cache.save(f, x)
+        n += 1
+    return n
 
 
 def probe(domain: str) -> dict:
@@ -298,7 +376,7 @@ def probe(domain: str) -> dict:
             m = re.match(r"https://web\.archive\.org/web/[^/]+/(.+)$", base)
             base = m.group(1) if m else f"https://{domain}/"
         for kind, u in _about_links(base, re.sub(r"https?://web\.archive\.org/web/[^/]+/", "", home["text"])):
-            g = _get_or_archive(u) if home.get("archive") is None else _get(ARCHIVE_PREFIX + u)
+            g = _get_or_archive(u) if home.get("archive") is None else _archive_get(u)
             fetched.append({"kind": kind, "url": g["url"], "status": g.get("status"),
                             **({"sha256": g["sha256"]} if g.get("sha256") else {}),
                             **({"from_archive": True} if g.get("archive") or "web.archive.org" in g["url"] else {}),
@@ -310,7 +388,9 @@ def probe(domain: str) -> dict:
     else:
         status = ("not reachable: " + (home.get("error") or f"HTTP {home.get('status')}")) if home else "not reachable"
     out = {"domain": domain, "probed": dt.date.today().isoformat(), "status": status,
-           "pages": fetched, **(extract(pages) if pages else {}), "rdap": rdap(domain)}
+           "pages": fetched, **(extract(pages) if pages else {}), "rdap": rdap(domain),
+           **({"retry": "the Internet Archive was not available"} if not pages and home
+              and home.get("archive_unavailable") else {})}
     cache.save(p, out)
     return out
 
@@ -374,11 +454,19 @@ def write_summary() -> dict:
     return s
 
 
-def run(records: list[dict], outlets: dict, batch: int) -> None:
-    todo = [k for k in chosen(records, outlets) if cache.load(cache.path("siteprobe", k)) is None]
+def run(records: list[dict], outlets: dict, batch: int, retry: bool = False) -> None:
+    def pending(k):
+        hit = cache.load(cache.path("siteprobe", k))
+        if hit is None:
+            return True
+        if retry and hit.get("retry"):
+            cache.path("siteprobe", k).unlink()
+            return True
+        return False
+    todo = [k for k in chosen(records, outlets) if pending(k)]
     print(f"  {len(todo):,} sites still to probe; this batch: {min(batch, len(todo)):,}", flush=True)
     from concurrent.futures import ThreadPoolExecutor, as_completed
-    with ThreadPoolExecutor(max_workers=12) as ex:   # twelve sites at a time; each site's pages in turn
+    with ThreadPoolExecutor(max_workers=16) as ex:   # sixteen sites at a time; each site's pages in turn
         futs = {ex.submit(probe, k): k for k in todo[:batch]}
         for i, f in enumerate(as_completed(futs), 1):
             k = futs[f]
