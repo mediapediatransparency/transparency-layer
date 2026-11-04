@@ -219,6 +219,48 @@ def cmd_books(a):
     books.build(isbns)
 
 
+def cmd_siteprobe(a):
+    """Read what cited websites say about themselves, in batches (data/siteprobe.json)."""
+    from . import outlets, siteprobe
+    recs, _ = stored_records()
+    snap = json.loads(outlets.OUTLETS_JSON.read_text(encoding="utf-8")) if outlets.OUTLETS_JSON.exists() else {}
+    if a.summary_only:
+        s = siteprobe.write_summary()
+        print(f"wrote {siteprobe.SITEPROBE_JSON}: {len(s['sites']):,} sites")
+        return
+    siteprobe.run(recs, snap.get("sources", {}), a.batch)
+
+
+def cmd_wpdiscuss(a):
+    """Wikipedia's noticeboard mentions and spam-blacklist entries for cited sources."""
+    from collections import Counter
+    from . import wpdiscuss
+    from .sources import NOT_A_SOURCE
+    recs, _ = stored_records()
+    cites, names = Counter(), {}
+    for r in recs:
+        for x in (r.get("sources") or {}).get("list", []):
+            if x["source"] in NOT_A_SOURCE:
+                continue
+            cites[x["source"]] += x["citations"]
+            nm = x.get("name_as_cited") or x.get("publisher_name_from_isbn")
+            if nm:
+                names.setdefault(x["source"], Counter())[nm] += x["citations"]
+    from . import outlets
+    snap = json.loads(outlets.OUTLETS_JSON.read_text(encoding="utf-8")).get("sources", {}) \
+        if outlets.OUTLETS_JSON.exists() else {}
+    keys = {}
+    for k, n in cites.items():
+        if n < a.min_citations:
+            continue
+        nm = min(names[k], key=lambda s: (-names[k][s], s)) if k in names else None
+        o = snap.get(k) or {}
+        if not k.startswith("name:") and o.get("wikidata") and o.get("name") and o["name"] != k:
+            nm = o["name"]          # the name Wikidata gives the site
+        keys[k] = nm
+    wpdiscuss.build(keys)
+
+
 def cmd_reuse(a):
     """Count other English Wikipedia articles citing the same works (data/reuse.json)."""
     from . import outlets, reuse
@@ -240,6 +282,8 @@ def cmd_outlets(a):
 
 
 def main(argv=None):
+    from .fetch import dnsfallback
+    dnsfallback.install()   # see wtl/fetch/dnsfallback.py
     ap = argparse.ArgumentParser(prog="wtl", description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = ap.add_subparsers(dest="cmd", required=True)
@@ -260,6 +304,13 @@ def main(argv=None):
     sub.add_parser("source-names").set_defaults(fn=cmd_source_names)
     sub.add_parser("books").set_defaults(fn=cmd_books)
     sub.add_parser("reuse").set_defaults(fn=cmd_reuse)
+    p = sub.add_parser("wpdiscuss")
+    p.add_argument("--min-citations", type=int, default=2)
+    p.set_defaults(fn=cmd_wpdiscuss)
+    p = sub.add_parser("siteprobe")
+    p.add_argument("--batch", type=int, default=100, help="sites to probe in this run")
+    p.add_argument("--summary-only", action="store_true", help="only rewrite data/siteprobe.json")
+    p.set_defaults(fn=cmd_siteprobe)
     p = sub.add_parser("site")
     p.add_argument("--elsewhere", action="store_true",
                    help="also fetch each listed editor's recent edits across Wikipedia (slow)")

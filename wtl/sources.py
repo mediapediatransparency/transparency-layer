@@ -64,11 +64,63 @@ def host_of(url: str) -> str:
     return h
 
 
+_PSL = None   # (rules, wildcards, exceptions, sha256) from data/public_suffix_list.dat
+
+
+def _psl():
+    """The Public Suffix List (publicsuffix.org), pinned in data/. Without the file, the short
+    MULTI_SUFFIX list is used."""
+    global _PSL
+    if _PSL is None:
+        import hashlib
+        from .config import ROOT
+        p = ROOT / "data" / "public_suffix_list.dat"
+        if not p.exists():
+            _PSL = (None, None, None, None)
+            return _PSL
+        raw = p.read_bytes()
+        rules, wild, exc = set(), set(), set()
+        for line in raw.decode("utf-8").splitlines():
+            line = line.strip()
+            if not line or line.startswith("//"):
+                continue
+            line = line.split()[0].lower()
+            if line.startswith("!"):
+                exc.add(line[1:])
+            elif line.startswith("*."):
+                wild.add(line[2:])
+            else:
+                rules.add(line)
+        _PSL = (rules, wild, exc, hashlib.sha256(raw).hexdigest())
+    return _PSL
+
+
+def psl_sha256():
+    return _psl()[3]
+
+
 def registrable(host: str) -> str:
+    """The registrable domain of a host: one label below its public suffix (bbc.co.uk,
+    pib.nic.in, example.blogspot.com), per the Public Suffix List."""
     parts = host.split(".")
-    if len(parts) >= 3 and ".".join(parts[-2:]) in MULTI_SUFFIX:
-        return ".".join(parts[-3:])
-    return ".".join(parts[-2:]) if len(parts) >= 2 else host
+    rules, wild, exc, _ = _psl()
+    if rules is None:
+        if len(parts) >= 3 and ".".join(parts[-2:]) in MULTI_SUFFIX:
+            return ".".join(parts[-3:])
+        return ".".join(parts[-2:]) if len(parts) >= 2 else host
+    n = len(parts)
+    suffix_len = 1                      # the default rule "*": the last label
+    for i in range(n):                  # longest candidate first; the first match prevails
+        cand = ".".join(parts[i:])
+        if cand in exc:
+            suffix_len = n - i - 1
+            break
+        if cand in rules or (i + 1 < n and ".".join(parts[i + 1:]) in wild):
+            suffix_len = n - i
+            break
+    if suffix_len >= n:
+        return host
+    return ".".join(parts[n - suffix_len - 1:])
 
 
 def clean_name(v: str) -> str:
@@ -189,8 +241,10 @@ DEAD = re.compile(r"\|\s*url-status\s*=\s*(dead|usurped|unfit)", re.I)
 ARCHIVED = re.compile(r"\|\s*archive-?url\s*=\s*\S", re.I)
 ACCESS = re.compile(r"\|\s*(?:url-access|access)\s*=\s*(subscription|registration|limited)", re.I)
 BOOKISH = re.compile(r"\{\{\s*(?:cite\s+book|citation)\b|\|\s*isbn\s*=", re.I)
-CHECK_FLAGS = ["opinion", "no_link", "book_without_page", "not_english", "dead_link_no_archive",
-               "paywall_or_registration"]
+CHECK_FLAGS = ["opinion", "no_link", "book_without_page", "not_english", "not_english_no_quote",
+               "dead_link_no_archive", "paywall_or_registration"]
+# a quotation of the supporting passage, or its translation, given in the citation itself
+QUOTE_PARAM = re.compile(r"\|\s*(?:quote|trans-quote|trans_quote|script-quote)\s*=\s*[^|}\s]", re.I)
 
 
 def flags_of(text: str, c: dict) -> set[str]:
@@ -595,6 +649,8 @@ def compute(text, lay, tokens, spans, hist, who, labels, names=None, books_data=
         ol = (books_data or {}).get("books", {}).get(isbn) if isbn else None
         if ol and ol.get("languages") and "eng" not in ol["languages"]:
             fl.add("not_english")      # Open Library records the book in other languages only
+        if "not_english" in fl and not QUOTE_PARAM.search(body):
+            fl.add("not_english_no_quote")
         if "opinion" in fl:
             s["opinion_citations"] += 1
         s["flags"].update(fl)

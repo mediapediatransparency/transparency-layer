@@ -604,6 +604,28 @@ def checklist(e: dict) -> dict | None:
             "items": items}
 
 
+# Domain endings reserved by their registries for one kind of body. Read from the domain alone.
+DOMAIN_CLASSES = [
+    ("government", re.compile(r"(^|\.)(gov|mil|gouv|gob|govt|go|gv|gub|gc|nic|government|admin|"
+                              r"mil|kormany|vlada|gov\.[a-z]{2})\.[a-z]{2}$|\.(gov|mil)$|"
+                              r"(^|\.)(gov|gouv|gob|govt)\.[a-z]{2}$")),
+    ("academic", re.compile(r"\.edu$|(^|\.)(ac|edu)\.[a-z]{2}$")),
+    ("international organisation", re.compile(r"\.int$")),
+]
+
+
+def domain_class(key: str) -> str | None:
+    """'government', 'academic' or 'international organisation' when the domain's ending is
+    reserved for that kind of body (e.g. .gov, gov.az, nic.in, .edu, ac.uk, .int)."""
+    if key.startswith("name:"):
+        return None
+    suffix = key.split(".", 1)[1] if "." in key else key
+    for name, rx in DOMAIN_CLASSES:
+        if rx.search(key) or rx.search("x." + suffix):
+            return name
+    return None
+
+
 def _search_publishers(names: dict) -> dict:
     """Book publishers named in citations but not found as Wikipedia titles: search Wikidata
     labels and aliases in English and in the languages of their books (per Open Library).
@@ -746,6 +768,23 @@ def build(records: list[dict], min_citations_for_wikidata: int = 2) -> dict:
     log(f"  {len(searched):,} matched")
     doms = [k for k in keys if not k.startswith("name:") and cited[k] >= min_citations_for_wikidata]
     dq = qids_for_domains(doms)
+    # websites whose official address on Wikidata is the cited subdomain (academic.oup.com)
+    hosts = {}
+    for r in records:
+        for it in (r.get("sources") or {}).get("items", []):
+            if it["id"].startswith("url:") and it["source"] in cited and it["source"] not in dq:
+                h = it["id"][4:].split("/", 1)[0].split("?", 1)[0]
+                if h != it["source"]:
+                    hosts.setdefault(it["source"], Counter())[h] += 1
+    sub = [h for k, c in hosts.items() if cited[k] >= min_citations_for_wikidata
+           for h, _ in c.most_common(3)]
+    log(f"  looking up {len(sub):,} cited subdomains on Wikidata")
+    sq = qids_for_domains(sorted(set(sub))) if sub else {}
+    for k, c in hosts.items():
+        for h, _ in c.most_common(3):
+            if h in sq:
+                dq.setdefault(k, sq[h])
+                break
     want_names = {_norm(as_cited.get(k, k[5:])) for k in keys if k.startswith("name:")}
     all_q = sorted(set(tq.values()) | set(dq.values())
                    | {q for n, q in tq_norm.items() if n in want_names}, key=lambda q: int(q[1:]))
@@ -798,6 +837,9 @@ def build(records: list[dict], min_citations_for_wikidata: int = 2) -> dict:
         }
         if k in BS:
             e["books"] = BS[k]
+        dc = domain_class(k)
+        if dc:
+            e["domain_class"] = dc
         if f:
             e.update({x: f[x] for x in ("country", "owned_by", "political_alignment",
                                         "political_ideology", "classed_as", "kind", "associations",

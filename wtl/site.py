@@ -882,6 +882,55 @@ def checklist_cell(o):
                                   + "; ".join(missing) + "</div>" if missing else ""))
 
 
+def _extra(ctx):
+    """Wikipedia noticeboard/blacklist records and site self-descriptions, loaded once."""
+    if not hasattr(ctx, "_wpd"):
+        from . import siteprobe, wpdiscuss
+        ctx._wpd = wpdiscuss.load()
+        sp = json.loads(siteprobe.SITEPROBE_JSON.read_text(encoding="utf-8")) \
+            if siteprobe.SITEPROBE_JSON.exists() else {}
+        ctx._probe = sp.get("sites", {})
+        ctx._shared = {}
+        for n in sp.get("shared_ids", []):
+            for d in n["sites"]:
+                ctx._shared.setdefault(d, []).append(n)
+    return ctx._wpd, ctx._probe, ctx._shared
+
+
+def wp_record_text(key, ctx, links=True):
+    wpd, _, _ = _extra(ctx)
+    w = wpd.get(key) or {}
+    bits = []
+    nb = w.get("noticeboard")
+    if nb and nb.get("pages"):
+        t = f"Reliable sources noticeboard: {nb['pages']} page{'s' if nb['pages'] != 1 else ''}"
+        bits.append(f"<a href='{escape(nb['search_url'])}'>{escape(t)}</a>" if links else escape(t))
+    for b in w.get("blacklisted", []):
+        t = f"on the {b['list']}"
+        bits.append(f"<a href='{escape(b['list_revision'])}'>{escape(t)}</a>" if links else escape(t))
+    return " · ".join(bits)
+
+
+def probe_text(key, ctx, limit=2):
+    """What the site says about itself (statements, registry numbers), and whether it shares a
+    tracking account with other cited sites."""
+    _, probe, shared = _extra(ctx)
+    x = probe.get(key)
+    bits = []
+    if x:
+        for st in x.get("statements", [])[:limit]:
+            bits.append(f"site says: “{escape(st['text'])}”")
+        for r in x.get("registry_ids", [])[:limit]:
+            t = f"{r['registry']} {r['id']}"
+            bits.append(f"<a href='{escape(r['register_url'])}'>{escape(t)}</a>" if r.get("register_url")
+                        else escape(t))
+    if shared.get(key):
+        others = sorted({d for n in shared[key] for d in n["sites"] if d != key})
+        bits.append(f"shares a tracking account with {len(others)} other cited site"
+                    f"{'s' if len(others) != 1 else ''}")
+    return " · ".join(bits)
+
+
 def _assessor_cells(key, ctx):
     o = ctx.outlets.get(key) or {}
     wr = o.get("wikipedia_rating")
@@ -890,6 +939,8 @@ def _assessor_cells(key, ctx):
     wd = []
     if o.get("kind"):
         wd.append(f"<b>{escape(o['kind'])}</b>")
+    elif o.get("domain_class"):
+        wd.append(f"<b>{escape(o['domain_class'])} website</b> (by its domain ending)")
     if o.get("country"):
         wd.append(escape(", ".join(o["country"])))
     if o.get("owned_by"):
@@ -900,7 +951,11 @@ def _assessor_cells(key, ctx):
         wd.append(escape(", ".join(o["classed_as"])))
     if o.get("associations"):
         wd.append(assoc_text(o, limit=3))
+    pt = probe_text(key, ctx, limit=1)
+    if pt:
+        wd.append(pt)
     rating = RATING_NAMES[wr["status"]] if wr else "–"
+    wpt = wp_record_text(key, ctx)
     ents = [e for e in (wr or {}).get("entries", []) if isinstance(e, list)]
     if len(ents) > 1:   # several list entries match this source: show each with its rating
         rating += " (" + "; ".join(f"{n}: {RATING_NAMES.get(st, st)}" for n, st in ents) + ")"
@@ -917,7 +972,8 @@ def _assessor_cells(key, ctx):
     acad = (f"{ac['level']}" + (f"<div class='small'>Denmark {ac['denmark_level']}</div>"
                                 if ac.get("denmark_level") is not None else "")
             if ac and ac.get("level") is not None else "–")
-    return (f"<td class='small'>{escape(rating)}</td><td class='n'>{quality}</td>"
+    return (f"<td class='small'>{escape(rating)}{'<div class=small>' + wpt + '</div>' if wpt else ''}</td>"
+            f"<td class='n'>{quality}</td>"
             f"<td class='n'>{audience}</td>"
             f"<td class='small'>{escape(' · '.join(labels) or '–')}</td>"
             f"<td class='n'>{acad}</td>"
@@ -926,7 +982,7 @@ def _assessor_cells(key, ctx):
 
 ASSESSOR_HEAD = ("<th>Wikipedia's rating</th><th class='n'>Independent quality</th>"
                  "<th class='n'>Audience leaning</th><th>Bias labels</th>"
-                 "<th class='n'>Academic level</th><th>Kind and Wikidata facts</th>")
+                 "<th class='n'>Academic level</th><th>Kind, Wikidata facts and the site's own statements</th>")
 
 
 MEANS_NOTE = (
@@ -987,6 +1043,7 @@ def summary_rows(cites, ctx, lead, tail):
 
 FLAG_NAMES = {"opinion": "opinion, comment or blog section", "no_link": "no web link",
               "book_without_page": "book with no page number", "not_english": "not in English",
+              "not_english_no_quote": "not in English, with no quote or translation",
               "dead_link_no_archive": "dead link with no archived copy",
               "paywall_or_registration": "behind a paywall or registration"}
 
@@ -1002,7 +1059,10 @@ def flags_html(s):
            "(sections such as /opinion/, /commentisfree/ or blogs) or the citation template; the "
            "others from the citation's own details. A book counts as not in English when the "
            "citation gives another language, or when Open Library records the book (by its ISBN) "
-           "only in other languages. These are facts about how a citation can be "
+           "only in other languages. <i>No quote or translation</i>: the citation does not "
+           "quote the passage it relies on, in the original or translated (Wikipedia's citation "
+           "templates have fields for both), so a reader who does not know the language has "
+           "nothing to check it against. These are facts about how a citation can be "
            "checked, not about whether it is right.</p>"]
     rows = [(l, e) for l, e in s.get("flags_by_editor", {}).items() if l != "unknown"][:10]
     if rows:
@@ -1010,7 +1070,7 @@ def flags_html(s):
                    + "".join(f"<th class='n'>{escape(FLAG_NAMES[k])}</th>" for k in FLAG_NAMES) + "</tr>")
         for l, e in rows:
             out.append(f"<tr><td>{escape(l)}</td><td class='n'>{e['citations']}</td>"
-                       + "".join(f"<td class='n'>{e[k] or '–'}</td>" for k in FLAG_NAMES) + "</tr>")
+                       + "".join(f"<td class='n'>{e.get(k) or '–'}</td>" for k in FLAG_NAMES) + "</tr>")
         out.append("</table></div><p class='small'>The ten editors who added the most citations "
                    "still in the article.</p>")
     return "".join(out)
@@ -1401,6 +1461,7 @@ def sources_page(ctx):
         h.append(flagged_sources_section(ctx))
         h.append(books_section(ctx))
         h.append(reused_works_section(ctx))
+        h.append(websites_section(ctx))
         tbl, tot, nsrc = cited_table(ctx.recs, 100)
         h.append(f"<h3>All areas together</h3><details><summary>{len(ctx.recs):,} articles, "
                  f"{tot:,} citations, {nsrc:,} sources (top 100)</summary>{tbl}</details>")
@@ -1613,6 +1674,96 @@ def books_section(ctx):
             nb = sum(v["books"] for _, v in unnamed)
             h.append(f"<p class='small'>A further {nb:,} such books have no publisher in the "
                      "citation, on Open Library, or on Wikidata by ISBN prefix.</p>")
+    return "".join(h)
+
+
+def websites_section(ctx, top=600):
+    """What cited websites say about themselves, read by fixed rules (wtl/siteprobe.py), and
+    groups of cited sites that share a tracking or advertising account."""
+    from collections import Counter
+    _, probe, shared = _extra(ctx)
+    if not probe:
+        return ""
+    cites, arts = Counter(), Counter()
+    for r in ctx.recs:
+        for x in (r.get("sources") or {}).get("list", []):
+            cites[x["source"]] += x["citations"]
+            arts[x["source"]] += 1
+    st = Counter("read" if x["status"].startswith("read") else
+                 "blocked by this computer's filter" if "blocked" in x["status"] else "not reachable"
+                 for x in probe.values())
+    found = Counter()
+    for x in probe.values():
+        found["a statement of who runs, owns or funds it"] += bool(x.get("statements"))
+        found["a registration number"] += bool(x.get("registry_ids"))
+        found["a copyright holder"] += bool(x.get("copyright"))
+        found["a declared organisation (structured data)"] += bool(x.get("declared_organisation"))
+        found["a tracking or advertising account ID"] += bool(x.get("trackers"))
+        found["a domain registration date"] += bool((x.get("rdap") or {}).get("registered"))
+        found["a named registrant"] += bool((x.get("rdap") or {}).get("registrant"))
+    h = ["<h2>What cited websites say about themselves</h2>",
+         f"<p>{len(probe):,} cited websites that no assessor rates, or that Wikidata classes as an "
+         "organisation, were read by fixed rules: the home page and up to three of the site's own "
+         "pages that usually name the body behind it (about, legal notice, privacy policy). Where "
+         "the site refused or could not be reached, the Internet Archive's latest saved copy was "
+         "read instead, and is marked. From those pages: sentences of the form “a project of…”, "
+         "“published by…”, “funded by…” (quoted as printed); charity, company and tax registration "
+         "numbers, linked to the official register where it can be searched by number; the "
+         "copyright line; what the site declares about itself in its structured data; tracking "
+         "and advertising account IDs; and, from the domain registry (RDAP), when the domain was "
+         "registered and by whom, where that is published. Nothing is inferred: a site that names "
+         "no owner is recorded as naming none.</p>",
+         "<p>" + ", ".join(f"{escape(k)}: {v:,}" for k, v in st.most_common()) + ". Of these, the "
+         "pages read gave " + "; ".join(f"{escape(k)} for {v:,}" for k, v in found.most_common())
+         + ".</p>"]
+    rows = sorted(probe.items(), key=lambda x: (-cites[x[0]], x[0]))
+    h.append(f"<details><summary>Show the {min(top, len(rows))} most-cited sites read</summary>"
+             "<div class='scroll'><table><tr><th>Site</th><th class='n'>Citations</th>"
+             "<th class='n'>Articles</th><th>What the site says</th><th>Registration numbers</th>"
+             "<th>Copyright / declared organisation</th><th>Domain registered</th>"
+             "<th>Shares a tracking account with</th></tr>")
+    for k, x in rows[:top]:
+        stt = "".join(f"<div>“{escape(t['text'])}” <a class='small' href='{escape(t['page'])}'>page</a></div>"
+                      for t in x.get("statements", [])[:3])
+        regs = "".join(f"<div>{escape(r['registry'])}: " + (f"<a href='{escape(r['register_url'])}'>{escape(r['id'])}</a>"
+                                                           if r.get("register_url") else escape(r["id"])) + "</div>"
+                       for r in x.get("registry_ids", [])[:4])
+        org = "; ".join(escape(o.get("legalName") or o.get("name") or "") + (
+            f" (parent: {escape(o['parentOrganization'])})" if o.get("parentOrganization") else "") + (
+            f" (funder: {escape(o['funder'])})" if o.get("funder") else "")
+            for o in x.get("declared_organisation", [])[:2] if o.get("legalName") or o.get("name"))
+        cp = escape("; ".join(x.get("copyright", [])[:2]))
+        rd = x.get("rdap") or {}
+        reg = escape(rd.get("registered", "–")) + (f"<div class='small'>{escape(rd['registrant'])}</div>"
+                                                   if rd.get("registrant") else "")
+        net = sorted({d for n in shared.get(k, []) for d in n["sites"] if d != k})
+        status = "" if x["status"] == "read" else f"<div class='small'>{escape(x['status'])}</div>"
+        h.append(f"<tr><td>{source_label(k, ctx)}{status}</td><td class='n'>{cites[k]:,}</td>"
+                 f"<td class='n'>{arts[k]}</td><td class='small'>{stt or '–'}</td>"
+                 f"<td class='small'>{regs or '–'}</td>"
+                 f"<td class='small'>{cp or '–'}{'<div>' + org + '</div>' if org else ''}</td>"
+                 f"<td class='small'>{reg}</td><td class='small'>{escape(', '.join(net[:8])) or '–'}"
+                 f"{'…' if len(net) > 8 else ''}</td></tr>")
+    h.append("</table></div></details>")
+    nets = {}
+    for k, ns in shared.items():
+        for n in ns:
+            nets[(n["service"], n["id"])] = n["sites"]
+    if nets:
+        h.append("<h3>Cited sites that share a tracking or advertising account</h3><p>Groups of two "
+                 "or more cited websites whose pages carry the same Google Analytics, Google Tag "
+                 "Manager, AdSense, Facebook pixel or Yandex Metrica account ID. The same account "
+                 "means the sites are measured or monetised from one account, which usually means "
+                 "one operator; a shared web agency or a copied template can also cause it. The "
+                 "account IDs are shown so the match can be checked in each site's page source.</p>"
+                 f"<details><summary>Show {len(nets):,} groups</summary><div class='scroll'><table>"
+                 "<tr><th>Account</th><th class='n'>Sites</th><th>Sites (citations)</th></tr>")
+        for (svc, i), sites in sorted(nets.items(), key=lambda x: (-len(x[1]), -sum(cites[d] for d in x[1]), x[0])):
+            h.append(f"<tr><td class='small'>{escape(svc)} {escape(i)}</td><td class='n'>{len(sites)}</td>"
+                     f"<td class='small'>{escape(', '.join(f'{d} ({cites[d]})' for d in sorted(sites, key=lambda d: -cites[d])))}</td></tr>")
+        h.append("</table></div></details>")
+    h.append(f"<p class='small'>{link('data/siteprobe.json', 'Everything read, as JSON')}, with the "
+             "address and fingerprint of each page read and the date.</p>")
     return "".join(h)
 
 
@@ -2083,7 +2234,8 @@ def _write(SITE_DIR, clean, ctx):
         shutil.copy(OUTLETS_JSON, SITE_DIR / "data" / "outlets.json")
     from .config import ROOT
     for name in ("contested_terms.json", "words_to_watch.json", "source_names.json", "books.json",
-                 "isbn_ranges.xml", "reuse.json"):
+                 "isbn_ranges.xml", "reuse.json", "siteprobe.json", "wp_discussions.json",
+                 "public_suffix_list.dat"):
         if (ROOT / "data" / name).exists():   # the lists every record's fingerprints refer to
             shutil.copy(ROOT / "data" / name, SITE_DIR / "data" / name)
     (SITE_DIR / "editors.html").write_text(editors_page(ctx), encoding="utf-8")
