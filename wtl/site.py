@@ -760,8 +760,9 @@ def src_name(key, ctx):
         c = {}
         for r in ctx.recs:
             for x in (r.get("sources") or {}).get("list", []):
-                if x.get("name_as_cited"):
-                    c.setdefault(x["source"], Counter())[x["name_as_cited"]] += x["citations"]
+                nm = x.get("name_as_cited") or x.get("publisher_name_from_isbn")
+                if nm:
+                    c.setdefault(x["source"], Counter())[nm] += x["citations"]
         ctx._cited_names = {k: min(v, key=lambda s: (-v[s], s)) for k, v in c.items()}
     if key in ctx._cited_names and key.startswith("name:"):
         return ctx._cited_names[key]
@@ -999,7 +1000,9 @@ def flags_html(s):
     out = [f"<h3>Opinion and harder-to-check citations</h3><p class='small'>Of the article's "
            f"{num(tot)} citations: {bits or 'none'}. Opinion is recognised from the web address "
            "(sections such as /opinion/, /commentisfree/ or blogs) or the citation template; the "
-           "others from the citation's own details. These are facts about how a citation can be "
+           "others from the citation's own details. A book counts as not in English when the "
+           "citation gives another language, or when Open Library records the book (by its ISBN) "
+           "only in other languages. These are facts about how a citation can be "
            "checked, not about whether it is right.</p>"]
     rows = [(l, e) for l, e in s.get("flags_by_editor", {}).items() if l != "unknown"][:10]
     if rows:
@@ -1395,12 +1398,322 @@ def sources_page(ctx):
                 h.append(f"<tr><td>{source_label(k, ctx)}</td><td class='n'>{n:,}</td>"
                          f"<td class='n'>{jarts[k]}</td><td class='small'>{checklist_cell(o)}</td></tr>")
             h.append("</table></div></details>")
+        h.append(flagged_sources_section(ctx))
+        h.append(books_section(ctx))
+        h.append(reused_works_section(ctx))
         tbl, tot, nsrc = cited_table(ctx.recs, 100)
         h.append(f"<h3>All areas together</h3><details><summary>{len(ctx.recs):,} articles, "
                  f"{tot:,} citations, {nsrc:,} sources (top 100)</summary>{tbl}</details>")
     h.append(f"<p class='small'>{link('data/outlets.json', 'All ratings as JSON')}.</p>")
     return page(f"Sources · {NAME}", "".join(h), "sources.html", json_alt="data/outlets.json",
                 description="Sources cited in the analysed articles, and how several assessors rate them.")
+
+
+RATED_KEYS = ("wikipedia_rating", "independent_quality", "audience_leaning", "allsides_2018", "mbfc",
+              "academic_level")
+
+
+def _coverage(o):
+    """(rated by any assessor, kind known, anything recorded) for one snapshot entry."""
+    o = o or {}
+    rated = any(o.get(x) for x in RATED_KEYS)
+    kind = bool(o.get("kind"))
+    rec = bool(o.get("associations") or o.get("owned_by") or o.get("registries")
+               or o.get("wikidata"))
+    return rated, kind, rated or kind or rec
+
+
+def flagged_sources_section(ctx):
+    """For each kind of opinion or harder-to-check citation: how many have an identified source,
+    and how many of those sources any assessor rates or Wikidata describes."""
+    from collections import Counter
+    from .sources import CHECK_FLAGS, NOT_A_SOURCE
+    by_flag = {f: Counter() for f in CHECK_FLAGS}
+    arts = {f: Counter() for f in CHECK_FLAGS}
+    for r in ctx.recs:
+        for x in (r.get("sources") or {}).get("list", []):
+            for f, n in (x.get("flags") or {}).items():
+                by_flag[f][x["source"]] += n
+                arts[f][x["source"]] += 1
+    if not any(by_flag.values()):
+        return ""
+    h = ["<h2>Opinion and harder-to-check citations: the sources behind them</h2>"
+         "<p>Citations to opinion, comment or blog sections, and citations a reader would find "
+         "harder to check, with how far their sources are profiled. <i>Identified</i>: the "
+         "citation names or links a source. <i>Rated</i>: at least one assessor on this page rates "
+         "the source. <i>Kind known</i>: Wikidata records what kind of body it is. <i>Anything "
+         "recorded</i>: rated, kind known, or found on Wikidata at all. Shares of the citations "
+         "with an identified source.</p><div class='scroll'><table><tr><th>Citations that are</th>"
+         "<th class='n'>Citations</th><th class='n'>Identified</th><th class='n'>Rated</th>"
+         "<th class='n'>Kind known</th><th class='n'>Anything recorded</th></tr>"]
+    for f in CHECK_FLAGS:
+        c = by_flag[f]
+        tot = sum(c.values())
+        if not tot:
+            continue
+        ided = {k: n for k, n in c.items() if k not in NOT_A_SOURCE}
+        ni = sum(ided.values())
+        cov = [sum(n for k, n in ided.items() if _coverage(ctx.outlets.get(k))[i]) for i in range(3)]
+        h.append(f"<tr><td>{escape(cap(FLAG_NAMES[f]))}</td><td class='n'>{tot:,}</td>"
+                 f"<td class='n'>{p0(ni / tot)}</td>"
+                 + "".join(f"<td class='n'>{p0(v / ni) if ni else '–'}</td>" for v in cov) + "</tr>")
+    h.append("</table></div>")
+    for f in CHECK_FLAGS:
+        c = by_flag[f]
+        ranked = sorted(((k, n) for k, n in c.items() if k not in NOT_A_SOURCE),
+                        key=lambda x: (-x[1], x[0]))
+        if not ranked:
+            continue
+        h.append(f"<details><summary>{escape(cap(FLAG_NAMES[f]))}: the {min(50, len(ranked))} "
+                 f"sources with the most such citations</summary><div class='scroll'><table>"
+                 f"<tr><th>Source</th><th class='n'>Such citations</th><th class='n'>Articles</th>"
+                 f"{ASSESSOR_HEAD}</tr>")
+        for k, n in ranked[:50]:
+            h.append(f"<tr><td>{source_label(k, ctx)}</td><td class='n'>{n:,}</td>"
+                     f"<td class='n'>{arts[f][k]}</td>{_assessor_cells(k, ctx)}</tr>")
+        h.append("</table></div></details>")
+    return "".join(h)
+
+
+ENGLISH_AGENCIES = ("English language", "United States")   # 978-0, 978-1 and 979-8
+
+
+def books_section(ctx):
+    """Books cited by ISBN: where the ISBNs were issued, what Open Library records, and the
+    publishers of books not in English, each with the publisher checklist."""
+    from collections import Counter
+    from . import books as bk
+    data, _ = bk.load()
+    B = (data or {}).get("books", {})
+    if not B:
+        return ""
+    per_book = {}            # isbn -> {sources, articles, citations, flags}
+    by_source_isbn = Counter()
+    from_isbn = Counter()
+    nopub = 0
+    for r in ctx.recs:
+        s = r.get("sources") or {}
+        for x in s.get("list", []):
+            for how, n in (x.get("publisher_from_isbn") or {}).items():
+                from_isbn[how] += n
+            if x["source"] == "book (no publisher given)":
+                nopub += x["citations"]
+        for it in s.get("items", []):
+            if not it["id"].startswith("isbn:"):
+                continue
+            b = per_book.setdefault(it["id"][5:], {"source": Counter(), "articles": set(),
+                                                   "citations": 0, "flags": set()})
+            b["source"][it["source"]] += it["citations"]
+            b["articles"].add(r["article"])
+            b["citations"] += it["citations"]
+            b["flags"] |= set(it.get("flags", []))
+    if not per_book:
+        return ""
+    invalid = sum(1 for r in ctx.recs for it in (r.get("sources") or {}).get("items", [])
+                  if it["id"].startswith("isbn-invalid:"))
+    on_ol = sum(1 for i in per_book if B.get(i))
+    h = ["<h2>Books: publishers, where their ISBNs were issued, and languages</h2>",
+         f"<p>{len(per_book):,} different books are cited by ISBN in the analysed articles "
+         f"({sum(b['citations'] for b in per_book.values()):,} citations). Open Library has a "
+         f"record of {on_ol:,} ({p0(on_ol / len(per_book))}). Where a citation names no publisher, "
+         f"the publisher was taken from Open Library's record of the ISBN for "
+         f"{from_isbn.get('Open Library', 0):,} citations, and from the Wikidata item that holds the "
+         f"ISBN's publisher prefix for {from_isbn.get('ISBN prefix (Wikidata)', 0):,}; "
+         f"{nopub:,} book citations still name no publisher. {invalid:,} cited ISBNs fail their "
+         "check digit.</p>",
+         "<p>An ISBN is issued by a national or language-area agency, and its first digits say "
+         "which (the <a href='https://www.isbn-international.org/range_file_generation'>International "
+         "ISBN Agency's range file</a>). That is where the publisher registered, not necessarily "
+         "the language of the book. Languages are as Open Library records them.</p>"]
+    # by issuing agency
+    ag = {}
+    for i, b in per_book.items():
+        sp = bk.split(i)
+        a = sp["agency"] if sp else "not in the range file"
+        g = ag.setdefault(a, {"books": 0, "citations": 0, "articles": set(), "ol": 0,
+                              "langs": Counter(), "rated": 0, "kind": 0})
+        g["books"] += 1
+        g["citations"] += b["citations"]
+        g["articles"] |= b["articles"]
+        rec = B.get(i)
+        if rec:
+            g["ol"] += 1
+            for l in rec.get("languages") or []:
+                g["langs"][bk.lang_name(l)] += 1
+        src = b["source"].most_common(1)[0][0]
+        cv = _coverage(ctx.outlets.get(src))
+        g["rated"] += cv[0]
+        g["kind"] += cv[1]
+    h.append("<details open><summary>By the agency that issued the ISBN</summary>"
+             "<div class='scroll'><table><tr><th>ISBN issued by</th><th class='n'>Books</th>"
+             "<th class='n'>Citations</th><th class='n'>Articles</th><th class='n'>On Open Library</th>"
+             "<th>Languages (Open Library)</th><th class='n'>Publisher rated</th>"
+             "<th class='n'>Publisher's kind known</th></tr>")
+    for a, g in sorted(ag.items(), key=lambda x: (-x[1]["books"], x[0])):
+        langs = ", ".join(f"{escape(k)} {v}" for k, v in g["langs"].most_common(4)) or "–"
+        h.append(f"<tr><td>{escape(a)}</td><td class='n'>{g['books']:,}</td>"
+                 f"<td class='n'>{g['citations']:,}</td><td class='n'>{len(g['articles']):,}</td>"
+                 f"<td class='n'>{p0(g['ol'] / g['books'])}</td><td class='small'>{langs}</td>"
+                 f"<td class='n'>{p0(g['rated'] / g['books'])}</td>"
+                 f"<td class='n'>{p0(g['kind'] / g['books'])}</td></tr>")
+    h.append("</table></div><p class='small'>Publisher rated / kind known: share of the books "
+             "whose publisher (as matched for the citation) has a rating from any assessor on this "
+             "page, or a kind recorded on Wikidata.</p></details>")
+    # publishers of books not in English, or with ISBNs issued outside the English-language groups
+    pubs = {}
+    for i, b in per_book.items():
+        rec = B.get(i) or {}
+        langs = rec.get("languages") or []
+        sp = bk.split(i)
+        non_en = ("not_english" in b["flags"]) or (langs and "eng" not in langs) or \
+                 (sp and sp["agency"] not in ENGLISH_AGENCIES)
+        if not non_en:
+            continue
+        for src, n in b["source"].items():
+            p = pubs.setdefault(src, {"books": 0, "citations": 0, "articles": set(),
+                                      "agencies": Counter(), "langs": Counter()})
+            p["books"] += 1
+            p["citations"] += n
+            p["articles"] |= b["articles"]
+            p["agencies"][sp["agency"] if sp else "?"] += 1
+            for l in langs:
+                p["langs"][bk.lang_name(l)] += 1
+    if pubs:
+        from .sources import NOT_A_SOURCE
+        shown = sorted(((k, v) for k, v in pubs.items() if k not in NOT_A_SOURCE),
+                       key=lambda x: (-x[1]["citations"], x[0]))
+        h.append("<h3>Publishers of books not in English or registered outside the English-language "
+                 "ISBN groups</h3><p>A book is listed when its citation gives a language other than "
+                 "English, Open Library records it only in other languages, or its ISBN was issued "
+                 "by an agency other than the English-language groups (978-0, 978-1, and 979-8 for the United States). For each "
+                 "publisher, the same checklist: found on Wikidata, classed there as a self-publishing "
+                 "company, owner or parent organisation, founders, affiliations, political alignment, "
+                 "an academic level from the Finnish register, Wikipedia articles in any language, "
+                 "and ratings. Each item is found, with its evidence, or not found in these records, "
+                 "which is not the same as absent. There is no score. † marks a Wikidata statement "
+                 "with no source given there.</p>"
+                 f"<details><summary>Show {len(shown):,} publishers</summary><div class='scroll'><table>"
+                 "<tr><th>Publisher</th><th class='n'>Books</th><th class='n'>Citations</th>"
+                 "<th class='n'>Articles</th><th>ISBN issued by</th><th>Languages (Open Library)</th>"
+                 "<th>Kind</th><th>Checklist</th><th>Recorded associations (Wikidata)</th></tr>")
+        for k, v in shown[:400]:
+            o = ctx.outlets.get(k) or {}
+            wdl = (f" <a class='small' href='https://www.wikidata.org/wiki/{escape(o['wikidata'])}'>"
+                   "Wikidata</a>" if o.get("wikidata") else "")
+            h.append(f"<tr><td>{source_label(k, ctx)}{wdl}</td><td class='n'>{v['books']}</td>"
+                     f"<td class='n'>{v['citations']}</td><td class='n'>{len(v['articles'])}</td>"
+                     f"<td class='small'>{escape(', '.join(f'{a} {n}' for a, n in v['agencies'].most_common(3)))}</td>"
+                     f"<td class='small'>{escape(', '.join(f'{a} {n}' for a, n in v['langs'].most_common(3))) or '–'}</td>"
+                     f"<td class='small'>{escape(o.get('kind') or '–')}</td>"
+                     f"<td class='small'>{checklist_cell(o)}</td>"
+                     f"<td class='small'>{assoc_text(o, links=True) or '–'}</td></tr>")
+        h.append("</table></div></details>")
+        unnamed = [(k, v) for k, v in pubs.items() if k in NOT_A_SOURCE]
+        if unnamed:
+            nb = sum(v["books"] for _, v in unnamed)
+            h.append(f"<p class='small'>A further {nb:,} such books have no publisher in the "
+                     "citation, on Open Library, or on Wikidata by ISBN prefix.</p>")
+    return "".join(h)
+
+
+def _work_link(iid):
+    kind, _, v = iid.partition(":")
+    if kind == "isbn":
+        from . import books as bk
+        return (f"<a href='https://openlibrary.org/isbn/{escape(v)}'>ISBN {escape(bk.hyphenated(v))}</a>")
+    if kind == "doi":
+        return f"<a href='https://doi.org/{escape(v)}'>doi:{escape(v)}</a>"
+    if kind == "url":
+        return f"<a href='https://{escape(v)}' rel='nofollow'>{escape(v[:70])}{'…' if len(v) > 70 else ''}</a>"
+    return escape(iid)
+
+
+def reused_works_section(ctx, min_articles=3, top=200):
+    """The same work (ISBN, DOI or web address) cited in several analysed articles, and in how
+    many of those one account added it."""
+    from collections import Counter
+    from .fetch import cache
+    from .sources import NOT_A_SOURCE
+    works = {}
+    for r in ctx.recs:
+        lk = cache.load(cache.path("patterns", "labels", str(r["revision"])))
+        for it in (r.get("sources") or {}).get("items", []):
+            if it["id"].startswith("isbn-invalid:"):
+                continue
+            w = works.setdefault(it["id"], {"source": it["source"], "articles": set(),
+                                            "citations": 0, "flags": set(), "by": Counter(),
+                                            "known": 0})
+            w["articles"].add(r["article"])
+            w["citations"] += it["citations"]
+            w["flags"] |= set(it.get("flags", []))
+            if lk:
+                w["known"] += 1
+                for acct in {lk.get(l) for l in it.get("added_by", {}) if lk.get(l)}:
+                    w["by"][acct] += 1
+    from . import reuse as ru
+    RU = ru.load()
+    many = [(k, w) for k, w in works.items() if len(w["articles"]) >= min_articles]
+    if not many and not RU:
+        return ""
+    many.sort(key=lambda x: (-len(x[1]["articles"]), -x[1]["citations"], x[0]))
+    h = ["<h2>Works cited in several analysed articles</h2>",
+         f"<p>The same book (by ISBN), paper (by DOI) or web page (by address) cited in at least "
+         f"{min_articles} of the analysed articles: {len(many):,} works. <i>Most by one editor</i>: "
+         "the largest number of these articles in which the same account added the citation (the "
+         "account is not named or numbered). Read it next to the number of articles: a work added "
+         "by many different editors and one added by the same editor in each article are "
+         "different patterns of use.</p>"
+         f"<details><summary>Show the {min(top, len(many))} works cited in the most articles</summary>"
+         "<div class='scroll'><table><tr><th>Work</th><th>Source</th><th class='n'>Articles</th>"
+         "<th class='n'>Citations</th><th class='n'>Most by one editor</th>"
+         "<th class='n'>English Wikipedia articles citing it</th><th>Flags</th>"
+         "<th>Wikipedia's rating</th></tr>"]
+    for k, w in many[:top]:
+        o = ctx.outlets.get(w["source"]) or {}
+        wr = (o.get("wikipedia_rating") or {}).get("status")
+        mx = max(w["by"].values()) if w["by"] else None
+        h.append(f"<tr><td class='small'>{_work_link(k)}</td>"
+                 f"<td>{source_label(w['source'], ctx) if w['source'] not in NOT_A_SOURCE else escape(w['source'])}</td>"
+                 f"<td class='n'>{len(w['articles'])}</td><td class='n'>{w['citations']}</td>"
+                 f"<td class='n'>{mx if mx else '–'}</td><td class='n'>{_wiki_count(RU.get(k))}</td>"
+                 f"<td class='small'>{escape(', '.join(FLAG_NAMES[f] for f in sorted(w['flags']) if f in FLAG_NAMES)) or '–'}</td>"
+                 f"<td class='small'>{escape(RATING_NAMES.get(wr, wr) if wr else '–')}</td></tr>")
+    h.append("</table></div></details>")
+    if RU:
+        wide = sorted(((k, v) for k, v in RU.items() if k in works and v["articles"] >= 2),
+                      key=lambda x: (-x[1]["articles"], x[0]))
+        h.append("<h3>Unrated, opinion and non-English works: other uses across English Wikipedia</h3>"
+                 f"<p>For {len(RU):,} cited works (web pages and books whose source no assessor rates, "
+                 "or that are flagged as opinion or not in English, and every book whose ISBN was "
+                 "issued outside the English-language groups): how many English Wikipedia articles "
+                 "cite the same work, counting the analysed article itself. Web pages are found "
+                 "through Wikipedia's record of external links; books by searching for the ISBN "
+                 "written four standard ways, so a book whose ISBN is written another way is "
+                 f"missed and its count is a lower bound. {len(wide):,} of these works are cited in "
+                 "two or more articles.</p>"
+                 f"<details><summary>Show the {min(top, len(wide))} cited in the most articles"
+                 "</summary><div class='scroll'><table><tr><th>Work</th><th>Source</th>"
+                 "<th class='n'>English Wikipedia articles</th><th class='n'>Analysed articles</th>"
+                 "<th class='n'>Most by one editor</th><th>Flags</th><th>Some of the articles</th></tr>")
+        for k, v in wide[:top]:
+            w = works[k]
+            mx = max(w["by"].values()) if w["by"] else None
+            some = ", ".join(v["titles"][:6]) + ("…" if v["articles"] > 6 else "")
+            h.append(f"<tr><td class='small'>{_work_link(k)}</td>"
+                     f"<td>{source_label(w['source'], ctx) if w['source'] not in NOT_A_SOURCE else escape(w['source'])}</td>"
+                     f"<td class='n'>{_wiki_count(v)}</td><td class='n'>{len(w['articles'])}</td>"
+                     f"<td class='n'>{mx if mx else '–'}</td>"
+                     f"<td class='small'>{escape(', '.join(FLAG_NAMES[f] for f in sorted(w['flags']) if f in FLAG_NAMES)) or '–'}</td>"
+                     f"<td class='small'>{escape(some)}</td></tr>")
+        h.append(f"</table></div></details><p class='small'>{link('data/reuse.json', 'All counts as JSON')}, "
+                 f"with the date each was checked.</p>")
+    return "".join(h)
+
+
+def _wiki_count(v):
+    if not v:
+        return "–"
+    return f"{v['articles']:,}{'+' if v.get('capped') else ''}"
 
 
 # ---------------------------------------------------------------- editors across articles
@@ -1597,6 +1910,15 @@ def how_page(ctx: Context):
          "Wikipedia log, so they come from a hand-checked list built from Wikipedia's arbitration "
          "and enforcement records. Every entry links to the decision and quotes it. Site bans and "
          "sockpuppetry findings also come from Wikipedia's block log.</li>",
+         "<li><b>Trace every citation to its source and the work cited.</b> Each citation is "
+         "matched to the outlet, publisher, journal or organisation it names or links, and to the "
+         "work itself where it has an identifier (ISBN, DOI or web address), so the same work can "
+         "be followed across articles. A book cited by ISBN with no publisher named gets its "
+         "publisher from Open Library's record of that ISBN, or from the Wikidata item that holds "
+         "the ISBN's publisher prefix; the page says which. Where each ISBN was issued comes from "
+         "the International ISBN Agency's range file. Sources are then described by several "
+         "outside assessors and by Wikidata, each named and linked; this project adds no rating "
+         "of its own.</li>",
          "<li><b>Compare like with like.</b> Each figure is shown next to the typical value for "
          "other articles of the same kind (people with people, news outlets with news outlets), "
          "first in the same topic area and then across all areas, so a number is never read "
@@ -1760,7 +2082,8 @@ def _write(SITE_DIR, clean, ctx):
     if OUTLETS_JSON.exists():
         shutil.copy(OUTLETS_JSON, SITE_DIR / "data" / "outlets.json")
     from .config import ROOT
-    for name in ("contested_terms.json", "words_to_watch.json", "source_names.json"):
+    for name in ("contested_terms.json", "words_to_watch.json", "source_names.json", "books.json",
+                 "isbn_ranges.xml", "reuse.json"):
         if (ROOT / "data" / name).exists():   # the lists every record's fingerprints refer to
             shutil.copy(ROOT / "data" / name, SITE_DIR / "data" / name)
     (SITE_DIR / "editors.html").write_text(editors_page(ctx), encoding="utf-8")

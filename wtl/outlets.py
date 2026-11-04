@@ -297,6 +297,7 @@ JOURNAL_ID_PROPS = {"P236": "issn", "P1156": "scopus_id", "P5115": "doaj_id"}
 # the first match wins. Labels checked on Wikidata.
 SOURCE_KINDS = [
     ("predatory journal", ["Q65770378"]),
+    ("self-publishing company or platform", ["Q149985", "Q16856825"]),
     ("academic journal", ["Q737498", "Q5633421"]),
     ("university press", ["Q479716"]),
     ("news agency", ["Q192283"]),
@@ -330,7 +331,28 @@ ORG_KINDS = {"think tank", "human rights organisation", "advocacy or activist gr
              "religious organisation", "trade union", "charity or foundation", "NGO or non-profit",
              "political party", "armed organisation"}
 ACADEMIC_KINDS = {"predatory journal": "journal", "academic journal": "journal",
-                  "university press": "publisher", "book publisher": "publisher"}
+                  "university press": "publisher", "book publisher": "publisher",
+                  "self-publishing company or platform": "publisher"}
+PUBLISHER_KINDS = {"university press", "book publisher", "self-publishing company or platform"}
+# kinds a book publisher's name may be matched to by an exact Wikidata search (see _search_publishers)
+SEARCH_OK_KINDS = PUBLISHER_KINDS | {"company", "university or research institute", "think tank",
+                                     "religious organisation", "NGO or non-profit",
+                                     "charity or foundation", "advocacy or activist group",
+                                     "government body", "political party", "news media",
+                                     "newspaper or news website", "magazine",
+                                     "intergovernmental organisation", "human rights organisation"}
+# Open Library (MARC) language codes to Wikidata search languages
+MARC_TO_WIKI = {"heb": "he", "ara": "ar", "per": "fa", "tur": "tr", "rus": "ru", "ukr": "uk",
+                "pol": "pl", "ger": "de", "fre": "fr", "spa": "es", "ita": "it", "por": "pt",
+                "dut": "nl", "hin": "hi", "urd": "ur", "ben": "bn", "chi": "zh", "jpn": "ja",
+                "srp": "sr", "hrv": "hr", "bos": "bs", "alb": "sq", "gre": "el", "arm": "hy",
+                "aze": "az", "geo": "ka", "lit": "lt", "lav": "lv", "est": "et", "bul": "bg",
+                "rum": "ro", "cze": "cs", "hun": "hu", "swe": "sv", "nor": "nb", "fin": "fi",
+                "dan": "da", "kor": "ko", "tam": "ta", "mar": "mr", "nep": "ne", "pus": "ps",
+                "kur": "ku", "yid": "yi", "slo": "sk", "slv": "sl", "bel": "be", "ind": "id"}
+WIKI_SITE = re.compile(r"^([a-z_]{2,12})wiki$")
+NON_LANGUAGE_WIKIS = {"commons", "species", "meta", "mediawiki", "wikidata", "sources", "outreach",
+                      "incubator", "wikimania", "test", "test2", "foundation", "wikifunctions"}
 
 
 def _entities(ids: list[str], props: str) -> dict:
@@ -352,7 +374,9 @@ def facts(qids: list[str]) -> dict:
         c = e.get("claims", {})
         f = {"label": e.get("labels", {}).get("en", {}).get("value", q), "websites": [],
              "_vals": {}, "_ref": set(), "registries": [], "ids": {},
-             "enwiki": (e.get("sitelinks", {}).get("enwiki") or {}).get("title")}
+             "enwiki": (e.get("sitelinks", {}).get("enwiki") or {}).get("title"),
+             "wikipedias": sorted(m.group(1).replace("_", "-") for k in e.get("sitelinks", {})
+                                  if (m := WIKI_SITE.match(k)) and m.group(1) not in NON_LANGUAGE_WIKIS)}
         for pid, (rname, tmpl) in REGISTRY_PROPS.items():
             for st in c.get(pid, []):
                 v = st.get("mainsnak", {}).get("datavalue", {}).get("value")
@@ -397,7 +421,7 @@ def facts(qids: list[str]) -> dict:
         refd = f.pop("_ref")
         res[q] = {"label": f["label"], "websites": sorted(f["websites"]),
                   "registries": sorted(f["registries"], key=lambda r: (r["registry"], r["id"])),
-                  "journal_ids": f["ids"], "enwiki": f["enwiki"],
+                  "journal_ids": f["ids"], "enwiki": f["enwiki"], "wikipedias": f["wikipedias"],
                   **{k: sorted({labels.get(x, x) for x in v.get(k, ())})
                      for k in ("country", "owned_by", "political_alignment", "political_ideology")},
                   "classed_as": sorted(classed.get(q, ())),
@@ -497,7 +521,8 @@ def checklist(e: dict) -> dict | None:
     is_org = e.get("kind") in ORG_KINDS or "designated as terrorist by" in A
     is_journal = (e.get("kind") in JOURNAL_KINDS
                   or (e.get("academic_level") or {}).get("type") == "journal or series")
-    if not (is_org or is_journal):
+    is_publisher = not (is_org or is_journal) and (e.get("kind") in PUBLISHER_KINDS or e.get("books"))
+    if not (is_org or is_journal or is_publisher):
         return None
     wr = e.get("wikipedia_rating")
     independent = [x for x, ok in (("independent quality", e.get("independent_quality")),
@@ -547,11 +572,94 @@ def checklist(e: dict) -> dict | None:
             f"{cr['dois']:,} DOIs, publisher {cr.get('publisher')}" if cr and cr.get("dois") else "",
             [cr["url"]] if cr else [])
         add("classed as a predatory journal on Wikidata", e.get("kind") == "predatory journal", "yes")
+    if is_publisher:
+        bk = e.get("books") or {}
+        ac = e.get("academic_level") or {}
+        add("found on Wikidata", e.get("wikidata"), e.get("wikidata") or "",
+            [f"https://www.wikidata.org/wiki/{e['wikidata']}"] if e.get("wikidata") else [])
+        add("classed as a self-publishing company or platform on Wikidata",
+            e.get("kind") == "self-publishing company or platform", "yes")
+        own = (e.get("owned_by") or []) + names("parent organisation")
+        add("owner or parent organisation recorded", own, ", ".join(own))
+        add("founders recorded", names("founded by"), ", ".join(names("founded by")))
+        aff = names("affiliation") + names("member of")
+        add("affiliation or membership recorded", aff, ", ".join(aff))
+        pol = (e.get("political_alignment") or []) + (e.get("political_ideology") or [])
+        add("political alignment or ideology recorded", pol, ", ".join(pol))
+        add("academic level assigned (JUFO, Finland)", ac.get("level") is not None,
+            f"level {ac.get('level')}", [ac["url"]] if ac.get("url") else [])
+        wp = e.get("wikipedias") or []
+        add("has a Wikipedia article in any language", wp,
+            f"{len(wp)} language edition{'s' if len(wp) != 1 else ''}: {', '.join(wp[:12])}"
+            + ("…" if len(wp) > 12 else ""))
+        if bk.get("books"):
+            add("cited books found on Open Library", bk.get("on_open_library"),
+                f"{bk['on_open_library']} of {bk['books']}; languages: "
+                + ", ".join(f"{k} {v}" for k, v in bk.get("languages_open_library", {}).items()))
     add("rated on Wikipedia's list", wr, (RSP_STATUS.get(wr["status"], wr["status"]) if wr else ""))
     add("rated by an independent assessor", independent, ", ".join(independent))
     add("has an English Wikipedia article", e.get("enwiki"), e.get("enwiki") or "",
         [f"https://en.wikipedia.org/wiki/{e['enwiki'].replace(' ', '_')}"] if e.get("enwiki") else [])
-    return {"type": "organisation" if is_org else "journal", "items": items}
+    return {"type": "organisation" if is_org else "journal" if is_journal else "book publisher",
+            "items": items}
+
+
+def _search_publishers(names: dict) -> dict:
+    """Book publishers named in citations but not found as Wikipedia titles: search Wikidata
+    labels and aliases in English and in the languages of their books (per Open Library).
+    A name is matched only when exactly one item's label or alias equals it (ignoring case,
+    punctuation and a leading "the") and that item is an organisation of a kind in
+    SEARCH_OK_KINDS. names: {name: [search languages]}. Returns {name: qid}. Cached."""
+    cand = {}
+    for i, (name, langs) in enumerate(sorted(names.items())):
+        p = cache.path("outlets", "wdsearch", re.sub(r"\W+", "_", name.lower())[:80] + "_" +
+                       "-".join(langs))
+        hits = cache.load(p)
+        if hits is None:
+            hits = []
+            for lang in langs:
+                d = get_json(WD_API, {"action": "wbsearchentities", "search": name, "language": lang,
+                                      "uselang": "en", "type": "item", "limit": "10", "format": "json"})
+                hits += [[x["id"], (x.get("match") or {}).get("text", "")] for x in d.get("search", [])]
+                time.sleep(0.2)
+            cache.save(p, hits)
+        exact = {q for q, t in hits if _norm(t) == _norm(name)}
+        if len(exact) == 1:
+            cand[name] = next(iter(exact))
+        if i % 200 == 199:
+            log(f"  Wikidata search: {i + 1:,} of {len(names):,} publisher names")
+    kinds = _kinds(sorted(set(cand.values()))) if cand else {}
+    return {n: q for n, q in cand.items() if kinds.get(q) in SEARCH_OK_KINDS}
+
+
+def book_stats(records: list[dict], books_data: dict) -> dict:
+    """Per source key: the books cited from it (by ISBN), where their ISBNs were issued, and
+    their languages per Open Library."""
+    from collections import Counter
+    from . import books as bk
+    B = (books_data or {}).get("books", {})
+    out = {}
+    for r in records:
+        for it in (r.get("sources") or {}).get("items", []):
+            if not it["id"].startswith("isbn:"):
+                continue
+            isbn = it["id"][5:]
+            st = out.setdefault(it["source"], {"isbns": set(), "groups": Counter(), "languages": Counter(),
+                                               "open_library": 0, "invalid": 0})
+            if isbn in st["isbns"]:
+                continue
+            st["isbns"].add(isbn)
+            sp = bk.split(isbn)
+            st["groups"][sp["agency"] if sp else "not in the ISBN range file"] += 1
+            ol = B.get(isbn)
+            if ol:
+                st["open_library"] += 1
+                for lang in ol.get("languages") or ["not recorded"]:
+                    st["languages"][bk.lang_name(lang)] += 1
+    return {k: {"books": len(v["isbns"]), "on_open_library": v["open_library"],
+                "isbn_issued_by": dict(v["groups"].most_common()),
+                "languages_open_library": dict(v["languages"].most_common())}
+            for k, v in out.items()}
 
 
 # ---------------------------------------------------------------- build
@@ -587,8 +695,9 @@ def build(records: list[dict], min_citations_for_wikidata: int = 2) -> dict:
     for r in records:
         for s in r.get("sources", {}).get("list", []):
             cited[s["source"]] += s["citations"]
-            if s.get("name_as_cited"):
-                spelled.setdefault(s["source"], Counter())[s["name_as_cited"]] += s["citations"]
+            nm = s.get("name_as_cited") or s.get("publisher_name_from_isbn")
+            if nm:
+                spelled.setdefault(s["source"], Counter())[nm] += s["citations"]
     # keys are lower-cased; Wikipedia titles are case-sensitive, so look names up as cited
     as_cited = {k: min(v, key=lambda x: (-v[x], x)) for k, v in spelled.items()}
     keys = sorted(k for k in cited if k.startswith("name:") or "." in k)
@@ -611,9 +720,35 @@ def build(records: list[dict], min_citations_for_wikidata: int = 2) -> dict:
     log(f"  looking up {len(names) + len(rsp_titles):,} titles")
     tq = qids_for_titles(rsp_titles + [n for n in names])
     tq_norm = {_norm(t): q for t, q in tq.items()}
+    # book publishers: the Wikidata item holding a cited ISBN's publisher prefix (P3035), and an
+    # exact Wikidata search for publishers named in book citations but not found as titles
+    from . import books as bk
+    books_data, _ = bk.load()
+    BS = book_stats(records, books_data)
+    for v in (books_data or {}).get("prefixes", {}).values():
+        tq_norm.setdefault(_norm(v["label"]), v["wikidata"])
+    B = (books_data or {}).get("books", {})
+    langs_of = {}
+    for r in records:
+        for it in (r.get("sources") or {}).get("items", []):
+            if it["id"].startswith("isbn:") and it["source"].startswith("name:"):
+                for l in (B.get(it["id"][5:]) or {}).get("languages") or []:
+                    if l in MARC_TO_WIKI:
+                        langs_of.setdefault(it["source"], set()).add(MARC_TO_WIKI[l])
+    unfound = {as_cited.get(k, k[5:]): ["en"] + sorted(langs_of.get(k, ()))[:3]
+               for k in keys if k.startswith("name:") and k in BS
+               and cited[k] >= min_citations_for_wikidata
+               and _norm(as_cited.get(k, k[5:])) not in tq_norm}
+    log(f"  Wikidata search for {len(unfound):,} book publishers not found as titles")
+    searched = _search_publishers(unfound)
+    for n, q in searched.items():
+        tq_norm.setdefault(_norm(n), q)
+    log(f"  {len(searched):,} matched")
     doms = [k for k in keys if not k.startswith("name:") and cited[k] >= min_citations_for_wikidata]
     dq = qids_for_domains(doms)
-    all_q = sorted(set(tq.values()) | set(dq.values()), key=lambda q: int(q[1:]))
+    want_names = {_norm(as_cited.get(k, k[5:])) for k in keys if k.startswith("name:")}
+    all_q = sorted(set(tq.values()) | set(dq.values())
+                   | {q for n, q in tq_norm.items() if n in want_names}, key=lambda q: int(q[1:]))
     F = facts(all_q)
 
     def rsp_for(key):
@@ -661,10 +796,12 @@ def build(records: list[dict], min_citations_for_wikidata: int = 2) -> dict:
             "mbfc": ({"domain": mk, "bias": mv["bias"], "factual_reporting": mv["factual_reporting"]}
                      if mv else None),
         }
+        if k in BS:
+            e["books"] = BS[k]
         if f:
             e.update({x: f[x] for x in ("country", "owned_by", "political_alignment",
                                         "political_ideology", "classed_as", "kind", "associations",
-                                        "registries", "journal_ids", "enwiki")})
+                                        "registries", "journal_ids", "enwiki", "wikipedias")})
         out[k] = e
 
     # academic level (JUFO) for publishers and journals, and for named sources without a kind

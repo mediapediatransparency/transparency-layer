@@ -200,6 +200,33 @@ def cmd_source_names(a):
           f"publishers, {len(names['domains']):,} linked to a website, from {names['articles']:,} articles")
 
 
+def cmd_books(a):
+    """Look up every ISBN cited in the analysed articles on Open Library (data/books.json)."""
+    from .fetch import mediawiki as mw
+    from . import books, sources
+    names, _ = sources.load_names()
+    isbns = set()
+    for e in load_testset().values():
+        try:
+            text = mw.get_revision(e["revision"])["content"]
+        except Exception as ex:
+            print(f"  skipped {e['article']}: {ex}", file=sys.stderr)
+            continue
+        for c in sources.find(text, names):
+            i, _ = books.isbn_in(text[c["start"]:c["end"]])
+            if i:
+                isbns.add(i)
+    books.build(isbns)
+
+
+def cmd_reuse(a):
+    """Count other English Wikipedia articles citing the same works (data/reuse.json)."""
+    from . import outlets, reuse
+    recs, _ = stored_records()
+    snap = json.loads(outlets.OUTLETS_JSON.read_text(encoding="utf-8")) if outlets.OUTLETS_JSON.exists() else {}
+    reuse.build(recs, snap.get("sources", {}))
+
+
 def cmd_outlets(a):
     from . import outlets
     recs, _ = stored_records()
@@ -231,6 +258,8 @@ def main(argv=None):
     p.set_defaults(fn=cmd_reanalyse)
     sub.add_parser("outlets").set_defaults(fn=cmd_outlets)
     sub.add_parser("source-names").set_defaults(fn=cmd_source_names)
+    sub.add_parser("books").set_defaults(fn=cmd_books)
+    sub.add_parser("reuse").set_defaults(fn=cmd_reuse)
     p = sub.add_parser("site")
     p.add_argument("--elsewhere", action="store_true",
                    help="also fetch each listed editor's recent edits across Wikipedia (slow)")

@@ -26,6 +26,7 @@ import re
 from collections import Counter
 from urllib.parse import urlsplit
 
+from . import books
 from .metrics import authorship as au
 
 REF = re.compile(r"<ref(?:\s[^>]*)?(?<!/)>(.*?)</ref\s*>", re.I | re.S)
@@ -247,6 +248,7 @@ def _head_surname(text: str):
         return None, None
     return w.group(0).lower(), (y.group(1) if y else "")
 _NAMES = None   # the name list in use by find(); None = no list
+_BOOKS = {}     # Open Library records by ISBN-13 in use by find() (wtl/books.py)
 
 
 def norm_name(name: str) -> str:
@@ -358,14 +360,16 @@ def _free(text, a, b, bib, anchors):
     return c
 
 
-def find(text: str, names: dict | None = None) -> list[dict]:
+def find(text: str, names: dict | None = None, books_data: dict | None = None) -> list[dict]:
     """Citations in the wikitext, one per source cited: each cite template or short footnote
     inside a footnote, else the footnote itself; plus bibliography entries outside footnotes
     that no short footnote points to. Each: {start, end, source, name, url_host, attr, short}.
     `names` is the fixed name list (load_names()); without it, free text is only matched by
-    bibliography and ISBN."""
-    global _NAMES
+    bibliography and ISBN. `books_data` (wtl/books.py load()) gives the publisher of a book
+    cited by ISBN without one; such citations carry "publisher_from": "Open Library"."""
+    global _NAMES, _BOOKS
     _NAMES = names
+    _BOOKS = books_data or {}
     refs = [(m.start(1), m.end(1)) for m in REF.finditer(text)]
     in_ref = lambda x: any(a <= x < b for a, b in refs)  # noqa: E731
     outside = [(s, e) for s, e in _templates(text, 0, len(text), CITE_START) if not in_ref(s)]
@@ -439,6 +443,23 @@ def find(text: str, names: dict | None = None) -> list[dict]:
             if hit and len(hit) == 1:
                 src, nm = next(iter(hit))
                 cites[i] = {**c, "source": src, "name": nm, "short": True}
+    # a book cited by ISBN with no publisher named: the publisher Open Library records for that
+    # ISBN, else the Wikidata item that holds the ISBN's publisher prefix
+    for i, c in enumerate(cites):
+        if c["source"] == "book (no publisher given)" and _BOOKS:
+            isbn, _ = books.isbn_in(text[c["start"]:c["end"]])
+            if not isbn:
+                continue
+            rec = _BOOKS.get("books", {}).get(isbn)
+            pubs = [p for p in (rec or {}).get("publishers", []) if clean_name(p)]
+            sp = books.split(isbn)
+            pre = _BOOKS.get("prefixes", {}).get(sp["registrant"]) if sp and sp["registrant"] else None
+            if pubs:
+                cites[i] = {**c, "source": _named(clean_name(pubs[0])), "name": "",
+                            "ol_name": clean_name(pubs[0]), "publisher_from": "Open Library"}
+            elif pre:
+                cites[i] = {**c, "source": _named(pre["label"]), "name": "",
+                            "ol_name": pre["label"], "publisher_from": "ISBN prefix (Wikidata)"}
     cites.sort(key=lambda c: (c["start"], c["end"]))
     return cites
 
@@ -510,12 +531,46 @@ def credit(cites, tokens, spans, hist, who):
     return out
 
 
-def compute(text, lay, tokens, spans, hist, who, labels, names=None):
+DOI = re.compile(r"\|\s*doi\s*=\s*(10\.\d{4,9}/[^\s|}]+)|\bdoi\.org/(10\.\d{4,9}/[^\s|}\]<]+)", re.I)
+
+
+def item_id(body: str) -> str | None:
+    """The cited work's identifier: isbn:<ISBN-13>, doi:<DOI>, url:<host/path>, or
+    isbn-invalid:<digits> for an ISBN that fails its check digit; None if there is none."""
+    isbn, raw = books.isbn_in(body)
+    if isbn:
+        return "isbn:" + isbn
+    m = DOI.search(body)
+    if m:
+        return "doi:" + (m.group(1) or m.group(2)).rstrip(".,;").lower()
+    m = URL_PARAM.search(body) or BARE_URL.search(body)
+    if m:
+        u = m.group(1) if m.re is URL_PARAM else m.group(0)
+        a = ARCHIVE.match(u)
+        u = a.group(1) if a else u
+        try:
+            sp = urlsplit(u)
+        except ValueError:
+            sp = None
+        if sp and sp.hostname:
+            h = sp.hostname.lower()
+            for p in SKIP_HOST:
+                if h.startswith(p):
+                    h = h[len(p):]
+            path = (sp.path or "").rstrip("/")
+            q = ("?" + sp.query) if sp.query and not re.fullmatch(r"(utm_[^&]*&?)+", sp.query) else ""
+            return "url:" + h + path + q
+    if raw:
+        return "isbn-invalid:" + re.sub(r"[^0-9Xx]", "", raw).upper()
+    return None
+
+
+def compute(text, lay, tokens, spans, hist, who, labels, names=None, books_data=None):
     """The record's "sources" block and per-editor citation counts. `labels` maps editor key to
     label for prose editors; editors who only added citations get further labels, numbered on
     from the last prose editor in order of citations added. Returns (block, labels_added,
     count_by_key)."""
-    cites = find(text, names)
+    cites = find(text, names, books_data)
     keys = credit(cites, tokens, spans, hist, who)
     by_key = Counter(k for k in keys if k)
     extra = {}
@@ -527,14 +582,35 @@ def compute(text, lay, tokens, spans, hist, who, labels, names=None):
     per = {}
     flag_tot = Counter()
     by_ed = {}
+    items = {}
     for c, k in zip(cites, keys):
         s = per.setdefault(c["source"], {"source": c["source"], "names": Counter(), "citations": 0,
                                          "lead_citations": 0, "added_by": Counter(),
-                                         "opinion_citations": 0})
+                                         "opinion_citations": 0, "flags": Counter(),
+                                         "ol_names": Counter(), "publisher_from_isbn": Counter()})
         s["citations"] += 1
+        body = text[c["start"]:c["end"]]
         fl = flags_of(text, c)
+        isbn, _ = books.isbn_in(body)
+        ol = (books_data or {}).get("books", {}).get(isbn) if isbn else None
+        if ol and ol.get("languages") and "eng" not in ol["languages"]:
+            fl.add("not_english")      # Open Library records the book in other languages only
         if "opinion" in fl:
             s["opinion_citations"] += 1
+        s["flags"].update(fl)
+        if c.get("publisher_from"):
+            s["publisher_from_isbn"][c["publisher_from"]] += 1
+            s["ol_names"][c["ol_name"]] += 1
+        iid = item_id(body)
+        if iid:
+            it = items.setdefault(iid, {"id": iid, "source": c["source"], "citations": 0,
+                                        "flags": set(), "editors": Counter(), "language": ""})
+            it["citations"] += 1
+            it["flags"] |= fl
+            it["editors"][lab[k] if k else "unknown"] += 1
+            lm = LANG_PARAM.search(body)
+            if lm and not it["language"]:
+                it["language"] = clean_name(lm.group(1))[:40]
         flag_tot.update(fl)
         e = by_ed.setdefault(lab[k] if k else "unknown", Counter())
         e["citations"] += 1
@@ -552,6 +628,11 @@ def compute(text, lay, tokens, spans, hist, who, labels, names=None):
             "citations": s["citations"],
             "lead_citations": s["lead_citations"],
             "opinion_citations": s["opinion_citations"],
+            "flags": {f: s["flags"][f] for f in CHECK_FLAGS if s["flags"][f]},
+            # citations naming no publisher whose publisher was found from the ISBN
+            **({"publisher_from_isbn": dict(sorted(s["publisher_from_isbn"].items())),
+                "publisher_name_from_isbn": min(s["ol_names"], key=lambda x: (-s["ol_names"][x], x))}
+               if s["publisher_from_isbn"] else {}),
             "added_by": dict(sorted(s["added_by"].items(),
                                     key=lambda x: (-x[1], _label_no(x[0])))),
         })
@@ -569,6 +650,12 @@ def compute(text, lay, tokens, spans, hist, who, labels, names=None):
         "flags_by_editor": {l: {x: e[x] for x in ["citations"] + CHECK_FLAGS}
                             for l, e in sorted(by_ed.items(), key=lambda x: (-x[1]["citations"], _label_no(x[0])))},
         "list": rows,
+        # each cited work with an identifier (ISBN, DOI or web address), so the same work can be
+        # followed across articles
+        "items": [{"id": it["id"], "source": it["source"], "citations": it["citations"],
+                   "flags": sorted(it["flags"]), **({"language_as_cited": it["language"]} if it["language"] else {}),
+                   "added_by": dict(sorted(it["editors"].items(), key=lambda x: (-x[1], _label_no(x[0]))))}
+                  for it in sorted(items.values(), key=lambda x: x["id"])],
     }
     return block, extra, by_key
 

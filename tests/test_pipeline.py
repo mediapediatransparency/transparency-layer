@@ -39,6 +39,7 @@ def offline(monkeypatch, tmp_path):
         "user": "Writer", "userid": 33, "sha1": "x", "content": TEXT})
     monkeypatch.setattr(ww, "rev_content", lambda r: {"revid": 3, "tokens": [list(t) for t in TOKENS]})
     monkeypatch.setattr(mw, "get_history", lambda p, r: [h for h in HIST if h["revid"] <= r])
+    monkeypatch.setattr(pipeline.cache, "save", lambda p, d: None)
     monkeypatch.setattr(pipeline.cache, "load", lambda p: {
         "covers_revid": 3, "tokens": [[o, [], []] for s, o, e in TOKENS if re.search(r"\w", s)]})
     monkeypatch.setattr(mw, "resolve_users", lambda names: {

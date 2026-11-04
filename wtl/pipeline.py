@@ -3,7 +3,7 @@
 import sys
 from collections import Counter, defaultdict
 
-from . import __version__, caveats, coi, sanctions as sanc, sources, words as wl
+from . import __version__, books, caveats, coi, sanctions as sanc, sources, words as wl
 from .metrics import changes as chg
 from .config import WIKIWHO_URL
 from .fetch import cache, mediawiki as mw, wikiwho as ww
@@ -53,8 +53,9 @@ def analyse(title: str | None = None, revid: int | None = None, area: str = "",
     labels = au.label_editors(words)
     count = Counter(w.editor for w in words)
     names, names_sha = sources.load_names()
+    books_data, books_sha = books.load()
     src_block, src_labels, cites_by_key = sources.compute(text, lay, rc["tokens"], al.spans, hist,
-                                                          who, labels, names)
+                                                          who, labels, names, books_data)
     lead_count = Counter(w.editor for w in words if w.lead)
     total, lead_total = len(words), sum(lead_count.values())
 
@@ -279,6 +280,7 @@ def analyse(title: str | None = None, revid: int | None = None, area: str = "",
             "sanctions_csv_sha256": sanc.file_sha256(sanctions_path) if sanctions_path
             else sanc.file_sha256(),
             "source_names_sha256": names_sha,
+            "books_sha256": books_sha,
         },
         "quality": {
             "wikiwho_tokens": len(rc["tokens"]),
@@ -293,6 +295,10 @@ def analyse(title: str | None = None, revid: int | None = None, area: str = "",
     record["changes"] = changes_block
     record["declared_interests"] = declared
     record["caveats"] = caveats.compute(record)
+    # label -> account key for this revision, so cross-article patterns can be computed without
+    # re-running the analysis; kept in the git-ignored cache, never published
+    lab_map = {v: k for k, v in {**labels, **src_labels, **chg_labels}.items()}
+    cache.save(cache.path("patterns", "labels", str(revid)), dict(sorted(lab_map.items())))
     if internals:
         return record, {"labels": labels, "who": who, "source_labels": src_labels,
                         "change_labels": chg_labels}

@@ -47,3 +47,18 @@ def test_checklist_for_a_journal_and_none_for_a_newspaper():
     assert got["ISSN recorded"] and got["academic level assigned (JUFO, Finland)"]
     assert not got["classed as a predatory journal on Wikidata"]
     assert outlets.checklist({"kind": "newspaper or news website"}) is None
+
+
+def test_publisher_checklist():
+    e = {"kind": "book publisher", "wikidata": "Q1", "wikipedias": ["he"], "owned_by": [],
+         "associations": {"founded by": [{"label": "A", "wikidata": "Q2", "sourced": True}]},
+         "books": {"books": 3, "on_open_library": 2, "isbn_issued_by": {"Israel": 3},
+                   "languages_open_library": {"Hebrew": 2}}}
+    cl = outlets.checklist(e)
+    got = {i["check"]: i["found"] for i in cl["items"]}
+    assert cl["type"] == "book publisher"
+    assert got["founders recorded"] and got["has a Wikipedia article in any language"]
+    assert not got["owner or parent organisation recorded"]
+    assert not got["classed as a self-publishing company or platform on Wikidata"]
+    # a source with no books and no publisher kind gets no publisher checklist
+    assert outlets.checklist({"kind": "magazine"}) is None
