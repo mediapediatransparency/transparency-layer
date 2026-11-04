@@ -277,6 +277,22 @@ FACT_PROPS = {"P495": "country", "P17": "country", "P127": "owned_by", "P1387": 
 ASSOC_PROPS = {"P112": "founded by", "P749": "parent organisation", "P463": "member of",
                "P1416": "affiliation", "P8324": "funded by", "P859": "sponsor", "P488": "chair",
                "P3461": "designated as terrorist by", "P123": "publisher", "P8875": "indexed in"}
+ASSOC_PROPS.update({"P1037": "director or manager", "P169": "chief executive"})
+# Identifiers in public registries, recorded on Wikidata: (name, link to the official record).
+REGISTRY_PROPS = {
+    "P1297": ("US tax ID (EIN), US non-profit records",
+              "https://projects.propublica.org/nonprofits/organizations/{digits}"),
+    "P3057": ("Charity Commission for England and Wales",
+              "https://register-of-charities.charitycommission.gov.uk/charity-search/-/charity-details/{v}"),
+    "P3163": ("Scottish Charity Regulator", "https://www.oscr.org.uk/about-charities/search-the-register/charity-details?number={v}"),
+    "P3200": ("Charity Commission for Northern Ireland", "https://www.charitycommissionni.org.uk/charity-details/?regId={v}"),
+    "P10377": ("Charities Regulator (Ireland)", "https://www.charitiesregulator.ie/en/information-for-the-public/search-the-register-of-charities/charity/{v}"),
+    "P3914": ("GuideStar Israel (registered Israeli non-profits)", "https://www.guidestar.org.il/organization/{v}"),
+    "P2657": ("EU Transparency Register", "https://transparency-register.europa.eu/searchregister-or-update/organisation-detail_en?id={v}"),
+    "P3548": ("Australian Business Register", "https://abr.business.gov.au/ABN/View?abn={digits}"),
+    "P10301": ("Lobbying Register of the German Bundestag", "https://www.lobbyregister.bundestag.de/suche/{v}"),
+}
+JOURNAL_ID_PROPS = {"P236": "issn", "P1156": "scopus_id", "P5115": "doaj_id"}
 # Kind of source: Wikidata classes, checked in this order (instance of, or of a subclass);
 # the first match wins. Labels checked on Wikidata.
 SOURCE_KINDS = [
@@ -329,13 +345,26 @@ def _entities(ids: list[str], props: str) -> dict:
 
 def facts(qids: list[str]) -> dict:
     """Facts recorded on Wikidata for each item (current statements, labels in English)."""
-    ents = _entities(qids, "labels|claims")
+    ents = _entities(qids, "labels|claims|sitelinks")
     out, value_ids = {}, set()
     for q in qids:
         e = ents.get(q, {})
         c = e.get("claims", {})
         f = {"label": e.get("labels", {}).get("en", {}).get("value", q), "websites": [],
-             "_vals": {}, "_ref": set()}
+             "_vals": {}, "_ref": set(), "registries": [], "ids": {},
+             "enwiki": (e.get("sitelinks", {}).get("enwiki") or {}).get("title")}
+        for pid, (rname, tmpl) in REGISTRY_PROPS.items():
+            for st in c.get(pid, []):
+                v = st.get("mainsnak", {}).get("datavalue", {}).get("value")
+                if st.get("rank") != "deprecated" and isinstance(v, str):
+                    f["registries"].append({"registry": rname, "id": v, "property": pid,
+                                            "url": tmpl.format(v=v, digits=re.sub(r"\D", "", v))})
+        for pid, key in JOURNAL_ID_PROPS.items():
+            vals = [st.get("mainsnak", {}).get("datavalue", {}).get("value") for st in c.get(pid, [])
+                    if st.get("rank") != "deprecated"]
+            vals = sorted(v for v in vals if isinstance(v, str))
+            if vals:
+                f["ids"][key] = vals
         for pid in list(FACT_PROPS) + list(ASSOC_PROPS) + ["P856"]:
             for st in c.get(pid, []):
                 if st.get("rank") == "deprecated" or "P582" in st.get("qualifiers", {}):
@@ -367,6 +396,8 @@ def facts(qids: list[str]) -> dict:
         v = f.pop("_vals")
         refd = f.pop("_ref")
         res[q] = {"label": f["label"], "websites": sorted(f["websites"]),
+                  "registries": sorted(f["registries"], key=lambda r: (r["registry"], r["id"])),
+                  "journal_ids": f["ids"], "enwiki": f["enwiki"],
                   **{k: sorted({labels.get(x, x) for x in v.get(k, ())})
                      for k in ("country", "owned_by", "political_alignment", "political_ideology")},
                   "classed_as": sorted(classed.get(q, ())),
@@ -404,6 +435,123 @@ def _kinds(qids: list[str]) -> dict:
         time.sleep(1)
     log(f"  kinds of source for {len(out):,} of {len(qids):,} items")
     return out
+
+
+def _reachable(host: str) -> bool:
+    import socket
+    try:
+        socket.getaddrinfo(host, 443)
+        return True
+    except OSError:
+        return False
+
+
+def propublica(ein: str) -> dict | None:
+    """Latest Form 990 filing with financial data in ProPublica's Nonprofit Explorer."""
+    p = cache.path("outlets", "propublica", ein)
+    hit = cache.load(p)
+    if hit is not None:
+        return hit or None
+    try:
+        d = get_json(f"https://projects.propublica.org/nonprofits/api/v2/organizations/{ein}.json",
+                     retries=3)
+    except Exception:
+        d = None
+    rec = None
+    fs = (d or {}).get("filings_with_data") or []
+    if fs:
+        f = max(fs, key=lambda x: x.get("tax_prd_yr") or 0)
+        rec = {"year": f.get("tax_prd_yr"), "total_revenue": f.get("totrevenue"),
+               "form": {0: "990", 1: "990-EZ", 2: "990-PF"}.get(f.get("formtype"), str(f.get("formtype"))),
+               "url": f"https://projects.propublica.org/nonprofits/organizations/{ein}"}
+    cache.save(p, rec or {})
+    return rec
+
+
+def crossref_journal(issn: str) -> dict | None:
+    """Crossref's record for a journal ISSN: publisher and how many DOIs it has registered."""
+    p = cache.path("outlets", "crossref", issn)
+    hit = cache.load(p)
+    if hit is not None:
+        return hit or None
+    try:
+        d = get_json(f"https://api.crossref.org/journals/{issn}", retries=3)
+    except Exception:
+        d = None
+    m = (d or {}).get("message") or {}
+    rec = ({"title": m.get("title"), "publisher": m.get("publisher"),
+            "dois": (m.get("counts") or {}).get("total-dois"),
+            "url": f"https://api.crossref.org/journals/{issn}"} if m else None)
+    cache.save(p, rec or {})
+    return rec
+
+
+JOURNAL_KINDS = {"academic journal", "predatory journal"}
+
+
+def checklist(e: dict) -> dict | None:
+    """The same mechanical checklist for every organisation or journal: each item is found
+    (with its evidence) or not found in these records. No total, no score."""
+    A = e.get("associations") or {}
+    names = lambda rel: [v["label"] for v in A.get(rel, [])]  # noqa: E731
+    is_org = e.get("kind") in ORG_KINDS or "designated as terrorist by" in A
+    is_journal = (e.get("kind") in JOURNAL_KINDS
+                  or (e.get("academic_level") or {}).get("type") == "journal or series")
+    if not (is_org or is_journal):
+        return None
+    wr = e.get("wikipedia_rating")
+    independent = [x for x, ok in (("independent quality", e.get("independent_quality")),
+                                   ("audience score", e.get("audience_leaning")),
+                                   ("MBFC", e.get("mbfc")), ("AllSides", e.get("allsides_2018"))) if ok]
+    items = []
+    add = lambda label, found, detail="", links=(): items.append(  # noqa: E731
+        {"check": label, "found": bool(found), "detail": detail if found else "", "links": list(links) if found else []})
+    if is_org:
+        regs = e.get("registries") or []
+        add("registered in a public registry", regs,
+            "; ".join(f"{r['registry']} {r['id']}" for r in regs), [r["url"] for r in regs])
+        add("funders recorded", names("funded by") + names("sponsor"),
+            ", ".join(names("funded by") + names("sponsor")))
+        add("founders recorded", names("founded by"), ", ".join(names("founded by")))
+        lead = names("chair") + names("director or manager") + names("chief executive")
+        add("leadership recorded", lead, ", ".join(lead))
+        aff = names("parent organisation") + names("affiliation") + names("member of")
+        add("parent organisation, affiliation or membership recorded", aff, ", ".join(aff))
+        pol = (e.get("political_alignment") or []) + (e.get("political_ideology") or [])
+        add("political alignment or ideology recorded", pol, ", ".join(pol))
+        add("designated as terrorist by a government or international body",
+            names("designated as terrorist by"), ", ".join(names("designated as terrorist by")))
+        filings = [r["filings"] for r in regs if r.get("filings")]
+        if any(r["property"] == "P1297" for r in regs):
+            f = filings[0] if filings else None
+            add("US public tax filing (Form 990) found", f,
+                f"{f['form']} for {f['year']}, total revenue ${f['total_revenue']:,}" if f and f.get("total_revenue") is not None
+                else (f"{f['form']} for {f['year']}" if f else ""), [f["url"]] if f else [])
+    if is_journal:
+        ids = e.get("journal_ids") or {}
+        ac = e.get("academic_level") or {}
+        add("ISSN recorded", ids.get("issn"), ", ".join(ids.get("issn", [])))
+        add("publisher recorded", names("publisher"), ", ".join(names("publisher")))
+        idx = names("indexed in")
+        add("indexed in Scopus", ids.get("scopus_id") or any("Scopus" in x for x in idx),
+            ", ".join(ids.get("scopus_id", [])) or "listed on Wikidata")
+        others = [x for x in idx if "Scopus" not in x]
+        add("indexed elsewhere (e.g. Web of Science, PubMed)", others, ", ".join(others))
+        add("listed in the Directory of Open Access Journals", ids.get("doaj_id") or ac.get("in_doaj"),
+            ", ".join(ids.get("doaj_id", [])) or "per JUFO")
+        add("academic level assigned (JUFO, Finland)", ac.get("level") is not None,
+            f"level {ac.get('level')}" + (f"; Denmark level {ac['denmark_level']}" if ac.get("denmark_level") is not None else ""),
+            [ac["url"]] if ac.get("url") else [])
+        cr = e.get("crossref")
+        add("registers DOIs with Crossref", cr and cr.get("dois"),
+            f"{cr['dois']:,} DOIs, publisher {cr.get('publisher')}" if cr and cr.get("dois") else "",
+            [cr["url"]] if cr else [])
+        add("classed as a predatory journal on Wikidata", e.get("kind") == "predatory journal", "yes")
+    add("rated on Wikipedia's list", wr, (RSP_STATUS.get(wr["status"], wr["status"]) if wr else ""))
+    add("rated by an independent assessor", independent, ", ".join(independent))
+    add("has an English Wikipedia article", e.get("enwiki"), e.get("enwiki") or "",
+        [f"https://en.wikipedia.org/wiki/{e['enwiki'].replace(' ', '_')}"] if e.get("enwiki") else [])
+    return {"type": "organisation" if is_org else "journal", "items": items}
 
 
 # ---------------------------------------------------------------- build
@@ -515,7 +663,8 @@ def build(records: list[dict], min_citations_for_wikidata: int = 2) -> dict:
         }
         if f:
             e.update({x: f[x] for x in ("country", "owned_by", "political_alignment",
-                                        "political_ideology", "classed_as", "kind", "associations")})
+                                        "political_ideology", "classed_as", "kind", "associations",
+                                        "registries", "journal_ids", "enwiki")})
         out[k] = e
 
     # academic level (JUFO) for publishers and journals, and for named sources without a kind
@@ -559,6 +708,30 @@ def build(records: list[dict], min_citations_for_wikidata: int = 2) -> dict:
                        "allsides_2018": (ALLSIDES_LABEL.get(rq[1]["allsides"])
                                          if rq and rq[1]["allsides"] is not None else None)})
     listed.sort(key=lambda x: (x["entry"].lower(), x["status"]))
+    # outside records for the checklist: US tax filings (ProPublica) and Crossref journal records
+    if _reachable("projects.propublica.org"):
+        for k, e in out.items():
+            for r in e.get("registries") or []:
+                if r["property"] == "P1297":
+                    r["filings"] = propublica(re.sub(r"\D", "", r["id"]))
+    else:
+        log("  ProPublica host cannot be resolved; US tax filings left out this run")
+    if _reachable("api.crossref.org"):
+        for k, e in out.items():
+            if e.get("kind") in ("academic journal", "predatory journal") or \
+                    (e.get("academic_level") or {}).get("type") == "journal or series":
+                for issn in (e.get("journal_ids") or {}).get("issn", [])[:2]:
+                    cr = crossref_journal(issn)
+                    if cr:
+                        e["crossref"] = cr
+                        break
+    else:
+        log("  Crossref host cannot be resolved; DOI registration left out this run")
+    for e in out.values():
+        cl = checklist(e)
+        if cl:
+            e["checklist"] = cl
+
     snap = {
         "built": dt.date.today().isoformat(),
         "wikipedia_list_compared": listed,

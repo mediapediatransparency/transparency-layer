@@ -859,6 +859,23 @@ def assoc_text(o, limit=None, links=False):
     return "; ".join(bits)
 
 
+def checklist_cell(o):
+    """The checklist as text: items found with their evidence, then those not found."""
+    cl = o.get("checklist")
+    if not cl:
+        return "–"
+    found, missing = [], []
+    for it in cl["items"]:
+        if it["found"]:
+            links = " ".join(f"<a href='{escape(u)}'>record</a>" for u in it["links"][:3])
+            found.append(f"✓ {escape(it['check'])}" + (f": {escape(it['detail'])}" if it["detail"] else "")
+                         + (f" {links}" if links else ""))
+        else:
+            missing.append(escape(it["check"]))
+    return ("<br>".join(found) + ("<div class='small'>Not found in these records: "
+                                  + "; ".join(missing) + "</div>" if missing else ""))
+
+
 def _assessor_cells(key, ctx):
     o = ctx.outlets.get(key) or {}
     wr = o.get("wikipedia_rating")
@@ -1199,7 +1216,14 @@ def sources_page(ctx):
                     oarts[x["source"]] += 1
                     oareas.setdefault(x["source"], set()).add(ctx.areas.get(r["article"], ""))
         if oc:
-            h.append("<h2>Organisations cited, and their recorded associations</h2>"
+            h.append("<h2>Organisations cited: checklist and recorded associations</h2>"
+                     "<p>The same checklist is applied to every organisation listed: registration in "
+                     "a public registry (with a link to the official record), recorded funders, "
+                     "founders, leadership, affiliations, political alignment, any terrorist "
+                     "designation, ratings by Wikipedia and by independent assessors, a Wikipedia "
+                     "article, and for US non-profits the latest public tax filing. Each item is "
+                     "either found, with its evidence, or not found in these records, which is not "
+                     "the same as absent. There is no total and no score.</p>"
                      "<p>Think tanks, advocacy and activist groups, human rights organisations, "
                      "charities and foundations, NGOs, religious organisations, trade unions, "
                      "political parties and armed organisations cited in the analysed articles, "
@@ -1212,7 +1236,7 @@ def sources_page(ctx):
                      f"<details><summary>Show {len(oc):,} organisations</summary>"
                      "<div class='scroll'><table><tr><th>Organisation</th><th>Kind</th>"
                      "<th class='n'>Citations</th><th class='n'>Articles</th><th>Areas</th>"
-                     "<th>Recorded associations (Wikidata)</th><th>Wikipedia's rating</th></tr>")
+                     "<th>Checklist</th><th>All recorded associations (Wikidata)</th></tr>")
             for k, n in sorted(oc.items(), key=lambda x: (-x[1], x[0]))[:300]:
                 o = ctx.outlets.get(k) or {}
                 wr = o.get("wikipedia_rating")
@@ -1221,8 +1245,31 @@ def sources_page(ctx):
                 h.append(f"<tr><td>{source_label(k, ctx)}{wdl}</td><td class='small'>{escape(o.get('kind') or '–')}</td>"
                          f"<td class='n'>{n:,}</td><td class='n'>{oarts[k]}</td>"
                          f"<td class='small'>{escape('; '.join(sorted(area_name(a) for a in oareas[k])))}</td>"
-                         f"<td class='small'>{assoc_text(o, links=True) or '–'}</td>"
-                         f"<td class='small'>{escape(RATING_NAMES[wr['status']] if wr else '–')}</td></tr>")
+                         f"<td class='small'>{checklist_cell(o)}</td>"
+                         f"<td class='small'>{assoc_text(o, links=True) or '–'}</td></tr>")
+            h.append("</table></div></details>")
+        # journals
+        jc, jarts = Counter(), Counter()
+        for r in ctx.recs:
+            for x in (r.get("sources") or {}).get("list", []):
+                o = ctx.outlets.get(x["source"]) or {}
+                if (o.get("checklist") or {}).get("type") == "journal":
+                    jc[x["source"]] += x["citations"]
+                    jarts[x["source"]] += 1
+        if jc:
+            h.append("<h2>Journals cited: checklist</h2><p>Every journal cited in the analysed "
+                     "articles that Wikidata classes as an academic journal, or that the Finnish "
+                     "Publication Forum lists, with the same checklist for each: ISSN, publisher, "
+                     "indexing in Scopus and other indexes, the Directory of Open Access Journals, "
+                     "an academic level from the Finnish and Danish registers, DOI registration "
+                     "with Crossref, and whether Wikidata classes it as a predatory journal.</p>"
+                     f"<details><summary>Show {len(jc):,} journals</summary>"
+                     "<div class='scroll'><table><tr><th>Journal</th><th class='n'>Citations</th>"
+                     "<th class='n'>Articles</th><th>Checklist</th></tr>")
+            for k, n in sorted(jc.items(), key=lambda x: (-x[1], x[0]))[:300]:
+                o = ctx.outlets.get(k) or {}
+                h.append(f"<tr><td>{source_label(k, ctx)}</td><td class='n'>{n:,}</td>"
+                         f"<td class='n'>{jarts[k]}</td><td class='small'>{checklist_cell(o)}</td></tr>")
             h.append("</table></div></details>")
         tbl, tot, nsrc = cited_table(ctx.recs, 100)
         h.append(f"<h3>All areas together</h3><details><summary>{len(ctx.recs):,} articles, "
