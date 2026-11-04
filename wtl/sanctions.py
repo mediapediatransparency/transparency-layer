@@ -34,6 +34,7 @@ class Sanction:
     end: str = ""      # YYYY-MM-DD when the sanction stopped applying; "" = no end known
     end_basis: str = ""  # "duration", "lifted" or "" (open-ended or not stated)
     lift_url: str = ""
+    scope: str = ""    # what the ban covers, when the record states it (notes "scope: ...")
 
     def applies_to(self, article_area: str) -> bool:
         return self.type != "topic_ban" or self.area == article_area
@@ -45,6 +46,8 @@ class Sanction:
                "authority": self.authority, "source": self.source, "evidence": self.url}
         if self.lift_url:
             out["lift_evidence"] = self.lift_url
+        if self.scope:
+            out["scope"] = self.scope
         return out
 
 
@@ -101,8 +104,13 @@ def load(path=SANCTIONS_CSV) -> list[Sanction]:
             rows.append(Sanction(r["username"].strip(), r["sanction_type"], r["area"],
                                  r["duration"], r["date"], r["authority"],
                                  r["decision_url"].strip(), "seed_list", end, basis,
-                                 (r.get("lift_url") or "").strip()))
+                                 (r.get("lift_url") or "").strip(), _scope(r.get("notes") or "")))
     return rows
+
+
+def _scope(notes: str) -> str:
+    m = re.search(r"scope:\s*([^;]+)", notes)
+    return m.group(1).strip() if m else ""
 
 
 def file_sha256(path=SANCTIONS_CSV) -> str:

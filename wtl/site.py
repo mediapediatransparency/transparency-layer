@@ -458,6 +458,7 @@ def article_page(rec, ctx: Context):
             f"<span class='tag'>{escape(TYPE_NAMES.get(s['type'], s['type']))}</span> "
             f"{period(s)} {link(s['evidence'], 'decision')}"
             + (f" {link(s['lift_evidence'], 'lifted')}" if s.get("lift_evidence") else "")
+            + (f" <span class='small'>scope: {escape(s['scope'])}</span>" if s.get("scope") else "")
             for s in e["sanctions"])
         kind = "" if e["account_type"] == "registered" else f" <span class='small'>({escape(e['account_type'])})</span>"
         ev = " ".join(link(f"{WIKI}/w/index.php?diff=prev&oldid={r}", "edit") for r in e["top_revisions"])
