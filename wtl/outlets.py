@@ -182,7 +182,7 @@ def jufo(name: str, kind: str | None) -> dict | None:
         return hit or None
     found = None
     for t in ([JUFO_TYPES[kind]] if kind in JUFO_TYPES else ["2", "1"]):
-        res = get_json(f"{JUFO_API}/etsi.php", {"nimi": name, "tyyppi": t}) or []
+        res = get_json(f"{JUFO_API}/etsi.php", {"nimi": name, "tyyppi": t}, retries=3, timeout=60) or []
         for r in res:
             if _norm(r.get("Name", "")) == _norm(name):
                 found = r
@@ -191,7 +191,7 @@ def jufo(name: str, kind: str | None) -> dict | None:
             break
     rec = None
     if found:
-        full = (get_json(f"{JUFO_API}/kanava/{found['Jufo_ID']}") or [{}])[0]
+        full = (get_json(f"{JUFO_API}/kanava/{found['Jufo_ID']}", retries=3, timeout=60) or [{}])[0]
         others = [x.strip() for x in (full.get("Other_Title") or "").split(";") if x.strip()]
         rec = {"id": found["Jufo_ID"], "name": full.get("Name") or found["Name"],
                "type": "publisher" if full.get("Type") == "Kirjakustantaja" else "journal or series",
@@ -858,6 +858,7 @@ def build(records: list[dict], min_citations_for_wikidata: int = 2) -> dict:
     except OSError:
         log("  JUFO host cannot be resolved on this machine; academic levels left out this run")
         jufo_ok = False
+    jufo_fails = 0
     for i, k in enumerate(todo):
         if not jufo_ok:
             break
@@ -866,9 +867,13 @@ def build(records: list[dict], min_citations_for_wikidata: int = 2) -> dict:
             e["academic_level"] = (jufo(e["name"], ACADEMIC_KINDS.get(e.get("kind")))
                                    or (jufo(as_cited[k], ACADEMIC_KINDS.get(e.get("kind")))
                                        if as_cited.get(k) and as_cited[k] != e["name"] else None))
-        except Exception as ex:   # not reachable (e.g. DNS): leave the assessor out this run
-            log(f"  JUFO not reachable, skipped: {str(ex)[:120]}")
-            jufo_ok = False
+            jufo_fails = 0
+        except Exception as ex:   # this name failed; after five failures in a row, stop asking
+            jufo_fails += 1
+            log(f"  JUFO lookup failed for {e['name'][:60]}: {str(ex)[:100]}")
+            if jufo_fails >= 5:
+                log("  JUFO failing repeatedly; academic levels not looked up for the rest of this run")
+                jufo_ok = False
         if i % 200 == 199:
             log(f"  JUFO: {i + 1:,} of {len(todo):,}")
     # Wikipedia's whole list next to the independent datasets (every entry with a web domain,
