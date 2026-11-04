@@ -15,3 +15,11 @@ def test_combined_status():
     assert outlets.combined_status([r("Fox News", "nc"), r("Fox News (talk shows)", "gu")]) == "m"
     assert outlets.combined_status([r("BBC", "gr")]) == "gr"
     assert outlets.combined_status([r("A 2012-2018", "nc"), r("A 2019-present", "gu")]) == "m"
+
+
+def test_sourced_ignores_import_only_references():
+    imported = {"references": [{"snaks": {"P143": [{}]}}]}
+    cited = {"references": [{"snaks": {"P854": [{}], "P813": [{}]}}]}
+    assert not outlets._sourced(imported)
+    assert not outlets._sourced({})
+    assert outlets._sourced(cited)

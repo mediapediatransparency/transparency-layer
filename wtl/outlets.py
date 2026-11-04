@@ -147,6 +147,64 @@ def lookup(host: str, table: dict):
     return None, None
 
 
+MBFC_URL = ("https://raw.githubusercontent.com/idiap/Factual-Reporting-and-Political-Bias-Web-"
+            "Interactions/main/data/mbfc_raw.csv")
+MBFC_REF = ("Media Bias/Fact Check ratings (bias and factual reporting), as collected in the Idiap "
+            "Research Institute's open dataset (Factual-Reporting-and-Political-Bias-Web-Interactions, "
+            "Apache-2.0).")
+
+
+def mbfc() -> dict:
+    rows = csv.DictReader(io.StringIO(_download(MBFC_URL, "mbfc_raw.csv")))
+    out = {}
+    for r in rows:
+        d = r["source"].lower().strip()
+        d = d[4:] if d.startswith("www.") else d
+        if d:
+            out[d] = {"bias": r["bias"] or None, "factual_reporting": r["factual_reporting"] or None,
+                      "country": re.sub(r"\s*\(.*\)", "", r["country"] or "") or None}
+    return out
+
+
+# Finland's Publication Forum (JUFO): expert panels grade academic publishers and journals
+# 0 (assessed, does not meet the criteria) to 3 (highest). Records also carry Denmark's level.
+JUFO_API = "https://jufo-rest.csc.fi/v1.1"
+JUFO_REF = ("Publication Forum (JUFO), Federation of Finnish Learned Societies: levels 0 to 3 "
+            "assigned by panels of researchers to academic publishers, journals and series.")
+JUFO_TYPES = {"publisher": "2", "journal": "1"}
+
+
+def jufo(name: str, kind: str | None) -> dict | None:
+    """The JUFO record whose name (or other title) matches `name` exactly after normalising."""
+    p = cache.path("outlets", "jufo", re.sub(r"\W+", "_", _norm(name))[:80] + "_" + (kind or "any"))
+    hit = cache.load(p)
+    if hit is not None:
+        return hit or None
+    found = None
+    for t in ([JUFO_TYPES[kind]] if kind in JUFO_TYPES else ["2", "1"]):
+        res = get_json(f"{JUFO_API}/etsi.php", {"nimi": name, "tyyppi": t}) or []
+        for r in res:
+            if _norm(r.get("Name", "")) == _norm(name):
+                found = r
+                break
+        if found:
+            break
+    rec = None
+    if found:
+        full = (get_json(f"{JUFO_API}/kanava/{found['Jufo_ID']}") or [{}])[0]
+        others = [x.strip() for x in (full.get("Other_Title") or "").split(";") if x.strip()]
+        rec = {"id": found["Jufo_ID"], "name": full.get("Name") or found["Name"],
+               "type": "publisher" if full.get("Type") == "Kirjakustantaja" else "journal or series",
+               "level": int(full["Level"]) if str(full.get("Level", "")).isdigit() else None,
+               "denmark_level": (int(full["Denmark_Level"])
+                                 if str(full.get("Denmark_Level", "")).isdigit() else None),
+               "in_doaj": full.get("DOAJ_Index") == "1",
+               "url": f"https://jfp.csc.fi/en/web/haku/julkaisukanavahaku#!/kanava/{found['Jufo_ID']}",
+               "other_titles": others}
+    cache.save(p, rec or {})
+    return rec
+
+
 ALLSIDES_LABEL = {-1.0: "left", -0.5: "lean left", 0.0: "centre", 0.5: "lean right", 1.0: "right"}
 
 
@@ -215,6 +273,48 @@ def qids_for_domains(domains: list[str]) -> dict:
 WD_API = "https://www.wikidata.org/w/api.php"
 FACT_PROPS = {"P495": "country", "P17": "country", "P127": "owned_by", "P1387": "political_alignment",
               "P1142": "political_ideology"}
+# Associations recorded on Wikidata, shown as facts with a link to the statement.
+ASSOC_PROPS = {"P112": "founded by", "P749": "parent organisation", "P463": "member of",
+               "P1416": "affiliation", "P8324": "funded by", "P859": "sponsor", "P488": "chair",
+               "P3461": "designated as terrorist by", "P123": "publisher", "P8875": "indexed in"}
+# Kind of source: Wikidata classes, checked in this order (instance of, or of a subclass);
+# the first match wins. Labels checked on Wikidata.
+SOURCE_KINDS = [
+    ("predatory journal", ["Q65770378"]),
+    ("academic journal", ["Q737498", "Q5633421"]),
+    ("university press", ["Q479716"]),
+    ("news agency", ["Q192283"]),
+    ("newspaper or news website", ["Q11032", "Q1110794", "Q1153191", "Q17232649"]),
+    ("magazine", ["Q41298"]),
+    ("broadcaster", ["Q15265344", "Q2001305", "Q14350"]),
+    ("book publisher", ["Q2085381"]),
+    ("news media", ["Q1193236", "Q11033", "Q1331793"]),
+    ("court or tribunal", ["Q41487"]),
+    ("intergovernmental organisation", ["Q245065", "Q484652"]),
+    ("legislature", ["Q11204"]),
+    ("government body", ["Q327333", "Q2659904", "Q192350", "Q7188"]),
+    ("political party", ["Q7278"]),
+    ("armed organisation", ["Q17149090"]),
+    ("religious organisation", ["Q1530022"]),
+    ("university or research institute", ["Q3918", "Q31855"]),
+    ("think tank", ["Q155271"]),
+    ("human rights organisation", ["Q1920810"]),
+    ("advocacy or activist group", ["Q431603", "Q1887898", "Q1666019"]),
+    ("trade union", ["Q178790"]),
+    ("charity or foundation", ["Q708676", "Q157031"]),
+    ("NGO or non-profit", ["Q79913", "Q163740"]),
+    ("encyclopedia or reference work", ["Q5292"]),
+    ("social media platform", ["Q3220391"]),
+    ("blog", ["Q30849"]),
+    ("individual person", ["Q5"]),
+    ("company", ["Q783794", "Q4830453"]),
+    ("website", ["Q35127"]),
+]
+ORG_KINDS = {"think tank", "human rights organisation", "advocacy or activist group",
+             "religious organisation", "trade union", "charity or foundation", "NGO or non-profit",
+             "political party", "armed organisation"}
+ACADEMIC_KINDS = {"predatory journal": "journal", "academic journal": "journal",
+                  "university press": "publisher", "book publisher": "publisher"}
 
 
 def _entities(ids: list[str], props: str) -> dict:
@@ -235,8 +335,8 @@ def facts(qids: list[str]) -> dict:
         e = ents.get(q, {})
         c = e.get("claims", {})
         f = {"label": e.get("labels", {}).get("en", {}).get("value", q), "websites": [],
-             "_vals": {}}
-        for pid in list(FACT_PROPS) + ["P856"]:
+             "_vals": {}, "_ref": set()}
+        for pid in list(FACT_PROPS) + list(ASSOC_PROPS) + ["P856"]:
             for st in c.get(pid, []):
                 if st.get("rank") == "deprecated" or "P582" in st.get("qualifiers", {}):
                     continue   # deprecated, or ended (an "end time" is recorded): past owners etc.
@@ -244,7 +344,10 @@ def facts(qids: list[str]) -> dict:
                 if pid == "P856" and isinstance(dv, str):
                     f["websites"].append(dv)
                 elif isinstance(dv, dict) and "id" in dv:
-                    f["_vals"].setdefault(FACT_PROPS[pid], set()).add(dv["id"])
+                    key = FACT_PROPS.get(pid) or ("assoc", pid)
+                    f["_vals"].setdefault(key, set()).add(dv["id"])
+                    if _sourced(st):
+                        f["_ref"].add((pid, dv["id"]))
                     value_ids.add(dv["id"])
         out[q] = f
     labels = {k: v.get("labels", {}).get("en", {}).get("value", k)
@@ -258,15 +361,49 @@ def facts(qids: list[str]) -> dict:
             classed.setdefault(r["item"]["value"].rsplit("/", 1)[1], set()).add(
                 STATE_CLASSES[r["c"]["value"].rsplit("/", 1)[1]])
         time.sleep(1)
+    kind_of = _kinds(qids)
     res = {}
     for q, f in out.items():
         v = f.pop("_vals")
+        refd = f.pop("_ref")
         res[q] = {"label": f["label"], "websites": sorted(f["websites"]),
                   **{k: sorted({labels.get(x, x) for x in v.get(k, ())})
                      for k in ("country", "owned_by", "political_alignment", "political_ideology")},
-                  "classed_as": sorted(classed.get(q, ()))}
+                  "classed_as": sorted(classed.get(q, ())),
+                  "kind": kind_of.get(q),
+                  "associations": {ASSOC_PROPS[pid]: sorted(({"label": labels.get(x, x), "wikidata": x,
+                                                              "sourced": (pid, x) in refd}
+                                                             for x in v[("assoc", pid)]),
+                                                            key=lambda d: (d["label"], d["wikidata"]))
+                                   for pid in ASSOC_PROPS if ("assoc", pid) in v}}
     log(f"  Wikidata facts for {len(res):,} items")
     return res
+
+
+# References that only say where a statement was copied from (a Wikipedia edition) are not sources.
+IMPORT_PROPS = {"P143", "P4656", "P813", "P3452"}   # imported from, Wikimedia import URL, retrieved, inferred from
+
+
+def _sourced(st: dict) -> bool:
+    """True when a Wikidata statement cites at least one reference beyond an import note."""
+    return any(set(r.get("snaks", {})) - IMPORT_PROPS for r in st.get("references", []))
+
+
+def _kinds(qids: list[str]) -> dict:
+    """Wikidata ID -> kind of source (SOURCE_KINDS), or absent when no class matches."""
+    order = {k: i for i, (k, _) in enumerate(SOURCE_KINDS)}
+    values = " ".join(f'(wd:{c} "{k}")' for k, cs in SOURCE_KINDS for c in cs)
+    out = {}
+    for i in range(0, len(qids), 100):
+        vals = " ".join(f"wd:{q}" for q in qids[i:i + 100])
+        for r in _sparql(f"SELECT ?item ?k WHERE {{ VALUES ?item {{ {vals} }} "
+                         f"VALUES (?c ?k) {{ {values} }} ?item wdt:P31/wdt:P279* ?c . }}"):
+            q, k = r["item"]["value"].rsplit("/", 1)[1], r["k"]["value"]
+            if q not in out or order[k] < order[out[q]]:
+                out[q] = k
+        time.sleep(1)
+    log(f"  kinds of source for {len(out):,} of {len(qids):,} items")
+    return out
 
 
 # ---------------------------------------------------------------- build
@@ -318,7 +455,7 @@ def build(records: list[dict], min_citations_for_wikidata: int = 2) -> dict:
         for n in (row["article"], row["id"]):
             if n:
                 by_name.setdefault(_norm(n), []).append(row)
-    L, Rb = lin(), robertson()
+    L, Rb, MB = lin(), robertson(), mbfc()
 
     # Wikidata items: from RSP articles, from names as Wikipedia titles, from domains (P856)
     names = sorted({as_cited.get(k, k[5:]) for k in keys if k.startswith("name:") and cited[k] >= min_citations_for_wikidata})
@@ -359,6 +496,7 @@ def build(records: list[dict], min_citations_for_wikidata: int = 2) -> dict:
                     break
         lk, lv = lookup(dom, L) if dom else (None, None)
         rk, rv = lookup(dom, Rb) if dom else (None, None)
+        mk, mv = lookup(dom, MB) if dom else (None, None)
         status = combined_status(rows)
         e = {
             "name": f["label"] if f else (as_cited.get(k, k[5:]) if k.startswith("name:") else k),
@@ -372,11 +510,39 @@ def build(records: list[dict], min_citations_for_wikidata: int = 2) -> dict:
                                  if rv else None),
             "allsides_2018": (ALLSIDES_LABEL.get(rv["allsides"]) if rv and rv["allsides"] is not None
                               else None),
+            "mbfc": ({"domain": mk, "bias": mv["bias"], "factual_reporting": mv["factual_reporting"]}
+                     if mv else None),
         }
         if f:
             e.update({x: f[x] for x in ("country", "owned_by", "political_alignment",
-                                        "political_ideology", "classed_as")})
+                                        "political_ideology", "classed_as", "kind", "associations")})
         out[k] = e
+
+    # academic level (JUFO) for publishers and journals, and for named sources without a kind
+    todo = [k for k, e in out.items()
+            if (e.get("kind") in ACADEMIC_KINDS or (k.startswith("name:") and not e.get("kind")))
+            and cited[k] >= min_citations_for_wikidata]
+    log(f"  JUFO lookups for {len(todo):,} publishers and journals")
+    import socket
+    try:
+        socket.getaddrinfo("jufo-rest.csc.fi", 443)
+        jufo_ok = True
+    except OSError:
+        log("  JUFO host cannot be resolved on this machine; academic levels left out this run")
+        jufo_ok = False
+    for i, k in enumerate(todo):
+        if not jufo_ok:
+            break
+        e = out[k]
+        try:
+            e["academic_level"] = (jufo(e["name"], ACADEMIC_KINDS.get(e.get("kind")))
+                                   or (jufo(as_cited[k], ACADEMIC_KINDS.get(e.get("kind")))
+                                       if as_cited.get(k) and as_cited[k] != e["name"] else None))
+        except Exception as ex:   # not reachable (e.g. DNS): leave the assessor out this run
+            log(f"  JUFO not reachable, skipped: {str(ex)[:120]}")
+            jufo_ok = False
+        if i % 200 == 199:
+            log(f"  JUFO: {i + 1:,} of {len(todo):,}")
     # Wikipedia's whole list next to the independent datasets (every entry with a web domain,
     # cited or not), so the list itself can be compared with outside assessments.
     listed = []
@@ -404,6 +570,9 @@ def build(records: list[dict], min_citations_for_wikidata: int = 2) -> dict:
             "audience_leaning": {"name": "Robertson et al. 2018 partisan audience score",
                                  "reference": ROB_REF, "data": ROB_URL},
             "allsides_2018": {"name": "AllSides (2018)", "reference": ALLSIDES_REF},
+            "mbfc": {"name": "Media Bias/Fact Check", "reference": MBFC_REF, "data": MBFC_URL},
+            "academic_level": {"name": "Publication Forum (JUFO), Finland", "reference": JUFO_REF,
+                               "data": JUFO_API},
             "wikidata": {"name": "Wikidata", "url": "https://www.wikidata.org/",
                          "retrieved": dt.date.today().isoformat()},
         },

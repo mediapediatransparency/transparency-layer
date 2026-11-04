@@ -106,7 +106,7 @@ def source_profile(cites: dict, outlets: dict) -> dict:
     page: counts as ranges, shares as ranges, medians to one decimal place."""
     from collections import Counter
     tot = sum(cites.values())
-    rating, q, a, align = Counter(), [], [], Counter()
+    rating, q, a, align, kinds = Counter(), [], [], Counter(), Counter()
     for k, n in cites.items():
         o = outlets.get(k) or {}
         wr = o.get("wikipedia_rating")
@@ -117,6 +117,7 @@ def source_profile(cites: dict, outlets: dict) -> dict:
             a += [o["audience_leaning"]["score"]] * n
         for x in o.get("political_alignment") or ["none recorded"]:
             align[x] += n
+        kinds[o.get("kind") or "not classified"] += n
 
     def med(v):
         v = sorted(v)
@@ -133,6 +134,7 @@ def source_profile(cites: dict, outlets: dict) -> dict:
         "audience_leaning_median": med(a),
         "audience_leaning_coverage": share_range(len(a) / tot),
         "alignment": {k: share_range(v / tot) for k, v in align.most_common() if v / tot >= MIN_SHARE},
+        "kinds": {k: share_range(v / tot) for k, v in kinds.most_common() if v / tot >= MIN_SHARE},
         "most_cited": {(outlets.get(k) or {}).get("name") or k: share_range(n / tot) for k, n in top},
     }
 

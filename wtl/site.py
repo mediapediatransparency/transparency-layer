@@ -730,6 +730,8 @@ SOURCE_NOTES = [
     "Wikidata records a political alignment or ideology for few outlets, and those entries are "
     "made by volunteers.",
     "All ratings are as of the date of the ratings snapshot, not as of when a citation was added.",
+    "Associations come from Wikidata, which anyone can edit; † marks a statement for which "
+    "Wikidata cites no source.",
 ]
 
 
@@ -768,6 +770,7 @@ def profile(pairs, ctx):
     from collections import Counter
     tot = sum(n for _, n in pairs)
     rating, align, cls, bins = Counter(), Counter(), Counter(), Counter()
+    kinds, fact, acad = Counter(), Counter(), Counter()
     q, a = [], []
     for k, n in pairs:
         o = ctx.outlets.get(k) or {}
@@ -786,8 +789,13 @@ def profile(pairs, ctx):
             align[None] += n
         for x in o.get("classed_as") or []:
             cls[x] += n
+        kinds[o.get("kind")] += n
+        if (o.get("mbfc") or {}).get("factual_reporting"):
+            fact[o["mbfc"]["factual_reporting"]] += n
+        if (o.get("academic_level") or {}).get("level") is not None:
+            acad[f"level {o['academic_level']['level']}"] += n
     return {"total": tot, "rating": rating, "quality": q, "audience": a, "bins": bins,
-            "alignment": align, "classed": cls}
+            "alignment": align, "classed": cls, "kinds": kinds, "factual": fact, "academic": acad}
 
 
 def _shares(counter, tot, order=None, names=None, none_label="none recorded"):
@@ -819,6 +827,17 @@ def profile_rows(pf):
                      _shares(pf["bins"], len(pf["audience"]), [b[2] for b in AUD_BINS])
                      + f"; median {median(pf['audience']):+.2f}, for the "
                      f"{p0(len(pf['audience']) / tot)} of citations that have a score"))
+    if pf.get("factual") and sum(pf["factual"].values()):
+        n = sum(pf["factual"].values())
+        rows.append(("Factual reporting (MBFC)", "Media Bias/Fact Check",
+                     _shares(pf["factual"], n) + f"; for the {p0(n / tot)} of citations that have a label"))
+    if pf.get("academic") and sum(pf["academic"].values()):
+        n = sum(pf["academic"].values())
+        rows.append(("Academic level (JUFO)", "Finnish Publication Forum; 0 to 3",
+                     _shares(pf["academic"], n, sorted(pf["academic"]))
+                     + f"; for the {p0(n / tot)} of citations to graded publishers and journals"))
+    if pf.get("kinds"):
+        rows.append(("Kind of source", "Wikidata classes", _shares(pf["kinds"], tot, none_label="not classified")))
     rows.append(("Political alignment recorded on Wikidata", "as entered on Wikidata",
                  _shares(pf["alignment"], tot)))
     if pf["classed"]:
@@ -827,34 +846,64 @@ def profile_rows(pf):
     return rows
 
 
+def assoc_text(o, limit=None, links=False):
+    """Associations recorded on Wikidata, as "founded by X; member of Y"."""
+    bits = []
+    for rel, vals in (o.get("associations") or {}).items():
+        names = [(f"<a href='https://www.wikidata.org/wiki/{escape(v['wikidata'])}'>{escape(v['label'])}</a>"
+                  if links else escape(v["label"])) + ("" if v.get("sourced", True) else "†")
+                 for v in vals]
+        bits.append(f"{escape(rel)} {', '.join(names)}")
+    if limit and len(bits) > limit:
+        bits = bits[:limit] + [f"and {len(bits) - limit} more"]
+    return "; ".join(bits)
+
+
 def _assessor_cells(key, ctx):
     o = ctx.outlets.get(key) or {}
     wr = o.get("wikipedia_rating")
     iq = o.get("independent_quality")
     al = o.get("audience_leaning")
     wd = []
+    if o.get("kind"):
+        wd.append(f"<b>{escape(o['kind'])}</b>")
     if o.get("country"):
-        wd.append(", ".join(o["country"]))
+        wd.append(escape(", ".join(o["country"])))
     if o.get("owned_by"):
-        wd.append("owner: " + ", ".join(o["owned_by"][:2]))
+        wd.append("owner: " + escape(", ".join(o["owned_by"][:2])))
     if o.get("political_alignment"):
-        wd.append("alignment: " + ", ".join(o["political_alignment"]))
+        wd.append("alignment: " + escape(", ".join(o["political_alignment"])))
     if o.get("classed_as"):
-        wd.append(", ".join(o["classed_as"]))
+        wd.append(escape(", ".join(o["classed_as"])))
+    if o.get("associations"):
+        wd.append(assoc_text(o, limit=3))
     rating = RATING_NAMES[wr["status"]] if wr else "–"
     ents = [e for e in (wr or {}).get("entries", []) if isinstance(e, list)]
     if len(ents) > 1:   # several list entries match this source: show each with its rating
         rating += " (" + "; ".join(f"{n}: {RATING_NAMES.get(st, st)}" for n, st in ents) + ")"
     quality = f"{iq['score']:.2f}" if iq else "–"
     audience = f"{al['score']:+.2f}" if al else "–"
+    labels = []
+    if o.get("allsides_2018"):
+        labels.append(f"AllSides: {o['allsides_2018']}")
+    mb = o.get("mbfc")
+    if mb:
+        labels.append("MBFC: " + ", ".join(x for x in (mb.get("bias"), (mb.get("factual_reporting") or "")
+                                                       and f"{mb['factual_reporting']} factual") if x))
+    ac = o.get("academic_level")
+    acad = (f"{ac['level']}" + (f"<div class='small'>Denmark {ac['denmark_level']}</div>"
+                                if ac.get("denmark_level") is not None else "")
+            if ac and ac.get("level") is not None else "–")
     return (f"<td class='small'>{escape(rating)}</td><td class='n'>{quality}</td>"
             f"<td class='n'>{audience}</td>"
-            f"<td class='small'>{escape(o.get('allsides_2018') or '–')}</td>"
-            f"<td class='small'>{escape(' · '.join(wd) or '–')}</td>")
+            f"<td class='small'>{escape(' · '.join(labels) or '–')}</td>"
+            f"<td class='n'>{acad}</td>"
+            f"<td class='small'>{' · '.join(wd) or '–'}</td>")
 
 
 ASSESSOR_HEAD = ("<th>Wikipedia's rating</th><th class='n'>Independent quality</th>"
-                 "<th class='n'>Audience leaning</th><th>AllSides (2018)</th><th>Wikidata</th>")
+                 "<th class='n'>Audience leaning</th><th>Bias labels</th>"
+                 "<th class='n'>Academic level</th><th>Kind and Wikidata facts</th>")
 
 
 MEANS_NOTE = (
@@ -947,7 +996,7 @@ def sources_section(rec, ctx):
                  + f"<td class='small'>{by}{f' and {more} more' if more > 0 else ''}</td></tr>")
     allc = {x["source"]: x["citations"] for x in s["list"]}
     if ctx.outlets:
-        h.append(summary_rows(allc, ctx, 3, 3))
+        h.append(summary_rows(allc, ctx, 3, 4))
     h.append("</table></div>")
     h.append(_non_source_line(allc, s["citations"]))
     if len(listed) > 25:
@@ -1025,6 +1074,31 @@ def sources_page(ctx):
              "2017. It describes who shared a site, not what the site publishes. 19,022 websites.</li>")
     h.append("<li><b>AllSides (2018).</b> " + escape(asr.get("allsides_2018", {}).get("reference", ""))
              + " Left, lean left, centre, lean right or right, for a few hundred outlets.</li>")
+    L0 = {x["entry"]: x["status"] for x in snap.get("wikipedia_list_compared", [])}
+
+    def rsp_note(*entries):
+        got = [(e, L0[e]) for e in entries if e in L0]
+        return (" Wikipedia's own list rates " + "; ".join(
+            f"{escape(e)} as {escape(RATING_NAMES.get(st, st))}" for e, st in got) + ".") if got else ""
+    h.append("<li><b>Media Bias/Fact Check (MBFC).</b> " + escape(asr.get("mbfc", {}).get("reference", ""))
+             + " A political bias label (left to right, or least biased) and a factual-reporting "
+             "label for about 4,400 news outlets, many outside the United States. MBFC is also "
+             "one of the six rating sets in the independent quality score." + rsp_note("Media Bias/Fact Check")
+             + "</li>")
+    h.append("<li><b>Academic level.</b> " + escape(asr.get("academic_level", {}).get("reference", ""))
+             + " Level 1 means the panels judge a publisher or journal to meet the basic criteria "
+             "of academic publishing; 2 and 3 are the higher levels; 0 means it was assessed and "
+             "does not meet them. The Danish register's level is shown where the record gives it. "
+             "Only publishers and journals the register lists can have a level."
+             + ("" if any(o.get("academic_level") for o in ctx.outlets.values())
+                else " <i>Not yet retrieved in this snapshot.</i>") + "</li>")
+    h.append("<li><b>Kind of source and recorded associations.</b> From Wikidata: what kind of "
+             "body a source is (newspaper, academic publisher, think tank, advocacy group, "
+             "court and so on, from the classes Wikidata assigns), and links recorded there: "
+             "founded by, parent organisation, member of, affiliation, funded by, sponsor, chair, "
+             "publisher, indexed in, and designation as a terrorist organisation by a government "
+             "or international body. Each is a statement on Wikidata, linked so it can be checked. "
+             "A link records a connection; it is not a rating.</li>")
     h.append("<li><b>Wikidata.</b> Facts entered by volunteers on Wikidata, Wikipedia's sister "
              "database: country, current owner, political alignment and ideology where recorded, "
              "and whether it is classed as state media, a public broadcaster or a state-owned "
@@ -1096,7 +1170,7 @@ def sources_page(ctx):
         for k, n in ranked[:top]:
             out.append(f"<tr><td>{source_label(k, ctx)}</td><td class='n'>{n:,}</td>"
                        f"<td class='n'>{arts[k]}</td>{_assessor_cells(k, ctx)}</tr>")
-        out.append(summary_rows(cites, ctx, 3, 2))
+        out.append(summary_rows(cites, ctx, 3, 3))
         out.append("</table></div>")
         out.append(_non_source_line(cites, tot))
         return "".join(out), tot, len(ranked)
@@ -1113,6 +1187,43 @@ def sources_page(ctx):
             h.append(f"<details><summary><b>{escape(area_name(a))}</b>: {len(recs):,} "
                      f"article{'s' if len(recs) != 1 else ''}, "
                      f"{tot:,} citations, {nsrc:,} sources</summary>{tbl}</details>")
+        # organisations: kind and recorded associations
+        from .outlets import ORG_KINDS
+        oc, oarts, oareas = Counter(), Counter(), {}
+        for r in ctx.recs:
+            for x in (r.get("sources") or {}).get("list", []):
+                o = ctx.outlets.get(x["source"]) or {}
+                designated = "designated as terrorist by" in (o.get("associations") or {})
+                if o.get("kind") in ORG_KINDS or designated:
+                    oc[x["source"]] += x["citations"]
+                    oarts[x["source"]] += 1
+                    oareas.setdefault(x["source"], set()).add(ctx.areas.get(r["article"], ""))
+        if oc:
+            h.append("<h2>Organisations cited, and their recorded associations</h2>"
+                     "<p>Think tanks, advocacy and activist groups, human rights organisations, "
+                     "charities and foundations, NGOs, religious organisations, trade unions, "
+                     "political parties and armed organisations cited in the analysed articles, "
+                     "and any organisation a government or international body has designated as "
+                     "terrorist. Each association is a statement on Wikidata, linked so it can be "
+                     "checked; organisations with none recorded show a dash. † marks a statement "
+                     "for which Wikidata cites no source (anyone can edit Wikidata). A recorded "
+                     "connection is not a rating, and an organisation without one may simply not "
+                     "have it entered on Wikidata.</p>"
+                     f"<details><summary>Show {len(oc):,} organisations</summary>"
+                     "<div class='scroll'><table><tr><th>Organisation</th><th>Kind</th>"
+                     "<th class='n'>Citations</th><th class='n'>Articles</th><th>Areas</th>"
+                     "<th>Recorded associations (Wikidata)</th><th>Wikipedia's rating</th></tr>")
+            for k, n in sorted(oc.items(), key=lambda x: (-x[1], x[0]))[:300]:
+                o = ctx.outlets.get(k) or {}
+                wr = o.get("wikipedia_rating")
+                wdl = (f" <a class='small' href='https://www.wikidata.org/wiki/{escape(o['wikidata'])}'>"
+                       "Wikidata</a>" if o.get("wikidata") else "")
+                h.append(f"<tr><td>{source_label(k, ctx)}{wdl}</td><td class='small'>{escape(o.get('kind') or '–')}</td>"
+                         f"<td class='n'>{n:,}</td><td class='n'>{oarts[k]}</td>"
+                         f"<td class='small'>{escape('; '.join(sorted(area_name(a) for a in oareas[k])))}</td>"
+                         f"<td class='small'>{assoc_text(o, links=True) or '–'}</td>"
+                         f"<td class='small'>{escape(RATING_NAMES[wr['status']] if wr else '–')}</td></tr>")
+            h.append("</table></div></details>")
         tbl, tot, nsrc = cited_table(ctx.recs, 100)
         h.append(f"<h3>All areas together</h3><details><summary>{len(ctx.recs):,} articles, "
                  f"{tot:,} citations, {nsrc:,} sources (top 100)</summary>{tbl}</details>")
@@ -1170,6 +1281,9 @@ def editors_page(ctx: Context):
         if x["audience_leaning_median"] is not None:
             bits.append(f"Audience leaning: median {x['audience_leaning_median']:+.1f} "
                         f"({escape(x['audience_leaning_coverage'])} scored).")
+        kd = {k: v for k, v in (x.get("kinds") or {}).items() if k != "not classified"}
+        if kd:
+            bits.append("Kinds of source: " + "; ".join(f"{escape(k)} {escape(v)}" for k, v in kd.items()) + ".")
         al = {k: v for k, v in x["alignment"].items() if k != "none recorded"}
         if al:
             bits.append("Wikidata alignment: " + "; ".join(f"{escape(k)} {escape(v)}" for k, v in al.items()) + ".")
