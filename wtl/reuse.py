@@ -33,7 +33,14 @@ FLAGS = {"opinion", "not_english"}
 
 
 def wanted(records: list[dict], outlets: dict) -> list[str]:
-    ids = set()
+    """Works to look up, highest priority first: books with ISBNs issued outside the
+    English-language groups, then works flagged opinion or not in English, then works from
+    unrated sources, most-cited source first."""
+    from collections import Counter
+    ids, prio, src_cites = set(), {}, Counter()
+    for r in records:
+        for x in (r.get("sources") or {}).get("list", []):
+            src_cites[x["source"]] += x["citations"]
     for r in records:
         for it in (r.get("sources") or {}).get("items", []):
             kind = it["id"].split(":", 1)[0]
@@ -48,7 +55,9 @@ def wanted(records: list[dict], outlets: dict) -> list[str]:
                 foreign = bool(sp and sp["agency"] not in ("English language", "United States"))
             if unrated or flagged or foreign:
                 ids.add(it["id"])
-    return sorted(ids)
+                p = (0 if foreign else 1 if flagged else 2, -src_cites[it["source"]])
+                prio[it["id"]] = min(prio.get(it["id"], p), p)
+    return sorted(ids, key=lambda i: (prio[i], i))
 
 
 def _isbn10(isbn13: str) -> str | None:
@@ -101,9 +110,15 @@ def lookup(iid: str) -> dict:
     return out
 
 
-def build(records: list[dict], outlets: dict) -> dict:
+def build(records: list[dict], outlets: dict, limit: int = 3000) -> dict:
+    """Look up at most `limit` works not yet cached (highest priority first), then write every
+    work looked up so far. Run again to continue."""
     ids = wanted(records, outlets)
-    print(f"  {len(ids):,} works to look up across English Wikipedia", flush=True)
+    cached = [i for i in ids if cache.load(cache.path("reuse", hashlib.sha1(i.encode()).hexdigest())) is not None]
+    todo = [i for i in ids if i not in set(cached)][:limit]
+    print(f"  {len(ids):,} works wanted; {len(cached):,} already looked up; {len(todo):,} this run",
+          flush=True)
+    ids = cached + todo
     works = {}
     for i, iid in enumerate(ids, 1):
         try:
