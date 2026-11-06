@@ -1,0 +1,4927 @@
+{
+ "built": "2026-11-06",
+ "per_kind": 25,
+ "rules": {
+  "classes": [
+   {
+    "kind": "person",
+    "wikidata_classes": [
+     "Q5"
+    ]
+   },
+   {
+    "kind": "media",
+    "wikidata_classes": [
+     "Q11033",
+     "Q1193236",
+     "Q1002697",
+     "Q11032",
+     "Q41298",
+     "Q192283",
+     "Q15265344",
+     "Q2001305",
+     "Q1153191"
+    ]
+   },
+   {
+    "kind": "event",
+    "wikidata_classes": [
+     "Q350604",
+     "Q198",
+     "Q178561",
+     "Q645883",
+     "Q2223653",
+     "Q3199915",
+     "Q40231",
+     "Q273120",
+     "Q124734",
+     "Q2334719"
+    ]
+   },
+   {
+    "kind": "place",
+    "wikidata_classes": [
+     "Q6256",
+     "Q3624078",
+     "Q7275",
+     "Q486972",
+     "Q2221906",
+     "Q17334923"
+    ]
+   },
+   {
+    "kind": "organisation",
+    "wikidata_classes": [
+     "Q43229"
+    ]
+   },
+   {
+    "kind": "idea",
+    "wikidata_classes": [
+     "Q7257",
+     "Q12909644",
+     "Q49773",
+     "Q2738074",
+     "Q9174",
+     "Q2198855",
+     "Q2915955",
+     "Q1387659"
+    ]
+   }
+  ],
+  "journalist_occupations": [
+   "Q1930187",
+   "Q1086863",
+   "Q11499163",
+   "Q270389",
+   "Q1642960"
+  ],
+  "journalist_words": "\\b(?:journalist|columnist|commentator|pundit|reporter|correspondent|news ?(?:presenter|anchor|reader)|newscaster|broadcast journalist)s?\\b",
+  "organisation_signs": [
+   "P159",
+   "P488",
+   "P2124"
+  ],
+  "entertainment_words": "\\b(?:actor|actress|singer|songwriter|musician|rapper|comedian|band|composer|guitarist|drummer|film ?maker|film director|screenwriter|television (?:host|presenter|personality)|model|footballer|athlete|boxer|wrestler|basketball|tennis|cricketer|youtuber|streamer|influencer|dancer|poet|novelist|painter)s?\\b"
+ },
+ "areas": {
+  "A-I": {
+   "name": "Arab–Israeli conflict",
+   "rule": "contentious tag",
+   "kinds": {
+    "journalist": 109,
+    "person": 1277,
+    "media": 52,
+    "organisation": 915,
+    "idea": 80,
+    "event": 799,
+    "place": 1772,
+    "other": 2383
+   },
+   "pool_complete": true
+  },
+  "AP": {
+   "name": "US politics (includes DEI)",
+   "rule": "contentious tag",
+   "kinds": {
+    "journalist": 46,
+    "person": 597,
+    "media": 44,
+    "organisation": 226,
+    "idea": 50,
+    "event": 172,
+    "place": 35,
+    "other": 495
+   },
+   "pool_complete": true
+  },
+  "GS": {
+   "name": "Gender and sexuality (includes transgender topics)",
+   "rule": "contentious tag",
+   "kinds": {
+    "journalist": 15,
+    "person": 194,
+    "media": 3,
+    "organisation": 65,
+    "idea": 31,
+    "event": 18,
+    "place": 1,
+    "other": 344
+   },
+   "pool_complete": true
+  },
+  "EE": {
+   "name": "Eastern Europe and the Balkans (includes Russia and Ukraine)",
+   "rule": "contentious tag",
+   "kinds": {
+    "journalist": 10,
+    "person": 196,
+    "media": 15,
+    "organisation": 154,
+    "idea": 34,
+    "event": 251,
+    "place": 170,
+    "other": 434
+   },
+   "pool_complete": true
+  },
+  "AB": {
+   "name": "Abortion",
+   "rule": "contentious tag",
+   "kinds": {
+    "journalist": 0,
+    "person": 25,
+    "media": 1,
+    "organisation": 34,
+    "idea": 3,
+    "event": 3,
+    "place": 0,
+    "other": 68
+   },
+   "pool_complete": true
+  },
+  "RI": {
+   "name": "Race and intelligence",
+   "rule": "contentious tag",
+   "kinds": {
+    "journalist": 0,
+    "person": 10,
+    "media": 0,
+    "organisation": 16,
+    "idea": 2,
+    "event": 0,
+    "place": 0,
+    "other": 15
+   },
+   "pool_complete": true
+  },
+  "IR": {
+   "name": "Iranian politics",
+   "rule": "contentious tag",
+   "kinds": {
+    "journalist": 0,
+    "person": 36,
+    "media": 3,
+    "organisation": 24,
+    "idea": 4,
+    "event": 64,
+    "place": 7,
+    "other": 80
+   },
+   "pool_complete": true
+  },
+  "KU": {
+   "name": "Kurds and Kurdistan",
+   "rule": "contentious tag",
+   "kinds": {
+    "journalist": 0,
+    "person": 35,
+    "media": 1,
+    "organisation": 24,
+    "idea": 3,
+    "event": 54,
+    "place": 75,
+    "other": 62
+   },
+   "pool_complete": true
+  },
+  "SA": {
+   "name": "South Asia",
+   "rule": "contentious tag",
+   "kinds": {
+    "journalist": 7,
+    "person": 368,
+    "media": 23,
+    "organisation": 409,
+    "idea": 40,
+    "event": 269,
+    "place": 201,
+    "other": 2101
+   },
+   "pool_complete": true
+  },
+  "AA": {
+   "name": "Armenia and Azerbaijan",
+   "rule": "contentious tag",
+   "kinds": {
+    "journalist": 1,
+    "person": 23,
+    "media": 0,
+    "organisation": 18,
+    "idea": 6,
+    "event": 44,
+    "place": 95,
+    "other": 72
+   },
+   "pool_complete": true
+  },
+  "CN": {
+   "name": "China: Uyghurs and Xinjiang",
+   "rule": "contentious tag",
+   "kinds": {
+    "journalist": 1,
+    "person": 34,
+    "media": 8,
+    "organisation": 41,
+    "idea": 5,
+    "event": 4,
+    "place": 15,
+    "other": 100
+   },
+   "pool_complete": true
+  },
+  "SY": {
+   "name": "Syrian civil war and ISIL",
+   "rule": "contentious tag",
+   "kinds": {
+    "journalist": 4,
+    "person": 37,
+    "media": 3,
+    "organisation": 51,
+    "idea": 7,
+    "event": 251,
+    "place": 28,
+    "other": 134
+   },
+   "pool_complete": true
+  },
+  "HA": {
+   "name": "Horn of Africa",
+   "rule": "contentious tag",
+   "kinds": {
+    "journalist": 0,
+    "person": 22,
+    "media": 0,
+    "organisation": 11,
+    "idea": 0,
+    "event": 54,
+    "place": 40,
+    "other": 72
+   },
+   "pool_complete": true
+  },
+  "TT": {
+   "name": "The Troubles (Northern Ireland)",
+   "rule": "contentious tag",
+   "kinds": {
+    "journalist": 1,
+    "person": 4,
+    "media": 0,
+    "organisation": 2,
+    "idea": 2,
+    "event": 0,
+    "place": 5,
+    "other": 16
+   },
+   "pool_complete": true
+  },
+  "APL": {
+   "name": "Antisemitism in Poland (Wikipedia's topic; also covers Holocaust and Second World War articles)",
+   "rule": "contentious tag",
+   "kinds": {
+    "journalist": 0,
+    "person": 9,
+    "media": 0,
+    "organisation": 6,
+    "idea": 0,
+    "event": 7,
+    "place": 2,
+    "other": 14
+   },
+   "pool_complete": true
+  },
+  "CNX": {
+   "name": "China, Taiwan, Hong Kong and Tibet (chosen by subject)",
+   "rule": "subject",
+   "kinds": {
+    "journalist": 29,
+    "person": 4557,
+    "media": 87,
+    "organisation": 2135,
+    "idea": 176,
+    "event": 486,
+    "place": 1831,
+    "other": 8699
+   },
+   "pool_complete": false
+  },
+  "SOC": {
+   "name": "Socialism, communism and Marxism (chosen by subject)",
+   "rule": "subject",
+   "kinds": {
+    "journalist": 107,
+    "person": 2589,
+    "media": 38,
+    "organisation": 1641,
+    "idea": 310,
+    "event": 155,
+    "place": 146,
+    "other": 1014
+   },
+   "pool_complete": false
+  },
+  "ISL": {
+   "name": "Islam (chosen by subject)",
+   "rule": "subject",
+   "kinds": {
+    "journalist": 36,
+    "person": 3470,
+    "media": 33,
+    "organisation": 2141,
+    "idea": 191,
+    "event": 640,
+    "place": 405,
+    "other": 3584
+   },
+   "pool_complete": false
+  },
+  "CON": {
+   "name": "Conservatism and the right (chosen by subject)",
+   "rule": "subject",
+   "kinds": {
+    "journalist": 151,
+    "person": 1424,
+    "media": 64,
+    "organisation": 641,
+    "idea": 190,
+    "event": 41,
+    "place": 9,
+    "other": 480
+   },
+   "pool_complete": false
+  },
+  "DIS": {
+   "name": "Discrimination, including antisemitism and the far right (chosen by subject)",
+   "rule": "subject",
+   "kinds": {
+    "journalist": 19,
+    "person": 728,
+    "media": 55,
+    "organisation": 687,
+    "idea": 218,
+    "event": 350,
+    "place": 46,
+    "other": 3062
+   },
+   "pool_complete": false
+  },
+  "LIB": {
+   "name": "Libertarianism, which on Wikipedia also covers liberalism (chosen by subject)",
+   "rule": "subject",
+   "kinds": {
+    "journalist": 69,
+    "person": 811,
+    "media": 50,
+    "organisation": 448,
+    "idea": 143,
+    "event": 30,
+    "place": 6,
+    "other": 544
+   },
+   "pool_complete": false
+  },
+  "REQ": {
+   "name": "Added on request, outside the areas",
+   "rule": "requested",
+   "kinds": {
+    "journalist": 0,
+    "person": 0,
+    "media": 0,
+    "organisation": 0,
+    "idea": 0,
+    "event": 0,
+    "place": 0,
+    "other": 0
+   },
+   "pool_complete": true
+  }
+ },
+ "movements": {
+  "count": 842,
+  "chosen": 201,
+  "examples": [
+   {
+    "area": "A-I",
+    "title": "Zionism",
+    "kind": "idea",
+    "views_60d": 488700,
+    "wikidata": "Q42388",
+    "description": "movement to create and develop a Jewish state in the Levant",
+    "chosen": true
+   },
+   {
+    "area": "CON",
+    "title": "Zionism",
+    "kind": "idea",
+    "views_60d": 488700,
+    "wikidata": "Q42388",
+    "description": "movement to create and develop a Jewish state in the Levant",
+    "chosen": true
+   },
+   {
+    "area": "DIS",
+    "title": "Fascism",
+    "kind": "idea",
+    "views_60d": 248375,
+    "wikidata": "Q6223",
+    "description": "far-right authoritarian ideology and movement",
+    "chosen": true
+   },
+   {
+    "area": "SA",
+    "title": "Cockroach Janta Party",
+    "kind": "idea",
+    "views_60d": 240013,
+    "wikidata": "Q139857349",
+    "description": "Indian satirical political movement",
+    "chosen": true
+   },
+   {
+    "area": "ISL",
+    "title": "Islam",
+    "kind": "idea",
+    "views_60d": 236122,
+    "wikidata": "Q432",
+    "description": "monotheistic Abrahamic religion founded by Muhammad",
+    "chosen": true
+   },
+   {
+    "area": "SOC",
+    "title": "Socialism",
+    "kind": "idea",
+    "views_60d": 199806,
+    "wikidata": "Q7272",
+    "description": "socio-economic system based on social ownership of the means of production; also the ideology that aims to implement it",
+    "chosen": true
+   },
+   {
+    "area": "LIB",
+    "title": "Socialism",
+    "kind": "idea",
+    "views_60d": 199806,
+    "wikidata": "Q7272",
+    "description": "socio-economic system based on social ownership of the means of production; also the ideology that aims to implement it",
+    "chosen": true
+   },
+   {
+    "area": "AP",
+    "title": "Pizzagate conspiracy theory",
+    "kind": "idea",
+    "views_60d": 140198,
+    "wikidata": "Q27970888",
+    "description": "US-american right-wing conspiracy theory",
+    "chosen": true
+   },
+   {
+    "area": "LIB",
+    "title": "Age of Enlightenment",
+    "kind": "idea",
+    "views_60d": 135284,
+    "wikidata": "Q12539",
+    "description": "period of European history and cultural movement of the 17th and 18th centuries",
+    "chosen": true
+   },
+   {
+    "area": "SA",
+    "title": "Jainism",
+    "kind": "idea",
+    "views_60d": 134355,
+    "wikidata": "Q9232",
+    "description": "Indian religion",
+    "chosen": true
+   },
+   {
+    "area": "LIB",
+    "title": "American Revolution",
+    "kind": "idea",
+    "views_60d": 129599,
+    "wikidata": "Q192769",
+    "description": "revolution establishing the United States of America",
+    "chosen": true
+   },
+   {
+    "area": "CNX",
+    "title": "Taoism",
+    "kind": "idea",
+    "views_60d": 129203,
+    "wikidata": "Q9598",
+    "description": "religious or philosophical tradition of Chinese origin",
+    "chosen": true
+   },
+   {
+    "area": "CNX",
+    "title": "Cultural Revolution",
+    "kind": "idea",
+    "views_60d": 128110,
+    "wikidata": "Q8690",
+    "description": "1966–1976 Maoist sociopolitical movement in China",
+    "chosen": true
+   },
+   {
+    "area": "SOC",
+    "title": "Cultural Revolution",
+    "kind": "idea",
+    "views_60d": 128110,
+    "wikidata": "Q8690",
+    "description": "1966–1976 Maoist sociopolitical movement in China",
+    "chosen": true
+   },
+   {
+    "area": "AP",
+    "title": "QAnon",
+    "kind": "idea",
+    "views_60d": 120216,
+    "wikidata": "Q51213808",
+    "description": "American far-right conspiracy theory and movement",
+    "chosen": true
+   },
+   {
+    "area": "CON",
+    "title": "QAnon",
+    "kind": "idea",
+    "views_60d": 120216,
+    "wikidata": "Q51213808",
+    "description": "American far-right conspiracy theory and movement",
+    "chosen": true
+   },
+   {
+    "area": "DIS",
+    "title": "QAnon",
+    "kind": "idea",
+    "views_60d": 120216,
+    "wikidata": "Q51213808",
+    "description": "American far-right conspiracy theory and movement",
+    "chosen": true
+   },
+   {
+    "area": "EE",
+    "title": "Bolsheviks",
+    "kind": "idea",
+    "views_60d": 110625,
+    "wikidata": "Q83372",
+    "description": "faction of the Marxist Russian Social Democratic Labour Party; a major faction in the Russian Civil War",
+    "chosen": true
+   },
+   {
+    "area": "SOC",
+    "title": "Bolsheviks",
+    "kind": "idea",
+    "views_60d": 110625,
+    "wikidata": "Q83372",
+    "description": "faction of the Marxist Russian Social Democratic Labour Party; a major faction in the Russian Civil War",
+    "chosen": true
+   },
+   {
+    "area": "CNX",
+    "title": "Tartarian Empire",
+    "kind": "idea",
+    "views_60d": 106217,
+    "wikidata": "Q118903059",
+    "description": "alleged lost empire",
+    "chosen": true
+   },
+   {
+    "area": "ISL",
+    "title": "Sufism",
+    "kind": "idea",
+    "views_60d": 102504,
+    "wikidata": "Q9603",
+    "description": "body of mystical practice within Islam",
+    "chosen": true
+   },
+   {
+    "area": "ISL",
+    "title": "Paganism",
+    "kind": "idea",
+    "views_60d": 94643,
+    "wikidata": "Q29536",
+    "description": "polytheistic religious groups",
+    "chosen": true
+   },
+   {
+    "area": "GS",
+    "title": "Manosphere",
+    "kind": "idea",
+    "views_60d": 93746,
+    "wikidata": "Q17068342",
+    "description": "umbrella term for masculist, male autonomy and misogynistic online platforms such as MGTOW, PUA, passport bro's, NoFap etc.",
+    "chosen": true
+   },
+   {
+    "area": "CON",
+    "title": "Manosphere",
+    "kind": "idea",
+    "views_60d": 93746,
+    "wikidata": "Q17068342",
+    "description": "umbrella term for masculist, male autonomy and misogynistic online platforms such as MGTOW, PUA, passport bro's, NoFap etc.",
+    "chosen": true
+   },
+   {
+    "area": "DIS",
+    "title": "Manosphere",
+    "kind": "idea",
+    "views_60d": 93746,
+    "wikidata": "Q17068342",
+    "description": "umbrella term for masculist, male autonomy and misogynistic online platforms such as MGTOW, PUA, passport bro's, NoFap etc.",
+    "chosen": true
+   },
+   {
+    "area": "SOC",
+    "title": "Anarchism",
+    "kind": "idea",
+    "views_60d": 92988,
+    "wikidata": "Q6199",
+    "description": "a philosophy, movement, and political ideology that holds that any government, like the state, is undesirable, unnecessary, and harmful",
+    "chosen": true
+   },
+   {
+    "area": "LIB",
+    "title": "Anarchism",
+    "kind": "idea",
+    "views_60d": 92988,
+    "wikidata": "Q6199",
+    "description": "a philosophy, movement, and political ideology that holds that any government, like the state, is undesirable, unnecessary, and harmful",
+    "chosen": true
+   },
+   {
+    "area": "SOC",
+    "title": "Capitalism",
+    "kind": "idea",
+    "views_60d": 89332,
+    "wikidata": "Q6206",
+    "description": "economic system in which individuals or firms can acquire and own the means of production, employ labor, and pursue profit through voluntary market exchange.",
+    "chosen": true
+   },
+   {
+    "area": "CON",
+    "title": "Capitalism",
+    "kind": "idea",
+    "views_60d": 89332,
+    "wikidata": "Q6206",
+    "description": "economic system in which individuals or firms can acquire and own the means of production, employ labor, and pursue profit through voluntary market exchange.",
+    "chosen": true
+   },
+   {
+    "area": "LIB",
+    "title": "Capitalism",
+    "kind": "idea",
+    "views_60d": 89332,
+    "wikidata": "Q6206",
+    "description": "economic system in which individuals or firms can acquire and own the means of production, employ labor, and pursue profit through voluntary market exchange.",
+    "chosen": true
+   },
+   {
+    "area": "AP",
+    "title": "Groypers",
+    "kind": "idea",
+    "views_60d": 83959,
+    "wikidata": "Q95018861",
+    "description": "loose group of far-right activists and internet trolls",
+    "chosen": true
+   },
+   {
+    "area": "CON",
+    "title": "Groypers",
+    "kind": "idea",
+    "views_60d": 83959,
+    "wikidata": "Q95018861",
+    "description": "loose group of far-right activists and internet trolls",
+    "chosen": true
+   },
+   {
+    "area": "DIS",
+    "title": "Groypers",
+    "kind": "idea",
+    "views_60d": 83959,
+    "wikidata": "Q95018861",
+    "description": "loose group of far-right activists and internet trolls",
+    "chosen": true
+   },
+   {
+    "area": "AP",
+    "title": "Trumpism",
+    "kind": "idea",
+    "views_60d": 83407,
+    "wikidata": "Q31838499",
+    "description": "US right-wing populist political movement",
+    "chosen": true
+   },
+   {
+    "area": "CON",
+    "title": "Trumpism",
+    "kind": "idea",
+    "views_60d": 83407,
+    "wikidata": "Q31838499",
+    "description": "US right-wing populist political movement",
+    "chosen": true
+   },
+   {
+    "area": "DIS",
+    "title": "Trumpism",
+    "kind": "idea",
+    "views_60d": 83407,
+    "wikidata": "Q31838499",
+    "description": "US right-wing populist political movement",
+    "chosen": true
+   },
+   {
+    "area": "DIS",
+    "title": "Trail of Tears",
+    "kind": "idea",
+    "views_60d": 79024,
+    "wikidata": "Q750448",
+    "description": "forced displacement of Five Civilized Tribes",
+    "chosen": true
+   },
+   {
+    "area": "GS",
+    "title": "Feminism",
+    "kind": "idea",
+    "views_60d": 76767,
+    "wikidata": "Q7252",
+    "description": "group of movements that come about defining, and defending women liberation and gender equity",
+    "chosen": true
+   },
+   {
+    "area": "DIS",
+    "title": "Feminism",
+    "kind": "idea",
+    "views_60d": 76767,
+    "wikidata": "Q7252",
+    "description": "group of movements that come about defining, and defending women liberation and gender equity",
+    "chosen": true
+   },
+   {
+    "area": "CNX",
+    "title": "Confucianism",
+    "kind": "idea",
+    "views_60d": 76307,
+    "wikidata": "Q9581",
+    "description": "Chinese ethical and philosophical system",
+    "chosen": true
+   }
+  ]
+ },
+ "journalists": {
+  "by_occupation": 1580,
+  "by_occupation_and_description": 605,
+  "occupation_only_examples": [
+   {
+    "area": "CNX",
+    "title": "Katie Zacharia",
+    "kind": "person",
+    "views_60d": 4021586,
+    "wikidata": "Q141681561",
+    "description": "American political spokesperson (born 1984)",
+    "chosen": true
+   },
+   {
+    "area": "AP",
+    "title": "Charlie Kirk",
+    "kind": "person",
+    "views_60d": 1299618,
+    "wikidata": "Q30121972",
+    "description": "American political activist (1993–2025)",
+    "chosen": true
+   },
+   {
+    "area": "CON",
+    "title": "Charlie Kirk",
+    "kind": "person",
+    "views_60d": 1299618,
+    "wikidata": "Q30121972",
+    "description": "American political activist (1993–2025)",
+    "chosen": true
+   },
+   {
+    "area": "AP",
+    "title": "Vivek Ramaswamy",
+    "kind": "person",
+    "views_60d": 919913,
+    "wikidata": "Q27881473",
+    "description": "American businessman (born 1985)",
+    "chosen": true
+   },
+   {
+    "area": "AP",
+    "title": "Pete Hegseth",
+    "kind": "person",
+    "views_60d": 717811,
+    "wikidata": "Q7172014",
+    "description": "United States Secretary of Defense",
+    "chosen": true
+   },
+   {
+    "area": "CON",
+    "title": "Pete Hegseth",
+    "kind": "person",
+    "views_60d": 717811,
+    "wikidata": "Q7172014",
+    "description": "United States Secretary of Defense",
+    "chosen": true
+   },
+   {
+    "area": "DIS",
+    "title": "Pete Hegseth",
+    "kind": "person",
+    "views_60d": 717811,
+    "wikidata": "Q7172014",
+    "description": "United States Secretary of Defense",
+    "chosen": true
+   },
+   {
+    "area": "AP",
+    "title": "JD Vance",
+    "kind": "person",
+    "views_60d": 662293,
+    "wikidata": "Q28935729",
+    "description": "Vice President of the United States since 2025",
+    "chosen": true
+   },
+   {
+    "area": "CON",
+    "title": "JD Vance",
+    "kind": "person",
+    "views_60d": 662293,
+    "wikidata": "Q28935729",
+    "description": "Vice President of the United States since 2025",
+    "chosen": true
+   },
+   {
+    "area": "SA",
+    "title": "Mahatma Gandhi",
+    "kind": "person",
+    "views_60d": 523066,
+    "wikidata": "Q1001",
+    "description": "Indian independence activist (1869–1948)",
+    "chosen": true
+   },
+   {
+    "area": "SOC",
+    "title": "Mahatma Gandhi",
+    "kind": "person",
+    "views_60d": 523066,
+    "wikidata": "Q1001",
+    "description": "Indian independence activist (1869–1948)",
+    "chosen": true
+   },
+   {
+    "area": "SOC",
+    "title": "Benito Mussolini",
+    "kind": "person",
+    "views_60d": 409716,
+    "wikidata": "Q23559",
+    "description": "Prime minister of Italy from 1922 to 1943",
+    "chosen": true
+   },
+   {
+    "area": "DIS",
+    "title": "Benito Mussolini",
+    "kind": "person",
+    "views_60d": 409716,
+    "wikidata": "Q23559",
+    "description": "Prime minister of Italy from 1922 to 1943",
+    "chosen": true
+   },
+   {
+    "area": "AP",
+    "title": "Ainsley Earhardt",
+    "kind": "person",
+    "views_60d": 378305,
+    "wikidata": "Q4697481",
+    "description": "American television host and author (born 1975/1976)",
+    "chosen": false
+   },
+   {
+    "area": "SOC",
+    "title": "Karl Marx",
+    "kind": "person",
+    "views_60d": 357026,
+    "wikidata": "Q9061",
+    "description": "German-born philosopher (1818–1883)",
+    "chosen": true
+   },
+   {
+    "area": "CON",
+    "title": "Steve Hilton",
+    "kind": "person",
+    "views_60d": 304388,
+    "wikidata": "Q3498953",
+    "description": "British-American political advisor and television host (born 1969)",
+    "chosen": false
+   },
+   {
+    "area": "SOC",
+    "title": "Fidel Castro",
+    "kind": "person",
+    "views_60d": 238856,
+    "wikidata": "Q11256",
+    "description": "Cuban politician, author and revolutionary (1926–2016)",
+    "chosen": false
+   },
+   {
+    "area": "SOC",
+    "title": "Maximilien Robespierre",
+    "kind": "person",
+    "views_60d": 215018,
+    "wikidata": "Q44197",
+    "description": "French revolutionary lawyer and politician (1758–1794)",
+    "chosen": false
+   },
+   {
+    "area": "SOC",
+    "title": "Leon Trotsky",
+    "kind": "person",
+    "views_60d": 209374,
+    "wikidata": "Q33391",
+    "description": "Russian Marxist revolutionary (1879–1940)",
+    "chosen": false
+   },
+   {
+    "area": "CON",
+    "title": "Boris Johnson",
+    "kind": "person",
+    "views_60d": 204212,
+    "wikidata": "Q180589",
+    "description": "Prime Minister of the United Kingdom from 2019 to 2022",
+    "chosen": false
+   },
+   {
+    "area": "SOC",
+    "title": "Jean-Luc Mélenchon",
+    "kind": "person",
+    "views_60d": 198322,
+    "wikidata": "Q5829",
+    "description": "French left-wing populist politician (born 1951)",
+    "chosen": false
+   },
+   {
+    "area": "LIB",
+    "title": "Bill Maher",
+    "kind": "person",
+    "views_60d": 198100,
+    "wikidata": "Q489",
+    "description": "American stand-up comedian and television host",
+    "chosen": true
+   },
+   {
+    "area": "CON",
+    "title": "Javier Milei",
+    "kind": "person",
+    "views_60d": 196885,
+    "wikidata": "Q52395487",
+    "description": "economist, politician and president of Argentina since 2023",
+    "chosen": false
+   },
+   {
+    "area": "LIB",
+    "title": "Javier Milei",
+    "kind": "person",
+    "views_60d": 196885,
+    "wikidata": "Q52395487",
+    "description": "economist, politician and president of Argentina since 2023",
+    "chosen": true
+   },
+   {
+    "area": "CON",
+    "title": "Ashley Hinson",
+    "kind": "person",
+    "views_60d": 193344,
+    "wikidata": "Q60713905",
+    "description": "American politician (born 1983)",
+    "chosen": false
+   },
+   {
+    "area": "CON",
+    "title": "Ayn Rand",
+    "kind": "person",
+    "views_60d": 188901,
+    "wikidata": "Q132524",
+    "description": "Russian-born American writer and public philosopher (1905–1982)",
+    "chosen": false
+   },
+   {
+    "area": "LIB",
+    "title": "Ayn Rand",
+    "kind": "person",
+    "views_60d": 188901,
+    "wikidata": "Q132524",
+    "description": "Russian-born American writer and public philosopher (1905–1982)",
+    "chosen": true
+   },
+   {
+    "area": "ISL",
+    "title": "Tommy Robinson",
+    "kind": "person",
+    "views_60d": 186892,
+    "wikidata": "Q2345201",
+    "description": "British far-right activist and organiser, online influencer and convicted criminal, born 1982",
+    "chosen": true
+   },
+   {
+    "area": "AP",
+    "title": "Al Gore",
+    "kind": "person",
+    "views_60d": 180994,
+    "wikidata": "Q19673",
+    "description": "Vice President of the United States from 1993 to 2001 (born 1948)",
+    "chosen": false
+   },
+   {
+    "area": "CON",
+    "title": "Jemima Goldsmith",
+    "kind": "person",
+    "views_60d": 180410,
+    "wikidata": "Q468577",
+    "description": "British screenwriter, television, film and documentary producer",
+    "chosen": false
+   },
+   {
+    "area": "CNX",
+    "title": "Deng Xiaoping",
+    "kind": "person",
+    "views_60d": 174075,
+    "wikidata": "Q16977",
+    "description": "Chinese politician and paramount leader from 1978 to 1989",
+    "chosen": false
+   },
+   {
+    "area": "SOC",
+    "title": "Deng Xiaoping",
+    "kind": "person",
+    "views_60d": 174075,
+    "wikidata": "Q16977",
+    "description": "Chinese politician and paramount leader from 1978 to 1989",
+    "chosen": false
+   },
+   {
+    "area": "CON",
+    "title": "Deng Xiaoping",
+    "kind": "person",
+    "views_60d": 174075,
+    "wikidata": "Q16977",
+    "description": "Chinese politician and paramount leader from 1978 to 1989",
+    "chosen": false
+   },
+   {
+    "area": "GS",
+    "title": "Jane Schoenbrun",
+    "kind": "person",
+    "views_60d": 173278,
+    "wikidata": "Q61641240",
+    "description": "American filmmaker and screenwriter",
+    "chosen": true
+   },
+   {
+    "area": "A-I",
+    "title": "Yair Lapid",
+    "kind": "person",
+    "views_60d": 170037,
+    "wikidata": "Q1396120",
+    "description": "Leader of the Opposition in the Knesset (Israeli Parliament), Former Prime Minister of Israel in 2022 and Chairman of the Yesh Atid Party",
+    "chosen": false
+   },
+   {
+    "area": "AP",
+    "title": "Mike Johnson",
+    "kind": "person",
+    "views_60d": 169759,
+    "wikidata": "Q19880665",
+    "description": "Speaker of the United States House of Representatives",
+    "chosen": false
+   },
+   {
+    "area": "CON",
+    "title": "Mike Johnson",
+    "kind": "person",
+    "views_60d": 169759,
+    "wikidata": "Q19880665",
+    "description": "Speaker of the United States House of Representatives",
+    "chosen": false
+   },
+   {
+    "area": "SOC",
+    "title": "James Joyce",
+    "kind": "person",
+    "views_60d": 164434,
+    "wikidata": "Q6882",
+    "description": "Irish novelist and poet (1882–1941)",
+    "chosen": false
+   },
+   {
+    "area": "AP",
+    "title": "Letitia James",
+    "kind": "person",
+    "views_60d": 159381,
+    "wikidata": "Q6533414",
+    "description": "Attorney General of New York since 2019",
+    "chosen": false
+   },
+   {
+    "area": "SA",
+    "title": "B. R. Ambedkar",
+    "kind": "person",
+    "views_60d": 154880,
+    "wikidata": "Q231690",
+    "description": "Indian jurist, economist, and social reformer (1891–1956)",
+    "chosen": true
+   }
+  ]
+ },
+ "arts_entertainment_sport": {
+  "chosen": 106,
+  "by_area": {
+   "A-I": 19,
+   "AP": 8,
+   "GS": 22,
+   "EE": 6,
+   "AB": 2,
+   "RI": 0,
+   "IR": 2,
+   "KU": 1,
+   "SA": 3,
+   "AA": 2,
+   "CN": 3,
+   "SY": 3,
+   "HA": 0,
+   "TT": 0,
+   "APL": 0,
+   "CNX": 10,
+   "SOC": 7,
+   "ISL": 6,
+   "CON": 6,
+   "DIS": 2,
+   "LIB": 4,
+   "REQ": 0
+  },
+  "examples": [
+   {
+    "area": "SOC",
+    "title": "Patrick Stewart",
+    "kind": "person",
+    "views_60d": 5245382,
+    "wikidata": "Q16296",
+    "description": "English actor (1940–2026)",
+    "chosen": true
+   },
+   {
+    "area": "GS",
+    "title": "Bella Ramsey",
+    "kind": "person",
+    "views_60d": 1418167,
+    "wikidata": "Q24891605",
+    "description": "British actor",
+    "chosen": true
+   },
+   {
+    "area": "A-I",
+    "title": "Macklemore",
+    "kind": "person",
+    "views_60d": 1176712,
+    "wikidata": "Q484874",
+    "description": "American rapper (born 1983)",
+    "chosen": true
+   },
+   {
+    "area": "EE",
+    "title": "Aryna Sabalenka",
+    "kind": "person",
+    "views_60d": 1072526,
+    "wikidata": "Q23448791",
+    "description": "Belarusian tennis player",
+    "chosen": true
+   },
+   {
+    "area": "A-I",
+    "title": "Ed Sheeran",
+    "kind": "person",
+    "views_60d": 907963,
+    "wikidata": "Q47447",
+    "description": "English singer-songwriter (born 1991)",
+    "chosen": true
+   },
+   {
+    "area": "AP",
+    "title": "Nicki Minaj",
+    "kind": "person",
+    "views_60d": 816920,
+    "wikidata": "Q162202",
+    "description": "Trinidadian rapper and singer (born 1982)",
+    "chosen": true
+   },
+   {
+    "area": "LIB",
+    "title": "Clint Eastwood",
+    "kind": "person",
+    "views_60d": 732256,
+    "wikidata": "Q43203",
+    "description": "American actor and film director (born 1930)",
+    "chosen": true
+   },
+   {
+    "area": "GS",
+    "title": "Hunter Schafer",
+    "kind": "person",
+    "views_60d": 714588,
+    "wikidata": "Q59248250",
+    "description": "American actress, model, and LGBTQ activist",
+    "chosen": true
+   },
+   {
+    "area": "EE",
+    "title": "Dua Lipa",
+    "kind": "person",
+    "views_60d": 704816,
+    "wikidata": "Q21914464",
+    "description": "British singer-songwriter",
+    "chosen": true
+   },
+   {
+    "area": "A-I",
+    "title": "Mia Khalifa",
+    "kind": "person",
+    "views_60d": 682832,
+    "wikidata": "Q18735049",
+    "description": "Lebanese-American former pornographic film actress (born 1993)",
+    "chosen": true
+   },
+   {
+    "area": "CON",
+    "title": "Taylor Sheridan",
+    "kind": "person",
+    "views_60d": 566496,
+    "wikidata": "Q24335412",
+    "description": "American producer, screenwriter and director (born 1970)",
+    "chosen": true
+   },
+   {
+    "area": "AP",
+    "title": "Clavicular (influencer)",
+    "kind": "person",
+    "views_60d": 557514,
+    "wikidata": "Q138026713",
+    "description": "American streamer and PSL influencer in the incelosphere and manospere (born 2005)",
+    "chosen": true
+   },
+   {
+    "area": "CON",
+    "title": "Clavicular (influencer)",
+    "kind": "person",
+    "views_60d": 557514,
+    "wikidata": "Q138026713",
+    "description": "American streamer and PSL influencer in the incelosphere and manospere (born 2005)",
+    "chosen": true
+   },
+   {
+    "area": "AP",
+    "title": "Kanye West",
+    "kind": "person",
+    "views_60d": 557401,
+    "wikidata": "Q15935",
+    "description": "American rapper and record producer (born 1977)",
+    "chosen": true
+   },
+   {
+    "area": "DIS",
+    "title": "Kanye West",
+    "kind": "person",
+    "views_60d": 557401,
+    "wikidata": "Q15935",
+    "description": "American rapper and record producer (born 1977)",
+    "chosen": true
+   },
+   {
+    "area": "A-I",
+    "title": "Helen Mirren",
+    "kind": "person",
+    "views_60d": 551250,
+    "wikidata": "Q349391",
+    "description": "British actress (born 1945)",
+    "chosen": true
+   },
+   {
+    "area": "SOC",
+    "title": "John Lennon",
+    "kind": "person",
+    "views_60d": 542348,
+    "wikidata": "Q1203",
+    "description": "British musician (1940–1980)",
+    "chosen": true
+   },
+   {
+    "area": "CNX",
+    "title": "Ronald Reagan",
+    "kind": "person",
+    "views_60d": 519278,
+    "wikidata": "Q9960",
+    "description": "president of the United States from 1981 to 1989 and actor (1911–2004)",
+    "chosen": true
+   },
+   {
+    "area": "CON",
+    "title": "Ronald Reagan",
+    "kind": "person",
+    "views_60d": 519278,
+    "wikidata": "Q9960",
+    "description": "president of the United States from 1981 to 1989 and actor (1911–2004)",
+    "chosen": true
+   },
+   {
+    "area": "CNX",
+    "title": "Jackie Chan",
+    "kind": "person",
+    "views_60d": 504848,
+    "wikidata": "Q36970",
+    "description": "Hong Kong actor and martial artist (born 1954)",
+    "chosen": true
+   },
+   {
+    "area": "A-I",
+    "title": "Susan Sarandon",
+    "kind": "person",
+    "views_60d": 498644,
+    "wikidata": "Q133050",
+    "description": "American actress and activist",
+    "chosen": true
+   },
+   {
+    "area": "EE",
+    "title": "Milla Jovovich",
+    "kind": "person",
+    "views_60d": 469989,
+    "wikidata": "Q170576",
+    "description": "American actress (born 1975)",
+    "chosen": true
+   },
+   {
+    "area": "AP",
+    "title": "Donald Trump Jr.",
+    "kind": "person",
+    "views_60d": 445028,
+    "wikidata": "Q3713655",
+    "description": "American businessman and reality television personality (born 1977)",
+    "chosen": true
+   },
+   {
+    "area": "GS",
+    "title": "Sophie Cunningham",
+    "kind": "person",
+    "views_60d": 426611,
+    "wikidata": "Q65161168",
+    "description": "American basketball player born 1996",
+    "chosen": true
+   },
+   {
+    "area": "CON",
+    "title": "Mel Gibson",
+    "kind": "person",
+    "views_60d": 408955,
+    "wikidata": "Q42229",
+    "description": "American actor, director, producer and screenwriter (born 1956)",
+    "chosen": true
+   },
+   {
+    "area": "GS",
+    "title": "Kendall Jenner",
+    "kind": "person",
+    "views_60d": 407436,
+    "wikidata": "Q1375057",
+    "description": "American media personality and model (born 1995)",
+    "chosen": true
+   },
+   {
+    "area": "A-I",
+    "title": "Ms. Rachel",
+    "kind": "person",
+    "views_60d": 405264,
+    "wikidata": "Q117066641",
+    "description": "American YouTuber and educator",
+    "chosen": true
+   },
+   {
+    "area": "CNX",
+    "title": "Bruce Lee",
+    "kind": "person",
+    "views_60d": 396375,
+    "wikidata": "Q16397",
+    "description": "Hong Kong–American martial artist and actor (1940–1973)",
+    "chosen": true
+   },
+   {
+    "area": "GS",
+    "title": "Andrew Tate",
+    "kind": "person",
+    "views_60d": 383700,
+    "wikidata": "Q18637166",
+    "description": "American-British businessman, former kickboxer, dating coach and manosphere influencer",
+    "chosen": true
+   },
+   {
+    "area": "GS",
+    "title": "Emma D'Arcy",
+    "kind": "person",
+    "views_60d": 376241,
+    "wikidata": "Q101232509",
+    "description": "English actor (born 1992)",
+    "chosen": true
+   },
+   {
+    "area": "CNX",
+    "title": "Adeline Rudolph",
+    "kind": "person",
+    "views_60d": 363966,
+    "wikidata": "Q61118887",
+    "description": "Hong Kong-British actress (born 1995)",
+    "chosen": true
+   },
+   {
+    "area": "CNX",
+    "title": "Jing Boran",
+    "kind": "person",
+    "views_60d": 359464,
+    "wikidata": "Q995456",
+    "description": "Chinese actor and singer",
+    "chosen": true
+   },
+   {
+    "area": "A-I",
+    "title": "Vanessa Redgrave",
+    "kind": "person",
+    "views_60d": 347338,
+    "wikidata": "Q347879",
+    "description": "British actress and activist (born 1937)",
+    "chosen": true
+   },
+   {
+    "area": "SOC",
+    "title": "Vanessa Redgrave",
+    "kind": "person",
+    "views_60d": 347338,
+    "wikidata": "Q347879",
+    "description": "British actress and activist (born 1937)",
+    "chosen": true
+   },
+   {
+    "area": "SOC",
+    "title": "Fyodor Dostoevsky",
+    "kind": "person",
+    "views_60d": 342412,
+    "wikidata": "Q991",
+    "description": "Russian novelist and philosopher (1821–1881)",
+    "chosen": true
+   },
+   {
+    "area": "AP",
+    "title": "Sean Hannity",
+    "kind": "journalist",
+    "views_60d": 333787,
+    "wikidata": "Q557730",
+    "description": "American television host and political commentator (born 1961)",
+    "chosen": true
+   },
+   {
+    "area": "CON",
+    "title": "Sean Hannity",
+    "kind": "journalist",
+    "views_60d": 333787,
+    "wikidata": "Q557730",
+    "description": "American television host and political commentator (born 1961)",
+    "chosen": true
+   },
+   {
+    "area": "SOC",
+    "title": "Frida Kahlo",
+    "kind": "person",
+    "views_60d": 327469,
+    "wikidata": "Q5588",
+    "description": "Mexican painter (1907–1954)",
+    "chosen": true
+   },
+   {
+    "area": "CNX",
+    "title": "Zheng Qinwen",
+    "kind": "person",
+    "views_60d": 292531,
+    "wikidata": "Q62096129",
+    "description": "Chinese tennis player",
+    "chosen": true
+   },
+   {
+    "area": "AP",
+    "title": "Maria Bartiromo",
+    "kind": "journalist",
+    "views_60d": 272103,
+    "wikidata": "Q687428",
+    "description": "American financial journalist, television personality, news anchor, and author",
+    "chosen": true
+   },
+   {
+    "area": "A-I",
+    "title": "Mayim Bialik",
+    "kind": "person",
+    "views_60d": 251202,
+    "wikidata": "Q231093",
+    "description": "American actress, television personality, and author (born 1975)",
+    "chosen": true
+   },
+   {
+    "area": "GS",
+    "title": "Richard Burton",
+    "kind": "person",
+    "views_60d": 247573,
+    "wikidata": "Q151973",
+    "description": "Welsh actor (1925–1984)",
+    "chosen": true
+   },
+   {
+    "area": "GS",
+    "title": "Chappell Roan",
+    "kind": "person",
+    "views_60d": 243191,
+    "wikidata": "Q110281146",
+    "description": "American singer (born 1998)",
+    "chosen": true
+   },
+   {
+    "area": "GS",
+    "title": "Chloe Petts",
+    "kind": "person",
+    "views_60d": 239693,
+    "wikidata": "Q124569447",
+    "description": "British comedian",
+    "chosen": true
+   },
+   {
+    "area": "CNX",
+    "title": "Brandon Lee",
+    "kind": "person",
+    "views_60d": 220314,
+    "wikidata": "Q211462",
+    "description": "American actor (1965–1993)",
+    "chosen": true
+   },
+   {
+    "area": "ISL",
+    "title": "Salman Rushdie",
+    "kind": "person",
+    "views_60d": 200838,
+    "wikidata": "Q44306",
+    "description": "Indian-born English and American novelist (born 1947)",
+    "chosen": true
+   },
+   {
+    "area": "CNX",
+    "title": "Michelle Yeoh",
+    "kind": "person",
+    "views_60d": 199122,
+    "wikidata": "Q214289",
+    "description": "Malaysian actress (born 1962)",
+    "chosen": true
+   },
+   {
+    "area": "LIB",
+    "title": "Bill Maher",
+    "kind": "person",
+    "views_60d": 198100,
+    "wikidata": "Q489",
+    "description": "American stand-up comedian and television host",
+    "chosen": true
+   },
+   {
+    "area": "A-I",
+    "title": "Bella Hadid",
+    "kind": "person",
+    "views_60d": 195667,
+    "wikidata": "Q21286612",
+    "description": "American model",
+    "chosen": true
+   },
+   {
+    "area": "A-I",
+    "title": "Boy George",
+    "kind": "person",
+    "views_60d": 192544,
+    "wikidata": "Q312883",
+    "description": "British musician (born 1961)",
+    "chosen": true
+   },
+   {
+    "area": "A-I",
+    "title": "Roger Waters",
+    "kind": "person",
+    "views_60d": 188934,
+    "wikidata": "Q180861",
+    "description": "English musician, co-founder of Pink Floyd (born 1943)",
+    "chosen": true
+   },
+   {
+    "area": "ISL",
+    "title": "Tommy Robinson",
+    "kind": "person",
+    "views_60d": 186892,
+    "wikidata": "Q2345201",
+    "description": "British far-right activist and organiser, online influencer and convicted criminal, born 1982",
+    "chosen": true
+   },
+   {
+    "area": "ISL",
+    "title": "MF Doom",
+    "kind": "person",
+    "views_60d": 185632,
+    "wikidata": "Q304675",
+    "description": "British rapper (1971–2020)",
+    "chosen": true
+   },
+   {
+    "area": "A-I",
+    "title": "Yuval Abraham",
+    "kind": "journalist",
+    "views_60d": 185363,
+    "wikidata": "Q124641586",
+    "description": "Israeli journalist and film director",
+    "chosen": true
+   },
+   {
+    "area": "ISL",
+    "title": "Rita Hayworth",
+    "kind": "person",
+    "views_60d": 182000,
+    "wikidata": "Q42745",
+    "description": "American actress (1918–1987)",
+    "chosen": true
+   },
+   {
+    "area": "LIB",
+    "title": "Neil Peart",
+    "kind": "person",
+    "views_60d": 179686,
+    "wikidata": "Q313668",
+    "description": "Canadian-American drummer and lyricist (1952–2020)",
+    "chosen": true
+   },
+   {
+    "area": "GS",
+    "title": "Jane Schoenbrun",
+    "kind": "person",
+    "views_60d": 173278,
+    "wikidata": "Q61641240",
+    "description": "American filmmaker and screenwriter",
+    "chosen": true
+   },
+   {
+    "area": "ISL",
+    "title": "Cat Stevens",
+    "kind": "person",
+    "views_60d": 172266,
+    "wikidata": "Q154216",
+    "description": "British musician (born 1948)",
+    "chosen": true
+   },
+   {
+    "area": "SA",
+    "title": "Abhishek Sharma",
+    "kind": "person",
+    "views_60d": 171712,
+    "wikidata": "Q19803999",
+    "description": "Indian cricketer",
+    "chosen": true
+   },
+   {
+    "area": "GS",
+    "title": "Kai Schreiber",
+    "kind": "person",
+    "views_60d": 164412,
+    "wikidata": "Q24718144",
+    "description": "American actress",
+    "chosen": true
+   },
+   {
+    "area": "GS",
+    "title": "Rebel Wilson",
+    "kind": "person",
+    "views_60d": 159927,
+    "wikidata": "Q442897",
+    "description": "Australian actress, writer, and producer",
+    "chosen": true
+   },
+   {
+    "area": "GS",
+    "title": "Eliot Sumner",
+    "kind": "person",
+    "views_60d": 157830,
+    "wikidata": "Q262772",
+    "description": "British musician",
+    "chosen": true
+   },
+   {
+    "area": "GS",
+    "title": "Underscores (musician)",
+    "kind": "person",
+    "views_60d": 156451,
+    "wikidata": "Q110852201",
+    "description": "American musician",
+    "chosen": true
+   },
+   {
+    "area": "GS",
+    "title": "Raegan Revord",
+    "kind": "person",
+    "views_60d": 149675,
+    "wikidata": "Q61076290",
+    "description": "American actress",
+    "chosen": true
+   },
+   {
+    "area": "DIS",
+    "title": "Jake Lang",
+    "kind": "person",
+    "views_60d": 148082,
+    "wikidata": "Q138611344",
+    "description": "American right-wing influencer",
+    "chosen": true
+   },
+   {
+    "area": "GS",
+    "title": "Martina Navratilova",
+    "kind": "person",
+    "views_60d": 137586,
+    "wikidata": "Q54545",
+    "description": "Czech-American tennis player",
+    "chosen": true
+   },
+   {
+    "area": "SA",
+    "title": "Sushant Singh Rajput",
+    "kind": "person",
+    "views_60d": 128474,
+    "wikidata": "Q10296530",
+    "description": "Indian actor (1986–2020)",
+    "chosen": true
+   },
+   {
+    "area": "GS",
+    "title": "Mae Martin",
+    "kind": "person",
+    "views_60d": 125019,
+    "wikidata": "Q27673046",
+    "description": "Canadian comedian and actor",
+    "chosen": true
+   },
+   {
+    "area": "GS",
+    "title": "Royce White",
+    "kind": "person",
+    "views_60d": 106603,
+    "wikidata": "Q1652406",
+    "description": "American basketball player (born 1991)",
+    "chosen": true
+   },
+   {
+    "area": "SOC",
+    "title": "The Clash",
+    "kind": "organisation",
+    "views_60d": 100380,
+    "wikidata": "Q125603",
+    "description": "British punk rock band",
+    "chosen": true
+   },
+   {
+    "area": "GS",
+    "title": "Jane Remover",
+    "kind": "person",
+    "views_60d": 99476,
+    "wikidata": "Q115920342",
+    "description": "American rapper and producer",
+    "chosen": true
+   },
+   {
+    "area": "GS",
+    "title": "Kim Petras",
+    "kind": "person",
+    "views_60d": 95469,
+    "wikidata": "Q60964",
+    "description": "German singer",
+    "chosen": true
+   },
+   {
+    "area": "SA",
+    "title": "Pawan Kalyan",
+    "kind": "person",
+    "views_60d": 89941,
+    "wikidata": "Q6067643",
+    "description": "Indian actor & deputy chief minister of Andhra Pradesh",
+    "chosen": true
+   },
+   {
+    "area": "EE",
+    "title": "Radovan Karadžić",
+    "kind": "person",
+    "views_60d": 88172,
+    "wikidata": "Q123923",
+    "description": "Bosnian Serb politician, psychiatrist and poet convicted of genocide",
+    "chosen": true
+   },
+   {
+    "area": "CON",
+    "title": "Bill O'Reilly (political commentator)",
+    "kind": "journalist",
+    "views_60d": 63295,
+    "wikidata": "Q310953",
+    "description": "American political commentator, television host and writer",
+    "chosen": true
+   },
+   {
+    "area": "EE",
+    "title": "Deni Avdija",
+    "kind": "person",
+    "views_60d": 54283,
+    "wikidata": "Q42302125",
+    "description": "Israeli basketball player (born 2001)",
+    "chosen": true
+   },
+   {
+    "area": "AP",
+    "title": "Gretchen Carlson",
+    "kind": "journalist",
+    "views_60d": 42355,
+    "wikidata": "Q465597",
+    "description": "American broadcast journalist, author, television personality and female empowerment advocate",
+    "chosen": true
+   },
+   {
+    "area": "GS",
+    "title": "Gretchen Carlson",
+    "kind": "journalist",
+    "views_60d": 42355,
+    "wikidata": "Q465597",
+    "description": "American broadcast journalist, author, television personality and female empowerment advocate",
+    "chosen": true
+   },
+   {
+    "area": "A-I",
+    "title": "Max Blumenthal",
+    "kind": "journalist",
+    "views_60d": 38430,
+    "wikidata": "Q6794591",
+    "description": "American journalist, author, blogger, and filmmaker (born 1977)",
+    "chosen": true
+   },
+   {
+    "area": "A-I",
+    "title": "Maureen Lipman",
+    "kind": "journalist",
+    "views_60d": 36626,
+    "wikidata": "Q3300246",
+    "description": "British actress, columnist and comedian",
+    "chosen": true
+   }
+  ]
+ },
+ "via_redirect": {
+  "articles": 1926,
+  "redirects": 2175,
+  "by_area": {
+   "A-I": 25,
+   "AP": 24,
+   "GS": 5,
+   "EE": 6,
+   "AB": 2,
+   "RI": 0,
+   "IR": 1,
+   "KU": 3,
+   "SA": 21,
+   "AA": 3,
+   "CN": 1,
+   "SY": 10,
+   "HA": 1,
+   "TT": 1,
+   "APL": 0,
+   "CNX": 1176,
+   "SOC": 136,
+   "ISL": 229,
+   "CON": 154,
+   "DIS": 90,
+   "LIB": 38,
+   "REQ": 0
+  },
+  "examples": {
+   "A-I": [
+    {
+     "area": "A-I",
+     "tagged_page": "Ethan Klein",
+     "article": "H3h3Productions",
+     "views_60d": 425857
+    },
+    {
+     "area": "A-I",
+     "tagged_page": "Attempted assassination of Masoud Pezeshkian",
+     "article": "Masoud Pezeshkian",
+     "views_60d": 119115
+    },
+    {
+     "area": "A-I",
+     "tagged_page": "University of Texas at Austin stabbing",
+     "article": "University of Texas at Austin",
+     "views_60d": 81633
+    },
+    {
+     "area": "A-I",
+     "tagged_page": "Angry Birds Peace Treaty",
+     "article": "Angry Birds",
+     "views_60d": 45899
+    },
+    {
+     "area": "A-I",
+     "tagged_page": "Donald Trump proposal for displacement of Palestinians from the Gaza Strip",
+     "article": "American expansionism under Donald Trump",
+     "views_60d": 31278
+    },
+    {
+     "area": "A-I",
+     "tagged_page": "Al-Majdal, Tiberias",
+     "article": "Magdala",
+     "views_60d": 11473
+    },
+    {
+     "area": "A-I",
+     "tagged_page": "History of the Southern Levant",
+     "article": "History of the ancient Levant",
+     "views_60d": 6594
+    },
+    {
+     "area": "A-I",
+     "tagged_page": "Jewish Social Democratic Labour Party in Palestine (Poale Zion)",
+     "article": "Poale Zion",
+     "views_60d": 6509
+    },
+    {
+     "area": "A-I",
+     "tagged_page": "Apartheid-Free Communities",
+     "article": "American Friends Service Committee",
+     "views_60d": 3098
+    },
+    {
+     "area": "A-I",
+     "tagged_page": "Qadas",
+     "article": "Kedesh",
+     "views_60d": 1388
+    },
+    {
+     "area": "A-I",
+     "tagged_page": "Tel Or",
+     "article": "Naharayim",
+     "views_60d": 1000
+    },
+    {
+     "area": "A-I",
+     "tagged_page": "Operation Moon Water",
+     "article": "1974 Suez Canal Clearance Operation",
+     "views_60d": 968
+    },
+    {
+     "area": "A-I",
+     "tagged_page": "2024 closure of the Israeli embassy in Dublin",
+     "article": "Embassy of Israel, Dublin",
+     "views_60d": 910
+    },
+    {
+     "area": "A-I",
+     "tagged_page": "Holy Jihad Brigades",
+     "article": "2006 Fox journalists kidnapping",
+     "views_60d": 769
+    },
+    {
+     "area": "A-I",
+     "tagged_page": "Green Line (Jerusalem Light Rail)",
+     "article": "L4 (Jerusalem Light Rail)",
+     "views_60d": 718
+    }
+   ],
+   "AP": [
+    {
+     "area": "AP",
+     "tagged_page": "2028 United States Senate election in South Carolina",
+     "article": "2028 United States Senate elections",
+     "views_60d": 162026
+    },
+    {
+     "area": "AP",
+     "tagged_page": "Cenk Uygur 2024 presidential campaign",
+     "article": "Cenk Uygur",
+     "views_60d": 145624
+    },
+    {
+     "area": "AP",
+     "tagged_page": "Chris Gallant",
+     "article": "2026 United States House of Representatives elections in New York",
+     "views_60d": 74823
+    },
+    {
+     "area": "AP",
+     "tagged_page": "Oliver Larkin (politician)",
+     "article": "2026 United States House of Representatives elections in Florida",
+     "views_60d": 63243
+    },
+    {
+     "area": "AP",
+     "tagged_page": "Never Trust a Liberal Over 3—Especially a Republican",
+     "article": "Ann Coulter",
+     "views_60d": 62131
+    },
+    {
+     "area": "AP",
+     "tagged_page": "Treason: Liberal Treachery from the Cold War to the War on Terrorism",
+     "article": "Ann Coulter",
+     "views_60d": 62131
+    },
+    {
+     "area": "AP",
+     "tagged_page": "William Mohr",
+     "article": "Constitution Party (United States)",
+     "views_60d": 31290
+    },
+    {
+     "area": "AP",
+     "tagged_page": "James Tracy (conspiracy theorist)",
+     "article": "Sandy Hook Elementary School shooting conspiracy theories",
+     "views_60d": 22587
+    },
+    {
+     "area": "AP",
+     "tagged_page": "2026 White House plot",
+     "article": "Security incidents involving Donald Trump",
+     "views_60d": 20940
+    },
+    {
+     "area": "AP",
+     "tagged_page": "I pledge a new world",
+     "article": "Wendell Willkie",
+     "views_60d": 20605
+    },
+    {
+     "area": "AP",
+     "tagged_page": "High-capacity magazine",
+     "article": "Magazine (firearms)",
+     "views_60d": 16471
+    },
+    {
+     "area": "AP",
+     "tagged_page": "One people under one God",
+     "article": "Donald Trump 2016 presidential campaign",
+     "views_60d": 15883
+    },
+    {
+     "area": "AP",
+     "tagged_page": "We finally beat Medicare",
+     "article": "2024 Joe Biden–Donald Trump presidential debate",
+     "views_60d": 12567
+    },
+    {
+     "area": "AP",
+     "tagged_page": "America Party",
+     "article": "Political activities of Elon Musk",
+     "views_60d": 11606
+    },
+    {
+     "area": "AP",
+     "tagged_page": "TheDonald.win",
+     "article": "R/The Donald",
+     "views_60d": 10278
+    }
+   ],
+   "GS": [
+    {
+     "area": "GS",
+     "tagged_page": "Sigma male",
+     "article": "Alpha and beta male",
+     "views_60d": 25495
+    },
+    {
+     "area": "GS",
+     "tagged_page": "Drop the T",
+     "article": "LGBTQ (term)",
+     "views_60d": 15311
+    },
+    {
+     "area": "GS",
+     "tagged_page": "Trans dyke",
+     "article": "Transgender sexuality",
+     "views_60d": 8893
+    },
+    {
+     "area": "GS",
+     "tagged_page": "The War on Children",
+     "article": "Robby Starbuck",
+     "views_60d": 2981
+    },
+    {
+     "area": "GS",
+     "tagged_page": "Go woke, go broke",
+     "article": "Corporate sociopolitical activism",
+     "views_60d": 1660
+    }
+   ],
+   "EE": [
+    {
+     "area": "EE",
+     "tagged_page": "Hellenic languages",
+     "article": "Greek language",
+     "views_60d": 130332
+    },
+    {
+     "area": "EE",
+     "tagged_page": "Neo-Nazism in Ukraine",
+     "article": "Neo-Nazism",
+     "views_60d": 65098
+    },
+    {
+     "area": "EE",
+     "tagged_page": "Russian irredentism",
+     "article": "Russian imperialism",
+     "views_60d": 11286
+    },
+    {
+     "area": "EE",
+     "tagged_page": "Samo's Empire",
+     "article": "Samo",
+     "views_60d": 9037
+    },
+    {
+     "area": "EE",
+     "tagged_page": "2 May 2014 Odessa clashes",
+     "article": "2014 Odesa clashes",
+     "views_60d": 7563
+    },
+    {
+     "area": "EE",
+     "tagged_page": "1950 Albanian coastline ambushes",
+     "article": "Operation Valuable",
+     "views_60d": 6100
+    }
+   ],
+   "AB": [
+    {
+     "area": "AB",
+     "tagged_page": "Ohio \"Heartbeat Bill\"",
+     "article": "Heartbeat bill",
+     "views_60d": 3425
+    },
+    {
+     "area": "AB",
+     "tagged_page": "National Pro-Life Religious Council",
+     "article": "Frank Pavone",
+     "views_60d": 3145
+    }
+   ],
+   "RI": [],
+   "IR": [
+    {
+     "area": "IR",
+     "tagged_page": "2026 Aramco refinery attack",
+     "article": "Saudi Arabia in the 2026 Iran war",
+     "views_60d": 11821
+    }
+   ],
+   "KU": [
+    {
+     "area": "KU",
+     "tagged_page": "House of Kayus",
+     "article": "Sasanian Empire",
+     "views_60d": 111959
+    },
+    {
+     "area": "KU",
+     "tagged_page": "Madig",
+     "article": "Ardashir I",
+     "views_60d": 12414
+    },
+    {
+     "area": "KU",
+     "tagged_page": "February 2024 United States airstrikes in Iraq and Syria",
+     "article": "Tower 22 drone attack",
+     "views_60d": 4509
+    }
+   ],
+   "SA": [
+    {
+     "area": "SA",
+     "tagged_page": "Somnath",
+     "article": "Somnath Temple",
+     "views_60d": 22249
+    },
+    {
+     "area": "SA",
+     "tagged_page": "Naxalite",
+     "article": "Naxalism",
+     "views_60d": 13572
+    },
+    {
+     "area": "SA",
+     "tagged_page": "Vadakalai",
+     "article": "Sri Vaishnavism",
+     "views_60d": 6760
+    },
+    {
+     "area": "SA",
+     "tagged_page": "Battle of Kakkor",
+     "article": "Malhar Rao Holkar",
+     "views_60d": 6374
+    },
+    {
+     "area": "SA",
+     "tagged_page": "Durlabhavardhana",
+     "article": "Karkota dynasty",
+     "views_60d": 5356
+    },
+    {
+     "area": "SA",
+     "tagged_page": "Dhiman Sikh",
+     "article": "Ramgarhia",
+     "views_60d": 4273
+    },
+    {
+     "area": "SA",
+     "tagged_page": "Dargahi Singh Bhati",
+     "article": "Dadri",
+     "views_60d": 4128
+    },
+    {
+     "area": "SA",
+     "tagged_page": "Communalism (South Asia)",
+     "article": "Communal violence",
+     "views_60d": 2359
+    },
+    {
+     "area": "SA",
+     "tagged_page": "Sher Muhammad Khan",
+     "article": "Ibn-e-Insha",
+     "views_60d": 1899
+    },
+    {
+     "area": "SA",
+     "tagged_page": "Operation Marg Bar Sarmachar",
+     "article": "2024 Iranian missile strikes in Pakistan",
+     "views_60d": 1483
+    },
+    {
+     "area": "SA",
+     "tagged_page": "Laspur",
+     "article": "Upper Chitral District",
+     "views_60d": 1113
+    },
+    {
+     "area": "SA",
+     "tagged_page": "Lawangeen Abdulrahimzai",
+     "article": "Murder of Thomas Roberts",
+     "views_60d": 785
+    },
+    {
+     "area": "SA",
+     "tagged_page": "Baloch genocide",
+     "article": "Human rights abuses in Balochistan",
+     "views_60d": 496
+    },
+    {
+     "area": "SA",
+     "tagged_page": "Khattar (surname)",
+     "article": "Khattar",
+     "views_60d": 474
+    },
+    {
+     "area": "SA",
+     "tagged_page": "Killa Saifullah bus crash",
+     "article": "Killa Saifullah",
+     "views_60d": 446
+    }
+   ],
+   "AA": [
+    {
+     "area": "AA",
+     "tagged_page": "Pekmez",
+     "article": "Grape syrup",
+     "views_60d": 2994
+    },
+    {
+     "area": "AA",
+     "tagged_page": "Azerbaijan—France relations",
+     "article": "Azerbaijan–France relations",
+     "views_60d": 628
+    },
+    {
+     "area": "AA",
+     "tagged_page": "Battle of Sadarak",
+     "article": "Sadarak District",
+     "views_60d": 420
+    }
+   ],
+   "CN": [
+    {
+     "area": "CN",
+     "tagged_page": "Tor Tajiks",
+     "article": "Tajiks in China",
+     "views_60d": 4397
+    }
+   ],
+   "SY": [
+    {
+     "area": "SY",
+     "tagged_page": "October 2023 Israel–Hezbollah fire exchanges",
+     "article": "Hezbollah–Israel conflict (2023–present)",
+     "views_60d": 18312
+    },
+    {
+     "area": "SY",
+     "tagged_page": "July 2021 Baghdad bombing",
+     "article": "Iraqi insurgency (2017–present)",
+     "views_60d": 7346
+    },
+    {
+     "area": "SY",
+     "tagged_page": "Baraa Kadek",
+     "article": "Amaq News Agency",
+     "views_60d": 4948
+    },
+    {
+     "area": "SY",
+     "tagged_page": "February 2024 United States airstrikes in Iraq and Syria",
+     "article": "Tower 22 drone attack",
+     "views_60d": 4509
+    },
+    {
+     "area": "SY",
+     "tagged_page": "Flag of the Islamic State of Iraq and the Levant",
+     "article": "Flag of the Islamic State",
+     "views_60d": 4197
+    },
+    {
+     "area": "SY",
+     "tagged_page": "Russia–Turkey proxy conflict",
+     "article": "Russia–Turkey relations",
+     "views_60d": 3578
+    },
+    {
+     "area": "SY",
+     "tagged_page": "April 2017 Tabqa air raid",
+     "article": "Battle of Tabqa",
+     "views_60d": 568
+    },
+    {
+     "area": "SY",
+     "tagged_page": "High Negotiations Committee",
+     "article": "Syrian Negotiation Commission",
+     "views_60d": 384
+    },
+    {
+     "area": "SY",
+     "tagged_page": "April 2015 Qalamoun incident",
+     "article": "Qalamoun offensive (May–June 2015)",
+     "views_60d": 357
+    },
+    {
+     "area": "SY",
+     "tagged_page": "January 2015 Shebaa Farms incident",
+     "article": "January 2015 Israel-Hezbollah incidents",
+     "views_60d": 305
+    },
+    {
+     "area": "SY",
+     "tagged_page": "January 2015 Mazraat Amal incident",
+     "article": "January 2015 Israel-Hezbollah incidents",
+     "views_60d": 287
+    }
+   ],
+   "HA": [
+    {
+     "area": "HA",
+     "tagged_page": "Tigray (de facto state)",
+     "article": "Tigray People's Liberation Front",
+     "views_60d": 65023
+    }
+   ],
+   "TT": [
+    {
+     "area": "TT",
+     "tagged_page": "2020 Northern Ireland Agreement",
+     "article": "New Decade, New Approach",
+     "views_60d": 655
+    }
+   ],
+   "APL": [],
+   "CNX": [
+    {
+     "area": "CNX",
+     "tagged_page": "Kobe Bryant China Fund",
+     "article": "Kobe Bryant",
+     "views_60d": 366324
+    },
+    {
+     "area": "CNX",
+     "tagged_page": "2027 Chinese Grand Prix",
+     "article": "2027 Formula One World Championship",
+     "views_60d": 147854
+    },
+    {
+     "area": "CNX",
+     "tagged_page": "Asian Charlie's Angels",
+     "article": "Charlie's Angels",
+     "views_60d": 127626
+    },
+    {
+     "area": "CNX",
+     "tagged_page": "2021 FIFA Club World Cup (China)",
+     "article": "FIFA Club World Cup",
+     "views_60d": 104019
+    },
+    {
+     "area": "CNX",
+     "tagged_page": "Dragon Man (archaic human)",
+     "article": "Denisovan",
+     "views_60d": 102117
+    },
+    {
+     "area": "CNX",
+     "tagged_page": "List of countries by mercury production",
+     "article": "Mercury (element)",
+     "views_60d": 98762
+    },
+    {
+     "area": "CNX",
+     "tagged_page": "ASEAN Plus Three",
+     "article": "ASEAN",
+     "views_60d": 98339
+    },
+    {
+     "area": "CNX",
+     "tagged_page": "Japanese cultural artifacts controversy",
+     "article": "Korea under Japanese rule",
+     "views_60d": 96865
+    },
+    {
+     "area": "CNX",
+     "tagged_page": "Palo Alto Chinese School",
+     "article": "Palo Alto, California",
+     "views_60d": 96705
+    },
+    {
+     "area": "CNX",
+     "tagged_page": "2021 Chinese Grand Prix",
+     "article": "2021 Formula One World Championship",
+     "views_60d": 91876
+    },
+    {
+     "area": "CNX",
+     "tagged_page": "Iron Age China",
+     "article": "Iron Age",
+     "views_60d": 91850
+    },
+    {
+     "area": "CNX",
+     "tagged_page": "Hong Kong hip hop",
+     "article": "Hip-hop",
+     "views_60d": 85553
+    },
+    {
+     "area": "CNX",
+     "tagged_page": "Horn of rhinoceros",
+     "article": "Rhinoceros",
+     "views_60d": 76828
+    },
+    {
+     "area": "CNX",
+     "tagged_page": "2020 Chinese Grand Prix",
+     "article": "2020 Formula One World Championship",
+     "views_60d": 75279
+    },
+    {
+     "area": "CNX",
+     "tagged_page": "Trillion Trophy Asia",
+     "article": "Birmingham City F.C.",
+     "views_60d": 72338
+    }
+   ],
+   "SOC": [
+    {
+     "area": "SOC",
+     "tagged_page": "Fictional world of The Hunger Games",
+     "article": "The Hunger Games",
+     "views_60d": 262130
+    },
+    {
+     "area": "SOC",
+     "tagged_page": "Postmodern Neo-Marxism",
+     "article": "Jordan Peterson",
+     "views_60d": 145157
+    },
+    {
+     "area": "SOC",
+     "tagged_page": "Lumumbism",
+     "article": "Patrice Lumumba",
+     "views_60d": 95122
+    },
+    {
+     "area": "SOC",
+     "tagged_page": "Feudal mode of production",
+     "article": "Feudalism",
+     "views_60d": 74468
+    },
+    {
+     "area": "SOC",
+     "tagged_page": "Oliver Larkin (politician)",
+     "article": "2026 United States House of Representatives elections in Florida",
+     "views_60d": 63243
+    },
+    {
+     "area": "SOC",
+     "tagged_page": "Red (political adjective)",
+     "article": "Red",
+     "views_60d": 52980
+    },
+    {
+     "area": "SOC",
+     "tagged_page": "Social",
+     "article": "Society",
+     "views_60d": 47357
+    },
+    {
+     "area": "SOC",
+     "tagged_page": "Jewish anti-Zionism",
+     "article": "Anti-Zionism",
+     "views_60d": 46661
+    },
+    {
+     "area": "SOC",
+     "tagged_page": "Revolutionary martyr",
+     "article": "Martyr",
+     "views_60d": 39123
+    },
+    {
+     "area": "SOC",
+     "tagged_page": "Alt-left",
+     "article": "Alt-right",
+     "views_60d": 34870
+    },
+    {
+     "area": "SOC",
+     "tagged_page": "Libyan Arab Jamahiriya",
+     "article": "History of Libya under Muammar Gaddafi",
+     "views_60d": 27398
+    },
+    {
+     "area": "SOC",
+     "tagged_page": "Socialism and famine",
+     "article": "Famine",
+     "views_60d": 23199
+    },
+    {
+     "area": "SOC",
+     "tagged_page": "Universality (philosophy)",
+     "article": "Universalism",
+     "views_60d": 18604
+    },
+    {
+     "area": "SOC",
+     "tagged_page": "Labour for a Republic",
+     "article": "Republicanism in the United Kingdom",
+     "views_60d": 18495
+    },
+    {
+     "area": "SOC",
+     "tagged_page": "Kurdistan Democratic Party of Iraq",
+     "article": "Kurdistan Democratic Party",
+     "views_60d": 16940
+    }
+   ],
+   "ISL": [
+    {
+     "area": "ISL",
+     "tagged_page": "Muhammad-Ali",
+     "article": "Muhammad Ali",
+     "views_60d": 492340
+    },
+    {
+     "area": "ISL",
+     "tagged_page": "Islam in Monaco",
+     "article": "Monaco",
+     "views_60d": 306977
+    },
+    {
+     "area": "ISL",
+     "tagged_page": "Islam in the Isle of Man",
+     "article": "Isle of Man",
+     "views_60d": 231498
+    },
+    {
+     "area": "ISL",
+     "tagged_page": "2026 Ghazali family killing",
+     "article": "2026 Lebanon war",
+     "views_60d": 117215
+    },
+    {
+     "area": "ISL",
+     "tagged_page": "Zuhd in Islam",
+     "article": "Asceticism",
+     "views_60d": 64084
+    },
+    {
+     "area": "ISL",
+     "tagged_page": "Zuhd",
+     "article": "Asceticism",
+     "views_60d": 63918
+    },
+    {
+     "area": "ISL",
+     "tagged_page": "Joshua in Islam",
+     "article": "Joshua",
+     "views_60d": 52001
+    },
+    {
+     "area": "ISL",
+     "tagged_page": "Al-Qaida in the Arabian Peninsula",
+     "article": "Al-Qaeda in the Arabian Peninsula",
+     "views_60d": 45352
+    },
+    {
+     "area": "ISL",
+     "tagged_page": "Books of the Bible",
+     "article": "Biblical canon",
+     "views_60d": 33253
+    },
+    {
+     "area": "ISL",
+     "tagged_page": "☪️",
+     "article": "Star and crescent",
+     "views_60d": 32840
+    },
+    {
+     "area": "ISL",
+     "tagged_page": "English Volunteer Force",
+     "article": "English Defence League",
+     "views_60d": 21664
+    },
+    {
+     "area": "ISL",
+     "tagged_page": "Tawiz (amulet)",
+     "article": "Amulet",
+     "views_60d": 20743
+    },
+    {
+     "area": "ISL",
+     "tagged_page": "Generation Identity United Kingdom and Éire",
+     "article": "Identitarian movement",
+     "views_60d": 20669
+    },
+    {
+     "area": "ISL",
+     "tagged_page": "Misunderstander of Islam",
+     "article": "Pacifism",
+     "views_60d": 18700
+    },
+    {
+     "area": "ISL",
+     "tagged_page": "Universalism in Islam",
+     "article": "Universalism",
+     "views_60d": 18249
+    }
+   ],
+   "CON": [
+    {
+     "area": "CON",
+     "tagged_page": "MSheU",
+     "article": "Marvel Cinematic Universe",
+     "views_60d": 520482
+    },
+    {
+     "area": "CON",
+     "tagged_page": "M-She-U",
+     "article": "Marvel Cinematic Universe",
+     "views_60d": 515582
+    },
+    {
+     "area": "CON",
+     "tagged_page": "Christianism",
+     "article": "Christianity",
+     "views_60d": 240263
+    },
+    {
+     "area": "CON",
+     "tagged_page": "Zach Lahn",
+     "article": "2026 Iowa gubernatorial election",
+     "views_60d": 142647
+    },
+    {
+     "area": "CON",
+     "tagged_page": "Hansonism",
+     "article": "Pauline Hanson",
+     "views_60d": 116076
+    },
+    {
+     "area": "CON",
+     "tagged_page": "Bush family tree",
+     "article": "Bush family",
+     "views_60d": 59387
+    },
+    {
+     "area": "CON",
+     "tagged_page": "Electoral history of Michael Portillo",
+     "article": "Michael Portillo",
+     "views_60d": 56021
+    },
+    {
+     "area": "CON",
+     "tagged_page": "Naya Pakistan",
+     "article": "Pakistan Tehreek-e-Insaf",
+     "views_60d": 44124
+    },
+    {
+     "area": "CON",
+     "tagged_page": "Mass culture",
+     "article": "Popular culture",
+     "views_60d": 33252
+    },
+    {
+     "area": "CON",
+     "tagged_page": "Politics of Donald Trump",
+     "article": "Political positions of Donald Trump",
+     "views_60d": 31505
+    },
+    {
+     "area": "CON",
+     "tagged_page": "Seminar caller",
+     "article": "Astroturfing",
+     "views_60d": 30031
+    },
+    {
+     "area": "CON",
+     "tagged_page": "Mercury Ink",
+     "article": "Simon & Schuster",
+     "views_60d": 29191
+    },
+    {
+     "area": "CON",
+     "tagged_page": "Age of Austerity",
+     "article": "Austerity",
+     "views_60d": 27731
+    },
+    {
+     "area": "CON",
+     "tagged_page": "The Kenyon Observer",
+     "article": "Kenyon College",
+     "views_60d": 23543
+    },
+    {
+     "area": "CON",
+     "tagged_page": "Lion Guard",
+     "article": "The Lion Guard",
+     "views_60d": 23533
+    }
+   ],
+   "DIS": [
+    {
+     "area": "DIS",
+     "tagged_page": "A whole civilization will die tonight, never to be brought back again",
+     "article": "2026 Iran war",
+     "views_60d": 1183079
+    },
+    {
+     "area": "DIS",
+     "tagged_page": "Ayatollah Khamenei's letter to students at U.S. universities",
+     "article": "Ali Khamenei",
+     "views_60d": 237002
+    },
+    {
+     "area": "DIS",
+     "tagged_page": "Criticism of James Bond",
+     "article": "James Bond",
+     "views_60d": 186521
+    },
+    {
+     "area": "DIS",
+     "tagged_page": "Postmodern Neo-Marxism",
+     "article": "Jordan Peterson",
+     "views_60d": 145157
+    },
+    {
+     "area": "DIS",
+     "tagged_page": "Royal Commission of Inquiry into the Attack on Christchurch Mosques",
+     "article": "Christchurch mosque shootings",
+     "views_60d": 134544
+    },
+    {
+     "area": "DIS",
+     "tagged_page": "2026 Ghazali family killing",
+     "article": "2026 Lebanon war",
+     "views_60d": 117215
+    },
+    {
+     "area": "DIS",
+     "tagged_page": "Anti-Black violence",
+     "article": "The Birth of a Nation",
+     "views_60d": 105536
+    },
+    {
+     "area": "DIS",
+     "tagged_page": "Racism in Columbus, Ohio",
+     "article": "Columbus, Ohio",
+     "views_60d": 105417
+    },
+    {
+     "area": "DIS",
+     "tagged_page": "Greyball",
+     "article": "Uber",
+     "views_60d": 85093
+    },
+    {
+     "area": "DIS",
+     "tagged_page": "The Goyim Know",
+     "article": "Goy",
+     "views_60d": 77890
+    },
+    {
+     "area": "DIS",
+     "tagged_page": "Sajid Akram",
+     "article": "Bondi Beach shooting",
+     "views_60d": 75731
+    },
+    {
+     "area": "DIS",
+     "tagged_page": "Nigger toes",
+     "article": "Brazil nut",
+     "views_60d": 60153
+    },
+    {
+     "area": "DIS",
+     "tagged_page": "Arophobia",
+     "article": "Aromanticism",
+     "views_60d": 47724
+    },
+    {
+     "area": "DIS",
+     "tagged_page": "Wuhan coronavirus",
+     "article": "SARS-CoV-2",
+     "views_60d": 39899
+    },
+    {
+     "area": "DIS",
+     "tagged_page": "Sexual slur",
+     "article": "Sexual slang",
+     "views_60d": 39378
+    }
+   ],
+   "LIB": [
+    {
+     "area": "LIB",
+     "tagged_page": "Dread Pirate Roberts (Silk Road)",
+     "article": "Ross Ulbricht",
+     "views_60d": 102074
+    },
+    {
+     "area": "LIB",
+     "tagged_page": "Stacey Prussman",
+     "article": "2021 New York City mayoral election",
+     "views_60d": 27486
+    },
+    {
+     "area": "LIB",
+     "tagged_page": "Nickolas Wildstar",
+     "article": "2018 California gubernatorial election",
+     "views_60d": 22617
+    },
+    {
+     "area": "LIB",
+     "tagged_page": "State nationalism",
+     "article": "Nation state",
+     "views_60d": 22606
+    },
+    {
+     "area": "LIB",
+     "tagged_page": "Michael McDermott (politician)",
+     "article": "2014 New York gubernatorial election",
+     "views_60d": 15375
+    },
+    {
+     "area": "LIB",
+     "tagged_page": "America Party",
+     "article": "Political activities of Elon Musk",
+     "views_60d": 11606
+    },
+    {
+     "area": "LIB",
+     "tagged_page": "Alexander Snitker",
+     "article": "2010 United States Senate election in Florida",
+     "views_60d": 11306
+    },
+    {
+     "area": "LIB",
+     "tagged_page": "Left-wing antisemitism",
+     "article": "New antisemitism",
+     "views_60d": 9993
+    },
+    {
+     "area": "LIB",
+     "tagged_page": "Daejeon massacre",
+     "article": "Bodo League massacre",
+     "views_60d": 9983
+    },
+    {
+     "area": "LIB",
+     "tagged_page": "Cliff Hyra",
+     "article": "2017 Virginia gubernatorial election",
+     "views_60d": 8776
+    },
+    {
+     "area": "LIB",
+     "tagged_page": "Criticism of electoral politics",
+     "article": "Criticism of democracy",
+     "views_60d": 8656
+    },
+    {
+     "area": "LIB",
+     "tagged_page": "Non-politics",
+     "article": "Apoliticism",
+     "views_60d": 6528
+    },
+    {
+     "area": "LIB",
+     "tagged_page": "Robert Sarvis",
+     "article": "2013 Virginia gubernatorial election",
+     "views_60d": 6199
+    },
+    {
+     "area": "LIB",
+     "tagged_page": "Safetyism",
+     "article": "The Coddling of the American Mind",
+     "views_60d": 6081
+    },
+    {
+     "area": "LIB",
+     "tagged_page": "Ontario Libertarian Party candidates in the 1990 Ontario provincial election",
+     "article": "1990 Ontario general election",
+     "views_60d": 5359
+    }
+   ],
+   "REQ": []
+  }
+ },
+ "left_out": {
+  "count": 28662,
+  "by_kind": {
+   "place": 4889,
+   "other": 23773
+  },
+  "examples": {
+   "A-I": [
+    {
+     "area": "A-I",
+     "title": "Israel",
+     "kind": "place",
+     "views_60d": 775309,
+     "wikidata": "Q801",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "A-I",
+     "title": "2026 FIFA World Cup",
+     "kind": "other",
+     "views_60d": 702860,
+     "wikidata": "Q5020214",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "A-I",
+     "title": "NAZA (film)",
+     "kind": "other",
+     "views_60d": 659029,
+     "wikidata": "Q141168534",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "A-I",
+     "title": "Flydubai Flight 1073",
+     "kind": "other",
+     "views_60d": 570565,
+     "wikidata": "Q141605182",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "A-I",
+     "title": "Palestine",
+     "kind": "place",
+     "views_60d": 478596,
+     "wikidata": "Q219060",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "A-I",
+     "title": "Fauda",
+     "kind": "other",
+     "views_60d": 447210,
+     "wikidata": "Q19319517",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "A-I",
+     "title": "Superman (2025 film)",
+     "kind": "other",
+     "views_60d": 388747,
+     "wikidata": "Q116547790",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "A-I",
+     "title": "Egypt",
+     "kind": "place",
+     "views_60d": 361560,
+     "wikidata": "Q79",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "A-I",
+     "title": "Run Hide Fight: Infidels",
+     "kind": "other",
+     "views_60d": 334455,
+     "wikidata": "Q140930829",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "A-I",
+     "title": "Scream 7",
+     "kind": "other",
+     "views_60d": 311204,
+     "wikidata": "Q124758309",
+     "description": "",
+     "chosen": false
+    }
+   ],
+   "AP": [
+    {
+     "area": "AP",
+     "title": "September 11 attacks",
+     "kind": "other",
+     "views_60d": 3110166,
+     "wikidata": "Q10806",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "AP",
+     "title": "United States",
+     "kind": "place",
+     "views_60d": 2949555,
+     "wikidata": "Q30",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "AP",
+     "title": "2024 Cornell University rape allegations",
+     "kind": "other",
+     "views_60d": 931138,
+     "wikidata": "Q141608193",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "AP",
+     "title": "Assassination of Charlie Kirk",
+     "kind": "other",
+     "views_60d": 839879,
+     "wikidata": "Q136210698",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "AP",
+     "title": "2026 FIFA World Cup",
+     "kind": "other",
+     "views_60d": 702860,
+     "wikidata": "Q5020214",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "AP",
+     "title": "TikTok",
+     "kind": "other",
+     "views_60d": 443390,
+     "wikidata": "Q48938223",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "AP",
+     "title": "President of the United States",
+     "kind": "other",
+     "views_60d": 430632,
+     "wikidata": "Q11696",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "AP",
+     "title": "Columbine High School massacre",
+     "kind": "other",
+     "views_60d": 420849,
+     "wikidata": "Q473845",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "AP",
+     "title": "Collapse of the World Trade Center",
+     "kind": "other",
+     "views_60d": 407743,
+     "wikidata": "Q62179",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "AP",
+     "title": "Run Hide Fight: Infidels",
+     "kind": "other",
+     "views_60d": 334455,
+     "wikidata": "Q140930829",
+     "description": "",
+     "chosen": false
+    }
+   ],
+   "GS": [
+    {
+     "area": "GS",
+     "title": "Assassination of Charlie Kirk",
+     "kind": "other",
+     "views_60d": 839879,
+     "wikidata": "Q136210698",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "GS",
+     "title": "Pornography",
+     "kind": "other",
+     "views_60d": 804380,
+     "wikidata": "Q291",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "GS",
+     "title": "Human penis",
+     "kind": "other",
+     "views_60d": 556486,
+     "wikidata": "Q8124",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "GS",
+     "title": "Fellatio",
+     "kind": "other",
+     "views_60d": 379917,
+     "wikidata": "Q8401",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "GS",
+     "title": "Vulva",
+     "kind": "other",
+     "views_60d": 312340,
+     "wikidata": "Q2192288",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "GS",
+     "title": "Fingering (sexual act)",
+     "kind": "other",
+     "views_60d": 297754,
+     "wikidata": "Q757329",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "GS",
+     "title": "Pornographic film",
+     "kind": "other",
+     "views_60d": 218648,
+     "wikidata": "Q185529",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "GS",
+     "title": "Queer",
+     "kind": "other",
+     "views_60d": 180282,
+     "wikidata": "Q51415",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "GS",
+     "title": "4chan",
+     "kind": "other",
+     "views_60d": 169879,
+     "wikidata": "Q238330",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "GS",
+     "title": "Incel",
+     "kind": "other",
+     "views_60d": 154107,
+     "wikidata": "Q332395",
+     "description": "",
+     "chosen": false
+    }
+   ],
+   "EE": [
+    {
+     "area": "EE",
+     "title": "Russia",
+     "kind": "place",
+     "views_60d": 670080,
+     "wikidata": "Q159",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "EE",
+     "title": "Soviet Union",
+     "kind": "place",
+     "views_60d": 551210,
+     "wikidata": "Q15180",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "EE",
+     "title": "Ottoman Empire",
+     "kind": "place",
+     "views_60d": 501804,
+     "wikidata": "Q12560",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "EE",
+     "title": "Turkey",
+     "kind": "place",
+     "views_60d": 493779,
+     "wikidata": "Q43",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "EE",
+     "title": "Poland",
+     "kind": "place",
+     "views_60d": 431101,
+     "wikidata": "Q36",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "EE",
+     "title": "Serbia",
+     "kind": "place",
+     "views_60d": 398306,
+     "wikidata": "Q403",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "EE",
+     "title": "Czech Republic",
+     "kind": "place",
+     "views_60d": 387077,
+     "wikidata": "Q213",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "EE",
+     "title": "Albania",
+     "kind": "place",
+     "views_60d": 368488,
+     "wikidata": "Q222",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "EE",
+     "title": "Ukraine",
+     "kind": "place",
+     "views_60d": 360079,
+     "wikidata": "Q212",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "EE",
+     "title": "Kosovo",
+     "kind": "place",
+     "views_60d": 359770,
+     "wikidata": "Q1246",
+     "description": "",
+     "chosen": false
+    }
+   ],
+   "AB": [
+    {
+     "area": "AB",
+     "title": "Blonde (2022 film)",
+     "kind": "other",
+     "views_60d": 64692,
+     "wikidata": "Q66823622",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "AB",
+     "title": "Abortion",
+     "kind": "other",
+     "views_60d": 39897,
+     "wikidata": "Q8452",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "AB",
+     "title": "Sexuality in Islam",
+     "kind": "other",
+     "views_60d": 26341,
+     "wikidata": "Q1974389",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "AB",
+     "title": "Abortion law in the United States by state",
+     "kind": "other",
+     "views_60d": 19931,
+     "wikidata": "Q4668505",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "AB",
+     "title": "Fetal viability",
+     "kind": "other",
+     "views_60d": 13174,
+     "wikidata": "Q5445920",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "AB",
+     "title": "History of abortion",
+     "kind": "other",
+     "views_60d": 11604,
+     "wikidata": "Q1084207",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "AB",
+     "title": "Abortifacient",
+     "kind": "other",
+     "views_60d": 10016,
+     "wikidata": "Q323047",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "AB",
+     "title": "2024 Missouri Amendment 3",
+     "kind": "other",
+     "views_60d": 6376,
+     "wikidata": "Q130265665",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "AB",
+     "title": "Late termination of pregnancy",
+     "kind": "other",
+     "views_60d": 5949,
+     "wikidata": "Q5655230",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "AB",
+     "title": "Abortion in the United Kingdom",
+     "kind": "other",
+     "views_60d": 5614,
+     "wikidata": "Q8184137",
+     "description": "",
+     "chosen": false
+    }
+   ],
+   "RI": [
+    {
+     "area": "RI",
+     "title": "The Odyssey (2026 film)",
+     "kind": "other",
+     "views_60d": 2391252,
+     "wikidata": "Q131547207",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "RI",
+     "title": "2025 Potomac River mid-air collision",
+     "kind": "other",
+     "views_60d": 85015,
+     "wikidata": "Q131936357",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "RI",
+     "title": "Caucasian race",
+     "kind": "other",
+     "views_60d": 67152,
+     "wikidata": "Q7129609",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "RI",
+     "title": "Fourteen Words",
+     "kind": "other",
+     "views_60d": 46876,
+     "wikidata": "Q745028",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "RI",
+     "title": "Grooming gangs scandal",
+     "kind": "other",
+     "views_60d": 39818,
+     "wikidata": "Q127377700",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "RI",
+     "title": "Nazi racial theories",
+     "kind": "other",
+     "views_60d": 24609,
+     "wikidata": "Q4348882",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "RI",
+     "title": "Telford child sexual exploitation scandal",
+     "kind": "other",
+     "views_60d": 5337,
+     "wikidata": "Q16238438",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "RI",
+     "title": "Child sexual abuse in the United Kingdom",
+     "kind": "other",
+     "views_60d": 4077,
+     "wikidata": "Q16826570",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "RI",
+     "title": "Investigations into the Rotherham child sexual exploitation scandal",
+     "kind": "other",
+     "views_60d": 2060,
+     "wikidata": "Q131764719",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "RI",
+     "title": "Racial conceptions of Jewish identity in Zionism",
+     "kind": "other",
+     "views_60d": 1263,
+     "wikidata": "Q121734626",
+     "description": "",
+     "chosen": false
+    }
+   ],
+   "IR": [
+    {
+     "area": "IR",
+     "title": "Iran",
+     "kind": "place",
+     "views_60d": 462278,
+     "wikidata": "Q794",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "IR",
+     "title": "Strait of Hormuz",
+     "kind": "place",
+     "views_60d": 133912,
+     "wikidata": "Q79883",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "IR",
+     "title": "Iranian Revolution",
+     "kind": "other",
+     "views_60d": 105536,
+     "wikidata": "Q126065",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "IR",
+     "title": "Casualties of the 2026 Iran war",
+     "kind": "other",
+     "views_60d": 82376,
+     "wikidata": "Q138994742",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "IR",
+     "title": "Turkic peoples",
+     "kind": "other",
+     "views_60d": 82372,
+     "wikidata": "Q83328",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "IR",
+     "title": "Tehran",
+     "kind": "place",
+     "views_60d": 78868,
+     "wikidata": "Q3616",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "IR",
+     "title": "Iran hostage crisis",
+     "kind": "other",
+     "views_60d": 74468,
+     "wikidata": "Q589673",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "IR",
+     "title": "Stuxnet",
+     "kind": "other",
+     "views_60d": 64191,
+     "wikidata": "Q53479",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "IR",
+     "title": "Iran Air Flight 655",
+     "kind": "other",
+     "views_60d": 62615,
+     "wikidata": "Q743060",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "IR",
+     "title": "Pahlavi Iran",
+     "kind": "place",
+     "views_60d": 54440,
+     "wikidata": "Q107258515",
+     "description": "",
+     "chosen": false
+    }
+   ],
+   "KU": [
+    {
+     "area": "KU",
+     "title": "Turkey",
+     "kind": "place",
+     "views_60d": 493779,
+     "wikidata": "Q43",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "KU",
+     "title": "Kurds",
+     "kind": "other",
+     "views_60d": 94916,
+     "wikidata": "Q12223",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "KU",
+     "title": "Kurdistan",
+     "kind": "place",
+     "views_60d": 84130,
+     "wikidata": "Q41470",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "KU",
+     "title": "Mount Ararat",
+     "kind": "place",
+     "views_60d": 82110,
+     "wikidata": "Q72303",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "KU",
+     "title": "Ayyubid dynasty",
+     "kind": "place",
+     "views_60d": 41525,
+     "wikidata": "Q180114",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "KU",
+     "title": "Kurdistan Region",
+     "kind": "place",
+     "views_60d": 41476,
+     "wikidata": "Q205047",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "KU",
+     "title": "Democratic Autonomous Administration of North and East Syria",
+     "kind": "place",
+     "views_60d": 41113,
+     "wikidata": "Q619829",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "KU",
+     "title": "Van, Turkey",
+     "kind": "place",
+     "views_60d": 36918,
+     "wikidata": "Q83061",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "KU",
+     "title": "Medes",
+     "kind": "other",
+     "views_60d": 28118,
+     "wikidata": "Q8735",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "KU",
+     "title": "Erbil",
+     "kind": "place",
+     "views_60d": 27793,
+     "wikidata": "Q132754",
+     "description": "",
+     "chosen": false
+    }
+   ],
+   "SA": [
+    {
+     "area": "SA",
+     "title": "India",
+     "kind": "place",
+     "views_60d": 842702,
+     "wikidata": "Q668",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "SA",
+     "title": "Pakistan",
+     "kind": "place",
+     "views_60d": 402291,
+     "wikidata": "Q843",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "SA",
+     "title": "2026 Nepal–Tibet floods",
+     "kind": "other",
+     "views_60d": 385502,
+     "wikidata": "Q141182413",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "SA",
+     "title": "Afghanistan",
+     "kind": "place",
+     "views_60d": 375044,
+     "wikidata": "Q889",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "SA",
+     "title": "Bangladesh",
+     "kind": "place",
+     "views_60d": 353023,
+     "wikidata": "Q902",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "SA",
+     "title": "Sri Lanka",
+     "kind": "place",
+     "views_60d": 340817,
+     "wikidata": "Q854",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "SA",
+     "title": "Hanuman Chalisa",
+     "kind": "other",
+     "views_60d": 299758,
+     "wikidata": "Q2663608",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "SA",
+     "title": "Dhurandhar",
+     "kind": "other",
+     "views_60d": 285750,
+     "wikidata": "Q135230927",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "SA",
+     "title": "Maldives",
+     "kind": "place",
+     "views_60d": 242260,
+     "wikidata": "Q826",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "SA",
+     "title": "Ganesh Chaturthi",
+     "kind": "other",
+     "views_60d": 237632,
+     "wikidata": "Q929250",
+     "description": "",
+     "chosen": false
+    }
+   ],
+   "AA": [
+    {
+     "area": "AA",
+     "title": "Turkey",
+     "kind": "place",
+     "views_60d": 493779,
+     "wikidata": "Q43",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "AA",
+     "title": "Azerbaijan",
+     "kind": "place",
+     "views_60d": 455615,
+     "wikidata": "Q227",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "AA",
+     "title": "Armenia",
+     "kind": "place",
+     "views_60d": 344817,
+     "wikidata": "Q399",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "AA",
+     "title": "Yerevan",
+     "kind": "place",
+     "views_60d": 92577,
+     "wikidata": "Q1953",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "AA",
+     "title": "Caucasus",
+     "kind": "place",
+     "views_60d": 87143,
+     "wikidata": "Q18869",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "AA",
+     "title": "Armenians",
+     "kind": "other",
+     "views_60d": 69440,
+     "wikidata": "Q79797",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "AA",
+     "title": "Kars",
+     "kind": "place",
+     "views_60d": 58593,
+     "wikidata": "Q127063",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "AA",
+     "title": "Safavid Iran",
+     "kind": "place",
+     "views_60d": 56572,
+     "wikidata": "Q18234383",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "AA",
+     "title": "Republic of Artsakh",
+     "kind": "place",
+     "views_60d": 54806,
+     "wikidata": "Q244165",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "AA",
+     "title": "Armenian language",
+     "kind": "other",
+     "views_60d": 51459,
+     "wikidata": "Q8785",
+     "description": "",
+     "chosen": false
+    }
+   ],
+   "CN": [
+    {
+     "area": "CN",
+     "title": "China",
+     "kind": "place",
+     "views_60d": 744485,
+     "wikidata": "Q148",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "CN",
+     "title": "TikTok",
+     "kind": "other",
+     "views_60d": 443390,
+     "wikidata": "Q48938223",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "CN",
+     "title": "Uyghurs",
+     "kind": "other",
+     "views_60d": 127516,
+     "wikidata": "Q46118",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "CN",
+     "title": "Xinjiang",
+     "kind": "place",
+     "views_60d": 117042,
+     "wikidata": "Q34800",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "CN",
+     "title": "Temu",
+     "kind": "place",
+     "views_60d": 79084,
+     "wikidata": "Q114258161",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "CN",
+     "title": "Shein",
+     "kind": "place",
+     "views_60d": 53467,
+     "wikidata": "Q107377209",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "CN",
+     "title": "Ürümqi",
+     "kind": "place",
+     "views_60d": 44776,
+     "wikidata": "Q16959",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "CN",
+     "title": "Kashgar",
+     "kind": "place",
+     "views_60d": 28722,
+     "wikidata": "Q170521",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "CN",
+     "title": "2022 Winter Olympics",
+     "kind": "other",
+     "views_60d": 25680,
+     "wikidata": "Q193074",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "CN",
+     "title": "Uyghur language",
+     "kind": "other",
+     "views_60d": 24767,
+     "wikidata": "Q13263",
+     "description": "",
+     "chosen": false
+    }
+   ],
+   "SY": [
+    {
+     "area": "SY",
+     "title": "Islamic State",
+     "kind": "place",
+     "views_60d": 243656,
+     "wikidata": "Q2429253",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "SY",
+     "title": "Middle East",
+     "kind": "place",
+     "views_60d": 130752,
+     "wikidata": "Q7204",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "SY",
+     "title": "Damascus",
+     "kind": "place",
+     "views_60d": 113511,
+     "wikidata": "Q3766",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "SY",
+     "title": "West Asia",
+     "kind": "place",
+     "views_60d": 84986,
+     "wikidata": "Q27293",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "SY",
+     "title": "Kurdistan",
+     "kind": "place",
+     "views_60d": 84130,
+     "wikidata": "Q41470",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "SY",
+     "title": "Ba'athist Syria",
+     "kind": "place",
+     "views_60d": 63663,
+     "wikidata": "Q131404661",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "SY",
+     "title": "Arab League",
+     "kind": "place",
+     "views_60d": 58375,
+     "wikidata": "Q7172",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "SY",
+     "title": "Democratic Autonomous Administration of North and East Syria",
+     "kind": "place",
+     "views_60d": 41113,
+     "wikidata": "Q619829",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "SY",
+     "title": "Aleppo",
+     "kind": "place",
+     "views_60d": 39534,
+     "wikidata": "Q41183",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "SY",
+     "title": "Aftermath of the Syrian civil war",
+     "kind": "other",
+     "views_60d": 36087,
+     "wikidata": "Q140320823",
+     "description": "",
+     "chosen": false
+    }
+   ],
+   "HA": [
+    {
+     "area": "HA",
+     "title": "Ethiopia",
+     "kind": "place",
+     "views_60d": 345534,
+     "wikidata": "Q115",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "HA",
+     "title": "Eritrea",
+     "kind": "place",
+     "views_60d": 311858,
+     "wikidata": "Q986",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "HA",
+     "title": "Somalia",
+     "kind": "place",
+     "views_60d": 234042,
+     "wikidata": "Q1045",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "HA",
+     "title": "Africa",
+     "kind": "place",
+     "views_60d": 229723,
+     "wikidata": "Q15",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "HA",
+     "title": "Djibouti",
+     "kind": "place",
+     "views_60d": 177430,
+     "wikidata": "Q977",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "HA",
+     "title": "Somaliland",
+     "kind": "place",
+     "views_60d": 159400,
+     "wikidata": "Q34754",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "HA",
+     "title": "Socotra",
+     "kind": "place",
+     "views_60d": 100819,
+     "wikidata": "Q82859",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "HA",
+     "title": "Mogadishu",
+     "kind": "place",
+     "views_60d": 72503,
+     "wikidata": "Q2449",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "HA",
+     "title": "Kingdom of Aksum",
+     "kind": "place",
+     "views_60d": 61000,
+     "wikidata": "Q139377",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "HA",
+     "title": "Tigray Region",
+     "kind": "place",
+     "views_60d": 60400,
+     "wikidata": "Q200127",
+     "description": "",
+     "chosen": false
+    }
+   ],
+   "TT": [
+    {
+     "area": "TT",
+     "title": "Good Friday Agreement",
+     "kind": "other",
+     "views_60d": 102921,
+     "wikidata": "Q208958",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "TT",
+     "title": "Ulster",
+     "kind": "place",
+     "views_60d": 76048,
+     "wikidata": "Q93195",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "TT",
+     "title": "Derry",
+     "kind": "place",
+     "views_60d": 70165,
+     "wikidata": "Q163584",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "TT",
+     "title": "Irish Free State",
+     "kind": "place",
+     "views_60d": 55623,
+     "wikidata": "Q31747",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "TT",
+     "title": "Partition of Ireland",
+     "kind": "other",
+     "views_60d": 42488,
+     "wikidata": "Q2638227",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "TT",
+     "title": "Red Hand of Ulster",
+     "kind": "other",
+     "views_60d": 16473,
+     "wikidata": "Q117037",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "TT",
+     "title": "County Fermanagh",
+     "kind": "place",
+     "views_60d": 12961,
+     "wikidata": "Q190678",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "TT",
+     "title": "Belfast Project",
+     "kind": "other",
+     "views_60d": 8121,
+     "wikidata": "Q123460080",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "TT",
+     "title": "Derry/Londonderry name dispute",
+     "kind": "other",
+     "views_60d": 8016,
+     "wikidata": "Q2590177",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "TT",
+     "title": "Paramilitary punishment attacks in Northern Ireland",
+     "kind": "other",
+     "views_60d": 7993,
+     "wikidata": "Q77778275",
+     "description": "",
+     "chosen": false
+    }
+   ],
+   "APL": [
+    {
+     "area": "APL",
+     "title": "Nazi Germany",
+     "kind": "place",
+     "views_60d": 393580,
+     "wikidata": "Q7318",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "APL",
+     "title": "Auschwitz concentration camp",
+     "kind": "place",
+     "views_60d": 154215,
+     "wikidata": "Q7341",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "APL",
+     "title": "Aktion T4",
+     "kind": "other",
+     "views_60d": 43178,
+     "wikidata": "Q154494",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "APL",
+     "title": "Nazi concentration camps",
+     "kind": "other",
+     "views_60d": 39755,
+     "wikidata": "Q328468",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "APL",
+     "title": "History of the Jews in Poland",
+     "kind": "other",
+     "views_60d": 24548,
+     "wikidata": "Q1516823",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "APL",
+     "title": "History of Poland",
+     "kind": "other",
+     "views_60d": 18590,
+     "wikidata": "Q199569",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "APL",
+     "title": "The Eternal Jew (film)",
+     "kind": "other",
+     "views_60d": 10407,
+     "wikidata": "Q165642",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "APL",
+     "title": "Polish areas annexed by Nazi Germany",
+     "kind": "other",
+     "views_60d": 5567,
+     "wikidata": "Q2276549",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "APL",
+     "title": "History of Poland (1939–1945)",
+     "kind": "other",
+     "views_60d": 4901,
+     "wikidata": "Q2552993",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "APL",
+     "title": "Rescue of Jews by Poles during the Holocaust",
+     "kind": "other",
+     "views_60d": 4831,
+     "wikidata": "Q3474378",
+     "description": "",
+     "chosen": false
+    }
+   ],
+   "CNX": [
+    {
+     "area": "CNX",
+     "title": "Ying",
+     "kind": "other",
+     "views_60d": 887306,
+     "wikidata": "Q279299",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "CNX",
+     "title": "China",
+     "kind": "place",
+     "views_60d": 744485,
+     "wikidata": "Q148",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "CNX",
+     "title": "2026 FIFA ASEAN Cup",
+     "kind": "other",
+     "views_60d": 685356,
+     "wikidata": "Q139039620",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "CNX",
+     "title": "Taiwan",
+     "kind": "place",
+     "views_60d": 466231,
+     "wikidata": "Q865",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "CNX",
+     "title": "Hong Kong",
+     "kind": "place",
+     "views_60d": 449265,
+     "wikidata": "Q8646",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "CNX",
+     "title": "TikTok",
+     "kind": "other",
+     "views_60d": 443390,
+     "wikidata": "Q48938223",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "CNX",
+     "title": "The Early Spring",
+     "kind": "other",
+     "views_60d": 406104,
+     "wikidata": "Q138529332",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "CNX",
+     "title": "2026 Nepal–Tibet floods",
+     "kind": "other",
+     "views_60d": 385502,
+     "wikidata": "Q141182413",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "CNX",
+     "title": "Mid-Autumn Festival",
+     "kind": "other",
+     "views_60d": 376050,
+     "wikidata": "Q379519",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "CNX",
+     "title": "Mount Everest",
+     "kind": "place",
+     "views_60d": 369893,
+     "wikidata": "Q513",
+     "description": "",
+     "chosen": false
+    }
+   ],
+   "SOC": [
+    {
+     "area": "SOC",
+     "title": "China",
+     "kind": "place",
+     "views_60d": 744485,
+     "wikidata": "Q148",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "SOC",
+     "title": "Soviet Union",
+     "kind": "place",
+     "views_60d": 551210,
+     "wikidata": "Q15180",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "SOC",
+     "title": "North Korea",
+     "kind": "place",
+     "views_60d": 449864,
+     "wikidata": "Q423",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "SOC",
+     "title": "Vietnam",
+     "kind": "place",
+     "views_60d": 373442,
+     "wikidata": "Q881",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "SOC",
+     "title": "Bangladesh",
+     "kind": "place",
+     "views_60d": 353023,
+     "wikidata": "Q902",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "SOC",
+     "title": "Sri Lanka",
+     "kind": "place",
+     "views_60d": 340817,
+     "wikidata": "Q854",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "SOC",
+     "title": "French Revolution",
+     "kind": "other",
+     "views_60d": 293614,
+     "wikidata": "Q6534",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "SOC",
+     "title": "Nepal",
+     "kind": "place",
+     "views_60d": 266834,
+     "wikidata": "Q837",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "SOC",
+     "title": "Nineteen Eighty-Four",
+     "kind": "other",
+     "views_60d": 259781,
+     "wikidata": "Q208460",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "SOC",
+     "title": "Cuba",
+     "kind": "place",
+     "views_60d": 233165,
+     "wikidata": "Q241",
+     "description": "",
+     "chosen": false
+    }
+   ],
+   "ISL": [
+    {
+     "area": "ISL",
+     "title": "September 11 attacks",
+     "kind": "other",
+     "views_60d": 3110166,
+     "wikidata": "Q10806",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "ISL",
+     "title": "Casualties of the September 11 attacks",
+     "kind": "other",
+     "views_60d": 624779,
+     "wikidata": "Q3489621",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "ISL",
+     "title": "Ottoman Empire",
+     "kind": "place",
+     "views_60d": 501804,
+     "wikidata": "Q12560",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "ISL",
+     "title": "Saudi Arabia",
+     "kind": "place",
+     "views_60d": 469499,
+     "wikidata": "Q851",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "ISL",
+     "title": "Iran",
+     "kind": "place",
+     "views_60d": 462278,
+     "wikidata": "Q794",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "ISL",
+     "title": "United Arab Emirates",
+     "kind": "place",
+     "views_60d": 446444,
+     "wikidata": "Q878",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "ISL",
+     "title": "Pakistan",
+     "kind": "place",
+     "views_60d": 402291,
+     "wikidata": "Q843",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "ISL",
+     "title": "Malaysia",
+     "kind": "place",
+     "views_60d": 383466,
+     "wikidata": "Q833",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "ISL",
+     "title": "Afghanistan",
+     "kind": "place",
+     "views_60d": 375044,
+     "wikidata": "Q889",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "ISL",
+     "title": "Egypt",
+     "kind": "place",
+     "views_60d": 361560,
+     "wikidata": "Q79",
+     "description": "",
+     "chosen": false
+    }
+   ],
+   "CON": [
+    {
+     "area": "CON",
+     "title": "Assassination of Charlie Kirk",
+     "kind": "other",
+     "views_60d": 839879,
+     "wikidata": "Q136210698",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "CON",
+     "title": "X (social network)",
+     "kind": "other",
+     "views_60d": 654627,
+     "wikidata": "Q918",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "CON",
+     "title": "French Revolution",
+     "kind": "other",
+     "views_60d": 293614,
+     "wikidata": "Q6534",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "CON",
+     "title": "Beauty trends among American conservatives",
+     "kind": "other",
+     "views_60d": 284355,
+     "wikidata": "Q136261049",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "CON",
+     "title": "Second presidency of Donald Trump",
+     "kind": "other",
+     "views_60d": 207461,
+     "wikidata": "Q130979044",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "CON",
+     "title": "Red states and blue states",
+     "kind": "other",
+     "views_60d": 191362,
+     "wikidata": "Q1190344",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "CON",
+     "title": "AI slop",
+     "kind": "other",
+     "views_60d": 156036,
+     "wikidata": "Q126720803",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "CON",
+     "title": "Constitution of the United States",
+     "kind": "other",
+     "views_60d": 130053,
+     "wikidata": "Q11698",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "CON",
+     "title": "Donald Trump sexual misconduct allegations",
+     "kind": "other",
+     "views_60d": 121397,
+     "wikidata": "Q27243341",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "CON",
+     "title": "We Are Charlie Kirk",
+     "kind": "other",
+     "views_60d": 111506,
+     "wikidata": "Q137189754",
+     "description": "",
+     "chosen": false
+    }
+   ],
+   "DIS": [
+    {
+     "area": "DIS",
+     "title": "Death of Nolan Wells",
+     "kind": "other",
+     "views_60d": 1006150,
+     "wikidata": "Q140817948",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "DIS",
+     "title": "The Holocaust",
+     "kind": "other",
+     "views_60d": 461529,
+     "wikidata": "Q2763",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "DIS",
+     "title": "Queer",
+     "kind": "other",
+     "views_60d": 180282,
+     "wikidata": "Q51415",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "DIS",
+     "title": "Incel",
+     "kind": "other",
+     "views_60d": 154107,
+     "wikidata": "Q332395",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "DIS",
+     "title": "Jim Crow laws",
+     "kind": "other",
+     "views_60d": 151934,
+     "wikidata": "Q865365",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "DIS",
+     "title": "Rape",
+     "kind": "other",
+     "views_60d": 145557,
+     "wikidata": "Q47092",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "DIS",
+     "title": "Sodomy",
+     "kind": "other",
+     "views_60d": 133211,
+     "wikidata": "Q206426",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "DIS",
+     "title": "Holodomor",
+     "kind": "other",
+     "views_60d": 121578,
+     "wikidata": "Q165058",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "DIS",
+     "title": "Caste system in India",
+     "kind": "other",
+     "views_60d": 121317,
+     "wikidata": "Q130695",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "DIS",
+     "title": "Mein Kampf",
+     "kind": "other",
+     "views_60d": 109809,
+     "wikidata": "Q48244",
+     "description": "",
+     "chosen": false
+    }
+   ],
+   "LIB": [
+    {
+     "area": "LIB",
+     "title": "Pornography",
+     "kind": "other",
+     "views_60d": 804380,
+     "wikidata": "Q291",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "LIB",
+     "title": "French Revolution",
+     "kind": "other",
+     "views_60d": 293614,
+     "wikidata": "Q6534",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "LIB",
+     "title": "Pornographic film",
+     "kind": "other",
+     "views_60d": 218648,
+     "wikidata": "Q185529",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "LIB",
+     "title": "Magna Carta",
+     "kind": "other",
+     "views_60d": 180778,
+     "wikidata": "Q12519",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "LIB",
+     "title": "Second Amendment to the United States Constitution",
+     "kind": "other",
+     "views_60d": 175621,
+     "wikidata": "Q210645",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "LIB",
+     "title": "Constitution of the United States",
+     "kind": "other",
+     "views_60d": 130053,
+     "wikidata": "Q11698",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "LIB",
+     "title": "Firefly (TV series)",
+     "kind": "other",
+     "views_60d": 116780,
+     "wikidata": "Q11622",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "LIB",
+     "title": "Prohibition in the United States",
+     "kind": "other",
+     "views_60d": 101945,
+     "wikidata": "Q399999",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "LIB",
+     "title": "Golden Age of Porn",
+     "kind": "other",
+     "views_60d": 91378,
+     "wikidata": "Q1476435",
+     "description": "",
+     "chosen": false
+    },
+    {
+     "area": "LIB",
+     "title": "Atlas Shrugged",
+     "kind": "other",
+     "views_60d": 77207,
+     "wikidata": "Q374098",
+     "description": "",
+     "chosen": false
+    }
+   ],
+   "REQ": []
+  }
+ }
+}
