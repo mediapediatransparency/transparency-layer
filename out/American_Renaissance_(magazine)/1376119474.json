@@ -2192,6 +2192,48 @@
    "ip": 0.053879,
    "registered": 0.946121
   },
+  "persistence": [
+   {
+    "years": 1,
+    "baseline": 1293227618,
+    "baseline_timestamp": "2025-05-31T13:56:27Z",
+    "words_then": 3578,
+    "still_present": 3544,
+    "share_still_present": 0.990497,
+    "words_now": 3587,
+    "share_of_current": 0.988012
+   },
+   {
+    "years": 2,
+    "baseline": 1245000156,
+    "baseline_timestamp": "2024-09-10T12:55:45Z",
+    "words_then": 3300,
+    "still_present": 3280,
+    "share_still_present": 0.993939,
+    "words_now": 3587,
+    "share_of_current": 0.914413
+   },
+   {
+    "years": 3,
+    "baseline": 1173389297,
+    "baseline_timestamp": "2023-09-02T03:22:39Z",
+    "words_then": 3106,
+    "still_present": 3079,
+    "share_still_present": 0.991307,
+    "words_now": 3587,
+    "share_of_current": 0.858377
+   },
+   {
+    "years": 5,
+    "baseline": 1044952661,
+    "baseline_timestamp": "2021-09-17T23:06:07Z",
+    "words_then": 3186,
+    "still_present": 2990,
+    "share_still_present": 0.938481,
+    "words_now": 3587,
+    "share_of_current": 0.833566
+   }
+  ],
   "survival_article": {
    "48h": {
     "words_added": 14675,
@@ -2262,7 +2304,7 @@
   "sanctioned_editors": 5,
   "rule": "topic bans count on articles in the same topic area; site bans and sockpuppetry findings count everywhere",
   "sanctions_list": {
-   "seed_rows_total": 130,
+   "seed_rows_total": 154,
    "seed_rows_in_topic_area": 0,
    "seed_rows_unresolved_accounts": 0,
    "block_log_snapshot": "2026-11-04"
@@ -2333,7 +2375,22 @@
    "added_before_sanction": true,
    "sanctioned_words_before": 1,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 4,
+   "works_cited": 4,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2004-10-25",
+    "latest_removal": null,
+    "in_place_since": "2004-10-25",
+    "in_place_since_revision": 7093299,
+    "removals": []
+   }
   },
   {
    "id": "lead-2",
@@ -2358,7 +2415,22 @@
    "added_before_sanction": true,
    "sanctioned_words_before": 8,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2016-12-06",
+    "latest_removal": null,
+    "in_place_since": "2016-12-06",
+    "in_place_since_revision": 753275423,
+    "removals": []
+   }
   },
   {
    "id": "lead-3",
@@ -2383,7 +2455,33 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 2,
+    "back_within_24h": 2,
+    "out_24h_or_more": 0,
+    "removing_accounts": 1,
+    "restoring_accounts": 2,
+    "page_wide_removals": 0,
+    "first_added": "2023-09-02",
+    "latest_removal": "2023-12-21",
+    "in_place_since": "2023-12-21",
+    "in_place_since_revision": 1191170716,
+    "removals": [
+     [
+      1191170350,
+      1191170447,
+      0.0
+     ],
+     [
+      1191170585,
+      1191170716,
+      0.0
+     ]
+    ]
+   }
   },
   {
    "id": "lead-4",
@@ -2408,7 +2506,38 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 3,
+    "back_within_24h": 3,
+    "out_24h_or_more": 0,
+    "removing_accounts": 2,
+    "restoring_accounts": 3,
+    "page_wide_removals": 1,
+    "first_added": "2023-09-02",
+    "latest_removal": "2024-08-12",
+    "in_place_since": "2024-08-12",
+    "in_place_since_revision": 1239908993,
+    "removals": [
+     [
+      1191170350,
+      1191170447,
+      0.0
+     ],
+     [
+      1191170585,
+      1191170716,
+      0.0
+     ],
+     [
+      1239907504,
+      1239908993,
+      0.3
+     ]
+    ]
+   }
   },
   {
    "id": "lead-5",
@@ -2433,7 +2562,33 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 2,
+    "back_within_24h": 2,
+    "out_24h_or_more": 0,
+    "removing_accounts": 1,
+    "restoring_accounts": 2,
+    "page_wide_removals": 0,
+    "first_added": "2023-09-02",
+    "latest_removal": "2023-12-21",
+    "in_place_since": "2023-12-21",
+    "in_place_since_revision": 1191170716,
+    "removals": [
+     [
+      1191170350,
+      1191170447,
+      0.0
+     ],
+     [
+      1191170585,
+      1191170716,
+      0.0
+     ]
+    ]
+   }
   },
   {
    "id": "lead-6",
@@ -2458,7 +2613,38 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 3,
+    "back_within_24h": 3,
+    "out_24h_or_more": 0,
+    "removing_accounts": 2,
+    "restoring_accounts": 3,
+    "page_wide_removals": 0,
+    "first_added": "2023-09-02",
+    "latest_removal": "2026-03-09",
+    "in_place_since": "2026-03-09",
+    "in_place_since_revision": 1342455597,
+    "removals": [
+     [
+      1191170350,
+      1191170447,
+      0.0
+     ],
+     [
+      1191170585,
+      1191170716,
+      0.0
+     ],
+     [
+      1342455442,
+      1342455597,
+      0.0
+     ]
+    ]
+   }
   },
   {
    "id": "sec1-1",
@@ -2491,7 +2677,28 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 1,
+    "back_within_24h": 1,
+    "out_24h_or_more": 0,
+    "removing_accounts": 1,
+    "restoring_accounts": 1,
+    "page_wide_removals": 0,
+    "first_added": "2004-10-25",
+    "latest_removal": "2021-02-06",
+    "in_place_since": "2021-02-06",
+    "in_place_since_revision": 1005245763,
+    "removals": [
+     [
+      1005245015,
+      1005245763,
+      0.1
+     ]
+    ]
+   }
   },
   {
    "id": "sec1-2",
@@ -2532,7 +2739,48 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 5,
+    "back_within_24h": 5,
+    "out_24h_or_more": 0,
+    "removing_accounts": 4,
+    "restoring_accounts": 5,
+    "page_wide_removals": 0,
+    "first_added": "2006-06-23",
+    "latest_removal": "2023-02-04",
+    "in_place_since": "2023-02-04",
+    "in_place_since_revision": 1137367914,
+    "removals": [
+     [
+      103720333,
+      103723389,
+      0.3
+     ],
+     [
+      572983304,
+      572993254,
+      2.3
+     ],
+     [
+      573057020,
+      573063764,
+      0.8
+     ],
+     [
+      1005245015,
+      1005245763,
+      0.1
+     ],
+     [
+      1137367857,
+      1137367914,
+      0.0
+     ]
+    ]
+   }
   },
   {
    "id": "sec1-3",
@@ -2573,7 +2821,53 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 2,
+   "works_cited": 2,
+   "history": {
+    "removed": 6,
+    "back_within_24h": 6,
+    "out_24h_or_more": 0,
+    "removing_accounts": 5,
+    "restoring_accounts": 6,
+    "page_wide_removals": 0,
+    "first_added": "2006-06-23",
+    "latest_removal": "2023-12-21",
+    "in_place_since": "2023-12-21",
+    "in_place_since_revision": 1191171013,
+    "removals": [
+     [
+      572983304,
+      572993254,
+      2.3
+     ],
+     [
+      573057020,
+      573063764,
+      0.8
+     ],
+     [
+      708218918,
+      708225889,
+      1.3
+     ],
+     [
+      1005245015,
+      1005245763,
+      0.1
+     ],
+     [
+      1137367857,
+      1137367914,
+      0.0
+     ],
+     [
+      1191170939,
+      1191171013,
+      0.0
+     ]
+    ]
+   }
   },
   {
    "id": "sec1-4",
@@ -2598,7 +2892,22 @@
    "added_before_sanction": true,
    "sanctioned_words_before": 11,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2021-03-03",
+    "latest_removal": null,
+    "in_place_since": "2021-03-03",
+    "in_place_since_revision": 1010123579,
+    "removals": []
+   }
   },
   {
    "id": "sec1-5",
@@ -2649,7 +2958,58 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 7,
+    "back_within_24h": 7,
+    "out_24h_or_more": 0,
+    "removing_accounts": 4,
+    "restoring_accounts": 6,
+    "page_wide_removals": 0,
+    "first_added": "2005-11-18",
+    "latest_removal": "2021-02-06",
+    "in_place_since": "2021-02-06",
+    "in_place_since_revision": 1005245763,
+    "removals": [
+     [
+      286045694,
+      286071092,
+      2.8
+     ],
+     [
+      286090684,
+      286115710,
+      2.7
+     ],
+     [
+      286674422,
+      286677889,
+      0.3
+     ],
+     [
+      572983304,
+      572993254,
+      2.3
+     ],
+     [
+      573057020,
+      573063764,
+      0.8
+     ],
+     [
+      708219034,
+      708225889,
+      1.3
+     ],
+     [
+      1005245015,
+      1005245763,
+      0.1
+     ]
+    ]
+   }
   },
   {
    "id": "sec1-6",
@@ -2674,7 +3034,28 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 1,
+    "back_within_24h": 1,
+    "out_24h_or_more": 0,
+    "removing_accounts": 1,
+    "restoring_accounts": 1,
+    "page_wide_removals": 0,
+    "first_added": "2018-12-05",
+    "latest_removal": "2021-02-06",
+    "in_place_since": "2021-02-06",
+    "in_place_since_revision": 1005245763,
+    "removals": [
+     [
+      1005245015,
+      1005245763,
+      0.1
+     ]
+    ]
+   }
   },
   {
    "id": "sec2-1",
@@ -2703,7 +3084,43 @@
    "added_before_sanction": true,
    "sanctioned_words_before": 5,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 5,
+   "works_cited": 5,
+   "history": {
+    "removed": 4,
+    "back_within_24h": 4,
+    "out_24h_or_more": 0,
+    "removing_accounts": 4,
+    "restoring_accounts": 4,
+    "page_wide_removals": 0,
+    "first_added": "2016-02-08",
+    "latest_removal": "2021-02-06",
+    "in_place_since": "2021-02-06",
+    "in_place_since_revision": 1005245763,
+    "removals": [
+     [
+      703922886,
+      703922965,
+      0.0
+     ],
+     [
+      708219480,
+      708225889,
+      1.2
+     ],
+     [
+      797217377,
+      797224808,
+      0.9
+     ],
+     [
+      1005245015,
+      1005245763,
+      0.1
+     ]
+    ]
+   }
   },
   {
    "id": "sec2-2",
@@ -2728,7 +3145,33 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 2,
+    "back_within_24h": 2,
+    "out_24h_or_more": 0,
+    "removing_accounts": 2,
+    "restoring_accounts": 2,
+    "page_wide_removals": 1,
+    "first_added": "2017-09-27",
+    "latest_removal": "2023-12-21",
+    "in_place_since": "2023-12-21",
+    "in_place_since_revision": 1191171013,
+    "removals": [
+     [
+      1005245015,
+      1005245763,
+      0.1
+     ],
+     [
+      1191170939,
+      1191171013,
+      0.0
+     ]
+    ]
+   }
   },
   {
    "id": "sec2-3",
@@ -2753,7 +3196,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2017-12-19",
+    "latest_removal": null,
+    "in_place_since": "2017-12-19",
+    "in_place_since_revision": 816118387,
+    "removals": []
+   }
   },
   {
    "id": "sec2-4",
@@ -2778,7 +3236,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2017-12-28",
+    "latest_removal": null,
+    "in_place_since": "2017-12-28",
+    "in_place_since_revision": 817432488,
+    "removals": []
+   }
   },
   {
    "id": "sec2-5",
@@ -2811,7 +3284,33 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 2,
+    "back_within_24h": 2,
+    "out_24h_or_more": 0,
+    "removing_accounts": 2,
+    "restoring_accounts": 2,
+    "page_wide_removals": 0,
+    "first_added": "2006-08-09",
+    "latest_removal": "2023-12-21",
+    "in_place_since": "2023-12-21",
+    "in_place_since_revision": 1191171013,
+    "removals": [
+     [
+      865591960,
+      865596627,
+      0.7
+     ],
+     [
+      1191170939,
+      1191171013,
+      0.0
+     ]
+    ]
+   }
   },
   {
    "id": "sec2-6",
@@ -2836,7 +3335,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2020-05-23",
+    "latest_removal": null,
+    "in_place_since": "2020-05-23",
+    "in_place_since_revision": 958339614,
+    "removals": []
+   }
   },
   {
    "id": "sec2-7",
@@ -2869,7 +3383,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2020-06-30",
+    "latest_removal": null,
+    "in_place_since": "2020-06-30",
+    "in_place_since_revision": 965290225,
+    "removals": []
+   }
   },
   {
    "id": "sec3-1",
@@ -2898,7 +3427,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2011-06-24",
+    "latest_removal": null,
+    "in_place_since": "2011-06-24",
+    "in_place_since_revision": 435989786,
+    "removals": []
+   }
   },
   {
    "id": "sec3-2",
@@ -2923,7 +3467,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2018-06-16",
+    "latest_removal": null,
+    "in_place_since": "2018-06-16",
+    "in_place_since_revision": 846148468,
+    "removals": []
+   }
   },
   {
    "id": "sec3-3",
@@ -2954,7 +3513,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2010-02-24",
+    "latest_removal": null,
+    "in_place_since": "2010-02-24",
+    "in_place_since_revision": 345988744,
+    "removals": []
+   }
   },
   {
    "id": "sec3-4",
@@ -2991,7 +3565,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2010-03-11",
+    "latest_removal": null,
+    "in_place_since": "2010-03-11",
+    "in_place_since_revision": 349174093,
+    "removals": []
+   }
   },
   {
    "id": "sec3-5",
@@ -3016,7 +3605,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2018-06-16",
+    "latest_removal": null,
+    "in_place_since": "2018-06-16",
+    "in_place_since_revision": 846147885,
+    "removals": []
+   }
   },
   {
    "id": "sec3-6",
@@ -3041,7 +3645,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2018-06-16",
+    "latest_removal": null,
+    "in_place_since": "2018-06-16",
+    "in_place_since_revision": 846148468,
+    "removals": []
+   }
   },
   {
    "id": "sec3-7",
@@ -3066,7 +3685,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2018-06-16",
+    "latest_removal": null,
+    "in_place_since": "2018-06-16",
+    "in_place_since_revision": 846148468,
+    "removals": []
+   }
   },
   {
    "id": "sec3-8",
@@ -3091,7 +3725,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 3,
+   "works_cited": 3,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2024-07-04",
+    "latest_removal": null,
+    "in_place_since": "2024-07-04",
+    "in_place_since_revision": 1232546498,
+    "removals": []
+   }
   },
   {
    "id": "sec5-1",
@@ -3128,7 +3777,38 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 3,
+    "back_within_24h": 3,
+    "out_24h_or_more": 0,
+    "removing_accounts": 2,
+    "restoring_accounts": 3,
+    "page_wide_removals": 0,
+    "first_added": "2015-09-04",
+    "latest_removal": "2023-12-21",
+    "in_place_since": "2023-12-21",
+    "in_place_since_revision": 1191171013,
+    "removals": [
+     [
+      708220507,
+      708225889,
+      1.0
+     ],
+     [
+      1191170350,
+      1191170447,
+      0.0
+     ],
+     [
+      1191170939,
+      1191171013,
+      0.0
+     ]
+    ]
+   }
   },
   {
    "id": "sec5-2",
@@ -3159,7 +3839,38 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 3,
+    "back_within_24h": 3,
+    "out_24h_or_more": 0,
+    "removing_accounts": 3,
+    "restoring_accounts": 3,
+    "page_wide_removals": 1,
+    "first_added": "2013-01-13",
+    "latest_removal": "2023-12-21",
+    "in_place_since": "2023-12-21",
+    "in_place_since_revision": 1191171013,
+    "removals": [
+     [
+      703347530,
+      703401392,
+      8.8
+     ],
+     [
+      708220507,
+      708225889,
+      1.0
+     ],
+     [
+      1191170939,
+      1191171013,
+      0.0
+     ]
+    ]
+   }
   },
   {
    "id": "sec5-3",
@@ -3184,7 +3895,53 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 6,
+    "back_within_24h": 6,
+    "out_24h_or_more": 0,
+    "removing_accounts": 4,
+    "restoring_accounts": 6,
+    "page_wide_removals": 1,
+    "first_added": "2013-01-13",
+    "latest_removal": "2023-12-21",
+    "in_place_since": "2023-12-21",
+    "in_place_since_revision": 1191171013,
+    "removals": [
+     [
+      572983304,
+      572993254,
+      2.3
+     ],
+     [
+      573057020,
+      573063764,
+      0.8
+     ],
+     [
+      703311718,
+      703330853,
+      2.2
+     ],
+     [
+      703347530,
+      703492573,
+      21.6
+     ],
+     [
+      708220507,
+      708225889,
+      1.0
+     ],
+     [
+      1191170939,
+      1191171013,
+      0.0
+     ]
+    ]
+   }
   },
   {
    "id": "sec5-4",
@@ -3213,7 +3970,33 @@
    "added_before_sanction": true,
    "sanctioned_words_before": 5,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 2,
+    "back_within_24h": 2,
+    "out_24h_or_more": 0,
+    "removing_accounts": 2,
+    "restoring_accounts": 2,
+    "page_wide_removals": 1,
+    "first_added": "2016-02-08",
+    "latest_removal": "2023-12-21",
+    "in_place_since": "2023-12-21",
+    "in_place_since_revision": 1191171013,
+    "removals": [
+     [
+      708220507,
+      708225889,
+      1.0
+     ],
+     [
+      1191170939,
+      1191171013,
+      0.0
+     ]
+    ]
+   }
   },
   {
    "id": "sec5-5",
@@ -3238,7 +4021,33 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 2,
+    "back_within_24h": 2,
+    "out_24h_or_more": 0,
+    "removing_accounts": 2,
+    "restoring_accounts": 2,
+    "page_wide_removals": 1,
+    "first_added": "2016-02-08",
+    "latest_removal": "2023-12-21",
+    "in_place_since": "2023-12-21",
+    "in_place_since_revision": 1191171013,
+    "removals": [
+     [
+      708220507,
+      708225889,
+      1.0
+     ],
+     [
+      1191170939,
+      1191171013,
+      0.0
+     ]
+    ]
+   }
   },
   {
    "id": "sec5-6",
@@ -3267,7 +4076,33 @@
    "added_before_sanction": true,
    "sanctioned_words_before": 39,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 2,
+    "back_within_24h": 2,
+    "out_24h_or_more": 0,
+    "removing_accounts": 2,
+    "restoring_accounts": 2,
+    "page_wide_removals": 1,
+    "first_added": "2016-02-08",
+    "latest_removal": "2023-12-21",
+    "in_place_since": "2023-12-21",
+    "in_place_since_revision": 1191171013,
+    "removals": [
+     [
+      708220507,
+      708225889,
+      1.0
+     ],
+     [
+      1191170939,
+      1191171013,
+      0.0
+     ]
+    ]
+   }
   },
   {
    "id": "sec5-7",
@@ -3302,7 +4137,53 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 6,
+    "back_within_24h": 6,
+    "out_24h_or_more": 0,
+    "removing_accounts": 4,
+    "restoring_accounts": 6,
+    "page_wide_removals": 1,
+    "first_added": "2011-06-24",
+    "latest_removal": "2023-12-21",
+    "in_place_since": "2023-12-21",
+    "in_place_since_revision": 1191171013,
+    "removals": [
+     [
+      572983304,
+      572993254,
+      2.3
+     ],
+     [
+      573057020,
+      573063764,
+      0.8
+     ],
+     [
+      703311718,
+      703330853,
+      2.2
+     ],
+     [
+      703347530,
+      703492573,
+      21.6
+     ],
+     [
+      708220507,
+      708225889,
+      1.0
+     ],
+     [
+      1191170939,
+      1191171013,
+      0.0
+     ]
+    ]
+   }
   },
   {
    "id": "sec5-8",
@@ -3327,7 +4208,33 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 2,
+    "back_within_24h": 2,
+    "out_24h_or_more": 0,
+    "removing_accounts": 2,
+    "restoring_accounts": 2,
+    "page_wide_removals": 1,
+    "first_added": "2016-02-08",
+    "latest_removal": "2023-12-21",
+    "in_place_since": "2023-12-21",
+    "in_place_since_revision": 1191171013,
+    "removals": [
+     [
+      708220507,
+      708225889,
+      1.0
+     ],
+     [
+      1191170939,
+      1191171013,
+      0.0
+     ]
+    ]
+   }
   },
   {
    "id": "sec5-9",
@@ -3352,7 +4259,33 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 2,
+    "back_within_24h": 2,
+    "out_24h_or_more": 0,
+    "removing_accounts": 2,
+    "restoring_accounts": 2,
+    "page_wide_removals": 1,
+    "first_added": "2016-02-08",
+    "latest_removal": "2023-12-21",
+    "in_place_since": "2023-12-21",
+    "in_place_since_revision": 1191171013,
+    "removals": [
+     [
+      708220507,
+      708225889,
+      1.0
+     ],
+     [
+      1191170939,
+      1191171013,
+      0.0
+     ]
+    ]
+   }
   },
   {
    "id": "sec6-1",
@@ -3393,7 +4326,43 @@
    "added_before_sanction": true,
    "sanctioned_words_before": 3,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 4,
+    "back_within_24h": 4,
+    "out_24h_or_more": 0,
+    "removing_accounts": 3,
+    "restoring_accounts": 4,
+    "page_wide_removals": 1,
+    "first_added": "2011-04-07",
+    "latest_removal": "2023-12-21",
+    "in_place_since": "2023-12-21",
+    "in_place_since_revision": 1191171013,
+    "removals": [
+     [
+      572983304,
+      572993254,
+      2.3
+     ],
+     [
+      573057020,
+      573063764,
+      0.8
+     ],
+     [
+      708220507,
+      708225889,
+      1.0
+     ],
+     [
+      1191170939,
+      1191171013,
+      0.0
+     ]
+    ]
+   }
   },
   {
    "id": "sec6-2",
@@ -3422,7 +4391,38 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 3,
+    "back_within_24h": 3,
+    "out_24h_or_more": 0,
+    "removing_accounts": 2,
+    "restoring_accounts": 3,
+    "page_wide_removals": 1,
+    "first_added": "2011-04-07",
+    "latest_removal": "2016-03-04",
+    "in_place_since": "2016-03-04",
+    "in_place_since_revision": 708225889,
+    "removals": [
+     [
+      572983304,
+      572993254,
+      2.3
+     ],
+     [
+      573057020,
+      573063764,
+      0.8
+     ],
+     [
+      708220507,
+      708225889,
+      1.0
+     ]
+    ]
+   }
   },
   {
    "id": "sec6-3",
@@ -3451,7 +4451,38 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 3,
+    "back_within_24h": 3,
+    "out_24h_or_more": 0,
+    "removing_accounts": 2,
+    "restoring_accounts": 3,
+    "page_wide_removals": 1,
+    "first_added": "2011-04-07",
+    "latest_removal": "2016-03-04",
+    "in_place_since": "2016-03-04",
+    "in_place_since_revision": 708225889,
+    "removals": [
+     [
+      572983304,
+      572993254,
+      2.3
+     ],
+     [
+      573057020,
+      573063764,
+      0.8
+     ],
+     [
+      708220507,
+      708225889,
+      1.0
+     ]
+    ]
+   }
   },
   {
    "id": "sec7-1",
@@ -3508,7 +4539,38 @@
    "added_before_sanction": true,
    "sanctioned_words_before": 1,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 2,
+   "works_cited": 2,
+   "history": {
+    "removed": 3,
+    "back_within_24h": 3,
+    "out_24h_or_more": 0,
+    "removing_accounts": 3,
+    "restoring_accounts": 3,
+    "page_wide_removals": 1,
+    "first_added": "2011-01-09",
+    "latest_removal": "2021-06-30",
+    "in_place_since": "2021-06-30",
+    "in_place_since_revision": 1031263846,
+    "removals": [
+     [
+      578567227,
+      578569460,
+      0.3
+     ],
+     [
+      708220507,
+      708225889,
+      1.0
+     ],
+     [
+      1031263818,
+      1031263846,
+      0.0
+     ]
+    ]
+   }
   },
   {
    "id": "sec7-2",
@@ -3537,7 +4599,43 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 4,
+    "back_within_24h": 4,
+    "out_24h_or_more": 0,
+    "removing_accounts": 4,
+    "restoring_accounts": 4,
+    "page_wide_removals": 1,
+    "first_added": "2011-01-09",
+    "latest_removal": "2023-12-21",
+    "in_place_since": "2023-12-21",
+    "in_place_since_revision": 1191171013,
+    "removals": [
+     [
+      578567227,
+      578569460,
+      0.3
+     ],
+     [
+      708220507,
+      708225889,
+      1.0
+     ],
+     [
+      1031263818,
+      1031263846,
+      0.0
+     ],
+     [
+      1191170939,
+      1191171013,
+      0.0
+     ]
+    ]
+   }
   },
   {
    "id": "sec7-3",
@@ -3562,7 +4660,38 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 3,
+    "back_within_24h": 3,
+    "out_24h_or_more": 0,
+    "removing_accounts": 3,
+    "restoring_accounts": 3,
+    "page_wide_removals": 1,
+    "first_added": "2011-01-10",
+    "latest_removal": "2021-06-30",
+    "in_place_since": "2021-06-30",
+    "in_place_since_revision": 1031263846,
+    "removals": [
+     [
+      578567227,
+      578569460,
+      0.3
+     ],
+     [
+      708220507,
+      708225889,
+      1.0
+     ],
+     [
+      1031263818,
+      1031263846,
+      0.0
+     ]
+    ]
+   }
   },
   {
    "id": "sec7-4",
@@ -3587,7 +4716,38 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 3,
+    "back_within_24h": 3,
+    "out_24h_or_more": 0,
+    "removing_accounts": 3,
+    "restoring_accounts": 3,
+    "page_wide_removals": 1,
+    "first_added": "2011-01-10",
+    "latest_removal": "2021-06-30",
+    "in_place_since": "2021-06-30",
+    "in_place_since_revision": 1031263846,
+    "removals": [
+     [
+      578567227,
+      578569460,
+      0.3
+     ],
+     [
+      708220507,
+      708225889,
+      1.0
+     ],
+     [
+      1031263818,
+      1031263846,
+      0.0
+     ]
+    ]
+   }
   },
   {
    "id": "sec7-5",
@@ -3616,7 +4776,38 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 3,
+    "back_within_24h": 3,
+    "out_24h_or_more": 0,
+    "removing_accounts": 3,
+    "restoring_accounts": 3,
+    "page_wide_removals": 1,
+    "first_added": "2011-01-12",
+    "latest_removal": "2021-06-30",
+    "in_place_since": "2021-06-30",
+    "in_place_since_revision": 1031263846,
+    "removals": [
+     [
+      578567227,
+      578569460,
+      0.3
+     ],
+     [
+      708220507,
+      708225889,
+      1.0
+     ],
+     [
+      1031263818,
+      1031263846,
+      0.0
+     ]
+    ]
+   }
   },
   {
    "id": "sec7-6",
@@ -3645,7 +4836,33 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 2,
+    "back_within_24h": 2,
+    "out_24h_or_more": 0,
+    "removing_accounts": 2,
+    "restoring_accounts": 2,
+    "page_wide_removals": 1,
+    "first_added": "2011-01-12",
+    "latest_removal": "2021-06-30",
+    "in_place_since": "2021-06-30",
+    "in_place_since_revision": 1031263846,
+    "removals": [
+     [
+      708220507,
+      708225889,
+      1.0
+     ],
+     [
+      1031263818,
+      1031263846,
+      0.0
+     ]
+    ]
+   }
   }
  ],
  "inputs": {
@@ -3654,7 +4871,9 @@
   "wikiwho_rev_content": "https://wikiwho-api.wmcloud.org/en/api/v1.0.0-beta/rev_content/rev_id/1376119474/",
   "wikiwho_all_content": "https://wikiwho-api.wmcloud.org/en/api/v1.0.0-beta/all_content/page_id/1102214/",
   "history_revisions": 1299,
-  "sanctions_csv_sha256": "83c3c25da3d1338292d21c2b407f4fdc4aee5a973a0fa7ac6bb32e407de325dd"
+  "sanctions_csv_sha256": "46ecf8bd2945ef432b9a5a9afcd72502654439f2b78b039f168883e847475a22",
+  "source_names_sha256": "1e0c7263959b899f0a4dd2a19e5f77b3d542f7e961d864fcb790974eb1ddbad0",
+  "books_sha256": "c82c512cf1e16abc1ab47c9aa152ce4df80360300d3c17f57b443a06ccaf46f6"
  },
  "quality": {
   "wikiwho_tokens": 6576,
@@ -3671,12 +4890,215 @@
   "distinct_sources": 22,
   "editors_adding_citations": 19,
   "citation_only_editors": 6,
+  "flags": {
+   "opinion": 0,
+   "no_link": 1,
+   "book_without_page": 0,
+   "not_english": 0,
+   "not_english_no_quote": 0,
+   "dead_link_no_archive": 0,
+   "paywall_or_registration": 3
+  },
+  "flags_by_editor": {
+   "Editor 28": {
+    "citations": 5,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 6": {
+    "citations": 3,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 1
+   },
+   "Editor 21": {
+    "citations": 3,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 12": {
+    "citations": 2,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 1
+   },
+   "Editor 13": {
+    "citations": 2,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 42": {
+    "citations": 2,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 1": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 7": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 8": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 9": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 10": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 17": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 19": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 52": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 53": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 1
+   },
+   "Editor 54": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 55": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 56": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 1,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 57": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   }
+  },
   "list": [
    {
     "source": "adl.org",
     "name_as_cited": "Anti-Defamation League",
     "citations": 3,
     "lead_citations": 1,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 42": 2,
      "Editor 13": 1
@@ -3687,6 +5109,10 @@
     "name_as_cited": "The Washington Post",
     "citations": 3,
     "lead_citations": 1,
+    "opinion_citations": 0,
+    "flags": {
+     "paywall_or_registration": 2
+    },
     "added_by": {
      "Editor 6": 1,
      "Editor 7": 1,
@@ -3698,6 +5124,8 @@
     "name_as_cited": "Fox News",
     "citations": 2,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 12": 1,
      "Editor 28": 1
@@ -3708,6 +5136,8 @@
     "name_as_cited": "Pittsburgh Post-Gazette",
     "citations": 2,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 13": 1,
      "Editor 52": 1
@@ -3718,6 +5148,8 @@
     "name_as_cited": "Intelligence Report",
     "citations": 2,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 54": 1,
      "Editor 57": 1
@@ -3728,6 +5160,8 @@
     "name_as_cited": "The Guardian",
     "citations": 2,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 21": 1,
      "Editor 28": 1
@@ -3738,6 +5172,8 @@
     "name_as_cited": "American Renaissance",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 19": 1
     }
@@ -3747,6 +5183,8 @@
     "name_as_cited": "The Charlotte Observer",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 55": 1
     }
@@ -3756,6 +5194,8 @@
     "name_as_cited": "CNET",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 10": 1
     }
@@ -3765,6 +5205,8 @@
     "name_as_cited": "CNN",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 28": 1
     }
@@ -3774,15 +5216,19 @@
     "name_as_cited": "The Christian Science Monitor",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 28": 1
     }
    },
    {
     "source": "fortune.com",
-    "name_as_cited": "[[Fortune (magazine)",
+    "name_as_cited": "Fortune",
     "citations": 1,
     "lead_citations": 1,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 6": 1
     }
@@ -3792,6 +5238,8 @@
     "name_as_cited": "WXMI",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 21": 1
     }
@@ -3801,6 +5249,8 @@
     "name_as_cited": "Cambridge University Press",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 8": 1
     }
@@ -3810,6 +5260,10 @@
     "name_as_cited": "Farrar, Straus and Giroux",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {
+     "paywall_or_registration": 1
+    },
     "added_by": {
      "Editor 53": 1
     }
@@ -3819,6 +5273,10 @@
     "name_as_cited": "The Journal of Blacks in Higher Education",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {
+     "no_link": 1
+    },
     "added_by": {
      "Editor 56": 1
     }
@@ -3828,6 +5286,8 @@
     "name_as_cited": "New York Daily News",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 28": 1
     }
@@ -3837,6 +5297,8 @@
     "name_as_cited": "The Public Eye Quarterly",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 21": 1
     }
@@ -3846,15 +5308,19 @@
     "name_as_cited": "Politico",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 9": 1
     }
    },
    {
     "source": "slate.com",
-    "name_as_cited": "[[Slate (magazine)",
+    "name_as_cited": "Slate",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 6": 1
     }
@@ -3864,6 +5330,8 @@
     "name_as_cited": "The Tennessean",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 1": 1
     }
@@ -3873,11 +5341,4377 @@
     "name_as_cited": "The Atlantic Wire",
     "citations": 1,
     "lead_citations": 1,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 17": 1
     }
    }
-  ]
+  ],
+  "citations_naming_an_author": 23,
+  "authors": [
+   {
+    "name": "Dennis Roddy",
+    "wikipedia": null,
+    "citations": 2,
+    "lead_citations": 0,
+    "works": 2
+   },
+   {
+    "name": "Adam Edelman",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Carol M Swain",
+    "wikipedia": "Carol M. Swain",
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Christopher Carbone",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Claire Groden",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 1,
+    "works": 1
+   },
+   {
+    "name": "Craig Timberg",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "David Wright",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Elspeth Reeve",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 1,
+    "works": 1
+   },
+   {
+    "name": "Greg Sargent",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Hayley Tsukayama",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Heidi Beirich",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Jason Wilson",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Jim Morrill",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Kenneth P Vogel",
+    "wikipedia": "Kenneth P. Vogel",
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Leonard Zeskind",
+    "wikipedia": "Leonard Zeskind",
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Mark Potok",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Martin Gelin",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Minkowitz, Donna",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Natalie Allison",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Patrick Summers",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Patrik Jonsson",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Peter Holley",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 1,
+    "works": 1
+   },
+   {
+    "name": "Richard Nieva",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Wilson, Jason",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   }
+  ],
+  "items": [
+   {
+    "id": "doi:10.2307/2999023",
+    "source": "name:the journal of blacks in higher education",
+    "citations": 1,
+    "flags": [
+     "no_link"
+    ],
+    "added_by": {
+     "Editor 56": 1
+    }
+   },
+   {
+    "id": "isbn:9780521808866",
+    "source": "name:cambridge university press",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en",
+    "added_by": {
+     "Editor 8": 1
+    }
+   },
+   {
+    "id": "isbn:9781429959339",
+    "source": "name:farrar, straus and giroux",
+    "citations": 1,
+    "flags": [
+     "paywall_or_registration"
+    ],
+    "added_by": {
+     "Editor 53": 1
+    }
+   },
+   {
+    "id": "url:adl.org/news/article/extremism-in-america-jared-tayloramerican-renaissance",
+    "source": "adl.org",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 42": 1
+    }
+   },
+   {
+    "id": "url:adl.org/sites/default/files/documents/assets/pdf/combating-hate/jared-taylor-extremism-in-america.pdf",
+    "source": "adl.org",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 13": 1
+    }
+   },
+   {
+    "id": "url:amren.com/author/gavinmcinnes",
+    "source": "amren.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 19": 1
+    }
+   },
+   {
+    "id": "url:archive.adl.org/Learn/Ext_US/jared_taylor/ideology.asp?LEARN_Cat=Extremism&LEARN_SubCat=Extremism_in_America&xpicked=2&item=taylor",
+    "source": "adl.org",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 42": 1
+    }
+   },
+   {
+    "id": "url:charlotteobserver.com/2011/01/29/2018426/white-nationalist-leader-to-discuss.html",
+    "source": "charlotteobserver.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 55": 1
+    }
+   },
+   {
+    "id": "url:cnet.com/news/youtube-bans-white-supremacists-including-david-duke-and-richard-spencer",
+    "source": "cnet.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 10": 1
+    }
+   },
+   {
+    "id": "url:cnn.com/2016/01/11/politics/white-nationalist-robocall-campaign",
+    "source": "cnn.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 28": 1
+    }
+   },
+   {
+    "id": "url:csmonitor.com/USA/2011/0109/American-Renaissance-Was-Jared-Lee-Loughner-tied-to-anti-immigrant-group",
+    "source": "csmonitor.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 28": 1
+    }
+   },
+   {
+    "id": "url:fortune.com/2016/01/12/white-supremacists-trump",
+    "source": "fortune.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 6": 1
+    }
+   },
+   {
+    "id": "url:fox17.com/news/local/white-advocacy-group-american-renaissance-hosting-annual-conference-near-nashville",
+    "source": "fox17.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-GB",
+    "added_by": {
+     "Editor 21": 1
+    }
+   },
+   {
+    "id": "url:foxnews.com/politics/american-renaissance-denies-dhs-charges-any-affiliation-with-shooter",
+    "source": "foxnews.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 28": 1
+    }
+   },
+   {
+    "id": "url:foxnews.com/tech/twitters-purge-of-far-right-accounts-sparks-backlash-praise-and-confusion",
+    "source": "foxnews.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 12": 1
+    }
+   },
+   {
+    "id": "url:nydailynews.com/news/politics/white-nationalist-group-calling-iowa-vote-trump-article-1.2492879",
+    "source": "nydailynews.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 28": 1
+    }
+   },
+   {
+    "id": "url:politicalresearch.org/sites/default/files/2018-10/PE_Fall2017_web.pdf",
+    "source": "politicalresearch.org",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 21": 1
+    }
+   },
+   {
+    "id": "url:politico.com/story/2011/01/loughners-supremacists-tie-debunked-047438",
+    "source": "politico.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 9": 1
+    }
+   },
+   {
+    "id": "url:post-gazette.com/life/dennis-roddy/2005/01/30/Weird-Science/stories/200501300217",
+    "source": "post-gazette.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 52": 1
+    }
+   },
+   {
+    "id": "url:post-gazette.com/pg/05023/446341.stm",
+    "source": "post-gazette.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 13": 1
+    }
+   },
+   {
+    "id": "url:slate.com/news-and-politics/2014/11/jared-taylor-richard-spencer-and-american-white-supremacists-in-europe-why-this-racist-movement-is-reaching-out-to-europes-far-right.html",
+    "source": "slate.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 6": 1
+    }
+   },
+   {
+    "id": "url:splcenter.org/fighting-hate/intelligence-report/2006/schism-over-anti-semitism-divides-key-white-nationalist-group-american-renaissance",
+    "source": "splcenter.org",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 57": 1
+    }
+   },
+   {
+    "id": "url:splcenter.org/fighting-hate/intelligence-report/2015/active-hate-groups-united-states-2014",
+    "source": "splcenter.org",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 54": 1
+    }
+   },
+   {
+    "id": "url:tennessean.com/story/news/2018/04/27/american-renaissance-conference-nashville-tennessee-montgomery-bell-state-park-antifa-amren/549608002",
+    "source": "tennessean.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:theatlantic.com/politics/archive/2012/04/racist-writers-are-right-feel-threatened/329438",
+    "source": "theatlantic.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 17": 1
+    }
+   },
+   {
+    "id": "url:theguardian.com/us-news/2016/aug/26/jared-taylor-alt-right-clinton-trump",
+    "source": "theguardian.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 28": 1
+    }
+   },
+   {
+    "id": "url:theguardian.com/world/2024/jan/31/rightwing-activist-christopher-rufo-ties-scientific-racism-journal",
+    "source": "theguardian.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-GB",
+    "added_by": {
+     "Editor 21": 1
+    }
+   },
+   {
+    "id": "url:voices.washingtonpost.com/plum-line/2011/01/dhs_has_not_determined_possibl.html",
+    "source": "washingtonpost.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 7": 1
+    }
+   },
+   {
+    "id": "url:washingtonpost.com/news/post-politics/wp/2016/01/12/why-this-leading-white-nationalist-is-urging-iowa-voters-to-back-donald-trump",
+    "source": "washingtonpost.com",
+    "citations": 1,
+    "flags": [
+     "paywall_or_registration"
+    ],
+    "added_by": {
+     "Editor 6": 1
+    }
+   },
+   {
+    "id": "url:washingtonpost.com/news/the-switch/wp/2017/12/18/twitter-purge-suspends-account-of-far-right-leader-who-was-retweeted-by-trump",
+    "source": "washingtonpost.com",
+    "citations": 1,
+    "flags": [
+     "paywall_or_registration"
+    ],
+    "added_by": {
+     "Editor 12": 1
+    }
+   }
+  ],
+  "bundles": {
+   "sentences_with_footnotes": 26,
+   "sentences_by_works_cited": {
+    "1": 21,
+    "2-4": 4,
+    "5-9": 1,
+    "10 or more": 0
+   },
+   "largest": [
+    {
+     "sentence": "sec2-1",
+     "footnotes": 5,
+     "works": 5
+    }
+   ]
+  }
+ },
+ "changes": {
+  "words_removed": 29070,
+  "words_removed_later_restored": 17955,
+  "source_links_removed": 306,
+  "editors_removing": 419,
+  "listed_terms": {
+   "inserted": {
+    "WTW: contentious labels": 44,
+    "WTW: editorializing": 11,
+    "WTW: euphemisms": 8,
+    "WTW: expressions of doubt": 24,
+    "WTW: puffery": 20,
+    "WTW: synonyms for said": 49,
+    "WTW: unsupported attributions": 4,
+    "contested: Russia and Ukraine": 11,
+    "contested: mass-atrocity and legal terms": 9,
+    "contested: political labels": 58,
+    "contested: race and intelligence": 46,
+    "contested: stances on Israel, Jews and Muslims": 15,
+    "contested: terms for armed groups and their members": 2,
+    "contested: terms for deaths": 2,
+    "contested: terms for violent events": 5,
+    "contested: territory and control": 2,
+    "contested: truth claims": 7
+   },
+   "removed": {
+    "WTW: contentious labels": 136,
+    "WTW: editorializing": 28,
+    "WTW: euphemisms": 7,
+    "WTW: expressions of doubt": 40,
+    "WTW: puffery": 38,
+    "WTW: synonyms for said": 83,
+    "WTW: unsupported attributions": 23,
+    "contested: Russia and Ukraine": 32,
+    "contested: mass-atrocity and legal terms": 35,
+    "contested: political labels": 100,
+    "contested: race and intelligence": 73,
+    "contested: stances on Israel, Jews and Muslims": 32,
+    "contested: terms for armed groups and their members": 5,
+    "contested: terms for deaths": 5,
+    "contested: terms for violent events": 11,
+    "contested: territory and control": 4,
+    "contested: truth claims": 15
+   }
+  },
+  "lists": {
+   "words_to_watch": {
+    "revision": 1382059772,
+    "url": "https://en.wikipedia.org/w/index.php?oldid=1382059772",
+    "sha256": "21e24e2898750322164b24947621630845d75cf8dd5adf3ec8cd860152449ea3"
+   },
+   "contested_terms": {
+    "sha256": "944606776be20b6b77dceb3ee5f6a29f8f5e196bf93cc16a4b6f2db6efe600c1"
+   }
+  },
+  "editors": [
+   {
+    "label": "Editor 58",
+    "words_removed": 2182,
+    "others_words_removed": 2182,
+    "words_removed_later_restored": 1564,
+    "removing_revisions": 18,
+    "sources_removed": {
+     "amren.com": 8
+    },
+    "terms_inserted": {
+     "WTW: contentious labels": {
+      "pseudo-": 1,
+      "racist": 1
+     },
+     "WTW: puffery": {
+      "leading": 1
+     }
+    },
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "controversial": 12,
+      "pseudo-": 1
+     },
+     "WTW: editorializing": {
+      "clearly": 8,
+      "only": 11
+     },
+     "WTW: puffery": {
+      "prominent": 1
+     },
+     "WTW: synonyms for said": {
+      "claim": 4
+     },
+     "contested: political labels": {
+      "communist": 5
+     },
+     "contested: race and intelligence": {
+      "racialist": 1
+     },
+     "contested: terms for violent events": {
+      "massacre": 5
+     },
+     "contested: truth claims": {
+      "baseless": 3,
+      "propaganda": 3
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=227713004",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=227669727",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=226718456",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=226724206",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=226860985"
+    ]
+   },
+   {
+    "label": "Editor 59",
+    "words_removed": 2031,
+    "others_words_removed": 2031,
+    "words_removed_later_restored": 2031,
+    "removing_revisions": 6,
+    "sources_removed": {
+     "amren.com": 5,
+     "adl.org": 2,
+     "amnation.com": 2,
+     "washingtonpost.com": 2,
+     "archive.org": 1,
+     "cnn.com": 1,
+     "fortune.com": 1,
+     "foxnews.com": 1,
+     "nydailynews.com": 1,
+     "politico.com": 1,
+     "post-gazette.com": 1,
+     "secularright.org": 1,
+     "slate.com": 1,
+     "splcenter.org": 1,
+     "stormfront.org": 1,
+     "theatlanticwire.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "racist": 2
+     },
+     "WTW: expressions of doubt": {
+      "accused": 1,
+      "alleged": 2
+     },
+     "WTW: puffery": {
+      "great": 1,
+      "leading": 1
+     },
+     "WTW: synonyms for said": {
+      "claim": 5,
+      "deny": 3
+     },
+     "WTW: unsupported attributions": {
+      "has been described as": 1
+     },
+     "contested: Russia and Ukraine": {
+      "separatists": 1
+     },
+     "contested: mass-atrocity and legal terms": {
+      "holocaust": 2
+     },
+     "contested: political labels": {
+      "extreme right": 1,
+      "neo-nazi": 1
+     },
+     "contested: race and intelligence": {
+      "racialist": 1
+     },
+     "contested: stances on Israel, Jews and Muslims": {
+      "anti-semitic": 1,
+      "anti-semitism": 3,
+      "zionist": 1
+     },
+     "contested: terms for armed groups and their members": {
+      "gunman": 1
+     },
+     "contested: terms for deaths": {
+      "killed": 1
+     },
+     "contested: terms for violent events": {
+      "attack": 1
+     },
+     "contested: truth claims": {
+      "debunked": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=708220507",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=708218780",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=708219480",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=708219034",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=708218918"
+    ]
+   },
+   {
+    "label": "Editor 60",
+    "words_removed": 1361,
+    "others_words_removed": 1361,
+    "words_removed_later_restored": 493,
+    "removing_revisions": 2,
+    "sources_removed": {
+     "amren.com": 17,
+     "amnation.com": 2,
+     "post-gazette.com": 2,
+     "adl.org": 1,
+     "searchlightmagazine.com": 1,
+     "secularright.org": 1,
+     "wwwamren.com": 1,
+     "youtube.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "racist": 2
+     },
+     "WTW: editorializing": {
+      "only": 1
+     },
+     "WTW: euphemisms": {
+      "challenge": 1
+     },
+     "WTW: puffery": {
+      "best": 1,
+      "notable": 1,
+      "prominent": 2
+     },
+     "WTW: synonyms for said": {
+      "claim": 1,
+      "deny": 1
+     },
+     "contested: race and intelligence": {
+      "race realism": 2,
+      "racialist": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=813269089",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=813269165"
+    ]
+   },
+   {
+    "label": "Editor 57",
+    "words_removed": 1266,
+    "others_words_removed": 1256,
+    "words_removed_later_restored": 526,
+    "removing_revisions": 12,
+    "sources_removed": {
+     "amren.com": 12,
+     "wwwamren.com": 2,
+     "youtube.com": 2,
+     "dailycaller.com": 1,
+     "doi.org": 1,
+     "google.fr": 1
+    },
+    "terms_inserted": {
+     "contested: political labels": {
+      "conspiracy theory": 1
+     },
+     "contested: stances on Israel, Jews and Muslims": {
+      "anti-semitism": 1,
+      "zionist": 1
+     },
+     "contested: territory and control": {
+      "occupation": 1
+     }
+    },
+    "terms_removed": {
+     "WTW: euphemisms": {
+      "challenge": 1
+     },
+     "WTW: puffery": {
+      "best": 2,
+      "notable": 2
+     },
+     "contested: political labels": {
+      "alt-right": 2
+     },
+     "contested: territory and control": {
+      "occupied": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=814955865",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=814969108",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=958339122",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=777072290",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1104979510"
+    ]
+   },
+   {
+    "label": "Editor 61",
+    "words_removed": 1255,
+    "others_words_removed": 1250,
+    "words_removed_later_restored": 1250,
+    "removing_revisions": 3,
+    "sources_removed": {
+     "adl.org": 8,
+     "amren.com": 2,
+     "post-gazette.com": 2,
+     "splcenter.org": 2
+    },
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "racist": 4
+     },
+     "WTW: puffery": {
+      "great": 2
+     },
+     "WTW: unsupported attributions": {
+      "has been described as": 2
+     },
+     "contested: Russia and Ukraine": {
+      "separatists": 2
+     },
+     "contested: mass-atrocity and legal terms": {
+      "holocaust": 4
+     },
+     "contested: political labels": {
+      "neo-nazi": 2
+     },
+     "contested: stances on Israel, Jews and Muslims": {
+      "anti-semitism": 2
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=573057020",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=572983304",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=572982623"
+    ]
+   },
+   {
+    "label": "Editor 3",
+    "words_removed": 1152,
+    "others_words_removed": 1141,
+    "words_removed_later_restored": 532,
+    "removing_revisions": 32,
+    "sources_removed": {
+     "amren.com": 8,
+     "adl.org": 1,
+     "amnation.com": 1,
+     "nationalpolicyinstitute.org": 1,
+     "onepeoplesproject.com": 1,
+     "splcenter.org": 1,
+     "theatlanticwire.com": 1,
+     "youtube.com": 1
+    },
+    "terms_inserted": {
+     "WTW: contentious labels": {
+      "racist": 2
+     }
+    },
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "racist": 4
+     },
+     "WTW: puffery": {
+      "celebrated": 2
+     },
+     "WTW: synonyms for said": {
+      "claim": 1,
+      "confirm": 1,
+      "deny": 1
+     },
+     "WTW: unsupported attributions": {
+      "has been described as": 1
+     },
+     "contested: political labels": {
+      "extreme right": 1,
+      "nazi": 1,
+      "radical left": 1
+     },
+     "contested: race and intelligence": {
+      "race realist": 1
+     },
+     "contested: stances on Israel, Jews and Muslims": {
+      "anti-semitism": 2
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=574721193",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=703923029",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=574721531",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=345442766",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1105544528"
+    ]
+   },
+   {
+    "label": "Editor 7",
+    "words_removed": 1122,
+    "others_words_removed": 1121,
+    "words_removed_later_restored": 105,
+    "removing_revisions": 22,
+    "sources_removed": {
+     "amren.com": 16,
+     "nationalpolicyinstitute.org": 2,
+     "amnation.com": 1,
+     "charlotteobserver.com": 1,
+     "cnn.com": 1,
+     "occidentaldissent.com": 1,
+     "sovereignty.org.uk": 1,
+     "vdare.com": 1,
+     "washingtonpost.com": 1
+    },
+    "terms_inserted": {
+     "WTW: expressions of doubt": {
+      "accused": 1
+     },
+     "WTW: synonyms for said": {
+      "assert": 2,
+      "deny": 1
+     },
+     "contested: race and intelligence": {
+      "racialist": 1
+     },
+     "contested: stances on Israel, Jews and Muslims": {
+      "anti-semitic": 1,
+      "zionist": 1
+     },
+     "contested: terms for armed groups and their members": {
+      "gunman": 1
+     },
+     "contested: terms for violent events": {
+      "attack": 1
+     }
+    },
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "racist": 1
+     },
+     "WTW: editorializing": {
+      "only": 1
+     },
+     "WTW: expressions of doubt": {
+      "accused": 1,
+      "alleged": 2,
+      "purported": 1
+     },
+     "WTW: puffery": {
+      "prominent": 1
+     },
+     "WTW: synonyms for said": {
+      "assert": 1,
+      "deny": 1
+     },
+     "contested: mass-atrocity and legal terms": {
+      "holocaust": 1
+     },
+     "contested: political labels": {
+      "far-right": 1
+     },
+     "contested: stances on Israel, Jews and Muslims": {
+      "anti-semitic": 1
+     },
+     "contested: terms for violent events": {
+      "attack": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=412278031",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=149509090",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=172254156",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=412149802",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=406955630"
+    ]
+   },
+   {
+    "label": "Editor 62",
+    "words_removed": 1095,
+    "others_words_removed": 1095,
+    "words_removed_later_restored": 1095,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "adl.org": 2,
+     "csmonitor.com": 2,
+     "foxnews.com": 2,
+     "splcenter.org": 2,
+     "washingtonpost.com": 2,
+     "archive.org": 1,
+     "politico.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "racist": 2
+     },
+     "WTW: expressions of doubt": {
+      "accused": 1,
+      "alleged": 2,
+      "supposed": 1
+     },
+     "WTW: puffery": {
+      "great": 1
+     },
+     "WTW: synonyms for said": {
+      "claim": 2,
+      "deny": 4
+     },
+     "contested: mass-atrocity and legal terms": {
+      "holocaust": 2
+     },
+     "contested: political labels": {
+      "alt-right": 1,
+      "conspiracy theory": 1,
+      "extreme right": 1,
+      "neo-nazi": 2
+     },
+     "contested: stances on Israel, Jews and Muslims": {
+      "anti-semitic": 1,
+      "anti-semitism": 4,
+      "zionist": 2
+     },
+     "contested: terms for armed groups and their members": {
+      "gunman": 1
+     },
+     "contested: terms for deaths": {
+      "killed": 1
+     },
+     "contested: territory and control": {
+      "occupation": 1
+     },
+     "contested: truth claims": {
+      "debunked": 3
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1231886258"
+    ]
+   },
+   {
+    "label": "Editor 63",
+    "words_removed": 1069,
+    "others_words_removed": 1069,
+    "words_removed_later_restored": 1069,
+    "removing_revisions": 3,
+    "sources_removed": {
+     "splcenter.org": 3,
+     "csmonitor.com": 2,
+     "slate.com": 2,
+     "theguardian.com": 1,
+     "washingtonpost.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "pseudo-": 2,
+      "racist": 3
+     },
+     "WTW: expressions of doubt": {
+      "supposed": 1
+     },
+     "WTW: puffery": {
+      "leading": 1
+     },
+     "WTW: synonyms for said": {
+      "deny": 1
+     },
+     "contested: mass-atrocity and legal terms": {
+      "holocaust": 2
+     },
+     "contested: political labels": {
+      "alt-right": 6,
+      "conspiracy theory": 1,
+      "extreme right": 1,
+      "far-right": 3,
+      "neo-nazi": 2
+     },
+     "contested: stances on Israel, Jews and Muslims": {
+      "anti-semitism": 2,
+      "zionist": 1
+     },
+     "contested: territory and control": {
+      "occupation": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1191170939",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1191170350",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1191170585"
+    ]
+   },
+   {
+    "label": "Editor 64",
+    "words_removed": 850,
+    "others_words_removed": 850,
+    "words_removed_later_restored": 842,
+    "removing_revisions": 11,
+    "sources_removed": {
+     "splcenter.org": 6
+    },
+    "terms_inserted": {
+     "contested: race and intelligence": {
+      "race realism": 3,
+      "race realist": 1
+     }
+    },
+    "terms_removed": {
+     "contested: stances on Israel, Jews and Muslims": {
+      "anti-semitism": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=703347530",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=703402647",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=703311718",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=703401840",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=703232264"
+    ]
+   },
+   {
+    "label": "Editor 17",
+    "words_removed": 806,
+    "others_words_removed": 634,
+    "words_removed_later_restored": 427,
+    "removing_revisions": 20,
+    "sources_removed": {
+     "amren.com": 2,
+     "post-gazette.com": 2,
+     "splcenter.org": 2,
+     "archive.org": 1,
+     "nydailynews.com": 1
+    },
+    "terms_inserted": {
+     "WTW: contentious labels": {
+      "racist": 4
+     },
+     "WTW: unsupported attributions": {
+      "has been described as": 1
+     },
+     "contested: mass-atrocity and legal terms": {
+      "genocide": 1
+     }
+    },
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "racist": 1
+     },
+     "WTW: editorializing": {
+      "only": 2
+     },
+     "WTW: euphemisms": {
+      "challenge": 1
+     },
+     "WTW: expressions of doubt": {
+      "alleged": 1
+     },
+     "WTW: puffery": {
+      "notable": 1
+     },
+     "WTW: synonyms for said": {
+      "deny": 2
+     },
+     "contested: race and intelligence": {
+      "race realism": 5,
+      "race realist": 2,
+      "racialist": 1
+     },
+     "contested: stances on Israel, Jews and Muslims": {
+      "anti-semitism": 1
+     },
+     "contested: terms for violent events": {
+      "attack": 1
+     },
+     "contested: truth claims": {
+      "propaganda": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=703492573",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=697154181",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=697154016",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=566230542",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=537331037"
+    ]
+   },
+   {
+    "label": "Editor 65",
+    "words_removed": 731,
+    "others_words_removed": 731,
+    "words_removed_later_restored": 731,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "archive.org": 3,
+     "cnn.com": 2,
+     "theguardian.com": 2,
+     "adl.org": 1,
+     "nydailynews.com": 1,
+     "post-gazette.com": 1,
+     "slate.com": 1
+    },
+    "terms_inserted": {
+     "WTW: euphemisms": {
+      "challenge": 1
+     },
+     "WTW: puffery": {
+      "prominent": 1
+     },
+     "WTW: unsupported attributions": {
+      "it is considered": 1
+     },
+     "contested: race and intelligence": {
+      "race realist": 2
+     }
+    },
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "racist": 2
+     },
+     "contested: Russia and Ukraine": {
+      "separatists": 1
+     },
+     "contested: mass-atrocity and legal terms": {
+      "holocaust": 2
+     },
+     "contested: political labels": {
+      "alt-right": 4,
+      "far-right": 2,
+      "neo-nazi": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1005245015"
+    ]
+   },
+   {
+    "label": "Editor 16",
+    "words_removed": 717,
+    "others_words_removed": 573,
+    "words_removed_later_restored": 39,
+    "removing_revisions": 17,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: contentious labels": {
+      "pseudo-": 1
+     },
+     "WTW: synonyms for said": {
+      "assert": 1,
+      "claim": 1,
+      "explain": 2
+     },
+     "contested: Russia and Ukraine": {
+      "separatist": 1,
+      "separatists": 1
+     },
+     "contested: mass-atrocity and legal terms": {
+      "holocaust": 1
+     },
+     "contested: political labels": {
+      "fascist": 1
+     }
+    },
+    "terms_removed": {
+     "WTW: editorializing": {
+      "essentially": 1
+     },
+     "WTW: expressions of doubt": {
+      "alleged": 1
+     },
+     "WTW: puffery": {
+      "famous": 1,
+      "great": 2,
+      "greatest": 1
+     },
+     "WTW: synonyms for said": {
+      "assert": 5,
+      "claim": 1,
+      "explain": 1
+     },
+     "contested: Russia and Ukraine": {
+      "separatist": 1
+     },
+     "contested: race and intelligence": {
+      "race realist": 1,
+      "race science": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=144384898",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=111706533",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=144386552",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=111702054",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=111708498"
+    ]
+   },
+   {
+    "label": "Editor 1",
+    "words_removed": 598,
+    "others_words_removed": 593,
+    "words_removed_later_restored": 1,
+    "removing_revisions": 11,
+    "sources_removed": {
+     "stormfront.org": 1
+    },
+    "terms_inserted": {
+     "WTW: contentious labels": {
+      "pseudo-": 2,
+      "racist": 2
+     },
+     "WTW: expressions of doubt": {
+      "supposed": 1
+     }
+    },
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "racist": 1
+     },
+     "WTW: euphemisms": {
+      "challenge": 1
+     },
+     "WTW: synonyms for said": {
+      "claim": 3
+     },
+     "contested: race and intelligence": {
+      "race realism": 2
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=846147885",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=846146250",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=846147004",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=846147355",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=872105038"
+    ]
+   },
+   {
+    "label": "Editor 66",
+    "words_removed": 476,
+    "others_words_removed": 476,
+    "words_removed_later_restored": 476,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "csmonitor.com": 2,
+     "foxnews.com": 2,
+     "politico.com": 1,
+     "washingtonpost.com": 1
+    },
+    "terms_inserted": {
+     "WTW: expressions of doubt": {
+      "purported": 1
+     }
+    },
+    "terms_removed": {
+     "WTW: expressions of doubt": {
+      "accused": 1,
+      "alleged": 2
+     },
+     "WTW: synonyms for said": {
+      "claim": 2,
+      "deny": 4
+     },
+     "contested: political labels": {
+      "conspiracy theory": 1
+     },
+     "contested: stances on Israel, Jews and Muslims": {
+      "anti-semitic": 1,
+      "zionist": 2
+     },
+     "contested: terms for armed groups and their members": {
+      "gunman": 1
+     },
+     "contested: terms for deaths": {
+      "killed": 1
+     },
+     "contested: territory and control": {
+      "occupation": 1
+     },
+     "contested: truth claims": {
+      "debunked": 3
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1031263818"
+    ]
+   },
+   {
+    "label": "Editor 67",
+    "words_removed": 469,
+    "others_words_removed": 468,
+    "words_removed_later_restored": 468,
+    "removing_revisions": 5,
+    "sources_removed": {
+     "adl.org": 2,
+     "splcenter.org": 2
+    },
+    "terms_inserted": {
+     "WTW: contentious labels": {
+      "controversial": 4
+     },
+     "WTW: editorializing": {
+      "clearly": 2,
+      "only": 3
+     },
+     "WTW: synonyms for said": {
+      "claim": 1
+     },
+     "contested: political labels": {
+      "communist": 1
+     },
+     "contested: terms for violent events": {
+      "massacre": 1
+     },
+     "contested: truth claims": {
+      "baseless": 1,
+      "propaganda": 1
+     }
+    },
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "pseudo-": 2,
+      "racist": 6
+     },
+     "WTW: synonyms for said": {
+      "claim": 2
+     },
+     "contested: Russia and Ukraine": {
+      "separatist": 2
+     },
+     "contested: political labels": {
+      "fascist": 4
+     },
+     "contested: race and intelligence": {
+      "racialist": 2
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=221958021",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=222005356",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=226718089",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=226932182",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=220679064"
+    ]
+   },
+   {
+    "label": "Editor 68",
+    "words_removed": 459,
+    "others_words_removed": 459,
+    "words_removed_later_restored": 459,
+    "removing_revisions": 2,
+    "sources_removed": {
+     "amren.com": 2,
+     "adl.org": 1,
+     "washingtonpost.com": 1
+    },
+    "terms_inserted": {
+     "WTW: editorializing": {
+      "absolutely": 1
+     }
+    },
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "racist": 2
+     },
+     "WTW: expressions of doubt": {
+      "accused": 1,
+      "alleged": 2
+     },
+     "WTW: synonyms for said": {
+      "claim": 2,
+      "deny": 2
+     },
+     "WTW: unsupported attributions": {
+      "has been described as": 1
+     },
+     "contested: terms for armed groups and their members": {
+      "gunman": 1
+     },
+     "contested: terms for deaths": {
+      "killed": 1
+     },
+     "contested: terms for violent events": {
+      "attack": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=578567227",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=578560655"
+    ]
+   },
+   {
+    "label": "Editor 18",
+    "words_removed": 393,
+    "others_words_removed": 392,
+    "words_removed_later_restored": 182,
+    "removing_revisions": 15,
+    "sources_removed": {
+     "adl.org": 3,
+     "nydailynews.com": 3,
+     "amren.com": 1,
+     "post-gazette.com": 1
+    },
+    "terms_inserted": {
+     "WTW: unsupported attributions": {
+      "has been described as": 1
+     }
+    },
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "racist": 1
+     },
+     "contested: Russia and Ukraine": {
+      "separatists": 1
+     },
+     "contested: mass-atrocity and legal terms": {
+      "holocaust": 2
+     },
+     "contested: political labels": {
+      "neo-nazi": 1
+     },
+     "contested: race and intelligence": {
+      "racialist": 5
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=511780520",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=568926463",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=561452204",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=568709561",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=568855858"
+    ]
+   },
+   {
+    "label": "Editor 28",
+    "words_removed": 384,
+    "others_words_removed": 384,
+    "words_removed_later_restored": 3,
+    "removing_revisions": 2,
+    "sources_removed": {
+     "foxnews.com": 2,
+     "archive.org": 1,
+     "nydailynews.com": 1,
+     "post-gazette.com": 1
+    },
+    "terms_inserted": {
+     "WTW: contentious labels": {
+      "racist": 3
+     },
+     "WTW: synonyms for said": {
+      "deny": 2,
+      "note": 1
+     },
+     "contested: political labels": {
+      "alt-right": 1,
+      "far-right": 3
+     },
+     "contested: stances on Israel, Jews and Muslims": {
+      "anti-semitism": 1
+     },
+     "contested: truth claims": {
+      "debunked": 2
+     }
+    },
+    "terms_removed": {
+     "WTW: synonyms for said": {
+      "deny": 2
+     },
+     "contested: terms for violent events": {
+      "attack": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=922433744",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=922434258"
+    ]
+   },
+   {
+    "label": "Editor 2",
+    "words_removed": 373,
+    "others_words_removed": 372,
+    "words_removed_later_restored": 1,
+    "removing_revisions": 9,
+    "sources_removed": {
+     "adl.org": 1,
+     "splcenter.org": 1
+    },
+    "terms_inserted": {
+     "WTW: editorializing": {
+      "only": 1
+     },
+     "WTW: euphemisms": {
+      "challenge": 1
+     },
+     "WTW: puffery": {
+      "great": 1,
+      "prominent": 1
+     },
+     "WTW: synonyms for said": {
+      "deny": 1
+     },
+     "contested: race and intelligence": {
+      "race realism": 1
+     },
+     "contested: stances on Israel, Jews and Muslims": {
+      "anti-semitism": 1
+     }
+    },
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "pseudo-": 1,
+      "racist": 2
+     },
+     "WTW: editorializing": {
+      "only": 1
+     },
+     "WTW: puffery": {
+      "leading": 1
+     },
+     "WTW: synonyms for said": {
+      "claim": 1
+     },
+     "contested: Russia and Ukraine": {
+      "separatist": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=422879445",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=422878885",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=422880301",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=422878507",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=422882612"
+    ]
+   },
+   {
+    "label": "Editor 6",
+    "words_removed": 358,
+    "others_words_removed": 250,
+    "words_removed_later_restored": 141,
+    "removing_revisions": 12,
+    "sources_removed": {
+     "amren.com": 1,
+     "cnn.com": 1,
+     "post-gazette.com": 1
+    },
+    "terms_inserted": {
+     "WTW: puffery": {
+      "leading": 1
+     },
+     "contested: race and intelligence": {
+      "race realist": 1
+     }
+    },
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "racist": 2
+     },
+     "contested: race and intelligence": {
+      "race realism": 1,
+      "race realist": 2,
+      "racialist": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=703922886",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=703500813",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=703937074",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=703955383",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=703965622"
+    ]
+   },
+   {
+    "label": "Editor 69",
+    "words_removed": 358,
+    "others_words_removed": 358,
+    "words_removed_later_restored": 357,
+    "removing_revisions": 4,
+    "sources_removed": {
+     "adl.org": 3
+    },
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "racist": 6
+     },
+     "WTW: unsupported attributions": {
+      "has been described as": 3
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=574539657",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=574683214",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=574695882",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=574696180"
+    ]
+   },
+   {
+    "label": "Editor 70",
+    "words_removed": 348,
+    "others_words_removed": 348,
+    "words_removed_later_restored": 348,
+    "removing_revisions": 3,
+    "sources_removed": {
+     "post-gazette.com": 2
+    },
+    "terms_inserted": {
+     "WTW: puffery": {
+      "prominent": 1
+     }
+    },
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "bigot": 2,
+      "racist": 4
+     },
+     "contested: political labels": {
+      "far-right": 2
+     },
+     "contested: race and intelligence": {
+      "racialist": 2
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=243058146",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=241143162",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=241141206"
+    ]
+   },
+   {
+    "label": "Editor 71",
+    "words_removed": 338,
+    "others_words_removed": 338,
+    "words_removed_later_restored": 338,
+    "removing_revisions": 2,
+    "sources_removed": {
+     "adl.org": 2,
+     "splcenter.org": 2
+    },
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "racist": 4
+     },
+     "WTW: unsupported attributions": {
+      "has been described as": 2
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=632464463",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=633574592"
+    ]
+   },
+   {
+    "label": "Editor 72",
+    "words_removed": 320,
+    "others_words_removed": 318,
+    "words_removed_later_restored": 318,
+    "removing_revisions": 7,
+    "sources_removed": {
+     "post-gazette.com": 3,
+     "adl.org": 2
+    },
+    "terms_inserted": {
+     "contested: political labels": {
+      "communist": 1,
+      "fascist": 1
+     }
+    },
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "racist": 4
+     },
+     "WTW: editorializing": {
+      "essentially": 1
+     },
+     "WTW: expressions of doubt": {
+      "alleged": 1
+     },
+     "WTW: synonyms for said": {
+      "claim": 1
+     },
+     "contested: mass-atrocity and legal terms": {
+      "holocaust": 1
+     },
+     "contested: political labels": {
+      "far-right": 1,
+      "nazi": 1,
+      "neo-nazi": 1
+     },
+     "contested: race and intelligence": {
+      "scientific racism": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=103720333",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=103720487",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=103721728",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=103720919",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=103720429"
+    ]
+   },
+   {
+    "label": "Editor 73",
+    "words_removed": 266,
+    "others_words_removed": 266,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 3,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: euphemisms": {
+      "challenge": 1
+     },
+     "contested: terms for deaths": {
+      "murdered": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1137367914",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=462483255",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=858566151"
+    ]
+   },
+   {
+    "label": "Editor 74",
+    "words_removed": 260,
+    "others_words_removed": 260,
+    "words_removed_later_restored": 260,
+    "removing_revisions": 2,
+    "sources_removed": {
+     "adl.org": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "pseudo-": 1,
+      "racist": 2
+     },
+     "WTW: expressions of doubt": {
+      "alleged": 1
+     },
+     "WTW: puffery": {
+      "leading": 2
+     },
+     "contested: political labels": {
+      "fascist": 1,
+      "nazi": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=330119069",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=220590219"
+    ]
+   },
+   {
+    "label": "Editor 75",
+    "words_removed": 236,
+    "others_words_removed": 236,
+    "words_removed_later_restored": 236,
+    "removing_revisions": 4,
+    "sources_removed": {
+     "adl.org": 1,
+     "splcenter.org": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "pseudo-": 2,
+      "racist": 3
+     },
+     "WTW: puffery": {
+      "leading": 1
+     },
+     "WTW: synonyms for said": {
+      "claim": 1
+     },
+     "contested: Russia and Ukraine": {
+      "separatist": 1
+     },
+     "contested: political labels": {
+      "fascist": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=225091879",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=221920648",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=221919962",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=225092282"
+    ]
+   },
+   {
+    "label": "Editor 76",
+    "words_removed": 228,
+    "others_words_removed": 228,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 3,
+    "sources_removed": {
+     "amren.com": 3,
+     "nationalpolicyinstitute.org": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "racist": 2
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=777535672",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=716659900",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=602041869"
+    ]
+   },
+   {
+    "label": "Editor 77",
+    "words_removed": 226,
+    "others_words_removed": 226,
+    "words_removed_later_restored": 226,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "cnn.com": 1,
+     "nydailynews.com": 1,
+     "slate.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=797217377"
+    ]
+   },
+   {
+    "label": "Editor 32",
+    "words_removed": 218,
+    "others_words_removed": 218,
+    "words_removed_later_restored": 93,
+    "removing_revisions": 4,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: synonyms for said": {
+      "assert": 3,
+      "claim": 1
+     }
+    },
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "racist": 2
+     },
+     "WTW: expressions of doubt": {
+      "alleged": 1
+     },
+     "WTW: synonyms for said": {
+      "assert": 3
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=64171164",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=68572173",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=59166636",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=59165318"
+    ]
+   },
+   {
+    "label": "Editor 78",
+    "words_removed": 184,
+    "others_words_removed": 184,
+    "words_removed_later_restored": 184,
+    "removing_revisions": 2,
+    "sources_removed": {
+     "post-gazette.com": 2,
+     "adl.org": 1,
+     "splcenter.org": 1
+    },
+    "terms_inserted": {
+     "WTW: puffery": {
+      "greatest": 1
+     },
+     "contested: race and intelligence": {
+      "race realist": 1
+     }
+    },
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "racist": 3
+     },
+     "WTW: puffery": {
+      "greatest": 1
+     },
+     "contested: Russia and Ukraine": {
+      "separatist": 1,
+      "separatists": 1
+     },
+     "contested: mass-atrocity and legal terms": {
+      "holocaust": 2
+     },
+     "contested: political labels": {
+      "fascist": 1,
+      "neo-nazi": 1
+     },
+     "contested: race and intelligence": {
+      "racialist": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=193912273",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=193912093"
+    ]
+   },
+   {
+    "label": "Editor 79",
+    "words_removed": 180,
+    "others_words_removed": 180,
+    "words_removed_later_restored": 112,
+    "removing_revisions": 2,
+    "sources_removed": {
+     "amnation.com": 2,
+     "bbc.co.uk": 1,
+     "google.co.uk": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: synonyms for said": {
+      "claim": 1
+     },
+     "contested: political labels": {
+      "neo-nazi": 1
+     },
+     "contested: race and intelligence": {
+      "racialist": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=406926144",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=406921371"
+    ]
+   },
+   {
+    "label": "Editor 80",
+    "words_removed": 180,
+    "others_words_removed": 176,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 7,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: synonyms for said": {
+      "assert": 1
+     }
+    },
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "racist": 1
+     },
+     "WTW: expressions of doubt": {
+      "alleged": 3
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=64182775",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=64182026",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=64185362",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=64184852",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=64183647"
+    ]
+   },
+   {
+    "label": "Editor 81",
+    "words_removed": 177,
+    "others_words_removed": 177,
+    "words_removed_later_restored": 6,
+    "removing_revisions": 4,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: editorializing": {
+      "absolutely": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=578569460",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=578562117",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=574796152",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=574799582"
+    ]
+   },
+   {
+    "label": "Editor 82",
+    "words_removed": 169,
+    "others_words_removed": 169,
+    "words_removed_later_restored": 169,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "adl.org": 1,
+     "splcenter.org": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "racist": 2
+     },
+     "WTW: unsupported attributions": {
+      "has been described as": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=629994872"
+    ]
+   },
+   {
+    "label": "Editor 83",
+    "words_removed": 169,
+    "others_words_removed": 169,
+    "words_removed_later_restored": 7,
+    "removing_revisions": 10,
+    "sources_removed": {
+     "amren.com": 2,
+     "archive.org": 1,
+     "youtube.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {
+     "contested: Russia and Ukraine": {
+      "separatist": 1
+     },
+     "contested: political labels": {
+      "alt-right": 1
+     },
+     "contested: race and intelligence": {
+      "race realist": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1172861921",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=952924039",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1019540115",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=852133081",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=974045910"
+    ]
+   },
+   {
+    "label": "Editor 84",
+    "words_removed": 166,
+    "others_words_removed": 166,
+    "words_removed_later_restored": 88,
+    "removing_revisions": 2,
+    "sources_removed": {
+     "amren.com": 2
+    },
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: puffery": {
+      "greatest": 2
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=205379517",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=206381408"
+    ]
+   },
+   {
+    "label": "Editor 85",
+    "words_removed": 166,
+    "others_words_removed": 166,
+    "words_removed_later_restored": 162,
+    "removing_revisions": 4,
+    "sources_removed": {
+     "post-gazette.com": 3
+    },
+    "terms_inserted": {},
+    "terms_removed": {
+     "contested: Russia and Ukraine": {
+      "separatists": 3
+     },
+     "contested: mass-atrocity and legal terms": {
+      "holocaust": 6
+     },
+     "contested: political labels": {
+      "nazi": 3
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=286045694",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=286090684",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=286674422",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=349401362"
+    ]
+   },
+   {
+    "label": "Editor 86",
+    "words_removed": 156,
+    "others_words_removed": 156,
+    "words_removed_later_restored": 9,
+    "removing_revisions": 9,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: expressions of doubt": {
+      "accused": 2
+     },
+     "WTW: synonyms for said": {
+      "expose": 1,
+      "reveal": 1
+     },
+     "contested: political labels": {
+      "far-right": 2
+     },
+     "contested: terms for violent events": {
+      "attack": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1062527874",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=970421137",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=970844432",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=904341096",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=846397732"
+    ]
+   },
+   {
+    "label": "Editor 87",
+    "words_removed": 144,
+    "others_words_removed": 144,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: puffery": {
+      "leading": 1
+     },
+     "contested: political labels": {
+      "nazi": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=332707058"
+    ]
+   },
+   {
+    "label": "Editor 88",
+    "words_removed": 143,
+    "others_words_removed": 143,
+    "words_removed_later_restored": 143,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: puffery": {
+      "leading": 1
+     },
+     "contested: political labels": {
+      "nazi": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=263010250"
+    ]
+   },
+   {
+    "label": "Editor 89",
+    "words_removed": 141,
+    "others_words_removed": 141,
+    "words_removed_later_restored": 141,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "adl.org": 1,
+     "splcenter.org": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "pseudo-": 1,
+      "racist": 2
+     },
+     "WTW: puffery": {
+      "leading": 1
+     },
+     "contested: Russia and Ukraine": {
+      "separatist": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=414964545"
+    ]
+   },
+   {
+    "label": "Editor 90",
+    "words_removed": 141,
+    "others_words_removed": 141,
+    "words_removed_later_restored": 141,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "adl.org": 1,
+     "splcenter.org": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "pseudo-": 1,
+      "racist": 2
+     },
+     "WTW: puffery": {
+      "leading": 1
+     },
+     "contested: Russia and Ukraine": {
+      "separatist": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=408611164"
+    ]
+   },
+   {
+    "label": "Editor 91",
+    "words_removed": 138,
+    "others_words_removed": 138,
+    "words_removed_later_restored": 138,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "adl.org": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "racist": 2
+     },
+     "WTW: unsupported attributions": {
+      "has been described as": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=583363320"
+    ]
+   },
+   {
+    "label": "Editor 9",
+    "words_removed": 135,
+    "others_words_removed": 125,
+    "words_removed_later_restored": 71,
+    "removing_revisions": 10,
+    "sources_removed": {
+     "amren.com": 1
+    },
+    "terms_inserted": {
+     "contested: Russia and Ukraine": {
+      "separatist": 1
+     },
+     "contested: truth claims": {
+      "debunked": 1
+     }
+    },
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "racist": 1
+     },
+     "contested: Russia and Ukraine": {
+      "separatist": 1
+     },
+     "contested: political labels": {
+      "fascist": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=412162819",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=407544153",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=407555642",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=412197154",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=389098254"
+    ]
+   },
+   {
+    "label": "Editor 92",
+    "words_removed": 133,
+    "others_words_removed": 133,
+    "words_removed_later_restored": 132,
+    "removing_revisions": 3,
+    "sources_removed": {
+     "adl.org": 4
+    },
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: synonyms for said": {
+      "assert": 3
+     },
+     "contested: Russia and Ukraine": {
+      "separatist": 2
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=140884806",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=140896938",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=140885488"
+    ]
+   },
+   {
+    "label": "Editor 23",
+    "words_removed": 128,
+    "others_words_removed": 128,
+    "words_removed_later_restored": 71,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "adl.org": 1,
+     "amren.com": 1
+    },
+    "terms_inserted": {
+     "contested: race and intelligence": {
+      "race realism": 2,
+      "race realist": 1,
+      "racialist": 1
+     }
+    },
+    "terms_removed": {
+     "WTW: synonyms for said": {
+      "explain": 1
+     },
+     "contested: race and intelligence": {
+      "race realist": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=679492702"
+    ]
+   },
+   {
+    "label": "Editor 13",
+    "words_removed": 124,
+    "others_words_removed": 105,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 8,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: contentious labels": {
+      "racist": 5
+     },
+     "WTW: editorializing": {
+      "essentially": 1
+     },
+     "WTW: expressions of doubt": {
+      "alleged": 2,
+      "so-called": 1
+     },
+     "WTW: synonyms for said": {
+      "assert": 1,
+      "claim": 3
+     },
+     "contested: Russia and Ukraine": {
+      "separatist": 1,
+      "separatists": 1
+     },
+     "contested: mass-atrocity and legal terms": {
+      "holocaust": 1
+     },
+     "contested: political labels": {
+      "far-right": 1,
+      "nazi": 3,
+      "neo-nazi": 1
+     }
+    },
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "racist": 2
+     },
+     "WTW: synonyms for said": {
+      "claim": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=60108515",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=60255407",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=60109910",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=60109089",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=60255536"
+    ]
+   },
+   {
+    "label": "Editor 42",
+    "words_removed": 121,
+    "others_words_removed": 121,
+    "words_removed_later_restored": 121,
+    "removing_revisions": 7,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: contentious labels": {
+      "racist": 1
+     }
+    },
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "racist": 2
+     },
+     "WTW: unsupported attributions": {
+      "has been described as": 6
+     },
+     "contested: mass-atrocity and legal terms": {
+      "genocide": 2
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=568694282",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=568839663",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=570111640",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=570115149",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=570117412"
+    ]
+   },
+   {
+    "label": "Editor 30",
+    "words_removed": 114,
+    "others_words_removed": 113,
+    "words_removed_later_restored": 19,
+    "removing_revisions": 10,
+    "sources_removed": {
+     "amren.com": 2
+    },
+    "terms_inserted": {
+     "WTW: expressions of doubt": {
+      "accused": 1,
+      "alleged": 1
+     },
+     "WTW: synonyms for said": {
+      "deny": 3
+     }
+    },
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "racist": 2
+     },
+     "contested: race and intelligence": {
+      "race realism": 1,
+      "race realist": 3
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=411816603",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=437815357",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=437923186",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=418078782",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=443942122"
+    ]
+   },
+   {
+    "label": "Editor 93",
+    "words_removed": 114,
+    "others_words_removed": 114,
+    "words_removed_later_restored": 12,
+    "removing_revisions": 13,
+    "sources_removed": {
+     "amren.com": 1,
+     "bitchute.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: synonyms for said": {
+      "explain": 1
+     },
+     "contested: Russia and Ukraine": {
+      "separatist": 1
+     },
+     "contested: race and intelligence": {
+      "race realist": 2
+     },
+     "contested: truth claims": {
+      "falsely": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1083380022",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1083380909",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1085360466",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1040634187",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1062526463"
+    ]
+   },
+   {
+    "label": "Editor 94",
+    "words_removed": 106,
+    "others_words_removed": 106,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: euphemisms": {
+      "challenge": 1
+     },
+     "WTW: puffery": {
+      "prominent": 1
+     },
+     "WTW: unsupported attributions": {
+      "it is considered": 1
+     },
+     "contested: race and intelligence": {
+      "race realist": 2
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1005245763"
+    ]
+   },
+   {
+    "label": "Editor 95",
+    "words_removed": 102,
+    "others_words_removed": 102,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "amren.com": 3
+    },
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: puffery": {
+      "best": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=807762060"
+    ]
+   },
+   {
+    "label": "Editor 96",
+    "words_removed": 99,
+    "others_words_removed": 99,
+    "words_removed_later_restored": 99,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "adl.org": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "racist": 1
+     },
+     "contested: political labels": {
+      "fascist": 1
+     },
+     "contested: race and intelligence": {
+      "racialist": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=227709086"
+    ]
+   },
+   {
+    "label": "Editor 97",
+    "words_removed": 93,
+    "others_words_removed": 93,
+    "words_removed_later_restored": 93,
+    "removing_revisions": 2,
+    "sources_removed": {
+     "nydailynews.com": 2,
+     "adl.org": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "racist": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=568996017",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=570122375"
+    ]
+   },
+   {
+    "label": "Editor 98",
+    "words_removed": 86,
+    "others_words_removed": 86,
+    "words_removed_later_restored": 45,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=140886522",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=141078035"
+    ]
+   },
+   {
+    "label": "Editor 99",
+    "words_removed": 85,
+    "others_words_removed": 85,
+    "words_removed_later_restored": 49,
+    "removing_revisions": 3,
+    "sources_removed": {
+     "amren.com": 2
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=846810653",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=846811691",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=847419850"
+    ]
+   },
+   {
+    "label": "Editor 100",
+    "words_removed": 82,
+    "others_words_removed": 82,
+    "words_removed_later_restored": 82,
+    "removing_revisions": 2,
+    "sources_removed": {
+     "post-gazette.com": 1
+    },
+    "terms_inserted": {
+     "WTW: euphemisms": {
+      "challenge": 1
+     },
+     "contested: terms for deaths": {
+      "murdered": 1
+     }
+    },
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "racist": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1137367857",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1137361580"
+    ]
+   },
+   {
+    "label": "Editor 101",
+    "words_removed": 82,
+    "others_words_removed": 82,
+    "words_removed_later_restored": 1,
+    "removing_revisions": 8,
+    "sources_removed": {
+     "amren.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: expressions of doubt": {
+      "accused": 2
+     },
+     "contested: Russia and Ukraine": {
+      "separatist": 1
+     },
+     "contested: race and intelligence": {
+      "race realism": 3,
+      "race realist": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1050090161",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1050087579",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1100766244",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=999910527",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1248643941"
+    ]
+   },
+   {
+    "label": "Editor 102",
+    "words_removed": 80,
+    "others_words_removed": 80,
+    "words_removed_later_restored": 80,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=697459594"
+    ]
+   },
+   {
+    "label": "Editor 103",
+    "words_removed": 78,
+    "others_words_removed": 78,
+    "words_removed_later_restored": 78,
+    "removing_revisions": 2,
+    "sources_removed": {
+     "adl.org": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "racist": 1
+     },
+     "WTW: unsupported attributions": {
+      "has been described as": 1
+     },
+     "contested: mass-atrocity and legal terms": {
+      "genocide": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=555999588",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=568339870"
+    ]
+   },
+   {
+    "label": "Editor 104",
+    "words_removed": 70,
+    "others_words_removed": 70,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 3,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "contested: political labels": {
+      "extreme left": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=28691999",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=9162636",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=25625537"
+    ]
+   },
+   {
+    "label": "Editor 105",
+    "words_removed": 69,
+    "others_words_removed": 69,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "racist": 1
+     },
+     "WTW: euphemisms": {
+      "challenge": 1
+     },
+     "WTW: synonyms for said": {
+      "claim": 1
+     },
+     "contested: political labels": {
+      "far-right": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=243530235"
+    ]
+   },
+   {
+    "label": "Editor 106",
+    "words_removed": 66,
+    "others_words_removed": 66,
+    "words_removed_later_restored": 66,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "adl.org": 2
+    },
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: synonyms for said": {
+      "assert": 1
+     },
+     "contested: Russia and Ukraine": {
+      "separatist": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=141068883"
+    ]
+   },
+   {
+    "label": "Editor 107",
+    "words_removed": 66,
+    "others_words_removed": 66,
+    "words_removed_later_restored": 66,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "adl.org": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "racist": 1
+     },
+     "contested: political labels": {
+      "far-right": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=222407596"
+    ]
+   },
+   {
+    "label": "Editor 108",
+    "words_removed": 62,
+    "others_words_removed": 62,
+    "words_removed_later_restored": 62,
+    "removing_revisions": 3,
+    "sources_removed": {
+     "amren.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {
+     "contested: race and intelligence": {
+      "race realism": 2,
+      "race realist": 2,
+      "racialist": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=703331202",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=703330853",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=703259596"
+    ]
+   },
+   {
+    "label": "Editor 109",
+    "words_removed": 57,
+    "others_words_removed": 54,
+    "words_removed_later_restored": 2,
+    "removing_revisions": 8,
+    "sources_removed": {
+     "amren.comwww": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=610227358",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=717272895",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=741059467",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=736463770",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=717272232"
+    ]
+   },
+   {
+    "label": "Editor 110",
+    "words_removed": 57,
+    "others_words_removed": 57,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "contested: political labels": {
+      "nazi": 1,
+      "neo-nazi": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=18218611"
+    ]
+   },
+   {
+    "label": "Editor 111",
+    "words_removed": 56,
+    "others_words_removed": 56,
+    "words_removed_later_restored": 56,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "splcenter.org": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "racist": 1
+     },
+     "contested: Russia and Ukraine": {
+      "separatist": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=375265340"
+    ]
+   },
+   {
+    "label": "Editor 112",
+    "words_removed": 52,
+    "others_words_removed": 52,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "racist": 1
+     },
+     "WTW: synonyms for said": {
+      "claim": 2,
+      "note": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=849600101",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=900463927"
+    ]
+   },
+   {
+    "label": "Editor 113",
+    "words_removed": 47,
+    "others_words_removed": 47,
+    "words_removed_later_restored": 3,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "contested: race and intelligence": {
+      "race realist": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=703499385",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=703431472"
+    ]
+   },
+   {
+    "label": "Editor 114",
+    "words_removed": 46,
+    "others_words_removed": 46,
+    "words_removed_later_restored": 46,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "adl.org": 1,
+     "post-gazette.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=32663360"
+    ]
+   },
+   {
+    "label": "Editor 115",
+    "words_removed": 46,
+    "others_words_removed": 46,
+    "words_removed_later_restored": 3,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "alexa.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=989042420"
+    ]
+   },
+   {
+    "label": "Editor 116",
+    "words_removed": 45,
+    "others_words_removed": 45,
+    "words_removed_later_restored": 45,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "racist": 1
+     },
+     "WTW: unsupported attributions": {
+      "has been described as": 1
+     },
+     "contested: mass-atrocity and legal terms": {
+      "genocide": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=538874448"
+    ]
+   },
+   {
+    "label": "Editor 117",
+    "words_removed": 45,
+    "others_words_removed": 45,
+    "words_removed_later_restored": 45,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "racist": 1
+     },
+     "WTW: unsupported attributions": {
+      "has been described as": 1
+     },
+     "contested: mass-atrocity and legal terms": {
+      "genocide": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=549424379"
+    ]
+   },
+   {
+    "label": "Editor 118",
+    "words_removed": 45,
+    "others_words_removed": 45,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "racist": 1
+     },
+     "WTW: unsupported attributions": {
+      "has been described as": 1
+     },
+     "contested: mass-atrocity and legal terms": {
+      "genocide": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=568881584"
+    ]
+   },
+   {
+    "label": "Editor 119",
+    "words_removed": 43,
+    "others_words_removed": 43,
+    "words_removed_later_restored": 43,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=140897209"
+    ]
+   },
+   {
+    "label": "Editor 120",
+    "words_removed": 43,
+    "others_words_removed": 43,
+    "words_removed_later_restored": 1,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "splcenter.org": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=733855464"
+    ]
+   },
+   {
+    "label": "Editor 121",
+    "words_removed": 42,
+    "others_words_removed": 42,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: expressions of doubt": {
+      "purported": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1031263846",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1193857309"
+    ]
+   },
+   {
+    "label": "Editor 10",
+    "words_removed": 40,
+    "others_words_removed": 40,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 6,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: synonyms for said": {
+      "note": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=758595554",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=877304473",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=758595296",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=877304658",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=900936703"
+    ]
+   },
+   {
+    "label": "Editor 37",
+    "words_removed": 40,
+    "others_words_removed": 40,
+    "words_removed_later_restored": 2,
+    "removing_revisions": 2,
+    "sources_removed": {
+     "inverted-world.com": 1
+    },
+    "terms_inserted": {
+     "WTW: expressions of doubt": {
+      "alleged": 1
+     },
+     "WTW: puffery": {
+      "greatest": 1
+     }
+    },
+    "terms_removed": {
+     "WTW: synonyms for said": {
+      "find": 1
+     },
+     "contested: mass-atrocity and legal terms": {
+      "holocaust": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=174988492",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=175115064"
+    ]
+   },
+   {
+    "label": "Editor 122",
+    "words_removed": 40,
+    "others_words_removed": 40,
+    "words_removed_later_restored": 40,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "amren.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=407253672"
+    ]
+   },
+   {
+    "label": "Editor 123",
+    "words_removed": 40,
+    "others_words_removed": 40,
+    "words_removed_later_restored": 3,
+    "removing_revisions": 2,
+    "sources_removed": {
+     "splcenter.org": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=703654855",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=703659791"
+    ]
+   },
+   {
+    "label": "Editor 124",
+    "words_removed": 40,
+    "others_words_removed": 40,
+    "words_removed_later_restored": 1,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1105542920",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1154429595"
+    ]
+   },
+   {
+    "label": "Editor 125",
+    "words_removed": 38,
+    "others_words_removed": 38,
+    "words_removed_later_restored": 38,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "splcenter.org": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "racist": 1
+     },
+     "contested: Russia and Ukraine": {
+      "separatist": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=262701316"
+    ]
+   },
+   {
+    "label": "Editor 126",
+    "words_removed": 36,
+    "others_words_removed": 36,
+    "words_removed_later_restored": 36,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "pseudo-": 2
+     },
+     "WTW: expressions of doubt": {
+      "supposed": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=865591960"
+    ]
+   },
+   {
+    "label": "Editor 8",
+    "words_removed": 33,
+    "others_words_removed": 33,
+    "words_removed_later_restored": 33,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: euphemisms": {
+      "challenge": 2
+     },
+     "WTW: puffery": {
+      "leading": 1
+     },
+     "contested: race and intelligence": {
+      "race realism": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=958338543"
+    ]
+   },
+   {
+    "label": "Editor 127",
+    "words_removed": 31,
+    "others_words_removed": 31,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: synonyms for said": {
+      "deny": 1
+     },
+     "contested: mass-atrocity and legal terms": {
+      "holocaust": 2
+     },
+     "contested: stances on Israel, Jews and Muslims": {
+      "anti-zionism": 1,
+      "antisemitism": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1116901314",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1116901342"
+    ]
+   },
+   {
+    "label": "Editor 128",
+    "words_removed": 30,
+    "others_words_removed": 30,
+    "words_removed_later_restored": 16,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "amren.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=407772719"
+    ]
+   },
+   {
+    "label": "Editor 129",
+    "words_removed": 30,
+    "others_words_removed": 30,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 4,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=346764729",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=346711028",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=346747616",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=347230395"
+    ]
+   },
+   {
+    "label": "Editor 130",
+    "words_removed": 28,
+    "others_words_removed": 28,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "contested: stances on Israel, Jews and Muslims": {
+      "antisemitic": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=254498404"
+    ]
+   },
+   {
+    "label": "Editor 131",
+    "words_removed": 28,
+    "others_words_removed": 27,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 4,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: puffery": {
+      "leading": 1
+     },
+     "contested: political labels": {
+      "far-right": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=957225155",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=868670342",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=737651951",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1244192945"
+    ]
+   },
+   {
+    "label": "Editor 4",
+    "words_removed": 27,
+    "others_words_removed": 27,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 4,
+    "sources_removed": {
+     "splcenter.org": 1
+    },
+    "terms_inserted": {
+     "WTW: euphemisms": {
+      "challenge": 1
+     },
+     "WTW: puffery": {
+      "prominent": 1
+     },
+     "contested: political labels": {
+      "extreme right": 2
+     },
+     "contested: race and intelligence": {
+      "race realism": 1
+     },
+     "contested: stances on Israel, Jews and Muslims": {
+      "anti-semitism": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=703917435",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=703916398",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=629905287",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=703917799"
+    ]
+   },
+   {
+    "label": "Editor 132",
+    "words_removed": 27,
+    "others_words_removed": 1,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 3,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=423119597",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=410748843",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=423119700"
+    ]
+   },
+   {
+    "label": "Editor 133",
+    "words_removed": 25,
+    "others_words_removed": 25,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1376119474"
+    ]
+   },
+   {
+    "label": "Editor 134",
+    "words_removed": 24,
+    "others_words_removed": 24,
+    "words_removed_later_restored": 2,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "chicagoamren.com": 1
+    },
+    "terms_inserted": {
+     "WTW: synonyms for said": {
+      "claim": 1
+     },
+     "contested: political labels": {
+      "nazi": 1
+     },
+     "contested: stances on Israel, Jews and Muslims": {
+      "anti-semitism": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=115906797"
+    ]
+   },
+   {
+    "label": "Editor 135",
+    "words_removed": 24,
+    "others_words_removed": 17,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=329951655"
+    ]
+   },
+   {
+    "label": "Editor 24",
+    "words_removed": 23,
+    "others_words_removed": 23,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: expressions of doubt": {
+      "alleged": 1
+     },
+     "WTW: synonyms for said": {
+      "claim": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=407023310"
+    ]
+   },
+   {
+    "label": "Editor 136",
+    "words_removed": 23,
+    "others_words_removed": 23,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=294616199",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=9116802"
+    ]
+   },
+   {
+    "label": "Editor 52",
+    "words_removed": 22,
+    "others_words_removed": 21,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 3,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: expressions of doubt": {
+      "alleged": 1
+     },
+     "contested: political labels": {
+      "nazi": 1
+     },
+     "contested: race and intelligence": {
+      "race science": 1,
+      "scientific racism": 1
+     }
+    },
+    "terms_removed": {
+     "WTW: expressions of doubt": {
+      "alleged": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=80948493",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=80943390",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=80948624"
+    ]
+   },
+   {
+    "label": "Editor 143",
+    "words_removed": 22,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 6,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: contentious labels": {
+      "racist": 1
+     },
+     "WTW: editorializing": {
+      "only": 2
+     },
+     "contested: political labels": {
+      "far-right": 1
+     }
+    },
+    "terms_removed": {
+     "WTW: editorializing": {
+      "only": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=222407431",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=222409205",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=222408526",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=222406748",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=222509201"
+    ]
+   },
+   {
+    "label": "Editor 137",
+    "words_removed": 21,
+    "others_words_removed": 21,
+    "words_removed_later_restored": 21,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: contentious labels": {
+      "racist": 1
+     },
+     "WTW: synonyms for said": {
+      "claim": 2,
+      "note": 1
+     }
+    },
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "pseudo-": 1
+     },
+     "contested: Russia and Ukraine": {
+      "separatists": 1
+     },
+     "contested: mass-atrocity and legal terms": {
+      "holocaust": 2
+     },
+     "contested: political labels": {
+      "neo-nazi": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=849599908"
+    ]
+   },
+   {
+    "label": "Editor 155",
+    "words_removed": 18,
+    "others_words_removed": 18,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: expressions of doubt": {
+      "alleged": 2
+     },
+     "contested: terms for armed groups and their members": {
+      "militant": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1106889478"
+    ]
+   },
+   {
+    "label": "Editor 140",
+    "words_removed": 16,
+    "others_words_removed": 7,
+    "words_removed_later_restored": 7,
+    "removing_revisions": 7,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: contentious labels": {
+      "racist": 2
+     },
+     "WTW: expressions of doubt": {
+      "alleged": 1
+     },
+     "WTW: synonyms for said": {
+      "assert": 1
+     }
+    },
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "racist": 2
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=63565854",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=63566469",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=63566979",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=63566068",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=63565825"
+    ]
+   },
+   {
+    "label": "Editor 14",
+    "words_removed": 12,
+    "others_words_removed": 10,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: expressions of doubt": {
+      "alleged": 1
+     },
+     "contested: terms for deaths": {
+      "killed": 1
+     }
+    },
+    "terms_removed": {
+     "WTW: synonyms for said": {
+      "assert": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=406993420"
+    ]
+   },
+   {
+    "label": "Editor 146",
+    "words_removed": 11,
+    "others_words_removed": 11,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: expressions of doubt": {
+      "alleged": 1
+     }
+    },
+    "terms_removed": {
+     "WTW: expressions of doubt": {
+      "so-called": 1
+     },
+     "contested: political labels": {
+      "nazi": 2
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=62179120",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=62179311"
+    ]
+   },
+   {
+    "label": "Editor 141",
+    "words_removed": 10,
+    "others_words_removed": 10,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: contentious labels": {
+      "racist": 1
+     },
+     "WTW: euphemisms": {
+      "challenge": 1
+     },
+     "WTW: synonyms for said": {
+      "claim": 1
+     },
+     "contested: Russia and Ukraine": {
+      "separatist": 1
+     },
+     "contested: race and intelligence": {
+      "racialist": 1
+     }
+    },
+    "terms_removed": {
+     "contested: Russia and Ukraine": {
+      "separatist": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=160881567"
+    ]
+   },
+   {
+    "label": "Editor 142",
+    "words_removed": 10,
+    "others_words_removed": 10,
+    "words_removed_later_restored": 10,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: expressions of doubt": {
+      "alleged": 2
+     },
+     "contested: terms for armed groups and their members": {
+      "militant": 1
+     }
+    },
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "pseudo-": 1,
+      "racist": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1106888901"
+    ]
+   },
+   {
+    "label": "Editor 152",
+    "words_removed": 9,
+    "others_words_removed": 9,
+    "words_removed_later_restored": 9,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {
+     "contested: political labels": {
+      "extreme left": 1
+     }
+    },
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "pseudo-": 2
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=847604968",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=847604802"
+    ]
+   },
+   {
+    "label": "Editor 157",
+    "words_removed": 9,
+    "others_words_removed": 9,
+    "words_removed_later_restored": 9,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {
+     "contested: truth claims": {
+      "falsely": 1
+     }
+    },
+    "terms_removed": {
+     "WTW: expressions of doubt": {
+      "alleged": 2
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1039427336",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1039425882"
+    ]
+   },
+   {
+    "label": "Editor 166",
+    "words_removed": 9,
+    "others_words_removed": 9,
+    "words_removed_later_restored": 9,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "pseudo-": 2
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1127584852"
+    ]
+   },
+   {
+    "label": "Editor 150",
+    "words_removed": 8,
+    "others_words_removed": 8,
+    "words_removed_later_restored": 8,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {
+     "contested: Russia and Ukraine": {
+      "separatists": 1
+     },
+     "contested: mass-atrocity and legal terms": {
+      "holocaust": 2
+     },
+     "contested: political labels": {
+      "neo-nazi": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=561447827",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=561447660"
+    ]
+   },
+   {
+    "label": "Editor 160",
+    "words_removed": 8,
+    "others_words_removed": 8,
+    "words_removed_later_restored": 8,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {
+     "contested: political labels": {
+      "far-left": 1
+     }
+    },
+    "terms_removed": {
+     "contested: political labels": {
+      "neo-nazi": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1285469883"
+    ]
+   },
+   {
+    "label": "Editor 25",
+    "words_removed": 6,
+    "others_words_removed": 6,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: synonyms for said": {
+      "claim": 3
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=349174093"
+    ]
+   },
+   {
+    "label": "Editor 145",
+    "words_removed": 6,
+    "others_words_removed": 5,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: expressions of doubt": {
+      "purported": 1
+     },
+     "WTW: puffery": {
+      "famous": 1
+     },
+     "WTW: synonyms for said": {
+      "find": 1
+     },
+     "contested: mass-atrocity and legal terms": {
+      "holocaust": 2
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=170657123",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=170660019"
+    ]
+   },
+   {
+    "label": "Editor 154",
+    "words_removed": 6,
+    "others_words_removed": 6,
+    "words_removed_later_restored": 2,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: puffery": {
+      "leading": 1
+     },
+     "contested: political labels": {
+      "nazi": 1
+     }
+    },
+    "terms_removed": {
+     "WTW: puffery": {
+      "notable": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=192636035"
+    ]
+   },
+   {
+    "label": "Editor 138",
+    "words_removed": 5,
+    "others_words_removed": 5,
+    "words_removed_later_restored": 5,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {
+     "contested: race and intelligence": {
+      "race realism": 1,
+      "race realist": 3
+     }
+    },
+    "terms_removed": {
+     "contested: race and intelligence": {
+      "racialist": 3
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=443937819",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=441983983"
+    ]
+   },
+   {
+    "label": "Editor 153",
+    "words_removed": 4,
+    "others_words_removed": 4,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {
+     "contested: race and intelligence": {
+      "racialist": 1
+     }
+    },
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "racist": 1
+     },
+     "contested: stances on Israel, Jews and Muslims": {
+      "anti-semitic": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=169433083"
+    ]
+   },
+   {
+    "label": "Editor 158",
+    "words_removed": 4,
+    "others_words_removed": 4,
+    "words_removed_later_restored": 4,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: synonyms for said": {
+      "claim": 1,
+      "confirm": 1
+     },
+     "contested: political labels": {
+      "nazi": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1105541557",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1105543659"
+    ]
+   },
+   {
+    "label": "Editor 147",
+    "words_removed": 3,
+    "others_words_removed": 3,
+    "words_removed_later_restored": 3,
+    "removing_revisions": 3,
+    "sources_removed": {},
+    "terms_inserted": {
+     "contested: Russia and Ukraine": {
+      "separatist": 2
+     },
+     "contested: race and intelligence": {
+      "race realist": 1
+     },
+     "contested: stances on Israel, Jews and Muslims": {
+      "anti-semitism": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1085358882",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1085360171",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1085427828"
+    ]
+   },
+   {
+    "label": "Editor 156",
+    "words_removed": 3,
+    "others_words_removed": 3,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "contested: Russia and Ukraine": {
+      "separatist": 3
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1245000156"
+    ]
+   },
+   {
+    "label": "Editor 38",
+    "words_removed": 2,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {
+     "contested: political labels": {
+      "neo-nazi": 1
+     },
+     "contested: race and intelligence": {
+      "racialist": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=345988990"
+    ]
+   },
+   {
+    "label": "Editor 149",
+    "words_removed": 2,
+    "others_words_removed": 2,
+    "words_removed_later_restored": 2,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: synonyms for said": {
+      "expose": 1,
+      "reveal": 1
+     },
+     "contested: race and intelligence": {
+      "race realist": 1
+     },
+     "contested: terms for violent events": {
+      "attack": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1062526371"
+    ]
+   },
+   {
+    "label": "Editor 161",
+    "words_removed": 2,
+    "others_words_removed": 2,
+    "words_removed_later_restored": 2,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: expressions of doubt": {
+      "accused": 1
+     },
+     "contested: political labels": {
+      "far-right": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=970233858"
+    ]
+   },
+   {
+    "label": "Editor 162",
+    "words_removed": 2,
+    "others_words_removed": 2,
+    "words_removed_later_restored": 2,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: contentious labels": {
+      "racist": 1
+     }
+    },
+    "terms_removed": {
+     "contested: race and intelligence": {
+      "racialist": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=442561670"
+    ]
+   },
+   {
+    "label": "Editor 151",
+    "words_removed": 1,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: editorializing": {
+      "only": 1
+     },
+     "WTW: expressions of doubt": {
+      "alleged": 1
+     },
+     "contested: political labels": {
+      "far-right": 1
+     },
+     "contested: terms for violent events": {
+      "attack": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=148921478"
+    ]
+   },
+   {
+    "label": "Editor 159",
+    "words_removed": 1,
+    "others_words_removed": 1,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: contentious labels": {
+      "racist": 1
+     },
+     "contested: stances on Israel, Jews and Muslims": {
+      "anti-semitic": 1
+     }
+    },
+    "terms_removed": {
+     "contested: race and intelligence": {
+      "racialist": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=166784558"
+    ]
+   },
+   {
+    "label": "Editor 163",
+    "words_removed": 1,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {
+     "contested: political labels": {
+      "nazi": 1,
+      "neo-nazi": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=15546859"
+    ]
+   },
+   {
+    "label": "Editor 164",
+    "words_removed": 1,
+    "others_words_removed": 1,
+    "words_removed_later_restored": 1,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: contentious labels": {
+      "racist": 1
+     }
+    },
+    "terms_removed": {
+     "contested: race and intelligence": {
+      "racialist": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=437902356"
+    ]
+   },
+   {
+    "label": "Editor 12",
+    "words_removed": 0,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 0,
+    "sources_removed": {},
+    "terms_inserted": {
+     "contested: political labels": {
+      "far-right": 4
+     }
+    },
+    "terms_removed": {},
+    "evidence": []
+   },
+   {
+    "label": "Editor 15",
+    "words_removed": 0,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 0,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: contentious labels": {
+      "racist": 1
+     },
+     "WTW: puffery": {
+      "great": 2
+     }
+    },
+    "terms_removed": {},
+    "evidence": []
+   },
+   {
+    "label": "Editor 20",
+    "words_removed": 0,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 0,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: unsupported attributions": {
+      "has been described as": 1
+     },
+     "contested: political labels": {
+      "alt-right": 3
+     }
+    },
+    "terms_removed": {},
+    "evidence": []
+   },
+   {
+    "label": "Editor 139",
+    "words_removed": 0,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 0,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: contentious labels": {
+      "racist": 1
+     },
+     "WTW: euphemisms": {
+      "challenge": 1
+     },
+     "WTW: synonyms for said": {
+      "claim": 1
+     },
+     "contested: political labels": {
+      "marxist": 1
+     },
+     "contested: race and intelligence": {
+      "race realism": 2
+     }
+    },
+    "terms_removed": {},
+    "evidence": []
+   },
+   {
+    "label": "Editor 144",
+    "words_removed": 0,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 0,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: synonyms for said": {
+      "deny": 1
+     },
+     "contested: mass-atrocity and legal terms": {
+      "holocaust": 2
+     },
+     "contested: stances on Israel, Jews and Muslims": {
+      "anti-zionism": 1,
+      "antisemitism": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": []
+   },
+   {
+    "label": "Editor 148",
+    "words_removed": 0,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 0,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: puffery": {
+      "celebrated": 2
+     },
+     "WTW: synonyms for said": {
+      "deny": 1
+     },
+     "contested: political labels": {
+      "radical left": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": []
+   },
+   {
+    "label": "Editor 165",
+    "words_removed": 0,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 0,
+    "sources_removed": {},
+    "terms_inserted": {
+     "contested: terms for violent events": {
+      "attack": 1
+     },
+     "contested: truth claims": {
+      "propaganda": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": []
+   }
+  ],
+  "editors_shown": 137,
+  "sentence_history": {
+   "rule": "taken out and put back at least 2 times, not counting page-wide removals",
+   "sentences": 45,
+   "sentences_removed_and_restored_twice_or_more": 28,
+   "their_words": 628,
+   "share_of_words": 0.676724,
+   "in_opening_section": 4,
+   "median_days_in_place_since_last_restored": 1005,
+   "sentences_removed_five_times_or_more": 5,
+   "sentences_removed_by_two_or_more_accounts": 26
+  }
+ },
+ "declared_interests": {
+  "article_tags": [],
+  "talk_page_revision": 1365944569,
+  "evidence": "https://en.wikipedia.org/w/index.php?oldid=1365944569",
+  "notices": []
  },
  "caveats": [
   {

@@ -5193,7 +5193,7 @@
   "sanctioned_editors": 5,
   "rule": "topic bans count on articles in the same topic area; site bans and sockpuppetry findings count everywhere",
   "sanctions_list": {
-   "seed_rows_total": 130,
+   "seed_rows_total": 154,
    "seed_rows_in_topic_area": 96,
    "seed_rows_unresolved_accounts": 0,
    "block_log_snapshot": "2026-11-03"
@@ -10498,7 +10498,9 @@
   "wikiwho_rev_content": "https://wikiwho-api.wmcloud.org/en/api/v1.0.0-beta/rev_content/rev_id/1383619082/",
   "wikiwho_all_content": "https://wikiwho-api.wmcloud.org/en/api/v1.0.0-beta/all_content/page_id/51011370/",
   "history_revisions": 1287,
-  "sanctions_csv_sha256": "83c3c25da3d1338292d21c2b407f4fdc4aee5a973a0fa7ac6bb32e407de325dd"
+  "sanctions_csv_sha256": "46ecf8bd2945ef432b9a5a9afcd72502654439f2b78b039f168883e847475a22",
+  "source_names_sha256": "1e0c7263959b899f0a4dd2a19e5f77b3d542f7e961d864fcb790974eb1ddbad0",
+  "books_sha256": "9ccb7546d93ad0a25ee871dd8d562f8bf78c6f776f74610e68772e1310cb04be"
  },
  "quality": {
   "wikiwho_tokens": 29337,
@@ -10515,12 +10517,607 @@
   "distinct_sources": 87,
   "editors_adding_citations": 58,
   "citation_only_editors": 14,
+  "flags": {
+   "opinion": 2,
+   "no_link": 4,
+   "book_without_page": 0,
+   "not_english": 2,
+   "not_english_no_quote": 2,
+   "dead_link_no_archive": 0,
+   "paywall_or_registration": 4
+  },
+  "flags_by_editor": {
+   "Editor 2": {
+    "citations": 23,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 4": {
+    "citations": 11,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 1,
+    "not_english_no_quote": 1,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 123": {
+    "citations": 11,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 1
+   },
+   "Editor 1": {
+    "citations": 9,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 3": {
+    "citations": 9,
+    "opinion": 1,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 9": {
+    "citations": 7,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 1,
+    "not_english_no_quote": 1,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 1
+   },
+   "Editor 8": {
+    "citations": 6,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 10": {
+    "citations": 5,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 16": {
+    "citations": 5,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 1
+   },
+   "Editor 18": {
+    "citations": 4,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 19": {
+    "citations": 4,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 23": {
+    "citations": 4,
+    "opinion": 0,
+    "no_link": 1,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 11": {
+    "citations": 3,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 13": {
+    "citations": 3,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 17": {
+    "citations": 3,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 40": {
+    "citations": 3,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 124": {
+    "citations": 3,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 6": {
+    "citations": 2,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 7": {
+    "citations": 2,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 14": {
+    "citations": 2,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 15": {
+    "citations": 2,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 20": {
+    "citations": 2,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 24": {
+    "citations": 2,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 26": {
+    "citations": 2,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 28": {
+    "citations": 2,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 29": {
+    "citations": 2,
+    "opinion": 0,
+    "no_link": 1,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 37": {
+    "citations": 2,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 57": {
+    "citations": 2,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 82": {
+    "citations": 2,
+    "opinion": 0,
+    "no_link": 1,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 94": {
+    "citations": 2,
+    "opinion": 1,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 125": {
+    "citations": 2,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 126": {
+    "citations": 2,
+    "opinion": 0,
+    "no_link": 1,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 127": {
+    "citations": 2,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 21": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 25": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 32": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 35": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 36": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 38": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 45": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 46": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 48": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 50": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 61": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 62": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 1
+   },
+   "Editor 63": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 78": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 80": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 92": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 128": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 129": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 130": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 131": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 132": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 133": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 134": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 135": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 136": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   }
+  },
   "list": [
    {
     "source": "nytimes.com",
     "name_as_cited": "The New York Times",
     "citations": 12,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {
+     "paywall_or_registration": 1
+    },
     "added_by": {
      "Editor 2": 2,
      "Editor 10": 1,
@@ -10540,6 +11137,8 @@
     "name_as_cited": "Bridge Michigan",
     "citations": 10,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 1": 6,
      "Editor 8": 1,
@@ -10553,6 +11152,8 @@
     "name_as_cited": "The Detroit News",
     "citations": 7,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 124": 2,
      "Editor 16": 1,
@@ -10567,6 +11168,8 @@
     "name_as_cited": "Politico",
     "citations": 7,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 24": 2,
      "Editor 11": 1,
@@ -10581,6 +11184,8 @@
     "name_as_cited": "Associated Press",
     "citations": 6,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 8": 3,
      "Editor 2": 1,
@@ -10593,6 +11198,8 @@
     "name_as_cited": "The Michigan Daily",
     "citations": 5,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 3": 1,
      "Editor 13": 1,
@@ -10606,6 +11213,8 @@
     "name_as_cited": "The Nation",
     "citations": 5,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 11": 1,
      "Editor 19": 1,
@@ -10619,6 +11228,11 @@
     "name_as_cited": "Detroit Free Press",
     "citations": 4,
     "lead_citations": 0,
+    "opinion_citations": 1,
+    "flags": {
+     "opinion": 1,
+     "paywall_or_registration": 1
+    },
     "added_by": {
      "Editor 3": 2,
      "Editor 32": 1,
@@ -10630,6 +11244,8 @@
     "name_as_cited": "The Washington Post",
     "citations": 4,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 2": 2,
      "Editor 18": 1,
@@ -10641,6 +11257,8 @@
     "name_as_cited": "CBS News",
     "citations": 3,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 1": 1,
      "Editor 17": 1,
@@ -10652,6 +11270,8 @@
     "name_as_cited": "CNN",
     "citations": 3,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 14": 1,
      "Editor 57": 1,
@@ -10663,6 +11283,8 @@
     "name_as_cited": "Michigan Advance",
     "citations": 3,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 6": 1,
      "Editor 20": 1,
@@ -10674,6 +11296,8 @@
     "name_as_cited": "Michigan Public",
     "citations": 3,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 17": 2,
      "Editor 25": 1
@@ -10684,6 +11308,10 @@
     "name_as_cited": "Oxford University Press",
     "citations": 3,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {
+     "no_link": 3
+    },
     "added_by": {
      "Editor 23": 1,
      "Editor 29": 1,
@@ -10695,6 +11323,8 @@
     "name_as_cited": "NBC News",
     "citations": 3,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 2": 2,
      "Editor 136": 1
@@ -10705,6 +11335,8 @@
     "name_as_cited": "NPR",
     "citations": 3,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 4": 1,
      "Editor 20": 1,
@@ -10716,6 +11348,8 @@
     "name_as_cited": "PolitiFact",
     "citations": 3,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 1": 1,
      "Editor 2": 1,
@@ -10727,6 +11361,8 @@
     "name_as_cited": "The Guardian",
     "citations": 3,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 4": 2,
      "Editor 2": 1
@@ -10737,6 +11373,8 @@
     "name_as_cited": "The University Record",
     "citations": 3,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 3": 1,
      "Editor 9": 1,
@@ -10748,6 +11386,8 @@
     "name_as_cited": "Al Jazeera",
     "citations": 2,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 4": 1,
      "Editor 9": 1
@@ -10758,6 +11398,8 @@
     "name_as_cited": "Associated Press",
     "citations": 2,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 2": 1,
      "Editor 6": 1
@@ -10768,6 +11410,8 @@
     "name_as_cited": "Jacobin",
     "citations": 2,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 29": 1,
      "Editor 40": 1
@@ -10778,6 +11422,8 @@
     "name_as_cited": "Detroit Metro Times",
     "citations": 2,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 2": 1,
      "Editor 57": 1
@@ -10788,6 +11434,8 @@
     "name_as_cited": "Michigan.gov",
     "citations": 2,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 3": 1,
      "Editor 123": 1
@@ -10798,6 +11446,8 @@
     "name_as_cited": "The New Republic",
     "citations": 2,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 13": 1,
      "Editor 37": 1
@@ -10808,6 +11458,8 @@
     "name_as_cited": "Newsweek",
     "citations": 2,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 13": 1,
      "Editor 23": 1
@@ -10818,6 +11470,8 @@
     "name_as_cited": "PBS NewsHour",
     "citations": 2,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 2": 1,
      "Editor 10": 1
@@ -10828,6 +11482,8 @@
     "name_as_cited": "Semafor",
     "citations": 2,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 26": 1,
      "Editor 128": 1
@@ -10838,6 +11494,8 @@
     "name_as_cited": "The Independent",
     "citations": 2,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 4": 1,
      "Editor 130": 1
@@ -10848,6 +11506,11 @@
     "name_as_cited": "The Atlantic",
     "citations": 2,
     "lead_citations": 0,
+    "opinion_citations": 1,
+    "flags": {
+     "opinion": 1,
+     "paywall_or_registration": 1
+    },
     "added_by": {
      "Editor 16": 1,
      "Editor 94": 1
@@ -10858,6 +11521,8 @@
     "name_as_cited": "The Hill",
     "citations": 2,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 2": 1,
      "Editor 9": 1
@@ -10868,6 +11533,8 @@
     "name_as_cited": "Abdul for Senate",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 123": 1
     }
@@ -10877,6 +11544,8 @@
     "name_as_cited": "The Detroit News",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 2": 1
     }
@@ -10886,6 +11555,8 @@
     "name_as_cited": "Arab America",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 134": 1
     }
@@ -10895,6 +11566,8 @@
     "name_as_cited": "The Arab American News",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 80": 1
     }
@@ -10904,6 +11577,8 @@
     "name_as_cited": "Axios",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 2": 1
     }
@@ -10913,6 +11588,8 @@
     "name_as_cited": "www.bbc.com",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 45": 1
     }
@@ -10922,6 +11599,8 @@
     "name_as_cited": "Bl.uk",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 3": 1
     }
@@ -10931,6 +11610,8 @@
     "name_as_cited": "Bloomberg News",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 123": 1
     }
@@ -10940,6 +11621,8 @@
     "name_as_cited": "BridgeDetroit",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 2": 1
     }
@@ -10949,6 +11632,8 @@
     "name_as_cited": "Encyclopædia Britannica",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 9": 1
     }
@@ -10958,6 +11643,8 @@
     "name_as_cited": "",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 10": 1
     }
@@ -10967,6 +11654,8 @@
     "name_as_cited": "columbia.edu",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 3": 1
     }
@@ -10976,6 +11665,8 @@
     "name_as_cited": "www.commondreams.org",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 4": 1
     }
@@ -10985,6 +11676,8 @@
     "name_as_cited": "Crain's Detroit Business",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 28": 1
     }
@@ -10994,6 +11687,8 @@
     "name_as_cited": "America Dissected",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 23": 1
     }
@@ -11003,15 +11698,19 @@
     "name_as_cited": "Christian Science Monitor",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 9": 1
     }
    },
    {
     "source": "currentaffairs.org",
-    "name_as_cited": "[[Current Affairs (magazine)",
+    "name_as_cited": "Current Affairs",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 21": 1
     }
@@ -11021,6 +11720,8 @@
     "name_as_cited": "Deadline",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 16": 1
     }
@@ -11030,6 +11731,8 @@
     "name_as_cited": "Democracy Now!",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 2": 1
     }
@@ -11039,6 +11742,8 @@
     "name_as_cited": "FactCheck.org",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 1": 1
     }
@@ -11048,6 +11753,8 @@
     "name_as_cited": "Forbes",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 4": 1
     }
@@ -11057,6 +11764,8 @@
     "name_as_cited": "The Forward",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 2": 1
     }
@@ -11066,6 +11775,8 @@
     "name_as_cited": "ABC News",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 126": 1
     }
@@ -11075,6 +11786,8 @@
     "name_as_cited": "The Forward",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 7": 1
     }
@@ -11084,6 +11797,8 @@
     "name_as_cited": "Healthypeople.gov",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 123": 1
     }
@@ -11093,6 +11808,8 @@
     "name_as_cited": "HuffPost",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 132": 1
     }
@@ -11102,6 +11819,8 @@
     "name_as_cited": "",
     "citations": 1,
     "lead_citations": 1,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 8": 1
     }
@@ -11111,6 +11830,8 @@
     "name_as_cited": "Israel National News",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 2": 1
     }
@@ -11120,6 +11841,8 @@
     "name_as_cited": "Jewish Telegraphic Agency",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 7": 1
     }
@@ -11129,6 +11852,8 @@
     "name_as_cited": "lovin.co",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 15": 1
     }
@@ -11138,6 +11863,8 @@
     "name_as_cited": "Michigan League of Conservation Voters",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 123": 1
     }
@@ -11147,15 +11874,21 @@
     "name_as_cited": "MLive",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 124": 1
     }
    },
    {
-    "source": "name:[[abrams books",
-    "name_as_cited": "[[Abrams Books",
+    "source": "name:abrams",
+    "name_as_cited": "Abrams",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {
+     "no_link": 1
+    },
     "added_by": {
      "Editor 126": 1
     }
@@ -11165,6 +11898,8 @@
     "name_as_cited": "Columbia Missourian",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 10": 1
     }
@@ -11174,17 +11909,10 @@
     "name_as_cited": "Yahoo News",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 2": 1
-    }
-   },
-   {
-    "source": "name:zeteo",
-    "name_as_cited": "Zeteo",
-    "citations": 1,
-    "lead_citations": 0,
-    "added_by": {
-     "Editor 15": 1
     }
    },
    {
@@ -11192,6 +11920,8 @@
     "name_as_cited": "NewsNation",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 9": 1
     }
@@ -11201,6 +11931,8 @@
     "name_as_cited": "Oxford University Press",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 28": 1
     }
@@ -11210,6 +11942,8 @@
     "name_as_cited": "pdsoros.org",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 3": 1
     }
@@ -11219,6 +11953,8 @@
     "name_as_cited": "The American Prospect",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 94": 1
     }
@@ -11228,6 +11964,8 @@
     "name_as_cited": "www.realclearpolitics.com",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 4": 1
     }
@@ -11237,6 +11975,8 @@
     "name_as_cited": "rhodesscholarshiptrust.com",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 3": 1
     }
@@ -11246,15 +11986,19 @@
     "name_as_cited": "The Sanders Institute",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 40": 1
     }
    },
    {
     "source": "statnews.com",
-    "name_as_cited": "[[Stat (website)",
+    "name_as_cited": "Stat",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 123": 1
     }
@@ -11264,6 +12008,8 @@
     "name_as_cited": "The Daily Telegraph",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 19": 1
     }
@@ -11273,6 +12019,12 @@
     "name_as_cited": "The Globe and Mail",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {
+     "not_english": 1,
+     "not_english_no_quote": 1,
+     "paywall_or_registration": 1
+    },
     "added_by": {
      "Editor 9": 1
     }
@@ -11282,6 +12034,8 @@
     "name_as_cited": "The National",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 2": 1
     }
@@ -11291,6 +12045,8 @@
     "name_as_cited": "Time",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 19": 1
     }
@@ -11300,6 +12056,8 @@
     "name_as_cited": "",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 2": 1
     }
@@ -11309,6 +12067,8 @@
     "name_as_cited": "USA TODAY",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 18": 1
     }
@@ -11318,15 +12078,22 @@
     "name_as_cited": "Variety Australia",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {
+     "not_english": 1,
+     "not_english_no_quote": 1
+    },
     "added_by": {
      "Editor 4": 1
     }
    },
    {
     "source": "vogue.com",
-    "name_as_cited": "[[Vogue (magazine)",
+    "name_as_cited": "Vogue",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 133": 1
     }
@@ -11336,6 +12103,8 @@
     "name_as_cited": "The Washington Sun",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 2": 1
     }
@@ -11345,6 +12114,8 @@
     "name_as_cited": "WDET",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 8": 1
     }
@@ -11354,6 +12125,8 @@
     "name_as_cited": "Washington Report on Middle East Affairs",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 10": 1
     }
@@ -11363,11 +12136,4713 @@
     "name_as_cited": "WXXI News",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 4": 1
     }
+   },
+   {
+    "source": "zeteo.com",
+    "name_as_cited": "Zeteo",
+    "citations": 1,
+    "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
+    "added_by": {
+     "Editor 15": 1
+    }
+   }
+  ],
+  "items": [
+   {
+    "id": "isbn:9780190056629",
+    "source": "name:oxford university press",
+    "citations": 2,
+    "flags": [
+     "no_link"
+    ],
+    "added_by": {
+     "Editor 23": 1,
+     "Editor 29": 1
+    }
+   },
+   {
+    "id": "isbn:9780190492410",
+    "source": "name:oxford university press",
+    "citations": 1,
+    "flags": [
+     "no_link"
+    ],
+    "added_by": {
+     "Editor 82": 1
+    }
+   },
+   {
+    "id": "isbn:9781419743023",
+    "source": "name:abrams",
+    "citations": 1,
+    "flags": [
+     "no_link"
+    ],
+    "added_by": {
+     "Editor 126": 1
+    }
+   },
+   {
+    "id": "url:abcnews.go.com/Politics/biden-sanders-announce-aoc-kerry-jayapal-chairs-unity/story?id=70654480",
+    "source": "go.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 126": 1
+    }
+   },
+   {
+    "id": "url:abdulforsenate.com/about",
+    "source": "abdulforsenate.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 123": 1
+    }
+   },
+   {
+    "id": "url:aljazeera.com/indepth/features/2017/03/abdul-el-sayed-running-muslim-governor-170314044707977.html",
+    "source": "aljazeera.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 9": 1
+    }
+   },
+   {
+    "id": "url:aljazeera.com/video/newsfeed/2026/10/25/obama-joins-el-sayed-in-michigan-rally-cry-before-key-midterms",
+    "source": "aljazeera.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en",
+    "added_by": {
+     "Editor 4": 1
+    }
+   },
+   {
+    "id": "url:aol.com/articles/trump-rogers-step-muslim-brotherhood-195119000.html",
+    "source": "aol.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 2": 1
+    }
+   },
+   {
+    "id": "url:ap.org/news-highlights/elections/2026/aipac-has-spent-a-record-amount-on-michigans-senate-primary-the-biggest-test-of-its-influence-yet",
+    "source": "ap.org",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 6": 1
+    }
+   },
+   {
+    "id": "url:ap.org/news-highlights/elections/2026/republicans-made-el-sayed-a-top-midterm-target-the-democrat-wants-to-talk-about-michigan-voters",
+    "source": "ap.org",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 2": 1
+    }
+   },
+   {
+    "id": "url:apnews.com/article/60c79349b60ffbf24a34d60b76e130ed",
+    "source": "apnews.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 16": 1
+    }
+   },
+   {
+    "id": "url:apnews.com/article/d425cde6e9ed47eea0a537753d342b2b",
+    "source": "apnews.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 8": 1
+    }
+   },
+   {
+    "id": "url:apnews.com/article/hasan-piker-democrats-michigan-senate-13da0f0bc16d1473005ae74a205e3668",
+    "source": "apnews.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 8": 1
+    }
+   },
+   {
+    "id": "url:apnews.com/article/michigan-primary-senate-elsayed-stevens-60c79349b60ffbf24a34d60b76e130ed",
+    "source": "apnews.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en",
+    "added_by": {
+     "Editor 127": 1
+    }
+   },
+   {
+    "id": "url:apnews.com/article/michigan-senate-democratic-primary-mcmorrow-stevens-elsayed-2f99c6e065402f730fc8925b5a43c788",
+    "source": "apnews.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 8": 1
+    }
+   },
+   {
+    "id": "url:apnews.com/article/michigan-senate-rogers-elsayed-debate-34ee1d012cb1777b0ee55c1f39cbd1c6",
+    "source": "apnews.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 2": 1
+    }
+   },
+   {
+    "id": "url:arabamerica.com/abdul-el-sayed-doctor-detroit-americas-first-muslim-governor",
+    "source": "arabamerica.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 134": 1
+    }
+   },
+   {
+    "id": "url:arabamericannews.com/2025/04/09/abdul-el-sayed-resigns-as-wayne-county-public-health-director-ahead-of-potential-2026-u-s-senate-run-in-michigan",
+    "source": "arabamericannews.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 80": 1
+    }
+   },
+   {
+    "id": "url:axios.com/2026/08/22/mike-rogers-aipac-michigan-senate",
+    "source": "axios.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 2": 1
+    }
+   },
+   {
+    "id": "url:bbc.com/news/articles/ckgdkpz07kvo",
+    "source": "bbc.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-GB",
+    "added_by": {
+     "Editor 45": 1
+    }
+   },
+   {
+    "id": "url:bloomberg.com/news/articles/2018-02-02/abdul-el-sayed-on-what-ails-detroit-and-michigan",
+    "source": "bloomberg.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 123": 1
+    }
+   },
+   {
+    "id": "url:bridgedetroit.com/fact-check-abdul-el-sayed-muslim-brotherhood",
+    "source": "bridgedetroit.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 2": 1
+    }
+   },
+   {
+    "id": "url:bridgemi.com/michigan-government/6-major-issues-in-michigans-us-senate-race",
+    "source": "bridgemi.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 37": 1
+    }
+   },
+   {
+    "id": "url:bridgemi.com/michigan-government/abdul-el-sayed-under-the-microscope-from-public-health-to-politics",
+    "source": "bridgemi.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:bridgemi.com/michigan-government/el-sayed-asks-court-settle-his-eligibility-michigan-governor",
+    "source": "bridgemi.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:bridgemi.com/michigan-government/el-sayed-vs-stevens-what-to-know-about-michigans-most-interesting-primary",
+    "source": "bridgemi.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 8": 1
+    }
+   },
+   {
+    "id": "url:bridgemi.com/michigan-government/fact-check-abdul-el-sayed-overstates-claim-he-erased-700m-in-medical-debt",
+    "source": "bridgemi.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:bridgemi.com/michigan-government/fact-checks-abdul-el-sayed-record-on-misogyny-defund-the-police-kamala-harris",
+    "source": "bridgemi.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:bridgemi.com/michigan-government/michigan-sides-el-sayed-over-eligibility-question",
+    "source": "bridgemi.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:bridgemi.com/michigan-government/mike-duggan-blasts-abdul-el-sayed-accusing-him-poisoning-kids",
+    "source": "bridgemi.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:bridgemi.com/michigan-government/who-is-abdul-el-sayed-what-to-know-about-michigan-democrats-us-senate-winner",
+    "source": "bridgemi.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 19": 1
+    }
+   },
+   {
+    "id": "url:bridgemi.com/quality-life/13-michigan-books-get-you-through-stay-home-order",
+    "source": "bridgemi.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 40": 1
+    }
+   },
+   {
+    "id": "url:britannica.com/biography/Abdul-El-Sayed",
+    "source": "britannica.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en",
+    "added_by": {
+     "Editor 9": 1
+    }
+   },
+   {
+    "id": "url:cairmichigan.org/who-we-are.html",
+    "source": "cairmichigan.org",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 10": 1
+    }
+   },
+   {
+    "id": "url:cbsnews.com/detroit/news/el-sayed-muslim-brotherhood-question-caro-town-hall-michigan-senate",
+    "source": "cbsnews.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 48": 1
+    }
+   },
+   {
+    "id": "url:cbsnews.com/detroit/news/wayne-county-health-director-abdul-el-sayed-resigns",
+    "source": "cbsnews.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 17": 1
+    }
+   },
+   {
+    "id": "url:cbsnews.com/news/abdul-el-sayed-faith-family-michigan-senate-campaign",
+    "source": "cbsnews.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:cnn.com/2018/06/28/politics/next-up-progressive-candidates-to-watch/index.html",
+    "source": "cnn.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 57": 1
+    }
+   },
+   {
+    "id": "url:cnn.com/2025/11/10/politics/kfile-abdul-el-sayed-deleted-tweets-defund-the-police",
+    "source": "cnn.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en",
+    "added_by": {
+     "Editor 125": 1
+    }
+   },
+   {
+    "id": "url:commondreams.org/news/el-sayed-fox-interview",
+    "source": "commondreams.org",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en",
+    "added_by": {
+     "Editor 4": 1
+    }
+   },
+   {
+    "id": "url:crainsdetroit.com/article/20161007/AWARDS4016/161009939/abdul-el-sayed-31",
+    "source": "crainsdetroit.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 28": 1
+    }
+   },
+   {
+    "id": "url:crooked.com/podcast/a-public-health-catastrophe-in-gaza",
+    "source": "crooked.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 23": 1
+    }
+   },
+   {
+    "id": "url:csmonitor.com/USA/Politics/2018/0329/Can-a-Michigan-doctor-become-America-s-first-Muslim-governor",
+    "source": "csmonitor.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 9": 1
+    }
+   },
+   {
+    "id": "url:cumc.columbia.edu/mdphd/profiles/alumni/profile/abdulrahmanel-sayed",
+    "source": "columbia.edu",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 3": 1
+    }
+   },
+   {
+    "id": "url:currentaffairs.org/news/dr.-abdul-el-sayed-on-medicare-for-all-gaza-and-the-way-forward",
+    "source": "currentaffairs.org",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 21": 1
+    }
+   },
+   {
+    "id": "url:deadline.com/2019/09/pod-save-america-producer-crooked-media-to-launch-narrative-podcast-about-healthcare-dr-abdul-el-sayed-1202742106",
+    "source": "deadline.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 16": 1
+    }
+   },
+   {
+    "id": "url:democracynow.org/2026/10/12/headlines/i_can_call_him_whatever_the_hell_i_want_trump_misnames_michigan_senate_candidate_abdul_el_sayed",
+    "source": "democracynow.org",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 2": 1
+    }
+   },
+   {
+    "id": "url:detroitnews.com/story/news/local/detroit-city/2016/02/15/detroit-official-goes-bat-public-health/80435310",
+    "source": "detroitnews.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 124": 1
+    }
+   },
+   {
+    "id": "url:detroitnews.com/story/news/local/detroit-city/2016/04/05/detroit-schools-dps-lead-copper-testing/82679668",
+    "source": "detroitnews.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 124": 1
+    }
+   },
+   {
+    "id": "url:detroitnews.com/story/news/local/detroit-city/2017/02/09/detroit-health-director-make-bid-governor/97690634",
+    "source": "detroitnews.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 16": 1
+    }
+   },
+   {
+    "id": "url:detroitnews.com/story/news/local/detroit-city/2020/03/09/el-sayed-canvasses-sanders-talks-state-health-new-book/4978872002",
+    "source": "detroitnews.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 123": 1
+    }
+   },
+   {
+    "id": "url:detroitnews.com/story/news/politics/2026/07/07/michigan-senate-debate--live/90783138007",
+    "source": "detroitnews.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 18": 1
+    }
+   },
+   {
+    "id": "url:edition.cnn.com/2026/08/29/politics/el-sayed-michigan-jewish-democrats-synagogue",
+    "source": "cnn.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en",
+    "added_by": {
+     "Editor 14": 1
+    }
+   },
+   {
+    "id": "url:ethos.bl.uk/OrderDetails.do?uin=uk.bl.ethos.556476",
+    "source": "bl.uk",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 3": 1
+    }
+   },
+   {
+    "id": "url:eu.detroitnews.com/story/news/politics/2025/04/19/abdul-el-sayed-military-aid-israel-netanyahu-aipac-haley-stevens-senate-chauvin-george-floyd/83140202007",
+    "source": "detroitnews.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-us",
+    "added_by": {
+     "Editor 23": 1
+    }
+   },
+   {
+    "id": "url:eu.detroitnews.com/story/news/politics/2026/07/25/michigan-senate-hopefuls-stevens-el-sayed-differ-key-issues/91000686007",
+    "source": "detroitnews.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-us",
+    "added_by": {
+     "Editor 61": 1
+    }
+   },
+   {
+    "id": "url:factcheck.org/2026/10/republican-ads-attack-el-sayed-for-past-comments-positions-on-policing-and-prisons",
+    "source": "factcheck.org",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:forbes.com/sites/robertpearl/2026/10/27/when-the-election-ends-congress-must-solve-healthcares-harsh-math",
+    "source": "forbes.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en",
+    "added_by": {
+     "Editor 4": 1
+    }
+   },
+   {
+    "id": "url:forward.com/fast-forward/858233/in-anti-muslim-speech-trump-says-jews-who-support-el-sayed-should-be-ashamed",
+    "source": "forward.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 2": 1
+    }
+   },
+   {
+    "id": "url:freep.com/story/news/local/michigan/2018/07/27/spending-michigans-gubernatorial-primary-record-pace/848913002",
+    "source": "freep.com",
+    "citations": 1,
+    "flags": [
+     "paywall_or_registration"
+    ],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 123": 1
+    }
+   },
+   {
+    "id": "url:freep.com/story/news/local/michigan/2025/04/01/abdul-el-sayed-wayne-county-health-department-senate-bid/82758673007",
+    "source": "freep.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 32": 1
+    }
+   },
+   {
+    "id": "url:freep.com/story/news/local/michigan/detroit/2015/11/24/detroits-new-public-health-director-aims-innovate/76015628",
+    "source": "freep.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 3": 1
+    }
+   },
+   {
+    "id": "url:freep.com/story/opinion/contributors/2016/01/06/marathon-refinery-detroit/78350138",
+    "source": "freep.com",
+    "citations": 1,
+    "flags": [
+     "opinion"
+    ],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 3": 1
+    }
+   },
+   {
+    "id": "url:ghostarchive.org/archive/20261023224729/https://x.com/realDonaldTrump/status/2111515535041253789",
+    "source": "twitter.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 2": 1
+    }
+   },
+   {
+    "id": "url:global.oup.com/academic/product/systems-science-and-population-health-9780190492397?cc=us&lang=en&",
+    "source": "oup.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 28": 1
+    }
+   },
+   {
+    "id": "url:haaretz.com/us-news/2026-04-20/ty-article/.premium/u-s-senate-candidate-from-michigan-says-israeli-government-evil-like-hamas/0000019d-a86b-d096-a3df-eeff58e20000",
+    "source": "haaretz.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 7": 1
+    }
+   },
+   {
+    "id": "url:healthypeople.gov/2020/about/history-development/healthy-people-2030-advisory-committee/committee-members",
+    "source": "healthypeople.gov",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 123": 1
+    }
+   },
+   {
+    "id": "url:huffingtonpost.com/entry/bernie-sanders-endorses-abdul-el-sayed-michigan-governor_us_5b58f52ee4b0de86f4930c09",
+    "source": "huffingtonpost.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 132": 1
+    }
+   },
+   {
+    "id": "url:instagram.com/reel/Dbnb9hVOjQ1",
+    "source": "instagram.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 8": 1
+    }
+   },
+   {
+    "id": "url:israelnationalnews.com/news/435154",
+    "source": "israelnationalnews.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 2": 1
+    }
+   },
+   {
+    "id": "url:jacobin.com/2020/04/abdul-el-sayed-coronavirus-pandemic-health-care",
+    "source": "jacobin.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 40": 1
+    }
+   },
+   {
+    "id": "url:jacobin.com/2026/02/michigan-senate-el-sayed-ice",
+    "source": "jacobin.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 29": 1
+    }
+   },
+   {
+    "id": "url:jta.org/2026/07/08/politics/haley-stevens-takes-aim-at-netanyahu-in-michigan-senate-debate-as-opponent-abdul-el-sayed-calls-israel-a-rogue-state",
+    "source": "jta.org",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 7": 1
+    }
+   },
+   {
+    "id": "url:lovin.co/cairo/en/news/egyptian-american-dr-abdul-el-sayed-just-won-michigans-senate-primary-and-could-make-history-this-november",
+    "source": "lovin.co",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 15": 1
+    }
+   },
+   {
+    "id": "url:metrotimes.com/news-hits/archives/2018/07/05/socialist-hero-ocasio-cortez-endorses-el-sayed-for-michigan-governor",
+    "source": "metrotimes.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 57": 1
+    }
+   },
+   {
+    "id": "url:metrotimes.com/news/trailing-in-polls-mike-rogers-and-trump-embrace-lies-and-anti-muslim-hate",
+    "source": "metrotimes.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 2": 1
+    }
+   },
+   {
+    "id": "url:michigan.gov/snyder/0,4668,7-277--397638--,00.html",
+    "source": "michigan.gov",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 123": 1
+    }
+   },
+   {
+    "id": "url:michigan.gov/snyder/0,4668,7-277-57577_57657_59871-386566--,00.html",
+    "source": "michigan.gov",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 3": 1
+    }
+   },
+   {
+    "id": "url:michiganadvance.com/2026/08/24/el-sayed-says-hasan-piker-does-not-speak-for-his-campaign-amid-comments-on-sen-jeremy-moss",
+    "source": "michiganadvance.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 82": 1
+    }
+   },
+   {
+    "id": "url:michiganadvance.com/2026/09/30/elissa-slotkin-to-join-with-abdul-el-sayed-at-warren-town-hall",
+    "source": "michiganadvance.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 6": 1
+    }
+   },
+   {
+    "id": "url:michiganadvance.com/briefs/el-sayed-lays-out-policy-terms-of-engagement-with-ai-data-centers-in-u-s-senate-hunt",
+    "source": "michiganadvance.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-us",
+    "added_by": {
+     "Editor 20": 1
+    }
+   },
+   {
+    "id": "url:michigandaily.com/content/2008-11-24/u-student-wins-prestigous-rhodes-scholarship",
+    "source": "michigandaily.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 3": 1
+    }
+   },
+   {
+    "id": "url:michigandaily.com/news/government/who-here-believes-in-people-over-profit-senate-candidate-abdul-el-sayed-meets-with-umich-students",
+    "source": "michigandaily.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 13": 1
+    }
+   },
+   {
+    "id": "url:michigandaily.com/section/government/abdul-el-sayed-hosts-townhall-women%E2%80%99s-march-leader-and-people-bernie-sanders%E2%80%99",
+    "source": "michigandaily.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 123": 1
+    }
+   },
+   {
+    "id": "url:michigandaily.com/uncategorized/married-classes",
+    "source": "michigandaily.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 46": 1
+    }
+   },
+   {
+    "id": "url:michigandaily.com/uncategorized/president-bill-clintons-commencement-address-university-michigan-april-28-2007",
+    "source": "michigandaily.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 125": 1
+    }
+   },
+   {
+    "id": "url:michiganlcv.org/event/fourth-annual-innovation-in-conservation-gala",
+    "source": "michiganlcv.org",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 123": 1
+    }
+   },
+   {
+    "id": "url:michiganpublic.org/environment-climate-change/2024-05-08/wayne-county-launches-first-phase-of-air-monitoring-network",
+    "source": "michiganpublic.org",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en",
+    "added_by": {
+     "Editor 17": 1
+    }
+   },
+   {
+    "id": "url:michiganpublic.org/politics-government/2018-07-18/el-sayed-wants-tougher-environmental-policies-more-money-for-enforcement",
+    "source": "michiganpublic.org",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 25": 1
+    }
+   },
+   {
+    "id": "url:michiganpublic.org/politics-government/2025-04-04/el-sayed-steps-down-from-wayne-county-to-consider-us-senate-bid",
+    "source": "michiganpublic.org",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en",
+    "added_by": {
+     "Editor 17": 1
+    }
+   },
+   {
+    "id": "url:mlive.com/news/detroit/index.ssf/2016/12/detroit_animal_care_control_ho.html",
+    "source": "mlive.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 124": 1
+    }
+   },
+   {
+    "id": "url:nbcnews.com/politics/2026-election/aipac-super-pac-starts-spending-michigan-senate-race-rcna602597",
+    "source": "nbcnews.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 2": 1
+    }
+   },
+   {
+    "id": "url:nbcnews.com/politics/2026-election/donald-trump-attacks-ilhan-omar-abdul-el-sayed-ohio-rally-youngstown-rcna603107",
+    "source": "nbcnews.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 2": 1
+    }
+   },
+   {
+    "id": "url:nbcnews.com/politics/2026-election/republicans-midterm-message-raising-alarm-muslims-abdul-el-sayed-rcna595562",
+    "source": "nbcnews.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en",
+    "added_by": {
+     "Editor 136": 1
+    }
+   },
+   {
+    "id": "url:newrepublic.com/article/165697/defend-democracy-ukraine-america",
+    "source": "newrepublic.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 13": 1
+    }
+   },
+   {
+    "id": "url:newrepublic.com/post/212447/el-sayed-michigan-ai-artificial-intelligence",
+    "source": "newrepublic.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 37": 1
+    }
+   },
+   {
+    "id": "url:newsnationnow.com/politics/maine-graham-platner-replacement-could-it-be-a-socialist",
+    "source": "newsnationnow.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-us",
+    "added_by": {
+     "Editor 9": 1
+    }
+   },
+   {
+    "id": "url:newspapers.com/article/columbia-missourian-in-re-abdulrahman/209231039",
+    "source": "name:columbia missourian",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 10": 1
+    }
+   },
+   {
+    "id": "url:newsweek.com/bernie-sanders-endorsed-abdul-el-sayed-sees-opportunity-young-men-2063878",
+    "source": "newsweek.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 13": 1
+    }
+   },
+   {
+    "id": "url:newsweek.com/michigan-senate-race-election-abdul-el-sayed-fundraising-2096219",
+    "source": "newsweek.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 23": 1
+    }
+   },
+   {
+    "id": "url:npr.org/2026/08/05/nx-s1-5920403/michigan-senate-el-sayed-stevens-democrats",
+    "source": "npr.org",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en",
+    "added_by": {
+     "Editor 127": 1
+    }
+   },
+   {
+    "id": "url:npr.org/2026/08/08/g-s1-137853/data-centers-primaries-midterms",
+    "source": "npr.org",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-us",
+    "added_by": {
+     "Editor 20": 1
+    }
+   },
+   {
+    "id": "url:npr.org/2026/10/07/nx-s1-5992772/medicare-for-all-midterm-voters-medical-bills-affordability",
+    "source": "npr.org",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en",
+    "added_by": {
+     "Editor 4": 1
+    }
+   },
+   {
+    "id": "url:ns.umich.edu/new/releases/6858",
+    "source": "umich.edu",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 3": 1
+    }
+   },
+   {
+    "id": "url:nytimes.com/2001/11/19/business/nation-challenged-islam-ford-motor-workers-get-job-training-religious-tolerance.html",
+    "source": "nytimes.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 10": 1
+    }
+   },
+   {
+    "id": "url:nytimes.com/2025/04/17/us/politics/michigan-senate-race-abdul-el-sayed.html",
+    "source": "nytimes.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 129": 1
+    }
+   },
+   {
+    "id": "url:nytimes.com/2026/07/06/us/politics/michigan-primary-democrats-stevens-el-sayed.html",
+    "source": "nytimes.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 18": 1
+    }
+   },
+   {
+    "id": "url:nytimes.com/2026/07/16/us/politics/haley-stevens-michigan-senate-israel-aipac.html",
+    "source": "nytimes.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 63": 1
+    }
+   },
+   {
+    "id": "url:nytimes.com/2026/07/27/us/politics/el-sayed-michigan-senate.html",
+    "source": "nytimes.com",
+    "citations": 1,
+    "flags": [
+     "paywall_or_registration"
+    ],
+    "added_by": {
+     "Editor 62": 1
+    }
+   },
+   {
+    "id": "url:nytimes.com/2026/08/04/us/politics/michigan-democratic-senate-primary-aipac.html",
+    "source": "nytimes.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 11": 1
+    }
+   },
+   {
+    "id": "url:nytimes.com/2026/08/05/us/politics/aipac-michigan-general-election.html",
+    "source": "nytimes.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 2": 1
+    }
+   },
+   {
+    "id": "url:nytimes.com/2026/08/29/us/politics/el-sayed-apology-jewish-democrats.html",
+    "source": "nytimes.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 14": 1
+    }
+   },
+   {
+    "id": "url:nytimes.com/2026/10/01/us/politics/abdul-el-sayed-michigan-senate.html",
+    "source": "nytimes.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 131": 1
+    }
+   },
+   {
+    "id": "url:nytimes.com/2026/11/02/us/politics/vance-campaign-trail-personas.html",
+    "source": "nytimes.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 38": 1
+    }
+   },
+   {
+    "id": "url:nytimes.com/interactive/2018/08/07/us/elections/results-michigan-primary-elections.html",
+    "source": "nytimes.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 123": 1
+    }
+   },
+   {
+    "id": "url:nytimes.com/live/2026/08/05/us/michigan-election-results-primary/d5c310bc-e405-56ec-a566-5cb03d3c7f72",
+    "source": "nytimes.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 2": 1
+    }
+   },
+   {
+    "id": "url:pbs.org/newshour/politics/fact-checking-abdul-el-sayed-and-haley-stevens-claims-ahead-of-the-michigan-democratic-senate-primary",
+    "source": "pbs.org",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 10": 1
+    }
+   },
+   {
+    "id": "url:pbs.org/newshour/politics/rogers-and-el-sayed-are-set-for-their-first-debate-in-michigans-senate-race-after-sparring-online",
+    "source": "pbs.org",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 2": 1
+    }
+   },
+   {
+    "id": "url:pdsoros.org/meet-the-fellows/abdul-elsayed",
+    "source": "pdsoros.org",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 3": 1
+    }
+   },
+   {
+    "id": "url:politico.com/live-updates/2026/08/04/michigan-missouri-primary-democrats-test/mallmcmorrow-backs-abdul-el-sayed-01025069",
+    "source": "politico.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en",
+    "added_by": {
+     "Editor 11": 1
+    }
+   },
+   {
+    "id": "url:politico.com/news/2026/01/18/minnesota-ice-midterm-campaigns-00735146",
+    "source": "politico.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 16": 1
+    }
+   },
+   {
+    "id": "url:politico.com/news/2026/05/12/abdul-el-sayed-doctor-physician-00916389",
+    "source": "politico.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 24": 1
+    }
+   },
+   {
+    "id": "url:politico.com/news/2026/08/09/el-sayed-disavows-pikers-9-11-comments-01030266",
+    "source": "politico.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 35": 1
+    }
+   },
+   {
+    "id": "url:politico.com/news/2026/08/24/abdul-el-sayed-distances-himself-from-hasan-piker-01048367",
+    "source": "politico.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en",
+    "added_by": {
+     "Editor 24": 1
+    }
+   },
+   {
+    "id": "url:politico.com/story/2018/08/04/michigan-governor-el-sayed-ocasio-cortez-sanders-democrats-762409",
+    "source": "politico.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 135": 1
+    }
+   },
+   {
+    "id": "url:politico.com/story/2018/09/24/michigan-abdul-el-sayed-pac-800327",
+    "source": "politico.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 26": 1
+    }
+   },
+   {
+    "id": "url:politifact.com/article/2026/oct/14/abdul-el-sayed-doctor-physician-michigan-senate",
+    "source": "politifact.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:politifact.com/factchecks/2026/aug/10/tweets/abdul-el-sayed-sharia-muslim-cair-michigan-senate",
+    "source": "politifact.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 2": 1
+    }
+   },
+   {
+    "id": "url:politifact.com/factchecks/2026/oct/01/mike-rogers/abdul-el-sayed-temple-israel-condemn",
+    "source": "politifact.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 4": 1
+    }
+   },
+   {
+    "id": "url:prospect.org/2026/09/08/organized-money-a-conversation-with-abdul-el-sayed",
+    "source": "prospect.org",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 94": 1
+    }
+   },
+   {
+    "id": "url:realclearpolitics.com/video/2026/10/15/el-sayed_israel_dragged_us_into_war_has_that_made_us_any_safer_has_that_improved_our_lives.html",
+    "source": "realclearpolitics.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 4": 1
+    }
+   },
+   {
+    "id": "url:record.umich.edu/articles/spring-commencement-will-include-unique-bicentennial-elements",
+    "source": "umich.edu",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 36": 1
+    }
+   },
+   {
+    "id": "url:record.umich.edu/articles/u-m-dual-md-phd-student-named-rhodes-scholar",
+    "source": "umich.edu",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 9": 1
+    }
+   },
+   {
+    "id": "url:rhodesscholarshiptrust.com/about/rhodes-scholars/class-of-2009/abdul-el-sayed",
+    "source": "rhodesscholarshiptrust.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 3": 1
+    }
+   },
+   {
+    "id": "url:sandersinstitute.org/fellows/dr-abdul-el-sayed",
+    "source": "sandersinstitute.org",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 40": 1
+    }
+   },
+   {
+    "id": "url:semafor.com/article/08/26/2026/el-sayed-says-no-plans-to-campaign-with-piker",
+    "source": "semafor.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 26": 1
+    }
+   },
+   {
+    "id": "url:semafor.com/article/08/28/2026/hasan-piker-defiant-as-democrats-turn-on-him-interview",
+    "source": "semafor.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 128": 1
+    }
+   },
+   {
+    "id": "url:statnews.com/2016/05/03/detroit-health-director",
+    "source": "statnews.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 123": 1
+    }
+   },
+   {
+    "id": "url:telegraph.co.uk/us/politics/2026/08/05/abdul-el-sayed-oxford-democrats-michigan",
+    "source": "telegraph.co.uk",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 19": 1
+    }
+   },
+   {
+    "id": "url:the-independent.com/arts-entertainment/music/news/bruce-springsteen-michigan-abdul-el-sayed-b3077834.html",
+    "source": "the-independent.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en",
+    "added_by": {
+     "Editor 4": 1
+    }
+   },
+   {
+    "id": "url:the-independent.com/news/world/americas/us-politics/abdul-sayed-democrat-michigan-senate-b3027764.html",
+    "source": "the-independent.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 130": 1
+    }
+   },
+   {
+    "id": "url:theatlantic.com/ideas/2026/09/abdul-el-sayed-michigan-senate-profile/688576",
+    "source": "theatlantic.com",
+    "citations": 1,
+    "flags": [
+     "opinion"
+    ],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 94": 1
+    }
+   },
+   {
+    "id": "url:theatlantic.com/politics/2026/01/abolish-ice-democrats-defund-police/685665",
+    "source": "theatlantic.com",
+    "citations": 1,
+    "flags": [
+     "paywall_or_registration"
+    ],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 16": 1
+    }
+   },
+   {
+    "id": "url:theglobeandmail.com/news/world/us-politics/michigan-abdul-el-sayed/article34966598",
+    "source": "theglobeandmail.com",
+    "citations": 1,
+    "flags": [
+     "not_english",
+     "not_english_no_quote",
+     "paywall_or_registration"
+    ],
+    "language_as_cited": "en-ca",
+    "added_by": {
+     "Editor 9": 1
+    }
+   },
+   {
+    "id": "url:theguardian.com/us-news/2026/aug/09/abdul-el-sayed-michigan-senate-trump",
+    "source": "theguardian.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 2": 1
+    }
+   },
+   {
+    "id": "url:theguardian.com/us-news/2026/oct/24/barack-obama-abdul-el-sayed-michigan",
+    "source": "theguardian.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-GB",
+    "added_by": {
+     "Editor 4": 1
+    }
+   },
+   {
+    "id": "url:theguardian.com/us-news/2026/oct/27/michigan-abdul-el-sayed-medicare-for-all",
+    "source": "theguardian.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-GB",
+    "added_by": {
+     "Editor 4": 1
+    }
+   },
+   {
+    "id": "url:thehill.com/homenews/administration/6131787-trump-rallies-fox-news-el-sayed-michigan-osborne-nebraska",
+    "source": "thehill.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 2": 1
+    }
+   },
+   {
+    "id": "url:thehill.com/homenews/campaign/5993136-el-sayed-stevens-michigan-democratic-senate-primary-debate",
+    "source": "thehill.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 9": 1
+    }
+   },
+   {
+    "id": "url:thenation.com/article/abdul-el-sayed-governor-michigan",
+    "source": "thenation.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 78": 1
+    }
+   },
+   {
+    "id": "url:thenation.com/article/activism/abdul-el-sayed-aipac-win",
+    "source": "thenation.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 19": 1
+    }
+   },
+   {
+    "id": "url:thenation.com/article/archive/meet-the-candidate-running-to-fix-michigans-brutal-housing-policies",
+    "source": "thenation.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 123": 1
+    }
+   },
+   {
+    "id": "url:thenation.com/article/politics/abdul-el-sayed-michigan-senate-primary/tnamp",
+    "source": "thenation.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 92": 1
+    }
+   },
+   {
+    "id": "url:thenation.com?post_type=article&p=593087",
+    "source": "thenation.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 11": 1
+    }
+   },
+   {
+    "id": "url:thenationalnews.com/news/us/2026/10/15/trump-accuses-michigan-senate-candidate-abdul-el-sayed-of-muslim-brotherhood-ties",
+    "source": "thenationalnews.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 2": 1
+    }
+   },
+   {
+    "id": "url:time.com/article/2026/07/08/democratic-senate-hopeful-abdul-el-sayed-is-running-against-two-parties",
+    "source": "time.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 19": 1
+    }
+   },
+   {
+    "id": "url:usatoday.com/story/news/politics/2026/08/05/abdul-el-sayed-michigan-senate-general-election-outlook/91183031007",
+    "source": "usatoday.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 18": 1
+    }
+   },
+   {
+    "id": "url:variety.com/2026/music/news/bruce-springsteen-abdul-el-sayed-senator-election-1236937898",
+    "source": "variety.com",
+    "citations": 1,
+    "flags": [
+     "not_english",
+     "not_english_no_quote"
+    ],
+    "language_as_cited": "en-AU",
+    "added_by": {
+     "Editor 4": 1
+    }
+   },
+   {
+    "id": "url:vogue.com/article/abdul-el-sayed-michigan-governor-democratic-primary-interview",
+    "source": "vogue.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 133": 1
+    }
+   },
+   {
+    "id": "url:washingtonpost.com/politics/2026/08/23/abdul-el-sayed-faced-wave-anti-muslim-rhetoric-after-michigan-senate-primary-win",
+    "source": "washingtonpost.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 2": 1
+    }
+   },
+   {
+    "id": "url:washingtonpost.com/politics/2026/09/01/vance-wades-into-caustic-michigan-senate-race-calling-candidate-evil",
+    "source": "washingtonpost.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 2": 1
+    }
+   },
+   {
+    "id": "url:washingtonpost.com/politics/2026/10/15/el-sayed-again-denies-ties-muslim-brotherhood",
+    "source": "washingtonpost.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 50": 1
+    }
+   },
+   {
+    "id": "url:washingtonpost.com/politics/2026/10/22/pro-israel-lobby-aipac-no-longer-endorse-directly-give-candidates",
+    "source": "washingtonpost.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 18": 1
+    }
+   },
+   {
+    "id": "url:washingtonsun.com/campaigns/israel-debate-michigan-primaries-progressives",
+    "source": "washingtonsun.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 2": 1
+    }
+   },
+   {
+    "id": "url:wdet.org/2026/04/08/influencer-hasan-piker-gives-michigan-senate-race-some-heat",
+    "source": "wdet.org",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 8": 1
+    }
+   },
+   {
+    "id": "url:wrmea.org/2007-july/muslim-american-activism-cair-mi-annual-fund-raising-banquet-a-remarkable-success.html",
+    "source": "wrmea.org",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 10": 1
+    }
+   },
+   {
+    "id": "url:wxxinews.org/npr-news/2026-09-04/el-sayed-split-michigan-democrats-whether-they-unify-could-decide-senate-control",
+    "source": "wxxinews.org",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en",
+    "added_by": {
+     "Editor 4": 1
+    }
+   },
+   {
+    "id": "url:yahoo.com/news/politics/articles/cnn-dana-bash-throws-down-194901392.html",
+    "source": "name:yahoo news",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 2": 1
+    }
+   },
+   {
+    "id": "url:youtube.com/shorts/xcFKHaAKixM",
+    "source": "zeteo.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 15": 1
+    }
    }
   ]
+ },
+ "changes": {
+  "words_removed": 19859,
+  "words_removed_later_restored": 3784,
+  "source_links_removed": 202,
+  "editors_removing": 310,
+  "listed_terms": {
+   "inserted": {
+    "WTW: contentious labels": 20,
+    "WTW: editorializing": 15,
+    "WTW: euphemisms": 4,
+    "WTW: expressions of doubt": 4,
+    "WTW: puffery": 18,
+    "WTW: synonyms for said": 34,
+    "WTW: unsupported attributions": 1,
+    "contested: immigration": 8,
+    "contested: mass-atrocity and legal terms": 16,
+    "contested: political labels": 7,
+    "contested: stances on Israel, Jews and Muslims": 49,
+    "contested: terms for armed groups and their members": 27,
+    "contested: terms for deaths": 1,
+    "contested: terms for violent events": 40,
+    "contested: territory and control": 3,
+    "contested: truth claims": 10
+   },
+   "removed": {
+    "WTW: contentious labels": 14,
+    "WTW: editorializing": 9,
+    "WTW: expressions of doubt": 7,
+    "WTW: puffery": 10,
+    "WTW: synonyms for said": 18,
+    "contested: immigration": 7,
+    "contested: mass-atrocity and legal terms": 16,
+    "contested: political labels": 4,
+    "contested: stances on Israel, Jews and Muslims": 36,
+    "contested: terms for armed groups and their members": 14,
+    "contested: terms for violent events": 29,
+    "contested: territory and control": 3,
+    "contested: truth claims": 1
+   }
+  },
+  "lists": {
+   "words_to_watch": {
+    "revision": 1382059772,
+    "url": "https://en.wikipedia.org/w/index.php?oldid=1382059772",
+    "sha256": "21e24e2898750322164b24947621630845d75cf8dd5adf3ec8cd860152449ea3"
+   },
+   "contested_terms": {
+    "sha256": "944606776be20b6b77dceb3ee5f6a29f8f5e196bf93cc16a4b6f2db6efe600c1"
+   }
+  },
+  "editors": [
+   {
+    "label": "Editor 8",
+    "words_removed": 2461,
+    "others_words_removed": 2371,
+    "words_removed_later_restored": 353,
+    "removing_revisions": 32,
+    "sources_removed": {
+     "detroitnews.com": 4,
+     "apnews.com": 3,
+     "bridgemi.com": 2,
+     "nbcnews.com": 2,
+     "politico.com": 2,
+     "timesofisrael.com": 2,
+     "ama-assn.org": 1,
+     "archive.org": 1,
+     "deadlinedetroit.com": 1,
+     "freebeacon.com": 1,
+     "jewishinsider.com": 1,
+     "michiganadvance.com": 1,
+     "newarab.com": 1,
+     "nytimes.com": 1,
+     "semafor.com": 1,
+     "theatlantic.com": 1,
+     "theguardian.com": 1,
+     "thehill.com": 1,
+     "thirdway.org": 1,
+     "wwwpolitico.com": 1
+    },
+    "terms_inserted": {
+     "WTW: contentious labels": {
+      "controversial": 1
+     },
+     "WTW: synonyms for said": {
+      "claim": 2
+     },
+     "contested: stances on Israel, Jews and Muslims": {
+      "anti-muslim": 2,
+      "antisemitism": 2,
+      "pro-israel": 2
+     },
+     "contested: terms for violent events": {
+      "attack": 1
+     }
+    },
+    "terms_removed": {
+     "WTW: editorializing": {
+      "only": 1
+     },
+     "WTW: expressions of doubt": {
+      "accused": 2
+     },
+     "WTW: puffery": {
+      "great": 1,
+      "popular": 2
+     },
+     "contested: mass-atrocity and legal terms": {
+      "genocide": 1
+     },
+     "contested: stances on Israel, Jews and Muslims": {
+      "anti-israel": 4,
+      "anti-muslim": 2,
+      "antisemitic": 4,
+      "antisemitism": 2,
+      "pro-israel": 1
+     },
+     "contested: terms for armed groups and their members": {
+      "fighter": 3
+     },
+     "contested: terms for violent events": {
+      "attack": 3
+     },
+     "contested: truth claims": {
+      "propaganda": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1359032054",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1376735400",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1374379736",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1371091175",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1359152973"
+    ]
+   },
+   {
+    "label": "Editor 26",
+    "words_removed": 1643,
+    "others_words_removed": 1639,
+    "words_removed_later_restored": 151,
+    "removing_revisions": 36,
+    "sources_removed": {
+     "crainsdetroit.com": 3,
+     "heavy.com": 3,
+     "time.com": 3,
+     "deadlinedetroit.com": 2,
+     "freep.com": 2,
+     "gandernewsroom.com": 2,
+     "policyinnovations.org": 2,
+     "youtube.com": 2,
+     "abdulelsayed.com": 1,
+     "bendthearc.us": 1,
+     "cnn.com": 1,
+     "michiganpublic.org": 1,
+     "michiganradio.org": 1
+    },
+    "terms_inserted": {
+     "contested: stances on Israel, Jews and Muslims": {
+      "antisemitic": 1,
+      "antisemitism": 2
+     },
+     "contested: territory and control": {
+      "disputed": 1
+     }
+    },
+    "terms_removed": {
+     "WTW: editorializing": {
+      "absolutely": 2
+     },
+     "WTW: puffery": {
+      "notable": 1
+     },
+     "contested: mass-atrocity and legal terms": {
+      "genocide": 2
+     },
+     "contested: political labels": {
+      "communist": 3
+     },
+     "contested: stances on Israel, Jews and Muslims": {
+      "antisemitism": 3
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=861320047",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=861462393",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1382448016",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=861461254",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1374096651"
+    ]
+   },
+   {
+    "label": "Editor 6",
+    "words_removed": 944,
+    "others_words_removed": 696,
+    "words_removed_later_restored": 14,
+    "removing_revisions": 20,
+    "sources_removed": {
+     "cnn.com": 2,
+     "freebeacon.com": 2,
+     "timesofisrael.com": 2,
+     "detroitnews.com": 1,
+     "oxfordstudent.com": 1,
+     "thenation.com": 1,
+     "wlns.com": 1
+    },
+    "terms_inserted": {
+     "contested: political labels": {
+      "communist": 1
+     },
+     "contested: stances on Israel, Jews and Muslims": {
+      "anti-israel": 1
+     }
+    },
+    "terms_removed": {
+     "WTW: synonyms for said": {
+      "claim": 1
+     },
+     "contested: stances on Israel, Jews and Muslims": {
+      "anti-israel": 3,
+      "antisemitism": 1,
+      "pro-israel": 1,
+      "pro-palestinian": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1374703358",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1373109338",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1383510260",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1381223434",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1381219508"
+    ]
+   },
+   {
+    "label": "Editor 30",
+    "words_removed": 885,
+    "others_words_removed": 881,
+    "words_removed_later_restored": 449,
+    "removing_revisions": 19,
+    "sources_removed": {
+     "zeteo.com": 3,
+     "nytimes.com": 2,
+     "nbcnews.com": 1,
+     "wwwyoutube.com": 1,
+     "youtube.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: synonyms for said": {
+      "note": 1
+     },
+     "contested: mass-atrocity and legal terms": {
+      "apartheid": 2,
+      "genocide": 2
+     },
+     "contested: terms for armed groups and their members": {
+      "jihadist": 1
+     },
+     "contested: terms for violent events": {
+      "attack": 4
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1381028616",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1382134877",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1382432235",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1381079194",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1382435823"
+    ]
+   },
+   {
+    "label": "Editor 123",
+    "words_removed": 864,
+    "others_words_removed": 852,
+    "words_removed_later_restored": 20,
+    "removing_revisions": 2,
+    "sources_removed": {
+     ".com": 1,
+     "abdulforsenate.com": 1,
+     "bloomberg.com": 1,
+     "cnn.com": 1,
+     "crainsdetroit.com": 1,
+     "detroitnews.com": 1,
+     "healthypeople.gov": 1,
+     "michigan.gov": 1,
+     "michigandaily.com": 1,
+     "michiganlcv.org": 1,
+     "statnews.com": 1,
+     "umich.edu": 1
+    },
+    "terms_inserted": {
+     "WTW: puffery": {
+      "unique": 1
+     }
+    },
+    "terms_removed": {
+     "WTW: puffery": {
+      "unique": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1352148395",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1352150345"
+    ]
+   },
+   {
+    "label": "Editor 16",
+    "words_removed": 779,
+    "others_words_removed": 643,
+    "words_removed_later_restored": 97,
+    "removing_revisions": 22,
+    "sources_removed": {
+     "archive.ph": 1,
+     "bridgemi.com": 1,
+     "deadline.com": 1,
+     "detroitnews.com": 1,
+     "jpost.com": 1,
+     "politico.com": 1,
+     "timesofisrael.com": 1,
+     "wwwdetroitnews.com": 1,
+     "x.com": 1
+    },
+    "terms_inserted": {
+     "contested: mass-atrocity and legal terms": {
+      "genocide": 1
+     },
+     "contested: terms for armed groups and their members": {
+      "fighter": 2
+     }
+    },
+    "terms_removed": {
+     "contested: mass-atrocity and legal terms": {
+      "genocide": 1
+     },
+     "contested: stances on Israel, Jews and Muslims": {
+      "antisemitism": 1
+     },
+     "contested: terms for armed groups and their members": {
+      "fighter": 2
+     },
+     "contested: terms for violent events": {
+      "attack": 5
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1359363606",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1312596737",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1308260088",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1308261404",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1308259881"
+    ]
+   },
+   {
+    "label": "Editor 5",
+    "words_removed": 752,
+    "others_words_removed": 748,
+    "words_removed_later_restored": 11,
+    "removing_revisions": 63,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: editorializing": {
+      "only": 1
+     },
+     "contested: political labels": {
+      "communist": 1
+     },
+     "contested: terms for armed groups and their members": {
+      "jihadist": 1
+     }
+    },
+    "terms_removed": {
+     "WTW: synonyms for said": {
+      "claim": 2
+     },
+     "contested: mass-atrocity and legal terms": {
+      "apartheid": 2
+     },
+     "contested: terms for violent events": {
+      "attack": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1312846849",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1372990814",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=897006286",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1379523121",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1382589790"
+    ]
+   },
+   {
+    "label": "Editor 87",
+    "words_removed": 675,
+    "others_words_removed": 674,
+    "words_removed_later_restored": 302,
+    "removing_revisions": 20,
+    "sources_removed": {
+     "c3healthcare2015.com": 1,
+     "cnn.com": 1,
+     "freep.com": 1,
+     "google.com": 1,
+     "heavy.com": 1,
+     "huffingtonpost.com": 1,
+     "sciencemag.org": 1,
+     "statnews.com": 1,
+     "thehill.com": 1,
+     "umich.edu": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: synonyms for said": {
+      "claim": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=856792797",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=898279339",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=861585107",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=898584008",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=861489313"
+    ]
+   },
+   {
+    "label": "Editor 2",
+    "words_removed": 587,
+    "others_words_removed": 537,
+    "words_removed_later_restored": 49,
+    "removing_revisions": 12,
+    "sources_removed": {
+     "google.com": 1,
+     "jewishinsider.com": 1,
+     "jpost.com": 1,
+     "jta.org": 1,
+     "politico.com": 1
+    },
+    "terms_inserted": {
+     "WTW: contentious labels": {
+      "extremist": 1,
+      "racist": 1,
+      "terrorist": 5
+     },
+     "WTW: editorializing": {
+      "absolutely": 1
+     },
+     "WTW: synonyms for said": {
+      "claim": 4,
+      "deny": 1
+     },
+     "contested: stances on Israel, Jews and Muslims": {
+      "anti-muslim": 10,
+      "islamophobia": 2
+     },
+     "contested: terms for armed groups and their members": {
+      "jihadist": 6,
+      "terrorist": 5
+     },
+     "contested: terms for violent events": {
+      "attack": 9
+     },
+     "contested: truth claims": {
+      "fact-check": 3,
+      "falsely": 1,
+      "without evidence": 1
+     }
+    },
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "controversial": 1
+     },
+     "contested: stances on Israel, Jews and Muslims": {
+      "antisemitism": 2
+     },
+     "contested: terms for violent events": {
+      "attack": 2
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1382992864",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1359044993",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1382462235",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1381074275",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1382992375"
+    ]
+   },
+   {
+    "label": "Editor 137",
+    "words_removed": 570,
+    "others_words_removed": 570,
+    "words_removed_later_restored": 496,
+    "removing_revisions": 3,
+    "sources_removed": {
+     "c3healthcare2015.com": 3,
+     "sciencemag.org": 3
+    },
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: expressions of doubt": {
+      "alleged": 3
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=898272307",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=898272639",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=898272911"
+    ]
+   },
+   {
+    "label": "Editor 42",
+    "words_removed": 508,
+    "others_words_removed": 508,
+    "words_removed_later_restored": 85,
+    "removing_revisions": 15,
+    "sources_removed": {
+     "cnn.com": 2,
+     "huffingtonpost.com": 1,
+     "ncronline.org": 1,
+     "thehill.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: synonyms for said": {
+      "note": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1357849622",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1357849503",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1369783015",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1357851827",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1365811550"
+    ]
+   },
+   {
+    "label": "Editor 46",
+    "words_removed": 443,
+    "others_words_removed": 443,
+    "words_removed_later_restored": 128,
+    "removing_revisions": 6,
+    "sources_removed": {
+     "cam.ac.uk": 2
+    },
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: editorializing": {
+      "actually": 2
+     },
+     "WTW: puffery": {
+      "great": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1369123286",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1369123911",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1369289613",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1369290426",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1369411204"
+    ]
+   },
+   {
+    "label": "Editor 126",
+    "words_removed": 407,
+    "others_words_removed": 407,
+    "words_removed_later_restored": 43,
+    "removing_revisions": 2,
+    "sources_removed": {
+     "freebeacon.com": 1,
+     "metrotimes.com": 1,
+     "michiganpublic.org": 1,
+     "politico.com": 1,
+     "sandersinstitute.org": 1,
+     "southpawmi.com": 1
+    },
+    "terms_inserted": {
+     "WTW: synonyms for said": {
+      "note": 1
+     }
+    },
+    "terms_removed": {
+     "WTW: synonyms for said": {
+      "note": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1334971243",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1336436379"
+    ]
+   },
+   {
+    "label": "Editor 7",
+    "words_removed": 381,
+    "others_words_removed": 363,
+    "words_removed_later_restored": 62,
+    "removing_revisions": 8,
+    "sources_removed": {
+     "algemeiner.com": 1,
+     "michigandaily.com": 1
+    },
+    "terms_inserted": {
+     "WTW: contentious labels": {
+      "terrorist": 1
+     },
+     "WTW: synonyms for said": {
+      "assert": 1,
+      "claim": 1
+     },
+     "contested: immigration": {
+      "invasion": 3
+     },
+     "contested: mass-atrocity and legal terms": {
+      "apartheid": 2,
+      "genocide": 3
+     },
+     "contested: stances on Israel, Jews and Muslims": {
+      "antisemitism": 2,
+      "pro-hamas": 1
+     },
+     "contested: terms for armed groups and their members": {
+      "terrorist": 1
+     },
+     "contested: terms for violent events": {
+      "attack": 1
+     }
+    },
+    "terms_removed": {
+     "WTW: synonyms for said": {
+      "claim": 2,
+      "deny": 1
+     },
+     "contested: immigration": {
+      "invasion": 2
+     },
+     "contested: mass-atrocity and legal terms": {
+      "genocide": 1
+     },
+     "contested: stances on Israel, Jews and Muslims": {
+      "antisemitic": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1363256832",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1374948575",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1383529482",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1383530150",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1369460145"
+    ]
+   },
+   {
+    "label": "Editor 138",
+    "words_removed": 368,
+    "others_words_removed": 368,
+    "words_removed_later_restored": 71,
+    "removing_revisions": 2,
+    "sources_removed": {
+     "dailymail.com": 1,
+     "foxnews.com": 1,
+     "nytimes.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "terrorist": 1
+     },
+     "contested: stances on Israel, Jews and Muslims": {
+      "pro-israel": 1
+     },
+     "contested: terms for armed groups and their members": {
+      "terrorist": 1
+     },
+     "contested: terms for violent events": {
+      "clashes": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1378838580",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1367419345"
+    ]
+   },
+   {
+    "label": "Editor 22",
+    "words_removed": 332,
+    "others_words_removed": 327,
+    "words_removed_later_restored": 108,
+    "removing_revisions": 14,
+    "sources_removed": {
+     "counterpunch.org": 1,
+     "foxnews.com": 1,
+     "nbcnews.com": 1,
+     "nytimes.com": 1
+    },
+    "terms_inserted": {
+     "WTW: contentious labels": {
+      "controversial": 1
+     },
+     "contested: immigration": {
+      "invasion": 3
+     }
+    },
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "racist": 1
+     },
+     "contested: political labels": {
+      "communist": 1
+     },
+     "contested: terms for violent events": {
+      "attack": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1381895731",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1382198464",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1379534839",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1381894656",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1381896094"
+    ]
+   },
+   {
+    "label": "Editor 119",
+    "words_removed": 274,
+    "others_words_removed": 274,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "michiganadvance.com": 3,
+     "ap.org": 2
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1383040197"
+    ]
+   },
+   {
+    "label": "Editor 82",
+    "words_removed": 254,
+    "others_words_removed": 253,
+    "words_removed_later_restored": 4,
+    "removing_revisions": 7,
+    "sources_removed": {
+     "crainsdetroit.com": 1,
+     "wdet.org": 1
+    },
+    "terms_inserted": {
+     "WTW: editorializing": {
+      "only": 1
+     },
+     "WTW: synonyms for said": {
+      "note": 1
+     }
+    },
+    "terms_removed": {
+     "WTW: synonyms for said": {
+      "note": 2
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1357262534",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1357257930",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1357267145",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1357990033",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1365183677"
+    ]
+   },
+   {
+    "label": "Editor 106",
+    "words_removed": 223,
+    "others_words_removed": 219,
+    "words_removed_later_restored": 145,
+    "removing_revisions": 5,
+    "sources_removed": {
+     "politico.com": 2,
+     "detroitnews.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=861460379",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=861462486",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=861462286",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=861462557",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=861461822"
+    ]
+   },
+   {
+    "label": "Editor 27",
+    "words_removed": 216,
+    "others_words_removed": 216,
+    "words_removed_later_restored": 55,
+    "removing_revisions": 3,
+    "sources_removed": {
+     "detroitnews.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1320942088",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1369952532",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1369952598"
+    ]
+   },
+   {
+    "label": "Editor 139",
+    "words_removed": 208,
+    "others_words_removed": 208,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "freebeacon.com": 2
+    },
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: puffery": {
+      "revolutionary": 1
+     },
+     "WTW: synonyms for said": {
+      "claim": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1359153279"
+    ]
+   },
+   {
+    "label": "Editor 1",
+    "words_removed": 195,
+    "others_words_removed": 194,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 5,
+    "sources_removed": {
+     "csohate.org": 1,
+     "misbar.com": 1
+    },
+    "terms_inserted": {
+     "WTW: editorializing": {
+      "actually": 1,
+      "only": 1
+     },
+     "WTW: euphemisms": {
+      "challenge": 1
+     },
+     "WTW: expressions of doubt": {
+      "accused": 1
+     },
+     "WTW: puffery": {
+      "leading": 1
+     },
+     "WTW: synonyms for said": {
+      "claim": 4,
+      "note": 1
+     },
+     "contested: terms for violent events": {
+      "attack": 2
+     },
+     "contested: territory and control": {
+      "disputed": 1
+     },
+     "contested: truth claims": {
+      "fact-check": 3,
+      "misleading": 1
+     }
+    },
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "terrorist": 1
+     },
+     "WTW: synonyms for said": {
+      "claim": 1
+     },
+     "contested: immigration": {
+      "invasion": 1
+     },
+     "contested: stances on Israel, Jews and Muslims": {
+      "anti-muslim": 1,
+      "islamophobia": 2,
+      "pro-hamas": 1
+     },
+     "contested: terms for armed groups and their members": {
+      "terrorist": 1
+     },
+     "contested: terms for violent events": {
+      "attack": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1382733705",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1381472524",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1369230968",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1381473139",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1381767001"
+    ]
+   },
+   {
+    "label": "Editor 12",
+    "words_removed": 194,
+    "others_words_removed": 194,
+    "words_removed_later_restored": 26,
+    "removing_revisions": 5,
+    "sources_removed": {
+     "instagram.com": 1,
+     "michigandaily.com": 1
+    },
+    "terms_inserted": {
+     "WTW: synonyms for said": {
+      "note": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1371960826",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1371187871",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1377065206",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1371206165",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1371189077"
+    ]
+   },
+   {
+    "label": "Editor 102",
+    "words_removed": 194,
+    "others_words_removed": 194,
+    "words_removed_later_restored": 18,
+    "removing_revisions": 7,
+    "sources_removed": {
+     "twitter.com": 5,
+     "democracyforamerica.com": 1,
+     "ourrevolution.com": 1,
+     "peopleforbernie.com": 1,
+     "trendsmap.com": 1
+    },
+    "terms_inserted": {
+     "WTW: puffery": {
+      "unique": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=851814704",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=851814748",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=852355514",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=852355431",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=852119179"
+    ]
+   },
+   {
+    "label": "Editor 140",
+    "words_removed": 190,
+    "others_words_removed": 190,
+    "words_removed_later_restored": 190,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "c3healthcare2015.com": 1,
+     "sciencemag.org": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: expressions of doubt": {
+      "alleged": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=897239531"
+    ]
+   },
+   {
+    "label": "Editor 18",
+    "words_removed": 187,
+    "others_words_removed": 186,
+    "words_removed_later_restored": 2,
+    "removing_revisions": 12,
+    "sources_removed": {},
+    "terms_inserted": {
+     "contested: mass-atrocity and legal terms": {
+      "genocide": 2
+     },
+     "contested: stances on Israel, Jews and Muslims": {
+      "pro-israel": 2
+     }
+    },
+    "terms_removed": {
+     "WTW: editorializing": {
+      "only": 1
+     },
+     "contested: mass-atrocity and legal terms": {
+      "genocide": 2
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1375503196",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1375336358",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1380005120",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1381540965",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1379479133"
+    ]
+   },
+   {
+    "label": "Editor 141",
+    "words_removed": 183,
+    "others_words_removed": 183,
+    "words_removed_later_restored": 61,
+    "removing_revisions": 3,
+    "sources_removed": {
+     "detroitnews.com": 2,
+     "aljazeera.com": 1,
+     "mlive.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=815896086",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=815895110",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=815894831"
+    ]
+   },
+   {
+    "label": "Editor 142",
+    "words_removed": 174,
+    "others_words_removed": 174,
+    "words_removed_later_restored": 13,
+    "removing_revisions": 4,
+    "sources_removed": {
+     "facebook.com": 1,
+     "groupspaces.com": 1,
+     "theguardian.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=854187199",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=877045496",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=854186806",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=858166175"
+    ]
+   },
+   {
+    "label": "Editor 68",
+    "words_removed": 168,
+    "others_words_removed": 161,
+    "words_removed_later_restored": 42,
+    "removing_revisions": 10,
+    "sources_removed": {
+     "cbsnews.com": 1,
+     "politico.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1372386871",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1370215726",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1367839943",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1367793803",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1371828213"
+    ]
+   },
+   {
+    "label": "Editor 70",
+    "words_removed": 160,
+    "others_words_removed": 160,
+    "words_removed_later_restored": 107,
+    "removing_revisions": 4,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: editorializing": {
+      "absolutely": 2
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=858166554",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=861319047",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=858165683",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=854403748"
+    ]
+   },
+   {
+    "label": "Editor 143",
+    "words_removed": 160,
+    "others_words_removed": 160,
+    "words_removed_later_restored": 148,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "sciencemag.org": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: expressions of doubt": {
+      "alleged": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=896610441"
+    ]
+   },
+   {
+    "label": "Editor 144",
+    "words_removed": 156,
+    "others_words_removed": 156,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1383032073"
+    ]
+   },
+   {
+    "label": "Editor 145",
+    "words_removed": 156,
+    "others_words_removed": 153,
+    "words_removed_later_restored": 17,
+    "removing_revisions": 3,
+    "sources_removed": {
+     "jta.org": 1,
+     "theguardian.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {
+     "contested: terms for violent events": {
+      "attack": 5
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1372697479",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1372700236",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1372809427"
+    ]
+   },
+   {
+    "label": "Editor 146",
+    "words_removed": 146,
+    "others_words_removed": 146,
+    "words_removed_later_restored": 8,
+    "removing_revisions": 4,
+    "sources_removed": {
+     "wikipedia.org": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=728824644",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=728824919",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=728824859",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=728824306"
+    ]
+   },
+   {
+    "label": "Editor 147",
+    "words_removed": 144,
+    "others_words_removed": 144,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 4,
+    "sources_removed": {
+     "kslm.news": 1,
+     "politico.com": 1,
+     "unherd.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: puffery": {
+      "popular": 1
+     },
+     "contested: terms for violent events": {
+      "attack": 2
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1374817419",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1376466227",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1362821922",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1374415954"
+    ]
+   },
+   {
+    "label": "Editor 58",
+    "words_removed": 141,
+    "others_words_removed": 141,
+    "words_removed_later_restored": 2,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "currentaffairs.org": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=925816342"
+    ]
+   },
+   {
+    "label": "Editor 65",
+    "words_removed": 138,
+    "others_words_removed": 138,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 4,
+    "sources_removed": {
+     "wwwforbes.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "controversial": 2
+     },
+     "WTW: synonyms for said": {
+      "claim": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1383437335",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1383462313",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1367847681",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1383466022"
+    ]
+   },
+   {
+    "label": "Editor 9",
+    "words_removed": 124,
+    "others_words_removed": 32,
+    "words_removed_later_restored": 21,
+    "removing_revisions": 4,
+    "sources_removed": {
+     "umich.edu": 1
+    },
+    "terms_inserted": {
+     "WTW: editorializing": {
+      "actually": 2,
+      "only": 1
+     },
+     "WTW: puffery": {
+      "great": 1
+     },
+     "WTW: synonyms for said": {
+      "note": 1
+     },
+     "WTW: unsupported attributions": {
+      "officially": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1371333973",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1369540149",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=786744261",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1369161313"
+    ]
+   },
+   {
+    "label": "Editor 148",
+    "words_removed": 111,
+    "others_words_removed": 111,
+    "words_removed_later_restored": 1,
+    "removing_revisions": 6,
+    "sources_removed": {
+     "axios.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {
+     "contested: stances on Israel, Jews and Muslims": {
+      "antisemitic": 1,
+      "antisemitism": 2
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1374102289",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1372417350",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1369214151",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1368259500",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=848898687"
+    ]
+   },
+   {
+    "label": "Editor 149",
+    "words_removed": 110,
+    "others_words_removed": 110,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 2,
+    "sources_removed": {
+     "timesofisrael.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {
+     "contested: stances on Israel, Jews and Muslims": {
+      "pro-palestinian": 1
+     },
+     "contested: terms for violent events": {
+      "attack": 2
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1373003946",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1373003134"
+    ]
+   },
+   {
+    "label": "Editor 19",
+    "words_removed": 109,
+    "others_words_removed": 32,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 6,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: puffery": {
+      "landmark": 1
+     },
+     "contested: mass-atrocity and legal terms": {
+      "apartheid": 1,
+      "genocide": 2
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1369224704",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1365106133",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1369026491",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1369223975",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1369856667"
+    ]
+   },
+   {
+    "label": "Editor 43",
+    "words_removed": 95,
+    "others_words_removed": 95,
+    "words_removed_later_restored": 4,
+    "removing_revisions": 4,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1369349028",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1369375052",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1369486796",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1369215250"
+    ]
+   },
+   {
+    "label": "Editor 150",
+    "words_removed": 95,
+    "others_words_removed": 95,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1371199347"
+    ]
+   },
+   {
+    "label": "Editor 151",
+    "words_removed": 95,
+    "others_words_removed": 95,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "nytimes.com": 1,
+     "theatlantic.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1381501530"
+    ]
+   },
+   {
+    "label": "Editor 25",
+    "words_removed": 87,
+    "others_words_removed": 84,
+    "words_removed_later_restored": 1,
+    "removing_revisions": 4,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1304047518",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1305860221",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1304047748",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1304047599"
+    ]
+   },
+   {
+    "label": "Editor 121",
+    "words_removed": 82,
+    "others_words_removed": 82,
+    "words_removed_later_restored": 4,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "google.com": 2
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1376374810"
+    ]
+   },
+   {
+    "label": "Editor 49",
+    "words_removed": 78,
+    "others_words_removed": 77,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 7,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=826100494",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=841455468",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=854150904",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=826608125",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=826100800"
+    ]
+   },
+   {
+    "label": "Editor 152",
+    "words_removed": 78,
+    "others_words_removed": 78,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 4,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: synonyms for said": {
+      "note": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1011212710",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1382487341",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1349949439",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1245486218"
+    ]
+   },
+   {
+    "label": "Editor 153",
+    "words_removed": 74,
+    "others_words_removed": 74,
+    "words_removed_later_restored": 74,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "politico.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=857142349"
+    ]
+   },
+   {
+    "label": "Editor 36",
+    "words_removed": 70,
+    "others_words_removed": 70,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: puffery": {
+      "unique": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=789068007",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=789068132"
+    ]
+   },
+   {
+    "label": "Editor 154",
+    "words_removed": 62,
+    "others_words_removed": 62,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=811772800"
+    ]
+   },
+   {
+    "label": "Editor 15",
+    "words_removed": 59,
+    "others_words_removed": 59,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 3,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: euphemisms": {
+      "challenge": 1
+     }
+    },
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "bigot": 1
+     },
+     "contested: terms for armed groups and their members": {
+      "operative": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1382429304",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1369575241",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1381620276"
+    ]
+   },
+   {
+    "label": "Editor 155",
+    "words_removed": 59,
+    "others_words_removed": 59,
+    "words_removed_later_restored": 59,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "contested: territory and control": {
+      "disputed": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=861582891",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=861583291"
+    ]
+   },
+   {
+    "label": "Editor 41",
+    "words_removed": 57,
+    "others_words_removed": 57,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1368013885",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1368014314"
+    ]
+   },
+   {
+    "label": "Editor 156",
+    "words_removed": 55,
+    "others_words_removed": 54,
+    "words_removed_later_restored": 4,
+    "removing_revisions": 2,
+    "sources_removed": {
+     "ama-assn.org": 1,
+     "x.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1354176258",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1354176353"
+    ]
+   },
+   {
+    "label": "Editor 157",
+    "words_removed": 54,
+    "others_words_removed": 54,
+    "words_removed_later_restored": 54,
+    "removing_revisions": 2,
+    "sources_removed": {
+     "currentaffairs.org": 2
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=906513097",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=906653760"
+    ]
+   },
+   {
+    "label": "Editor 44",
+    "words_removed": 52,
+    "others_words_removed": 16,
+    "words_removed_later_restored": 16,
+    "removing_revisions": 3,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1367751364",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1367751243",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1367751028"
+    ]
+   },
+   {
+    "label": "Editor 158",
+    "words_removed": 52,
+    "others_words_removed": 52,
+    "words_removed_later_restored": 10,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1337215995"
+    ]
+   },
+   {
+    "label": "Editor 76",
+    "words_removed": 51,
+    "others_words_removed": 49,
+    "words_removed_later_restored": 2,
+    "removing_revisions": 9,
+    "sources_removed": {
+     "abdulforsenate.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {
+     "contested: territory and control": {
+      "occupation": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=779566602",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1383077626",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1294032174",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1364027139",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=779566698"
+    ]
+   },
+   {
+    "label": "Editor 62",
+    "words_removed": 49,
+    "others_words_removed": 49,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1367365420",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1367365364"
+    ]
+   },
+   {
+    "label": "Editor 52",
+    "words_removed": 48,
+    "others_words_removed": 48,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 6,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1357948609",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1357938712",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1357941604",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1357948155",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1357951910"
+    ]
+   },
+   {
+    "label": "Editor 127",
+    "words_removed": 47,
+    "others_words_removed": 47,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1367838633",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1367839239"
+    ]
+   },
+   {
+    "label": "Editor 159",
+    "words_removed": 47,
+    "others_words_removed": 47,
+    "words_removed_later_restored": 5,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "freep.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1023764803"
+    ]
+   },
+   {
+    "label": "Editor 11",
+    "words_removed": 43,
+    "others_words_removed": 43,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 5,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "controversial": 1
+     },
+     "contested: immigration": {
+      "invasion": 4
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1379466560",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1379459909",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1379568052",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1379465213",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1379460207"
+    ]
+   },
+   {
+    "label": "Editor 160",
+    "words_removed": 40,
+    "others_words_removed": 40,
+    "words_removed_later_restored": 9,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=854090871",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=854091305"
+    ]
+   },
+   {
+    "label": "Editor 161",
+    "words_removed": 39,
+    "others_words_removed": 39,
+    "words_removed_later_restored": 39,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1304552597",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1304603721"
+    ]
+   },
+   {
+    "label": "Editor 54",
+    "words_removed": 37,
+    "others_words_removed": 37,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: puffery": {
+      "notable": 1
+     }
+    },
+    "terms_removed": {
+     "WTW: puffery": {
+      "hit": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=823510438"
+    ]
+   },
+   {
+    "label": "Editor 162",
+    "words_removed": 35,
+    "others_words_removed": 35,
+    "words_removed_later_restored": 7,
+    "removing_revisions": 4,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=892181641",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=892182604",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=892181796",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=892182042"
+    ]
+   },
+   {
+    "label": "Editor 163",
+    "words_removed": 35,
+    "others_words_removed": 35,
+    "words_removed_later_restored": 8,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=797633207"
+    ]
+   },
+   {
+    "label": "Editor 164",
+    "words_removed": 34,
+    "others_words_removed": 34,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "umich.edu": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1358332238"
+    ]
+   },
+   {
+    "label": "Editor 51",
+    "words_removed": 33,
+    "others_words_removed": 33,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: editorializing": {
+      "only": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=820589172"
+    ]
+   },
+   {
+    "label": "Editor 165",
+    "words_removed": 33,
+    "others_words_removed": 33,
+    "words_removed_later_restored": 33,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: synonyms for said": {
+      "claim": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=944056708",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=944056443"
+    ]
+   },
+   {
+    "label": "Editor 35",
+    "words_removed": 32,
+    "others_words_removed": 32,
+    "words_removed_later_restored": 26,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: contentious labels": {
+      "controversial": 2
+     }
+    },
+    "terms_removed": {
+     "contested: stances on Israel, Jews and Muslims": {
+      "antisemitism": 1
+     },
+     "contested: terms for violent events": {
+      "attack": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1383430734",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1383428820"
+    ]
+   },
+   {
+    "label": "Editor 166",
+    "words_removed": 32,
+    "others_words_removed": 32,
+    "words_removed_later_restored": 2,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "freep.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=841317878"
+    ]
+   },
+   {
+    "label": "Editor 167",
+    "words_removed": 26,
+    "others_words_removed": 26,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=864811600"
+    ]
+   },
+   {
+    "label": "Editor 59",
+    "words_removed": 25,
+    "others_words_removed": 25,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "abdulelsayed.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1343922647"
+    ]
+   },
+   {
+    "label": "Editor 84",
+    "words_removed": 25,
+    "others_words_removed": 25,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1380954816"
+    ]
+   },
+   {
+    "label": "Editor 168",
+    "words_removed": 25,
+    "others_words_removed": 25,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "terrorist": 1
+     },
+     "contested: terms for violent events": {
+      "terrorist attack": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1315987230"
+    ]
+   },
+   {
+    "label": "Editor 118",
+    "words_removed": 23,
+    "others_words_removed": 23,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1382883010"
+    ]
+   },
+   {
+    "label": "Editor 124",
+    "words_removed": 23,
+    "others_words_removed": 23,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=857626887",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=852341046"
+    ]
+   },
+   {
+    "label": "Editor 57",
+    "words_removed": 22,
+    "others_words_removed": 22,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "facebook.com": 1
+    },
+    "terms_inserted": {
+     "WTW: puffery": {
+      "hit": 1
+     },
+     "contested: terms for armed groups and their members": {
+      "insurgent": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=849163041"
+    ]
+   },
+   {
+    "label": "Editor 169",
+    "words_removed": 20,
+    "others_words_removed": 20,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1349353973"
+    ]
+   },
+   {
+    "label": "Editor 10",
+    "words_removed": 19,
+    "others_words_removed": 4,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 9,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: euphemisms": {
+      "challenge": 2
+     },
+     "WTW: puffery": {
+      "leading": 1,
+      "remarkable": 2
+     },
+     "WTW: synonyms for said": {
+      "claim": 2
+     }
+    },
+    "terms_removed": {
+     "WTW: puffery": {
+      "leading": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1381112853",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1381112989",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1382194460",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1382887130",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1382193601"
+    ]
+   },
+   {
+    "label": "Editor 72",
+    "words_removed": 19,
+    "others_words_removed": 19,
+    "words_removed_later_restored": 1,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1367975618"
+    ]
+   },
+   {
+    "label": "Editor 13",
+    "words_removed": 18,
+    "others_words_removed": 18,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 2,
+    "sources_removed": {
+     "yahoo.com": 1
+    },
+    "terms_inserted": {
+     "contested: immigration": {
+      "invasion": 2
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1364861402",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1308570090"
+    ]
+   },
+   {
+    "label": "Editor 53",
+    "words_removed": 18,
+    "others_words_removed": 18,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1383464682"
+    ]
+   },
+   {
+    "label": "Editor 170",
+    "words_removed": 18,
+    "others_words_removed": 18,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1382303653"
+    ]
+   },
+   {
+    "label": "Editor 55",
+    "words_removed": 17,
+    "others_words_removed": 14,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1367792022"
+    ]
+   },
+   {
+    "label": "Editor 171",
+    "words_removed": 16,
+    "others_words_removed": 16,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1381077182",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=741914994"
+    ]
+   },
+   {
+    "label": "Editor 172",
+    "words_removed": 16,
+    "others_words_removed": 16,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1367896215",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1368011010"
+    ]
+   },
+   {
+    "label": "Editor 173",
+    "words_removed": 15,
+    "others_words_removed": 15,
+    "words_removed_later_restored": 15,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=841308160"
+    ]
+   },
+   {
+    "label": "Editor 174",
+    "words_removed": 14,
+    "others_words_removed": 14,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: synonyms for said": {
+      "claim": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1364658386"
+    ]
+   },
+   {
+    "label": "Editor 175",
+    "words_removed": 14,
+    "others_words_removed": 10,
+    "words_removed_later_restored": 10,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {
+     "contested: stances on Israel, Jews and Muslims": {
+      "antisemitic": 2
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1348206662"
+    ]
+   },
+   {
+    "label": "Editor 176",
+    "words_removed": 13,
+    "others_words_removed": 13,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=728655318"
+    ]
+   },
+   {
+    "label": "Editor 177",
+    "words_removed": 12,
+    "others_words_removed": 12,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: editorializing": {
+      "only": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=850033612",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=853811545"
+    ]
+   },
+   {
+    "label": "Editor 178",
+    "words_removed": 11,
+    "others_words_removed": 11,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "goodreads.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1331162836"
+    ]
+   },
+   {
+    "label": "Editor 3",
+    "words_removed": 10,
+    "others_words_removed": 1,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 4,
+    "sources_removed": {},
+    "terms_inserted": {
+     "contested: territory and control": {
+      "occupation": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=728649596",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=728900402",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=747266421",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=765380172"
+    ]
+   },
+   {
+    "label": "Editor 17",
+    "words_removed": 10,
+    "others_words_removed": 10,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 6,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1379121868",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1379126264",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1379126552",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1382585235",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1379114302"
+    ]
+   },
+   {
+    "label": "Editor 179",
+    "words_removed": 10,
+    "others_words_removed": 10,
+    "words_removed_later_restored": 7,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1274289865",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1274289340"
+    ]
+   },
+   {
+    "label": "Editor 180",
+    "words_removed": 10,
+    "others_words_removed": 10,
+    "words_removed_later_restored": 10,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1315875551"
+    ]
+   },
+   {
+    "label": "Editor 181",
+    "words_removed": 10,
+    "others_words_removed": 10,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 4,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=835933841",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1308966333",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1219167848",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1309356903"
+    ]
+   },
+   {
+    "label": "Editor 73",
+    "words_removed": 9,
+    "others_words_removed": 9,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 3,
+    "sources_removed": {},
+    "terms_inserted": {
+     "contested: mass-atrocity and legal terms": {
+      "genocide": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1369480553",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1375387825",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1367860475"
+    ]
+   },
+   {
+    "label": "Editor 182",
+    "words_removed": 9,
+    "others_words_removed": 9,
+    "words_removed_later_restored": 9,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: contentious labels": {
+      "terrorist": 3
+     },
+     "contested: terms for armed groups and their members": {
+      "terrorist": 3
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=860087401"
+    ]
+   },
+   {
+    "label": "Editor 183",
+    "words_removed": 8,
+    "others_words_removed": 8,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "terrorist": 3
+     },
+     "contested: terms for armed groups and their members": {
+      "terrorist": 3
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=860087970"
+    ]
+   },
+   {
+    "label": "Editor 23",
+    "words_removed": 7,
+    "others_words_removed": 7,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {
+     "contested: mass-atrocity and legal terms": {
+      "genocide": 2
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1293421434",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1304052886"
+    ]
+   },
+   {
+    "label": "Editor 39",
+    "words_removed": 6,
+    "others_words_removed": 6,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 3,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: puffery": {
+      "hit": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=797516804",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=797071825",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=797078120"
+    ]
+   },
+   {
+    "label": "Editor 201",
+    "words_removed": 6,
+    "others_words_removed": 6,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "contested: territory and control": {
+      "disputed": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=885413259"
+    ]
+   },
+   {
+    "label": "Editor 187",
+    "words_removed": 5,
+    "others_words_removed": 5,
+    "words_removed_later_restored": 5,
+    "removing_revisions": 3,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "contested: mass-atrocity and legal terms": {
+      "genocide": 3
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1367849185",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1367854070",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1367845396"
+    ]
+   },
+   {
+    "label": "Editor 38",
+    "words_removed": 3,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: synonyms for said": {
+      "claim": 1
+     },
+     "contested: terms for violent events": {
+      "attack": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1383483247",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1383570165"
+    ]
+   },
+   {
+    "label": "Editor 63",
+    "words_removed": 2,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {
+     "contested: stances on Israel, Jews and Muslims": {
+      "pro-israel": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1367381611"
+    ]
+   },
+   {
+    "label": "Editor 88",
+    "words_removed": 2,
+    "others_words_removed": 2,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: editorializing": {
+      "only": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1320993479"
+    ]
+   },
+   {
+    "label": "Editor 94",
+    "words_removed": 2,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 1,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: editorializing": {
+      "clearly": 1
+     },
+     "WTW: puffery": {
+      "great": 1
+     },
+     "contested: political labels": {
+      "populist": 3
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1377684039",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1378108367"
+    ]
+   },
+   {
+    "label": "Editor 192",
+    "words_removed": 2,
+    "others_words_removed": 2,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "terrorist": 1
+     },
+     "contested: terms for armed groups and their members": {
+      "terrorist": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1346233588"
+    ]
+   },
+   {
+    "label": "Editor 196",
+    "words_removed": 2,
+    "others_words_removed": 2,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: synonyms for said": {
+      "note": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1382797198"
+    ]
+   },
+   {
+    "label": "Editor 199",
+    "words_removed": 2,
+    "others_words_removed": 2,
+    "words_removed_later_restored": 2,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: synonyms for said": {
+      "note": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1368080064"
+    ]
+   },
+   {
+    "label": "Editor 112",
+    "words_removed": 1,
+    "others_words_removed": 1,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: editorializing": {
+      "only": 1
+     }
+    },
+    "terms_removed": {
+     "WTW: editorializing": {
+      "only": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1364858934"
+    ]
+   },
+   {
+    "label": "Editor 189",
+    "words_removed": 1,
+    "others_words_removed": 1,
+    "words_removed_later_restored": 1,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: contentious labels": {
+      "terrorist": 1
+     },
+     "contested: terms for armed groups and their members": {
+      "terrorist": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=852321350"
+    ]
+   },
+   {
+    "label": "Editor 190",
+    "words_removed": 1,
+    "others_words_removed": 1,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "terrorist": 1
+     },
+     "contested: terms for armed groups and their members": {
+      "terrorist": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=852321688"
+    ]
+   },
+   {
+    "label": "Editor 191",
+    "words_removed": 1,
+    "others_words_removed": 1,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: synonyms for said": {
+      "confirm": 2
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1367861721"
+    ]
+   },
+   {
+    "label": "Editor 193",
+    "words_removed": 1,
+    "others_words_removed": 1,
+    "words_removed_later_restored": 1,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: contentious labels": {
+      "terrorist": 1
+     },
+     "contested: terms for armed groups and their members": {
+      "terrorist": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1346233540"
+    ]
+   },
+   {
+    "label": "Editor 194",
+    "words_removed": 1,
+    "others_words_removed": 1,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {
+     "contested: stances on Israel, Jews and Muslims": {
+      "antisemitism": 1
+     },
+     "contested: terms for armed groups and their members": {
+      "fighter": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1365032769"
+    ]
+   },
+   {
+    "label": "Editor 198",
+    "words_removed": 1,
+    "others_words_removed": 1,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {
+     "contested: mass-atrocity and legal terms": {
+      "apartheid": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1367855278"
+    ]
+   },
+   {
+    "label": "Editor 200",
+    "words_removed": 1,
+    "others_words_removed": 1,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {
+     "contested: stances on Israel, Jews and Muslims": {
+      "islamophobia": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1382322346"
+    ]
+   },
+   {
+    "label": "Editor 4",
+    "words_removed": 0,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 0,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: synonyms for said": {
+      "claim": 2
+     },
+     "contested: stances on Israel, Jews and Muslims": {
+      "antisemitism": 2
+     },
+     "contested: terms for armed groups and their members": {
+      "fighter": 1
+     },
+     "contested: terms for violent events": {
+      "attack": 4
+     }
+    },
+    "terms_removed": {},
+    "evidence": []
+   },
+   {
+    "label": "Editor 14",
+    "words_removed": 0,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 0,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: editorializing": {
+      "of course": 1
+     },
+     "contested: terms for deaths": {
+      "killed": 1
+     },
+     "contested: terms for violent events": {
+      "attack": 5
+     }
+    },
+    "terms_removed": {},
+    "evidence": []
+   },
+   {
+    "label": "Editor 21",
+    "words_removed": 0,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 0,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: synonyms for said": {
+      "explain": 1
+     },
+     "contested: mass-atrocity and legal terms": {
+      "genocide": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": []
+   },
+   {
+    "label": "Editor 24",
+    "words_removed": 0,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 0,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: expressions of doubt": {
+      "accused": 2
+     },
+     "WTW: puffery": {
+      "revolutionary": 1
+     },
+     "contested: stances on Israel, Jews and Muslims": {
+      "anti-israel": 5,
+      "antisemitic": 1,
+      "antisemitism": 4,
+      "pro-palestinian": 2
+     },
+     "contested: terms for violent events": {
+      "attack": 7
+     }
+    },
+    "terms_removed": {},
+    "evidence": []
+   },
+   {
+    "label": "Editor 32",
+    "words_removed": 0,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 0,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: synonyms for said": {
+      "note": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": []
+   },
+   {
+    "label": "Editor 48",
+    "words_removed": 0,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 0,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: contentious labels": {
+      "bigot": 1
+     },
+     "contested: terms for armed groups and their members": {
+      "operative": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": []
+   },
+   {
+    "label": "Editor 50",
+    "words_removed": 0,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 0,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: synonyms for said": {
+      "deny": 2
+     }
+    },
+    "terms_removed": {},
+    "evidence": []
+   },
+   {
+    "label": "Editor 128",
+    "words_removed": 0,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 0,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: puffery": {
+      "popular": 2
+     },
+     "contested: stances on Israel, Jews and Muslims": {
+      "antisemitic": 1,
+      "pro-israel": 1
+     },
+     "contested: truth claims": {
+      "propaganda": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": []
+   },
+   {
+    "label": "Editor 129",
+    "words_removed": 0,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 0,
+    "sources_removed": {},
+    "terms_inserted": {
+     "contested: terms for armed groups and their members": {
+      "fighter": 2
+     }
+    },
+    "terms_removed": {},
+    "evidence": []
+   },
+   {
+    "label": "Editor 131",
+    "words_removed": 0,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 0,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: puffery": {
+      "hit": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": []
+   },
+   {
+    "label": "Editor 136",
+    "words_removed": 0,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 0,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: contentious labels": {
+      "terrorist": 1
+     },
+     "contested: political labels": {
+      "communist": 1
+     },
+     "contested: terms for armed groups and their members": {
+      "terrorist": 1
+     },
+     "contested: terms for violent events": {
+      "attack": 1,
+      "clashes": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": []
+   },
+   {
+    "label": "Editor 184",
+    "words_removed": 0,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 0,
+    "sources_removed": {},
+    "terms_inserted": {
+     "contested: terms for violent events": {
+      "attack": 5
+     }
+    },
+    "terms_removed": {},
+    "evidence": []
+   },
+   {
+    "label": "Editor 185",
+    "words_removed": 0,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 0,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: synonyms for said": {
+      "claim": 1,
+      "deny": 1
+     },
+     "contested: political labels": {
+      "communist": 1
+     },
+     "contested: stances on Israel, Jews and Muslims": {
+      "antisemitic": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": []
+   },
+   {
+    "label": "Editor 186",
+    "words_removed": 0,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 0,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: puffery": {
+      "popular": 1
+     },
+     "contested: terms for violent events": {
+      "attack": 2
+     }
+    },
+    "terms_removed": {},
+    "evidence": []
+   },
+   {
+    "label": "Editor 188",
+    "words_removed": 0,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 0,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: contentious labels": {
+      "terrorist": 1
+     },
+     "contested: terms for violent events": {
+      "terrorist attack": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": []
+   },
+   {
+    "label": "Editor 195",
+    "words_removed": 0,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 0,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: editorializing": {
+      "only": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": []
+   },
+   {
+    "label": "Editor 197",
+    "words_removed": 0,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 0,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: expressions of doubt": {
+      "alleged": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": []
+   },
+   {
+    "label": "Editor 202",
+    "words_removed": 0,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 0,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: synonyms for said": {
+      "claim": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": []
+   }
+  ],
+  "editors_shown": 141
+ },
+ "declared_interests": {
+  "article_tags": [],
+  "talk_page_revision": 1383475942,
+  "evidence": "https://en.wikipedia.org/w/index.php?oldid=1383475942",
+  "notices": []
  },
  "caveats": [
   {

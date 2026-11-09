@@ -1254,6 +1254,48 @@
    "ip": 0.003599,
    "registered": 0.996401
   },
+  "persistence": [
+   {
+    "years": 1,
+    "baseline": 1317796101,
+    "baseline_timestamp": "2025-10-20T02:25:26Z",
+    "words_then": 8883,
+    "still_present": 8875,
+    "share_still_present": 0.999099,
+    "words_now": 8927,
+    "share_of_current": 0.994175
+   },
+   {
+    "years": 2,
+    "baseline": 1247619697,
+    "baseline_timestamp": "2024-09-25T03:21:16Z",
+    "words_then": 8867,
+    "still_present": 8839,
+    "share_still_present": 0.996842,
+    "words_now": 8927,
+    "share_of_current": 0.990142
+   },
+   {
+    "years": 3,
+    "baseline": 1177857365,
+    "baseline_timestamp": "2023-09-30T01:29:54Z",
+    "words_then": 8852,
+    "still_present": 8795,
+    "share_still_present": 0.993561,
+    "words_now": 8927,
+    "share_of_current": 0.985213
+   },
+   {
+    "years": 5,
+    "baseline": 1050761189,
+    "baseline_timestamp": "2021-10-19T19:06:31Z",
+    "words_then": 8559,
+    "still_present": 8421,
+    "share_still_present": 0.983877,
+    "words_now": 8927,
+    "share_of_current": 0.943318
+   }
+  ],
   "survival_article": {
    "48h": {
     "words_added": 14269,
@@ -1324,7 +1366,7 @@
   "sanctioned_editors": 1,
   "rule": "topic bans count on articles in the same topic area; site bans and sockpuppetry findings count everywhere",
   "sanctions_list": {
-   "seed_rows_total": 130,
+   "seed_rows_total": 154,
    "seed_rows_in_topic_area": 0,
    "seed_rows_unresolved_accounts": 0,
    "block_log_snapshot": "2026-11-04"
@@ -1405,7 +1447,22 @@
    "added_before_sanction": true,
    "sanctioned_words_before": 9,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 6,
+   "works_cited": 6,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2019-11-03",
+    "latest_removal": null,
+    "in_place_since": "2019-11-03",
+    "in_place_since_revision": 924398190,
+    "removals": []
+   }
   },
   {
    "id": "lead-2",
@@ -1440,7 +1497,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2020-08-31",
+    "latest_removal": null,
+    "in_place_since": "2020-08-31",
+    "in_place_since_revision": 975925569,
+    "removals": []
+   }
   },
   {
    "id": "lead-3",
@@ -1471,7 +1543,22 @@
    "added_before_sanction": true,
    "sanctioned_words_before": 13,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2020-08-30",
+    "latest_removal": null,
+    "in_place_since": "2020-08-30",
+    "in_place_since_revision": 975726017,
+    "removals": []
+   }
   },
   {
    "id": "lead-4",
@@ -1512,7 +1599,22 @@
    "added_before_sanction": true,
    "sanctioned_words_before": 6,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2020-09-02",
+    "latest_removal": null,
+    "in_place_since": "2020-09-02",
+    "in_place_since_revision": 976287304,
+    "removals": []
+   }
   },
   {
    "id": "lead-5",
@@ -1539,7 +1641,22 @@
    "added_before_sanction": true,
    "sanctioned_words_before": 17,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2021-05-03",
+    "latest_removal": null,
+    "in_place_since": "2021-05-03",
+    "in_place_since_revision": 1021146813,
+    "removals": []
+   }
   },
   {
    "id": "lead-6",
@@ -1568,7 +1685,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2022-08-21",
+    "latest_removal": null,
+    "in_place_since": "2022-08-21",
+    "in_place_since_revision": 1105760517,
+    "removals": []
+   }
   },
   {
    "id": "lead-7",
@@ -1593,7 +1725,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2022-08-21",
+    "latest_removal": null,
+    "in_place_since": "2022-08-21",
+    "in_place_since_revision": 1105760517,
+    "removals": []
+   }
   },
   {
    "id": "sec1-1",
@@ -1622,7 +1769,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2020-08-31",
+    "latest_removal": null,
+    "in_place_since": "2020-08-31",
+    "in_place_since_revision": 975925569,
+    "removals": []
+   }
   },
   {
    "id": "sec1-2",
@@ -1655,7 +1817,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2020-08-31",
+    "latest_removal": null,
+    "in_place_since": "2020-08-31",
+    "in_place_since_revision": 975925569,
+    "removals": []
+   }
   },
   {
    "id": "sec1-3",
@@ -1680,7 +1857,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2020-08-31",
+    "latest_removal": null,
+    "in_place_since": "2020-08-31",
+    "in_place_since_revision": 975925569,
+    "removals": []
+   }
   },
   {
    "id": "sec1-4",
@@ -1711,7 +1903,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 2,
+   "works_cited": 2,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2020-08-31",
+    "latest_removal": null,
+    "in_place_since": "2020-08-31",
+    "in_place_since_revision": 975925569,
+    "removals": []
+   }
   },
   {
    "id": "sec1-5",
@@ -1744,7 +1951,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 3,
+   "works_cited": 3,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2020-08-31",
+    "latest_removal": null,
+    "in_place_since": "2020-08-31",
+    "in_place_since_revision": 975925569,
+    "removals": []
+   }
   },
   {
    "id": "sec1-6",
@@ -1769,7 +1991,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2020-09-30",
+    "latest_removal": null,
+    "in_place_since": "2020-09-30",
+    "in_place_since_revision": 981186797,
+    "removals": []
+   }
   },
   {
    "id": "sec1-7",
@@ -1798,7 +2035,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 2,
+   "works_cited": 2,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2020-08-31",
+    "latest_removal": null,
+    "in_place_since": "2020-08-31",
+    "in_place_since_revision": 975925569,
+    "removals": []
+   }
   },
   {
    "id": "sec1-8",
@@ -1823,7 +2075,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2024-08-30",
+    "latest_removal": null,
+    "in_place_since": "2024-08-30",
+    "in_place_since_revision": 1243117475,
+    "removals": []
+   }
   },
   {
    "id": "sec1-9",
@@ -1850,7 +2117,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2020-08-31",
+    "latest_removal": null,
+    "in_place_since": "2020-08-31",
+    "in_place_since_revision": 975926186,
+    "removals": []
+   }
   },
   {
    "id": "sec1-10",
@@ -1877,7 +2159,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2020-08-31",
+    "latest_removal": null,
+    "in_place_since": "2020-08-31",
+    "in_place_since_revision": 975926186,
+    "removals": []
+   }
   },
   {
    "id": "sec1-11",
@@ -1904,7 +2201,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2020-08-31",
+    "latest_removal": null,
+    "in_place_since": "2020-08-31",
+    "in_place_since_revision": 975926535,
+    "removals": []
+   }
   },
   {
    "id": "sec1-12",
@@ -1929,7 +2241,33 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 2,
+    "back_within_24h": 1,
+    "out_24h_or_more": 1,
+    "removing_accounts": 1,
+    "restoring_accounts": 2,
+    "page_wide_removals": 0,
+    "first_added": "2020-09-30",
+    "latest_removal": "2020-10-22",
+    "in_place_since": "2020-10-22",
+    "in_place_since_revision": 984904750,
+    "removals": [
+     [
+      982535496,
+      984835295,
+      328.4
+     ],
+     [
+      984901180,
+      984904750,
+      0.4
+     ]
+    ]
+   }
   },
   {
    "id": "sec1-13",
@@ -1954,7 +2292,28 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 1,
+    "back_within_24h": 1,
+    "out_24h_or_more": 0,
+    "removing_accounts": 1,
+    "restoring_accounts": 1,
+    "page_wide_removals": 0,
+    "first_added": "2020-10-22",
+    "latest_removal": "2020-10-22",
+    "in_place_since": "2020-10-22",
+    "in_place_since_revision": 984904750,
+    "removals": [
+     [
+      984901180,
+      984904750,
+      0.4
+     ]
+    ]
+   }
   },
   {
    "id": "sec2-1",
@@ -1979,7 +2338,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2020-08-31",
+    "latest_removal": null,
+    "in_place_since": "2020-08-31",
+    "in_place_since_revision": 975927556,
+    "removals": []
+   }
   },
   {
    "id": "sec2-2",
@@ -2008,7 +2382,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2020-08-31",
+    "latest_removal": null,
+    "in_place_since": "2020-08-31",
+    "in_place_since_revision": 975927556,
+    "removals": []
+   }
   },
   {
    "id": "sec2-3",
@@ -2037,7 +2426,28 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 1,
+    "back_within_24h": 0,
+    "out_24h_or_more": 1,
+    "removing_accounts": 1,
+    "restoring_accounts": 1,
+    "page_wide_removals": 0,
+    "first_added": "2020-08-30",
+    "latest_removal": "2020-08-31",
+    "in_place_since": "2020-09-08",
+    "in_place_since_revision": 977320134,
+    "removals": [
+     [
+      975927843,
+      977320134,
+      191.2
+     ]
+    ]
+   }
   },
   {
    "id": "sec2-4",
@@ -2066,7 +2476,22 @@
    "added_before_sanction": true,
    "sanctioned_words_before": 7,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 2,
+   "works_cited": 2,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2020-08-31",
+    "latest_removal": null,
+    "in_place_since": "2020-08-31",
+    "in_place_since_revision": 975927556,
+    "removals": []
+   }
   },
   {
    "id": "sec2-5",
@@ -2095,7 +2520,22 @@
    "added_before_sanction": true,
    "sanctioned_words_before": 20,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2020-10-01",
+    "latest_removal": null,
+    "in_place_since": "2020-10-01",
+    "in_place_since_revision": 981256655,
+    "removals": []
+   }
   },
   {
    "id": "sec4-1",
@@ -2126,7 +2566,22 @@
    "added_before_sanction": true,
    "sanctioned_words_before": 2,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 2,
+   "works_cited": 2,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2020-08-30",
+    "latest_removal": null,
+    "in_place_since": "2020-08-30",
+    "in_place_since_revision": 975726017,
+    "removals": []
+   }
   },
   {
    "id": "sec4-2",
@@ -2159,7 +2614,22 @@
    "added_before_sanction": true,
    "sanctioned_words_before": 18,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 2,
+   "works_cited": 2,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2020-09-24",
+    "latest_removal": null,
+    "in_place_since": "2020-09-24",
+    "in_place_since_revision": 979998983,
+    "removals": []
+   }
   },
   {
    "id": "sec4-3",
@@ -2192,7 +2662,22 @@
    "added_before_sanction": true,
    "sanctioned_words_before": 18,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2020-08-30",
+    "latest_removal": null,
+    "in_place_since": "2020-08-30",
+    "in_place_since_revision": 975726017,
+    "removals": []
+   }
   },
   {
    "id": "sec4-4",
@@ -2229,7 +2714,22 @@
    "added_before_sanction": true,
    "sanctioned_words_before": 9,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2020-08-30",
+    "latest_removal": null,
+    "in_place_since": "2020-08-30",
+    "in_place_since_revision": 975726017,
+    "removals": []
+   }
   },
   {
    "id": "sec4-5",
@@ -2260,7 +2760,22 @@
    "added_before_sanction": true,
    "sanctioned_words_before": 25,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 3,
+   "works_cited": 3,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2020-09-24",
+    "latest_removal": null,
+    "in_place_since": "2020-09-24",
+    "in_place_since_revision": 979997798,
+    "removals": []
+   }
   },
   {
    "id": "sec4-6",
@@ -2289,7 +2804,22 @@
    "added_before_sanction": true,
    "sanctioned_words_before": 17,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 2,
+   "works_cited": 2,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2020-10-01",
+    "latest_removal": null,
+    "in_place_since": "2020-10-01",
+    "in_place_since_revision": 981244731,
+    "removals": []
+   }
   },
   {
    "id": "sec4-7",
@@ -2314,7 +2844,22 @@
    "added_before_sanction": true,
    "sanctioned_words_before": 13,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2020-10-01",
+    "latest_removal": null,
+    "in_place_since": "2020-10-01",
+    "in_place_since_revision": 981244731,
+    "removals": []
+   }
   },
   {
    "id": "sec4-8",
@@ -2343,7 +2888,22 @@
    "added_before_sanction": true,
    "sanctioned_words_before": 37,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2021-05-10",
+    "latest_removal": null,
+    "in_place_since": "2021-05-10",
+    "in_place_since_revision": 1022352983,
+    "removals": []
+   }
   },
   {
    "id": "sec4-9",
@@ -2368,7 +2928,22 @@
    "added_before_sanction": true,
    "sanctioned_words_before": 6,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2021-05-10",
+    "latest_removal": null,
+    "in_place_since": "2021-05-10",
+    "in_place_since_revision": 1022352983,
+    "removals": []
+   }
   },
   {
    "id": "sec4-10",
@@ -2393,7 +2968,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2020-08-30",
+    "latest_removal": null,
+    "in_place_since": "2020-08-30",
+    "in_place_since_revision": 975726017,
+    "removals": []
+   }
   },
   {
    "id": "sec4-11",
@@ -2432,7 +3022,22 @@
    "added_before_sanction": true,
    "sanctioned_words_before": 2,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2019-11-03",
+    "latest_removal": null,
+    "in_place_since": "2019-11-03",
+    "in_place_since_revision": 924398190,
+    "removals": []
+   }
   },
   {
    "id": "sec4-12",
@@ -2463,7 +3068,22 @@
    "added_before_sanction": true,
    "sanctioned_words_before": 21,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2021-05-03",
+    "latest_removal": null,
+    "in_place_since": "2021-05-03",
+    "in_place_since_revision": 1021193532,
+    "removals": []
+   }
   },
   {
    "id": "sec4-13",
@@ -2490,7 +3110,22 @@
    "added_before_sanction": true,
    "sanctioned_words_before": 34,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 2,
+   "works_cited": 2,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2020-09-22",
+    "latest_removal": null,
+    "in_place_since": "2020-09-22",
+    "in_place_since_revision": 979714397,
+    "removals": []
+   }
   },
   {
    "id": "sec4-14",
@@ -2519,7 +3154,22 @@
    "added_before_sanction": true,
    "sanctioned_words_before": 23,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2021-05-02",
+    "latest_removal": null,
+    "in_place_since": "2021-05-02",
+    "in_place_since_revision": 1020988445,
+    "removals": []
+   }
   },
   {
    "id": "sec4-15",
@@ -2550,7 +3200,22 @@
    "added_before_sanction": true,
    "sanctioned_words_before": 1,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2020-08-31",
+    "latest_removal": null,
+    "in_place_since": "2020-08-31",
+    "in_place_since_revision": 975988533,
+    "removals": []
+   }
   },
   {
    "id": "sec4-16",
@@ -2587,7 +3252,22 @@
    "added_before_sanction": true,
    "sanctioned_words_before": 1,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 3,
+   "works_cited": 3,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2019-11-03",
+    "latest_removal": null,
+    "in_place_since": "2019-11-03",
+    "in_place_since_revision": 924398190,
+    "removals": []
+   }
   },
   {
    "id": "sec4-17",
@@ -2612,7 +3292,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2020-10-01",
+    "latest_removal": null,
+    "in_place_since": "2020-10-01",
+    "in_place_since_revision": 981345772,
+    "removals": []
+   }
   },
   {
    "id": "sec4-18",
@@ -2643,7 +3338,22 @@
    "added_before_sanction": true,
    "sanctioned_words_before": 25,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2020-11-28",
+    "latest_removal": null,
+    "in_place_since": "2020-11-28",
+    "in_place_since_revision": 991128339,
+    "removals": []
+   }
   },
   {
    "id": "sec4-19",
@@ -2670,7 +3380,22 @@
    "added_before_sanction": true,
    "sanctioned_words_before": 16,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2020-11-28",
+    "latest_removal": null,
+    "in_place_since": "2020-11-28",
+    "in_place_since_revision": 991128339,
+    "removals": []
+   }
   },
   {
    "id": "sec4-20",
@@ -2695,7 +3420,22 @@
    "added_before_sanction": true,
    "sanctioned_words_before": 36,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2020-10-02",
+    "latest_removal": null,
+    "in_place_since": "2020-10-02",
+    "in_place_since_revision": 981389487,
+    "removals": []
+   }
   },
   {
    "id": "sec5-1",
@@ -2726,7 +3466,22 @@
    "added_before_sanction": true,
    "sanctioned_words_before": 2,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 2,
+   "works_cited": 2,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2020-08-30",
+    "latest_removal": null,
+    "in_place_since": "2020-08-30",
+    "in_place_since_revision": 975726017,
+    "removals": []
+   }
   },
   {
    "id": "sec5-2",
@@ -2765,7 +3520,22 @@
    "added_before_sanction": true,
    "sanctioned_words_before": 17,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 2,
+   "works_cited": 2,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2020-10-01",
+    "latest_removal": null,
+    "in_place_since": "2020-10-01",
+    "in_place_since_revision": 981308236,
+    "removals": []
+   }
   },
   {
    "id": "sec5-3",
@@ -2794,7 +3564,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2020-08-30",
+    "latest_removal": null,
+    "in_place_since": "2020-08-30",
+    "in_place_since_revision": 975726017,
+    "removals": []
+   }
   },
   {
    "id": "sec5-4",
@@ -2823,7 +3608,22 @@
    "added_before_sanction": true,
    "sanctioned_words_before": 15,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2020-10-08",
+    "latest_removal": null,
+    "in_place_since": "2020-10-08",
+    "in_place_since_revision": 982550386,
+    "removals": []
+   }
   },
   {
    "id": "sec6-1",
@@ -2852,7 +3652,22 @@
    "added_before_sanction": true,
    "sanctioned_words_before": 1,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2020-08-30",
+    "latest_removal": null,
+    "in_place_since": "2020-08-30",
+    "in_place_since_revision": 975726017,
+    "removals": []
+   }
   },
   {
    "id": "sec6-2",
@@ -2881,7 +3696,22 @@
    "added_before_sanction": true,
    "sanctioned_words_before": 33,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 2,
+   "works_cited": 2,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2020-08-30",
+    "latest_removal": null,
+    "in_place_since": "2020-08-30",
+    "in_place_since_revision": 975740003,
+    "removals": []
+   }
   },
   {
    "id": "sec6-3",
@@ -2914,7 +3744,22 @@
    "added_before_sanction": true,
    "sanctioned_words_before": 9,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2020-08-30",
+    "latest_removal": null,
+    "in_place_since": "2020-08-30",
+    "in_place_since_revision": 975735386,
+    "removals": []
+   }
   },
   {
    "id": "sec6-4",
@@ -2949,7 +3794,22 @@
    "added_before_sanction": true,
    "sanctioned_words_before": 5,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2020-08-30",
+    "latest_removal": null,
+    "in_place_since": "2020-08-30",
+    "in_place_since_revision": 975735386,
+    "removals": []
+   }
   },
   {
    "id": "sec6-5",
@@ -2982,7 +3842,22 @@
    "added_before_sanction": true,
    "sanctioned_words_before": 5,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2020-08-30",
+    "latest_removal": null,
+    "in_place_since": "2020-08-30",
+    "in_place_since_revision": 975735756,
+    "removals": []
+   }
   },
   {
    "id": "sec6-6",
@@ -3011,7 +3886,28 @@
    "added_before_sanction": true,
    "sanctioned_words_before": 15,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 1,
+    "back_within_24h": 1,
+    "out_24h_or_more": 0,
+    "removing_accounts": 1,
+    "restoring_accounts": 1,
+    "page_wide_removals": 0,
+    "first_added": "2020-10-26",
+    "latest_removal": "2020-10-26",
+    "in_place_since": "2020-10-26",
+    "in_place_since_revision": 985609908,
+    "removals": [
+     [
+      985601354,
+      985609908,
+      0.9
+     ]
+    ]
+   }
   },
   {
    "id": "sec6-7",
@@ -3040,7 +3936,22 @@
    "added_before_sanction": true,
    "sanctioned_words_before": 16,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 4,
+   "works_cited": 4,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2020-10-26",
+    "latest_removal": null,
+    "in_place_since": "2020-10-26",
+    "in_place_since_revision": 985612341,
+    "removals": []
+   }
   },
   {
    "id": "sec6-8",
@@ -3065,7 +3976,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2021-01-02",
+    "latest_removal": null,
+    "in_place_since": "2021-01-02",
+    "in_place_since_revision": 997861121,
+    "removals": []
+   }
   },
   {
    "id": "sec7-1",
@@ -3090,7 +4016,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2021-01-02",
+    "latest_removal": null,
+    "in_place_since": "2021-01-02",
+    "in_place_since_revision": 997859067,
+    "removals": []
+   }
   },
   {
    "id": "sec7-2",
@@ -3117,7 +4058,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 2,
+   "works_cited": 2,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2021-02-09",
+    "latest_removal": null,
+    "in_place_since": "2021-02-09",
+    "in_place_since_revision": 1005880057,
+    "removals": []
+   }
   },
   {
    "id": "sec7-3",
@@ -3146,7 +4102,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2021-02-09",
+    "latest_removal": null,
+    "in_place_since": "2021-02-09",
+    "in_place_since_revision": 1005878065,
+    "removals": []
+   }
   },
   {
    "id": "sec7-4",
@@ -3171,7 +4142,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2021-02-09",
+    "latest_removal": null,
+    "in_place_since": "2021-02-09",
+    "in_place_since_revision": 1005878065,
+    "removals": []
+   }
   },
   {
    "id": "sec7-5",
@@ -3196,7 +4182,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2022-08-08",
+    "latest_removal": null,
+    "in_place_since": "2022-08-08",
+    "in_place_since_revision": 1103146832,
+    "removals": []
+   }
   },
   {
    "id": "sec7-6",
@@ -3221,7 +4222,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 2,
+   "works_cited": 2,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2022-08-08",
+    "latest_removal": null,
+    "in_place_since": "2022-08-08",
+    "in_place_since_revision": 1103146832,
+    "removals": []
+   }
   },
   {
    "id": "sec8-1",
@@ -3252,7 +4268,22 @@
    "added_before_sanction": true,
    "sanctioned_words_before": 1,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2020-08-31",
+    "latest_removal": null,
+    "in_place_since": "2020-08-31",
+    "in_place_since_revision": 975932454,
+    "removals": []
+   }
   },
   {
    "id": "sec8-2",
@@ -3279,7 +4310,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2020-08-31",
+    "latest_removal": null,
+    "in_place_since": "2020-08-31",
+    "in_place_since_revision": 975932454,
+    "removals": []
+   }
   },
   {
    "id": "sec8-3",
@@ -3304,7 +4350,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2020-08-31",
+    "latest_removal": null,
+    "in_place_since": "2020-08-31",
+    "in_place_since_revision": 975932454,
+    "removals": []
+   }
   },
   {
    "id": "sec8-4",
@@ -3329,7 +4390,28 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 1,
+    "back_within_24h": 1,
+    "out_24h_or_more": 0,
+    "removing_accounts": 1,
+    "restoring_accounts": 1,
+    "page_wide_removals": 0,
+    "first_added": "2020-09-23",
+    "latest_removal": "2020-09-24",
+    "in_place_since": "2020-09-24",
+    "in_place_since_revision": 980041453,
+    "removals": [
+     [
+      980034985,
+      980041453,
+      1.2
+     ]
+    ]
+   }
   },
   {
    "id": "sec8-5",
@@ -3354,7 +4436,22 @@
    "added_before_sanction": true,
    "sanctioned_words_before": 15,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2020-10-01",
+    "latest_removal": null,
+    "in_place_since": "2020-10-01",
+    "in_place_since_revision": 981251292,
+    "removals": []
+   }
   },
   {
    "id": "sec8-6",
@@ -3381,7 +4478,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2020-08-30",
+    "latest_removal": null,
+    "in_place_since": "2020-08-30",
+    "in_place_since_revision": 975726017,
+    "removals": []
+   }
   },
   {
    "id": "sec8-7",
@@ -3414,7 +4526,22 @@
    "added_before_sanction": true,
    "sanctioned_words_before": 7,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2020-09-30",
+    "latest_removal": null,
+    "in_place_since": "2020-09-30",
+    "in_place_since_revision": 981182520,
+    "removals": []
+   }
   },
   {
    "id": "sec8-8",
@@ -3447,7 +4574,22 @@
    "added_before_sanction": true,
    "sanctioned_words_before": 2,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2020-09-30",
+    "latest_removal": null,
+    "in_place_since": "2020-09-30",
+    "in_place_since_revision": 981182520,
+    "removals": []
+   }
   },
   {
    "id": "sec8-9",
@@ -3472,7 +4614,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2020-09-30",
+    "latest_removal": null,
+    "in_place_since": "2020-09-30",
+    "in_place_since_revision": 981182520,
+    "removals": []
+   }
   },
   {
    "id": "sec8-10",
@@ -3505,7 +4662,22 @@
    "added_before_sanction": true,
    "sanctioned_words_before": 1,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2020-08-31",
+    "latest_removal": null,
+    "in_place_since": "2020-08-31",
+    "in_place_since_revision": 975933287,
+    "removals": []
+   }
   },
   {
    "id": "sec8-11",
@@ -3534,7 +4706,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2020-08-31",
+    "latest_removal": null,
+    "in_place_since": "2020-08-31",
+    "in_place_since_revision": 975933287,
+    "removals": []
+   }
   },
   {
    "id": "sec8-12",
@@ -3559,7 +4746,22 @@
    "added_before_sanction": true,
    "sanctioned_words_before": 52,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2021-05-12",
+    "latest_removal": null,
+    "in_place_since": "2021-05-12",
+    "in_place_since_revision": 1022744274,
+    "removals": []
+   }
   },
   {
    "id": "sec8-13",
@@ -3588,7 +4790,22 @@
    "added_before_sanction": true,
    "sanctioned_words_before": 2,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2020-08-31",
+    "latest_removal": null,
+    "in_place_since": "2020-08-31",
+    "in_place_since_revision": 975970413,
+    "removals": []
+   }
   },
   {
    "id": "sec8-14",
@@ -3613,7 +4830,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2020-08-31",
+    "latest_removal": null,
+    "in_place_since": "2020-08-31",
+    "in_place_since_revision": 975970413,
+    "removals": []
+   }
   },
   {
    "id": "sec8-15",
@@ -3644,7 +4876,22 @@
    "added_before_sanction": true,
    "sanctioned_words_before": 50,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 2,
+   "works_cited": 2,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2021-05-11",
+    "latest_removal": null,
+    "in_place_since": "2021-05-11",
+    "in_place_since_revision": 1022539170,
+    "removals": []
+   }
   },
   {
    "id": "sec8-16",
@@ -3675,7 +4922,22 @@
    "added_before_sanction": true,
    "sanctioned_words_before": 26,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 2,
+   "works_cited": 2,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2020-10-01",
+    "latest_removal": null,
+    "in_place_since": "2020-10-01",
+    "in_place_since_revision": 981358257,
+    "removals": []
+   }
   },
   {
    "id": "sec8-17",
@@ -3700,7 +4962,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2021-07-23",
+    "latest_removal": null,
+    "in_place_since": "2021-07-23",
+    "in_place_since_revision": 1035039952,
+    "removals": []
+   }
   },
   {
    "id": "sec10-1",
@@ -3735,7 +5012,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 2,
+   "works_cited": 2,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2019-11-03",
+    "latest_removal": null,
+    "in_place_since": "2019-11-03",
+    "in_place_since_revision": 924398190,
+    "removals": []
+   }
   },
   {
    "id": "sec10-2",
@@ -3770,7 +5062,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2019-11-03",
+    "latest_removal": null,
+    "in_place_since": "2019-11-03",
+    "in_place_since_revision": 924398190,
+    "removals": []
+   }
   },
   {
    "id": "sec10-3",
@@ -3795,7 +5102,22 @@
    "added_before_sanction": true,
    "sanctioned_words_before": 13,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2020-10-20",
+    "latest_removal": null,
+    "in_place_since": "2020-10-20",
+    "in_place_since_revision": 984448430,
+    "removals": []
+   }
   },
   {
    "id": "sec10-4",
@@ -3820,7 +5142,22 @@
    "added_before_sanction": true,
    "sanctioned_words_before": 11,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2020-10-20",
+    "latest_removal": null,
+    "in_place_since": "2020-10-20",
+    "in_place_since_revision": 984435377,
+    "removals": []
+   }
   },
   {
    "id": "sec10-5",
@@ -3845,7 +5182,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2020-09-08",
+    "latest_removal": null,
+    "in_place_since": "2020-09-08",
+    "in_place_since_revision": 977318169,
+    "removals": []
+   }
   },
   {
    "id": "sec10-6",
@@ -3880,7 +5232,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2020-08-30",
+    "latest_removal": null,
+    "in_place_since": "2020-08-30",
+    "in_place_since_revision": 975736344,
+    "removals": []
+   }
   },
   {
    "id": "sec10-7",
@@ -3905,7 +5272,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2021-01-26",
+    "latest_removal": null,
+    "in_place_since": "2021-01-26",
+    "in_place_since_revision": 1002945538,
+    "removals": []
+   }
   },
   {
    "id": "sec11-1",
@@ -3930,7 +5312,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 2,
+   "works_cited": 2,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2021-01-02",
+    "latest_removal": null,
+    "in_place_since": "2021-01-02",
+    "in_place_since_revision": 997860949,
+    "removals": []
+   }
   },
   {
    "id": "sec12-1",
@@ -3955,7 +5352,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2022-06-28",
+    "latest_removal": null,
+    "in_place_since": "2022-06-28",
+    "in_place_since_revision": 1095383053,
+    "removals": []
+   }
   },
   {
    "id": "sec14-1",
@@ -3984,7 +5396,28 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 1,
+    "back_within_24h": 1,
+    "out_24h_or_more": 0,
+    "removing_accounts": 1,
+    "restoring_accounts": 1,
+    "page_wide_removals": 0,
+    "first_added": "2020-08-31",
+    "latest_removal": "2022-11-09",
+    "in_place_since": "2022-11-09",
+    "in_place_since_revision": 1120992401,
+    "removals": [
+     [
+      1120923619,
+      1120992401,
+      7.9
+     ]
+    ]
+   }
   },
   {
    "id": "sec14-2",
@@ -4009,7 +5442,28 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 1,
+    "back_within_24h": 1,
+    "out_24h_or_more": 0,
+    "removing_accounts": 1,
+    "restoring_accounts": 1,
+    "page_wide_removals": 0,
+    "first_added": "2020-08-31",
+    "latest_removal": "2022-11-09",
+    "in_place_since": "2022-11-09",
+    "in_place_since_revision": 1120992401,
+    "removals": [
+     [
+      1120923619,
+      1120992401,
+      7.9
+     ]
+    ]
+   }
   },
   {
    "id": "sec14-3",
@@ -4034,7 +5488,28 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 1,
+    "back_within_24h": 1,
+    "out_24h_or_more": 0,
+    "removing_accounts": 1,
+    "restoring_accounts": 1,
+    "page_wide_removals": 0,
+    "first_added": "2020-08-31",
+    "latest_removal": "2022-11-09",
+    "in_place_since": "2022-11-09",
+    "in_place_since_revision": 1120992401,
+    "removals": [
+     [
+      1120923619,
+      1120992401,
+      7.9
+     ]
+    ]
+   }
   },
   {
    "id": "sec14-4",
@@ -4059,7 +5534,28 @@
    "added_before_sanction": true,
    "sanctioned_words_before": 30,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 1,
+    "back_within_24h": 1,
+    "out_24h_or_more": 0,
+    "removing_accounts": 1,
+    "restoring_accounts": 1,
+    "page_wide_removals": 0,
+    "first_added": "2020-09-22",
+    "latest_removal": "2022-11-09",
+    "in_place_since": "2022-11-09",
+    "in_place_since_revision": 1120992401,
+    "removals": [
+     [
+      1120923619,
+      1120992401,
+      7.9
+     ]
+    ]
+   }
   },
   {
    "id": "sec14-5",
@@ -4088,7 +5584,28 @@
    "added_before_sanction": true,
    "sanctioned_words_before": 23,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 1,
+    "back_within_24h": 1,
+    "out_24h_or_more": 0,
+    "removing_accounts": 1,
+    "restoring_accounts": 1,
+    "page_wide_removals": 0,
+    "first_added": "2020-09-22",
+    "latest_removal": "2022-11-09",
+    "in_place_since": "2022-11-09",
+    "in_place_since_revision": 1120992401,
+    "removals": [
+     [
+      1120923619,
+      1120992401,
+      7.9
+     ]
+    ]
+   }
   },
   {
    "id": "sec14-6",
@@ -4117,7 +5634,28 @@
    "added_before_sanction": true,
    "sanctioned_words_before": 16,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 1,
+    "back_within_24h": 1,
+    "out_24h_or_more": 0,
+    "removing_accounts": 1,
+    "restoring_accounts": 1,
+    "page_wide_removals": 0,
+    "first_added": "2020-09-22",
+    "latest_removal": "2022-11-09",
+    "in_place_since": "2022-11-09",
+    "in_place_since_revision": 1120992401,
+    "removals": [
+     [
+      1120923619,
+      1120992401,
+      7.9
+     ]
+    ]
+   }
   },
   {
    "id": "sec15-1",
@@ -4146,7 +5684,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 2,
+   "works_cited": 2,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2020-09-09",
+    "latest_removal": null,
+    "in_place_since": "2020-09-09",
+    "in_place_since_revision": 977464309,
+    "removals": []
+   }
   },
   {
    "id": "sec15-2",
@@ -4177,7 +5730,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 2,
+   "works_cited": 2,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2020-08-31",
+    "latest_removal": null,
+    "in_place_since": "2020-08-31",
+    "in_place_since_revision": 975928457,
+    "removals": []
+   }
   },
   {
    "id": "sec15-3",
@@ -4202,7 +5770,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2020-09-09",
+    "latest_removal": null,
+    "in_place_since": "2020-09-09",
+    "in_place_since_revision": 977464309,
+    "removals": []
+   }
   },
   {
    "id": "sec15-4",
@@ -4233,7 +5816,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2020-09-09",
+    "latest_removal": null,
+    "in_place_since": "2020-09-09",
+    "in_place_since_revision": 977464309,
+    "removals": []
+   }
   },
   {
    "id": "sec15-5",
@@ -4266,7 +5864,22 @@
    "added_before_sanction": true,
    "sanctioned_words_before": 1,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2020-09-09",
+    "latest_removal": null,
+    "in_place_since": "2020-09-09",
+    "in_place_since_revision": 977464309,
+    "removals": []
+   }
   },
   {
    "id": "sec15-6",
@@ -4295,7 +5908,22 @@
    "added_before_sanction": true,
    "sanctioned_words_before": 9,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 2,
+   "works_cited": 2,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2021-05-07",
+    "latest_removal": null,
+    "in_place_since": "2021-05-07",
+    "in_place_since_revision": 1022013266,
+    "removals": []
+   }
   },
   {
    "id": "sec15-7",
@@ -4320,7 +5948,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2021-03-11",
+    "latest_removal": null,
+    "in_place_since": "2021-03-11",
+    "in_place_since_revision": 1011545295,
+    "removals": []
+   }
   },
   {
    "id": "sec15-8",
@@ -4349,7 +5992,22 @@
    "added_before_sanction": true,
    "sanctioned_words_before": 1,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2021-03-10",
+    "latest_removal": null,
+    "in_place_since": "2021-03-10",
+    "in_place_since_revision": 1011430597,
+    "removals": []
+   }
   }
  ],
  "inputs": {
@@ -4358,7 +6016,9 @@
   "wikiwho_rev_content": "https://wikiwho-api.wmcloud.org/en/api/v1.0.0-beta/rev_content/rev_id/1381933263/",
   "wikiwho_all_content": "https://wikiwho-api.wmcloud.org/en/api/v1.0.0-beta/all_content/page_id/62216670/",
   "history_revisions": 525,
-  "sanctions_csv_sha256": "83c3c25da3d1338292d21c2b407f4fdc4aee5a973a0fa7ac6bb32e407de325dd"
+  "sanctions_csv_sha256": "46ecf8bd2945ef432b9a5a9afcd72502654439f2b78b039f168883e847475a22",
+  "source_names_sha256": "1e0c7263959b899f0a4dd2a19e5f77b3d542f7e961d864fcb790974eb1ddbad0",
+  "books_sha256": "c82c512cf1e16abc1ab47c9aa152ce4df80360300d3c17f57b443a06ccaf46f6"
  },
  "quality": {
   "wikiwho_tokens": 15932,
@@ -4375,12 +6035,98 @@
   "distinct_sources": 43,
   "editors_adding_citations": 7,
   "citation_only_editors": 0,
+  "flags": {
+   "opinion": 3,
+   "no_link": 0,
+   "book_without_page": 0,
+   "not_english": 6,
+   "not_english_no_quote": 5,
+   "dead_link_no_archive": 0,
+   "paywall_or_registration": 8
+  },
+  "flags_by_editor": {
+   "Editor 2": {
+    "citations": 26,
+    "opinion": 1,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 2,
+    "not_english_no_quote": 2,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 2
+   },
+   "Editor 1": {
+    "citations": 21,
+    "opinion": 1,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 3
+   },
+   "Editor 3": {
+    "citations": 17,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 3,
+    "not_english_no_quote": 3,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 2
+   },
+   "Editor 5": {
+    "citations": 2,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 1,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 4": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 11": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 17": {
+    "citations": 1,
+    "opinion": 1,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 1
+   }
+  },
   "list": [
    {
     "source": "nationalpost.com",
     "name_as_cited": "National Post",
     "citations": 7,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {
+     "not_english": 1,
+     "not_english_no_quote": 1
+    },
     "added_by": {
      "Editor 1": 4,
      "Editor 2": 1,
@@ -4389,20 +6135,12 @@
     }
    },
    {
-    "source": "bc.ca",
-    "name_as_cited": "Human Rights Tribunal",
-    "citations": 4,
-    "lead_citations": 0,
-    "added_by": {
-     "Editor 2": 3,
-     "Editor 1": 1
-    }
-   },
-   {
     "source": "globalnews.ca",
     "name_as_cited": "Global News",
     "citations": 4,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 1": 1,
      "Editor 2": 1,
@@ -4411,10 +6149,27 @@
     }
    },
    {
+    "source": "gov.bc.ca",
+    "name_as_cited": "Human Rights Tribunal",
+    "citations": 4,
+    "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
+    "added_by": {
+     "Editor 2": 3,
+     "Editor 1": 1
+    }
+   },
+   {
     "source": "westernstandardonline.com",
     "name_as_cited": "The Western Standard",
     "citations": 4,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {
+     "not_english": 4,
+     "not_english_no_quote": 4
+    },
     "added_by": {
      "Editor 3": 3,
      "Editor 2": 1
@@ -4425,6 +6180,8 @@
     "name_as_cited": "Aldergrove Star",
     "citations": 3,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 1": 2,
      "Editor 3": 1
@@ -4435,6 +6192,8 @@
     "name_as_cited": "CBC News",
     "citations": 3,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 1": 3
     }
@@ -4444,6 +6203,8 @@
     "name_as_cited": "CTV News Vancouver",
     "citations": 3,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 1": 2,
      "Editor 2": 1
@@ -4454,6 +6215,8 @@
     "name_as_cited": "North Shore News",
     "citations": 3,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 1": 2,
      "Editor 3": 1
@@ -4464,6 +6227,8 @@
     "name_as_cited": "Canadian Lawyer",
     "citations": 2,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 1": 1,
      "Editor 2": 1
@@ -4474,6 +6239,10 @@
     "name_as_cited": "The Globe and Mail",
     "citations": 2,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {
+     "paywall_or_registration": 2
+    },
     "added_by": {
      "Editor 2": 1,
      "Editor 3": 1
@@ -4484,6 +6253,10 @@
     "name_as_cited": "The Guardian",
     "citations": 2,
     "lead_citations": 0,
+    "opinion_citations": 1,
+    "flags": {
+     "opinion": 1
+    },
     "added_by": {
      "Editor 1": 1,
      "Editor 3": 1
@@ -4494,15 +6267,19 @@
     "name_as_cited": "7NEWS",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 2": 1
     }
    },
    {
     "source": "aph.gov.au",
-    "name_as_cited": "[[Hansard#Australia",
+    "name_as_cited": "Senate Hansard",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 3": 1
     }
@@ -4512,6 +6289,8 @@
     "name_as_cited": "Supreme Court of British Columbia",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 3": 1
     }
@@ -4521,6 +6300,10 @@
     "name_as_cited": "Calgary Herald",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 1,
+    "flags": {
+     "opinion": 1
+    },
     "added_by": {
      "Editor 2": 1
     }
@@ -4530,6 +6313,8 @@
     "name_as_cited": "CanLII Connects",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 2": 1
     }
@@ -4539,6 +6324,8 @@
     "name_as_cited": "City News 1130",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 2": 1
     }
@@ -4548,6 +6335,8 @@
     "name_as_cited": "The Niall Boylan Show {{!",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 2": 1
     }
@@ -4557,6 +6346,8 @@
     "name_as_cited": "The Courier-Mail",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 2": 1
     }
@@ -4566,6 +6357,8 @@
     "name_as_cited": "Grande Prairie Daily Herald Tribune",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 2": 1
     }
@@ -4575,6 +6368,8 @@
     "name_as_cited": "The Daily Utah Chronicle",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 2": 1
     }
@@ -4584,6 +6379,10 @@
     "name_as_cited": "The Economist",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {
+     "paywall_or_registration": 1
+    },
     "added_by": {
      "Editor 1": 1
     }
@@ -4593,6 +6392,11 @@
     "name_as_cited": "Herald Sun",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 1,
+    "flags": {
+     "opinion": 1,
+     "paywall_or_registration": 1
+    },
     "added_by": {
      "Editor 17": 1
     }
@@ -4602,6 +6406,8 @@
     "name_as_cited": "The Independent",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 2": 1
     }
@@ -4611,6 +6417,8 @@
     "name_as_cited": "Justice Centre for Constitutional Freedoms",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 3": 1
     }
@@ -4620,6 +6428,8 @@
     "name_as_cited": "KUTV (CBS)",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 2": 1
     }
@@ -4629,6 +6439,8 @@
     "name_as_cited": "Langley Advance Times",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 3": 1
     }
@@ -4638,6 +6450,8 @@
     "name_as_cited": "Manchester Evening News",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 2": 1
     }
@@ -4647,6 +6461,8 @@
     "name_as_cited": "The Jill Bennett Show {{!",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 2": 1
     }
@@ -4656,6 +6472,8 @@
     "name_as_cited": "PinkNews",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 2": 1
     }
@@ -4665,6 +6483,8 @@
     "name_as_cited": "Richmond News",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 3": 1
     }
@@ -4674,6 +6494,8 @@
     "name_as_cited": "Spruce Grove Examiner",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 2": 1
     }
@@ -4683,6 +6505,8 @@
     "name_as_cited": "Star Observer",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 2": 1
     }
@@ -4692,6 +6516,8 @@
     "name_as_cited": "The Georgia Straight",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 1": 1
     }
@@ -4701,6 +6527,10 @@
     "name_as_cited": "The Telegraph",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {
+     "paywall_or_registration": 1
+    },
     "added_by": {
      "Editor 2": 1
     }
@@ -4710,6 +6540,10 @@
     "name_as_cited": "The Australian",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {
+     "paywall_or_registration": 1
+    },
     "added_by": {
      "Editor 1": 1
     }
@@ -4719,6 +6553,10 @@
     "name_as_cited": "The Toronto Star (Online Vancouver Section)",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {
+     "paywall_or_registration": 1
+    },
     "added_by": {
      "Editor 1": 1
     }
@@ -4728,6 +6566,10 @@
     "name_as_cited": "The Times",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {
+     "paywall_or_registration": 1
+    },
     "added_by": {
      "Editor 3": 1
     }
@@ -4737,6 +6579,10 @@
     "name_as_cited": "Toronto Sun",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {
+     "not_english": 1
+    },
     "added_by": {
      "Editor 5": 1
     }
@@ -4746,6 +6592,8 @@
     "name_as_cited": "Tri-City News",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 3": 1
     }
@@ -4755,6 +6603,8 @@
     "name_as_cited": "",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 3": 1
     }
@@ -4764,6 +6614,8 @@
     "name_as_cited": "Vancouver Sun",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 2": 1
     }
@@ -4773,9 +6625,2429 @@
     "name_as_cited": "Western Standard",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 4": 1
     }
+   }
+  ],
+  "citations_naming_an_author": 58,
+  "authors": [
+   {
+    "name": "Dave Naylor",
+    "wikipedia": null,
+    "citations": 4,
+    "lead_citations": 0,
+    "works": 4
+   },
+   {
+    "name": "Graeme Wood",
+    "wikipedia": null,
+    "citations": 3,
+    "lead_citations": 0,
+    "works": 3
+   },
+   {
+    "name": "Joseph Brean",
+    "wikipedia": null,
+    "citations": 3,
+    "lead_citations": 0,
+    "works": 3
+   },
+   {
+    "name": "Mathew Claxton",
+    "wikipedia": null,
+    "citations": 3,
+    "lead_citations": 0,
+    "works": 3
+   },
+   {
+    "name": "Simon Little",
+    "wikipedia": null,
+    "citations": 3,
+    "lead_citations": 0,
+    "works": 3
+   },
+   {
+    "name": "Rita Panahi",
+    "wikipedia": null,
+    "citations": 2,
+    "lead_citations": 0,
+    "works": 2
+   },
+   {
+    "name": "The Canadian Press",
+    "wikipedia": null,
+    "citations": 2,
+    "lead_citations": 0,
+    "works": 2
+   },
+   {
+    "name": "Adam Forgie",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Aidan Macnab",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Andrew Weichel",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Arwa Mahdawi",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Bernise Carolino",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Charlie Mitchell",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Chris Hook",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Craig Takeuchi",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Devika Desai",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Douglas Quan",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Eva Uguene-Csenge",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Gaby Hinsliff",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Glacier Media",
+    "wikipedia": "Glacier Media",
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Graeme Gordon",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Helen Carter",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Jeremy Hainsworth",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Jesse Snyder",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Jessica Yaniv",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Jill Bennett",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Joanna Chiu",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "KC Ellen Cushman",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Karin Larsen",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Kendra Mangione",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   }
+  ],
+  "items": [
+   {
+    "id": "url:7news.com.au/news/social/trans-activist-who-sued-beauticians-for-not-waxing-her-male-genitalia-now-taking-on-a-gynaecologist-c-588934",
+    "source": "7news.com.au",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 2": 1
+    }
+   },
+   {
+    "id": "url:aldergrovestar.com/news/controversial-langley-activist-sues-township-salon-owners",
+    "source": "aldergrovestar.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:aldergrovestar.com/news/controversial-langley-transgender-activist-arrested-over-stun-gun",
+    "source": "aldergrovestar.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:aldergrovestar.com/news/health-privacy-breach-claimed-by-controversial-langley-woman",
+    "source": "aldergrovestar.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 3": 1
+    }
+   },
+   {
+    "id": "url:aph.gov.au/Parliamentary_Business/Hansard/Hansard_Display?bid=chamber/hansards/e5e48d52-64ea-4082-a0e8-632c745a49c0/&sid=0009",
+    "source": "aph.gov.au",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 3": 1
+    }
+   },
+   {
+    "id": "url:bccourts.ca/jdb-txt/sc/22/11/2022BCSC1160.htm",
+    "source": "bccourts.ca",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 3": 1
+    }
+   },
+   {
+    "id": "url:bchrt.gov.bc.ca/shareddocs/decisions/2019/jul/147_Yaniv_v_Various_Waxing_Salons_2019_BCHRT_147.pdf",
+    "source": "gov.bc.ca",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 2": 1
+    }
+   },
+   {
+    "id": "url:bchrt.gov.bc.ca/shareddocs/decisions/2019/may/106_JY_v_Various_Waxing_Salons_2019_BCHRT_106.pdf",
+    "source": "gov.bc.ca",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 2": 1
+    }
+   },
+   {
+    "id": "url:bchrt.gov.bc.ca/shareddocs/decisions/2019/nov/244_Yaniv_v_Various_Waxing_Salons_No_3_2019_BCHRT_244.pdf",
+    "source": "gov.bc.ca",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 2": 1
+    }
+   },
+   {
+    "id": "url:bchrt.gov.bc.ca/shareddocs/decisions/2019/oct/222_Yaniv_v_Various_Waxing_Salons_No_2_2019_BCHRT_222.pdf",
+    "source": "gov.bc.ca",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:calgaryherald.com/opinion/columnists/corbella-jessica-yaniv-growing-bolder-in-her-bid-to-have-her-male-genitals-waxed",
+    "source": "calgaryherald.com",
+    "citations": 1,
+    "flags": [
+     "opinion"
+    ],
+    "added_by": {
+     "Editor 2": 1
+    }
+   },
+   {
+    "id": "url:canadianlawyermag.com/news/general/b.c.-brazilian-waxing-case-a-step-backward-for-trans-human-rights-cases-says-lawyer/321582",
+    "source": "canadianlawyermag.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:canadianlawyermag.com/practice-areas/litigation/yaniv-withdraws-brazilian-waxing-suits-against-two-beauty-salons-in-vancouver/334029",
+    "source": "canadianlawyermag.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 2": 1
+    }
+   },
+   {
+    "id": "url:canliiconnects.org/en/commentaries/70300",
+    "source": "canliiconnects.org",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 2": 1
+    }
+   },
+   {
+    "id": "url:cbc.ca/news/canada/british-columbia/transgender-woman-human-rights-waxing-1.5227434",
+    "source": "cbc.ca",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:cbc.ca/news/canada/british-columbia/transgender-woman-human-rights-waxing-1.5330807",
+    "source": "cbc.ca",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:cbc.ca/news/technology/lindsay-shepherd-twitter-ban-bias-1.5216185",
+    "source": "cbc.ca",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:citynews1130.com/2019/10/22/transgender-woman-ordered-to-pay-over-her-rights-complaint-about-body-waxing",
+    "source": "citynews1130.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 2": 1
+    }
+   },
+   {
+    "id": "url:classichits.ie/podcasts/niall-boylan/episode/interview-with-jessica-yaniv",
+    "source": "classichits.ie",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en",
+    "added_by": {
+     "Editor 2": 1
+    }
+   },
+   {
+    "id": "url:couriermail.com.au/news/national/transgender-waxing-case-a-twisted-form-of-social-justice/video/36158adc1c413775d326128a766e5aee",
+    "source": "couriermail.com.au",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 2": 1
+    }
+   },
+   {
+    "id": "url:ctvnews.ca/unzip-and-unwind-says-national-sex-day-organizer-1.315017",
+    "source": "ctvnews.ca",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:ctvnews.ca/vancouver/article/trans-activist-files-another-human-rights-complaint-over-waxing-refusal",
+    "source": "ctvnews.ca",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 2": 1
+    }
+   },
+   {
+    "id": "url:ctvnews.ca/vancouver/article/trans-activist-involved-in-controversial-waxing-complaints-facing-weapons-charges",
+    "source": "ctvnews.ca",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:dailyheraldtribune.com/news/trans-activist-jessica-yaniv-filed-genital-wax-complaints-as-means-of-extortion-rights-tribunal-rules/wcm/030f31af-bf80-476e-9bdd-baa6af06f44c",
+    "source": "dailyheraldtribune.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 2": 1
+    }
+   },
+   {
+    "id": "url:dailyutahchronicle.com/2021/04/30/cushman-queer-influencers-accountable",
+    "source": "dailyutahchronicle.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 2": 1
+    }
+   },
+   {
+    "id": "url:economist.com/briefing/2018/10/27/when-one-persons-right-is-anothers-obligation",
+    "source": "economist.com",
+    "citations": 1,
+    "flags": [
+     "paywall_or_registration"
+    ],
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:globalnews.ca/news/3519110/band-scraps-video-shoot-at-tsawwassen-water-park-over-alleged-transgender-change-room-policy",
+    "source": "globalnews.ca",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 3": 1
+    }
+   },
+   {
+    "id": "url:globalnews.ca/news/5698337/bc-human-rights-trans-waxing-case",
+    "source": "globalnews.ca",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:globalnews.ca/news/6068486/transgender-woman-genital-waxing-discrimination-tribunal",
+    "source": "globalnews.ca",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 2": 1
+    }
+   },
+   {
+    "id": "url:globalnews.ca/news/6304748/jessica-yaniv-transgender-weapons-charges",
+    "source": "globalnews.ca",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 11": 1
+    }
+   },
+   {
+    "id": "url:heraldsun.com.au/news/opinion/rita-panahi/rita-panahi-feminists-still-avoiding-the-real-human-rights-issues/news-story/6db217e1d21b907935f78ac678fad3a0",
+    "source": "heraldsun.com.au",
+    "citations": 1,
+    "flags": [
+     "opinion",
+     "paywall_or_registration"
+    ],
+    "added_by": {
+     "Editor 17": 1
+    }
+   },
+   {
+    "id": "url:independent.co.uk/news/world/americas/us-politics/donald-trump-jr-trans-woman-jessica-yaniv-twitter-b1351299.html",
+    "source": "independent.co.uk",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en",
+    "added_by": {
+     "Editor 2": 1
+    }
+   },
+   {
+    "id": "url:jccf.ca/yaniv-targets-beauty-pageant-in-new-discrimination-complaint",
+    "source": "jccf.ca",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 3": 1
+    }
+   },
+   {
+    "id": "url:kutv.com/news/nation-world/court-rules-in-favor-of-women-who-refused-to-wax-male-genitalia-of-trans-woman",
+    "source": "kutv.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 2": 1
+    }
+   },
+   {
+    "id": "url:langleyadvancetimes.com/news/health-privacy-breach-claimed-by-controversial-langley-woman",
+    "source": "langleyadvancetimes.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 3": 1
+    }
+   },
+   {
+    "id": "url:manchestereveningnews.co.uk/news/uk-news/ricky-gervais-jessica-yaniv-tweet-17184813",
+    "source": "manchestereveningnews.co.uk",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 2": 1
+    }
+   },
+   {
+    "id": "url:nationalpost.com/news/canada/accusations-fly-at-human-rights-hearing-into-transgender-womans-brazilian-wax-complaint",
+    "source": "nationalpost.com",
+    "citations": 1,
+    "flags": [
+     "not_english",
+     "not_english_no_quote"
+    ],
+    "language_as_cited": "en-CA",
+    "added_by": {
+     "Editor 2": 1
+    }
+   },
+   {
+    "id": "url:nationalpost.com/news/canada/complaints-filed-by-trans-activist-jessica-yaniv-deferred-until-6000-paid-to-beauty-salons",
+    "source": "nationalpost.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:nationalpost.com/news/canada/conservative-legal-group-challenges-new-covid-restrictions-on-group-gatherings-in-alberta",
+    "source": "nationalpost.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 3": 1
+    }
+   },
+   {
+    "id": "url:nationalpost.com/news/free-speech-activist-lindsay-shepherd-on-her-twitter-ban-your-instincts-should-not-be-to-celebrate",
+    "source": "nationalpost.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 5": 1
+    }
+   },
+   {
+    "id": "url:nationalpost.com/news/jessica-yaniv",
+    "source": "nationalpost.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:nationalpost.com/news/meghan-murphy-the-woman-behind-trans-wars-breaking-out-at-the-public-library",
+    "source": "nationalpost.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:nationalpost.com/news/trans-activist-jessica-yaniv-files-second-lawsuit-against-3-beauticians-after-losing-human-rights-suit-to-them-in-2019",
+    "source": "nationalpost.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:nsnews.com/genital-waxing-complainant-s-topless-ok-youth-lgbtq2s-swim-proposal-delayed-by-township-of-langley-1.23895812",
+    "source": "nsnews.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:nsnews.com/highlights/bc-trans-activists-defamation-case-against-rebel-news-dismissed-5580308",
+    "source": "nsnews.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 3": 1
+    }
+   },
+   {
+    "id": "url:nsnews.com/surrey-rcmp-investigating-altercation-between-reporter-and-transgender-activist-1.24060033",
+    "source": "nsnews.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:omny.fm/shows/the-jill-bennett-show/transgender-brazilian-wax-causes-irritation-keep-t",
+    "source": "omny.fm",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 2": 1
+    }
+   },
+   {
+    "id": "url:pinknews.co.uk/2019/07/31/trans-woman-denied-gender-affirming-services-files-human-rights-complaints",
+    "source": "pinknews.co.uk",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 2": 1
+    }
+   },
+   {
+    "id": "url:richmond-news.com/genital-waxing-complainant-s-appeal-rejected-by-b-c-human-rights-tribunal-1.24008670",
+    "source": "richmond-news.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 3": 1
+    }
+   },
+   {
+    "id": "url:sprucegroveexaminer.com/news/canada/rights-centre-says-trans-activist-jessica-yaniv-has-filed-new-suit-against-b-c-salon-over-waxing-refusal/wcm/65c2d00f-f916-42ef-bd85-b8e37b311d48",
+    "source": "sprucegroveexaminer.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 2": 1
+    }
+   },
+   {
+    "id": "url:starobserver.com.au/news/international-news-news/ricky-gervais-takes-aim-at-transgender-activist-on-twitter/190866",
+    "source": "starobserver.com.au",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 2": 1
+    }
+   },
+   {
+    "id": "url:straight.com/life/1337816/langley-woman-previously-involved-genital-waxing-case-arrested-weapon-possession",
+    "source": "straight.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:telegraph.co.uk/news/2019/10/23/canadian-transgender-woman-loses-case-against-beauticians-refused",
+    "source": "telegraph.co.uk",
+    "citations": 1,
+    "flags": [
+     "paywall_or_registration"
+    ],
+    "added_by": {
+     "Editor 2": 1
+    }
+   },
+   {
+    "id": "url:theaustralian.com.au/nation/feminists-reject-transgender-law-change/news-story/b6b175fdde25714bbbd4f31ec63c2ac3",
+    "source": "theaustralian.com.au",
+    "citations": 1,
+    "flags": [
+     "paywall_or_registration"
+    ],
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:theglobeandmail.com/canada/british-columbia/article-bc-human-rights-tribunal-rejects-transgender-womans-discrimination",
+    "source": "theglobeandmail.com",
+    "citations": 1,
+    "flags": [
+     "paywall_or_registration"
+    ],
+    "added_by": {
+     "Editor 2": 1
+    }
+   },
+   {
+    "id": "url:theglobeandmail.com/news/national/vancouver-student-pitches-national-sex-day/article4222777",
+    "source": "theglobeandmail.com",
+    "citations": 1,
+    "flags": [
+     "paywall_or_registration"
+    ],
+    "added_by": {
+     "Editor 3": 1
+    }
+   },
+   {
+    "id": "url:theguardian.com/books/2021/jul/18/trans-by-helen-joyce-material-girls-by-kathleen-stock-reviews",
+    "source": "theguardian.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 3": 1
+    }
+   },
+   {
+    "id": "url:theguardian.com/commentisfree/2019/jul/27/male-genitalia-week-in-patriarchy-women",
+    "source": "theguardian.com",
+    "citations": 1,
+    "flags": [
+     "opinion"
+    ],
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:thestar.com/vancouver/2019/10/23/jessica-yaniv-fallout-vancouver-transgender-activists-says-high-profile-case-has-been-massively-negative-for-community.html",
+    "source": "thestar.com",
+    "citations": 1,
+    "flags": [
+     "paywall_or_registration"
+    ],
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:thetimes.com/uk/society/article/fur-flies-over-brazilian-wax-for-trans-woman-jessica-yaniv-gm7f9mltx",
+    "source": "thetimes.com",
+    "citations": 1,
+    "flags": [
+     "paywall_or_registration"
+    ],
+    "added_by": {
+     "Editor 3": 1
+    }
+   },
+   {
+    "id": "url:torontosun.com/news/national/lindsay-shepherd-un-banned-from-twitter",
+    "source": "torontosun.com",
+    "citations": 1,
+    "flags": [
+     "not_english"
+    ],
+    "language_as_cited": "en-CA",
+    "added_by": {
+     "Editor 5": 1
+    }
+   },
+   {
+    "id": "url:tricitynews.com/eighth-genital-waxing-case-heads-for-human-rights-tribunal-1.24047580",
+    "source": "tricitynews.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 3": 1
+    }
+   },
+   {
+    "id": "url:twitter.com/trustednerd/status/1345138961002287104",
+    "source": "twitter.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 3": 1
+    }
+   },
+   {
+    "id": "url:vancouversun.com/news/local-news/transgender-womans-waxing-complaint-dismissed-by-human-rights-tribunal",
+    "source": "vancouversun.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 2": 1
+    }
+   },
+   {
+    "id": "url:westernstandard.news/bc/watch-transgender-activist-yaniv-found-guilty-of-assaulting-journalist/article_f6c746be-dd34-11ec-932e-4bf58217e946.html",
+    "source": "westernstandard.news",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en",
+    "added_by": {
+     "Editor 4": 1
+    }
+   },
+   {
+    "id": "url:westernstandardonline.com/2020/08/yaniv-now-suing-three-female-beauticians-who-refused-her-a-scrotum-wax",
+    "source": "westernstandardonline.com",
+    "citations": 1,
+    "flags": [
+     "not_english",
+     "not_english_no_quote"
+    ],
+    "language_as_cited": "en-CA",
+    "added_by": {
+     "Editor 3": 1
+    }
+   },
+   {
+    "id": "url:westernstandardonline.com/2020/10/yaniv-now-suing-ontario-beauty-pageant-for-not-letting-her-in",
+    "source": "westernstandardonline.com",
+    "citations": 1,
+    "flags": [
+     "not_english",
+     "not_english_no_quote"
+    ],
+    "language_as_cited": "en-CA",
+    "added_by": {
+     "Editor 2": 1
+    }
+   },
+   {
+    "id": "url:westernstandardonline.com/2020/12/transgender-actvist-yaniv-wanted-by-police-in-bc",
+    "source": "westernstandardonline.com",
+    "citations": 1,
+    "flags": [
+     "not_english",
+     "not_english_no_quote"
+    ],
+    "language_as_cited": "en-CA",
+    "added_by": {
+     "Editor 3": 1
+    }
+   },
+   {
+    "id": "url:westernstandardonline.com/2021/02/yaniv-accused-of-calling-fire-department-dozens-of-times-making-lewd-remarks",
+    "source": "westernstandardonline.com",
+    "citations": 1,
+    "flags": [
+     "not_english",
+     "not_english_no_quote"
+    ],
+    "language_as_cited": "en-CA",
+    "added_by": {
+     "Editor 3": 1
+    }
+   }
+  ],
+  "bundles": {
+   "sentences_with_footnotes": 72,
+   "sentences_by_works_cited": {
+    "1": 48,
+    "2-4": 23,
+    "5-9": 1,
+    "10 or more": 0
+   },
+   "largest": [
+    {
+     "sentence": "lead-1",
+     "footnotes": 6,
+     "works": 6
+    }
+   ]
+  }
+ },
+ "changes": {
+  "words_removed": 8919,
+  "words_removed_later_restored": 3577,
+  "source_links_removed": 115,
+  "editors_removing": 77,
+  "listed_terms": {
+   "inserted": {
+    "WTW: contentious labels": 31,
+    "WTW: editorializing": 3,
+    "WTW: euphemisms": 3,
+    "WTW: expressions of doubt": 19,
+    "WTW: puffery": 7,
+    "WTW: synonyms for said": 42,
+    "contested: abortion": 4,
+    "contested: gender and sexuality": 105,
+    "contested: political labels": 2,
+    "contested: terms for violent events": 4,
+    "contested: territory and control": 2
+   },
+   "removed": {
+    "WTW: contentious labels": 17,
+    "WTW: editorializing": 1,
+    "WTW: expressions of doubt": 11,
+    "WTW: puffery": 6,
+    "WTW: synonyms for said": 25,
+    "contested: abortion": 9,
+    "contested: gender and sexuality": 66,
+    "contested: political labels": 7,
+    "contested: terms for violent events": 1
+   }
+  },
+  "lists": {
+   "words_to_watch": {
+    "revision": 1382059772,
+    "url": "https://en.wikipedia.org/w/index.php?oldid=1382059772",
+    "sha256": "21e24e2898750322164b24947621630845d75cf8dd5adf3ec8cd860152449ea3"
+   },
+   "contested_terms": {
+    "sha256": "944606776be20b6b77dceb3ee5f6a29f8f5e196bf93cc16a4b6f2db6efe600c1"
+   }
+  },
+  "editors": [
+   {
+    "label": "Editor 1",
+    "words_removed": 3526,
+    "others_words_removed": 2685,
+    "words_removed_later_restored": 1805,
+    "removing_revisions": 71,
+    "sources_removed": {
+     "archive.today": 15,
+     "washingtontimes.com": 6,
+     "yahoo.com": 4,
+     "7news.com.au": 3,
+     "aldergrovestar.com": 2,
+     "americanbazaaronline.com": 2,
+     "bchrt.bc.ca": 2,
+     "calgaryherald.com": 2,
+     "cbc.ca": 2,
+     "globalnews.ca": 2,
+     "nsnews.com": 2,
+     "quillette.com": 2,
+     "thepostmillennial.com": 2,
+     "washingtonexaminer.com": 2,
+     "archive.org": 1,
+     "brantfordexpositor.ca": 1,
+     "google.com": 1,
+     "jccf.ca": 1,
+     "newswire.ca": 1,
+     "rebelnews.com": 1,
+     "torontosun.com": 1,
+     "westernstandardonline.com": 1,
+     "worldcat.org": 1
+    },
+    "terms_inserted": {
+     "WTW: contentious labels": {
+      "bigot": 1,
+      "controversial": 12
+     },
+     "WTW: editorializing": {
+      "only": 1
+     },
+     "WTW: expressions of doubt": {
+      "accused": 2,
+      "alleged": 3,
+      "apparent": 1
+     },
+     "WTW: synonyms for said": {
+      "claim": 5,
+      "deny": 2,
+      "note": 1,
+      "reveal": 1
+     },
+     "contested: gender and sexuality": {
+      "transgender": 33
+     },
+     "contested: terms for violent events": {
+      "raid": 1
+     },
+     "contested: territory and control": {
+      "settlement": 1
+     }
+    },
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "controversial": 3,
+      "racist": 4
+     },
+     "WTW: editorializing": {
+      "only": 1
+     },
+     "WTW: expressions of doubt": {
+      "alleged": 4
+     },
+     "WTW: puffery": {
+      "best": 2
+     },
+     "WTW: synonyms for said": {
+      "claim": 1,
+      "deny": 1,
+      "note": 1
+     },
+     "contested: abortion": {
+      "pro-life": 9
+     },
+     "contested: gender and sexuality": {
+      "gender-affirming care": 1,
+      "transgender": 28
+     },
+     "contested: political labels": {
+      "conspiracy theorist": 1,
+      "far-right": 3
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=979171179",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=979172909",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=975726017",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=980032984",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=984901180"
+    ]
+   },
+   {
+    "label": "Editor 2",
+    "words_removed": 2488,
+    "others_words_removed": 1767,
+    "words_removed_later_restored": 370,
+    "removing_revisions": 85,
+    "sources_removed": {
+     "nationalpost.com": 9,
+     "archive.today": 6,
+     "archive.org": 2,
+     "sprucegroveexaminer.com": 2,
+     "7news.com.au": 1,
+     "aldergrovestar.com": 1,
+     "calgaryherald.com": 1,
+     "cbc.ca": 1,
+     "economist.com": 1,
+     "globalnews.ca": 1,
+     "kwantlenchronicle.ca": 1,
+     "quillette.com": 1,
+     "theaustralian.com.au": 1,
+     "thepostmillennial.com": 1,
+     "vancouverisawesome.com": 1,
+     "washingtonexaminer.com": 1,
+     "yahoo.com": 1
+    },
+    "terms_inserted": {
+     "WTW: contentious labels": {
+      "bigot": 2,
+      "racist": 9
+     },
+     "WTW: editorializing": {
+      "of course": 1
+     },
+     "WTW: expressions of doubt": {
+      "alleged": 3
+     },
+     "WTW: puffery": {
+      "awesome": 1,
+      "best": 2,
+      "hit": 1
+     },
+     "WTW: synonyms for said": {
+      "admit": 1,
+      "claim": 3,
+      "deny": 4,
+      "expose": 1,
+      "find": 2,
+      "note": 1,
+      "reveal": 1
+     },
+     "contested: abortion": {
+      "pro-life": 3
+     },
+     "contested: gender and sexuality": {
+      "gender-affirming": 1,
+      "transgender": 35
+     },
+     "contested: terms for violent events": {
+      "attack": 1,
+      "raid": 1
+     }
+    },
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "bigot": 1,
+      "controversial": 2,
+      "racist": 1
+     },
+     "WTW: expressions of doubt": {
+      "apparent": 1
+     },
+     "WTW: puffery": {
+      "awesome": 1,
+      "best": 2,
+      "notable": 1
+     },
+     "WTW: synonyms for said": {
+      "claim": 1,
+      "note": 1
+     },
+     "contested: gender and sexuality": {
+      "transgender": 12
+     },
+     "contested: political labels": {
+      "far-right": 3
+     },
+     "contested: terms for violent events": {
+      "raid": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=979182843",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=984448430",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=979994832",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=979678374",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=984422216"
+    ]
+   },
+   {
+    "label": "Editor 30",
+    "words_removed": 1143,
+    "others_words_removed": 1143,
+    "words_removed_later_restored": 754,
+    "removing_revisions": 18,
+    "sources_removed": {
+     "archive.today": 6,
+     "sydneycriminallawyers.com.au": 3,
+     "americanbazaaronline.com": 2,
+     "starobserver.com.au": 2,
+     "7news.com.au": 1,
+     "google.com": 1,
+     "worldcat.org": 1,
+     "yahoo.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "racist": 6
+     },
+     "WTW: synonyms for said": {
+      "claim": 5,
+      "expose": 1
+     },
+     "contested: gender and sexuality": {
+      "transgender": 17
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=979855923",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=979858213",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=979805927",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=980008912",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=980007582"
+    ]
+   },
+   {
+    "label": "Editor 15",
+    "words_removed": 240,
+    "others_words_removed": 240,
+    "words_removed_later_restored": 7,
+    "removing_revisions": 6,
+    "sources_removed": {
+     "archive.today": 1,
+     "kwantlenchronicle.ca": 1,
+     "theirishsentinel.com": 1,
+     "washingtontimes.com": 1
+    },
+    "terms_inserted": {
+     "WTW: synonyms for said": {
+      "claim": 1
+     }
+    },
+    "terms_removed": {
+     "WTW: synonyms for said": {
+      "claim": 1
+     },
+     "contested: gender and sexuality": {
+      "transgender": 3
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=981368645",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=982383967",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=981311869",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=981308236",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=981307976"
+    ]
+   },
+   {
+    "label": "Editor 31",
+    "words_removed": 232,
+    "others_words_removed": 232,
+    "words_removed_later_restored": 228,
+    "removing_revisions": 4,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1028837844",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1028879150",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1028882102",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1100133121"
+    ]
+   },
+   {
+    "label": "Editor 12",
+    "words_removed": 202,
+    "others_words_removed": 202,
+    "words_removed_later_restored": 80,
+    "removing_revisions": 7,
+    "sources_removed": {
+     "meowtube.org": 2
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1028876513",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1028882326",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1027414298",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1058432906",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1022370908"
+    ]
+   },
+   {
+    "label": "Editor 32",
+    "words_removed": 145,
+    "others_words_removed": 144,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 7,
+    "sources_removed": {
+     "archive.today": 1,
+     "archive.vn": 1
+    },
+    "terms_inserted": {
+     "WTW: contentious labels": {
+      "controversial": 1
+     },
+     "WTW: euphemisms": {
+      "challenge": 1
+     },
+     "WTW: expressions of doubt": {
+      "alleged": 1
+     },
+     "WTW: synonyms for said": {
+      "claim": 1,
+      "deny": 1
+     },
+     "contested: gender and sexuality": {
+      "gender-affirming": 1,
+      "transgender": 10
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1033296799",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1302851498",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1171872084",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1317796101",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1283549060"
+    ]
+   },
+   {
+    "label": "Editor 33",
+    "words_removed": 126,
+    "others_words_removed": 126,
+    "words_removed_later_restored": 126,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: expressions of doubt": {
+      "accused": 1,
+      "alleged": 1
+     },
+     "WTW: synonyms for said": {
+      "claim": 1,
+      "deny": 2
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1120923619",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1120923453"
+    ]
+   },
+   {
+    "label": "Editor 34",
+    "words_removed": 80,
+    "others_words_removed": 80,
+    "words_removed_later_restored": 80,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "meowtube.org": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1028879251"
+    ]
+   },
+   {
+    "label": "Editor 17",
+    "words_removed": 66,
+    "others_words_removed": 66,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "contested: gender and sexuality": {
+      "transgender": 2
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1023156472",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1026458518"
+    ]
+   },
+   {
+    "label": "Editor 35",
+    "words_removed": 66,
+    "others_words_removed": 66,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=981263683"
+    ]
+   },
+   {
+    "label": "Editor 3",
+    "words_removed": 64,
+    "others_words_removed": 54,
+    "words_removed_later_restored": 2,
+    "removing_revisions": 13,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: contentious labels": {
+      "controversial": 6
+     },
+     "WTW: editorializing": {
+      "only": 1
+     },
+     "WTW: euphemisms": {
+      "challenge": 2
+     },
+     "WTW: expressions of doubt": {
+      "accused": 3,
+      "alleged": 3,
+      "purported": 1
+     },
+     "WTW: puffery": {
+      "notable": 1
+     },
+     "WTW: synonyms for said": {
+      "claim": 9,
+      "note": 2
+     },
+     "contested: abortion": {
+      "pro-life": 1
+     },
+     "contested: gender and sexuality": {
+      "transgender": 7
+     },
+     "contested: political labels": {
+      "conspiracy theorist": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=981350277",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1003132923",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=981186797",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=981183226",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=981343964"
+    ]
+   },
+   {
+    "label": "Editor 36",
+    "words_removed": 57,
+    "others_words_removed": 54,
+    "words_removed_later_restored": 14,
+    "removing_revisions": 10,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1021505199",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1029528992",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1021498640",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1011484108",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1020938143"
+    ]
+   },
+   {
+    "label": "Editor 7",
+    "words_removed": 48,
+    "others_words_removed": 48,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: synonyms for said": {
+      "reveal": 1
+     }
+    },
+    "terms_removed": {
+     "WTW: synonyms for said": {
+      "clarify": 1,
+      "reveal": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1243117475",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1227473332"
+    ]
+   },
+   {
+    "label": "Editor 8",
+    "words_removed": 42,
+    "others_words_removed": 42,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 3,
+    "sources_removed": {},
+    "terms_inserted": {
+     "contested: gender and sexuality": {
+      "transgender": 1
+     }
+    },
+    "terms_removed": {
+     "contested: gender and sexuality": {
+      "transgender": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1023461670",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1023441681",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1023440375"
+    ]
+   },
+   {
+    "label": "Editor 21",
+    "words_removed": 28,
+    "others_words_removed": 28,
+    "words_removed_later_restored": 1,
+    "removing_revisions": 8,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: synonyms for said": {
+      "deny": 1,
+      "note": 2
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1058227080",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1032003105",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1058390409",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1097321323",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1120992401"
+    ]
+   },
+   {
+    "label": "Editor 37",
+    "words_removed": 26,
+    "others_words_removed": 26,
+    "words_removed_later_restored": 4,
+    "removing_revisions": 3,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=978487231",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=979687723",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=979687664"
+    ]
+   },
+   {
+    "label": "Editor 38",
+    "words_removed": 25,
+    "others_words_removed": 25,
+    "words_removed_later_restored": 25,
+    "removing_revisions": 3,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: synonyms for said": {
+      "deny": 1
+     }
+    },
+    "terms_removed": {
+     "WTW: expressions of doubt": {
+      "alleged": 2
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1058180358",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1058293428",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1058180595"
+    ]
+   },
+   {
+    "label": "Editor 39",
+    "words_removed": 24,
+    "others_words_removed": 24,
+    "words_removed_later_restored": 5,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=997764571"
+    ]
+   },
+   {
+    "label": "Editor 40",
+    "words_removed": 23,
+    "others_words_removed": 23,
+    "words_removed_later_restored": 2,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=975863533"
+    ]
+   },
+   {
+    "label": "Editor 9",
+    "words_removed": 20,
+    "others_words_removed": 20,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 3,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: expressions of doubt": {
+      "accused": 1
+     }
+    },
+    "terms_removed": {
+     "WTW: expressions of doubt": {
+      "accused": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1028790353",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1083678169",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1083677935"
+    ]
+   },
+   {
+    "label": "Editor 41",
+    "words_removed": 20,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1055248840"
+    ]
+   },
+   {
+    "label": "Editor 42",
+    "words_removed": 20,
+    "others_words_removed": 20,
+    "words_removed_later_restored": 16,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=986607820",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=986604956"
+    ]
+   },
+   {
+    "label": "Editor 5",
+    "words_removed": 17,
+    "others_words_removed": 16,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 3,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: expressions of doubt": {
+      "accused": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1011430217",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1011431245",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1011435110"
+    ]
+   },
+   {
+    "label": "Editor 6",
+    "words_removed": 17,
+    "others_words_removed": 16,
+    "words_removed_later_restored": 3,
+    "removing_revisions": 4,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: synonyms for said": {
+      "claim": 1
+     },
+     "contested: gender and sexuality": {
+      "transgender": 3
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1020908890",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1021103396",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=981308473",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=982264596"
+    ]
+   },
+   {
+    "label": "Editor 11",
+    "words_removed": 14,
+    "others_words_removed": 11,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: puffery": {
+      "notable": 2
+     },
+     "WTW: synonyms for said": {
+      "note": 1
+     },
+     "contested: gender and sexuality": {
+      "gender-affirming care": 2,
+      "transgender": 3
+     },
+     "contested: territory and control": {
+      "occupation": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=924398190",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=924398541"
+    ]
+   },
+   {
+    "label": "Editor 43",
+    "words_removed": 14,
+    "others_words_removed": 14,
+    "words_removed_later_restored": 14,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: synonyms for said": {
+      "claim": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=979170109"
+    ]
+   },
+   {
+    "label": "Editor 10",
+    "words_removed": 11,
+    "others_words_removed": 11,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 4,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1054032982",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1054032473",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1054034163",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1054034475"
+    ]
+   },
+   {
+    "label": "Editor 19",
+    "words_removed": 10,
+    "others_words_removed": 10,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 3,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: expressions of doubt": {
+      "alleged": 1
+     },
+     "WTW: synonyms for said": {
+      "claim": 3
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=975856713",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=975856303",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=979820967"
+    ]
+   },
+   {
+    "label": "Editor 44",
+    "words_removed": 9,
+    "others_words_removed": 9,
+    "words_removed_later_restored": 9,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=977037667"
+    ]
+   },
+   {
+    "label": "Editor 4",
+    "words_removed": 8,
+    "others_words_removed": 8,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {
+     "contested: gender and sexuality": {
+      "transgender": 3
+     },
+     "contested: terms for violent events": {
+      "attack": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1095385239"
+    ]
+   },
+   {
+    "label": "Editor 13",
+    "words_removed": 8,
+    "others_words_removed": 8,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1168504900"
+    ]
+   },
+   {
+    "label": "Editor 45",
+    "words_removed": 7,
+    "others_words_removed": 7,
+    "words_removed_later_restored": 7,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1114747494"
+    ]
+   },
+   {
+    "label": "Editor 46",
+    "words_removed": 7,
+    "others_words_removed": 7,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1343047574"
+    ]
+   },
+   {
+    "label": "Editor 20",
+    "words_removed": 6,
+    "others_words_removed": 6,
+    "words_removed_later_restored": 4,
+    "removing_revisions": 4,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1026393313",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1026453473",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1022243479",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1022433563"
+    ]
+   },
+   {
+    "label": "Editor 47",
+    "words_removed": 6,
+    "others_words_removed": 6,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1086515913"
+    ]
+   },
+   {
+    "label": "Editor 23",
+    "words_removed": 5,
+    "others_words_removed": 5,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: synonyms for said": {
+      "deny": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1212763159"
+    ]
+   },
+   {
+    "label": "Editor 48",
+    "words_removed": 5,
+    "others_words_removed": 5,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 3,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "contested: gender and sexuality": {
+      "transsexual": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1092990129",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1132025700",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1247619697"
+    ]
+   },
+   {
+    "label": "Editor 49",
+    "words_removed": 5,
+    "others_words_removed": 5,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1139911320"
+    ]
+   },
+   {
+    "label": "Editor 16",
+    "words_removed": 4,
+    "others_words_removed": 4,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1360128953"
+    ]
+   },
+   {
+    "label": "Editor 50",
+    "words_removed": 4,
+    "others_words_removed": 4,
+    "words_removed_later_restored": 4,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=986602350"
+    ]
+   },
+   {
+    "label": "Editor 51",
+    "words_removed": 4,
+    "others_words_removed": 4,
+    "words_removed_later_restored": 4,
+    "removing_revisions": 3,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1022370685",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1022385657",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1022387979"
+    ]
+   },
+   {
+    "label": "Editor 52",
+    "words_removed": 4,
+    "others_words_removed": 4,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "contested: gender and sexuality": {
+      "transgender": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1193519740"
+    ]
+   },
+   {
+    "label": "Editor 53",
+    "words_removed": 4,
+    "others_words_removed": 4,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1026454667"
+    ]
+   },
+   {
+    "label": "Editor 22",
+    "words_removed": 3,
+    "others_words_removed": 3,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1141632600"
+    ]
+   },
+   {
+    "label": "Editor 28",
+    "words_removed": 3,
+    "others_words_removed": 3,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: synonyms for said": {
+      "clarify": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1227015334"
+    ]
+   },
+   {
+    "label": "Editor 54",
+    "words_removed": 3,
+    "others_words_removed": 3,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1050761189"
+    ]
+   },
+   {
+    "label": "Editor 55",
+    "words_removed": 3,
+    "others_words_removed": 3,
+    "words_removed_later_restored": 3,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=991066435"
+    ]
+   },
+   {
+    "label": "Editor 56",
+    "words_removed": 2,
+    "others_words_removed": 2,
+    "words_removed_later_restored": 2,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1097244199"
+    ]
+   },
+   {
+    "label": "Editor 57",
+    "words_removed": 2,
+    "others_words_removed": 2,
+    "words_removed_later_restored": 2,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1127792606"
+    ]
+   },
+   {
+    "label": "Editor 58",
+    "words_removed": 2,
+    "others_words_removed": 2,
+    "words_removed_later_restored": 2,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1341747990"
+    ]
+   },
+   {
+    "label": "Editor 59",
+    "words_removed": 2,
+    "others_words_removed": 2,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1064528757"
+    ]
+   },
+   {
+    "label": "Editor 18",
+    "words_removed": 1,
+    "others_words_removed": 1,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1357693865"
+    ]
+   },
+   {
+    "label": "Editor 24",
+    "words_removed": 1,
+    "others_words_removed": 1,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=975875216"
+    ]
+   },
+   {
+    "label": "Editor 25",
+    "words_removed": 1,
+    "others_words_removed": 1,
+    "words_removed_later_restored": 1,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=990741806"
+    ]
+   },
+   {
+    "label": "Editor 26",
+    "words_removed": 1,
+    "others_words_removed": 1,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=996404514"
+    ]
+   },
+   {
+    "label": "Editor 27",
+    "words_removed": 1,
+    "others_words_removed": 1,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1128403213"
+    ]
+   },
+   {
+    "label": "Editor 60",
+    "words_removed": 1,
+    "others_words_removed": 1,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1078924060"
+    ]
+   },
+   {
+    "label": "Editor 61",
+    "words_removed": 1,
+    "others_words_removed": 1,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1050345655"
+    ]
+   },
+   {
+    "label": "Editor 62",
+    "words_removed": 1,
+    "others_words_removed": 1,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1006952712"
+    ]
+   },
+   {
+    "label": "Editor 63",
+    "words_removed": 1,
+    "others_words_removed": 1,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1030273500"
+    ]
+   },
+   {
+    "label": "Editor 64",
+    "words_removed": 1,
+    "others_words_removed": 1,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=979198714"
+    ]
+   },
+   {
+    "label": "Editor 65",
+    "words_removed": 1,
+    "others_words_removed": 1,
+    "words_removed_later_restored": 1,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1080402086"
+    ]
+   },
+   {
+    "label": "Editor 66",
+    "words_removed": 1,
+    "others_words_removed": 1,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=976246914"
+    ]
+   },
+   {
+    "label": "Editor 67",
+    "words_removed": 1,
+    "others_words_removed": 1,
+    "words_removed_later_restored": 1,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1177846243"
+    ]
+   },
+   {
+    "label": "Editor 68",
+    "words_removed": 1,
+    "others_words_removed": 1,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1303482106"
+    ]
+   },
+   {
+    "label": "Editor 69",
+    "words_removed": 1,
+    "others_words_removed": 1,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1076764952"
+    ]
+   },
+   {
+    "label": "Editor 70",
+    "words_removed": 1,
+    "others_words_removed": 1,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1013049774"
+    ]
+   },
+   {
+    "label": "Editor 71",
+    "words_removed": 1,
+    "others_words_removed": 1,
+    "words_removed_later_restored": 1,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=980374233"
+    ]
+   },
+   {
+    "label": "Editor 72",
+    "words_removed": 1,
+    "others_words_removed": 1,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1025832204"
+    ]
+   },
+   {
+    "label": "Editor 73",
+    "words_removed": 1,
+    "others_words_removed": 1,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=999311458"
+    ]
+   },
+   {
+    "label": "Editor 74",
+    "words_removed": 0,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 0,
+    "sources_removed": {},
+    "terms_inserted": {
+     "contested: gender and sexuality": {
+      "transgender": 1
+     },
+     "contested: political labels": {
+      "far-right": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": []
+   },
+   {
+    "label": "Editor 75",
+    "words_removed": 0,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 0,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: synonyms for said": {
+      "clarify": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": []
+   },
+   {
+    "label": "Editor 76",
+    "words_removed": 0,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 0,
+    "sources_removed": {},
+    "terms_inserted": {
+     "contested: gender and sexuality": {
+      "transgender": 1,
+      "transsexual": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": []
+   },
+   {
+    "label": "Editor 77",
+    "words_removed": 0,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 0,
+    "sources_removed": {},
+    "terms_inserted": {
+     "contested: gender and sexuality": {
+      "transgender": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": []
+   },
+   {
+    "label": "Editor 78",
+    "words_removed": 0,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 0,
+    "sources_removed": {},
+    "terms_inserted": {
+     "contested: gender and sexuality": {
+      "transgender": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": []
+   },
+   {
+    "label": "Editor 79",
+    "words_removed": 0,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 0,
+    "sources_removed": {},
+    "terms_inserted": {
+     "contested: gender and sexuality": {
+      "transgender": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": []
+   }
+  ],
+  "editors_shown": 77,
+  "sentence_history": {
+   "rule": "taken out and put back at least 2 times, not counting page-wide removals",
+   "sentences": 103,
+   "sentences_removed_and_restored_twice_or_more": 1,
+   "their_words": 22,
+   "share_of_words": 0.008796,
+   "in_opening_section": 0,
+   "median_days_in_place_since_last_restored": 2193,
+   "sentences_removed_five_times_or_more": 0,
+   "sentences_removed_by_two_or_more_accounts": 0
+  }
+ },
+ "declared_interests": {
+  "article_tags": [],
+  "talk_page_revision": 1381308062,
+  "evidence": "https://en.wikipedia.org/w/index.php?oldid=1381308062",
+  "notices": [
+   {
+    "notice": "connected contributor",
+    "editors": [],
+    "accounts_not_among_listed_editors": 3
    }
   ]
  },

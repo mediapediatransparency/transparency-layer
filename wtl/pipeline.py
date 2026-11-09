@@ -7,7 +7,7 @@ from . import __version__, books, caveats, coi, sanctions as sanc, sources, word
 from .metrics import changes as chg
 from .config import WIKIWHO_URL
 from .fetch import cache, mediawiki as mw, wikiwho as ww
-from .metrics import accountability, authorship as au
+from .metrics import accountability, authorship as au, stability as stab
 from .text import align, sentences, wikitext
 
 WIKI = "https://en.wikipedia.org"
@@ -77,6 +77,20 @@ def analyse(title: str | None = None, revid: int | None = None, area: str = "",
         return key_cache[o]
 
     surv = au.survival(ww.word_view(allc), hist, revid, key_of_rev)
+    persist = au.persistence(ww.word_view(allc), hist, revid)
+
+    # --- per-sentence history and footnote bundles (see wtl/metrics/stability.py) ---
+    try:
+        idx = ww.history_positions(allc, ww.rev_token_ids(revid), rc["tokens"])
+    except Exception as ex:   # noqa: BLE001 - token IDs unavailable: sentence history left out
+        log(f"  sentence history skipped: {str(ex)[:80]}")
+        idx = None
+    sent_hist = {}
+    if idx:
+        wsent = [sent_of[sp[0]] if sp is not None and sp[0] < len(sent_of) else -1 for sp in al.spans]
+        sent_hist = stab.sentence_history(allc["tokens"], idx, wsent, revid, hist, key_of_rev)
+    fnotes = stab.footnotes(text, sent_of)
+    keep_notes, text_tags = stab.notes_and_tags(text, sent_of)
 
     # --- sanctions: seed list + block log, one rule for everyone ---
     rows = sanc.load(sanctions_path) if sanctions_path else sanc.load()
@@ -194,7 +208,7 @@ def analyse(title: str | None = None, revid: int | None = None, area: str = "",
     for w in words:
         if w.sentence >= 0:
             per_sent[w.sentence].append(w)
-    sent_out = []
+    sent_out, sent_index = [], {}
     for i, s in enumerate(sents):
         ws = per_sent.get(i)
         if not ws:
@@ -223,7 +237,13 @@ def analyse(title: str | None = None, revid: int | None = None, area: str = "",
             "sanctioned_words_before": before,
             "sanctioned_words_after": after,
             "sanctioned_words_during": timing["during"] + timing["during_open"],
+            "footnotes": len(fnotes.get(i, [])),
+            "works_cited": sum(fnotes.get(i, [])),
+            **({"history": sent_hist[i]} if i in sent_hist else {}),
+            **({"hidden_notes": keep_notes[i]} if i in keep_notes else {}),
+            **({"tags": text_tags[i]} if i in text_tags else {}),
         })
+        sent_index[i] = s.id
 
     conc = au.concentration(count)
     lead_conc = au.concentration(lead_count)
@@ -253,6 +273,7 @@ def analyse(title: str | None = None, revid: int | None = None, area: str = "",
             "editors_for_80pct": conc["editors_for_80pct"],
             "lead": lead_conc,
             "account_types": {t: au.r6(n / total) for t, n in sorted(acct.items())},
+            "persistence": persist,
             "survival_article": {h: {"words_added": n, "words_surviving": k,
                                      "rate": au.r6(k / n) if n else None}
                                  for h, (n, k) in surv["article"].items()},
@@ -291,7 +312,12 @@ def analyse(title: str | None = None, revid: int | None = None, area: str = "",
         },
     }
     record["accountability"]["concentration"] = caveats.sanctioned_concentration(record)
-    record["sources"] = src_block
+    record["sources"] = {**src_block, "bundles": stab.bundles_summary(fnotes, sent_index)}
+    if sent_hist:
+        changes_block["sentence_history"] = stab.history_summary(
+            {i: h for i, h in sent_hist.items() if i in sent_index},
+            {i: x["words"] for i, x in zip(sent_index, sent_out)},
+            {i for i, sid in sent_index.items() if sid.startswith("lead")}, revid, hist)
     record["changes"] = changes_block
     record["declared_interests"] = declared
     record["caveats"] = caveats.compute(record)

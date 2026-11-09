@@ -479,6 +479,48 @@
    "ip": 0.392857,
    "registered": 0.607143
   },
+  "persistence": [
+   {
+    "years": 1,
+    "baseline": 1303666229,
+    "baseline_timestamp": "2025-08-01T10:25:51Z",
+    "words_then": 266,
+    "still_present": 163,
+    "share_still_present": 0.612782,
+    "words_now": 252,
+    "share_of_current": 0.646825
+   },
+   {
+    "years": 2,
+    "baseline": 1230900440,
+    "baseline_timestamp": "2024-06-25T09:44:10Z",
+    "words_then": 267,
+    "still_present": 161,
+    "share_still_present": 0.602996,
+    "words_now": 252,
+    "share_of_current": 0.638889
+   },
+   {
+    "years": 3,
+    "baseline": 1150341510,
+    "baseline_timestamp": "2023-04-17T16:10:23Z",
+    "words_then": 268,
+    "still_present": 160,
+    "share_still_present": 0.597015,
+    "words_now": 252,
+    "share_of_current": 0.634921
+   },
+   {
+    "years": 5,
+    "baseline": 1025349533,
+    "baseline_timestamp": "2021-05-27T03:24:57Z",
+    "words_then": 151,
+    "still_present": 117,
+    "share_still_present": 0.774834,
+    "words_now": 252,
+    "share_of_current": 0.464286
+   }
+  ],
   "survival_article": {
    "48h": {
     "words_added": 881,
@@ -549,7 +591,7 @@
   "sanctioned_editors": 0,
   "rule": "topic bans count on articles in the same topic area; site bans and sockpuppetry findings count everywhere",
   "sanctions_list": {
-   "seed_rows_total": 130,
+   "seed_rows_total": 154,
    "seed_rows_in_topic_area": 96,
    "seed_rows_unresolved_accounts": 0,
    "block_log_snapshot": "2026-11-03"
@@ -588,7 +630,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 2,
+    "first_added": "2009-04-15",
+    "latest_removal": null,
+    "in_place_since": "2009-04-15",
+    "in_place_since_revision": 283895739,
+    "removals": []
+   }
   },
   {
    "id": "lead-2",
@@ -625,7 +682,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 2,
+    "first_added": "2009-04-15",
+    "latest_removal": null,
+    "in_place_since": "2009-04-15",
+    "in_place_since_revision": 283895739,
+    "removals": []
+   }
   },
   {
    "id": "lead-3",
@@ -654,7 +726,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 2,
+    "first_added": "2023-04-17",
+    "latest_removal": null,
+    "in_place_since": "2023-04-17",
+    "in_place_since_revision": 1150341510,
+    "removals": []
+   }
   },
   {
    "id": "lead-4",
@@ -699,7 +786,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 2,
+    "first_added": "2010-05-10",
+    "latest_removal": null,
+    "in_place_since": "2010-05-10",
+    "in_place_since_revision": 361290661,
+    "removals": []
+   }
   }
  ],
  "inputs": {
@@ -708,7 +810,9 @@
   "wikiwho_rev_content": "https://wikiwho-api.wmcloud.org/en/api/v1.0.0-beta/rev_content/rev_id/1373079415/",
   "wikiwho_all_content": "https://wikiwho-api.wmcloud.org/en/api/v1.0.0-beta/all_content/page_id/22414006/",
   "history_revisions": 64,
-  "sanctions_csv_sha256": "83c3c25da3d1338292d21c2b407f4fdc4aee5a973a0fa7ac6bb32e407de325dd"
+  "sanctions_csv_sha256": "46ecf8bd2945ef432b9a5a9afcd72502654439f2b78b039f168883e847475a22",
+  "source_names_sha256": "1e0c7263959b899f0a4dd2a19e5f77b3d542f7e961d864fcb790974eb1ddbad0",
+  "books_sha256": "c82c512cf1e16abc1ab47c9aa152ce4df80360300d3c17f57b443a06ccaf46f6"
  },
  "quality": {
   "wikiwho_tokens": 450,
@@ -725,12 +829,45 @@
   "distinct_sources": 2,
   "editors_adding_citations": 2,
   "citation_only_editors": 1,
+  "flags": {
+   "opinion": 0,
+   "no_link": 0,
+   "book_without_page": 0,
+   "not_english": 1,
+   "not_english_no_quote": 1,
+   "dead_link_no_archive": 0,
+   "paywall_or_registration": 0
+  },
+  "flags_by_editor": {
+   "Editor 8": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 12": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 1,
+    "not_english_no_quote": 1,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   }
+  },
   "list": [
    {
     "source": "forward.com",
     "name_as_cited": "The Forward",
     "citations": 1,
     "lead_citations": 1,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 8": 1
     }
@@ -740,11 +877,518 @@
     "name_as_cited": "עיונים: כתב עת רב-תחומי לחקר ישראל",
     "citations": 1,
     "lead_citations": 1,
+    "opinion_citations": 0,
+    "flags": {
+     "not_english": 1,
+     "not_english_no_quote": 1
+    },
     "added_by": {
      "Editor 12": 1
     }
    }
-  ]
+  ],
+  "citations_naming_an_author": 1,
+  "authors": [
+   {
+    "name": "Paul Berger",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 1,
+    "works": 1
+   }
+  ],
+  "items": [
+   {
+    "id": "url:forward.com/articles/128801",
+    "source": "forward.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 8": 1
+    }
+   },
+   {
+    "id": "url:uli.nli.org.il/discovery/search?vid=972NNL_ULI_C:MAIN&query=lds05,contains,001017243",
+    "source": "nli.org.il",
+    "citations": 1,
+    "flags": [
+     "not_english",
+     "not_english_no_quote"
+    ],
+    "language_as_cited": "he",
+    "added_by": {
+     "Editor 12": 1
+    }
+   }
+  ],
+  "bundles": {
+   "sentences_with_footnotes": 2,
+   "sentences_by_works_cited": {
+    "1": 2,
+    "2-4": 0,
+    "5-9": 0,
+    "10 or more": 0
+   },
+   "largest": []
+  }
+ },
+ "changes": {
+  "words_removed": 1334,
+  "words_removed_later_restored": 699,
+  "source_links_removed": 7,
+  "editors_removing": 26,
+  "listed_terms": {
+   "inserted": {
+    "WTW: editorializing": 1,
+    "contested: stances on Israel, Jews and Muslims": 15,
+    "contested: territory and control": 1
+   },
+   "removed": {
+    "WTW: editorializing": 1,
+    "contested: stances on Israel, Jews and Muslims": 21,
+    "contested: territory and control": 1
+   }
+  },
+  "lists": {
+   "words_to_watch": {
+    "revision": 1382059772,
+    "url": "https://en.wikipedia.org/w/index.php?oldid=1382059772",
+    "sha256": "21e24e2898750322164b24947621630845d75cf8dd5adf3ec8cd860152449ea3"
+   },
+   "contested_terms": {
+    "sha256": "944606776be20b6b77dceb3ee5f6a29f8f5e196bf93cc16a4b6f2db6efe600c1"
+   }
+  },
+  "editors": [
+   {
+    "label": "Editor 13",
+    "words_removed": 454,
+    "others_words_removed": 454,
+    "words_removed_later_restored": 454,
+    "removing_revisions": 2,
+    "sources_removed": {
+     "forward.com": 2,
+     "haifa.ac.il": 2
+    },
+    "terms_inserted": {
+     "contested: stances on Israel, Jews and Muslims": {
+      "zionist": 2
+     }
+    },
+    "terms_removed": {
+     "contested: stances on Israel, Jews and Muslims": {
+      "zionist": 8
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1295035068",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1295036326"
+    ]
+   },
+   {
+    "label": "Editor 14",
+    "words_removed": 238,
+    "others_words_removed": 238,
+    "words_removed_later_restored": 238,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "contested: stances on Israel, Jews and Muslims": {
+      "zionist": 2
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1295035159"
+    ]
+   },
+   {
+    "label": "Editor 15",
+    "words_removed": 238,
+    "others_words_removed": 238,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "contested: stances on Israel, Jews and Muslims": {
+      "zionist": 2
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1295036615"
+    ]
+   },
+   {
+    "label": "Editor 16",
+    "words_removed": 191,
+    "others_words_removed": 191,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "aljazeera.com": 1,
+     "jacobin.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {
+     "contested: stances on Israel, Jews and Muslims": {
+      "anti-zionism": 1,
+      "zionist": 2
+     },
+     "contested: territory and control": {
+      "settler": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1273713753"
+    ]
+   },
+   {
+    "label": "Editor 12",
+    "words_removed": 103,
+    "others_words_removed": 103,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "haifa.ac.il": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1331438476"
+    ]
+   },
+   {
+    "label": "Editor 1",
+    "words_removed": 33,
+    "others_words_removed": 33,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 3,
+    "sources_removed": {},
+    "terms_inserted": {
+     "contested: stances on Israel, Jews and Muslims": {
+      "zionist": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1150339183",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1150341510",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1150339266"
+    ]
+   },
+   {
+    "label": "Editor 10",
+    "words_removed": 22,
+    "others_words_removed": 22,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "contested: stances on Israel, Jews and Muslims": {
+      "zionist": 5
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=669597643"
+    ]
+   },
+   {
+    "label": "Editor 17",
+    "words_removed": 7,
+    "others_words_removed": 7,
+    "words_removed_later_restored": 7,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1356502337"
+    ]
+   },
+   {
+    "label": "Editor 18",
+    "words_removed": 6,
+    "others_words_removed": 6,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=419680793"
+    ]
+   },
+   {
+    "label": "Editor 19",
+    "words_removed": 6,
+    "others_words_removed": 6,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=622368630"
+    ]
+   },
+   {
+    "label": "Editor 7",
+    "words_removed": 5,
+    "others_words_removed": 4,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: editorializing": {
+      "only": 1
+     },
+     "contested: stances on Israel, Jews and Muslims": {
+      "zionist": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=492169582",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=492169668"
+    ]
+   },
+   {
+    "label": "Editor 2",
+    "words_removed": 4,
+    "others_words_removed": 4,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: editorializing": {
+      "only": 1
+     },
+     "contested: stances on Israel, Jews and Muslims": {
+      "zionist": 3
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=377868642"
+    ]
+   },
+   {
+    "label": "Editor 8",
+    "words_removed": 4,
+    "others_words_removed": 4,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {
+     "contested: stances on Israel, Jews and Muslims": {
+      "zionist": 3
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=492257013"
+    ]
+   },
+   {
+    "label": "Editor 20",
+    "words_removed": 4,
+    "others_words_removed": 4,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=492267723"
+    ]
+   },
+   {
+    "label": "Editor 4",
+    "words_removed": 3,
+    "others_words_removed": 3,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=459001581"
+    ]
+   },
+   {
+    "label": "Editor 6",
+    "words_removed": 3,
+    "others_words_removed": 3,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=647619869"
+    ]
+   },
+   {
+    "label": "Editor 21",
+    "words_removed": 3,
+    "others_words_removed": 3,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1303666229"
+    ]
+   },
+   {
+    "label": "Editor 22",
+    "words_removed": 3,
+    "others_words_removed": 3,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=545621973"
+    ]
+   },
+   {
+    "label": "Editor 23",
+    "words_removed": 3,
+    "others_words_removed": 3,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=381025716"
+    ]
+   },
+   {
+    "label": "Editor 9",
+    "words_removed": 1,
+    "others_words_removed": 1,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=583907564"
+    ]
+   },
+   {
+    "label": "Editor 11",
+    "words_removed": 1,
+    "others_words_removed": 1,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1230900440"
+    ]
+   },
+   {
+    "label": "Editor 24",
+    "words_removed": 1,
+    "others_words_removed": 1,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=934705648"
+    ]
+   },
+   {
+    "label": "Editor 25",
+    "words_removed": 1,
+    "others_words_removed": 1,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1209605283"
+    ]
+   },
+   {
+    "label": "Editor 3",
+    "words_removed": 0,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 0,
+    "sources_removed": {},
+    "terms_inserted": {
+     "contested: stances on Israel, Jews and Muslims": {
+      "zionist": 2
+     }
+    },
+    "terms_removed": {},
+    "evidence": []
+   },
+   {
+    "label": "Editor 5",
+    "words_removed": 0,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 0,
+    "sources_removed": {},
+    "terms_inserted": {
+     "contested: stances on Israel, Jews and Muslims": {
+      "zionist": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": []
+   },
+   {
+    "label": "Editor 26",
+    "words_removed": 0,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 0,
+    "sources_removed": {},
+    "terms_inserted": {
+     "contested: stances on Israel, Jews and Muslims": {
+      "anti-zionism": 1,
+      "zionist": 2
+     },
+     "contested: territory and control": {
+      "settler": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": []
+   }
+  ],
+  "editors_shown": 26,
+  "sentence_history": {
+   "rule": "taken out and put back at least 2 times, not counting page-wide removals",
+   "sentences": 4,
+   "sentences_removed_and_restored_twice_or_more": 0,
+   "their_words": 0,
+   "share_of_words": 0.0,
+   "in_opening_section": 0,
+   "median_days_in_place_since_last_restored": null,
+   "sentences_removed_five_times_or_more": 0,
+   "sentences_removed_by_two_or_more_accounts": 0
+  }
+ },
+ "declared_interests": {
+  "article_tags": [],
+  "talk_page_revision": 1350002580,
+  "evidence": "https://en.wikipedia.org/w/index.php?oldid=1350002580",
+  "notices": []
  },
  "caveats": [
   {

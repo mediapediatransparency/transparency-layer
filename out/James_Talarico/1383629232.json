@@ -4820,7 +4820,7 @@
   "sanctioned_editors": 2,
   "rule": "topic bans count on articles in the same topic area; site bans and sockpuppetry findings count everywhere",
   "sanctions_list": {
-   "seed_rows_total": 130,
+   "seed_rows_total": 154,
    "seed_rows_in_topic_area": 0,
    "seed_rows_unresolved_accounts": 0,
    "block_log_snapshot": "2026-11-03"
@@ -10230,7 +10230,9 @@
   "wikiwho_rev_content": "https://wikiwho-api.wmcloud.org/en/api/v1.0.0-beta/rev_content/rev_id/1383629232/",
   "wikiwho_all_content": "https://wikiwho-api.wmcloud.org/en/api/v1.0.0-beta/all_content/page_id/61471978/",
   "history_revisions": 1225,
-  "sanctions_csv_sha256": "83c3c25da3d1338292d21c2b407f4fdc4aee5a973a0fa7ac6bb32e407de325dd"
+  "sanctions_csv_sha256": "46ecf8bd2945ef432b9a5a9afcd72502654439f2b78b039f168883e847475a22",
+  "source_names_sha256": "1e0c7263959b899f0a4dd2a19e5f77b3d542f7e961d864fcb790974eb1ddbad0",
+  "books_sha256": "9ccb7546d93ad0a25ee871dd8d562f8bf78c6f776f74610e68772e1310cb04be"
  },
  "quality": {
   "wikiwho_tokens": 29980,
@@ -10244,15 +10246,548 @@
   "lead_citations": 6,
   "short_footnotes": 0,
   "with_link": 155,
-  "distinct_sources": 62,
+  "distinct_sources": 61,
   "editors_adding_citations": 52,
   "citation_only_editors": 8,
+  "flags": {
+   "opinion": 5,
+   "no_link": 0,
+   "book_without_page": 0,
+   "not_english": 0,
+   "not_english_no_quote": 0,
+   "dead_link_no_archive": 0,
+   "paywall_or_registration": 1
+  },
+  "flags_by_editor": {
+   "Editor 1": {
+    "citations": 29,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 5": {
+    "citations": 16,
+    "opinion": 1,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 2": {
+    "citations": 10,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 115": {
+    "citations": 7,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 116": {
+    "citations": 7,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 8": {
+    "citations": 5,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 14": {
+    "citations": 5,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 10": {
+    "citations": 4,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 12": {
+    "citations": 4,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 13": {
+    "citations": 4,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 16": {
+    "citations": 4,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 6": {
+    "citations": 3,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 39": {
+    "citations": 3,
+    "opinion": 3,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 40": {
+    "citations": 3,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 4": {
+    "citations": 2,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 9": {
+    "citations": 2,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 17": {
+    "citations": 2,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 21": {
+    "citations": 2,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 24": {
+    "citations": 2,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 25": {
+    "citations": 2,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 26": {
+    "citations": 2,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 28": {
+    "citations": 2,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 34": {
+    "citations": 2,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 43": {
+    "citations": 2,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 48": {
+    "citations": 2,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 56": {
+    "citations": 2,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 117": {
+    "citations": 2,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 11": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 18": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 19": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 20": {
+    "citations": 1,
+    "opinion": 1,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 22": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 23": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 30": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 35": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 36": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 37": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 42": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 44": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 46": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 47": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 57": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 62": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 64": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 65": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 84": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 90": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 118": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 119": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 1
+   },
+   "Editor 120": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 121": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 122": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   }
+  },
   "list": [
    {
     "source": "texastribune.org",
     "name_as_cited": "The Texas Tribune",
     "citations": 29,
     "lead_citations": 1,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 1": 12,
      "Editor 2": 3,
@@ -10272,6 +10807,8 @@
     "name_as_cited": "Texas House of Representatives",
     "citations": 13,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 2": 5,
      "Editor 5": 4,
@@ -10284,6 +10821,10 @@
     "name_as_cited": "The New York Times",
     "citations": 8,
     "lead_citations": 1,
+    "opinion_citations": 0,
+    "flags": {
+     "paywall_or_registration": 1
+    },
     "added_by": {
      "Editor 1": 1,
      "Editor 5": 1,
@@ -10300,6 +10841,8 @@
     "name_as_cited": "Secretary of State of Texas",
     "citations": 6,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 115": 5,
      "Editor 118": 1
@@ -10310,6 +10853,8 @@
     "name_as_cited": "KVUE",
     "citations": 5,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 1": 1,
      "Editor 10": 1,
@@ -10323,6 +10868,8 @@
     "name_as_cited": "KXAN-TV",
     "citations": 5,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 1": 1,
      "Editor 13": 1,
@@ -10336,6 +10883,8 @@
     "name_as_cited": "Politico",
     "citations": 5,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 1": 2,
      "Editor 23": 1,
@@ -10344,10 +10893,31 @@
     }
    },
    {
+    "source": "statesman.com",
+    "name_as_cited": "Austin American-Statesman",
+    "citations": 5,
+    "lead_citations": 0,
+    "opinion_citations": 1,
+    "flags": {
+     "opinion": 1
+    },
+    "added_by": {
+     "Editor 5": 1,
+     "Editor 10": 1,
+     "Editor 39": 1,
+     "Editor 56": 1,
+     "Editor 116": 1
+    }
+   },
+   {
     "source": "dallasnews.com",
     "name_as_cited": "The Dallas Morning News",
     "citations": 4,
     "lead_citations": 0,
+    "opinion_citations": 1,
+    "flags": {
+     "opinion": 1
+    },
     "added_by": {
      "Editor 1": 1,
      "Editor 16": 1,
@@ -10356,22 +10926,12 @@
     }
    },
    {
-    "source": "statesman.com",
-    "name_as_cited": "Austin American-Statesman",
-    "citations": 4,
-    "lead_citations": 0,
-    "added_by": {
-     "Editor 5": 1,
-     "Editor 10": 1,
-     "Editor 39": 1,
-     "Editor 116": 1
-    }
-   },
-   {
     "source": "cbsaustin.com",
     "name_as_cited": "KEYE-TV",
     "citations": 3,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 1": 1,
      "Editor 5": 1,
@@ -10383,6 +10943,8 @@
     "name_as_cited": "CNN",
     "citations": 3,
     "lead_citations": 1,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 5": 1,
      "Editor 6": 1,
@@ -10394,6 +10956,8 @@
     "name_as_cited": "KTBC (TV)",
     "citations": 3,
     "lead_citations": 1,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 10": 1,
      "Editor 37": 1,
@@ -10401,10 +10965,24 @@
     }
    },
    {
+    "source": "state.tx.us",
+    "name_as_cited": "Secretary of State of Texas",
+    "citations": 3,
+    "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
+    "added_by": {
+     "Editor 115": 2,
+     "Editor 12": 1
+    }
+   },
+   {
     "source": "theguardian.com",
     "name_as_cited": "The Guardian",
     "citations": 3,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 5": 1,
      "Editor 8": 1,
@@ -10416,6 +10994,8 @@
     "name_as_cited": "The Hill",
     "citations": 3,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 1": 1,
      "Editor 22": 1,
@@ -10427,6 +11007,8 @@
     "name_as_cited": "The Texan",
     "citations": 3,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 1": 1,
      "Editor 13": 1,
@@ -10434,20 +11016,12 @@
     }
    },
    {
-    "source": "tx.us",
-    "name_as_cited": "Secretary of State of Texas",
-    "citations": 3,
-    "lead_citations": 0,
-    "added_by": {
-     "Editor 115": 2,
-     "Editor 12": 1
-    }
-   },
-   {
     "source": "apnews.com",
     "name_as_cited": "Associated Press",
     "citations": 2,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 121": 1,
      "Editor 122": 1
@@ -10458,6 +11032,8 @@
     "name_as_cited": "Austin Chronicle",
     "citations": 2,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 8": 1,
      "Editor 12": 1
@@ -10468,6 +11044,8 @@
     "name_as_cited": "Ballotpedia",
     "citations": 2,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 10": 1,
      "Editor 12": 1
@@ -10478,6 +11056,8 @@
     "name_as_cited": "ABC News",
     "citations": 2,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 1": 1,
      "Editor 9": 1
@@ -10488,6 +11068,8 @@
     "name_as_cited": "Jewish Insider",
     "citations": 2,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 24": 2
     }
@@ -10497,6 +11079,8 @@
     "name_as_cited": "Newsweek",
     "citations": 2,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 17": 1,
      "Editor 21": 1
@@ -10507,6 +11091,10 @@
     "name_as_cited": "Fort Worth Star-Telegram",
     "citations": 2,
     "lead_citations": 0,
+    "opinion_citations": 1,
+    "flags": {
+     "opinion": 1
+    },
     "added_by": {
      "Editor 14": 1,
      "Editor 39": 1
@@ -10517,6 +11105,8 @@
     "name_as_cited": "Texas Monthly",
     "citations": 2,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 64": 1,
      "Editor 117": 1
@@ -10527,6 +11117,8 @@
     "name_as_cited": "The Daily Texan",
     "citations": 2,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 5": 1,
      "Editor 43": 1
@@ -10537,6 +11129,8 @@
     "name_as_cited": "America Magazine",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 11": 1
     }
@@ -10546,6 +11140,8 @@
     "name_as_cited": "Ars Technica",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 6": 1
     }
@@ -10555,6 +11151,8 @@
     "name_as_cited": "CBS News",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 14": 1
     }
@@ -10564,6 +11162,8 @@
     "name_as_cited": "KPRC",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 2": 1
     }
@@ -10573,6 +11173,8 @@
     "name_as_cited": "CNBC",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 18": 1
     }
@@ -10582,6 +11184,8 @@
     "name_as_cited": "www.commonwealmagazine.org",
     "citations": 1,
     "lead_citations": 1,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 26": 1
     }
@@ -10591,6 +11195,8 @@
     "name_as_cited": "KIAH",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 8": 1
     }
@@ -10600,6 +11206,8 @@
     "name_as_cited": "The Daily Texan",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 12": 1
     }
@@ -10609,6 +11217,8 @@
     "name_as_cited": "El Paso Times",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 16": 1
     }
@@ -10618,6 +11228,8 @@
     "name_as_cited": "Good Faith Media",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 46": 1
     }
@@ -10627,6 +11239,10 @@
     "name_as_cited": "Houston Chronicle",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 1,
+    "flags": {
+     "opinion": 1
+    },
     "added_by": {
      "Editor 5": 1
     }
@@ -10636,6 +11252,8 @@
     "name_as_cited": "",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 44": 1
     }
@@ -10645,6 +11263,8 @@
     "name_as_cited": "KHOU",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 40": 1
     }
@@ -10654,6 +11274,8 @@
     "name_as_cited": "KSAT-TV",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 1": 1
     }
@@ -10663,6 +11285,8 @@
     "name_as_cited": "KTAL",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 43": 1
     }
@@ -10672,17 +11296,10 @@
     "name_as_cited": "KUT Radio",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 2": 1
-    }
-   },
-   {
-    "source": "name:austin american-statesman",
-    "name_as_cited": "Austin American-Statesman",
-    "citations": 1,
-    "lead_citations": 0,
-    "added_by": {
-     "Editor 56": 1
     }
    },
    {
@@ -10690,6 +11307,8 @@
     "name_as_cited": "The Late Show with Stephen Colbert",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 5": 1
     }
@@ -10699,6 +11318,8 @@
     "name_as_cited": "NewsNation",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 34": 1
     }
@@ -10708,6 +11329,8 @@
     "name_as_cited": "The New Yorker",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 56": 1
     }
@@ -10717,6 +11340,8 @@
     "name_as_cited": "NPR",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 40": 1
     }
@@ -10726,6 +11351,8 @@
     "name_as_cited": "OpenSecrets News",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 1": 1
     }
@@ -10735,6 +11362,8 @@
     "name_as_cited": "PBS Newshour",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 48": 1
     }
@@ -10744,6 +11373,8 @@
     "name_as_cited": "Punchbowl News",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 5": 1
     }
@@ -10753,6 +11384,8 @@
     "name_as_cited": "RealClearPolitics",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 21": 1
     }
@@ -10762,6 +11395,8 @@
     "name_as_cited": "Office of the Attorney General of Texas",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 1": 1
     }
@@ -10771,6 +11406,8 @@
     "name_as_cited": "The Texas Observer",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 8": 1
     }
@@ -10780,6 +11417,8 @@
     "name_as_cited": "The 74",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 116": 1
     }
@@ -10789,15 +11428,19 @@
     "name_as_cited": "The Times",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 90": 1
     }
    },
    {
     "source": "time.com",
-    "name_as_cited": "[[Time (magazine)",
+    "name_as_cited": "Time.com",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 35": 1
     }
@@ -10807,6 +11450,8 @@
     "name_as_cited": "Houston Public Media",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 57": 1
     }
@@ -10816,6 +11461,8 @@
     "name_as_cited": "USA Today",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 1": 1
     }
@@ -10825,15 +11472,21 @@
     "name_as_cited": "The Texas Politics Project",
     "citations": 1,
     "lead_citations": 1,
+    "opinion_citations": 1,
+    "flags": {
+     "opinion": 1
+    },
     "added_by": {
      "Editor 20": 1
     }
    },
    {
     "source": "variety.com",
-    "name_as_cited": "[[Variety (magazine)",
+    "name_as_cited": "Variety",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 30": 1
     }
@@ -10843,6 +11496,8 @@
     "name_as_cited": "Vox",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 25": 1
     }
@@ -10852,6 +11507,8 @@
     "name_as_cited": "The Washington Post",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 4": 1
     }
@@ -10861,11 +11518,4589 @@
     "name_as_cited": "",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 62": 1
     }
    }
+  ],
+  "items": [
+   {
+    "id": "url:abcnews.go.com/OnCampus/story?id=6967559&page=1",
+    "source": "go.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 9": 1
+    }
+   },
+   {
+    "id": "url:abcnews.go.com/Politics/history-texas-lawmakers-walking-out/story?id=124392943",
+    "source": "go.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en",
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:americamagazine.org/short-take/2026/10/23/james-talarico-cnn-jubilee-abortion-catholic-pro-life",
+    "source": "americamagazine.org",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 11": 1
+    }
+   },
+   {
+    "id": "url:apnews.com/article/midterm-election-disinformation-russia-talarico-brown-c52f2c1720a0bb1ea86545d260aaf969",
+    "source": "apnews.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 122": 1
+    }
+   },
+   {
+    "id": "url:apnews.com/projects/elections-2026/texas-primary-us-senate",
+    "source": "apnews.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en",
+    "added_by": {
+     "Editor 121": 1
+    }
+   },
+   {
+    "id": "url:arstechnica.com/tech-policy/2026/09/kimmels-abc-show-wont-air-interview-with-democrat-because-of-trump-fcc-threats",
+    "source": "arstechnica.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en",
+    "added_by": {
+     "Editor 6": 1
+    }
+   },
+   {
+    "id": "url:austinchronicle.com/news/2019-01-04/representative-james-talarico-on-the-86th-texas-legislature",
+    "source": "austinchronicle.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 12": 1
+    }
+   },
+   {
+    "id": "url:austinchronicle.com/news/march-2026-primary-election-endorsements",
+    "source": "austinchronicle.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 8": 1
+    }
+   },
+   {
+    "id": "url:ballotpedia.org/James_Talarico",
+    "source": "ballotpedia.org",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 10": 1
+    }
+   },
+   {
+    "id": "url:ballotpedia.org/Texas_House_of_Representatives_District_52",
+    "source": "ballotpedia.org",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 12": 1
+    }
+   },
+   {
+    "id": "url:capitol.texas.gov/billlookup/Authors.aspx?Bill=HB3&LegSess=86R",
+    "source": "texas.gov",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 2": 1
+    }
+   },
+   {
+    "id": "url:capitol.texas.gov/billlookup/Authors.aspx?Bill=HB3133&LegSess=89R&",
+    "source": "texas.gov",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 2": 1
+    }
+   },
+   {
+    "id": "url:capitol.texas.gov/billlookup/BillSummary.aspx?Bill=HB3133&LegSess=89R",
+    "source": "texas.gov",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 2": 1
+    }
+   },
+   {
+    "id": "url:capitol.texas.gov/billlookup/Companions.aspx?Bill=SB2081&LegSess=87R",
+    "source": "texas.gov",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 2": 1
+    }
+   },
+   {
+    "id": "url:capitol.texas.gov/billlookup/History.aspx?Bill=SB1145&LegSess=88R&",
+    "source": "texas.gov",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 2": 1
+    }
+   },
+   {
+    "id": "url:capitol.texas.gov/tlodocs/86R/billtext/html/HB03012I.htm",
+    "source": "texas.gov",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:cbsaustin.com/news/local/new-williamson-co-sheriff-reacts-to-bill-that-would-ban-police-contracts-with-reality-tv",
+    "source": "cbsaustin.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 9": 1
+    }
+   },
+   {
+    "id": "url:cbsaustin.com/news/local/talarico-agenda-targets-financial-corruption-in-congress-calls-for-term-limits",
+    "source": "cbsaustin.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en",
+    "added_by": {
+     "Editor 5": 1
+    }
+   },
+   {
+    "id": "url:cbsaustin.com/news/local/texas-house-tables-amendment-to-send-school-vouchers-to-voters",
+    "source": "cbsaustin.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en",
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:cbsnews.com/texas/news/data-centers-emerge-as-key-issue-in-texas-politics-where-candidates-for-governor-u-s-senate-stand",
+    "source": "cbsnews.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 14": 1
+    }
+   },
+   {
+    "id": "url:click2houston.com/news/texas/2026/09/15/paxton-campaign-makes-first-major-ad-buy-in-senate-race",
+    "source": "click2houston.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en",
+    "added_by": {
+     "Editor 2": 1
+    }
+   },
+   {
+    "id": "url:cnbc.com/2026/08/27/texas-senate-james-talarico-mark-cuban-healthcare.html",
+    "source": "cnbc.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en",
+    "added_by": {
+     "Editor 18": 1
+    }
+   },
+   {
+    "id": "url:cnn.com/2023/05/24/us/texas-ten-commandments-bill/index.html",
+    "source": "cnn.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 47": 1
+    }
+   },
+   {
+    "id": "url:cnn.com/2026/02/17/media/colbert-talarico-cbs-trump-fcc",
+    "source": "cnn.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en",
+    "added_by": {
+     "Editor 5": 1
+    }
+   },
+   {
+    "id": "url:cnn.com/2026/05/31/politics/paxton-talarico-texas-senate-race-analysis",
+    "source": "cnn.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en",
+    "added_by": {
+     "Editor 6": 1
+    }
+   },
+   {
+    "id": "url:commonwealmagazine.org/vassallo-talarico-texas-senate-populism-paxton",
+    "source": "commonwealmagazine.org",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en",
+    "added_by": {
+     "Editor 26": 1
+    }
+   },
+   {
+    "id": "url:cw39.com/news/texas-politics/beto-orourke-talks-democratic-strategy-ahead-of-2026-midterms",
+    "source": "cw39.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 8": 1
+    }
+   },
+   {
+    "id": "url:dailytexanonline.com/2019/01/30/freshman-lawmakers-jon-rosenthal-james-talarico-reflect-on-how-ut-impacted-their-future",
+    "source": "dailytexanonline.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 12": 1
+    }
+   },
+   {
+    "id": "url:dallasnews.com/news/2021/08/09/court-order-temporarily-protects-texas-house-democrats-from-arrest-in-legislative-quorum-dispute",
+    "source": "dallasnews.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en",
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:dallasnews.com/news/faith/article/james-talarico-christian-faith-senate-22194166.php",
+    "source": "dallasnews.com",
+    "citations": 2,
+    "flags": [],
+    "language_as_cited": "en",
+    "added_by": {
+     "Editor 16": 1,
+     "Editor 42": 1
+    }
+   },
+   {
+    "id": "url:dallasnews.com/opinion/we-recommend/2026/02/15/us-senate-texas-democratic-primary-race",
+    "source": "dallasnews.com",
+    "citations": 1,
+    "flags": [
+     "opinion"
+    ],
+    "added_by": {
+     "Editor 39": 1
+    }
+   },
+   {
+    "id": "url:elections.sos.state.tx.us/elchist324_state.htm",
+    "source": "state.tx.us",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 115": 1
+    }
+   },
+   {
+    "id": "url:elections.sos.state.tx.us/elchist331_state.htm",
+    "source": "state.tx.us",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 115": 1
+    }
+   },
+   {
+    "id": "url:elections.sos.state.tx.us/elchist333_state.htm",
+    "source": "state.tx.us",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 12": 1
+    }
+   },
+   {
+    "id": "url:elpasotimes.com/story/news/politics/elections/2026/04/22/whats-in-talaricos-plan-to-cut-fuel-costs-in-texas-us-senate-race/89732292007",
+    "source": "elpasotimes.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 16": 1
+    }
+   },
+   {
+    "id": "url:festival-archive.texastribune.org/2021/speakers/james-talarico",
+    "source": "texastribune.org",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 120": 1
+    }
+   },
+   {
+    "id": "url:fox7austin.com/election/talarico-paxton-reaction-corrupt-runoff",
+    "source": "fox7austin.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 37": 1
+    }
+   },
+   {
+    "id": "url:fox7austin.com/news/state-rep-james-talarico-joins-calls-for-williamson-county-sheriff-robert-chody-to-resign",
+    "source": "fox7austin.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 116": 1
+    }
+   },
+   {
+    "id": "url:fox7austin.com/news/talarico-reveals-he-has-diabetes-while-introducing-insulin-legislation",
+    "source": "fox7austin.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 10": 1
+    }
+   },
+   {
+    "id": "url:goodfaithmedia.org/from-the-sanctuary-to-the-streets-a-conversation-with-james-talarico",
+    "source": "goodfaithmedia.org",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 46": 1
+    }
+   },
+   {
+    "id": "url:house.texas.gov/committees/committee/300",
+    "source": "texas.gov",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en",
+    "added_by": {
+     "Editor 5": 1
+    }
+   },
+   {
+    "id": "url:house.texas.gov/committees/committee/400",
+    "source": "texas.gov",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en",
+    "added_by": {
+     "Editor 5": 1
+    }
+   },
+   {
+    "id": "url:house.texas.gov/committees/committee/403",
+    "source": "texas.gov",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en",
+    "added_by": {
+     "Editor 5": 1
+    }
+   },
+   {
+    "id": "url:house.texas.gov/committees/committee/473",
+    "source": "texas.gov",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en",
+    "added_by": {
+     "Editor 5": 1
+    }
+   },
+   {
+    "id": "url:house.texas.gov/members/3685",
+    "source": "texas.gov",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 116": 1
+    }
+   },
+   {
+    "id": "url:houstonchronicle.com/opinion/endorsements/article/talarico-crockett-democratic-primary-texas-2026-21329484.php",
+    "source": "houstonchronicle.com",
+    "citations": 1,
+    "flags": [
+     "opinion"
+    ],
+    "language_as_cited": "en",
+    "added_by": {
+     "Editor 5": 1
+    }
+   },
+   {
+    "id": "url:jamestalarico.com/issue/foreign-policy",
+    "source": "jamestalarico.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 44": 1
+    }
+   },
+   {
+    "id": "url:jewishinsider.com/2025/09/texas-democratic-senate-candidate-james-talarico-israel-criticism",
+    "source": "jewishinsider.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 24": 1
+    }
+   },
+   {
+    "id": "url:jewishinsider.com/2025/12/texas-jewish-voters-james-talarico-democratic-senate-candidate",
+    "source": "jewishinsider.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 24": 1
+    }
+   },
+   {
+    "id": "url:khou.com/article/news/politics/james-talarico-fuel-cost-relief-plan-texas/285-43bf1665-aa4f-4359-a857-d9b1830ae1ef",
+    "source": "khou.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 40": 1
+    }
+   },
+   {
+    "id": "url:ksat.com/news/texas/2026/01/24/jasmine-crockett-james-talarico-to-face-off-in-first-debate-of-senate-democratic-primary",
+    "source": "ksat.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en",
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:ktalnews.com/news/political-news/james-talarico-midterms-profile",
+    "source": "ktalnews.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 43": 1
+    }
+   },
+   {
+    "id": "url:kut.org/austin/2023-11-13/austin-child-care-property-tax-break",
+    "source": "kut.org",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en",
+    "added_by": {
+     "Editor 2": 1
+    }
+   },
+   {
+    "id": "url:kvue.com/article/news/politics/elections/ken-paxton-wins-republican-primary-runoff-john-cornyn-texas-2026/285-690cb6e0-9253-430a-acc4-c1fe73a6591d",
+    "source": "kvue.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 65": 1
+    }
+   },
+   {
+    "id": "url:kvue.com/article/news/politics/james-talarico-proposes-ending-federal-gas-diesel-tax/269-c7e75cfa-9528-4b57-997b-5b67ba00873a",
+    "source": "kvue.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 40": 1
+    }
+   },
+   {
+    "id": "url:kvue.com/article/news/politics/texas-legislature/bill-prescription-drug-imports-canada/269-4aaf808b-d427-4a86-b844-6317ce61c743",
+    "source": "kvue.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 10": 1
+    }
+   },
+   {
+    "id": "url:kvue.com/article/news/politics/texas-legislature/good-bills-gone-bad-gov-abbott-vetoes-58-bills-this-session/269-310bf5f4-5575-4dc3-afd9-7814131a19fd",
+    "source": "kvue.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:kvue.com/article/news/politics/texas-legislature/texas-bill-legalize-cannabis-filed-on-420/269-c9853906-d3ca-4c7c-8383-527d1e312d9f",
+    "source": "kvue.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 17": 1
+    }
+   },
+   {
+    "id": "url:kxan.com/news/texas-politics/bill-requiring-ten-commandments-be-placed-in-every-texas-classroom-sent-back-to-committee",
+    "source": "kxan.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:kxan.com/news/texas-politics/rep-talarico-blames-racist-gerrymandering-for-causing-move-to-new-house-district",
+    "source": "kxan.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 13": 1
+    }
+   },
+   {
+    "id": "url:kxan.com/news/texas/texas-leaders-react-to-us-israel-attack-on-iran",
+    "source": "kxan.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 16": 1
+    }
+   },
+   {
+    "id": "url:kxan.com/news/your-local-election-hq/incumbent-talarico-faces-challenger-valdez-for-texas-house-district-52",
+    "source": "kxan.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 116": 1
+    }
+   },
+   {
+    "id": "url:kxan.com/state-of-texas/this-disease-affects-anyone-diabetic-emergency-leads-to-texas-rep-james-talaricos-bill-to-cap-insulin-costs",
+    "source": "kxan.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 117": 1
+    }
+   },
+   {
+    "id": "url:lrl.texas.gov/legeLeaders/members/memberDisplay.cfm?memberID=5831&searchparams=chamber=~city=~countyID=0~RcountyID=~district=~first=~gender=~last=talarico~leaderNote=~leg=~party=~roleDesc=~Committee=",
+    "source": "texas.gov",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:newsnationnow.com/cuomo-show/rising-texas-democrat-jesus-is-the-reason-im-in-politics",
+    "source": "newsnationnow.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 34": 1
+    }
+   },
+   {
+    "id": "url:newspapers.com/article/austin-american-statesman-collins/198018805",
+    "source": "statesman.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 56": 1
+    }
+   },
+   {
+    "id": "url:newsweek.com/talarico-cnn-town-ha-12570621",
+    "source": "newsweek.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en",
+    "added_by": {
+     "Editor 21": 1
+    }
+   },
+   {
+    "id": "url:newsweek.com/texas-thc-marijuana-hemp-legislature-abbott-2076540",
+    "source": "newsweek.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 17": 1
+    }
+   },
+   {
+    "id": "url:newyorker.com/magazine/2026/03/02/james-talarico-profile",
+    "source": "newyorker.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 56": 1
+    }
+   },
+   {
+    "id": "url:npr.org/2026/05/29/nx-s1-5835297/texas-state-democratic-rep-james-talarico-on-race-to-flip-senate-seat",
+    "source": "npr.org",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en",
+    "added_by": {
+     "Editor 40": 1
+    }
+   },
+   {
+    "id": "url:nytimes.com/2025/09/09/us/politics/talarico-texas-senate.html",
+    "source": "nytimes.com",
+    "citations": 2,
+    "flags": [
+     "paywall_or_registration"
+    ],
+    "language_as_cited": "en",
+    "added_by": {
+     "Editor 1": 1,
+     "Editor 119": 1
+    }
+   },
+   {
+    "id": "url:nytimes.com/2026/02/28/us/politics/trump-iran-attack-midterms.html",
+    "source": "nytimes.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 28": 1
+    }
+   },
+   {
+    "id": "url:nytimes.com/2026/05/12/us/obama-james-talarico-texas-senate-2026-democrats.html",
+    "source": "nytimes.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 48": 1
+    }
+   },
+   {
+    "id": "url:nytimes.com/2026/06/01/us/politics/james-talarico-christian.html",
+    "source": "nytimes.com",
+    "citations": 2,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 5": 1,
+     "Editor 16": 1
+    }
+   },
+   {
+    "id": "url:nytimes.com/2026/08/06/us/texas-senate-talarico-paxton-taxes.html",
+    "source": "nytimes.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 6": 1
+    }
+   },
+   {
+    "id": "url:nytimes.com/2026/10/28/us/politics/talarico-texas-senate-teacher.html",
+    "source": "nytimes.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 26": 1
+    }
+   },
+   {
+    "id": "url:opensecrets.org/news/2026/04/talarico-raised-27m-last-quarter-as-his-donor-base-went-national",
+    "source": "opensecrets.org",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en",
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:pbs.org/newshour/politics/democrat-james-talarico-wins-senate-primary-in-texas",
+    "source": "pbs.org",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-us",
+    "added_by": {
+     "Editor 48": 1
+    }
+   },
+   {
+    "id": "url:politico.com/live-updates/2026/10/15/congress/james-talarico-64-million-fundraising-record-01119808",
+    "source": "politico.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en",
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:politico.com/news/2021/07/13/texas-democrats-voting-rights-499480",
+    "source": "politico.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en",
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:politico.com/news/2026/10/21/himes-warner-russia-election-interference-report-01130967",
+    "source": "politico.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en",
+    "added_by": {
+     "Editor 36": 1
+    }
+   },
+   {
+    "id": "url:politico.com/news/magazine/2023/06/16/james-talarico-texas-democrats-00101231",
+    "source": "politico.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en",
+    "added_by": {
+     "Editor 34": 1
+    }
+   },
+   {
+    "id": "url:politico.com/news/magazine/2025/07/19/james-talarico-texas-democrat-joe-rogan-interview-00441989",
+    "source": "politico.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en",
+    "added_by": {
+     "Editor 23": 1
+    }
+   },
+   {
+    "id": "url:punchbowl.news/article/campaigns/talarico-pitch",
+    "source": "punchbowl.news",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 5": 1
+    }
+   },
+   {
+    "id": "url:realclearpolitics.com/video/2026/10/14/tx_voter_vs_talarico_on_funding_ukraine_war_why_should_we_focus_our_financials_on_foreign_wars.html",
+    "source": "realclearpolitics.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 21": 1
+    }
+   },
+   {
+    "id": "url:results.texas-election.com/races",
+    "source": "texas-election.com",
+    "citations": 6,
+    "flags": [],
+    "added_by": {
+     "Editor 115": 5,
+     "Editor 118": 1
+    }
+   },
+   {
+    "id": "url:star-telegram.com/news/local/article316727964.html",
+    "source": "star-telegram.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 14": 1
+    }
+   },
+   {
+    "id": "url:star-telegram.com/opinion/election-recommendations/article314703297.html",
+    "source": "star-telegram.com",
+    "citations": 1,
+    "flags": [
+     "opinion"
+    ],
+    "added_by": {
+     "Editor 39": 1
+    }
+   },
+   {
+    "id": "url:statesman.com/NEWS/20180507/Texas-House-candidate-James-Talarico-takes-campaign-to-the-streets",
+    "source": "statesman.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 116": 1
+    }
+   },
+   {
+    "id": "url:statesman.com/opinion/editorials/article/senate-bid-talarico-models-leadership-moment-21340046.php",
+    "source": "statesman.com",
+    "citations": 1,
+    "flags": [
+     "opinion"
+    ],
+    "added_by": {
+     "Editor 39": 1
+    }
+   },
+   {
+    "id": "url:statesman.com/story/news/2021/04/21/transgender-athletes-texas-state-house-bill/7307633002",
+    "source": "statesman.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en",
+    "added_by": {
+     "Editor 5": 1
+    }
+   },
+   {
+    "id": "url:statesman.com/story/news/education/2023/05/03/texas-legislature-senate-bill-1515-advances-pushes-for-ten-commandments-in-schools-classrooms/70170060007",
+    "source": "statesman.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 10": 1
+    }
+   },
+   {
+    "id": "url:tdcj.texas.gov/news/summaries_of_select_legislature_passed_by_87th.html",
+    "source": "texas.gov",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:texasattorneygeneral.gov/news/releases/attorney-general-ken-paxton-files-historic-lawsuit-against-democrat-runaways-scotx-secure-order",
+    "source": "texasattorneygeneral.gov",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en",
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:texasmonthly.com/news-politics/2021-the-best-and-worst-legislators",
+    "source": "texasmonthly.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 117": 1
+    }
+   },
+   {
+    "id": "url:texasmonthly.com/news-politics/james-talarico-next-great-hope-texas-democrats",
+    "source": "texasmonthly.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 64": 1
+    }
+   },
+   {
+    "id": "url:texasobserver.org/james-talarico-big-tent-revival-primary",
+    "source": "texasobserver.org",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 8": 1
+    }
+   },
+   {
+    "id": "url:texaspolitics.utexas.edu/blog/the-audience-s-for-james-talarico-s-progressive-christianity-in-the-democratic-primary-2",
+    "source": "utexas.edu",
+    "citations": 1,
+    "flags": [
+     "opinion"
+    ],
+    "language_as_cited": "en",
+    "added_by": {
+     "Editor 20": 1
+    }
+   },
+   {
+    "id": "url:texastribune.org/2019/01/08/james-talarico-youngest-texas-rep-86th-session",
+    "source": "texastribune.org",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 116": 1
+    }
+   },
+   {
+    "id": "url:texastribune.org/2019/06/11/texas-gov-greg-abbott-signs-116-billion-school-finance-measure-law",
+    "source": "texastribune.org",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 116": 1
+    }
+   },
+   {
+    "id": "url:texastribune.org/2021/08/09/texas-democrats-legislature-return",
+    "source": "texastribune.org",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:texastribune.org/2021/08/19/texas-house-democrats-quorum-2",
+    "source": "texastribune.org",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:texastribune.org/2021/08/31/new-texas-laws-september-2021",
+    "source": "texastribune.org",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 2": 1
+    }
+   },
+   {
+    "id": "url:texastribune.org/2021/09/10/texas-house-democrats-quorum-break",
+    "source": "texastribune.org",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:texastribune.org/2021/10/13/james-talarico-move-austin",
+    "source": "texastribune.org",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 13": 1
+    }
+   },
+   {
+    "id": "url:texastribune.org/2022/12/12/texas-abortion-law-constitutional-amendment",
+    "source": "texastribune.org",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 25": 1
+    }
+   },
+   {
+    "id": "url:texastribune.org/2025/04/17/texas-house-school-vouchers-public-education-funding",
+    "source": "texastribune.org",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:texastribune.org/2025/05/03/texas-school-vouchers-greg-abbott-signs",
+    "source": "texastribune.org",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:texastribune.org/2025/08/08/ken-paxton-texas-democrats-supreme-court-removal-redistricting",
+    "source": "texastribune.org",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:texastribune.org/2025/08/18/texas-democrats-return-redistricting-map-illinois",
+    "source": "texastribune.org",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:texastribune.org/2025/09/05/james-talarico-texas-senate-democrat-2026",
+    "source": "texastribune.org",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en",
+    "added_by": {
+     "Editor 8": 1
+    }
+   },
+   {
+    "id": "url:texastribune.org/2025/09/16/james-talarico-texas-senate-democrat-religion-christianity-viral",
+    "source": "texastribune.org",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 13": 1
+    }
+   },
+   {
+    "id": "url:texastribune.org/2026/01/16/james-talarico-texas-senate-democrat-teacher-election-2026",
+    "source": "texastribune.org",
+    "citations": 2,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 5": 2
+    }
+   },
+   {
+    "id": "url:texastribune.org/2026/01/27/james-talarico-insulin-cap-texas-legislature-senate-primary-attacks",
+    "source": "texastribune.org",
+    "citations": 2,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 2": 1,
+     "Editor 19": 1
+    }
+   },
+   {
+    "id": "url:texastribune.org/2026/02/04/on-the-issues-a-qa-with-the-texas-democrats-running-for-u-s-senate",
+    "source": "texastribune.org",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:texastribune.org/2026/02/17/stephen-colbert-james-talarico-texas-senate-democratic-primary-fcc-trump-late-show",
+    "source": "texastribune.org",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 5": 1
+    }
+   },
+   {
+    "id": "url:texastribune.org/2026/04/15/james-talarico-texas-senate-democrat-fundraising-27-million",
+    "source": "texastribune.org",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:texastribune.org/2026/05/14/texas-james-talarico-super-pac-donors-lone-star-rising-dark-money-democratic-billionaires",
+    "source": "texastribune.org",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 2": 1
+    }
+   },
+   {
+    "id": "url:texastribune.org/2026/05/15/texas-supreme-court-gene-wu-greg-abbott-redistricting-map-quorum-break",
+    "source": "texastribune.org",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:texastribune.org/2026/07/08/texas-james-talarico-senate-fundraising-second-quarter-30-million",
+    "source": "texastribune.org",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:texastribune.org/2026/07/22/texas-james-talarico-data-centers-regulation-senate-2026",
+    "source": "texastribune.org",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 14": 1
+    }
+   },
+   {
+    "id": "url:texastribune.org/2026/08/05/texas-senate-james-talarico-economic-agenda-ken-paxton",
+    "source": "texastribune.org",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 14": 1
+    }
+   },
+   {
+    "id": "url:texastribune.org/2026/09/09/james-talarico-trans-sports-reversal-lgbtq-rights-texas-us-senate-race",
+    "source": "texastribune.org",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 4": 1
+    }
+   },
+   {
+    "id": "url:texastribune.org/2026/10/15/james-talarico-64-million-fundraising-texas-senate",
+    "source": "texastribune.org",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:the74million.org/article/inside-texass-whole-student-agenda-how-a-former-teacher-is-using-his-legislative-seat-to-push-24-new-bills-supporting-sex-ed-mental-health-restorative-justice-more",
+    "source": "the74million.org",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 116": 1
+    }
+   },
+   {
+    "id": "url:thedailytexan.com/2018/11/19/ut-alumnus-to-be-sworn-in-as-youngest-member-of-state-legislature",
+    "source": "thedailytexan.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 5": 1
+    }
+   },
+   {
+    "id": "url:thedailytexan.com/2025/09/15/ut-alum-state-representative-runs-for-u-s-senator",
+    "source": "thedailytexan.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 43": 1
+    }
+   },
+   {
+    "id": "url:theguardian.com/tv-and-radio/2026/feb/17/colbert-trump-administration-censorship-cbs",
+    "source": "theguardian.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-GB",
+    "added_by": {
+     "Editor 5": 1
+    }
+   },
+   {
+    "id": "url:theguardian.com/us-news/2025/dec/08/democrat-jasmine-crockett-texas-senate-run",
+    "source": "theguardian.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 84": 1
+    }
+   },
+   {
+    "id": "url:theguardian.com/us-news/ng-interactive/2025/jul/23/james-talarico-texas-joe-rogan",
+    "source": "theguardian.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-GB",
+    "added_by": {
+     "Editor 8": 1
+    }
+   },
+   {
+    "id": "url:thehill.com/homenews/5435394-here-are-the-texas-house-democrats-who-broke-quorum",
+    "source": "thehill.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:thehill.com/homenews/campaign/5782227-talarico-slams-us-military-iran",
+    "source": "thehill.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 28": 1
+    }
+   },
+   {
+    "id": "url:thehill.com/homenews/media/5728540-equal-time-rule-fcc-the-view",
+    "source": "thehill.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 22": 1
+    }
+   },
+   {
+    "id": "url:thetexan.news/elections/2026/talarico-targets-cost-of-living-at-campaign-tour-kickoff-in-affordability-centered-u-s-senate/article_1ceb19c3-ab21-4bdf-b086-d52ebd47cb93.html",
+    "source": "thetexan.news",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en",
+    "added_by": {
+     "Editor 14": 1
+    }
+   },
+   {
+    "id": "url:thetexan.news/state/the-back-mic/the-back-mic-a-list-of-the-democrats-who-fled-to-d-c-stayed-in/article_3c95c15e-21fb-5301-b09c-c3932024be93.html",
+    "source": "thetexan.news",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en",
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:thetexan.news/the-back-mic-house-democrat-moves-districts-after-redistricting-new-legislator-off-to-fast-start-approval-of-university-spending-requested",
+    "source": "thetexan.news",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 13": 1
+    }
+   },
+   {
+    "id": "url:thetimes.com/us/american-politics/article/james-talarico-texas-democrat-trump-maga-b0rsvl3sr",
+    "source": "thetimes.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 90": 1
+    }
+   },
+   {
+    "id": "url:time.com/7382444/texas-senate-democratic-primary-result-talarico-crockett",
+    "source": "time.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 35": 1
+    }
+   },
+   {
+    "id": "url:tpr.org/news/2026-01-25/crockett-talarico-take-on-affordability-ice-and-trump-during-texas-primary-debate",
+    "source": "tpr.org",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 57": 1
+    }
+   },
+   {
+    "id": "url:usatoday.com/story/entertainment/tv/2026/02/17/colbert-james-talarico-cbs-interview-trump/88715400007",
+    "source": "usatoday.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:variety.com/2026/tv/news/stephen-colbert-james-talarico-interview-youtube-views-1236666068",
+    "source": "variety.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 30": 1
+    }
+   },
+   {
+    "id": "url:vox.com/politics/480894/james-talarico-jasmine-crockett-faith-love-healing-texas-voters-senate-primary-democratic-religion-left",
+    "source": "vox.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 25": 1
+    }
+   },
+   {
+    "id": "url:washingtonpost.com/politics/2026/10/09/talarico-vowed-back-an-lgbtq-rights-bill-now-his-stance-isnt-so-clear",
+    "source": "washingtonpost.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 4": 1
+    }
+   },
+   {
+    "id": "url:youtube.com/watch?v=Blph_2RSBno&t=65s",
+    "source": "youtube.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 62": 1
+    }
+   },
+   {
+    "id": "url:youtube.com/watch?v=oiTJ7Pz_59A",
+    "source": "name:the late show with stephen colbert",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 5": 1
+    }
+   }
   ]
+ },
+ "changes": {
+  "words_removed": 38951,
+  "words_removed_later_restored": 6822,
+  "source_links_removed": 269,
+  "editors_removing": 323,
+  "listed_terms": {
+   "inserted": {
+    "WTW: contentious labels": 12,
+    "WTW: editorializing": 11,
+    "WTW: euphemisms": 3,
+    "WTW: expressions of doubt": 8,
+    "WTW: puffery": 38,
+    "WTW: synonyms for said": 36,
+    "WTW: unsupported attributions": 6,
+    "contested: abortion": 11,
+    "contested: gender and sexuality": 18,
+    "contested: immigration": 4,
+    "contested: mass-atrocity and legal terms": 10,
+    "contested: political labels": 12,
+    "contested: stances on Israel, Jews and Muslims": 5,
+    "contested: terms for violent events": 27,
+    "contested: territory and control": 8,
+    "contested: truth claims": 7
+   },
+   "removed": {
+    "WTW: contentious labels": 9,
+    "WTW: editorializing": 12,
+    "WTW: euphemisms": 4,
+    "WTW: expressions of doubt": 9,
+    "WTW: puffery": 36,
+    "WTW: synonyms for said": 31,
+    "WTW: unsupported attributions": 5,
+    "contested: abortion": 9,
+    "contested: gender and sexuality": 12,
+    "contested: immigration": 4,
+    "contested: mass-atrocity and legal terms": 9,
+    "contested: political labels": 12,
+    "contested: stances on Israel, Jews and Muslims": 7,
+    "contested: terms for violent events": 18,
+    "contested: territory and control": 7,
+    "contested: truth claims": 3
+   }
+  },
+  "lists": {
+   "words_to_watch": {
+    "revision": 1382059772,
+    "url": "https://en.wikipedia.org/w/index.php?oldid=1382059772",
+    "sha256": "21e24e2898750322164b24947621630845d75cf8dd5adf3ec8cd860152449ea3"
+   },
+   "contested_terms": {
+    "sha256": "944606776be20b6b77dceb3ee5f6a29f8f5e196bf93cc16a4b6f2db6efe600c1"
+   }
+  },
+  "editors": [
+   {
+    "label": "Editor 123",
+    "words_removed": 15191,
+    "others_words_removed": 15191,
+    "words_removed_later_restored": 178,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "politico.com": 5,
+     "texastribune.org": 3,
+     "state.tx.us": 2,
+     "texasmonthly.com": 2,
+     "apnews.com": 1,
+     "arstechnica.com": 1,
+     "austinchronicle.com": 1,
+     "ballotpedia.org": 1,
+     "cbsaustin.com": 1,
+     "cbsnews.com": 1,
+     "click2houston.com": 1,
+     "cnbc.com": 1,
+     "cnn.com": 1,
+     "cw39.com": 1,
+     "dailytexanonline.com": 1,
+     "dallasnews.com": 1,
+     "elpasotimes.com": 1,
+     "fox7austin.com": 1,
+     "go.com": 1,
+     "goodfaithmedia.org": 1,
+     "houstonchronicle.com": 1,
+     "jamestalarico.com": 1,
+     "jewishinsider.com": 1,
+     "khou.com": 1,
+     "ksat.com": 1,
+     "ktalnews.com": 1,
+     "kut.org": 1,
+     "kvue.com": 1,
+     "kxan.com": 1,
+     "newsnationnow.com": 1,
+     "newspapers.com": 1,
+     "newsweek.com": 1,
+     "newyorker.com": 1,
+     "npr.org": 1,
+     "nytimes.com": 1,
+     "opensecrets.org": 1,
+     "ourrevolution.com": 1,
+     "pbs.org": 1,
+     "pres-outlook.org": 1,
+     "punchbowl.news": 1,
+     "realclearpolitics.com": 1,
+     "sacurrent.com": 1,
+     "star-telegram.com": 1,
+     "statesman.com": 1,
+     "texas-election.com": 1,
+     "texas.gov": 1,
+     "texasattorneygeneral.gov": 1,
+     "texasobserver.org": 1,
+     "the74million.org": 1,
+     "theconversation.com": 1,
+     "thedailytexan.com": 1,
+     "theguardian.com": 1,
+     "thehill.com": 1,
+     "thetexan.news": 1,
+     "thetimes.com": 1,
+     "time.com": 1,
+     "tpr.org": 1,
+     "usatoday.com": 1,
+     "utexas.edu": 1,
+     "variety.com": 1,
+     "vox.com": 1,
+     "washingtonpost.com": 1,
+     "youtube.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "racist": 3
+     },
+     "WTW: euphemisms": {
+      "challenge": 1
+     },
+     "WTW: expressions of doubt": {
+      "accused": 1,
+      "alleged": 1
+     },
+     "WTW: puffery": {
+      "awesome": 1,
+      "best": 4,
+      "great": 3,
+      "hit": 1
+     },
+     "WTW: synonyms for said": {
+      "clarify": 1,
+      "deny": 1,
+      "explain": 1,
+      "note": 2,
+      "reveal": 3
+     },
+     "WTW: unsupported attributions": {
+      "has been described as": 2
+     },
+     "contested: abortion": {
+      "abortion rights": 3
+     },
+     "contested: gender and sexuality": {
+      "gender-affirming": 1,
+      "gender-affirming care": 1,
+      "transgender": 6
+     },
+     "contested: immigration": {
+      "undocumented immigrants": 1
+     },
+     "contested: mass-atrocity and legal terms": {
+      "genocide": 1,
+      "war crimes": 2
+     },
+     "contested: political labels": {
+      "fascist": 1,
+      "populist": 4
+     },
+     "contested: stances on Israel, Jews and Muslims": {
+      "pro-israel": 2
+     },
+     "contested: terms for violent events": {
+      "atrocity": 1,
+      "attack": 10
+     },
+     "contested: territory and control": {
+      "neighborhood": 1
+     },
+     "contested: truth claims": {
+      "disinformation": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1381898635"
+    ]
+   },
+   {
+    "label": "Editor 124",
+    "words_removed": 2877,
+    "others_words_removed": 2877,
+    "words_removed_later_restored": 2877,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "texastribune.org": 9,
+     "texas.gov": 5,
+     "nytimes.com": 4,
+     "statesman.com": 3,
+     "youtube.com": 3,
+     "cnn.com": 2,
+     "dallasnews.com": 2,
+     "goodfaithmedia.org": 2,
+     "houstonchronicle.com": 2,
+     "texasattorneygeneral.gov": 2,
+     "theguardian.com": 2,
+     "thehill.com": 2,
+     "usatoday.com": 2,
+     "archive.org": 1,
+     "star-telegram.com": 1,
+     "theconversation.com": 1,
+     "vox.com": 1,
+     "wwwtheguardian.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: expressions of doubt": {
+      "accused": 1
+     },
+     "WTW: puffery": {
+      "awesome": 1,
+      "great": 1,
+      "hit": 1
+     },
+     "WTW: synonyms for said": {
+      "deny": 1,
+      "explain": 1
+     },
+     "WTW: unsupported attributions": {
+      "has been described as": 1
+     },
+     "contested: gender and sexuality": {
+      "transgender": 3
+     },
+     "contested: political labels": {
+      "fascist": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1380248094"
+    ]
+   },
+   {
+    "label": "Editor 5",
+    "words_removed": 2591,
+    "others_words_removed": 2303,
+    "words_removed_later_restored": 520,
+    "removing_revisions": 64,
+    "sources_removed": {
+     "texastribune.org": 3,
+     "foxnews.com": 2,
+     "mediaite.com": 2,
+     "politico.com": 2,
+     "abc13.com": 1,
+     "archive.org": 1,
+     "axios.com": 1,
+     "facebook.com": 1,
+     "jamestalarico.com": 1,
+     "kltv.com": 1,
+     "punchbowl.news": 1,
+     "statesman.com": 1,
+     "thehill.com": 1,
+     "time.com": 1,
+     "usatoday.com": 1,
+     "washingtonexaminer.com": 1,
+     "washingtonpost.com": 1,
+     "wfmd.com": 1
+    },
+    "terms_inserted": {
+     "WTW: contentious labels": {
+      "racist": 1
+     },
+     "WTW: expressions of doubt": {
+      "accused": 1
+     },
+     "WTW: puffery": {
+      "best": 1,
+      "great": 1
+     },
+     "WTW: synonyms for said": {
+      "reveal": 1
+     },
+     "contested: gender and sexuality": {
+      "transgender": 3
+     },
+     "contested: immigration": {
+      "undocumented": 1
+     },
+     "contested: territory and control": {
+      "neighborhood": 1
+     },
+     "contested: truth claims": {
+      "disinformation": 1
+     }
+    },
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "racist": 3
+     },
+     "WTW: editorializing": {
+      "only": 2
+     },
+     "WTW: expressions of doubt": {
+      "accused": 2
+     },
+     "WTW: synonyms for said": {
+      "claim": 2,
+      "explain": 1
+     },
+     "contested: abortion": {
+      "pro-choice": 1
+     },
+     "contested: stances on Israel, Jews and Muslims": {
+      "pro-israel": 1
+     },
+     "contested: terms for violent events": {
+      "attack": 3
+     },
+     "contested: territory and control": {
+      "disputed": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1345355664",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1347840024",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1338851207",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1343056037",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1340622098"
+    ]
+   },
+   {
+    "label": "Editor 125",
+    "words_removed": 1332,
+    "others_words_removed": 1332,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1379395228"
+    ]
+   },
+   {
+    "label": "Editor 6",
+    "words_removed": 1197,
+    "others_words_removed": 1191,
+    "words_removed_later_restored": 79,
+    "removing_revisions": 7,
+    "sources_removed": {
+     "politico.com": 2,
+     "advocate.com": 1,
+     "dallasobserver.com": 1,
+     "elpasotimes.com": 1,
+     "houstonchronicle.com": 1,
+     "jamestalarico.com": 1,
+     "krwg.org": 1,
+     "time.com": 1
+    },
+    "terms_inserted": {
+     "WTW: editorializing": {
+      "only": 1
+     },
+     "WTW: unsupported attributions": {
+      "has been described as": 1
+     },
+     "contested: political labels": {
+      "populist": 3
+     }
+    },
+    "terms_removed": {
+     "WTW: euphemisms": {
+      "challenge": 1
+     },
+     "contested: immigration": {
+      "undocumented": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1374357965",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1374360268",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1374360359",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1376039219",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1374251807"
+    ]
+   },
+   {
+    "label": "Editor 3",
+    "words_removed": 1022,
+    "others_words_removed": 1003,
+    "words_removed_later_restored": 179,
+    "removing_revisions": 53,
+    "sources_removed": {
+     "youtube.com": 2,
+     "thefederalist.com": 1
+    },
+    "terms_inserted": {
+     "WTW: unsupported attributions": {
+      "has been described as": 2
+     }
+    },
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "controversial": 1
+     },
+     "WTW: editorializing": {
+      "only": 1
+     },
+     "WTW: euphemisms": {
+      "challenge": 1
+     },
+     "WTW: expressions of doubt": {
+      "accused": 1
+     },
+     "WTW: synonyms for said": {
+      "claim": 3
+     },
+     "contested: mass-atrocity and legal terms": {
+      "genocide": 1
+     },
+     "contested: territory and control": {
+      "disputed": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1356481120",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1312838434",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1367946339",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1340010456",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1337404216"
+    ]
+   },
+   {
+    "label": "Editor 12",
+    "words_removed": 1021,
+    "others_words_removed": 4,
+    "words_removed_later_restored": 77,
+    "removing_revisions": 10,
+    "sources_removed": {
+     "jamestalarico.com": 2,
+     "texas.gov": 2,
+     "drivegoogle.com": 1,
+     "facebook.com": 1,
+     "google.com": 1,
+     "instagram.com": 1,
+     "kvue.com": 1,
+     "reformaustin.org": 1,
+     "state.tx.us": 1,
+     "statesman.com": 1,
+     "texastribune.org": 1,
+     "twitter.com": 1,
+     "youtube.com": 1
+    },
+    "terms_inserted": {
+     "WTW: editorializing": {
+      "only": 3
+     },
+     "WTW: puffery": {
+      "greatest": 1,
+      "innovative": 2,
+      "prestigious": 1,
+      "unique": 1
+     },
+     "contested: territory and control": {
+      "neighborhood": 2
+     }
+    },
+    "terms_removed": {
+     "WTW: editorializing": {
+      "only": 2
+     },
+     "WTW: puffery": {
+      "best": 1,
+      "greatest": 1,
+      "unique": 1
+     },
+     "contested: territory and control": {
+      "neighborhood": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=911113396",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=944729505",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=943591190",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=911877936",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=937882694"
+    ]
+   },
+   {
+    "label": "Editor 9",
+    "words_removed": 822,
+    "others_words_removed": 813,
+    "words_removed_later_restored": 16,
+    "removing_revisions": 6,
+    "sources_removed": {
+     "ballotpedia.org": 1,
+     "facebook.com": 1,
+     "runforsomething.net": 1
+    },
+    "terms_inserted": {
+     "WTW: expressions of doubt": {
+      "alleged": 1
+     },
+     "WTW: synonyms for said": {
+      "claim": 1
+     },
+     "contested: territory and control": {
+      "neighborhood": 1
+     }
+    },
+    "terms_removed": {
+     "WTW: editorializing": {
+      "only": 1
+     },
+     "WTW: puffery": {
+      "innovative": 2,
+      "prestigious": 1
+     },
+     "contested: territory and control": {
+      "neighborhood": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=971392246",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1011590215",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=971391955",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1011589279",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=971568024"
+    ]
+   },
+   {
+    "label": "Editor 1",
+    "words_removed": 703,
+    "others_words_removed": 703,
+    "words_removed_later_restored": 1,
+    "removing_revisions": 15,
+    "sources_removed": {
+     "texas.gov": 4,
+     "texastribune.org": 2,
+     "elpasotimes.com": 1,
+     "statesman.com": 1,
+     "taylorpress.net": 1
+    },
+    "terms_inserted": {
+     "WTW: contentious labels": {
+      "controversial": 1
+     },
+     "WTW: editorializing": {
+      "only": 1
+     },
+     "WTW: expressions of doubt": {
+      "accused": 1
+     },
+     "WTW: puffery": {
+      "best": 1
+     },
+     "WTW: synonyms for said": {
+      "claim": 1,
+      "find": 1,
+      "note": 1
+     }
+    },
+    "terms_removed": {
+     "WTW: euphemisms": {
+      "challenge": 1
+     },
+     "WTW: synonyms for said": {
+      "claim": 1
+     },
+     "contested: truth claims": {
+      "falsely": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1379195589",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1375550705",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1379194797",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1315955510",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1379195227"
+    ]
+   },
+   {
+    "label": "Editor 32",
+    "words_removed": 699,
+    "others_words_removed": 699,
+    "words_removed_later_restored": 54,
+    "removing_revisions": 7,
+    "sources_removed": {
+     "texastribune.org": 5,
+     "texasmonthly.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: puffery": {
+      "best": 1
+     },
+     "WTW: synonyms for said": {
+      "claim": 1,
+      "find": 1
+     },
+     "contested: abortion": {
+      "abortion rights": 2
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1316794154",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1316793581",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1321501972",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1354309191",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1316794409"
+    ]
+   },
+   {
+    "label": "Editor 13",
+    "words_removed": 653,
+    "others_words_removed": 647,
+    "words_removed_later_restored": 41,
+    "removing_revisions": 33,
+    "sources_removed": {
+     "advocate.com": 2,
+     "youtube.com": 2,
+     "c-span.org": 1,
+     "mysanantonio.com": 1,
+     "saisd.net": 1,
+     "texas.gov": 1
+    },
+    "terms_inserted": {
+     "WTW: contentious labels": {
+      "racist": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1374384060",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1033334454",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1374384828",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1071088226",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1374388121"
+    ]
+   },
+   {
+    "label": "Editor 23",
+    "words_removed": 606,
+    "others_words_removed": 599,
+    "words_removed_later_restored": 28,
+    "removing_revisions": 6,
+    "sources_removed": {
+     "ballotpedia.org": 4,
+     "apnews.com": 2,
+     "cnbc.com": 2,
+     "kxan.com": 1,
+     "state.tx.us": 1,
+     "texastribune.org": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: synonyms for said": {
+      "deny": 1
+     },
+     "contested: terms for violent events": {
+      "retaliation": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1341631141",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1301428114",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1301429929",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1301429489",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1301615428"
+    ]
+   },
+   {
+    "label": "Editor 126",
+    "words_removed": 590,
+    "others_words_removed": 590,
+    "words_removed_later_restored": 2,
+    "removing_revisions": 2,
+    "sources_removed": {
+     "wikipedia.org": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: editorializing": {
+      "indeed": 1
+     },
+     "WTW: puffery": {
+      "best": 1,
+      "notable": 1
+     },
+     "WTW: synonyms for said": {
+      "claim": 1,
+      "find": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=984936706",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=984936768"
+    ]
+   },
+   {
+    "label": "Editor 20",
+    "words_removed": 586,
+    "others_words_removed": 586,
+    "words_removed_later_restored": 22,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "nytimes.com": 2,
+     "politico.com": 2,
+     "cbsnews.com": 1
+    },
+    "terms_inserted": {
+     "WTW: puffery": {
+      "great": 1
+     },
+     "contested: abortion": {
+      "abortion rights": 4
+     },
+     "contested: immigration": {
+      "undocumented immigrants": 2
+     }
+    },
+    "terms_removed": {
+     "WTW: puffery": {
+      "great": 1
+     },
+     "WTW: unsupported attributions": {
+      "officially": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1347342311"
+    ]
+   },
+   {
+    "label": "Editor 7",
+    "words_removed": 541,
+    "others_words_removed": 513,
+    "words_removed_later_restored": 39,
+    "removing_revisions": 5,
+    "sources_removed": {
+     "texas-election.com": 1,
+     "texasmonthly.com": 1
+    },
+    "terms_inserted": {
+     "WTW: euphemisms": {
+      "challenge": 2
+     }
+    },
+    "terms_removed": {
+     "WTW: puffery": {
+      "great": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1381254405",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1356325646",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1356326917",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1356434226",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1356690212"
+    ]
+   },
+   {
+    "label": "Editor 11",
+    "words_removed": 477,
+    "others_words_removed": 463,
+    "words_removed_later_restored": 108,
+    "removing_revisions": 6,
+    "sources_removed": {
+     "nytimes.com": 1,
+     "pres-outlook.org": 1,
+     "sacurrent.com": 1,
+     "theconversation.com": 1
+    },
+    "terms_inserted": {
+     "WTW: puffery": {
+      "great": 1
+     },
+     "contested: abortion": {
+      "pro-life": 1
+     }
+    },
+    "terms_removed": {
+     "WTW: puffery": {
+      "great": 1
+     },
+     "WTW: unsupported attributions": {
+      "has been described as": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1382518845",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1382520555",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1382519906",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1382519484",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1382516430"
+    ]
+   },
+   {
+    "label": "Editor 127",
+    "words_removed": 435,
+    "others_words_removed": 435,
+    "words_removed_later_restored": 435,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "cnn.com": 2,
+     "forbes.com": 1,
+     "usatoday.com": 1,
+     "youtube.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: expressions of doubt": {
+      "accused": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1339024916"
+    ]
+   },
+   {
+    "label": "Editor 128",
+    "words_removed": 403,
+    "others_words_removed": 400,
+    "words_removed_later_restored": 27,
+    "removing_revisions": 8,
+    "sources_removed": {
+     "cnbc.com": 1,
+     "fox7austin.com": 1,
+     "staopen.org": 1,
+     "texastribune.org": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: synonyms for said": {
+      "deny": 1,
+      "reveal": 2
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1338849067",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1339579060",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1339581339",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1339581257",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1340246609"
+    ]
+   },
+   {
+    "label": "Editor 15",
+    "words_removed": 375,
+    "others_words_removed": 363,
+    "words_removed_later_restored": 5,
+    "removing_revisions": 24,
+    "sources_removed": {
+     "ourrevolution.com": 1,
+     "pres-outlook.org": 1
+    },
+    "terms_inserted": {
+     "contested: political labels": {
+      "populist": 1
+     }
+    },
+    "terms_removed": {
+     "contested: abortion": {
+      "abortion rights": 2
+     },
+     "contested: immigration": {
+      "undocumented immigrants": 1
+     },
+     "contested: political labels": {
+      "populist": 3
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1382861755",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1382576985",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1382006430",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1381994772",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1355972324"
+    ]
+   },
+   {
+    "label": "Editor 129",
+    "words_removed": 374,
+    "others_words_removed": 374,
+    "words_removed_later_restored": 374,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "jewishinsider.com": 3,
+     "austinchronicle.com": 1,
+     "punchbowl.news": 1
+    },
+    "terms_inserted": {
+     "WTW: puffery": {
+      "popular": 1
+     },
+     "WTW: synonyms for said": {
+      "claim": 1,
+      "expose": 1
+     },
+     "contested: truth claims": {
+      "falsely": 1
+     }
+    },
+    "terms_removed": {
+     "contested: mass-atrocity and legal terms": {
+      "war crimes": 1
+     },
+     "contested: stances on Israel, Jews and Muslims": {
+      "pro-israel": 2
+     },
+     "contested: terms for violent events": {
+      "atrocity": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1338149764"
+    ]
+   },
+   {
+    "label": "Editor 70",
+    "words_removed": 306,
+    "others_words_removed": 306,
+    "words_removed_later_restored": 22,
+    "removing_revisions": 12,
+    "sources_removed": {
+     "cbsaustin.com": 1,
+     "fox7austin.com": 1,
+     "texas.gov": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1339028526",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1055773881",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1033513321",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1310103933",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1355372113"
+    ]
+   },
+   {
+    "label": "Editor 116",
+    "words_removed": 295,
+    "others_words_removed": 295,
+    "words_removed_later_restored": 21,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "austinchronicle.com": 1,
+     "fox7austin.com": 1,
+     "kxan.com": 1,
+     "statesman.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1153631927"
+    ]
+   },
+   {
+    "label": "Editor 79",
+    "words_removed": 256,
+    "others_words_removed": 252,
+    "words_removed_later_restored": 4,
+    "removing_revisions": 12,
+    "sources_removed": {
+     "afp.com": 1,
+     "newrepublic.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1382446021",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1382321737",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1382260416",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1382929527",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1383096009"
+    ]
+   },
+   {
+    "label": "Editor 130",
+    "words_removed": 245,
+    "others_words_removed": 245,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 16,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: editorializing": {
+      "only": 2
+     },
+     "WTW: expressions of doubt": {
+      "alleged": 1
+     },
+     "WTW: puffery": {
+      "great": 2
+     },
+     "WTW: synonyms for said": {
+      "deny": 1
+     },
+     "contested: abortion": {
+      "unborn": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1381830628",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1340824945",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1341786755",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1339075523",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1379371358"
+    ]
+   },
+   {
+    "label": "Editor 49",
+    "words_removed": 227,
+    "others_words_removed": 227,
+    "words_removed_later_restored": 112,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "contested: political labels": {
+      "populist": 3
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1382357569"
+    ]
+   },
+   {
+    "label": "Editor 62",
+    "words_removed": 192,
+    "others_words_removed": 166,
+    "words_removed_later_restored": 70,
+    "removing_revisions": 7,
+    "sources_removed": {
+     "politico.com": 3
+    },
+    "terms_inserted": {
+     "WTW: puffery": {
+      "great": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1315285353",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1315281170",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1315281564",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1315284973",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1291730587"
+    ]
+   },
+   {
+    "label": "Editor 131",
+    "words_removed": 178,
+    "others_words_removed": 178,
+    "words_removed_later_restored": 62,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "advocate.com": 2,
+     "politico.com": 2
+    },
+    "terms_inserted": {},
+    "terms_removed": {
+     "contested: gender and sexuality": {
+      "gender-affirming care": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1341877780"
+    ]
+   },
+   {
+    "label": "Editor 132",
+    "words_removed": 171,
+    "others_words_removed": 171,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1382270574"
+    ]
+   },
+   {
+    "label": "Editor 56",
+    "words_removed": 162,
+    "others_words_removed": 116,
+    "words_removed_later_restored": 71,
+    "removing_revisions": 3,
+    "sources_removed": {
+     "newyorker.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1355478741",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1341774185",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1355522430"
+    ]
+   },
+   {
+    "label": "Editor 115",
+    "words_removed": 159,
+    "others_words_removed": 159,
+    "words_removed_later_restored": 16,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1306491255",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1306276379"
+    ]
+   },
+   {
+    "label": "Editor 27",
+    "words_removed": 158,
+    "others_words_removed": 158,
+    "words_removed_later_restored": 102,
+    "removing_revisions": 3,
+    "sources_removed": {
+     "texastribune.org": 1
+    },
+    "terms_inserted": {
+     "WTW: synonyms for said": {
+      "explain": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1377623559",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1378785438",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1378783367"
+    ]
+   },
+   {
+    "label": "Editor 133",
+    "words_removed": 152,
+    "others_words_removed": 134,
+    "words_removed_later_restored": 135,
+    "removing_revisions": 2,
+    "sources_removed": {
+     "nytimes.com": 1,
+     "youtu.be": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1342408771",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1342408376"
+    ]
+   },
+   {
+    "label": "Editor 134",
+    "words_removed": 148,
+    "others_words_removed": 148,
+    "words_removed_later_restored": 148,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1379395171"
+    ]
+   },
+   {
+    "label": "Editor 8",
+    "words_removed": 137,
+    "others_words_removed": 133,
+    "words_removed_later_restored": 18,
+    "removing_revisions": 8,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: expressions of doubt": {
+      "accused": 1
+     },
+     "WTW: synonyms for said": {
+      "deny": 1
+     },
+     "contested: mass-atrocity and legal terms": {
+      "genocide": 2,
+      "war crimes": 2
+     },
+     "contested: political labels": {
+      "fascist": 1
+     },
+     "contested: terms for violent events": {
+      "atrocity": 1
+     }
+    },
+    "terms_removed": {
+     "contested: immigration": {
+      "undocumented immigrants": 1
+     },
+     "contested: mass-atrocity and legal terms": {
+      "war crimes": 1
+     },
+     "contested: stances on Israel, Jews and Muslims": {
+      "pro-israel": 2
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1338988384",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1338987940",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1338122339",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1353663717",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1338122648"
+    ]
+   },
+   {
+    "label": "Editor 72",
+    "words_removed": 137,
+    "others_words_removed": 137,
+    "words_removed_later_restored": 30,
+    "removing_revisions": 9,
+    "sources_removed": {
+     "nbcnews.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1356373467",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1356478361",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1356373370",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1381250347",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1355308595"
+    ]
+   },
+   {
+    "label": "Editor 135",
+    "words_removed": 126,
+    "others_words_removed": 126,
+    "words_removed_later_restored": 126,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "pres-outlook.org": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1379371343"
+    ]
+   },
+   {
+    "label": "Editor 68",
+    "words_removed": 111,
+    "others_words_removed": 111,
+    "words_removed_later_restored": 70,
+    "removing_revisions": 3,
+    "sources_removed": {
+     "texasmonthly.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: puffery": {
+      "great": 2,
+      "leading": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1333760633",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1291716287",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1282633359"
+    ]
+   },
+   {
+    "label": "Editor 100",
+    "words_removed": 99,
+    "others_words_removed": 99,
+    "words_removed_later_restored": 99,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "cnn.com": 2
+    },
+    "terms_inserted": {
+     "WTW: synonyms for said": {
+      "claim": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1338896707"
+    ]
+   },
+   {
+    "label": "Editor 26",
+    "words_removed": 97,
+    "others_words_removed": 97,
+    "words_removed_later_restored": 13,
+    "removing_revisions": 8,
+    "sources_removed": {
+     "friarsociety.org": 2
+    },
+    "terms_inserted": {
+     "contested: political labels": {
+      "populist": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1339342894",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1339379822",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1382775635",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1378245616",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1382472404"
+    ]
+   },
+   {
+    "label": "Editor 75",
+    "words_removed": 86,
+    "others_words_removed": 86,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1238480811"
+    ]
+   },
+   {
+    "label": "Editor 136",
+    "words_removed": 84,
+    "others_words_removed": 84,
+    "words_removed_later_restored": 62,
+    "removing_revisions": 4,
+    "sources_removed": {
+     "newspapers.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1357468612",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1303559888",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1356397645",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1356400386"
+    ]
+   },
+   {
+    "label": "Editor 137",
+    "words_removed": 83,
+    "others_words_removed": 81,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 4,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1310101243",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1310100537",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1310101430",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1310100690"
+    ]
+   },
+   {
+    "label": "Editor 138",
+    "words_removed": 79,
+    "others_words_removed": 79,
+    "words_removed_later_restored": 79,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "goodfaithmedia.org": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1321463329"
+    ]
+   },
+   {
+    "label": "Editor 29",
+    "words_removed": 73,
+    "others_words_removed": 70,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 7,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1356917007",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1356916610",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1356917473",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1356917197",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1356917935"
+    ]
+   },
+   {
+    "label": "Editor 90",
+    "words_removed": 72,
+    "others_words_removed": 5,
+    "words_removed_later_restored": 39,
+    "removing_revisions": 6,
+    "sources_removed": {
+     "texasmonthly.com": 1
+    },
+    "terms_inserted": {
+     "WTW: puffery": {
+      "great": 2
+     }
+    },
+    "terms_removed": {
+     "WTW: puffery": {
+      "great": 2
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1342344378",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1342344068",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1356373330",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1356385506",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1356373181"
+    ]
+   },
+   {
+    "label": "Editor 139",
+    "words_removed": 72,
+    "others_words_removed": 70,
+    "words_removed_later_restored": 5,
+    "removing_revisions": 7,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "contested: territory and control": {
+      "occupation": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1309742097",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1383227168",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1160617456",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1286884390",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1294751265"
+    ]
+   },
+   {
+    "label": "Editor 140",
+    "words_removed": 62,
+    "others_words_removed": 62,
+    "words_removed_later_restored": 1,
+    "removing_revisions": 8,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: contentious labels": {
+      "racist": 1
+     },
+     "WTW: puffery": {
+      "best": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1381664881",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1177427852",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=973713637",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1315959514",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=913924029"
+    ]
+   },
+   {
+    "label": "Editor 141",
+    "words_removed": 61,
+    "others_words_removed": 61,
+    "words_removed_later_restored": 15,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1303320898",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1303320110"
+    ]
+   },
+   {
+    "label": "Editor 35",
+    "words_removed": 59,
+    "others_words_removed": 38,
+    "words_removed_later_restored": 2,
+    "removing_revisions": 7,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: synonyms for said": {
+      "reveal": 1
+     }
+    },
+    "terms_removed": {
+     "WTW: editorializing": {
+      "only": 1
+     },
+     "WTW: synonyms for said": {
+      "reveal": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1339103388",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1339544407",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1342422684",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1339544202",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1310965592"
+    ]
+   },
+   {
+    "label": "Editor 63",
+    "words_removed": 56,
+    "others_words_removed": 56,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1304137170",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1341656244"
+    ]
+   },
+   {
+    "label": "Editor 117",
+    "words_removed": 56,
+    "others_words_removed": 56,
+    "words_removed_later_restored": 6,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "fox7austin.com": 1,
+     "texasmonthly.com": 1
+    },
+    "terms_inserted": {
+     "WTW: puffery": {
+      "best": 2
+     },
+     "WTW: synonyms for said": {
+      "reveal": 2
+     }
+    },
+    "terms_removed": {
+     "WTW: puffery": {
+      "best": 1
+     },
+     "WTW: synonyms for said": {
+      "reveal": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1175101045"
+    ]
+   },
+   {
+    "label": "Editor 42",
+    "words_removed": 55,
+    "others_words_removed": 55,
+    "words_removed_later_restored": 1,
+    "removing_revisions": 6,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1362208857",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1362718142",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1304579360",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1381970107",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1304527374"
+    ]
+   },
+   {
+    "label": "Editor 142",
+    "words_removed": 55,
+    "others_words_removed": 55,
+    "words_removed_later_restored": 55,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "axios.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1341737862"
+    ]
+   },
+   {
+    "label": "Editor 143",
+    "words_removed": 54,
+    "others_words_removed": 54,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "axios.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1341751437"
+    ]
+   },
+   {
+    "label": "Editor 144",
+    "words_removed": 54,
+    "others_words_removed": 54,
+    "words_removed_later_restored": 54,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "axios.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1341747873"
+    ]
+   },
+   {
+    "label": "Editor 145",
+    "words_removed": 52,
+    "others_words_removed": 52,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {
+     "contested: terms for violent events": {
+      "attack": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1338812738",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1340221623"
+    ]
+   },
+   {
+    "label": "Editor 16",
+    "words_removed": 50,
+    "others_words_removed": 49,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 3,
+    "sources_removed": {},
+    "terms_inserted": {
+     "contested: terms for violent events": {
+      "attack": 2
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1367677233",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1367372862",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1367678151"
+    ]
+   },
+   {
+    "label": "Editor 19",
+    "words_removed": 47,
+    "others_words_removed": 47,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {
+     "contested: terms for violent events": {
+      "attack": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1337198411"
+    ]
+   },
+   {
+    "label": "Editor 146",
+    "words_removed": 46,
+    "others_words_removed": 46,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: editorializing": {
+      "only": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1376774873"
+    ]
+   },
+   {
+    "label": "Editor 43",
+    "words_removed": 45,
+    "others_words_removed": 45,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1381853449",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1381853710"
+    ]
+   },
+   {
+    "label": "Editor 147",
+    "words_removed": 45,
+    "others_words_removed": 45,
+    "words_removed_later_restored": 43,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "newspapers.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1357508150"
+    ]
+   },
+   {
+    "label": "Editor 148",
+    "words_removed": 42,
+    "others_words_removed": 42,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 5,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1337243659",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=911422493",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=911923227",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=913950590",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1166435481"
+    ]
+   },
+   {
+    "label": "Editor 149",
+    "words_removed": 41,
+    "others_words_removed": 41,
+    "words_removed_later_restored": 8,
+    "removing_revisions": 3,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1378814274",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1282390582",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1160959221"
+    ]
+   },
+   {
+    "label": "Editor 150",
+    "words_removed": 40,
+    "others_words_removed": 40,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: puffery": {
+      "popular": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1338151301"
+    ]
+   },
+   {
+    "label": "Editor 151",
+    "words_removed": 35,
+    "others_words_removed": 35,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=993730148"
+    ]
+   },
+   {
+    "label": "Editor 152",
+    "words_removed": 35,
+    "others_words_removed": 35,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1033345428"
+    ]
+   },
+   {
+    "label": "Editor 45",
+    "words_removed": 34,
+    "others_words_removed": 34,
+    "words_removed_later_restored": 11,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1373764907"
+    ]
+   },
+   {
+    "label": "Editor 153",
+    "words_removed": 33,
+    "others_words_removed": 33,
+    "words_removed_later_restored": 33,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1322196051"
+    ]
+   },
+   {
+    "label": "Editor 47",
+    "words_removed": 31,
+    "others_words_removed": 31,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 5,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1329288659",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1275828170",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1281077397",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1320696735",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1327219837"
+    ]
+   },
+   {
+    "label": "Editor 154",
+    "words_removed": 31,
+    "others_words_removed": 30,
+    "words_removed_later_restored": 30,
+    "removing_revisions": 3,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1187434641",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1187434675",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1187434856"
+    ]
+   },
+   {
+    "label": "Editor 82",
+    "words_removed": 30,
+    "others_words_removed": 30,
+    "words_removed_later_restored": 1,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1033486795"
+    ]
+   },
+   {
+    "label": "Editor 99",
+    "words_removed": 27,
+    "others_words_removed": 27,
+    "words_removed_later_restored": 19,
+    "removing_revisions": 5,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: synonyms for said": {
+      "deny": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1339225944",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1343213704",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1343213335",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1376515228",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1339009347"
+    ]
+   },
+   {
+    "label": "Editor 155",
+    "words_removed": 27,
+    "others_words_removed": 27,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: puffery": {
+      "hit": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1339126698"
+    ]
+   },
+   {
+    "label": "Editor 156",
+    "words_removed": 27,
+    "others_words_removed": 27,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: synonyms for said": {
+      "claim": 1,
+      "expose": 1
+     },
+     "contested: truth claims": {
+      "falsely": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1338149853"
+    ]
+   },
+   {
+    "label": "Editor 61",
+    "words_removed": 24,
+    "others_words_removed": 24,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 2,
+    "sources_removed": {
+     "jamestalarico.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1016536498",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1016536578"
+    ]
+   },
+   {
+    "label": "Editor 157",
+    "words_removed": 24,
+    "others_words_removed": 24,
+    "words_removed_later_restored": 4,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {
+     "contested: territory and control": {
+      "occupation": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1306471245"
+    ]
+   },
+   {
+    "label": "Editor 158",
+    "words_removed": 23,
+    "others_words_removed": 23,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: unsupported attributions": {
+      "officially": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1310419596"
+    ]
+   },
+   {
+    "label": "Editor 159",
+    "words_removed": 23,
+    "others_words_removed": 23,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1341649046"
+    ]
+   },
+   {
+    "label": "Editor 160",
+    "words_removed": 23,
+    "others_words_removed": 19,
+    "words_removed_later_restored": 3,
+    "removing_revisions": 3,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1375868064",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1375868693",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1375868372"
+    ]
+   },
+   {
+    "label": "Editor 161",
+    "words_removed": 23,
+    "others_words_removed": 23,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1382340060"
+    ]
+   },
+   {
+    "label": "Editor 102",
+    "words_removed": 22,
+    "others_words_removed": 22,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1341680308"
+    ]
+   },
+   {
+    "label": "Editor 162",
+    "words_removed": 21,
+    "others_words_removed": 21,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1314534812"
+    ]
+   },
+   {
+    "label": "Editor 34",
+    "words_removed": 20,
+    "others_words_removed": 4,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 6,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: puffery": {
+      "great": 2
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1286580469",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1286580065",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1286579254",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1286580606",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1286580201"
+    ]
+   },
+   {
+    "label": "Editor 53",
+    "words_removed": 18,
+    "others_words_removed": 18,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: puffery": {
+      "leading": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1338838457"
+    ]
+   },
+   {
+    "label": "Editor 101",
+    "words_removed": 17,
+    "others_words_removed": 17,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1340437200"
+    ]
+   },
+   {
+    "label": "Editor 163",
+    "words_removed": 17,
+    "others_words_removed": 17,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1302544942"
+    ]
+   },
+   {
+    "label": "Editor 164",
+    "words_removed": 17,
+    "others_words_removed": 17,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1380309466"
+    ]
+   },
+   {
+    "label": "Editor 165",
+    "words_removed": 17,
+    "others_words_removed": 17,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1382271901"
+    ]
+   },
+   {
+    "label": "Editor 87",
+    "words_removed": 16,
+    "others_words_removed": 16,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1341687091",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1341688001"
+    ]
+   },
+   {
+    "label": "Editor 166",
+    "words_removed": 16,
+    "others_words_removed": 16,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: puffery": {
+      "notable": 1
+     },
+     "WTW: synonyms for said": {
+      "find": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=929273577"
+    ]
+   },
+   {
+    "label": "Editor 167",
+    "words_removed": 16,
+    "others_words_removed": 16,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1085833875"
+    ]
+   },
+   {
+    "label": "Editor 168",
+    "words_removed": 16,
+    "others_words_removed": 16,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: puffery": {
+      "great": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1341934264"
+    ]
+   },
+   {
+    "label": "Editor 169",
+    "words_removed": 16,
+    "others_words_removed": 16,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1341821432"
+    ]
+   },
+   {
+    "label": "Editor 170",
+    "words_removed": 16,
+    "others_words_removed": 16,
+    "words_removed_later_restored": 16,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1380130365"
+    ]
+   },
+   {
+    "label": "Editor 171",
+    "words_removed": 15,
+    "others_words_removed": 15,
+    "words_removed_later_restored": 15,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: synonyms for said": {
+      "claim": 1
+     },
+     "contested: territory and control": {
+      "disputed": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1340535196"
+    ]
+   },
+   {
+    "label": "Editor 172",
+    "words_removed": 15,
+    "others_words_removed": 15,
+    "words_removed_later_restored": 5,
+    "removing_revisions": 3,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1260462192",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1260463660",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1261236842"
+    ]
+   },
+   {
+    "label": "Editor 173",
+    "words_removed": 15,
+    "others_words_removed": 15,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "racist": 1
+     },
+     "WTW: expressions of doubt": {
+      "accused": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1341783921"
+    ]
+   },
+   {
+    "label": "Editor 174",
+    "words_removed": 15,
+    "others_words_removed": 15,
+    "words_removed_later_restored": 15,
+    "removing_revisions": 3,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1382650576",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1382304261",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1382650817"
+    ]
+   },
+   {
+    "label": "Editor 17",
+    "words_removed": 14,
+    "others_words_removed": 10,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 3,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1341797452",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1341787552",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1341993728"
+    ]
+   },
+   {
+    "label": "Editor 175",
+    "words_removed": 14,
+    "others_words_removed": 14,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 3,
+    "sources_removed": {
+     "youtube.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1380565787",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1380894006",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1380894172"
+    ]
+   },
+   {
+    "label": "Editor 4",
+    "words_removed": 13,
+    "others_words_removed": 3,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 4,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: synonyms for said": {
+      "clarify": 1
+     },
+     "contested: gender and sexuality": {
+      "gender-affirming": 1,
+      "gender-affirming care": 1,
+      "transgender": 4
+     },
+     "contested: terms for violent events": {
+      "attack": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1375186393",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1380658922",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1374941850",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1380657659"
+    ]
+   },
+   {
+    "label": "Editor 44",
+    "words_removed": 13,
+    "others_words_removed": 13,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "contested: mass-atrocity and legal terms": {
+      "war crimes": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1333418549"
+    ]
+   },
+   {
+    "label": "Editor 193",
+    "words_removed": 12,
+    "others_words_removed": 12,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: synonyms for said": {
+      "claim": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1341956593"
+    ]
+   },
+   {
+    "label": "Editor 205",
+    "words_removed": 12,
+    "others_words_removed": 12,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: editorializing": {
+      "only": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1379523516"
+    ]
+   },
+   {
+    "label": "Editor 179",
+    "words_removed": 11,
+    "others_words_removed": 11,
+    "words_removed_later_restored": 11,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "contested: mass-atrocity and legal terms": {
+      "war crimes": 1
+     },
+     "contested: terms for violent events": {
+      "atrocity": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1338872206"
+    ]
+   },
+   {
+    "label": "Editor 182",
+    "words_removed": 9,
+    "others_words_removed": 9,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "contested: territory and control": {
+      "neighborhood": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1034658748"
+    ]
+   },
+   {
+    "label": "Editor 204",
+    "words_removed": 9,
+    "others_words_removed": 9,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {
+     "contested: terms for violent events": {
+      "retaliation": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1341617657",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1338910628"
+    ]
+   },
+   {
+    "label": "Editor 189",
+    "words_removed": 8,
+    "others_words_removed": 8,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "fundamentalist": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1303017642"
+    ]
+   },
+   {
+    "label": "Editor 183",
+    "words_removed": 7,
+    "others_words_removed": 4,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: synonyms for said": {
+      "claim": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1341909893",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1341908029"
+    ]
+   },
+   {
+    "label": "Editor 98",
+    "words_removed": 6,
+    "others_words_removed": 6,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "contested: mass-atrocity and legal terms": {
+      "war crimes": 1
+     },
+     "contested: terms for violent events": {
+      "atrocity": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1338883270"
+    ]
+   },
+   {
+    "label": "Editor 178",
+    "words_removed": 6,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {
+     "contested: terms for violent events": {
+      "attack": 2
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1345227988"
+    ]
+   },
+   {
+    "label": "Editor 48",
+    "words_removed": 5,
+    "others_words_removed": 4,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: euphemisms": {
+      "challenge": 1
+     },
+     "contested: political labels": {
+      "populist": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1375374364"
+    ]
+   },
+   {
+    "label": "Editor 181",
+    "words_removed": 5,
+    "others_words_removed": 4,
+    "words_removed_later_restored": 4,
+    "removing_revisions": 4,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: contentious labels": {
+      "fundamentalist": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1303015237",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1303014397",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1303015043",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1303016114"
+    ]
+   },
+   {
+    "label": "Editor 190",
+    "words_removed": 4,
+    "others_words_removed": 1,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {
+     "contested: abortion": {
+      "pro-choice": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1341949503",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1356094096"
+    ]
+   },
+   {
+    "label": "Editor 24",
+    "words_removed": 3,
+    "others_words_removed": 1,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {
+     "contested: mass-atrocity and legal terms": {
+      "war crimes": 2
+     },
+     "contested: stances on Israel, Jews and Muslims": {
+      "pro-israel": 2
+     },
+     "contested: terms for violent events": {
+      "atrocity": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1330579710"
+    ]
+   },
+   {
+    "label": "Editor 40",
+    "words_removed": 3,
+    "others_words_removed": 3,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: contentious labels": {
+      "racist": 3
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1340920893"
+    ]
+   },
+   {
+    "label": "Editor 176",
+    "words_removed": 3,
+    "others_words_removed": 3,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: synonyms for said": {
+      "claim": 2,
+      "deny": 1
+     },
+     "contested: territory and control": {
+      "disputed": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1339269981"
+    ]
+   },
+   {
+    "label": "Editor 2",
+    "words_removed": 2,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {
+     "contested: terms for violent events": {
+      "attack": 2
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1378983599"
+    ]
+   },
+   {
+    "label": "Editor 54",
+    "words_removed": 2,
+    "others_words_removed": 2,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {
+     "contested: mass-atrocity and legal terms": {
+      "war crimes": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1339087190"
+    ]
+   },
+   {
+    "label": "Editor 187",
+    "words_removed": 2,
+    "others_words_removed": 2,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: puffery": {
+      "best": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=943606960"
+    ]
+   },
+   {
+    "label": "Editor 64",
+    "words_removed": 1,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: puffery": {
+      "great": 1,
+      "leading": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1331362339"
+    ]
+   },
+   {
+    "label": "Editor 188",
+    "words_removed": 1,
+    "others_words_removed": 1,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: puffery": {
+      "great": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1301468976"
+    ]
+   },
+   {
+    "label": "Editor 191",
+    "words_removed": 1,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {
+     "contested: stances on Israel, Jews and Muslims": {
+      "pro-israel": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1341750678"
+    ]
+   },
+   {
+    "label": "Editor 192",
+    "words_removed": 1,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: puffery": {
+      "awesome": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1320006037"
+    ]
+   },
+   {
+    "label": "Editor 200",
+    "words_removed": 1,
+    "others_words_removed": 1,
+    "words_removed_later_restored": 1,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: synonyms for said": {
+      "claim": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1341956406"
+    ]
+   },
+   {
+    "label": "Editor 10",
+    "words_removed": 0,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 0,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: puffery": {
+      "best": 2
+     },
+     "WTW: synonyms for said": {
+      "reveal": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": []
+   },
+   {
+    "label": "Editor 21",
+    "words_removed": 0,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 0,
+    "sources_removed": {},
+    "terms_inserted": {
+     "contested: abortion": {
+      "abortion rights": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": []
+   },
+   {
+    "label": "Editor 28",
+    "words_removed": 0,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 0,
+    "sources_removed": {},
+    "terms_inserted": {
+     "contested: terms for violent events": {
+      "attack": 2
+     }
+    },
+    "terms_removed": {},
+    "evidence": []
+   },
+   {
+    "label": "Editor 36",
+    "words_removed": 0,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 0,
+    "sources_removed": {},
+    "terms_inserted": {
+     "contested: truth claims": {
+      "disinformation": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": []
+   },
+   {
+    "label": "Editor 37",
+    "words_removed": 0,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 0,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: contentious labels": {
+      "racist": 3
+     },
+     "WTW: expressions of doubt": {
+      "accused": 1,
+      "alleged": 1
+     },
+     "WTW: puffery": {
+      "awesome": 1,
+      "best": 4,
+      "great": 2,
+      "hit": 1
+     },
+     "WTW: synonyms for said": {
+      "clarify": 1,
+      "deny": 1,
+      "explain": 1,
+      "note": 2,
+      "reveal": 3
+     },
+     "WTW: unsupported attributions": {
+      "has been described as": 2
+     },
+     "contested: abortion": {
+      "abortion rights": 3
+     },
+     "contested: gender and sexuality": {
+      "gender-affirming": 1,
+      "gender-affirming care": 1,
+      "transgender": 6
+     },
+     "contested: immigration": {
+      "undocumented immigrants": 1
+     },
+     "contested: mass-atrocity and legal terms": {
+      "genocide": 1,
+      "war crimes": 2
+     },
+     "contested: political labels": {
+      "fascist": 1,
+      "populist": 4
+     },
+     "contested: stances on Israel, Jews and Muslims": {
+      "pro-israel": 2
+     },
+     "contested: terms for violent events": {
+      "atrocity": 1,
+      "attack": 10
+     },
+     "contested: territory and control": {
+      "neighborhood": 1
+     },
+     "contested: truth claims": {
+      "disinformation": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": []
+   },
+   {
+    "label": "Editor 57",
+    "words_removed": 0,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 0,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: contentious labels": {
+      "racist": 1
+     },
+     "WTW: expressions of doubt": {
+      "accused": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": []
+   },
+   {
+    "label": "Editor 58",
+    "words_removed": 0,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 0,
+    "sources_removed": {},
+    "terms_inserted": {
+     "contested: terms for violent events": {
+      "attack": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": []
+   },
+   {
+    "label": "Editor 122",
+    "words_removed": 0,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 0,
+    "sources_removed": {},
+    "terms_inserted": {
+     "contested: truth claims": {
+      "disinformation": 2,
+      "falsely": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": []
+   },
+   {
+    "label": "Editor 177",
+    "words_removed": 0,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 0,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: editorializing": {
+      "only": 1
+     },
+     "WTW: synonyms for said": {
+      "reveal": 2
+     },
+     "contested: terms for violent events": {
+      "attack": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": []
+   },
+   {
+    "label": "Editor 180",
+    "words_removed": 0,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 0,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: puffery": {
+      "great": 2
+     }
+    },
+    "terms_removed": {},
+    "evidence": []
+   },
+   {
+    "label": "Editor 184",
+    "words_removed": 0,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 0,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: synonyms for said": {
+      "claim": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": []
+   },
+   {
+    "label": "Editor 185",
+    "words_removed": 0,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 0,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: synonyms for said": {
+      "note": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": []
+   },
+   {
+    "label": "Editor 186",
+    "words_removed": 0,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 0,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: editorializing": {
+      "indeed": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": []
+   },
+   {
+    "label": "Editor 194",
+    "words_removed": 0,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 0,
+    "sources_removed": {},
+    "terms_inserted": {
+     "contested: gender and sexuality": {
+      "gender-affirming care": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": []
+   },
+   {
+    "label": "Editor 195",
+    "words_removed": 0,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 0,
+    "sources_removed": {},
+    "terms_inserted": {
+     "contested: abortion": {
+      "unborn": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": []
+   },
+   {
+    "label": "Editor 196",
+    "words_removed": 0,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 0,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: expressions of doubt": {
+      "alleged": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": []
+   },
+   {
+    "label": "Editor 197",
+    "words_removed": 0,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 0,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: editorializing": {
+      "only": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": []
+   },
+   {
+    "label": "Editor 198",
+    "words_removed": 0,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 0,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: editorializing": {
+      "only": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": []
+   },
+   {
+    "label": "Editor 199",
+    "words_removed": 0,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 0,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: puffery": {
+      "great": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": []
+   },
+   {
+    "label": "Editor 201",
+    "words_removed": 0,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 0,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: synonyms for said": {
+      "deny": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": []
+   },
+   {
+    "label": "Editor 202",
+    "words_removed": 0,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 0,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: editorializing": {
+      "only": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": []
+   },
+   {
+    "label": "Editor 203",
+    "words_removed": 0,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 0,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: editorializing": {
+      "only": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": []
+   }
+  ],
+  "editors_shown": 147
+ },
+ "declared_interests": {
+  "article_tags": [],
+  "talk_page_revision": 1383507090,
+  "evidence": "https://en.wikipedia.org/w/index.php?oldid=1383507090",
+  "notices": []
  },
  "caveats": [
   {

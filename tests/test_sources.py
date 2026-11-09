@@ -84,3 +84,14 @@ def test_opinion_and_hard_to_check_flags():
     got = [sorted(sources.flags_of(t, c)) for c in cs]
     assert got == [["opinion"], ["opinion"], ["book_without_page", "no_link"], ["no_link"],
                    ["dead_link_no_archive", "not_english"], ["paywall_or_registration"]]
+
+
+def test_rated_subdomain_kept_as_its_own_source():
+    sources._SUBS = {"abcnews.go.com", "news.sky.com"}
+    try:
+        assert sources.source_domain("abcnews.go.com", "go.com") == "abcnews.go.com"
+        assert sources.source_domain("x.abcnews.go.com", "go.com") == "abcnews.go.com"
+        assert sources.source_domain("espn.go.com", "go.com") == "go.com"
+        assert sources.source_domain("sky.com", "sky.com") == "sky.com"
+    finally:
+        sources._SUBS = None

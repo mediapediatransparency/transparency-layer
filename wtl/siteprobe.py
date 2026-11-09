@@ -226,8 +226,11 @@ def _about_links(base: str, html: str) -> list[tuple[str, str]]:
         href, label = m.group(1).strip(), _visible(m.group(2))[:60]
         if href.startswith(("mailto:", "javascript:", "tel:")):
             continue
-        u = urljoin(base, href)
-        h = urlsplit(u).hostname or ""
+        try:
+            u = urljoin(base, href)
+            h = urlsplit(u).hostname or ""
+        except ValueError:          # a malformed link on the page (e.g. a broken "[...]" host)
+            continue
         if not (h == host or h.endswith("." + reg) or h == reg):
             continue
         if not (ABOUT_LINK.search(urlsplit(u).path) or ABOUT_TEXT.match(label)):
@@ -344,9 +347,11 @@ def rdap(domain: str) -> dict | None:
             out["registered"] = e.get("eventDate", "")[:10]
     for ent in d.get("entities", []):
         if "registrant" in (ent.get("roles") or []):
-            for f in (ent.get("vcardArray") or [None, []])[1]:
+            va = ent.get("vcardArray") or []
+            for f in (va[1] if len(va) > 1 and isinstance(va[1], list) else []):
                 # organisations only: a registrant's personal name is never recorded
-                if f[0] in ("org", "fn") and isinstance(f[3], str) and ORG_WORD.search(f[3]):
+                if (isinstance(f, list) and len(f) >= 4 and f[0] in ("org", "fn")
+                        and isinstance(f[3], str)) and ORG_WORD.search(f[3]):
                     v = f[3].strip()
                     if not re.search(r"redacted|privacy|proxy|withheld|domains by proxy|whois", v, re.I):
                         out.setdefault("registrant", v[:EXCERPT])
@@ -461,6 +466,10 @@ def summary() -> dict:
             sites[x["domain"]] = x
     by_id = {}
     for dom, x in sites.items():
+        if not x.get("trackers") and x.get("status", "").startswith("not reachable"):
+            # read from saved copies instead (wtl/sitetrace.py), each marked with its archived page
+            cp = cache.load(cache.path("sitetrace", "copies", dom)) or {}
+            x["trackers"] = [{**t, "from_saved_copy": True} for t in cp.get("trackers", [])]
         x["trackers"] = [t for t in x.get("trackers", []) if t["id"] not in PLATFORM_IDS]
         for t in x["trackers"]:
             by_id.setdefault((t["service"], t["id"]), set()).add(dom)

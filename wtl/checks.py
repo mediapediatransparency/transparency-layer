@@ -104,8 +104,18 @@ def verify_sanctions(path=SANCTIONS_CSV):
 
 
 # ---------------------------------------------------------------- checks 2, 5, 6
+_BLOCK = {"p", "div", "br", "li", "ul", "ol", "tr", "td", "th", "table", "thead", "tbody",
+          "h1", "h2", "h3", "h4", "h5", "h6", "section", "header", "footer", "nav", "details",
+          "summary", "dt", "dd", "dl", "caption", "figcaption", "blockquote", "pre", "option",
+          "label", "select", "button", "title"}
+
+
 class _Visible(HTMLParser):
-    """Collect visible text (never attribute values such as href)."""
+    """Collect visible text (never attribute values such as href).
+
+    Text inside one line is kept exactly as a reader sees it ("Foo <i>Bar</i>" -> "Foo Bar"), so a
+    name split by inline markup is still found; block and table-cell boundaries become line
+    breaks, so two neighbouring cells ("C. L. R. James" | "4,983") never read as one name."""
 
     def __init__(self):
         super().__init__()
@@ -114,10 +124,14 @@ class _Visible(HTMLParser):
     def handle_starttag(self, tag, attrs):
         if tag in ("style", "script"):
             self._skip += 1
+        elif tag in _BLOCK:
+            self.parts.append("\n")
 
     def handle_endtag(self, tag):
         if tag in ("style", "script"):
             self._skip -= 1
+        elif tag in _BLOCK:
+            self.parts.append("\n")
 
     def handle_data(self, data):
         if not self._skip:
@@ -127,17 +141,86 @@ class _Visible(HTMLParser):
 def visible_text(html: str) -> str:
     p = _Visible()
     p.feed(html)
-    return " ".join(p.parts)
+    return "".join(p.parts)
 
 
 TEMPLATE_TEXT = open(html_mod.__file__, encoding="utf-8").read()
 TEMPLATE_TEXT += open(site_mod.__file__, encoding="utf-8").read()
+
+
+def _strings(x):
+    if isinstance(x, str):
+        yield x
+    elif isinstance(x, dict):
+        for k, v in x.items():
+            if k != "added_by_id":     # pseudonymous account IDs never excuse a name
+                yield from _strings(v)
+    elif isinstance(x, list):
+        for v in x:
+            yield from _strings(v)
+
+
+def public_text(testset: dict) -> str:
+    """Text the site shows that never comes from edit histories: the analysed articles' titles
+    (listed on the compare page), earlier versions of their own text (data/then_now.json), the
+    Wikidata records of cited sources (founders, owners,
+    members), and what cited websites say about themselves (home-page titles, self-statements,
+    archived titles: the per-site entries of data/siteprobe.json and data/sitetrace.json).
+    An account name that is also a word here, e.g. "Edward" in "Edward Said" or in a
+    newspaper's founder, is a coincidence, not a leak."""
+    parts = [e.get("article", t) for t, e in testset.items()]
+    op = ROOT / "data" / "outlets.json"
+    if op.exists():
+        parts += _strings(json.loads(op.read_text(encoding="utf-8")).get("sources", {}))
+    for name in ("siteprobe.json", "sitetrace.json"):
+        p = ROOT / "data" / name
+        if p.exists():   # only "sites": the groups sections hold pseudonymous account IDs
+            parts += _strings(json.loads(p.read_text(encoding="utf-8")).get("sites", {}))
+    cp = ROOT / "data" / "categories.json"   # article titles listed on the categories page
+    if cp.exists():
+        parts += _strings(json.loads(cp.read_text(encoding="utf-8")))
+    ap = ROOT / "data" / "authors.json"      # cited authors' Wikipedia titles and Wikidata facts
+    if ap.exists():
+        a = json.loads(ap.read_text(encoding="utf-8")).get("authors", {})
+        parts += list(a) + list(_strings(a))
+    tp = ROOT / "data" / "then_now.json"     # earlier versions of the articles' own text
+    if tp.exists():
+        parts += _strings(json.loads(tp.read_text(encoding="utf-8")).get("articles", {}))
+    from .fetch import cache as _cache        # sources on Wikipedia's perennial sources list
+    rsp = sorted((_cache.CACHE_DIR / "outlets" / "rsp").glob("*.json.gz"))
+    if rsp:
+        parts += [r.get("article", "") for r in (_cache.load(rsp[-1]) or {}).get("rows", [])]
+    return "\n".join(parts)
+
+
+URL_IN_DATA = re.compile(r"https?://[^\s\"'<>]+")
 SITE_DIR = site_mod.SITE_DIR
+
+
+LABEL = re.compile(r"Editor \d+")   # the only label form the pages use
+_WORDS = {}
+
+
+def _dictionary() -> set:
+    """Single ordinary English words (the system word list, /usr/share/dict/words, if present).
+    An account named with one such word ("Neither") matches our own text by coincidence. Without
+    the list, no name is excused this way."""
+    if "w" not in _WORDS:
+        try:
+            with open("/usr/share/dict/words", encoding="utf-8") as f:
+                _WORDS["w"] = {w.strip().lower() for w in f if w.strip().isalpha() and len(w.strip()) >= 4}
+        except OSError:
+            _WORDS["w"] = set()
+    return _WORDS["w"]
 
 
 def run_checks(testset: dict):
     results, ok_all = {}, True
     sanction_names = {r["username"] for r in csv.DictReader(open(SANCTIONS_CSV, encoding="utf-8"))}
+    public = public_text(testset)
+    # every shared page of the site (read once), not only the article's own page
+    shared = "\n".join(visible_text(f.read_text(encoding="utf-8"))
+                       for f in sorted(SITE_DIR.glob("*.html")))
     for title, e in testset.items():
         d = OUT_DIR / json_writer.slug(e["article"])
         jp = d / f"{e['revision']}.json"
@@ -164,21 +247,40 @@ def run_checks(testset: dict):
         text = visible_text((d / f"{e['revision']}.html").read_text(encoding="utf-8"))
         site_page = SITE_DIR / "articles" / f"{json_writer.slug(e['article'])}.html"
         if site_page.exists():   # the public website's page for this article
-            text += " " + visible_text(site_page.read_text(encoding="utf-8"))
-        for extra in ("editors.html", "index.html", "compare.html"):
-            if (SITE_DIR / extra).exists():
-                text += " " + visible_text((SITE_DIR / extra).read_text(encoding="utf-8"))
+            text += "\n" + visible_text(site_page.read_text(encoding="utf-8"))
+        slug = json_writer.slug(e["article"])   # data files the pages load
+        for f in (SITE_DIR / "data" / f"{slug}.json", SITE_DIR / "data" / "editors" / "a" / f"{slug}.js"):
+            if f.exists():
+                # web addresses are evidence links, where account names may appear
+                text += "\n" + URL_IN_DATA.sub(" ", f.read_text(encoding="utf-8"))
+        text += "\n" + shared
         article_text = " ".join(s["text"] for s in rec["sentences"])
+        # names of the authors this article cites, as its citations give them
+        article_text += "\n" + "\n".join(a["name"] for a in (rec.get("sources") or {}).get("authors", []))
+        # section headings and the names of cited sources as the article gives them
+        article_text += "\n" + "\n".join({x.get("section") or "" for x in rec["sentences"]})
+        article_text += "\n" + "\n".join(x.get("name_as_cited") or "" for x in (rec.get("sources") or {}).get("list", []))
+        # web addresses of cited websites, as the record lists them ("2016buzz.com")
+        article_text += "\n" + "\n".join(set(re.findall(r'"([a-z0-9][a-z0-9.-]*\.[a-z]{2,})"', raw)))
         hits, coincidental, too_short = [], [], 0
         for nm in names:
             if len(nm) < 4:
                 too_short += 1
                 continue
-            pat = re.compile(r"(?<!\w)" + re.escape(nm) + r"(?!\w)")
+            if nm not in text:   # plain substring test first: most names are not there at all
+                continue
+            if LABEL.fullmatch(nm) or nm.lower() in _dictionary():
+                coincidental.append(nm)   # our own label form ("Editor 57") or an ordinary English word
+                continue
+            if nm.isdigit():   # a name made of digits only: not part of a longer number such as 0.00666
+                pat = re.compile(r"(?<![\w.,])" + re.escape(nm) + r"(?![\w.,])")
+            else:
+                pat = re.compile(r"(?<!\w)" + re.escape(nm) + r"(?!\w)")
             if pat.search(text):
                 # A name that is also a word of the article's own text or of the report
                 # template (e.g. an account called "Editor") is a coincidence, not a leak.
-                benign = pat.search(article_text) or pat.search(TEMPLATE_TEXT)
+                benign = (pat.search(article_text) or pat.search(TEMPLATE_TEXT)
+                          or pat.search(public))
                 (coincidental if benign else hits).append(nm)
         res["anonymity"] = {"names_checked": len(names) - too_short,
                             "names_under_4_chars_skipped": too_short,
@@ -196,9 +298,10 @@ def run_checks(testset: dict):
         results[e["article"]] = res
         print(f"{'PASS' if ok else 'FAIL'}  {e['article']}: totals={res['totals']['pass']} "
               f"anonymity={res['anonymity']['pass']} "
-              f"(coincidental words: {len(coincidental)}) reproducible={res['reproducible']['pass']}")
+              f"(coincidental words: {len(coincidental)}) reproducible={res['reproducible']['pass']}",
+              flush=True)
         if hits:
-            print(f"      {len(hits)} account names visible outside article text — review")
+            print(f"      {len(hits)} account names visible outside article text — review", flush=True)
     (OUT_DIR / "checks.json").write_text(json.dumps(results, indent=1) + "\n", encoding="utf-8")
     return ok_all
 

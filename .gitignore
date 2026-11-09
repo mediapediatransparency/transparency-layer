@@ -10,3 +10,9 @@ out/checks.json
 site/
 out/**/*.html
 out/site-preview/
+
+# browser add-on: generated data and the local site link (holds a local path)
+extension/data.js
+extension/local.js
+out/site-full/
+out/site-full.new/

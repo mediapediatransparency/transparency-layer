@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Wikipedia Transparency Layer",
+  "version": "0.1.0",
+  "description": "Shows who wrote a Wikipedia article and how its sources are rated, with a link to the full report. Works offline; sends nothing anywhere.",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://en.wikipedia.org/wiki/*",
+        "https://en.wikipedia.org/w/index.php*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}

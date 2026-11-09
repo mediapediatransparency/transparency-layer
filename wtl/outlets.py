@@ -45,6 +45,25 @@ ROB_URL = "https://personalization.ccs.neu.edu/static/archive/bias_scores.tar.gz
 ROB_REF = ("Robertson, R. E., Jiang, S., Joseph, K., Friedland, L., Lazer, D. & Wilson, C. (2018). "
            "Auditing partisan audience bias within Google Search. Proc. ACM Hum.-Comput. Interact. "
            "2(CSCW), 148. https://doi.org/10.1145/3274417")
+DD_COMMIT = "a2a834400ad582d1c8a5150338a146f2af2a95b0"   # LazerLab/DomainDemo, 2025-12-01
+DD_URL = (f"https://raw.githubusercontent.com/LazerLab/DomainDemo/{DD_COMMIT}/data/derived_metrics/"
+          "derived_party_leaning.csv.gz")
+DD_REF = ("Yang, K.-C., Goel, P., Quintana-Mathé, A., Horgan, L., McCabe, S. D., Grinberg, N., "
+          "Joseph, K. & Lazer, D. (2025). DomainDemo: a dataset of domain-sharing activities among "
+          "different demographic groups on Twitter. Scientific Data 12, 1251. "
+          "https://doi.org/10.1038/s41597-025-05604-6 (derived party-leaning scores; the data "
+          "repository states no licence)")
+# Sites that host books and scholarly papers from many publishers: who shares links to them says
+# nothing about a given book or paper, so website ratings are not applied to them (rule A,
+# 2026-11-06). Publishers and journals themselves are recognised by their Wikidata kind.
+SCHOLARLY_HOSTS = {"jstor.org", "doi.org", "muse.jhu.edu", "academia.edu", "researchgate.net",
+                   "semanticscholar.org", "ncbi.nlm.nih.gov", "europepmc.org", "ssrn.com",
+                   "philpapers.org", "persee.fr", "cairn.info", "erudit.org", "oup.com",
+                   "taylorfrancis.com", "brill.com", "degruyter.com", "sagepub.com",
+                   "scholar.archive.org", "openlibrary.org", "worldcat.org", "hathitrust.org",
+                   "books.google.com"}
+WEBSITE_RATINGS = ("independent_quality", "audience_leaning", "audience_leaning_dd",
+                   "allsides_2018", "mbfc")
 ALLSIDES_REF = ("AllSides Media Bias Ratings (2018 values as included in the Robertson et al. "
                 "release), AllSides.com, licensed CC BY-NC 4.0.")
 SPARQL = "https://query.wikidata.org/sparql"
@@ -135,6 +154,66 @@ def robertson() -> dict:
             "allsides": float(r["allsides_score"]) if r.get("allsides_score") else None,
         }
     return out
+
+
+def domaindemo() -> dict:
+    """{domain: partisan audience score}, Yang et al. 2025 (−1 shared mostly by Democratic-
+    leaning users, +1 by Republican-leaning; domains shared by at least 50 panel users)."""
+    p = cache.path("outlets", "raw", f"domaindemo_party_{DD_COMMIT[:12]}")
+    text = cache.load(p)
+    if text is None:
+        from .fetch.http import session
+        import gzip
+        resp = session().get(DD_URL, timeout=120)
+        resp.raise_for_status()
+        text = gzip.decompress(resp.content).decode("utf-8")
+        cache.save(p, text)
+    out = {}
+    for r in csv.DictReader(io.StringIO(text)):
+        try:
+            v = float(r["leaning_score"])
+        except (TypeError, ValueError):
+            continue
+        if -1 <= v <= 1:
+            out[r["domain"].strip().lower()] = v
+    return out
+
+
+def write_rated_subdomains() -> int:
+    """data/rated_subdomains.txt: sub-domains that the leaning and quality datasets score as
+    sites of their own, read by sources.source_domain. Changing it changes source keys, so
+    records must be re-analysed (wtl reanalyse) after it changes."""
+    from .config import ROOT
+    from .sources import registrable
+    # Only where the main domain has no leaning score of its own (go.com, sky.com): there the
+    # sub-domains are rated as different sites (abcnews.go.com, espn.go.com). Where the main
+    # domain is rated (cnn.com), its sub-domains stay with it. DomainDemo rates main domains
+    # only, so it adds no sub-domains.
+    rb = robertson()
+    subs = set()
+    for table in (rb, lin(), mbfc()):
+        for d in table:
+            d = d.strip().lower()
+            if "/" in d or d.startswith(("www.", "m.", "amp.", "mobile.")) or "." not in d:
+                continue
+            reg = registrable(d)
+            if reg != d and reg not in rb:
+                subs.add(d)
+    (ROOT / "data" / "rated_subdomains.txt").write_text("\n".join(sorted(subs)) + "\n", encoding="utf-8")
+    return len(subs)
+
+
+def is_scholarly(key: str, e: dict) -> bool:
+    """A book publisher, a journal, or a site hosting books and papers (rule A)."""
+    if e.get("kind") in ACADEMIC_KINDS:
+        return True
+    if key.startswith("name:"):
+        return bool(e.get("books")) and e.get("kind") not in NEWS_KINDS
+    return key in SCHOLARLY_HOSTS or any(key.endswith("." + h) for h in SCHOLARLY_HOSTS)
+
+
+NEWS_KINDS = {"newspaper or news website", "broadcaster", "magazine", "news agency", "news media",
+              "website"}
 
 
 def lookup(host: str, table: dict):
@@ -249,24 +328,53 @@ def qids_for_titles(titles: list[str]) -> dict:
     return out
 
 
+def organisations(qids: list[str]) -> set:
+    """The given Wikidata items that are organisations (instance of a subclass of Q43229)."""
+    p = cache.path("outlets", "is_org")
+    known = cache.load(p) or {}
+    todo = [q for q in qids if q not in known]
+    for i in range(0, len(todo), 100):
+        b = todo[i:i + 100]
+        rows = _sparql("SELECT DISTINCT ?item WHERE { VALUES ?item { " + " ".join("wd:" + q for q in b)
+                       + " } ?item wdt:P31/wdt:P279* wd:Q43229 . }")
+        yes = {r["item"]["value"].rsplit("/", 1)[1] for r in rows}
+        for q in b:
+            known[q] = q in yes
+        cache.save(p, known)
+        time.sleep(1)
+    return {q for q in qids if known.get(q)}
+
+
+SHARED_SITE = 3   # this many Wikidata items or more give the same website: a shared host, not matched
+
+
 def qids_for_domains(domains: list[str]) -> dict:
-    """Domain -> Wikidata ID via "official website" (P856). Picks the item with the fewest
-    alternatives deterministically (lowest numeric ID) when several claim the same site."""
-    out = {}
+    """Domain -> Wikidata ID via "official website" (P856). When two items give the same site, an
+    item that is not a person is preferred, then the lowest numeric ID. When three or more do, the
+    site is a shared host (a journal platform such as tandfonline.com, where each journal lists the
+    platform) and is not matched: picking one of them would name the wrong publication."""
+    claim = {}
     for i in range(0, len(domains), 40):
         b = domains[i:i + 40]
         vals = " ".join(f"<{s}://{w}{d}{e}>" for d in b for s in ("http", "https")
                         for w in ("", "www.") for e in ("", "/"))
-        rows = _sparql(f"SELECT ?item ?site WHERE {{ VALUES ?site {{ {vals} }} ?item wdt:P856 ?site . }}")
+        rows = _sparql(f"SELECT ?item ?site ?human WHERE {{ VALUES ?site {{ {vals} }} ?item wdt:P856 ?site . "
+                       f"OPTIONAL {{ ?item wdt:P31 wd:Q5 . BIND(1 AS ?human) }} }}")
         for r in rows:
-            site = r["site"]["value"]
-            dom = re.sub(r"^https?://(www\.)?", "", site).rstrip("/")
+            dom = re.sub(r"^https?://(www\.)?", "", r["site"]["value"]).rstrip("/")
             q = r["item"]["value"].rsplit("/", 1)[1]
-            if dom not in out or int(q[1:]) < int(out[dom][1:]):
-                out[dom] = q
+            claim.setdefault(dom, {})[q] = "human" in r
         if i // 40 % 10 == 0:
             log(f"  Wikidata websites: {min(i + 40, len(domains)):,} of {len(domains):,}")
         time.sleep(1)
+    out = {}
+    for dom, items in claim.items():
+        if len(items) >= SHARED_SITE:
+            continue
+        out[dom] = min(items, key=lambda q: (items[q], int(q[1:])))
+    shared = sum(1 for v in claim.values() if len(v) >= SHARED_SITE)
+    if shared:
+        log(f"  Wikidata websites: {shared:,} shared by {SHARED_SITE} or more items, left unmatched")
     return out
 
 
@@ -734,7 +842,7 @@ def build(records: list[dict], min_citations_for_wikidata: int = 2) -> dict:
         for n in (row["article"], row["id"]):
             if n:
                 by_name.setdefault(_norm(n), []).append(row)
-    L, Rb, MB = lin(), robertson(), mbfc()
+    L, Rb, MB, DD = lin(), robertson(), mbfc(), domaindemo()
 
     # Wikidata items: from RSP articles, from names as Wikipedia titles, from domains (P856)
     names = sorted({as_cited.get(k, k[5:]) for k in keys if k.startswith("name:") and cited[k] >= min_citations_for_wikidata})
@@ -788,6 +896,29 @@ def build(records: list[dict], min_citations_for_wikidata: int = 2) -> dict:
     want_names = {_norm(as_cited.get(k, k[5:])) for k in keys if k.startswith("name:")}
     all_q = sorted(set(tq.values()) | set(dq.values())
                    | {q for n, q in tq_norm.items() if n in want_names}, key=lambda q: int(q[1:]))
+    # A name cited as a book publisher that matched a Wikipedia title which is not an
+    # organisation (the publisher "Verso" -> "Recto and verso") is matched again by the exact
+    # publisher search instead (rule of 2026-11-06).
+    pub_names = {k: as_cited.get(k, k[5:]) for k in keys if k.startswith("name:") and k in BS}
+    pub_q = {k: tq_norm.get(_norm(n)) for k, n in pub_names.items() if tq_norm.get(_norm(n))}
+    orgs = organisations(sorted(set(pub_q.values())))
+    wrong = {k: q for k, q in pub_q.items() if q not in orgs}
+    if wrong:
+        log(f"  {len(wrong):,} publisher names matched a non-organisation; searching again")
+        want = {pub_names[k]: ["en"] + sorted(langs_of.get(k, ()))[:3] for k in wrong}
+        again = _search_publishers(want)
+        # a short imprint name ("Verso", "Penguin") is often labelled with its trade word on
+        # Wikidata; try those forms, still requiring one exact, unique publisher match
+        for suffix in (" Books", " Publishing", " Press"):
+            left = {n + suffix: l for n, l in want.items() if n not in again and not n.lower().endswith(suffix.lower())}
+            for n2, q2 in _search_publishers(left).items():
+                again.setdefault(n2[: -len(suffix)], q2)
+        for k in wrong:
+            n = _norm(pub_names[k])
+            tq_norm.pop(n, None)
+            if pub_names[k] in again:
+                tq_norm[n] = again[pub_names[k]]
+        all_q = sorted(set(all_q) | set(again.values()), key=lambda q: int(q[1:]))
     F = facts(all_q)
 
     def rsp_for(key):
@@ -813,12 +944,13 @@ def build(records: list[dict], min_citations_for_wikidata: int = 2) -> dict:
         if dom is None and f:   # a named publication: use its official website for domain ratings
             for w in f["websites"]:
                 cand = re.sub(r"^https?://(www\.)?", "", w).split("/")[0].lower()
-                if lookup(cand, L)[0] or lookup(cand, Rb)[0]:
+                if lookup(cand, L)[0] or lookup(cand, Rb)[0] or lookup(cand, DD)[0]:
                     dom = cand
                     break
         lk, lv = lookup(dom, L) if dom else (None, None)
         rk, rv = lookup(dom, Rb) if dom else (None, None)
         mk, mv = lookup(dom, MB) if dom else (None, None)
+        dk, dv = lookup(dom, DD) if dom else (None, None)
         status = combined_status(rows)
         e = {
             "name": f["label"] if f else (as_cited.get(k, k[5:]) if k.startswith("name:") else k),
@@ -830,6 +962,7 @@ def build(records: list[dict], min_citations_for_wikidata: int = 2) -> dict:
             "independent_quality": {"domain": lk, "score": round(lv, 4)} if lv is not None else None,
             "audience_leaning": ({"domain": rk, "score": rv["score"], "accounts": rv["accounts"]}
                                  if rv else None),
+            "audience_leaning_dd": {"domain": dk, "score": round(dv, 4)} if dv is not None else None,
             "allsides_2018": (ALLSIDES_LABEL.get(rv["allsides"]) if rv and rv["allsides"] is not None
                               else None),
             "mbfc": ({"domain": mk, "bias": mv["bias"], "factual_reporting": mv["factual_reporting"]}
@@ -845,6 +978,40 @@ def build(records: list[dict], min_citations_for_wikidata: int = 2) -> dict:
                                         "political_ideology", "classed_as", "kind", "associations",
                                         "registries", "journal_ids", "enwiki", "wikipedias")})
         out[k] = e
+
+    # Rule A (2026-11-06): ratings of a website (who shares it, how reliable its pages are) are
+    # applied to the website itself and to a news outlet cited by name, never to books or
+    # scholarly papers: those are left unrated and the ratings are kept under "not_applied".
+    for k, e in out.items():
+        if is_scholarly(k, e):
+            held = {x: e[x] for x in WEBSITE_RATINGS if e.get(x)}
+            if held:
+                e["website_ratings_not_applied"] = held
+            for x in WEBSITE_RATINGS:
+                e[x] = None
+    # The same organisation under another web address (same Wikidata item, e.g. a site that
+    # moved from .co.uk to .com): an unrated domain takes the ratings of the rated one, marked "via".
+    by_q = {}
+    for k, e in out.items():
+        if e.get("wikidata") and not k.startswith("name:"):
+            by_q.setdefault(e["wikidata"], []).append(k)
+    for q, ks in by_q.items():
+        if len(ks) < 2:
+            continue
+        for x in ("audience_leaning", "audience_leaning_dd", "independent_quality", "mbfc"):
+            rated = sorted((k for k in ks if out[k].get(x)), key=lambda k: (-cited.get(k, 0), k))
+            if not rated:
+                continue
+            for k in ks:
+                if not out[k].get(x) and not is_scholarly(k, out[k]):
+                    out[k][x] = {**out[rated[0]][x], "via": rated[0]}
+
+    # recorded political affiliation: Wikidata alignment/ideology and the political categories
+    # of the source's own English Wikipedia article (wtl/affiliation.py)
+    from . import affiliation as af
+    cats = af.fetch_categories([e.get("enwiki") for e in out.values() if e.get("enwiki")], log=log)
+    for k, e in out.items():
+        e["affiliation"] = af.labels_for(e, cats.get(e.get("enwiki")) if e.get("enwiki") else None)
 
     # academic level (JUFO) for publishers and journals, and for named sources without a kind
     todo = [k for k, e in out.items()
@@ -926,7 +1093,13 @@ def build(records: list[dict], min_citations_for_wikidata: int = 2) -> dict:
                                     "reference": LIN_REF, "data": LIN_URL},
             "audience_leaning": {"name": "Robertson et al. 2018 partisan audience score",
                                  "reference": ROB_REF, "data": ROB_URL},
+            "audience_leaning_dd": {"name": "DomainDemo 2025 partisan audience score (Yang et al.)",
+                                    "reference": DD_REF, "data": DD_URL},
             "allsides_2018": {"name": "AllSides (2018)", "reference": ALLSIDES_REF},
+            "affiliation": {"name": "Recorded political affiliation: Wikidata political alignment "
+                                    "and ideology, and the political categories of the source's "
+                                    "own English Wikipedia article",
+                            "rule": "wtl/affiliation.py (2026-11-06)"},
             "mbfc": {"name": "Media Bias/Fact Check", "reference": MBFC_REF, "data": MBFC_URL},
             "academic_level": {"name": "Publication Forum (JUFO), Finland", "reference": JUFO_REF,
                                "data": JUFO_API},

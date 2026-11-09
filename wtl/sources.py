@@ -123,10 +123,78 @@ def registrable(host: str) -> str:
     return ".".join(parts[n - suffix_len - 1:])
 
 
+_SUBS = None   # sub-domains the rating datasets score as sites of their own (data/rated_subdomains.txt)
+
+
+def source_domain(host: str, reg: str) -> str:
+    """The source a link is counted under: its registrable domain (bbc.co.uk), unless the host
+    is, or sits under, a sub-domain that the rating datasets score as a site of its own
+    (abcnews.go.com, news.sky.com), listed in data/rated_subdomains.txt (rule of 2026-11-06)."""
+    global _SUBS
+    if _SUBS is None:
+        from .config import ROOT
+        p = ROOT / "data" / "rated_subdomains.txt"
+        _SUBS = set(p.read_text(encoding="utf-8").split()) if p.exists() else set()
+    if not _SUBS or host == reg:
+        return reg
+    parts = host.split(".")
+    for i in range(len(parts)):
+        cand = ".".join(parts[i:])
+        if len(cand) <= len(reg):
+            break
+        if cand in _SUBS:
+            return cand
+    return reg
+
+
 def clean_name(v: str) -> str:
     v = WIKILINK.sub(r"\1", v)
     v = re.sub(r"\{\{[^{}]*\}\}|<[^>]+>|'''?|&nbsp;", " ", v)
     return re.sub(r"\s+", " ", v).strip(" .,;:")
+
+
+PARAM = re.compile(r"\|\s*([a-z][a-z0-9-]*?)\s*=\s*((?:\[\[[^\]]*\]\]|\{\{[^{}]*\}\}|[^|}\[{]|\[(?!\[)|\{(?!\{))*)",
+                   re.I)
+AUTHOR_KEY = re.compile(r"^(?:last|surname|author|first|given|author-?link|authorlink|subject-?link)(\d*)$",
+                        re.I)
+
+
+def authors_of(body: str) -> list[tuple[str, str | None]]:
+    """(name, Wikipedia title or None) of each author a citation template names, in order:
+    last/first (or surname/given) and author, numbered 1-9, with author-link when given. Editors
+    and translators are not authors. A name written as a wikilink gives its link too."""
+    if not CITE_START.match(body):
+        return []
+    slots: dict[int, dict] = {}
+    for m in PARAM.finditer(body):
+        k = AUTHOR_KEY.match(m.group(1).strip())
+        if not k:
+            continue
+        n = int(k.group(1) or 1)
+        kind = re.sub(r"\d+$", "", m.group(1).strip().lower()).replace("-", "")
+        raw = m.group(2).strip()
+        link = WIKILINK.search(raw)
+        slot = slots.setdefault(n, {})
+        if kind in ("authorlink", "subjectlink"):
+            v = clean_name(raw)
+            if v:
+                slot["link"] = v
+            continue
+        if link and "|" not in raw.split("]]")[0] and kind in ("last", "surname", "author"):
+            slot.setdefault("link", clean_name(raw))
+        elif link and kind in ("last", "surname", "author"):
+            slot.setdefault("link", raw[raw.find("[[") + 2:].split("|")[0].split("]]")[0].strip())
+        slot[{"surname": "last", "given": "first"}.get(kind, kind)] = clean_name(raw)
+    out = []
+    for n in sorted(slots):
+        sl = slots[n]
+        name = sl.get("author") or " ".join(x for x in (sl.get("first"), sl.get("last")) if x)
+        name = re.sub(r"\s+", " ", name).strip()
+        if not name or len(name) > 80 or not re.search(r"[A-Za-z\u00C0-\u024F]", name):
+            continue
+        link = sl.get("link")
+        out.append((name, link[:1].upper() + link[1:] if link else None))
+    return out
 
 
 def _template_end(text: str, start: int) -> int:
@@ -546,7 +614,7 @@ def _one(text: str, a: int, b: int) -> dict:
         # a book read on Google Books, publisher not given: the host is not the source
         source, attr = "book (no publisher given)", (a, b)
     elif host and not (platform and name):
-        source = reg
+        source = source_domain(host, reg)
         hs = text.find(host, upos, b) if not ARCHIVE.match(url) else -1
         attr = (hs, hs + len(host)) if hs >= 0 else (upos, upos + len(url))
     elif name:
@@ -559,7 +627,7 @@ def _one(text: str, a: int, b: int) -> dict:
     surname = (clean_name(am.group(1)).split(",")[0].strip().lower() if am
                else _head_surname(body)[0] if source not in UNMATCHED else None)
     return {"start": a, "end": b, "source": source, "name": name, "url_host": host, "attr": attr,
-            "short": False, "bib_start": a, "surname": surname}
+            "short": False, "bib_start": a, "surname": surname, "authors": authors_of(body)}
 
 
 def credit(cites, tokens, spans, hist, who):
@@ -619,6 +687,9 @@ def item_id(body: str) -> str | None:
     return None
 
 
+AUTHORS_KEPT = 30
+
+
 def compute(text, lay, tokens, spans, hist, who, labels, names=None, books_data=None):
     """The record's "sources" block and per-editor citation counts. `labels` maps editor key to
     label for prose editors; editors who only added citations get further labels, numbered on
@@ -676,6 +747,20 @@ def compute(text, lay, tokens, spans, hist, who, labels, names=None, books_data=
         if c["name"]:
             s["names"][c["name"]] += 1
         s["added_by"][lab[k] if k else "unknown"] += 1
+    # cited authors: each citation counts once for each author it names; a short footnote counts
+    # for the authors of the bibliography entry it points to
+    au_n, au_lead, au_works, au_link = Counter(), Counter(), {}, {}
+    for c in cites:
+        lead = lay.section_of[min(c["start"], len(lay.section_of) - 1)] == 0
+        for name, link in dict.fromkeys(c.get("authors") or []):
+            key = link or name
+            au_n[key] += 1
+            au_lead[key] += lead
+            au_works.setdefault(key, set()).add(c.get("bib_start", c["start"]))
+            au_link.setdefault(key, (name, link))
+    authors = [{"name": au_link[k][0], "wikipedia": au_link[k][1], "citations": au_n[k],
+                "lead_citations": au_lead[k], "works": len(au_works[k])}
+               for k in sorted(au_n, key=lambda k: (-au_n[k], k))[:AUTHORS_KEPT]]
     rows = []
     for s in sorted(per.values(), key=lambda s: (-s["citations"], s["source"])):
         rows.append({
@@ -706,6 +791,8 @@ def compute(text, lay, tokens, spans, hist, who, labels, names=None, books_data=
         "flags_by_editor": {l: {x: e[x] for x in ["citations"] + CHECK_FLAGS}
                             for l, e in sorted(by_ed.items(), key=lambda x: (-x[1]["citations"], _label_no(x[0])))},
         "list": rows,
+        "citations_naming_an_author": sum(1 for c in cites if c.get("authors")),
+        "authors": authors,
         # each cited work with an identifier (ISBN, DOI or web address), so the same work can be
         # followed across articles
         "items": [{"id": it["id"], "source": it["source"], "citations": it["citations"],

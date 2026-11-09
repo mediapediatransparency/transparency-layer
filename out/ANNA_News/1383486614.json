@@ -797,6 +797,48 @@
    "ip": 0.023962,
    "registered": 0.976038
   },
+  "persistence": [
+   {
+    "years": 1,
+    "baseline": 1301615052,
+    "baseline_timestamp": "2025-07-20T20:16:22Z",
+    "words_then": 4488,
+    "still_present": 4469,
+    "share_still_present": 0.995766,
+    "words_now": 4561,
+    "share_of_current": 0.979829
+   },
+   {
+    "years": 2,
+    "baseline": 1171043767,
+    "baseline_timestamp": "2023-08-18T18:10:56Z",
+    "words_then": 4377,
+    "still_present": 4356,
+    "share_still_present": 0.995202,
+    "words_now": 4561,
+    "share_of_current": 0.955054
+   },
+   {
+    "years": 3,
+    "baseline": 1171043767,
+    "baseline_timestamp": "2023-08-18T18:10:56Z",
+    "words_then": 4377,
+    "still_present": 4356,
+    "share_still_present": 0.995202,
+    "words_now": 4561,
+    "share_of_current": 0.955054
+   },
+   {
+    "years": 5,
+    "baseline": 1050369104,
+    "baseline_timestamp": "2021-10-17T12:05:47Z",
+    "words_then": 4159,
+    "still_present": 4080,
+    "share_still_present": 0.981005,
+    "words_now": 4561,
+    "share_of_current": 0.894541
+   }
+  ],
   "survival_article": {
    "48h": {
     "words_added": 5919,
@@ -867,8 +909,8 @@
   "sanctioned_editors": 1,
   "rule": "topic bans count on articles in the same topic area; site bans and sockpuppetry findings count everywhere",
   "sanctions_list": {
-   "seed_rows_total": 130,
-   "seed_rows_in_topic_area": 10,
+   "seed_rows_total": 154,
+   "seed_rows_in_topic_area": 24,
    "seed_rows_unresolved_accounts": 0,
    "block_log_snapshot": "2026-11-04"
   },
@@ -922,7 +964,33 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 13,
+   "works_cited": 13,
+   "history": {
+    "removed": 2,
+    "back_within_24h": 2,
+    "out_24h_or_more": 0,
+    "removing_accounts": 2,
+    "restoring_accounts": 2,
+    "page_wide_removals": 0,
+    "first_added": "2014-05-09",
+    "latest_removal": "2022-04-10",
+    "in_place_since": "2022-04-10",
+    "in_place_since_revision": 1081924005,
+    "removals": [
+     [
+      1078959541,
+      1078959670,
+      0.0
+     ],
+     [
+      1081872373,
+      1081924005,
+      7.2
+     ]
+    ]
+   }
   },
   {
    "id": "lead-2",
@@ -961,7 +1029,22 @@
    "added_before_sanction": true,
    "sanctioned_words_before": 3,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2021-02-02",
+    "latest_removal": null,
+    "in_place_since": "2021-02-02",
+    "in_place_since_revision": 1004313219,
+    "removals": []
+   }
   },
   {
    "id": "sec1-1",
@@ -994,7 +1077,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 2,
+   "works_cited": 2,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2014-05-09",
+    "latest_removal": null,
+    "in_place_since": "2014-05-09",
+    "in_place_since_revision": 607761274,
+    "removals": []
+   }
   },
   {
    "id": "sec1-2",
@@ -1029,7 +1127,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2014-05-09",
+    "latest_removal": null,
+    "in_place_since": "2014-05-09",
+    "in_place_since_revision": 607761274,
+    "removals": []
+   }
   },
   {
    "id": "sec1-3",
@@ -1058,7 +1171,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2014-05-09",
+    "latest_removal": null,
+    "in_place_since": "2014-05-09",
+    "in_place_since_revision": 607761274,
+    "removals": []
+   }
   },
   {
    "id": "sec1-4",
@@ -1087,7 +1215,28 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 3,
+   "works_cited": 3,
+   "history": {
+    "removed": 1,
+    "back_within_24h": 0,
+    "out_24h_or_more": 1,
+    "removing_accounts": 1,
+    "restoring_accounts": 1,
+    "page_wide_removals": 0,
+    "first_added": "2018-01-09",
+    "latest_removal": "2019-11-04",
+    "in_place_since": "2022-10-07",
+    "in_place_since_revision": 1114611499,
+    "removals": [
+     [
+      924544933,
+      1114611499,
+      25628.6
+     ]
+    ]
+   }
   },
   {
    "id": "sec1-5",
@@ -1132,7 +1281,28 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 2,
+   "works_cited": 2,
+   "history": {
+    "removed": 1,
+    "back_within_24h": 0,
+    "out_24h_or_more": 1,
+    "removing_accounts": 1,
+    "restoring_accounts": 1,
+    "page_wide_removals": 0,
+    "first_added": "2014-05-09",
+    "latest_removal": "2019-11-04",
+    "in_place_since": "2022-10-07",
+    "in_place_since_revision": 1114611499,
+    "removals": [
+     [
+      924544933,
+      1114611499,
+      25628.6
+     ]
+    ]
+   }
   },
   {
    "id": "sec1-6",
@@ -1157,7 +1327,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2014-07-09",
+    "latest_removal": null,
+    "in_place_since": "2014-07-09",
+    "in_place_since_revision": 616259215,
+    "removals": []
+   }
   },
   {
    "id": "sec1-7",
@@ -1192,7 +1377,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 2,
+   "works_cited": 2,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2014-05-09",
+    "latest_removal": null,
+    "in_place_since": "2014-05-09",
+    "in_place_since_revision": 607761274,
+    "removals": []
+   }
   },
   {
    "id": "sec1-8",
@@ -1221,7 +1421,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2021-09-14",
+    "latest_removal": null,
+    "in_place_since": "2021-09-14",
+    "in_place_since_revision": 1044313640,
+    "removals": []
+   }
   },
   {
    "id": "sec1-9",
@@ -1250,7 +1465,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2021-09-23",
+    "latest_removal": null,
+    "in_place_since": "2021-09-23",
+    "in_place_since_revision": 1045937345,
+    "removals": []
+   }
   },
   {
    "id": "sec1-10",
@@ -1275,7 +1505,28 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 2,
+   "works_cited": 2,
+   "history": {
+    "removed": 1,
+    "back_within_24h": 1,
+    "out_24h_or_more": 0,
+    "removing_accounts": 1,
+    "restoring_accounts": 1,
+    "page_wide_removals": 0,
+    "first_added": "2021-09-22",
+    "latest_removal": "2021-09-22",
+    "in_place_since": "2021-09-22",
+    "in_place_since_revision": 1045816682,
+    "removals": [
+     [
+      1045802852,
+      1045816682,
+      1.4
+     ]
+    ]
+   }
   },
   {
    "id": "sec1-11",
@@ -1306,7 +1557,28 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 5,
+   "works_cited": 5,
+   "history": {
+    "removed": 1,
+    "back_within_24h": 1,
+    "out_24h_or_more": 0,
+    "removing_accounts": 1,
+    "restoring_accounts": 1,
+    "page_wide_removals": 0,
+    "first_added": "2020-05-21",
+    "latest_removal": "2020-10-24",
+    "in_place_since": "2020-10-24",
+    "in_place_since_revision": 985158841,
+    "removals": [
+     [
+      985125588,
+      985158841,
+      6.2
+     ]
+    ]
+   }
   },
   {
    "id": "sec1-12",
@@ -1343,7 +1615,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 3,
+   "works_cited": 3,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2021-07-05",
+    "latest_removal": null,
+    "in_place_since": "2021-07-05",
+    "in_place_since_revision": 1032051593,
+    "removals": []
+   }
   },
   {
    "id": "sec1-13",
@@ -1372,7 +1659,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 3,
+   "works_cited": 3,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2021-09-14",
+    "latest_removal": null,
+    "in_place_since": "2021-09-14",
+    "in_place_since_revision": 1044362074,
+    "removals": []
+   }
   },
   {
    "id": "sec1-14",
@@ -1401,7 +1703,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2021-09-14",
+    "latest_removal": null,
+    "in_place_since": "2021-09-14",
+    "in_place_since_revision": 1044376134,
+    "removals": []
+   }
   },
   {
    "id": "sec1-15",
@@ -1432,7 +1749,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 2,
+   "works_cited": 2,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2021-09-14",
+    "latest_removal": null,
+    "in_place_since": "2021-09-14",
+    "in_place_since_revision": 1044376134,
+    "removals": []
+   }
   },
   {
    "id": "sec2-1",
@@ -1469,7 +1801,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 3,
+   "works_cited": 3,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2021-02-02",
+    "latest_removal": null,
+    "in_place_since": "2021-02-02",
+    "in_place_since_revision": 1004326933,
+    "removals": []
+   }
   },
   {
    "id": "sec2-2",
@@ -1502,7 +1849,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2014-05-09",
+    "latest_removal": null,
+    "in_place_since": "2014-05-09",
+    "in_place_since_revision": 607761274,
+    "removals": []
+   }
   },
   {
    "id": "sec2-3",
@@ -1527,7 +1889,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2021-09-23",
+    "latest_removal": null,
+    "in_place_since": "2021-09-23",
+    "in_place_since_revision": 1045944819,
+    "removals": []
+   }
   },
   {
    "id": "sec2-4",
@@ -1552,7 +1929,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2021-02-02",
+    "latest_removal": null,
+    "in_place_since": "2021-02-02",
+    "in_place_since_revision": 1004328771,
+    "removals": []
+   }
   },
   {
    "id": "sec2-5",
@@ -1577,7 +1969,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2021-09-23",
+    "latest_removal": null,
+    "in_place_since": "2021-09-23",
+    "in_place_since_revision": 1045933427,
+    "removals": []
+   }
   },
   {
    "id": "sec2-6",
@@ -1606,7 +2013,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2021-09-23",
+    "latest_removal": null,
+    "in_place_since": "2021-09-23",
+    "in_place_since_revision": 1045971314,
+    "removals": []
+   }
   },
   {
    "id": "sec2-7",
@@ -1635,7 +2057,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2021-09-14",
+    "latest_removal": null,
+    "in_place_since": "2021-09-14",
+    "in_place_since_revision": 1044369862,
+    "removals": []
+   }
   },
   {
    "id": "sec2-8",
@@ -1660,7 +2097,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 3,
+   "works_cited": 3,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2021-09-14",
+    "latest_removal": null,
+    "in_place_since": "2021-09-14",
+    "in_place_since_revision": 1044369862,
+    "removals": []
+   }
   },
   {
    "id": "sec2-9",
@@ -1693,7 +2145,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 3,
+   "works_cited": 3,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2021-07-05",
+    "latest_removal": null,
+    "in_place_since": "2021-07-05",
+    "in_place_since_revision": 1032077405,
+    "removals": []
+   }
   },
   {
    "id": "sec2-10",
@@ -1722,7 +2189,28 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 1,
+    "back_within_24h": 1,
+    "out_24h_or_more": 0,
+    "removing_accounts": 1,
+    "restoring_accounts": 1,
+    "page_wide_removals": 0,
+    "first_added": "2021-07-05",
+    "latest_removal": "2021-09-14",
+    "in_place_since": "2021-09-14",
+    "in_place_since_revision": 1044352802,
+    "removals": [
+     [
+      1044313640,
+      1044352802,
+      3.8
+     ]
+    ]
+   }
   },
   {
    "id": "sec2-11",
@@ -1747,7 +2235,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2021-09-20",
+    "latest_removal": null,
+    "in_place_since": "2021-09-20",
+    "in_place_since_revision": 1045422139,
+    "removals": []
+   }
   },
   {
    "id": "sec2-12",
@@ -1772,7 +2275,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2021-09-20",
+    "latest_removal": null,
+    "in_place_since": "2021-09-20",
+    "in_place_since_revision": 1045422139,
+    "removals": []
+   }
   }
  ],
  "inputs": {
@@ -1781,7 +2299,9 @@
   "wikiwho_rev_content": "https://wikiwho-api.wmcloud.org/en/api/v1.0.0-beta/rev_content/rev_id/1383486614/",
   "wikiwho_all_content": "https://wikiwho-api.wmcloud.org/en/api/v1.0.0-beta/all_content/page_id/42707779/",
   "history_revisions": 270,
-  "sanctions_csv_sha256": "83c3c25da3d1338292d21c2b407f4fdc4aee5a973a0fa7ac6bb32e407de325dd"
+  "sanctions_csv_sha256": "46ecf8bd2945ef432b9a5a9afcd72502654439f2b78b039f168883e847475a22",
+  "source_names_sha256": "1e0c7263959b899f0a4dd2a19e5f77b3d542f7e961d864fcb790974eb1ddbad0",
+  "books_sha256": "c82c512cf1e16abc1ab47c9aa152ce4df80360300d3c17f57b443a06ccaf46f6"
  },
  "quality": {
   "wikiwho_tokens": 7940,
@@ -1795,15 +2315,111 @@
   "lead_citations": 12,
   "short_footnotes": 0,
   "with_link": 53,
-  "distinct_sources": 39,
+  "distinct_sources": 40,
   "editors_adding_citations": 8,
   "citation_only_editors": 2,
+  "flags": {
+   "opinion": 0,
+   "no_link": 1,
+   "book_without_page": 0,
+   "not_english": 18,
+   "not_english_no_quote": 15,
+   "dead_link_no_archive": 0,
+   "paywall_or_registration": 1
+  },
+  "flags_by_editor": {
+   "Editor 1": {
+    "citations": 38,
+    "opinion": 0,
+    "no_link": 1,
+    "book_without_page": 0,
+    "not_english": 15,
+    "not_english_no_quote": 15,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 1
+   },
+   "Editor 4": {
+    "citations": 7,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 1,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 3": {
+    "citations": 3,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 2,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 14": {
+    "citations": 2,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 2": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 7": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 19": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 20": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   }
+  },
   "list": [
    {
     "source": "meduza.io",
-    "name_as_cited": "[[Meduza (website)",
+    "name_as_cited": "Meduza",
     "citations": 4,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {
+     "not_english": 3,
+     "not_english_no_quote": 2
+    },
     "added_by": {
      "Editor 1": 3,
      "Editor 4": 1
@@ -1814,6 +2430,8 @@
     "name_as_cited": "The New York Times",
     "citations": 4,
     "lead_citations": 1,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 1": 3,
      "Editor 7": 1
@@ -1824,6 +2442,11 @@
     "name_as_cited": "ANNA News",
     "citations": 3,
     "lead_citations": 1,
+    "opinion_citations": 0,
+    "flags": {
+     "not_english": 2,
+     "not_english_no_quote": 2
+    },
     "added_by": {
      "Editor 1": 2,
      "Editor 4": 1
@@ -1834,15 +2457,11 @@
     "name_as_cited": "Deutsche Welle",
     "citations": 2,
     "lead_citations": 1,
-    "added_by": {
-     "Editor 1": 2
-    }
-   },
-   {
-    "source": "edu.ua",
-    "name_as_cited": "Donetsk National University",
-    "citations": 2,
-    "lead_citations": 1,
+    "opinion_citations": 0,
+    "flags": {
+     "not_english": 2,
+     "not_english_no_quote": 2
+    },
     "added_by": {
      "Editor 1": 2
     }
@@ -1852,6 +2471,11 @@
     "name_as_cited": "Вестник Антропологии",
     "citations": 2,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {
+     "not_english": 2,
+     "not_english_no_quote": 2
+    },
     "added_by": {
      "Editor 1": 2
     }
@@ -1861,6 +2485,8 @@
     "name_as_cited": "Agence France-Presse",
     "citations": 2,
     "lead_citations": 1,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 1": 2
     }
@@ -1870,6 +2496,8 @@
     "name_as_cited": "DFRLab",
     "citations": 2,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 4": 1,
      "Editor 14": 1
@@ -1880,6 +2508,8 @@
     "name_as_cited": "Refworld.org",
     "citations": 2,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 1": 2
     }
@@ -1889,6 +2519,8 @@
     "name_as_cited": "The Washington Post",
     "citations": 2,
     "lead_citations": 1,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 1": 1,
      "Editor 14": 1
@@ -1899,6 +2531,8 @@
     "name_as_cited": "Atlantic Council",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 1": 1
     }
@@ -1908,6 +2542,8 @@
     "name_as_cited": "bellingcat",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 4": 1
     }
@@ -1917,6 +2553,8 @@
     "name_as_cited": "Belnovosti",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 3": 1
     }
@@ -1926,6 +2564,8 @@
     "name_as_cited": "Business Insider",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 1": 1
     }
@@ -1935,6 +2575,10 @@
     "name_as_cited": "Nationalities Papers",
     "citations": 1,
     "lead_citations": 1,
+    "opinion_citations": 0,
+    "flags": {
+     "paywall_or_registration": 1
+    },
     "added_by": {
      "Editor 1": 1
     }
@@ -1944,6 +2588,22 @@
     "name_as_cited": "Committee to Protect Journalists",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "source": "donnu.edu.ua",
+    "name_as_cited": "Donetsk National University",
+    "citations": 1,
+    "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {
+     "not_english": 1,
+     "not_english_no_quote": 1
+    },
     "added_by": {
      "Editor 1": 1
     }
@@ -1953,6 +2613,8 @@
     "name_as_cited": "Enab Baladi",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 4": 1
     }
@@ -1962,6 +2624,8 @@
     "name_as_cited": "",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 19": 1
     }
@@ -1971,6 +2635,8 @@
     "name_as_cited": "Parameters 48",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 1": 1
     }
@@ -1980,6 +2646,11 @@
     "name_as_cited": "Scientific Notes of the Institute of Journalism",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {
+     "not_english": 1,
+     "not_english_no_quote": 1
+    },
     "added_by": {
      "Editor 1": 1
     }
@@ -1989,6 +2660,8 @@
     "name_as_cited": "Institute for Strategic Dialogue",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 4": 1
     }
@@ -1998,6 +2671,25 @@
     "name_as_cited": "ru.krymr.com",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {
+     "not_english": 1,
+     "not_english_no_quote": 1
+    },
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "source": "lp.edu.ua",
+    "name_as_cited": "Visnyk Natsionalnoho Universytetu 'Lvivska Politekhnika'",
+    "citations": 1,
+    "lead_citations": 1,
+    "opinion_citations": 0,
+    "flags": {
+     "not_english": 1,
+     "not_english_no_quote": 1
+    },
     "added_by": {
      "Editor 1": 1
     }
@@ -2007,6 +2699,11 @@
     "name_as_cited": "Jahrbuch Terrorismus",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {
+     "not_english": 1,
+     "not_english_no_quote": 1
+    },
     "added_by": {
      "Editor 1": 1
     }
@@ -2016,6 +2713,10 @@
     "name_as_cited": "Routledge",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {
+     "no_link": 1
+    },
     "added_by": {
      "Editor 1": 1
     }
@@ -2025,6 +2726,8 @@
     "name_as_cited": "Springer International Publishing",
     "citations": 1,
     "lead_citations": 1,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 1": 1
     }
@@ -2034,6 +2737,8 @@
     "name_as_cited": "New America (organization)",
     "citations": 1,
     "lead_citations": 1,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 1": 1
     }
@@ -2043,6 +2748,8 @@
     "name_as_cited": "Novye Izvestia",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 1": 1
     }
@@ -2052,6 +2759,10 @@
     "name_as_cited": "RBC",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {
+     "not_english": 1
+    },
     "added_by": {
      "Editor 3": 1
     }
@@ -2061,6 +2772,11 @@
     "name_as_cited": "rkn.gov.ru",
     "citations": 1,
     "lead_citations": 1,
+    "opinion_citations": 0,
+    "flags": {
+     "not_english": 1,
+     "not_english_no_quote": 1
+    },
     "added_by": {
      "Editor 1": 1
     }
@@ -2070,6 +2786,8 @@
     "name_as_cited": "RSF",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 4": 1
     }
@@ -2079,6 +2797,8 @@
     "name_as_cited": "United States Senate Committee on Appropriations",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 1": 1
     }
@@ -2088,6 +2808,8 @@
     "name_as_cited": "Der Spiegel",
     "citations": 1,
     "lead_citations": 1,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 1": 1
     }
@@ -2097,6 +2819,8 @@
     "name_as_cited": "StopFake",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 1": 1
     }
@@ -2106,6 +2830,8 @@
     "name_as_cited": "The Independent Barents Observer",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 1": 1
     }
@@ -2115,6 +2841,8 @@
     "name_as_cited": "The Moscow Times",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 2": 1
     }
@@ -2124,6 +2852,8 @@
     "name_as_cited": "The Times of Israel",
     "citations": 1,
     "lead_citations": 1,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 1": 1
     }
@@ -2133,6 +2863,8 @@
     "name_as_cited": "Ukraine Today",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 20": 1
     }
@@ -2142,6 +2874,10 @@
     "name_as_cited": "Znak.com",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {
+     "not_english": 1
+    },
     "added_by": {
      "Editor 3": 1
     }
@@ -2151,11 +2887,1914 @@
     "name_as_cited": "MediaZona",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {
+     "not_english": 1,
+     "not_english_no_quote": 1
+    },
     "added_by": {
      "Editor 1": 1
     }
    }
-  ]
+  ],
+  "citations_naming_an_author": 30,
+  "authors": [
+   {
+    "name": "Robert Mackey",
+    "wikipedia": null,
+    "citations": 3,
+    "lead_citations": 0,
+    "works": 3
+   },
+   {
+    "name": "A.J Moore",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Adam Taylor",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 1,
+    "works": 1
+   },
+   {
+    "name": "Alexey Kovalev",
+    "wikipedia": "Alexey Kovalev (journalist)",
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Andriy Blyzniuk",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Anton Troianovski",
+    "wikipedia": "Anton Troianovski",
+    "citations": 1,
+    "lead_citations": 1,
+    "works": 1
+   },
+   {
+    "name": "Ben Hubbard",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 1,
+    "works": 1
+   },
+   {
+    "name": "Candace Rondeaux",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 1,
+    "works": 1
+   },
+   {
+    "name": "Carlotta Gall",
+    "wikipedia": "Carlotta Gall",
+    "citations": 1,
+    "lead_citations": 1,
+    "works": 1
+   },
+   {
+    "name": "Christian Esch",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 1,
+    "works": 1
+   },
+   {
+    "name": "Christoph Reuter",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 1,
+    "works": 1
+   },
+   {
+    "name": "Christoph Scheuermann",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 1,
+    "works": 1
+   },
+   {
+    "name": "Dmitry Kuznets",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Ekaterina Venkina",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Elise Thomas",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Ellen Barry",
+    "wikipedia": "Ellen Barry (journalist)",
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Igor Savchenko",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Irina Shezhkova",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Ivan Nechepurenko",
+    "wikipedia": "Ivan Nechepurenko",
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Joyce Sohyun Lee",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 1,
+    "works": 1
+   },
+   {
+    "name": "Judah Ari Gross",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 1,
+    "works": 1
+   },
+   {
+    "name": "Julia Amalia Heyer",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 1,
+    "works": 1
+   },
+   {
+    "name": "Jussi Backman",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 1,
+    "works": 1
+   },
+   {
+    "name": "Katrin Kuntz",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 1,
+    "works": 1
+   },
+   {
+    "name": "Kimberly Marten",
+    "wikipedia": "Kimberly Marten",
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Maria Kolomychenko",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Mark Krutov",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Maximilian Popp",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 1,
+    "works": 1
+   },
+   {
+    "name": "Michael B Kelley",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Mustafa Nayyem",
+    "wikipedia": "Mustafa Nayyem",
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   }
+  ],
+  "items": [
+   {
+    "id": "doi:10.1017/nps.2019.70",
+    "source": "cambridge.org",
+    "citations": 1,
+    "flags": [
+     "paywall_or_registration"
+    ],
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "doi:10.1080/1060586x.2019.1591142",
+    "source": "anna-news.info",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 4": 1
+    }
+   },
+   {
+    "id": "doi:10.31558/2519-2949.2020.3.10",
+    "source": "donnu.edu.ua",
+    "citations": 1,
+    "flags": [
+     "not_english",
+     "not_english_no_quote"
+    ],
+    "language_as_cited": "uk",
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "isbn:9781351387606",
+    "source": "name:routledge",
+    "citations": 1,
+    "flags": [
+     "no_link"
+    ],
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "isbn:9783030220594",
+    "source": "name:springer international publishing",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en",
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:anna-news.info",
+    "source": "anna-news.info",
+    "citations": 1,
+    "flags": [
+     "not_english",
+     "not_english_no_quote"
+    ],
+    "language_as_cited": "ru",
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:anna-news.info/about",
+    "source": "anna-news.info",
+    "citations": 1,
+    "flags": [
+     "not_english",
+     "not_english_no_quote"
+    ],
+    "language_as_cited": "ru",
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:appropriations.senate.gov/imo/media/doc/032917-Nayyem-Zalishchuk-Outside-Witness-Testimony.pdf",
+    "source": "senate.gov",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:atlanticcouncil.org/news/press-releases/atlantic-councils-dfrlab-independent-analysis-of-networks-removed-by-facebook-in-russia-georgia-and-myanmar",
+    "source": "atlanticcouncil.org",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:bellingcat.com/news/uk-and-europe/2014/10/11/russian-tv-inadvertently-demonstrates-mh17-wasnt-shot-down-by-aircraft-cannon-fire",
+    "source": "bellingcat.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 4": 1
+    }
+   },
+   {
+    "id": "url:belnovosti.ru/proisshestviya/chp/11329.html",
+    "source": "belnovosti.ru",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 3": 1
+    }
+   },
+   {
+    "id": "url:businessinsider.com/russian-judge-shot-in-syria-2013-2",
+    "source": "businessinsider.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:cpj.org/2017/09/separatists-in-east-ukraine-sentence-blogger-to-14",
+    "source": "cpj.org",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:dw.com/ru/roskomnadzor-prizval-sozdat-videohostingi-dlja-rossijskih-smi/a-55757736",
+    "source": "dw.com",
+    "citations": 1,
+    "flags": [
+     "not_english",
+     "not_english_no_quote"
+    ],
+    "language_as_cited": "ru",
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:dw.com/ru/zelenskij-podpisal-ukaz-o-blokirovke-rostelekoma/a-58953877",
+    "source": "dw.com",
+    "citations": 1,
+    "flags": [
+     "not_english",
+     "not_english_no_quote"
+    ],
+    "language_as_cited": "ru",
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:elibrary.ru/item.asp?id=32311206",
+    "source": "elibrary.ru",
+    "citations": 1,
+    "flags": [
+     "not_english",
+     "not_english_no_quote"
+    ],
+    "language_as_cited": "ru",
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:elibrary.ru/item.asp?id=35020586",
+    "source": "elibrary.ru",
+    "citations": 1,
+    "flags": [
+     "not_english",
+     "not_english_no_quote"
+    ],
+    "language_as_cited": "ru",
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:en.newizv.ru/news/world/23-08-2021/zelensky-ordered-to-block-web-resources-of-rostelecom-and-other-russian-companies",
+    "source": "newizv.ru",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:ena.lp.edu.ua/handle/ntb/43011",
+    "source": "lp.edu.ua",
+    "citations": 1,
+    "flags": [
+     "not_english",
+     "not_english_no_quote"
+    ],
+    "language_as_cited": "uk",
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:english.enabbaladi.net/archives/2019/09/russian-media-in-syria-organized-propaganda-breaking-the-censorship-scissors",
+    "source": "enabbaladi.net",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 4": 1
+    }
+   },
+   {
+    "id": "url:france24.com/en/20180807-russia-holds-funerals-journalists-shot-c-africa",
+    "source": "france24.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:huffingtonpost.com/2013/03/08/syria-tank-footage-devastation-darayya_n_2839499.html",
+    "source": "huffingtonpost.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 19": 1
+    }
+   },
+   {
+    "id": "url:index-investor.com/resources/Research-Materials/Russia/Russian_Info_Operations.pdf",
+    "source": "index-investor.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:irbis-nbuv.gov.ua/cgi-bin/irbis_nbuv/cgiirbis_64.exe?C21COM=2&I21DBN=UJRN&P21DBN=UJRN&IMAGE_FILE_DOWNLOAD=1&Image_file_name=PDF/Nzizh_2015_60_9.pdf",
+    "source": "irbis-nbuv.gov.ua",
+    "citations": 1,
+    "flags": [
+     "not_english",
+     "not_english_no_quote"
+    ],
+    "language_as_cited": "uk",
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:isdglobal.org/isd-publications/the-long-tail-of-influence-operations-a-case-study-on-news-front",
+    "source": "isdglobal.org",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 4": 1
+    }
+   },
+   {
+    "id": "url:jstor.org/stable/24916731",
+    "source": "name:jahrbuch terrorismus",
+    "citations": 1,
+    "flags": [
+     "not_english",
+     "not_english_no_quote"
+    ],
+    "language_as_cited": "de",
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:medium.com/dfrlab/facebook-removes-propaganda-outlets-linked-to-russian-security-services-51fbe2f6b841",
+    "source": "medium.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 4": 1
+    }
+   },
+   {
+    "id": "url:medium.com/dfrlab/the-kremlins-amplifiers-in-germany-da62a836aa83",
+    "source": "medium.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 14": 1
+    }
+   },
+   {
+    "id": "url:meduza.io/en/feature/2020/11/20/to-block-or-not-to-block",
+    "source": "meduza.io",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:meduza.io/feature/2018/01/09/chastnuyu-kompaniyu-turan-voyuyuschuyu-v-sirii-vydumal-zhurnalist-rassledovanie-conflict-intelligence-team",
+    "source": "meduza.io",
+    "citations": 2,
+    "flags": [
+     "not_english",
+     "not_english_no_quote"
+    ],
+    "language_as_cited": "ru",
+    "added_by": {
+     "Editor 1": 1,
+     "Editor 4": 1
+    }
+   },
+   {
+    "id": "url:meduza.io/feature/2019/01/31/on-ne-hotel-prisposablivatsya",
+    "source": "meduza.io",
+    "citations": 1,
+    "flags": [
+     "not_english",
+     "not_english_no_quote"
+    ],
+    "language_as_cited": "ru",
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:newamerica.org/international-security/reports/decoding-wagner-group-analyzing-role-private-military-security-contractors-russian-proxy-warfare",
+    "source": "newamerica.org",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:nytimes.com/2014/06/07/world/europe/russian-news-media-amplifies-attacks-on-kerrys-spokeswoman.html",
+    "source": "nytimes.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:nytimes.com/2019/10/15/world/middleeast/kurds-syria-turkey.html",
+    "source": "nytimes.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:observers.france24.com/en/20180511-white-helmets-syria-fact-fiction-debunking",
+    "source": "france24.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:rbc.ru/politics/09/01/2018/5a5334bb9a7947846224c60d",
+    "source": "rbc.ru",
+    "citations": 1,
+    "flags": [
+     "not_english"
+    ],
+    "language_as_cited": "ru",
+    "added_by": {
+     "Editor 3": 1
+    }
+   },
+   {
+    "id": "url:refworld.org/docid/558a6a5c409.html",
+    "source": "refworld.org",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:refworld.org/pdfid/56b843194.pdf",
+    "source": "refworld.org",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:rkn.gov.ru/mass-communications/reestr/media?id=641495",
+    "source": "rkn.gov.ru",
+    "citations": 1,
+    "flags": [
+     "not_english",
+     "not_english_no_quote"
+    ],
+    "language_as_cited": "ru",
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:rsf.org/en/news/summary-attacks-media",
+    "source": "rsf.org",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 4": 1
+    }
+   },
+   {
+    "id": "url:ru.krymr.com/a/28964650.html",
+    "source": "krymr.com",
+    "citations": 1,
+    "flags": [
+     "not_english",
+     "not_english_no_quote"
+    ],
+    "language_as_cited": "ru",
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:spiegel.de/international/world/the-syrian-debacle-and-its-implications-for-europe-a-1292149.html",
+    "source": "spiegel.de",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:stopfake.org/en/fake-europe-accuses-ukraine-of-increasing-radioactivity",
+    "source": "stopfake.org",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:thebarentsobserver.com/en/civil-society-and-media/2017/03/russian-state-news-agency-misuses-barents-observer-fake-news-story",
+    "source": "thebarentsobserver.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:thelede.blogs.nytimes.com/2013/01/31/vacation-on-syrias-front-lines-goes-wrong-for-russian-judge",
+    "source": "nytimes.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:thelede.blogs.nytimes.com/2013/03/08/russians-bring-dashcam-war-reporting-to-syria",
+    "source": "nytimes.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 7": 1
+    }
+   },
+   {
+    "id": "url:themoscowtimes.com/2013/03/12/crazy-abkhaz-journalists-cover-syria-frontline-a22325",
+    "source": "themoscowtimes.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 2": 1
+    }
+   },
+   {
+    "id": "url:timesofisrael.com/us-mideast-pullback-didnt-start-with-the-kurds-and-it-wont-end-there-either",
+    "source": "timesofisrael.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:ukrainetoday.org/2020/05/20/youtube-has-removed-three-russian-propaganda-channels",
+    "source": "ukrainetoday.org",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 20": 1
+    }
+   },
+   {
+    "id": "url:washingtonpost.com/world/2019/10/15/video-appears-show-russian-soldiers-abandoned-us-base-syria",
+    "source": "washingtonpost.com",
+    "citations": 2,
+    "flags": [],
+    "added_by": {
+     "Editor 1": 1,
+     "Editor 14": 1
+    }
+   },
+   {
+    "id": "url:znak.com/2018-01-09/zhurnalist_oleg_blohin_nazval_feykom_informaciyu_o_pridumannoy_im_chvk_voyuyuchey_v_sirii",
+    "source": "znak.com",
+    "citations": 1,
+    "flags": [
+     "not_english"
+    ],
+    "language_as_cited": "ru",
+    "added_by": {
+     "Editor 3": 1
+    }
+   },
+   {
+    "id": "url:zona.media/news/2020/05/20/youtube",
+    "source": "zona.media",
+    "citations": 1,
+    "flags": [
+     "not_english",
+     "not_english_no_quote"
+    ],
+    "language_as_cited": "ru",
+    "added_by": {
+     "Editor 1": 1
+    }
+   }
+  ],
+  "bundles": {
+   "sentences_with_footnotes": 27,
+   "sentences_by_works_cited": {
+    "1": 14,
+    "2-4": 11,
+    "5-9": 1,
+    "10 or more": 1
+   },
+   "largest": [
+    {
+     "sentence": "lead-1",
+     "footnotes": 13,
+     "works": 13
+    },
+    {
+     "sentence": "sec1-11",
+     "footnotes": 5,
+     "works": 5
+    }
+   ]
+  }
+ },
+ "changes": {
+  "words_removed": 3694,
+  "words_removed_later_restored": 2326,
+  "source_links_removed": 36,
+  "editors_removing": 58,
+  "listed_terms": {
+   "inserted": {
+    "WTW: contentious labels": 2,
+    "WTW: editorializing": 5,
+    "WTW: euphemisms": 1,
+    "WTW: expressions of doubt": 4,
+    "WTW: puffery": 1,
+    "WTW: synonyms for said": 15,
+    "WTW: unsupported attributions": 1,
+    "contested: Russia and Ukraine": 10,
+    "contested: terms for armed groups and their members": 4,
+    "contested: terms for deaths": 3,
+    "contested: terms for violent events": 6,
+    "contested: truth claims": 21
+   },
+   "removed": {
+    "WTW: contentious labels": 2,
+    "WTW: editorializing": 3,
+    "WTW: euphemisms": 2,
+    "WTW: expressions of doubt": 1,
+    "WTW: puffery": 1,
+    "WTW: synonyms for said": 11,
+    "contested: Russia and Ukraine": 4,
+    "contested: terms for armed groups and their members": 3,
+    "contested: terms for deaths": 1,
+    "contested: terms for violent events": 1,
+    "contested: truth claims": 13
+   }
+  },
+  "lists": {
+   "words_to_watch": {
+    "revision": 1382059772,
+    "url": "https://en.wikipedia.org/w/index.php?oldid=1382059772",
+    "sha256": "21e24e2898750322164b24947621630845d75cf8dd5adf3ec8cd860152449ea3"
+   },
+   "contested_terms": {
+    "sha256": "944606776be20b6b77dceb3ee5f6a29f8f5e196bf93cc16a4b6f2db6efe600c1"
+   }
+  },
+  "editors": [
+   {
+    "label": "Editor 1",
+    "words_removed": 898,
+    "others_words_removed": 856,
+    "words_removed_later_restored": 141,
+    "removing_revisions": 39,
+    "sources_removed": {
+     "youtube.com": 4,
+     "liveuamap.com": 1,
+     "tass.com": 1,
+     "twitter.com": 1,
+     "znak.com": 1
+    },
+    "terms_inserted": {
+     "WTW: contentious labels": {
+      "terrorist": 1
+     },
+     "WTW: editorializing": {
+      "actually": 1,
+      "clearly": 1,
+      "only": 1
+     },
+     "WTW: euphemisms": {
+      "challenge": 1
+     },
+     "WTW: expressions of doubt": {
+      "alleged": 1
+     },
+     "WTW: synonyms for said": {
+      "claim": 3,
+      "note": 1
+     },
+     "contested: Russia and Ukraine": {
+      "kyiv": 1,
+      "separatists": 3
+     },
+     "contested: terms for armed groups and their members": {
+      "jihadist": 1,
+      "terrorist": 1
+     },
+     "contested: terms for deaths": {
+      "killed": 2
+     },
+     "contested: terms for violent events": {
+      "attack": 3
+     },
+     "contested: truth claims": {
+      "falsely": 2,
+      "propaganda": 7
+     }
+    },
+    "terms_removed": {
+     "WTW: synonyms for said": {
+      "claim": 1,
+      "confirm": 2,
+      "deny": 4,
+      "expose": 2
+     },
+     "contested: terms for violent events": {
+      "attack": 1
+     },
+     "contested: truth claims": {
+      "propaganda": 2
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1043887872",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1044352802",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1045358699",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1044390593",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1044506861"
+    ]
+   },
+   {
+    "label": "Editor 21",
+    "words_removed": 797,
+    "others_words_removed": 797,
+    "words_removed_later_restored": 797,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "cambridge.org": 1,
+     "doi.org": 1,
+     "dw.com": 1,
+     "france24.com": 1,
+     "lp.edu.ua": 1,
+     "nytimes.com": 1,
+     "rkn.gov.ru": 1,
+     "spiegel.de": 1,
+     "timesofisrael.com": 1,
+     "washingtonpost.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: editorializing": {
+      "only": 1
+     },
+     "WTW: euphemisms": {
+      "challenge": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1078959541"
+    ]
+   },
+   {
+    "label": "Editor 22",
+    "words_removed": 747,
+    "others_words_removed": 747,
+    "words_removed_later_restored": 747,
+    "removing_revisions": 2,
+    "sources_removed": {
+     "cambridge.org": 1,
+     "doi.org": 1,
+     "dw.com": 1,
+     "france24.com": 1,
+     "lp.edu.ua": 1,
+     "nytimes.com": 1,
+     "spiegel.de": 1,
+     "timesofisrael.com": 1,
+     "washingtonpost.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: editorializing": {
+      "only": 1
+     },
+     "WTW: euphemisms": {
+      "challenge": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1081872373",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1081872308"
+    ]
+   },
+   {
+    "label": "Editor 3",
+    "words_removed": 422,
+    "others_words_removed": 419,
+    "words_removed_later_restored": 417,
+    "removing_revisions": 6,
+    "sources_removed": {
+     "medium.com": 1,
+     "nytimes.com": 1,
+     "rkn.gov.ru": 1,
+     "twitter.com": 1
+    },
+    "terms_inserted": {
+     "WTW: synonyms for said": {
+      "claim": 2,
+      "confirm": 2,
+      "deny": 3,
+      "expose": 1
+     },
+     "contested: Russia and Ukraine": {
+      "separatist": 1
+     },
+     "contested: terms for violent events": {
+      "attack": 1
+     },
+     "contested: truth claims": {
+      "propaganda": 2
+     }
+    },
+    "terms_removed": {
+     "WTW: synonyms for said": {
+      "claim": 1
+     },
+     "contested: Russia and Ukraine": {
+      "russian-backed": 1,
+      "separatist": 1,
+      "separatists": 1
+     },
+     "contested: truth claims": {
+      "propaganda": 6
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1043878930",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1044313640",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1045802852",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1045311388",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1044313989"
+    ]
+   },
+   {
+    "label": "Editor 23",
+    "words_removed": 140,
+    "others_words_removed": 140,
+    "words_removed_later_restored": 140,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "contested: truth claims": {
+      "propaganda": 2
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=924544933"
+    ]
+   },
+   {
+    "label": "Editor 6",
+    "words_removed": 131,
+    "others_words_removed": 131,
+    "words_removed_later_restored": 1,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "businessinsider.com": 1
+    },
+    "terms_inserted": {
+     "contested: truth claims": {
+      "propaganda": 2
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=921413577"
+    ]
+   },
+   {
+    "label": "Editor 4",
+    "words_removed": 119,
+    "others_words_removed": 119,
+    "words_removed_later_restored": 1,
+    "removing_revisions": 9,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: editorializing": {
+      "actually": 1,
+      "only": 1
+     },
+     "WTW: expressions of doubt": {
+      "supposed": 1
+     },
+     "WTW: synonyms for said": {
+      "reveal": 1,
+      "speculate": 1
+     },
+     "contested: Russia and Ukraine": {
+      "pro-russian": 1,
+      "russian-backed": 1,
+      "separatist": 1,
+      "separatists": 1
+     },
+     "contested: terms for violent events": {
+      "attack": 2
+     },
+     "contested: truth claims": {
+      "propaganda": 4
+     }
+    },
+    "terms_removed": {
+     "contested: truth claims": {
+      "propaganda": 2
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1045452880",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1045774912",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1045816682",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1045450902",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1047551243"
+    ]
+   },
+   {
+    "label": "Editor 14",
+    "words_removed": 64,
+    "others_words_removed": 64,
+    "words_removed_later_restored": 1,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "syrianews.cc": 1,
+     "youtube.com": 1
+    },
+    "terms_inserted": {
+     "WTW: expressions of doubt": {
+      "alleged": 1
+     },
+     "WTW: synonyms for said": {
+      "reveal": 1
+     },
+     "contested: terms for armed groups and their members": {
+      "fighter": 1
+     }
+    },
+    "terms_removed": {
+     "contested: terms for deaths": {
+      "killed": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=819531070"
+    ]
+   },
+   {
+    "label": "Editor 24",
+    "words_removed": 57,
+    "others_words_removed": 57,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 4,
+    "sources_removed": {
+     "worldcat.org": 1
+    },
+    "terms_inserted": {
+     "contested: truth claims": {
+      "propaganda": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1036196181",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1077830604",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1301005419",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1297474717"
+    ]
+   },
+   {
+    "label": "Editor 25",
+    "words_removed": 42,
+    "others_words_removed": 42,
+    "words_removed_later_restored": 42,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: editorializing": {
+      "only": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1084468711"
+    ]
+   },
+   {
+    "label": "Editor 26",
+    "words_removed": 27,
+    "others_words_removed": 27,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: expressions of doubt": {
+      "alleged": 1
+     },
+     "WTW: synonyms for said": {
+      "reveal": 1
+     },
+     "contested: terms for armed groups and their members": {
+      "fighter": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=868526970"
+    ]
+   },
+   {
+    "label": "Editor 27",
+    "words_removed": 26,
+    "others_words_removed": 26,
+    "words_removed_later_restored": 16,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "rt.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=985125588"
+    ]
+   },
+   {
+    "label": "Editor 5",
+    "words_removed": 18,
+    "others_words_removed": 17,
+    "words_removed_later_restored": 4,
+    "removing_revisions": 5,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1047013300",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1047013602",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1047013751",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1047014093",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1047434167"
+    ]
+   },
+   {
+    "label": "Editor 13",
+    "words_removed": 17,
+    "others_words_removed": 15,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 3,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1077844977",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1076151631",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1076258066"
+    ]
+   },
+   {
+    "label": "Editor 28",
+    "words_removed": 17,
+    "others_words_removed": 17,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1081790976",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1081924005"
+    ]
+   },
+   {
+    "label": "Editor 10",
+    "words_removed": 13,
+    "others_words_removed": 13,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 5,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1078352264",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1074316866",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1078352604",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1075404774",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1078352784"
+    ]
+   },
+   {
+    "label": "Editor 11",
+    "words_removed": 13,
+    "others_words_removed": 11,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 4,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=626106601",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=626106791",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=626107059",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=626107096"
+    ]
+   },
+   {
+    "label": "Editor 17",
+    "words_removed": 13,
+    "others_words_removed": 11,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 5,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=853871066",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=920909790",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=849927272",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=849927238",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=853870986"
+    ]
+   },
+   {
+    "label": "Editor 29",
+    "words_removed": 12,
+    "others_words_removed": 12,
+    "words_removed_later_restored": 12,
+    "removing_revisions": 3,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1072418173",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1072418923",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1072419241"
+    ]
+   },
+   {
+    "label": "Editor 19",
+    "words_removed": 11,
+    "others_words_removed": 11,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: expressions of doubt": {
+      "alleged": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=607993349",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=607993270"
+    ]
+   },
+   {
+    "label": "Editor 30",
+    "words_removed": 10,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {
+     "contested: truth claims": {
+      "propaganda": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1380973996"
+    ]
+   },
+   {
+    "label": "Editor 2",
+    "words_removed": 8,
+    "others_words_removed": 2,
+    "words_removed_later_restored": 2,
+    "removing_revisions": 3,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: puffery": {
+      "hit": 1
+     },
+     "WTW: unsupported attributions": {
+      "officially": 1
+     },
+     "contested: terms for deaths": {
+      "killed": 1
+     }
+    },
+    "terms_removed": {
+     "WTW: puffery": {
+      "hit": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=607761791",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=607763805",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=607767353"
+    ]
+   },
+   {
+    "label": "Editor 31",
+    "words_removed": 8,
+    "others_words_removed": 8,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1142389852"
+    ]
+   },
+   {
+    "label": "Editor 16",
+    "words_removed": 7,
+    "others_words_removed": 7,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=793847001"
+    ]
+   },
+   {
+    "label": "Editor 32",
+    "words_removed": 5,
+    "others_words_removed": 5,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1114611499"
+    ]
+   },
+   {
+    "label": "Editor 33",
+    "words_removed": 5,
+    "others_words_removed": 5,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=928722018"
+    ]
+   },
+   {
+    "label": "Editor 34",
+    "words_removed": 5,
+    "others_words_removed": 5,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "contested: truth claims": {
+      "propaganda": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=623750457"
+    ]
+   },
+   {
+    "label": "Editor 35",
+    "words_removed": 5,
+    "others_words_removed": 5,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=750070123",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1170355287"
+    ]
+   },
+   {
+    "label": "Editor 36",
+    "words_removed": 5,
+    "others_words_removed": 5,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1085501752"
+    ]
+   },
+   {
+    "label": "Editor 37",
+    "words_removed": 4,
+    "others_words_removed": 4,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1360611275"
+    ]
+   },
+   {
+    "label": "Editor 7",
+    "words_removed": 3,
+    "others_words_removed": 2,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=616034037",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=616256545"
+    ]
+   },
+   {
+    "label": "Editor 9",
+    "words_removed": 3,
+    "others_words_removed": 3,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=840242462"
+    ]
+   },
+   {
+    "label": "Editor 38",
+    "words_removed": 3,
+    "others_words_removed": 3,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=752370219"
+    ]
+   },
+   {
+    "label": "Editor 39",
+    "words_removed": 3,
+    "others_words_removed": 3,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "contested: Russia and Ukraine": {
+      "pro-russian": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=615332940"
+    ]
+   },
+   {
+    "label": "Editor 40",
+    "words_removed": 3,
+    "others_words_removed": 3,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1073480376"
+    ]
+   },
+   {
+    "label": "Editor 41",
+    "words_removed": 3,
+    "others_words_removed": 3,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=839775032"
+    ]
+   },
+   {
+    "label": "Editor 42",
+    "words_removed": 3,
+    "others_words_removed": 3,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1372639600"
+    ]
+   },
+   {
+    "label": "Editor 15",
+    "words_removed": 2,
+    "others_words_removed": 2,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1171043767"
+    ]
+   },
+   {
+    "label": "Editor 43",
+    "words_removed": 2,
+    "others_words_removed": 2,
+    "words_removed_later_restored": 2,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: contentious labels": {
+      "terrorist": 1
+     },
+     "contested: terms for armed groups and their members": {
+      "terrorist": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=942439708",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=942480764"
+    ]
+   },
+   {
+    "label": "Editor 44",
+    "words_removed": 2,
+    "others_words_removed": 2,
+    "words_removed_later_restored": 2,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {
+     "contested: truth claims": {
+      "propaganda": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=623748840"
+    ]
+   },
+   {
+    "label": "Editor 45",
+    "words_removed": 2,
+    "others_words_removed": 2,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=686247325"
+    ]
+   },
+   {
+    "label": "Editor 46",
+    "words_removed": 2,
+    "others_words_removed": 2,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1356304588"
+    ]
+   },
+   {
+    "label": "Editor 47",
+    "words_removed": 2,
+    "others_words_removed": 2,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=607772557"
+    ]
+   },
+   {
+    "label": "Editor 48",
+    "words_removed": 2,
+    "others_words_removed": 2,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=848515719"
+    ]
+   },
+   {
+    "label": "Editor 49",
+    "words_removed": 2,
+    "others_words_removed": 2,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1275254745"
+    ]
+   },
+   {
+    "label": "Editor 8",
+    "words_removed": 1,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=957928284"
+    ]
+   },
+   {
+    "label": "Editor 12",
+    "words_removed": 1,
+    "others_words_removed": 1,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1045456558"
+    ]
+   },
+   {
+    "label": "Editor 18",
+    "words_removed": 1,
+    "others_words_removed": 1,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1161245771"
+    ]
+   },
+   {
+    "label": "Editor 50",
+    "words_removed": 1,
+    "others_words_removed": 1,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=608299688"
+    ]
+   },
+   {
+    "label": "Editor 51",
+    "words_removed": 1,
+    "others_words_removed": 1,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1118074160"
+    ]
+   },
+   {
+    "label": "Editor 52",
+    "words_removed": 1,
+    "others_words_removed": 1,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=709855849"
+    ]
+   },
+   {
+    "label": "Editor 53",
+    "words_removed": 1,
+    "others_words_removed": 1,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1279766129"
+    ]
+   },
+   {
+    "label": "Editor 54",
+    "words_removed": 1,
+    "others_words_removed": 1,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1018286898"
+    ]
+   },
+   {
+    "label": "Editor 55",
+    "words_removed": 1,
+    "others_words_removed": 1,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "terrorist": 1
+     },
+     "contested: terms for armed groups and their members": {
+      "terrorist": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=942482539"
+    ]
+   },
+   {
+    "label": "Editor 56",
+    "words_removed": 1,
+    "others_words_removed": 1,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1047436866"
+    ]
+   },
+   {
+    "label": "Editor 57",
+    "words_removed": 1,
+    "others_words_removed": 1,
+    "words_removed_later_restored": 1,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "terrorist": 1
+     },
+     "contested: terms for armed groups and their members": {
+      "terrorist": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=942439905"
+    ]
+   },
+   {
+    "label": "Editor 20",
+    "words_removed": 0,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 0,
+    "sources_removed": {},
+    "terms_inserted": {
+     "contested: truth claims": {
+      "propaganda": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": []
+   },
+   {
+    "label": "Editor 58",
+    "words_removed": 0,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 0,
+    "sources_removed": {},
+    "terms_inserted": {
+     "contested: Russia and Ukraine": {
+      "pro-russian": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": []
+   }
+  ],
+  "editors_shown": 58,
+  "sentence_history": {
+   "rule": "taken out and put back at least 2 times, not counting page-wide removals",
+   "sentences": 29,
+   "sentences_removed_and_restored_twice_or_more": 1,
+   "their_words": 13,
+   "share_of_words": 0.020767,
+   "in_opening_section": 1,
+   "median_days_in_place_since_last_restored": 1667,
+   "sentences_removed_five_times_or_more": 0,
+   "sentences_removed_by_two_or_more_accounts": 1
+  }
+ },
+ "declared_interests": {
+  "article_tags": [],
+  "talk_page_revision": 1328583395,
+  "evidence": "https://en.wikipedia.org/w/index.php?oldid=1328583395",
+  "notices": []
  },
  "caveats": [
   {
@@ -2166,7 +4805,7 @@
   {
    "code": "thin_sanctions_list",
    "applies_to": "sanctioned_share",
-   "text": "The sanctions list for this topic area (Eastern Europe) has only 10 hand-checked entries, against about a hundred for the Arab–Israeli conflict. This figure is likely an undercount, and comparing it with better-covered areas would overstate the difference."
+   "text": "The sanctions list for this topic area (Eastern Europe) has only 24 hand-checked entries, against about a hundred for the Arab–Israeli conflict. This figure is likely an undercount, and comparing it with better-covered areas would overstate the difference."
   },
   {
    "code": "minimum_figure",

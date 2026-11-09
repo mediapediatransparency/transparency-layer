@@ -2302,6 +2302,48 @@
   "account_types": {
    "registered": 1.0
   },
+  "persistence": [
+   {
+    "years": 1,
+    "baseline": 1312910656,
+    "baseline_timestamp": "2025-09-23T08:28:49Z",
+    "words_then": 7485,
+    "still_present": 6947,
+    "share_still_present": 0.928123,
+    "words_now": 7944,
+    "share_of_current": 0.874496
+   },
+   {
+    "years": 2,
+    "baseline": 1247504062,
+    "baseline_timestamp": "2024-09-24T15:40:37Z",
+    "words_then": 7218,
+    "still_present": 6655,
+    "share_still_present": 0.922001,
+    "words_now": 7944,
+    "share_of_current": 0.837739
+   },
+   {
+    "years": 3,
+    "baseline": 1177302487,
+    "baseline_timestamp": "2023-09-27T03:09:52Z",
+    "words_then": 7133,
+    "still_present": 5924,
+    "share_still_present": 0.830506,
+    "words_now": 7944,
+    "share_of_current": 0.74572
+   },
+   {
+    "years": 5,
+    "baseline": 1046776091,
+    "baseline_timestamp": "2021-09-27T11:01:45Z",
+    "words_then": 5058,
+    "still_present": 3649,
+    "share_still_present": 0.721431,
+    "words_now": 7944,
+    "share_of_current": 0.45934
+   }
+  ],
   "survival_article": {
    "48h": {
     "words_added": 18166,
@@ -2372,7 +2414,7 @@
   "sanctioned_editors": 1,
   "rule": "topic bans count on articles in the same topic area; site bans and sockpuppetry findings count everywhere",
   "sanctions_list": {
-   "seed_rows_total": 130,
+   "seed_rows_total": 154,
    "seed_rows_in_topic_area": 0,
    "seed_rows_unresolved_accounts": 0,
    "block_log_snapshot": "2026-11-04"
@@ -2413,7 +2455,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2019-04-27",
+    "latest_removal": null,
+    "in_place_since": "2019-04-27",
+    "in_place_since_revision": 894303898,
+    "removals": []
+   }
   },
   {
    "id": "lead-2",
@@ -2494,7 +2551,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2019-04-27",
+    "latest_removal": null,
+    "in_place_since": "2019-04-27",
+    "in_place_since_revision": 894303898,
+    "removals": []
+   }
   },
   {
    "id": "lead-3",
@@ -2529,7 +2601,28 @@
    "added_before_sanction": true,
    "sanctioned_words_before": 7,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 1,
+    "back_within_24h": 0,
+    "out_24h_or_more": 1,
+    "removing_accounts": 1,
+    "restoring_accounts": 1,
+    "page_wide_removals": 0,
+    "first_added": "2022-07-21",
+    "latest_removal": "2022-08-12",
+    "in_place_since": "2022-08-19",
+    "in_place_since_revision": 1105341403,
+    "removals": [
+     [
+      1104032874,
+      1105341403,
+      182.6
+     ]
+    ]
+   }
   },
   {
    "id": "lead-4",
@@ -2576,7 +2669,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2019-08-26",
+    "latest_removal": null,
+    "in_place_since": "2019-08-26",
+    "in_place_since_revision": 912503330,
+    "removals": []
+   }
   },
   {
    "id": "lead-5",
@@ -2601,7 +2709,28 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 1,
+    "back_within_24h": 1,
+    "out_24h_or_more": 0,
+    "removing_accounts": 1,
+    "restoring_accounts": 1,
+    "page_wide_removals": 0,
+    "first_added": "2024-06-21",
+    "latest_removal": "2024-06-21",
+    "in_place_since": "2024-06-21",
+    "in_place_since_revision": 1230306482,
+    "removals": [
+     [
+      1230296231,
+      1230306482,
+      1.7
+     ]
+    ]
+   }
   },
   {
    "id": "lead-6",
@@ -2640,7 +2769,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 2,
+   "works_cited": 2,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2022-08-12",
+    "latest_removal": null,
+    "in_place_since": "2022-08-12",
+    "in_place_since_revision": 1104032874,
+    "removals": []
+   }
   },
   {
    "id": "lead-7",
@@ -2665,7 +2809,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2025-01-26",
+    "latest_removal": null,
+    "in_place_since": "2025-01-26",
+    "in_place_since_revision": 1271965768,
+    "removals": []
+   }
   },
   {
    "id": "lead-8",
@@ -2690,7 +2849,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2025-11-22",
+    "latest_removal": null,
+    "in_place_since": "2025-11-22",
+    "in_place_since_revision": 1323547354,
+    "removals": []
+   }
   },
   {
    "id": "sec1-1",
@@ -2739,7 +2913,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 2,
+   "works_cited": 2,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2019-04-27",
+    "latest_removal": null,
+    "in_place_since": "2019-04-27",
+    "in_place_since_revision": 894303898,
+    "removals": []
+   }
   },
   {
    "id": "sec1-2",
@@ -2780,7 +2969,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2019-05-05",
+    "latest_removal": null,
+    "in_place_since": "2019-05-05",
+    "in_place_since_revision": 895688550,
+    "removals": []
+   }
   },
   {
    "id": "sec1-3",
@@ -2805,7 +3009,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2024-08-21",
+    "latest_removal": null,
+    "in_place_since": "2024-08-21",
+    "in_place_since_revision": 1241502586,
+    "removals": []
+   }
   },
   {
    "id": "sec1-4",
@@ -2840,7 +3059,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2019-05-05",
+    "latest_removal": null,
+    "in_place_since": "2019-05-05",
+    "in_place_since_revision": 895688550,
+    "removals": []
+   }
   },
   {
    "id": "sec1-5",
@@ -2891,7 +3125,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 7,
+   "works_cited": 7,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2019-04-27",
+    "latest_removal": null,
+    "in_place_since": "2019-04-27",
+    "in_place_since_revision": 894303898,
+    "removals": []
+   }
   },
   {
    "id": "sec1-6",
@@ -2916,7 +3165,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2023-09-10",
+    "latest_removal": null,
+    "in_place_since": "2023-09-10",
+    "in_place_since_revision": 1174794899,
+    "removals": []
+   }
   },
   {
    "id": "sec1-7",
@@ -2951,7 +3215,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2019-10-18",
+    "latest_removal": null,
+    "in_place_since": "2019-10-18",
+    "in_place_since_revision": 921866457,
+    "removals": []
+   }
   },
   {
    "id": "sec1-8",
@@ -2976,7 +3255,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2019-04-27",
+    "latest_removal": null,
+    "in_place_since": "2019-04-27",
+    "in_place_since_revision": 894303898,
+    "removals": []
+   }
   },
   {
    "id": "sec1-9",
@@ -3005,7 +3299,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 2,
+   "works_cited": 2,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2019-04-27",
+    "latest_removal": null,
+    "in_place_since": "2019-04-27",
+    "in_place_since_revision": 894303898,
+    "removals": []
+   }
   },
   {
    "id": "sec2-1",
@@ -3042,7 +3351,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2019-05-03",
+    "latest_removal": null,
+    "in_place_since": "2019-05-03",
+    "in_place_since_revision": 895283441,
+    "removals": []
+   }
   },
   {
    "id": "sec2-2",
@@ -3087,7 +3411,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2019-05-03",
+    "latest_removal": null,
+    "in_place_since": "2019-05-03",
+    "in_place_since_revision": 895283441,
+    "removals": []
+   }
   },
   {
    "id": "sec2-3",
@@ -3124,7 +3463,38 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 3,
+    "back_within_24h": 2,
+    "out_24h_or_more": 1,
+    "removing_accounts": 1,
+    "restoring_accounts": 3,
+    "page_wide_removals": 0,
+    "first_added": "2019-12-29",
+    "latest_removal": "2020-01-06",
+    "in_place_since": "2020-01-07",
+    "in_place_since_revision": 934538259,
+    "removals": [
+     [
+      933401802,
+      933403253,
+      0.2
+     ],
+     [
+      933779111,
+      933816043,
+      4.5
+     ],
+     [
+      934342518,
+      934538259,
+      25.3
+     ]
+    ]
+   }
   },
   {
    "id": "sec2-4",
@@ -3149,7 +3519,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2025-08-22",
+    "latest_removal": null,
+    "in_place_since": "2025-08-22",
+    "in_place_since_revision": 1307245169,
+    "removals": []
+   }
   },
   {
    "id": "sec2-5",
@@ -3182,7 +3567,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 3,
+   "works_cited": 3,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2019-05-05",
+    "latest_removal": null,
+    "in_place_since": "2019-05-05",
+    "in_place_since_revision": 895689023,
+    "removals": []
+   }
   },
   {
    "id": "sec2-6",
@@ -3207,7 +3607,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2025-11-24",
+    "latest_removal": null,
+    "in_place_since": "2025-11-24",
+    "in_place_since_revision": 1323889346,
+    "removals": []
+   }
   },
   {
    "id": "sec2-7",
@@ -3236,7 +3651,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2022-08-12",
+    "latest_removal": null,
+    "in_place_since": "2022-08-12",
+    "in_place_since_revision": 1104014960,
+    "removals": []
+   }
   },
   {
    "id": "sec2-8",
@@ -3265,7 +3695,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2022-08-12",
+    "latest_removal": null,
+    "in_place_since": "2022-08-12",
+    "in_place_since_revision": 1104014960,
+    "removals": []
+   }
   },
   {
    "id": "sec2-9",
@@ -3298,7 +3743,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2023-07-15",
+    "latest_removal": null,
+    "in_place_since": "2023-07-15",
+    "in_place_since_revision": 1165547654,
+    "removals": []
+   }
   },
   {
    "id": "sec3-1",
@@ -3343,7 +3803,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 3,
+   "works_cited": 3,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2019-04-27",
+    "latest_removal": null,
+    "in_place_since": "2019-04-27",
+    "in_place_since_revision": 894303898,
+    "removals": []
+   }
   },
   {
    "id": "sec3-2",
@@ -3384,7 +3859,38 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 3,
+    "back_within_24h": 2,
+    "out_24h_or_more": 1,
+    "removing_accounts": 3,
+    "restoring_accounts": 3,
+    "page_wide_removals": 0,
+    "first_added": "2019-04-27",
+    "latest_removal": "2022-08-29",
+    "in_place_since": "2022-08-29",
+    "in_place_since_revision": 1107365345,
+    "removals": [
+     [
+      916652259,
+      916654844,
+      0.3
+     ],
+     [
+      918807089,
+      919159887,
+      40.8
+     ],
+     [
+      1107356557,
+      1107365345,
+      1.0
+     ]
+    ]
+   }
   },
   {
    "id": "sec3-3",
@@ -3417,7 +3923,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 2,
+   "works_cited": 2,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2019-04-27",
+    "latest_removal": null,
+    "in_place_since": "2019-04-27",
+    "in_place_since_revision": 894303898,
+    "removals": []
+   }
   },
   {
    "id": "sec3-4",
@@ -3454,7 +3975,38 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 3,
+   "works_cited": 3,
+   "history": {
+    "removed": 3,
+    "back_within_24h": 3,
+    "out_24h_or_more": 0,
+    "removing_accounts": 2,
+    "restoring_accounts": 3,
+    "page_wide_removals": 0,
+    "first_added": "2019-04-27",
+    "latest_removal": "2022-09-07",
+    "in_place_since": "2022-09-07",
+    "in_place_since_revision": 1108951623,
+    "removals": [
+     [
+      931662860,
+      931669862,
+      1.5
+     ],
+     [
+      1107356557,
+      1107365345,
+      1.0
+     ],
+     [
+      1108922414,
+      1108951623,
+      3.7
+     ]
+    ]
+   }
   },
   {
    "id": "sec3-5",
@@ -3483,7 +4035,33 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 2,
+    "back_within_24h": 2,
+    "out_24h_or_more": 0,
+    "removing_accounts": 2,
+    "restoring_accounts": 2,
+    "page_wide_removals": 0,
+    "first_added": "2019-10-06",
+    "latest_removal": "2022-08-29",
+    "in_place_since": "2022-08-29",
+    "in_place_since_revision": 1107365345,
+    "removals": [
+     [
+      931662860,
+      931669862,
+      1.5
+     ],
+     [
+      1107356557,
+      1107365345,
+      1.0
+     ]
+    ]
+   }
   },
   {
    "id": "sec3-6",
@@ -3516,7 +4094,28 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 1,
+    "back_within_24h": 1,
+    "out_24h_or_more": 0,
+    "removing_accounts": 1,
+    "restoring_accounts": 1,
+    "page_wide_removals": 0,
+    "first_added": "2019-10-06",
+    "latest_removal": "2019-12-20",
+    "in_place_since": "2019-12-20",
+    "in_place_since_revision": 931669862,
+    "removals": [
+     [
+      931662860,
+      931669862,
+      1.5
+     ]
+    ]
+   }
   },
   {
    "id": "sec3-7",
@@ -3545,7 +4144,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2019-10-15",
+    "latest_removal": null,
+    "in_place_since": "2019-10-15",
+    "in_place_since_revision": 921465484,
+    "removals": []
+   }
   },
   {
    "id": "sec3-8",
@@ -3570,7 +4184,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2019-10-15",
+    "latest_removal": null,
+    "in_place_since": "2019-10-15",
+    "in_place_since_revision": 921465484,
+    "removals": []
+   }
   },
   {
    "id": "sec3-9",
@@ -3599,7 +4228,38 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 2,
+   "works_cited": 2,
+   "history": {
+    "removed": 3,
+    "back_within_24h": 3,
+    "out_24h_or_more": 0,
+    "removing_accounts": 2,
+    "restoring_accounts": 3,
+    "page_wide_removals": 0,
+    "first_added": "2019-10-02",
+    "latest_removal": "2020-10-27",
+    "in_place_since": "2020-10-27",
+    "in_place_since_revision": 985680823,
+    "removals": [
+     [
+      924177733,
+      924178053,
+      0.1
+     ],
+     [
+      924178105,
+      924178131,
+      0.0
+     ],
+     [
+      985668603,
+      985680823,
+      2.3
+     ]
+    ]
+   }
   },
   {
    "id": "sec3-10",
@@ -3652,7 +4312,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 2,
+   "works_cited": 2,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2019-04-27",
+    "latest_removal": null,
+    "in_place_since": "2019-04-27",
+    "in_place_since_revision": 894303898,
+    "removals": []
+   }
   },
   {
    "id": "sec3-11",
@@ -3705,7 +4380,28 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 1,
+    "back_within_24h": 1,
+    "out_24h_or_more": 0,
+    "removing_accounts": 1,
+    "restoring_accounts": 1,
+    "page_wide_removals": 0,
+    "first_added": "2019-11-03",
+    "latest_removal": "2020-06-28",
+    "in_place_since": "2020-06-28",
+    "in_place_since_revision": 964989002,
+    "removals": [
+     [
+      964985102,
+      964989002,
+      0.5
+     ]
+    ]
+   }
   },
   {
    "id": "sec3-12",
@@ -3738,7 +4434,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 2,
+   "works_cited": 2,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2022-08-29",
+    "latest_removal": null,
+    "in_place_since": "2022-08-29",
+    "in_place_since_revision": 1107356557,
+    "removals": []
+   }
   },
   {
    "id": "sec3-13",
@@ -3771,7 +4482,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2019-04-27",
+    "latest_removal": null,
+    "in_place_since": "2019-04-27",
+    "in_place_since_revision": 894303898,
+    "removals": []
+   }
   },
   {
    "id": "sec3-14",
@@ -3812,7 +4538,73 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 11,
+    "back_within_24h": 8,
+    "out_24h_or_more": 3,
+    "removing_accounts": 5,
+    "restoring_accounts": 7,
+    "page_wide_removals": 0,
+    "first_added": "2019-04-27",
+    "latest_removal": "2020-03-18",
+    "in_place_since": "2020-03-25",
+    "in_place_since_revision": 947333785,
+    "removals": [
+     [
+      915808691,
+      916069770,
+      32.0
+     ],
+     [
+      918421343,
+      918434181,
+      1.2
+     ],
+     [
+      918483070,
+      918486061,
+      0.4
+     ],
+     [
+      918640639,
+      918650522,
+      0.8
+     ],
+     [
+      918705964,
+      918713763,
+      0.8
+     ],
+     [
+      919916577,
+      919919733,
+      0.4
+     ],
+     [
+      919921200,
+      919922537,
+      0.1
+     ],
+     [
+      931481248,
+      932381479,
+      153.7
+     ],
+     [
+      932404134,
+      932521281,
+      21.3
+     ],
+     [
+      946104565,
+      947333785,
+      183.1
+     ]
+    ]
+   }
   },
   {
    "id": "sec3-15",
@@ -3845,7 +4637,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2021-10-03",
+    "latest_removal": null,
+    "in_place_since": "2021-10-03",
+    "in_place_since_revision": 1047910530,
+    "removals": []
+   }
   },
   {
    "id": "sec3-16",
@@ -3878,7 +4685,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2021-10-03",
+    "latest_removal": null,
+    "in_place_since": "2021-10-03",
+    "in_place_since_revision": 1047910530,
+    "removals": []
+   }
   },
   {
    "id": "sec3-17",
@@ -3903,7 +4725,28 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 1,
+    "back_within_24h": 1,
+    "out_24h_or_more": 0,
+    "removing_accounts": 1,
+    "restoring_accounts": 1,
+    "page_wide_removals": 0,
+    "first_added": "2023-10-03",
+    "latest_removal": "2023-10-04",
+    "in_place_since": "2023-10-05",
+    "in_place_since_revision": 1178703143,
+    "removals": [
+     [
+      1178614097,
+      1178703143,
+      13.9
+     ]
+    ]
+   }
   },
   {
    "id": "sec3-18",
@@ -3932,7 +4775,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2019-09-15",
+    "latest_removal": null,
+    "in_place_since": "2019-09-15",
+    "in_place_since_revision": 915863565,
+    "removals": []
+   }
   },
   {
    "id": "sec3-19",
@@ -3957,7 +4815,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2021-09-08",
+    "latest_removal": null,
+    "in_place_since": "2021-09-08",
+    "in_place_since_revision": 1043164034,
+    "removals": []
+   }
   },
   {
    "id": "sec3-20",
@@ -3982,7 +4855,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2021-09-08",
+    "latest_removal": null,
+    "in_place_since": "2021-09-08",
+    "in_place_since_revision": 1043164034,
+    "removals": []
+   }
   },
   {
    "id": "sec3-21",
@@ -4007,7 +4895,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2021-09-08",
+    "latest_removal": null,
+    "in_place_since": "2021-09-08",
+    "in_place_since_revision": 1043164034,
+    "removals": []
+   }
   },
   {
    "id": "sec3-22",
@@ -4040,7 +4943,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2024-12-23",
+    "latest_removal": null,
+    "in_place_since": "2024-12-23",
+    "in_place_since_revision": 1264851160,
+    "removals": []
+   }
   },
   {
    "id": "sec4-1",
@@ -4065,7 +4983,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 5,
+   "works_cited": 5,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2025-11-22",
+    "latest_removal": null,
+    "in_place_since": "2025-11-22",
+    "in_place_since_revision": 1323544042,
+    "removals": []
+   }
   },
   {
    "id": "sec4-2",
@@ -4090,7 +5023,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2025-11-22",
+    "latest_removal": null,
+    "in_place_since": "2025-11-22",
+    "in_place_since_revision": 1323544042,
+    "removals": []
+   }
   },
   {
    "id": "sec4-3",
@@ -4119,7 +5067,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2025-11-22",
+    "latest_removal": null,
+    "in_place_since": "2025-11-22",
+    "in_place_since_revision": 1323544042,
+    "removals": []
+   }
   },
   {
    "id": "sec4-4",
@@ -4144,7 +5107,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2025-11-22",
+    "latest_removal": null,
+    "in_place_since": "2025-11-22",
+    "in_place_since_revision": 1323544042,
+    "removals": []
+   }
   },
   {
    "id": "sec4-5",
@@ -4175,7 +5153,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2025-11-22",
+    "latest_removal": null,
+    "in_place_since": "2025-11-22",
+    "in_place_since_revision": 1323544042,
+    "removals": []
+   }
   },
   {
    "id": "sec4-6",
@@ -4200,7 +5193,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2025-11-22",
+    "latest_removal": null,
+    "in_place_since": "2025-11-22",
+    "in_place_since_revision": 1323544042,
+    "removals": []
+   }
   },
   {
    "id": "sec4-7",
@@ -4225,7 +5233,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2025-11-22",
+    "latest_removal": null,
+    "in_place_since": "2025-11-22",
+    "in_place_since_revision": 1323544042,
+    "removals": []
+   }
   },
   {
    "id": "sec4-8",
@@ -4280,7 +5303,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2019-04-27",
+    "latest_removal": null,
+    "in_place_since": "2019-04-27",
+    "in_place_since_revision": 894303898,
+    "removals": []
+   }
   },
   {
    "id": "sec4-9",
@@ -4321,7 +5359,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2020-10-27",
+    "latest_removal": null,
+    "in_place_since": "2020-10-27",
+    "in_place_since_revision": 985665868,
+    "removals": []
+   }
   },
   {
    "id": "sec4-10",
@@ -4352,7 +5405,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2022-07-16",
+    "latest_removal": null,
+    "in_place_since": "2022-07-16",
+    "in_place_since_revision": 1098484101,
+    "removals": []
+   }
   },
   {
    "id": "sec5-1",
@@ -4377,7 +5445,28 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 1,
+    "back_within_24h": 1,
+    "out_24h_or_more": 0,
+    "removing_accounts": 1,
+    "restoring_accounts": 1,
+    "page_wide_removals": 0,
+    "first_added": "2024-06-21",
+    "latest_removal": "2024-06-21",
+    "in_place_since": "2024-06-21",
+    "in_place_since_revision": 1230306482,
+    "removals": [
+     [
+      1230296231,
+      1230306482,
+      1.7
+     ]
+    ]
+   }
   },
   {
    "id": "sec5-2",
@@ -4424,7 +5513,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 3,
+   "works_cited": 3,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2019-04-27",
+    "latest_removal": null,
+    "in_place_since": "2019-04-27",
+    "in_place_since_revision": 894303898,
+    "removals": []
+   }
   },
   {
    "id": "sec5-3",
@@ -4467,7 +5571,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2019-04-27",
+    "latest_removal": null,
+    "in_place_since": "2019-04-27",
+    "in_place_since_revision": 894303898,
+    "removals": []
+   }
   },
   {
    "id": "sec6-1",
@@ -4496,7 +5615,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2023-06-04",
+    "latest_removal": null,
+    "in_place_since": "2023-06-04",
+    "in_place_since_revision": 1158445334,
+    "removals": []
+   }
   },
   {
    "id": "sec6-2",
@@ -4527,7 +5661,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 2,
+   "works_cited": 2,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2023-06-04",
+    "latest_removal": null,
+    "in_place_since": "2023-06-04",
+    "in_place_since_revision": 1158445334,
+    "removals": []
+   }
   },
   {
    "id": "sec6-3",
@@ -4564,7 +5713,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 2,
+   "works_cited": 2,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2024-04-13",
+    "latest_removal": null,
+    "in_place_since": "2024-04-13",
+    "in_place_since_revision": 1218767420,
+    "removals": []
+   }
   }
  ],
  "inputs": {
@@ -4573,7 +5737,9 @@
   "wikiwho_rev_content": "https://wikiwho-api.wmcloud.org/en/api/v1.0.0-beta/rev_content/rev_id/1377261770/",
   "wikiwho_all_content": "https://wikiwho-api.wmcloud.org/en/api/v1.0.0-beta/all_content/page_id/41986649/",
   "history_revisions": 1269,
-  "sanctions_csv_sha256": "83c3c25da3d1338292d21c2b407f4fdc4aee5a973a0fa7ac6bb32e407de325dd"
+  "sanctions_csv_sha256": "46ecf8bd2945ef432b9a5a9afcd72502654439f2b78b039f168883e847475a22",
+  "source_names_sha256": "1e0c7263959b899f0a4dd2a19e5f77b3d542f7e961d864fcb790974eb1ddbad0",
+  "books_sha256": "c82c512cf1e16abc1ab47c9aa152ce4df80360300d3c17f57b443a06ccaf46f6"
  },
  "quality": {
   "wikiwho_tokens": 13254,
@@ -4590,12 +5756,227 @@
   "distinct_sources": 47,
   "editors_adding_citations": 20,
   "citation_only_editors": 2,
+  "flags": {
+   "opinion": 5,
+   "no_link": 13,
+   "book_without_page": 0,
+   "not_english": 1,
+   "not_english_no_quote": 0,
+   "dead_link_no_archive": 0,
+   "paywall_or_registration": 3
+  },
+  "flags_by_editor": {
+   "Editor 2": {
+    "citations": 12,
+    "opinion": 2,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 1": {
+    "citations": 8,
+    "opinion": 0,
+    "no_link": 1,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 3
+   },
+   "Editor 4": {
+    "citations": 6,
+    "opinion": 0,
+    "no_link": 2,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 6": {
+    "citations": 5,
+    "opinion": 2,
+    "no_link": 1,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 11": {
+    "citations": 4,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 1,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 5": {
+    "citations": 3,
+    "opinion": 0,
+    "no_link": 2,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 9": {
+    "citations": 3,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 3": {
+    "citations": 2,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 8": {
+    "citations": 2,
+    "opinion": 0,
+    "no_link": 1,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 18": {
+    "citations": 2,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 55": {
+    "citations": 2,
+    "opinion": 1,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 56": {
+    "citations": 2,
+    "opinion": 0,
+    "no_link": 1,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 7": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 1,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 15": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 1,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 16": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 17": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 1,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 21": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 1,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 23": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 1,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 35": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 51": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   }
+  },
   "list": [
    {
     "source": "theguardian.com",
     "name_as_cited": "The Guardian",
     "citations": 4,
     "lead_citations": 0,
+    "opinion_citations": 4,
+    "flags": {
+     "opinion": 4
+    },
     "added_by": {
      "Editor 2": 2,
      "Editor 6": 2
@@ -4606,6 +5987,8 @@
     "name_as_cited": "New Statesman",
     "citations": 3,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 2": 1,
      "Editor 3": 1,
@@ -4614,9 +5997,11 @@
    },
    {
     "source": "slate.com",
-    "name_as_cited": "[[Slate (magazine)",
+    "name_as_cited": "Slate",
     "citations": 3,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 2": 1,
      "Editor 6": 1,
@@ -4628,6 +6013,10 @@
     "name_as_cited": "TSQ: Transgender Studies Quarterly",
     "citations": 2,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {
+     "paywall_or_registration": 1
+    },
     "added_by": {
      "Editor 1": 2
     }
@@ -4637,6 +6026,8 @@
     "name_as_cited": "Inside Higher Ed",
     "citations": 2,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 2": 2
     }
@@ -4646,6 +6037,10 @@
     "name_as_cited": "TSQ: Transgender Studies Quarterly",
     "citations": 2,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {
+     "no_link": 2
+    },
     "added_by": {
      "Editor 23": 1,
      "Editor 56": 1
@@ -4656,6 +6051,10 @@
     "name_as_cited": "New York Times",
     "citations": 2,
     "lead_citations": 1,
+    "opinion_citations": 1,
+    "flags": {
+     "opinion": 1
+    },
     "added_by": {
      "Editor 51": 1,
      "Editor 55": 1
@@ -4666,6 +6065,8 @@
     "name_as_cited": "Philosophy and Phenomenological Research",
     "citations": 2,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 8": 1,
      "Editor 56": 1
@@ -4676,6 +6077,8 @@
     "name_as_cited": "abc.net.au",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 18": 1
     }
@@ -4685,6 +6088,8 @@
     "name_as_cited": "www.advocate.com",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 11": 1
     }
@@ -4694,6 +6099,8 @@
     "name_as_cited": "BBC Sport",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 35": 1
     }
@@ -4703,17 +6110,10 @@
     "name_as_cited": "Bitch",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 2": 1
-    }
-   },
-   {
-    "source": "book (no publisher given)",
-    "name_as_cited": "",
-    "citations": 1,
-    "lead_citations": 1,
-    "added_by": {
-     "Editor 55": 1
     }
    },
    {
@@ -4721,6 +6121,8 @@
     "name_as_cited": "Daily Nous",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 2": 1
     }
@@ -4730,6 +6132,8 @@
     "name_as_cited": "",
     "citations": 1,
     "lead_citations": 1,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 18": 1
     }
@@ -4739,6 +6143,8 @@
     "name_as_cited": "The Economist",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 2": 1
     }
@@ -4748,8 +6154,23 @@
     "name_as_cited": "The Irish Times",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 2": 1
+    }
+   },
+   {
+    "source": "journals.uchicago.edu",
+    "name_as_cited": "Signs: Journal of Women in Culture and Society",
+    "citations": 1,
+    "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {
+     "paywall_or_registration": 1
+    },
+    "added_by": {
+     "Editor 1": 1
     }
    },
    {
@@ -4757,6 +6178,8 @@
     "name_as_cited": "LGBTQ Nation",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 9": 1
     }
@@ -4766,8 +6189,27 @@
     "name_as_cited": "Bombardier Books",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {
+     "no_link": 1
+    },
     "added_by": {
      "Editor 1": 1
+    }
+   },
+   {
+    "source": "name:brill",
+    "name_as_cited": "",
+    "citations": 1,
+    "lead_citations": 1,
+    "opinion_citations": 0,
+    "flags": {},
+    "publisher_from_isbn": {
+     "ISBN prefix (Wikidata)": 1
+    },
+    "publisher_name_from_isbn": "Brill",
+    "added_by": {
+     "Editor 55": 1
     }
    },
    {
@@ -4775,6 +6217,8 @@
     "name_as_cited": "European Journal of Women's Studies",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 1": 1
     }
@@ -4784,6 +6228,10 @@
     "name_as_cited": "Grazer Philosophische Studien",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {
+     "no_link": 1
+    },
     "added_by": {
      "Editor 17": 1
     }
@@ -4793,6 +6241,10 @@
     "name_as_cited": "Journal of Critical Realism",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {
+     "no_link": 1
+    },
     "added_by": {
      "Editor 15": 1
     }
@@ -4802,6 +6254,10 @@
     "name_as_cited": "Journal of Diversity and Gender Studies",
     "citations": 1,
     "lead_citations": 1,
+    "opinion_citations": 0,
+    "flags": {
+     "no_link": 1
+    },
     "added_by": {
      "Editor 5": 1
     }
@@ -4811,6 +6267,10 @@
     "name_as_cited": "Journal of Gender Studies",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {
+     "no_link": 1
+    },
     "added_by": {
      "Editor 21": 1
     }
@@ -4820,6 +6280,8 @@
     "name_as_cited": "Oxford University Press",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 4": 1
     }
@@ -4829,6 +6291,10 @@
     "name_as_cited": "Penguin Random House UK",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {
+     "no_link": 1
+    },
     "added_by": {
      "Editor 4": 1
     }
@@ -4838,6 +6304,10 @@
     "name_as_cited": "Philosophy and Phenomenological Research",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {
+     "no_link": 1
+    },
     "added_by": {
      "Editor 8": 1
     }
@@ -4847,6 +6317,10 @@
     "name_as_cited": "Philosophy Compass",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {
+     "no_link": 1
+    },
     "added_by": {
      "Editor 7": 1
     }
@@ -4856,6 +6330,10 @@
     "name_as_cited": "The Gay & Lesbian Review Worldwide",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {
+     "no_link": 1
+    },
     "added_by": {
      "Editor 6": 1
     }
@@ -4865,6 +6343,10 @@
     "name_as_cited": "The Sociological Review",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {
+     "paywall_or_registration": 1
+    },
     "added_by": {
      "Editor 1": 1
     }
@@ -4874,6 +6356,10 @@
     "name_as_cited": "Transgender Studies Quarterly",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {
+     "no_link": 1
+    },
     "added_by": {
      "Editor 5": 1
     }
@@ -4883,6 +6369,8 @@
     "name_as_cited": "NBC News",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 2": 1
     }
@@ -4892,6 +6380,8 @@
     "name_as_cited": "The New Yorker",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 2": 1
     }
@@ -4901,6 +6391,8 @@
     "name_as_cited": "Novara Media",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 4": 1
     }
@@ -4910,33 +6402,41 @@
     "name_as_cited": "n+1",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 6": 1
     }
    },
    {
     "source": "sagepub.com",
-    "name_as_cited": "[[Sage Publishing",
+    "name_as_cited": "SAGE Reference",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 5": 1
     }
    },
    {
     "source": "theconversation.com",
-    "name_as_cited": "[[The Conversation (website)",
+    "name_as_cited": "The Conversation",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 16": 1
     }
    },
    {
     "source": "theoutline.com",
-    "name_as_cited": "[[The Outline (website)",
+    "name_as_cited": "The Outline",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 9": 1
     }
@@ -4946,6 +6446,8 @@
     "name_as_cited": "PinkNews",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 11": 1
     }
@@ -4955,6 +6457,8 @@
     "name_as_cited": "TransAdvocate.com",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 4": 1
     }
@@ -4964,15 +6468,8 @@
     "name_as_cited": "The Tulane Hullabaloo",
     "citations": 1,
     "lead_citations": 0,
-    "added_by": {
-     "Editor 1": 1
-    }
-   },
-   {
-    "source": "uchicago.edu",
-    "name_as_cited": "Signs: Journal of Women in Culture and Society",
-    "citations": 1,
-    "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 1": 1
     }
@@ -4982,6 +6479,10 @@
     "name_as_cited": "",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {
+     "no_link": 1
+    },
     "added_by": {
      "Editor 4": 1
     }
@@ -4991,6 +6492,8 @@
     "name_as_cited": "USA Today",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 9": 1
     }
@@ -5000,15 +6503,19 @@
     "name_as_cited": "VISIBLE Magazine",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 1": 1
     }
    },
    {
     "source": "vox.com",
-    "name_as_cited": "[[Vox (website)",
+    "name_as_cited": "Vox",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 3": 1
     }
@@ -5018,11 +6525,3671 @@
     "name_as_cited": "",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {
+     "not_english": 1
+    },
     "added_by": {
      "Editor 11": 1
     }
    }
-  ]
+  ],
+  "citations_naming_an_author": 50,
+  "authors": [
+   {
+    "name": "Catherine Bennett",
+    "wikipedia": "Catherine Bennett (journalist)",
+    "citations": 2,
+    "lead_citations": 0,
+    "works": 2
+   },
+   {
+    "name": "Colleen Flaherty",
+    "wikipedia": null,
+    "citations": 2,
+    "lead_citations": 0,
+    "works": 2
+   },
+   {
+    "name": "Cristan Williams",
+    "wikipedia": null,
+    "citations": 2,
+    "lead_citations": 0,
+    "works": 2
+   },
+   {
+    "name": "Greta LaFleur",
+    "wikipedia": null,
+    "citations": 2,
+    "lead_citations": 0,
+    "works": 2
+   },
+   {
+    "name": "Michelle Goldberg",
+    "wikipedia": "Michelle Goldberg",
+    "citations": 2,
+    "lead_citations": 0,
+    "works": 2
+   },
+   {
+    "name": "Serena Bassi",
+    "wikipedia": null,
+    "citations": 2,
+    "lead_citations": 0,
+    "works": 2
+   },
+   {
+    "name": "Sophie Lewis",
+    "wikipedia": null,
+    "citations": 2,
+    "lead_citations": 0,
+    "works": 2
+   },
+   {
+    "name": "Alex Bollinger",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Alex Marshall",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 1,
+    "works": 1
+   },
+   {
+    "name": "Alia Dastagir",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Alistair Magowan",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Alona Ferber",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Alyosxa Tudor",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Andrea Long Chu",
+    "wikipedia": "Andrea Long Chu",
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Asa Seresin",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Bonnie J Morris",
+    "wikipedia": "Bonnie J. Morris",
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Christopher Davis",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Claire Heuchan",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "David Paternotte",
+    "wikipedia": "David Paternotte",
+    "citations": 1,
+    "lead_citations": 1,
+    "works": 1
+   },
+   {
+    "name": "David Pilgrim",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Edie Miller",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Elin McCready",
+    "wikipedia": "Elin McCready",
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Elizabeth Finneron-Burns",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Emi Koyama",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Emrey Broyles",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Evan Urquhart",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Heath M Rakes",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Holly Lawford-Smith",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Ilana Eloit",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 1,
+    "works": 1
+   },
+   {
+    "name": "Jane Clare Jones",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   }
+  ],
+  "items": [
+   {
+    "id": "doi:10.1080/09589236.2017.1411791",
+    "source": "name:journal of gender studies",
+    "citations": 1,
+    "flags": [
+     "no_link"
+    ],
+    "added_by": {
+     "Editor 21": 1
+    }
+   },
+   {
+    "id": "doi:10.1080/14767430.2018.1539825",
+    "source": "name:journal of critical realism",
+    "citations": 1,
+    "flags": [
+     "no_link"
+    ],
+    "added_by": {
+     "Editor 15": 1
+    }
+   },
+   {
+    "id": "doi:10.1086/734793",
+    "source": "journals.uchicago.edu",
+    "citations": 1,
+    "flags": [
+     "paywall_or_registration"
+    ],
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "doi:10.1111/phc3.12438",
+    "source": "name:philosophy compass",
+    "citations": 1,
+    "flags": [
+     "no_link"
+    ],
+    "added_by": {
+     "Editor 7": 1
+    }
+   },
+   {
+    "id": "doi:10.1111/phpr.12427",
+    "source": "name:philosophy and phenomenological research",
+    "citations": 1,
+    "flags": [
+     "no_link"
+    ],
+    "added_by": {
+     "Editor 8": 1
+    }
+   },
+   {
+    "id": "doi:10.1111/phpr.12429",
+    "source": "philpapers.org",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 56": 1
+    }
+   },
+   {
+    "id": "doi:10.1163/18756735-09701005",
+    "source": "name:grazer philosophische studien",
+    "citations": 1,
+    "flags": [
+     "no_link"
+    ],
+    "added_by": {
+     "Editor 17": 1
+    }
+   },
+   {
+    "id": "doi:10.1177/0038026120934685",
+    "source": "name:the sociological review",
+    "citations": 1,
+    "flags": [
+     "paywall_or_registration"
+    ],
+    "language_as_cited": "EN",
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "doi:10.1177/13505068231164217",
+    "source": "name:european journal of women's studies",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "EN",
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "doi:10.1215/23289252-3334127",
+    "source": "name:tsq: transgender studies quarterly",
+    "citations": 1,
+    "flags": [
+     "no_link"
+    ],
+    "added_by": {
+     "Editor 23": 1
+    }
+   },
+   {
+    "id": "doi:10.1215/23289252-3334463",
+    "source": "name:tsq: transgender studies quarterly",
+    "citations": 1,
+    "flags": [
+     "no_link"
+    ],
+    "added_by": {
+     "Editor 56": 1
+    }
+   },
+   {
+    "id": "doi:10.1215/23289252-9836008",
+    "source": "name:transgender studies quarterly",
+    "citations": 2,
+    "flags": [
+     "no_link"
+    ],
+    "language_as_cited": "en",
+    "added_by": {
+     "Editor 1": 1,
+     "Editor 5": 1
+    }
+   },
+   {
+    "id": "doi:10.1215/23289252-9836120",
+    "source": "dukeupress.edu",
+    "citations": 1,
+    "flags": [
+     "paywall_or_registration"
+    ],
+    "language_as_cited": "en",
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "doi:10.21825/digest.90008",
+    "source": "name:journal of diversity and gender studies",
+    "citations": 1,
+    "flags": [
+     "no_link"
+    ],
+    "added_by": {
+     "Editor 5": 1
+    }
+   },
+   {
+    "id": "isbn:9780199325351",
+    "source": "name:oxford university press",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 4": 1
+    }
+   },
+   {
+    "id": "isbn:9780241595824",
+    "source": "name:penguin random house uk",
+    "citations": 1,
+    "flags": [
+     "no_link"
+    ],
+    "added_by": {
+     "Editor 4": 1
+    }
+   },
+   {
+    "id": "isbn:9781544393810",
+    "source": "sagepub.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 5": 1
+    }
+   },
+   {
+    "id": "isbn:9781637582299",
+    "source": "name:bombardier books",
+    "citations": 1,
+    "flags": [
+     "no_link"
+    ],
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "isbn:9789004506725",
+    "source": "name:brill",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 55": 1
+    }
+   },
+   {
+    "id": "url:abc.net.au/news/viv-smythe/33440",
+    "source": "abc.net.au",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 18": 1
+    }
+   },
+   {
+    "id": "url:advocate.com/media/associated-press-dont-say-terf",
+    "source": "advocate.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 11": 1
+    }
+   },
+   {
+    "id": "url:bbc.com/sport/46453958",
+    "source": "bbc.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 35": 1
+    }
+   },
+   {
+    "id": "url:bitchmedia.org/post/the-long-history-of-transgender-exclusion-from-feminism",
+    "source": "bitchmedia.org",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 2": 1
+    }
+   },
+   {
+    "id": "url:dailynous.com/2018/08/27/derogatory-language-philosophy-journal-hostility-discussion",
+    "source": "dailynous.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 2": 1
+    }
+   },
+   {
+    "id": "url:dictionary.com/browse/terf",
+    "source": "dictionary.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 18": 1
+    }
+   },
+   {
+    "id": "url:economist.com/open-future/2018/06/29/transgender-identities-a-series-of-invited-essays",
+    "source": "economist.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 2": 1
+    }
+   },
+   {
+    "id": "url:insidehighered.com/news/2018/08/29/philosophers-object-journals-publication-terf-reference-some-feminists-it-really",
+    "source": "insidehighered.com",
+    "citations": 2,
+    "flags": [],
+    "language_as_cited": "en",
+    "added_by": {
+     "Editor 2": 2
+    }
+   },
+   {
+    "id": "url:irishtimes.com/life-and-style/health-family/transgender-for-beginners-trans-terf-cis-and-safe-spaces-1.3769653",
+    "source": "irishtimes.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en",
+    "added_by": {
+     "Editor 2": 1
+    }
+   },
+   {
+    "id": "url:lgbtqnation.com/2018/12/famous-lesbian-site-taken-anti-trans-feminists-now-lesbian-media-standing",
+    "source": "lgbtqnation.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 9": 1
+    }
+   },
+   {
+    "id": "url:nbcnews.com/feature/nbc-out/pro-lesbian-or-trans-exclusionary-old-animosities-boil-public-view-n958456",
+    "source": "nbcnews.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 2": 1
+    }
+   },
+   {
+    "id": "url:newstatesman.com/culture/2022/06/oed-new-words-list-terf-pangender-vaxxer-included",
+    "source": "newstatesman.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 4": 1
+    }
+   },
+   {
+    "id": "url:newstatesman.com/international/2020/09/judith-butler-culture-wars-jk-rowling-and-living-anti-intellectual-times",
+    "source": "newstatesman.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 3": 1
+    }
+   },
+   {
+    "id": "url:newstatesman.com/politics/feminism/2017/09/what-terf-how-internet-buzzword-became-mainstream-slur",
+    "source": "newstatesman.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 2": 1
+    }
+   },
+   {
+    "id": "url:newyorker.com/magazine/2014/08/04/woman-2",
+    "source": "newyorker.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 2": 1
+    }
+   },
+   {
+    "id": "url:novaramedia.com/2024/03/31/this-ideology-threatens-our-fundamental-freedoms-judith-butler-meets-ash-sarkar",
+    "source": "novaramedia.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 4": 1
+    }
+   },
+   {
+    "id": "url:nplusonemag.com/issue-30/essays/on-liking-women",
+    "source": "nplusonemag.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 6": 1
+    }
+   },
+   {
+    "id": "url:nytimes.com/2019/02/07/opinion/terf-trans-women-britain.html",
+    "source": "nytimes.com",
+    "citations": 1,
+    "flags": [
+     "opinion"
+    ],
+    "added_by": {
+     "Editor 55": 1
+    }
+   },
+   {
+    "id": "url:nytimes.com/2024/08/07/theater/terf-play-rowling-edinburgh-fringe.html",
+    "source": "nytimes.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 51": 1
+    }
+   },
+   {
+    "id": "url:philpapers.org/rec/ALLOAA-3",
+    "source": "philpapers.org",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 8": 1
+    }
+   },
+   {
+    "id": "url:slate.com/human-interest/2015/12/gender-critical-trans-women-the-apostates-of-the-trans-rights-movement.html",
+    "source": "slate.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 2": 1
+    }
+   },
+   {
+    "id": "url:slate.com/human-interest/2018/08/lesbian-history-terfs-and-queer-culture-do-queer-women-have-to-reject-all-second-wave-feminism-to-be-inclusive.html",
+    "source": "slate.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 6": 1
+    }
+   },
+   {
+    "id": "url:slate.com/human-interest/2024/02/rishi-sunak-brianna-ghey-scandal-explained.html",
+    "source": "slate.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 11": 1
+    }
+   },
+   {
+    "id": "url:theconversation.com/why-the-words-we-use-matter-when-describing-anti-trans-activists-130990",
+    "source": "theconversation.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 16": 1
+    }
+   },
+   {
+    "id": "url:theguardian.com/commentisfree/2017/oct/06/feminist-linda-bellos-women-trans-male-violence",
+    "source": "theguardian.com",
+    "citations": 1,
+    "flags": [
+     "opinion"
+    ],
+    "added_by": {
+     "Editor 2": 1
+    }
+   },
+   {
+    "id": "url:theguardian.com/commentisfree/2018/apr/29/violent-misogyny-not-confined-to-internet-incels",
+    "source": "theguardian.com",
+    "citations": 1,
+    "flags": [
+     "opinion"
+    ],
+    "added_by": {
+     "Editor 6": 1
+    }
+   },
+   {
+    "id": "url:theguardian.com/commentisfree/2018/nov/29/im-credited-with-having-coined-the-acronym-terf-heres-how-it-happened",
+    "source": "theguardian.com",
+    "citations": 1,
+    "flags": [
+     "opinion"
+    ],
+    "added_by": {
+     "Editor 2": 1
+    }
+   },
+   {
+    "id": "url:theguardian.com/society/commentisfree/2017/nov/19/bullies-everywhere-take-delight-in-coming-up-with-new-insults",
+    "source": "theguardian.com",
+    "citations": 1,
+    "flags": [
+     "opinion"
+    ],
+    "added_by": {
+     "Editor 6": 1
+    }
+   },
+   {
+    "id": "url:theoutline.com/post/6536/british-feminists-media-transphobic",
+    "source": "theoutline.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en",
+    "added_by": {
+     "Editor 9": 1
+    }
+   },
+   {
+    "id": "url:thepinknews.com/2021/10/01/transphobia-uk-terf-island-tiktok",
+    "source": "thepinknews.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 11": 1
+    }
+   },
+   {
+    "id": "url:transadvocate.com/terf-what-it-means-and-where-it-came-from_n_13066.htm",
+    "source": "transadvocate.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en",
+    "added_by": {
+     "Editor 4": 1
+    }
+   },
+   {
+    "id": "url:tulanehullabaloo.com/56020/intersections/gender-critical-feminists-are-anti-feminist",
+    "source": "tulanehullabaloo.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:usatoday.com/story/news/2017/03/16/feminism-glossary-lexicon-language/99120600",
+    "source": "usatoday.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 9": 1
+    }
+   },
+   {
+    "id": "url:visiblemagazine.com/terfs-are-not-feminists",
+    "source": "visiblemagazine.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:vox.com/identities/2019/9/5/20840101/terfs-radical-feminists-gender-critical",
+    "source": "vox.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 3": 1
+    }
+   },
+   {
+    "id": "url:xtramagazine.com/power/activism/trans-self-defence-uk-248998",
+    "source": "xtramagazine.com",
+    "citations": 1,
+    "flags": [
+     "not_english"
+    ],
+    "language_as_cited": "en-CA",
+    "added_by": {
+     "Editor 11": 1
+    }
+   }
+  ],
+  "bundles": {
+   "sentences_with_footnotes": 51,
+   "sentences_by_works_cited": {
+    "1": 36,
+    "2-4": 13,
+    "5-9": 2,
+    "10 or more": 0
+   },
+   "largest": [
+    {
+     "sentence": "sec1-5",
+     "footnotes": 7,
+     "works": 7
+    },
+    {
+     "sentence": "sec4-1",
+     "footnotes": 5,
+     "works": 5
+    }
+   ]
+  }
+ },
+ "changes": {
+  "words_removed": 21409,
+  "words_removed_later_restored": 11187,
+  "source_links_removed": 145,
+  "editors_removing": 189,
+  "listed_terms": {
+   "inserted": {
+    "WTW: contentious labels": 42,
+    "WTW: editorializing": 13,
+    "WTW: expressions of doubt": 8,
+    "WTW: puffery": 20,
+    "WTW: synonyms for said": 57,
+    "WTW: unsupported attributions": 1,
+    "contested: gender and sexuality": 102,
+    "contested: political labels": 5,
+    "contested: terms for deaths": 1,
+    "contested: terms for violent events": 2,
+    "contested: territory and control": 4,
+    "contested: truth claims": 15
+   },
+   "removed": {
+    "WTW: contentious labels": 48,
+    "WTW: editorializing": 18,
+    "WTW: expressions of doubt": 5,
+    "WTW: puffery": 18,
+    "WTW: synonyms for said": 61,
+    "WTW: unsupported attributions": 1,
+    "contested: gender and sexuality": 111,
+    "contested: political labels": 2,
+    "contested: terms for deaths": 1,
+    "contested: terms for violent events": 3,
+    "contested: territory and control": 4,
+    "contested: truth claims": 19
+   }
+  },
+  "lists": {
+   "words_to_watch": {
+    "revision": 1382059772,
+    "url": "https://en.wikipedia.org/w/index.php?oldid=1382059772",
+    "sha256": "21e24e2898750322164b24947621630845d75cf8dd5adf3ec8cd860152449ea3"
+   },
+   "contested_terms": {
+    "sha256": "944606776be20b6b77dceb3ee5f6a29f8f5e196bf93cc16a4b6f2db6efe600c1"
+   }
+  },
+  "editors": [
+   {
+    "label": "Editor 19",
+    "words_removed": 2288,
+    "others_words_removed": 2284,
+    "words_removed_later_restored": 1404,
+    "removing_revisions": 44,
+    "sources_removed": {
+     "semanticsarchive.net": 5,
+     "juliaserano.com": 2,
+     "uiowa.edu": 2,
+     "wordpress.com": 2,
+     "youtube.com": 2,
+     "dailynous.com": 1,
+     "newstatesman.com": 1,
+     "newyorker.com": 1
+    },
+    "terms_inserted": {
+     "WTW: puffery": {
+      "best": 1
+     }
+    },
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "transphobic": 2
+     },
+     "WTW: editorializing": {
+      "clearly": 3
+     },
+     "WTW: expressions of doubt": {
+      "accused": 1
+     },
+     "WTW: puffery": {
+      "best": 1
+     },
+     "WTW: synonyms for said": {
+      "claim": 3,
+      "find": 1
+     },
+     "contested: gender and sexuality": {
+      "transgender": 4
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=931481248",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=932404134",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=946104565",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=919916577",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=919921200"
+    ]
+   },
+   {
+    "label": "Editor 9",
+    "words_removed": 2006,
+    "others_words_removed": 1619,
+    "words_removed_later_restored": 903,
+    "removing_revisions": 66,
+    "sources_removed": {
+     "dailydot.com": 3,
+     "economist.com": 2,
+     "insidehighered.com": 2,
+     "newstatesman.com": 2,
+     "theoutline.com": 2,
+     "newyorker.com": 1,
+     "wordpress.com": 1
+    },
+    "terms_inserted": {
+     "WTW: contentious labels": {
+      "misogynistic": 1,
+      "transphobic": 12
+     },
+     "WTW: editorializing": {
+      "sadly": 1
+     },
+     "WTW: puffery": {
+      "famous": 2,
+      "leading": 1
+     },
+     "WTW: synonyms for said": {
+      "assert": 1,
+      "claim": 3,
+      "deny": 3,
+      "note": 2
+     },
+     "contested: gender and sexuality": {
+      "transgender": 20
+     },
+     "contested: terms for deaths": {
+      "died": 1
+     },
+     "contested: truth claims": {
+      "falsely": 4
+     }
+    },
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "transphobic": 11
+     },
+     "WTW: editorializing": {
+      "only": 1
+     },
+     "WTW: synonyms for said": {
+      "claim": 2,
+      "deny": 1,
+      "find": 4,
+      "note": 2
+     },
+     "contested: gender and sexuality": {
+      "transgender": 15
+     },
+     "contested: territory and control": {
+      "disputed": 1
+     },
+     "contested: truth claims": {
+      "falsely": 3
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=895227176",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=895227645",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=897015346",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=895227335",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=895081142"
+    ]
+   },
+   {
+    "label": "Editor 3",
+    "words_removed": 1750,
+    "others_words_removed": 1690,
+    "words_removed_later_restored": 1030,
+    "removing_revisions": 36,
+    "sources_removed": {
+     "dailydot.com": 1,
+     "dailynous.com": 1,
+     "economist.com": 1,
+     "philpapers.org": 1,
+     "slate.com": 1,
+     "transadvocate.com": 1
+    },
+    "terms_inserted": {
+     "WTW: contentious labels": {
+      "misogynistic": 1,
+      "transphobic": 2
+     },
+     "WTW: synonyms for said": {
+      "assert": 1,
+      "claim": 4,
+      "explain": 1,
+      "find": 1,
+      "observe": 1
+     },
+     "contested: gender and sexuality": {
+      "transgender": 4
+     },
+     "contested: territory and control": {
+      "disputed": 1
+     }
+    },
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "misogynistic": 1,
+      "transphobic": 1
+     },
+     "WTW: expressions of doubt": {
+      "alleged": 1
+     },
+     "WTW: puffery": {
+      "best": 3
+     },
+     "WTW: synonyms for said": {
+      "claim": 1,
+      "find": 1,
+      "note": 5
+     },
+     "contested: gender and sexuality": {
+      "transgender": 7
+     },
+     "contested: terms for violent events": {
+      "attack": 1
+     },
+     "contested: truth claims": {
+      "misleading": 1,
+      "propaganda": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1107356557",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=993110149",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=964985602",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1108923928",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1104018561"
+    ]
+   },
+   {
+    "label": "Editor 57",
+    "words_removed": 1375,
+    "others_words_removed": 1375,
+    "words_removed_later_restored": 1375,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "newstatesman.com": 2,
+     "bitchmedia.org": 1,
+     "dailydot.com": 1,
+     "dailynous.com": 1,
+     "economist.com": 1,
+     "insidehighered.com": 1,
+     "nbcnews.com": 1,
+     "progressonline.org.uk": 1,
+     "slate.com": 1,
+     "socialistworker.org": 1,
+     "theguardian.com": 1,
+     "wordpress.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "transphobic": 1
+     },
+     "WTW: editorializing": {
+      "only": 1
+     },
+     "WTW: puffery": {
+      "best": 1
+     },
+     "WTW: synonyms for said": {
+      "note": 1
+     },
+     "contested: gender and sexuality": {
+      "transgender": 7
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=894717081"
+    ]
+   },
+   {
+    "label": "Editor 21",
+    "words_removed": 1355,
+    "others_words_removed": 1349,
+    "words_removed_later_restored": 1288,
+    "removing_revisions": 10,
+    "sources_removed": {
+     "theguardian.com": 6,
+     "glasgowinternational.org": 2,
+     "newstatesman.com": 2,
+     "economist.com": 1,
+     "spectator.co.uk": 1
+    },
+    "terms_inserted": {
+     "contested: truth claims": {
+      "disinformation": 1
+     }
+    },
+    "terms_removed": {
+     "WTW: editorializing": {
+      "unfortunately": 2
+     },
+     "contested: gender and sexuality": {
+      "transgender": 3
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=924178105",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=924177733",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=918807089",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=924177193",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1158618990"
+    ]
+   },
+   {
+    "label": "Editor 6",
+    "words_removed": 1245,
+    "others_words_removed": 1204,
+    "words_removed_later_restored": 458,
+    "removing_revisions": 26,
+    "sources_removed": {
+     "youtube.com": 2,
+     "advocate.com": 1,
+     "buzzfeednews.com": 1,
+     "currentaffairs.org": 1,
+     "economist.com": 1,
+     "insidehighered.com": 1,
+     "nbcnews.com": 1,
+     "semanticsarchive.net": 1,
+     "thedailybeast.com": 1,
+     "transadvocate.com": 1,
+     "wordpress.com": 1
+    },
+    "terms_inserted": {
+     "WTW: contentious labels": {
+      "bigot": 2,
+      "controversial": 2,
+      "misogynistic": 1,
+      "sexist": 2,
+      "transphobic": 1
+     },
+     "WTW: editorializing": {
+      "clearly": 1,
+      "unfortunately": 1
+     },
+     "WTW: puffery": {
+      "unique": 1
+     },
+     "WTW: synonyms for said": {
+      "claim": 2,
+      "note": 1
+     },
+     "contested: gender and sexuality": {
+      "transgender": 4
+     }
+    },
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "bigot": 1,
+      "transphobic": 1
+     },
+     "WTW: puffery": {
+      "leading": 1
+     },
+     "WTW: synonyms for said": {
+      "assert": 2
+     },
+     "contested: gender and sexuality": {
+      "transgender": 12
+     },
+     "contested: truth claims": {
+      "falsely": 3
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=919597970",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=918705964",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=918812417",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=921850023",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=919098564"
+    ]
+   },
+   {
+    "label": "Editor 4",
+    "words_removed": 985,
+    "others_words_removed": 956,
+    "words_removed_later_restored": 52,
+    "removing_revisions": 17,
+    "sources_removed": {
+     "progressonline.org.uk": 2,
+     "compactmag.com": 1,
+     "dailydot.com": 1,
+     "fairerdisputations.org": 1,
+     "gawker.com": 1,
+     "google.com": 1,
+     "nationalreview.com": 1,
+     "novaramedia.com": 1,
+     "telegraph.co.uk": 1,
+     "them.us": 1,
+     "usnews.com": 1
+    },
+    "terms_inserted": {
+     "WTW: contentious labels": {
+      "transphobic": 3
+     },
+     "WTW: expressions of doubt": {
+      "purported": 2,
+      "so-called": 1
+     },
+     "WTW: puffery": {
+      "great": 2,
+      "prominent": 1
+     },
+     "WTW: synonyms for said": {
+      "explain": 4,
+      "note": 1
+     },
+     "contested: gender and sexuality": {
+      "transgender": 4
+     }
+    },
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "transphobic": 1
+     },
+     "WTW: editorializing": {
+      "only": 1
+     },
+     "WTW: puffery": {
+      "best": 1,
+      "hit": 2
+     },
+     "WTW: synonyms for said": {
+      "assert": 1,
+      "claim": 1,
+      "reveal": 1
+     },
+     "contested: gender and sexuality": {
+      "transgender": 5
+     },
+     "contested: political labels": {
+      "woke": 2
+     },
+     "contested: terms for violent events": {
+      "attack": 1
+     },
+     "contested: territory and control": {
+      "liberation": 1
+     },
+     "contested: truth claims": {
+      "baseless": 2
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1219083847",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1107240801",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1104032874",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1107246216",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1104014960"
+    ]
+   },
+   {
+    "label": "Editor 27",
+    "words_removed": 802,
+    "others_words_removed": 783,
+    "words_removed_later_restored": 746,
+    "removing_revisions": 22,
+    "sources_removed": {
+     "semanticsarchive.net": 2,
+     "currentaffairs.org": 1,
+     "dailydot.com": 1,
+     "economist.com": 1,
+     "juliaserano.com": 1,
+     "transadvocate.com": 1
+    },
+    "terms_inserted": {
+     "WTW: synonyms for said": {
+      "note": 1
+     },
+     "contested: gender and sexuality": {
+      "transgender": 4
+     }
+    },
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "bigot": 1
+     },
+     "WTW: editorializing": {
+      "only": 1
+     },
+     "WTW: synonyms for said": {
+      "assert": 1
+     },
+     "contested: gender and sexuality": {
+      "transgender": 4
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=916652259",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=915808691",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=918421343",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=915820496",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=916653060"
+    ]
+   },
+   {
+    "label": "Editor 58",
+    "words_removed": 729,
+    "others_words_removed": 658,
+    "words_removed_later_restored": 661,
+    "removing_revisions": 14,
+    "sources_removed": {
+     "doi.org": 3,
+     "google.com": 3,
+     "youtube.com": 1
+    },
+    "terms_inserted": {
+     "WTW: editorializing": {
+      "actually": 2
+     }
+    },
+    "terms_removed": {
+     "WTW: editorializing": {
+      "actually": 1,
+      "clearly": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=920402807",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=934342518",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=933401802",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=933779111",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=916812860"
+    ]
+   },
+   {
+    "label": "Editor 59",
+    "words_removed": 679,
+    "others_words_removed": 679,
+    "words_removed_later_restored": 679,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "bbc.com": 1,
+     "dailynous.com": 1,
+     "nplusonemag.com": 1,
+     "philpapers.org": 1,
+     "storage.googleapis.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "bigot": 2,
+      "misogynistic": 1
+     },
+     "WTW: expressions of doubt": {
+      "alleged": 1
+     },
+     "WTW: puffery": {
+      "best": 1
+     },
+     "WTW: synonyms for said": {
+      "claim": 2
+     },
+     "contested: gender and sexuality": {
+      "transgender": 2
+     },
+     "contested: truth claims": {
+      "propaganda": 2
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=931662860"
+    ]
+   },
+   {
+    "label": "Editor 2",
+    "words_removed": 639,
+    "others_words_removed": 483,
+    "words_removed_later_restored": 191,
+    "removing_revisions": 45,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: contentious labels": {
+      "bigot": 1,
+      "transphobic": 5
+     },
+     "WTW: editorializing": {
+      "only": 3
+     },
+     "WTW: expressions of doubt": {
+      "apparent": 1
+     },
+     "WTW: puffery": {
+      "best": 1,
+      "leading": 1
+     },
+     "WTW: synonyms for said": {
+      "assert": 1,
+      "claim": 1,
+      "find": 1,
+      "note": 5
+     },
+     "contested: gender and sexuality": {
+      "transgender": 16
+     },
+     "contested: territory and control": {
+      "liberation": 1
+     },
+     "contested: truth claims": {
+      "falsely": 3
+     }
+    },
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "transphobic": 3
+     },
+     "WTW: puffery": {
+      "leading": 1
+     },
+     "contested: gender and sexuality": {
+      "transgender": 7
+     },
+     "contested: truth claims": {
+      "falsely": 2
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=895265270",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=895083680",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=895084506",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=895996355",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=895201338"
+    ]
+   },
+   {
+    "label": "Editor 1",
+    "words_removed": 594,
+    "others_words_removed": 496,
+    "words_removed_later_restored": 1,
+    "removing_revisions": 6,
+    "sources_removed": {
+     "appghatecrime.org": 2,
+     "dukeupress.edu": 1
+    },
+    "terms_inserted": {
+     "WTW: editorializing": {
+      "indeed": 1
+     },
+     "WTW: puffery": {
+      "best": 1
+     },
+     "WTW: synonyms for said": {
+      "explain": 2
+     },
+     "contested: gender and sexuality": {
+      "transgender": 4
+     },
+     "contested: political labels": {
+      "fascist": 3
+     },
+     "contested: truth claims": {
+      "misleading": 1
+     }
+    },
+    "terms_removed": {
+     "WTW: synonyms for said": {
+      "note": 1
+     },
+     "contested: gender and sexuality": {
+      "transgender": 2
+     },
+     "contested: terms for violent events": {
+      "attack": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1323546886",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1323547354",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1323547168",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1323899148",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1331201141"
+    ]
+   },
+   {
+    "label": "Editor 8",
+    "words_removed": 574,
+    "others_words_removed": 562,
+    "words_removed_later_restored": 43,
+    "removing_revisions": 26,
+    "sources_removed": {
+     "economist.com": 1
+    },
+    "terms_inserted": {
+     "WTW: expressions of doubt": {
+      "alleged": 1
+     },
+     "WTW: synonyms for said": {
+      "deny": 1
+     },
+     "contested: gender and sexuality": {
+      "transgender": 2
+     },
+     "contested: truth claims": {
+      "propaganda": 2
+     }
+    },
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "transphobic": 2
+     },
+     "WTW: editorializing": {
+      "absolutely": 1
+     },
+     "WTW: synonyms for said": {
+      "claim": 1,
+      "deny": 1,
+      "note": 2
+     },
+     "contested: gender and sexuality": {
+      "transgender": 4
+     },
+     "contested: terms for deaths": {
+      "died": 1
+     },
+     "contested: truth claims": {
+      "falsely": 3
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=895307621",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=895695960",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=908501936",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=895405149",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=912894166"
+    ]
+   },
+   {
+    "label": "Editor 42",
+    "words_removed": 556,
+    "others_words_removed": 556,
+    "words_removed_later_restored": 390,
+    "removing_revisions": 33,
+    "sources_removed": {
+     "semanticsarchive.net": 1,
+     "slate.com": 1
+    },
+    "terms_inserted": {
+     "WTW: editorializing": {
+      "only": 1
+     },
+     "WTW: synonyms for said": {
+      "claim": 1
+     },
+     "contested: territory and control": {
+      "disputed": 1
+     }
+    },
+    "terms_removed": {
+     "WTW: editorializing": {
+      "only": 1
+     },
+     "WTW: synonyms for said": {
+      "claim": 2,
+      "deny": 1
+     },
+     "contested: gender and sexuality": {
+      "transgender": 3
+     },
+     "contested: territory and control": {
+      "disputed": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=921854109",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=900303351",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=916070937",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1010128231",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=899325877"
+    ]
+   },
+   {
+    "label": "Editor 10",
+    "words_removed": 393,
+    "others_words_removed": 393,
+    "words_removed_later_restored": 306,
+    "removing_revisions": 6,
+    "sources_removed": {
+     "slate.com": 2
+    },
+    "terms_inserted": {
+     "contested: gender and sexuality": {
+      "transgender": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1041263520",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1041265474",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1041265034",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1041264472",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1041767143"
+    ]
+   },
+   {
+    "label": "Editor 60",
+    "words_removed": 361,
+    "others_words_removed": 361,
+    "words_removed_later_restored": 174,
+    "removing_revisions": 4,
+    "sources_removed": {
+     "sagepub.com": 1,
+     "tandfonline.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: puffery": {
+      "great": 1
+     },
+     "contested: gender and sexuality": {
+      "transgender": 1
+     },
+     "contested: truth claims": {
+      "disinformation": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1181203046",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1230296231",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1180793892",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1219044305"
+    ]
+   },
+   {
+    "label": "Editor 15",
+    "words_removed": 328,
+    "others_words_removed": 315,
+    "words_removed_later_restored": 88,
+    "removing_revisions": 17,
+    "sources_removed": {
+     "dailynous.com": 1,
+     "indy100.com": 1,
+     "newstatesman.com": 1
+    },
+    "terms_inserted": {
+     "WTW: editorializing": {
+      "unfortunately": 1
+     },
+     "contested: gender and sexuality": {
+      "transgender": 2
+     },
+     "contested: territory and control": {
+      "disputed": 1
+     }
+    },
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "misogynistic": 1
+     },
+     "WTW: editorializing": {
+      "unfortunately": 1
+     },
+     "WTW: puffery": {
+      "prominent": 1
+     },
+     "contested: gender and sexuality": {
+      "transgender": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=924285304",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=933816043",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=924503271",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1104041016",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=924174274"
+    ]
+   },
+   {
+    "label": "Editor 14",
+    "words_removed": 322,
+    "others_words_removed": 321,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 11,
+    "sources_removed": {
+     "archive.org": 1,
+     "socialistworker.org": 1
+    },
+    "terms_inserted": {
+     "WTW: contentious labels": {
+      "transphobic": 1
+     },
+     "WTW: synonyms for said": {
+      "assert": 1,
+      "note": 1
+     },
+     "contested: gender and sexuality": {
+      "transgender": 1
+     }
+    },
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "transphobic": 2
+     },
+     "WTW: expressions of doubt": {
+      "purported": 1
+     },
+     "WTW: synonyms for said": {
+      "claim": 1,
+      "note": 2
+     },
+     "contested: gender and sexuality": {
+      "transgender": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1098983274",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1098993931",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1105341403",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1099612613",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1098985161"
+    ]
+   },
+   {
+    "label": "Editor 61",
+    "words_removed": 286,
+    "others_words_removed": 286,
+    "words_removed_later_restored": 272,
+    "removing_revisions": 6,
+    "sources_removed": {
+     "semanticsarchive.net": 2
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=918483070",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=918640639",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=908737611",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=910770244",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=910909231"
+    ]
+   },
+   {
+    "label": "Editor 44",
+    "words_removed": 236,
+    "others_words_removed": 234,
+    "words_removed_later_restored": 12,
+    "removing_revisions": 7,
+    "sources_removed": {
+     "dailynous.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=920673561",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=934538259",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=924330350",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=919696461",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=915619528"
+    ]
+   },
+   {
+    "label": "Editor 52",
+    "words_removed": 206,
+    "others_words_removed": 206,
+    "words_removed_later_restored": 83,
+    "removing_revisions": 5,
+    "sources_removed": {
+     "x.com": 1,
+     "yahoo.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "transphobic": 1
+     },
+     "WTW: puffery": {
+      "great": 1
+     },
+     "WTW: synonyms for said": {
+      "note": 1
+     },
+     "contested: gender and sexuality": {
+      "transgender": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1260840106",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1230270444",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1219030974",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1219073060",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1265971574"
+    ]
+   },
+   {
+    "label": "Editor 7",
+    "words_removed": 201,
+    "others_words_removed": 201,
+    "words_removed_later_restored": 61,
+    "removing_revisions": 7,
+    "sources_removed": {
+     "youtube.com": 1
+    },
+    "terms_inserted": {
+     "WTW: puffery": {
+      "best": 1
+     },
+     "WTW: synonyms for said": {
+      "note": 1
+     },
+     "contested: gender and sexuality": {
+      "transgender": 1
+     },
+     "contested: terms for violent events": {
+      "attack": 1
+     }
+    },
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "transphobic": 1
+     },
+     "WTW: editorializing": {
+      "actually": 1
+     },
+     "WTW: synonyms for said": {
+      "claim": 1
+     },
+     "contested: gender and sexuality": {
+      "transgender": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=916781614",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=924900359",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=919937652",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=915880665",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=919937938"
+    ]
+   },
+   {
+    "label": "Editor 55",
+    "words_removed": 187,
+    "others_words_removed": 187,
+    "words_removed_later_restored": 1,
+    "removing_revisions": 2,
+    "sources_removed": {
+     "nytimes.com": 1,
+     "storage.googleapis.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1102202861",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1102204614"
+    ]
+   },
+   {
+    "label": "Editor 5",
+    "words_removed": 170,
+    "others_words_removed": 170,
+    "words_removed_later_restored": 156,
+    "removing_revisions": 5,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: contentious labels": {
+      "transphobic": 1
+     },
+     "WTW: synonyms for said": {
+      "note": 2
+     },
+     "WTW: unsupported attributions": {
+      "has been described as": 1
+     },
+     "contested: gender and sexuality": {
+      "transgender": 1
+     }
+    },
+    "terms_removed": {
+     "contested: gender and sexuality": {
+      "transgender": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1109826588",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1109939471",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1110080674",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1162424288",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1173450818"
+    ]
+   },
+   {
+    "label": "Editor 11",
+    "words_removed": 130,
+    "others_words_removed": 11,
+    "words_removed_later_restored": 13,
+    "removing_revisions": 13,
+    "sources_removed": {
+     "gawker.com": 1,
+     "thepinknews.com": 1,
+     "usnews.com": 1
+    },
+    "terms_inserted": {
+     "WTW: contentious labels": {
+      "transphobic": 1
+     },
+     "WTW: puffery": {
+      "best": 2,
+      "great": 1,
+      "hit": 2,
+      "prominent": 1
+     },
+     "WTW: synonyms for said": {
+      "claim": 1,
+      "reveal": 2
+     },
+     "contested: gender and sexuality": {
+      "transgender": 4
+     },
+     "contested: political labels": {
+      "woke": 2
+     },
+     "contested: terms for violent events": {
+      "attack": 1
+     },
+     "contested: truth claims": {
+      "baseless": 2
+     }
+    },
+    "terms_removed": {
+     "WTW: puffery": {
+      "best": 1
+     },
+     "WTW: synonyms for said": {
+      "reveal": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1159702089",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1159474497",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1158446696",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1218890206",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1158559915"
+    ]
+   },
+   {
+    "label": "Editor 62",
+    "words_removed": 114,
+    "others_words_removed": 114,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "contested: gender and sexuality": {
+      "transgender": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1178703143",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1104025485"
+    ]
+   },
+   {
+    "label": "Editor 12",
+    "words_removed": 110,
+    "others_words_removed": 110,
+    "words_removed_later_restored": 110,
+    "removing_revisions": 5,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "contested: gender and sexuality": {
+      "transgender": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1178379296",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1178379425",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1178380236",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1178379488",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1178380584"
+    ]
+   },
+   {
+    "label": "Editor 24",
+    "words_removed": 105,
+    "others_words_removed": 105,
+    "words_removed_later_restored": 7,
+    "removing_revisions": 6,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "transphobic": 1
+     },
+     "WTW: synonyms for said": {
+      "note": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1128316964",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1163145456",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1162821954",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1107301765",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1154253028"
+    ]
+   },
+   {
+    "label": "Editor 39",
+    "words_removed": 100,
+    "others_words_removed": 99,
+    "words_removed_later_restored": 5,
+    "removing_revisions": 9,
+    "sources_removed": {
+     "oed.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: synonyms for said": {
+      "assert": 1
+     },
+     "contested: gender and sexuality": {
+      "transgender": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1096915944",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=895093328",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=894836483",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=897437310",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=895091944"
+    ]
+   },
+   {
+    "label": "Editor 56",
+    "words_removed": 100,
+    "others_words_removed": 100,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 11,
+    "sources_removed": {
+     "doi.org": 2,
+     "dukeupress.edu": 1,
+     "wiley.com": 1
+    },
+    "terms_inserted": {
+     "contested: gender and sexuality": {
+      "transgender": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=935712169",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=919563899",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=976043701",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=992341596",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1012184112"
+    ]
+   },
+   {
+    "label": "Editor 63",
+    "words_removed": 94,
+    "others_words_removed": 94,
+    "words_removed_later_restored": 1,
+    "removing_revisions": 7,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "contested: gender and sexuality": {
+      "transgender": 1,
+      "transsexual": 1
+     },
+     "contested: truth claims": {
+      "propaganda": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=914652083",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=911572208",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=915253252",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=622253381",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1126315957"
+    ]
+   },
+   {
+    "label": "Editor 64",
+    "words_removed": 93,
+    "others_words_removed": 93,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {
+     "contested: gender and sexuality": {
+      "transgender": 3
+     }
+    },
+    "terms_removed": {
+     "WTW: puffery": {
+      "great": 2
+     },
+     "contested: gender and sexuality": {
+      "transgender": 3
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1219074722",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1219072993"
+    ]
+   },
+   {
+    "label": "Editor 65",
+    "words_removed": 91,
+    "others_words_removed": 91,
+    "words_removed_later_restored": 4,
+    "removing_revisions": 2,
+    "sources_removed": {
+     "compactmag.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "transphobic": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1230814628",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1184802656"
+    ]
+   },
+   {
+    "label": "Editor 43",
+    "words_removed": 90,
+    "others_words_removed": 90,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 6,
+    "sources_removed": {
+     "independent.co.uk": 1
+    },
+    "terms_inserted": {
+     "WTW: contentious labels": {
+      "transphobic": 1
+     }
+    },
+    "terms_removed": {
+     "WTW: editorializing": {
+      "only": 1
+     },
+     "contested: gender and sexuality": {
+      "transgender": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1010333542",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=950933003",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=911255673",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=994713662",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=902028327"
+    ]
+   },
+   {
+    "label": "Editor 66",
+    "words_removed": 88,
+    "others_words_removed": 88,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 3,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=897543212",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=899783184",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=900126105"
+    ]
+   },
+   {
+    "label": "Editor 67",
+    "words_removed": 88,
+    "others_words_removed": 72,
+    "words_removed_later_restored": 72,
+    "removing_revisions": 4,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: contentious labels": {
+      "transphobic": 1
+     }
+    },
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "transphobic": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=985220668",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=985225276",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=985282782",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=985289530"
+    ]
+   },
+   {
+    "label": "Editor 23",
+    "words_removed": 82,
+    "others_words_removed": 82,
+    "words_removed_later_restored": 9,
+    "removing_revisions": 10,
+    "sources_removed": {
+     "oed.com": 1
+    },
+    "terms_inserted": {
+     "contested: gender and sexuality": {
+      "transgender": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=978968638",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1096752040",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=919947875",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=924121731",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=924028199"
+    ]
+   },
+   {
+    "label": "Editor 68",
+    "words_removed": 78,
+    "others_words_removed": 78,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=894514398",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1197432622"
+    ]
+   },
+   {
+    "label": "Editor 28",
+    "words_removed": 77,
+    "others_words_removed": 77,
+    "words_removed_later_restored": 45,
+    "removing_revisions": 4,
+    "sources_removed": {
+     "youtube.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: editorializing": {
+      "actually": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=916754092",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=919249772",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=907838658",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=907839964"
+    ]
+   },
+   {
+    "label": "Editor 69",
+    "words_removed": 64,
+    "others_words_removed": 64,
+    "words_removed_later_restored": 64,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "contested: gender and sexuality": {
+      "transgender": 2
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=897017058"
+    ]
+   },
+   {
+    "label": "Editor 70",
+    "words_removed": 62,
+    "others_words_removed": 62,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 6,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: puffery": {
+      "great": 1
+     },
+     "WTW: synonyms for said": {
+      "clarify": 1
+     },
+     "WTW: unsupported attributions": {
+      "has been described as": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1274620715",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1221494168",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1169822187",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1169837134",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1221718324"
+    ]
+   },
+   {
+    "label": "Editor 71",
+    "words_removed": 61,
+    "others_words_removed": 61,
+    "words_removed_later_restored": 61,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: synonyms for said": {
+      "claim": 3
+     }
+    },
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "transphobic": 2
+     },
+     "WTW: editorializing": {
+      "only": 1
+     },
+     "WTW: synonyms for said": {
+      "claim": 4
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=899917087",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=899917539"
+    ]
+   },
+   {
+    "label": "Editor 33",
+    "words_removed": 55,
+    "others_words_removed": 55,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {
+     "contested: gender and sexuality": {
+      "gender ideology": 1,
+      "transgender": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1290466162",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1290465673"
+    ]
+   },
+   {
+    "label": "Editor 72",
+    "words_removed": 54,
+    "others_words_removed": 54,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: synonyms for said": {
+      "claim": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=899917325",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=898827034"
+    ]
+   },
+   {
+    "label": "Editor 73",
+    "words_removed": 53,
+    "others_words_removed": 53,
+    "words_removed_later_restored": 1,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "google.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1074653377"
+    ]
+   },
+   {
+    "label": "Editor 51",
+    "words_removed": 50,
+    "others_words_removed": 2,
+    "words_removed_later_restored": 19,
+    "removing_revisions": 3,
+    "sources_removed": {
+     "nytimes.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1239355229",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1239355160",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1239355827"
+    ]
+   },
+   {
+    "label": "Editor 74",
+    "words_removed": 50,
+    "others_words_removed": 50,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "glasgowinternational.org": 2
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1335001043"
+    ]
+   },
+   {
+    "label": "Editor 29",
+    "words_removed": 49,
+    "others_words_removed": 39,
+    "words_removed_later_restored": 1,
+    "removing_revisions": 10,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: contentious labels": {
+      "transphobic": 1
+     }
+    },
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "transphobic": 1
+     },
+     "WTW: synonyms for said": {
+      "claim": 1
+     },
+     "contested: gender and sexuality": {
+      "transgender": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1034600295",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=910271091",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=899057950",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=910270719",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=899275738"
+    ]
+   },
+   {
+    "label": "Editor 75",
+    "words_removed": 49,
+    "others_words_removed": 49,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 3,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=990908293",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=903940904",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1253752489"
+    ]
+   },
+   {
+    "label": "Editor 76",
+    "words_removed": 45,
+    "others_words_removed": 45,
+    "words_removed_later_restored": 2,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "newstatesman.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1141875840"
+    ]
+   },
+   {
+    "label": "Editor 18",
+    "words_removed": 44,
+    "others_words_removed": 35,
+    "words_removed_later_restored": 11,
+    "removing_revisions": 15,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: contentious labels": {
+      "pseudo-": 1,
+      "transphobic": 1
+     },
+     "WTW: puffery": {
+      "famous": 1
+     },
+     "contested: gender and sexuality": {
+      "transgender": 4
+     }
+    },
+    "terms_removed": {
+     "contested: gender and sexuality": {
+      "transgender": 2
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1133633801",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1133645085",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1133637833",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1133645196",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1133643133"
+    ]
+   },
+   {
+    "label": "Editor 77",
+    "words_removed": 41,
+    "others_words_removed": 41,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "contested: gender and sexuality": {
+      "transgender": 3
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1152483811"
+    ]
+   },
+   {
+    "label": "Editor 78",
+    "words_removed": 32,
+    "others_words_removed": 32,
+    "words_removed_later_restored": 32,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "transphobic": 1
+     },
+     "WTW: synonyms for said": {
+      "claim": 2
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=899782497"
+    ]
+   },
+   {
+    "label": "Editor 79",
+    "words_removed": 31,
+    "others_words_removed": 31,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 5,
+    "sources_removed": {},
+    "terms_inserted": {
+     "contested: gender and sexuality": {
+      "transgender": 1,
+      "transsexual": 1
+     }
+    },
+    "terms_removed": {
+     "WTW: synonyms for said": {
+      "claim": 3
+     },
+     "contested: gender and sexuality": {
+      "transgender": 2
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=900097706",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=900098333",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=728891732",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=900097958",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=900098102"
+    ]
+   },
+   {
+    "label": "Editor 80",
+    "words_removed": 31,
+    "others_words_removed": 31,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: synonyms for said": {
+      "note": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=916654844"
+    ]
+   },
+   {
+    "label": "Editor 81",
+    "words_removed": 31,
+    "others_words_removed": 31,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=913092263"
+    ]
+   },
+   {
+    "label": "Editor 82",
+    "words_removed": 30,
+    "others_words_removed": 27,
+    "words_removed_later_restored": 30,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "transphobic": 1
+     },
+     "contested: gender and sexuality": {
+      "transgender": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=912342621",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=912342222"
+    ]
+   },
+   {
+    "label": "Editor 83",
+    "words_removed": 27,
+    "others_words_removed": 27,
+    "words_removed_later_restored": 27,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "contested: territory and control": {
+      "disputed": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=931289949"
+    ]
+   },
+   {
+    "label": "Editor 84",
+    "words_removed": 26,
+    "others_words_removed": 26,
+    "words_removed_later_restored": 26,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "contested: gender and sexuality": {
+      "transgender": 2
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=914466658",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=914468637"
+    ]
+   },
+   {
+    "label": "Editor 85",
+    "words_removed": 24,
+    "others_words_removed": 24,
+    "words_removed_later_restored": 24,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "transphobic": 1
+     },
+     "contested: gender and sexuality": {
+      "transgender": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=910738778"
+    ]
+   },
+   {
+    "label": "Editor 17",
+    "words_removed": 22,
+    "others_words_removed": 22,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=932568046"
+    ]
+   },
+   {
+    "label": "Editor 86",
+    "words_removed": 22,
+    "others_words_removed": 22,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=922301222"
+    ]
+   },
+   {
+    "label": "Editor 35",
+    "words_removed": 21,
+    "others_words_removed": 21,
+    "words_removed_later_restored": 6,
+    "removing_revisions": 6,
+    "sources_removed": {},
+    "terms_inserted": {
+     "contested: gender and sexuality": {
+      "transgender": 2
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=923447735",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=923444818",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=923445811",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=923449580",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=924025046"
+    ]
+   },
+   {
+    "label": "Editor 87",
+    "words_removed": 21,
+    "others_words_removed": 21,
+    "words_removed_later_restored": 21,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=899682009"
+    ]
+   },
+   {
+    "label": "Editor 88",
+    "words_removed": 21,
+    "others_words_removed": 21,
+    "words_removed_later_restored": 21,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=914651186"
+    ]
+   },
+   {
+    "label": "Editor 89",
+    "words_removed": 21,
+    "others_words_removed": 21,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 3,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "contested: gender and sexuality": {
+      "transgender": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=895138757",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=894464929",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=696657161"
+    ]
+   },
+   {
+    "label": "Editor 90",
+    "words_removed": 19,
+    "others_words_removed": 19,
+    "words_removed_later_restored": 19,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "transphobic": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=912389074",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=912389491"
+    ]
+   },
+   {
+    "label": "Editor 91",
+    "words_removed": 19,
+    "others_words_removed": 19,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=912343152"
+    ]
+   },
+   {
+    "label": "Editor 31",
+    "words_removed": 18,
+    "others_words_removed": 18,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 5,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1108035908",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1152723107",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1152724741",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1108036094",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1108035465"
+    ]
+   },
+   {
+    "label": "Editor 92",
+    "words_removed": 18,
+    "others_words_removed": 18,
+    "words_removed_later_restored": 18,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "contested: gender and sexuality": {
+      "transgender": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=827852765"
+    ]
+   },
+   {
+    "label": "Editor 93",
+    "words_removed": 18,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1174539922"
+    ]
+   },
+   {
+    "label": "Editor 94",
+    "words_removed": 18,
+    "others_words_removed": 18,
+    "words_removed_later_restored": 4,
+    "removing_revisions": 5,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "contested: gender and sexuality": {
+      "transgender": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=915349343",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=915534248",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1079857613",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=924598625",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1160195016"
+    ]
+   },
+   {
+    "label": "Editor 95",
+    "words_removed": 18,
+    "others_words_removed": 18,
+    "words_removed_later_restored": 18,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "transphobic": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=900120601"
+    ]
+   },
+   {
+    "label": "Editor 96",
+    "words_removed": 16,
+    "others_words_removed": 16,
+    "words_removed_later_restored": 16,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "transphobic": 1
+     },
+     "contested: gender and sexuality": {
+      "transgender": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=910769291"
+    ]
+   },
+   {
+    "label": "Editor 97",
+    "words_removed": 16,
+    "others_words_removed": 16,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 3,
+    "sources_removed": {
+     "brill.com": 1
+    },
+    "terms_inserted": {
+     "WTW: editorializing": {
+      "only": 1
+     },
+     "WTW: synonyms for said": {
+      "claim": 3
+     },
+     "contested: gender and sexuality": {
+      "transgender": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=998296869",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=903632454",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1003497532"
+    ]
+   },
+   {
+    "label": "Editor 98",
+    "words_removed": 16,
+    "others_words_removed": 16,
+    "words_removed_later_restored": 16,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=915558348"
+    ]
+   },
+   {
+    "label": "Editor 20",
+    "words_removed": 15,
+    "others_words_removed": 13,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 3,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: expressions of doubt": {
+      "alleged": 2
+     },
+     "WTW: synonyms for said": {
+      "note": 1
+     }
+    },
+    "terms_removed": {
+     "WTW: expressions of doubt": {
+      "alleged": 1
+     },
+     "WTW: synonyms for said": {
+      "note": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1174794899",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1174794656",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1174794943"
+    ]
+   },
+   {
+    "label": "Editor 34",
+    "words_removed": 13,
+    "others_words_removed": 13,
+    "words_removed_later_restored": 1,
+    "removing_revisions": 3,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=920971422",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=916075263",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=934177706"
+    ]
+   },
+   {
+    "label": "Editor 99",
+    "words_removed": 13,
+    "others_words_removed": 12,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 5,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1363383145",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1051708429",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1179012839",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1363382909",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1363383163"
+    ]
+   },
+   {
+    "label": "Editor 100",
+    "words_removed": 13,
+    "others_words_removed": 13,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 5,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=952942293",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=987275168",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1243691997",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1247128583",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1247504062"
+    ]
+   },
+   {
+    "label": "Editor 101",
+    "words_removed": 13,
+    "others_words_removed": 13,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "terfisaslur.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=932490163"
+    ]
+   },
+   {
+    "label": "Editor 41",
+    "words_removed": 12,
+    "others_words_removed": 12,
+    "words_removed_later_restored": 4,
+    "removing_revisions": 6,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "transphobic": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=907340152",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=911216122",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=911214636",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=911216062",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=911214786"
+    ]
+   },
+   {
+    "label": "Editor 22",
+    "words_removed": 11,
+    "others_words_removed": 11,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1051642184"
+    ]
+   },
+   {
+    "label": "Editor 102",
+    "words_removed": 11,
+    "others_words_removed": 11,
+    "words_removed_later_restored": 11,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: synonyms for said": {
+      "find": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=894660715"
+    ]
+   },
+   {
+    "label": "Editor 103",
+    "words_removed": 11,
+    "others_words_removed": 11,
+    "words_removed_later_restored": 9,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1372401281",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1041264367"
+    ]
+   },
+   {
+    "label": "Editor 104",
+    "words_removed": 10,
+    "others_words_removed": 10,
+    "words_removed_later_restored": 4,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {
+     "contested: gender and sexuality": {
+      "transgender": 1
+     }
+    },
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "transphobic": 1
+     },
+     "WTW: synonyms for said": {
+      "deny": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=910036810"
+    ]
+   },
+   {
+    "label": "Editor 105",
+    "words_removed": 10,
+    "others_words_removed": 10,
+    "words_removed_later_restored": 2,
+    "removing_revisions": 3,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=914472089",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=932452269",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=915498739"
+    ]
+   },
+   {
+    "label": "Editor 106",
+    "words_removed": 10,
+    "others_words_removed": 10,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1011934286",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1011934409"
+    ]
+   },
+   {
+    "label": "Editor 107",
+    "words_removed": 10,
+    "others_words_removed": 10,
+    "words_removed_later_restored": 6,
+    "removing_revisions": 3,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=897839168",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=908218510",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=945820871"
+    ]
+   },
+   {
+    "label": "Editor 108",
+    "words_removed": 10,
+    "others_words_removed": 10,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=948221222"
+    ]
+   },
+   {
+    "label": "Editor 109",
+    "words_removed": 10,
+    "others_words_removed": 10,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1196283289"
+    ]
+   },
+   {
+    "label": "Editor 26",
+    "words_removed": 9,
+    "others_words_removed": 9,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 3,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1239575597",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1239575184",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1239575439"
+    ]
+   },
+   {
+    "label": "Editor 110",
+    "words_removed": 9,
+    "others_words_removed": 9,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=910753496"
+    ]
+   },
+   {
+    "label": "Editor 111",
+    "words_removed": 9,
+    "others_words_removed": 9,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1110893064"
+    ]
+   },
+   {
+    "label": "Editor 112",
+    "words_removed": 9,
+    "others_words_removed": 9,
+    "words_removed_later_restored": 5,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=930683406",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=895821683"
+    ]
+   },
+   {
+    "label": "Editor 113",
+    "words_removed": 9,
+    "others_words_removed": 9,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 3,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "contested: gender and sexuality": {
+      "transgender": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1165626061",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1077958631",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1162997826"
+    ]
+   },
+   {
+    "label": "Editor 30",
+    "words_removed": 8,
+    "others_words_removed": 8,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1002880749",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1002881114"
+    ]
+   },
+   {
+    "label": "Editor 114",
+    "words_removed": 8,
+    "others_words_removed": 8,
+    "words_removed_later_restored": 8,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=934284637"
+    ]
+   },
+   {
+    "label": "Editor 115",
+    "words_removed": 8,
+    "others_words_removed": 8,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=910861401",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=910861523"
+    ]
+   },
+   {
+    "label": "Editor 116",
+    "words_removed": 8,
+    "others_words_removed": 8,
+    "words_removed_later_restored": 8,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: synonyms for said": {
+      "claim": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=899964782",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=899964194"
+    ]
+   },
+   {
+    "label": "Editor 25",
+    "words_removed": 5,
+    "others_words_removed": 1,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 3,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: expressions of doubt": {
+      "accused": 1
+     },
+     "contested: gender and sexuality": {
+      "transgender": 5
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1153764988",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1153763756",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1154230711"
+    ]
+   },
+   {
+    "label": "Editor 32",
+    "words_removed": 4,
+    "others_words_removed": 4,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: puffery": {
+      "great": 1
+     },
+     "WTW: synonyms for said": {
+      "clarify": 1
+     },
+     "contested: gender and sexuality": {
+      "transgender": 2
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1013758664",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1219768296"
+    ]
+   },
+   {
+    "label": "Editor 123",
+    "words_removed": 3,
+    "others_words_removed": 3,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "contested: gender and sexuality": {
+      "transsexual": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=824573880"
+    ]
+   },
+   {
+    "label": "Editor 131",
+    "words_removed": 3,
+    "others_words_removed": 3,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: synonyms for said": {
+      "note": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1002872877",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1002876398"
+    ]
+   },
+   {
+    "label": "Editor 48",
+    "words_removed": 2,
+    "others_words_removed": 2,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {
+     "contested: gender and sexuality": {
+      "transgender": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1140533330"
+    ]
+   },
+   {
+    "label": "Editor 118",
+    "words_removed": 2,
+    "others_words_removed": 2,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {
+     "contested: gender and sexuality": {
+      "transgender": 1,
+      "transsexual": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=618896183"
+    ]
+   },
+   {
+    "label": "Editor 121",
+    "words_removed": 2,
+    "others_words_removed": 2,
+    "words_removed_later_restored": 2,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "transphobic": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=899969211"
+    ]
+   },
+   {
+    "label": "Editor 122",
+    "words_removed": 1,
+    "others_words_removed": 1,
+    "words_removed_later_restored": 1,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {
+     "contested: gender and sexuality": {
+      "transgender": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=667194378"
+    ]
+   },
+   {
+    "label": "Editor 124",
+    "words_removed": 1,
+    "others_words_removed": 1,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {
+     "contested: gender and sexuality": {
+      "transgender": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1369793851"
+    ]
+   },
+   {
+    "label": "Editor 125",
+    "words_removed": 1,
+    "others_words_removed": 1,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "contested: gender and sexuality": {
+      "transgender": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1279923647"
+    ]
+   },
+   {
+    "label": "Editor 127",
+    "words_removed": 1,
+    "others_words_removed": 1,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {
+     "contested: gender and sexuality": {
+      "transgender": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=900017163"
+    ]
+   },
+   {
+    "label": "Editor 16",
+    "words_removed": 0,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 0,
+    "sources_removed": {},
+    "terms_inserted": {
+     "contested: truth claims": {
+      "misleading": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": []
+   },
+   {
+    "label": "Editor 117",
+    "words_removed": 0,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 0,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: synonyms for said": {
+      "deny": 1
+     },
+     "contested: gender and sexuality": {
+      "transgender": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": []
+   },
+   {
+    "label": "Editor 119",
+    "words_removed": 0,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 0,
+    "sources_removed": {},
+    "terms_inserted": {
+     "contested: truth claims": {
+      "propaganda": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": []
+   },
+   {
+    "label": "Editor 120",
+    "words_removed": 0,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 0,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: editorializing": {
+      "absolutely": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": []
+   },
+   {
+    "label": "Editor 126",
+    "words_removed": 0,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 0,
+    "sources_removed": {},
+    "terms_inserted": {
+     "contested: gender and sexuality": {
+      "transgender": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": []
+   },
+   {
+    "label": "Editor 128",
+    "words_removed": 0,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 0,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: contentious labels": {
+      "transphobic": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": []
+   },
+   {
+    "label": "Editor 129",
+    "words_removed": 0,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 0,
+    "sources_removed": {},
+    "terms_inserted": {
+     "contested: gender and sexuality": {
+      "transgender": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": []
+   },
+   {
+    "label": "Editor 130",
+    "words_removed": 0,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 0,
+    "sources_removed": {},
+    "terms_inserted": {
+     "contested: gender and sexuality": {
+      "transgender": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": []
+   }
+  ],
+  "editors_shown": 119,
+  "sentence_history": {
+   "rule": "taken out and put back at least 2 times, not counting page-wide removals",
+   "sentences": 64,
+   "sentences_removed_and_restored_twice_or_more": 6,
+   "their_words": 208,
+   "share_of_words": 0.109474,
+   "in_opening_section": 0,
+   "median_days_in_place_since_last_restored": 2162,
+   "sentences_removed_five_times_or_more": 1,
+   "sentences_removed_by_two_or_more_accounts": 5
+  }
+ },
+ "declared_interests": {
+  "article_tags": [],
+  "talk_page_revision": 1347116464,
+  "evidence": "https://en.wikipedia.org/w/index.php?oldid=1347116464",
+  "notices": []
  },
  "caveats": [
   {

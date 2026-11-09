@@ -170,3 +170,52 @@ def survival_block(cells: dict, article: dict) -> dict:
                   "rate": r6(rate) if rate is not None else None,
                   "vs_article": r6(rate / avg) if rate is not None and avg else None}
     return out
+
+
+PERSISTENCE_YEARS = (1, 2, 3, 5)
+
+
+def _years_before(t: dt.datetime, n: int) -> dt.datetime:
+    try:
+        return t.replace(year=t.year - n)
+    except ValueError:   # 29 February -> 28 February
+        return t.replace(year=t.year - n, day=28)
+
+
+def persistence(all_tokens, hist: History, analysed_revid: int,
+                years=PERSISTENCE_YEARS) -> list[dict]:
+    """How much of the page as it stood 1, 2, 3 and 5 years before the analysed revision is
+    still in it. The same fixed distances are used for every article, so no date is chosen
+    for any one article.
+
+    For each distance: the last revision saved at or before that moment (the baseline); the
+    word tokens of the page source present in the baseline (WikiWho, footnote text included);
+    how many of those are present in the analysed revision; and what share of the analysed
+    revision's words they make up. A word removed and later put back counts as present.
+    Events after the analysed revision are ignored. A distance before the article existed
+    gives baseline None.
+    """
+    t_end = hist.time_of(analysed_revid)
+
+    def present(ins, outs, cut):
+        return sum(1 for r in outs if r <= cut) == sum(1 for r in ins if r <= cut)
+
+    now = [t for t in all_tokens if t[0] <= analysed_revid and present(t[1], t[2], analysed_revid)]
+    out = []
+    for n in years:
+        cut = hist.last_rev_at(_years_before(t_end, n)) if t_end else 0
+        if not cut:
+            out.append({"years": n, "baseline": None})
+            continue
+        then = kept = 0
+        for o, ins, outs in all_tokens:
+            if o <= cut and present(ins, outs, cut):
+                then += 1
+                kept += present(ins, outs, analysed_revid)
+        out.append({"years": n, "baseline": cut,
+                    "baseline_timestamp": hist.by_id[cut]["timestamp"],
+                    "words_then": then, "still_present": kept,
+                    "share_still_present": r6(kept / then) if then else None,
+                    "words_now": len(now),
+                    "share_of_current": r6(kept / len(now)) if now else None})
+    return out

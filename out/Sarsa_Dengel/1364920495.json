@@ -1,0 +1,6114 @@
+{
+ "article": "Sarsa Dengel",
+ "revision": 1364920495,
+ "revision_timestamp": "2026-07-19T08:14:11Z",
+ "computed": "2026-11-04",
+ "topic_area": "HA",
+ "permalink": "https://en.wikipedia.org/w/index.php?oldid=1364920495",
+ "authorship": {
+  "basis": "words of readable prose; each word credited to the editor whose revision first added it (WikiWho)",
+  "total_words": 1259,
+  "lead_words": 155,
+  "editor_count": 24,
+  "lead_editor_count": 7,
+  "editors": [
+   {
+    "label": "Editor 1",
+    "account_type": "registered",
+    "words": 555,
+    "share": 0.440826,
+    "lead_words": 0,
+    "lead_share": 0.0,
+    "sanctioned": false,
+    "sanctions": [],
+    "survival": {
+     "48h": {
+      "words_added": 1234,
+      "words_surviving": 1211,
+      "rate": 0.981361,
+      "vs_article": 1.052443
+     },
+     "30d": {
+      "words_added": 1234,
+      "words_surviving": 1157,
+      "rate": 0.937601,
+      "vs_article": 1.157133
+     },
+     "365d": {
+      "words_added": 1234,
+      "words_surviving": 1041,
+      "rate": 0.843598,
+      "vs_article": 1.276702
+     }
+    },
+    "top_revisions": [
+     1171126773,
+     1084480214,
+     1084485030
+    ],
+    "added_by_year": {
+     "2022": 258,
+     "2023": 297
+    },
+    "citations_added": 10,
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1171126773",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1084480214",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1084485030"
+    ]
+   },
+   {
+    "label": "Editor 2",
+    "account_type": "registered",
+    "words": 211,
+    "share": 0.167593,
+    "lead_words": 13,
+    "lead_share": 0.083871,
+    "sanctioned": true,
+    "sanctions": [
+     {
+      "type": "sockpuppet",
+      "area": "",
+      "duration": "indefinite",
+      "date": "2024-12-19",
+      "end": null,
+      "end_basis": null,
+      "authority": "block log",
+      "source": "block_log",
+      "evidence": "https://en.wikipedia.org/wiki/Special:BlockList?wpTarget=%2325073011"
+     }
+    ],
+    "survival": {
+     "48h": {
+      "words_added": 541,
+      "words_surviving": 540,
+      "rate": 0.998152,
+      "vs_article": 1.070449
+     },
+     "30d": {
+      "words_added": 541,
+      "words_surviving": 539,
+      "rate": 0.996303,
+      "vs_article": 1.22958
+     },
+     "365d": {
+      "words_added": 541,
+      "words_surviving": 529,
+      "rate": 0.977819,
+      "vs_article": 1.479832
+     }
+    },
+    "top_revisions": [
+     1263606427,
+     1263604877,
+     1263633328
+    ],
+    "added_by_year": {
+     "2024": 211
+    },
+    "citations_added": 9,
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1263606427",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1263604877",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1263633328",
+     "https://en.wikipedia.org/wiki/Special:BlockList?wpTarget=%2325073011"
+    ]
+   },
+   {
+    "label": "Editor 3",
+    "account_type": "registered",
+    "words": 168,
+    "share": 0.133439,
+    "lead_words": 8,
+    "lead_share": 0.051613,
+    "sanctioned": false,
+    "sanctions": [],
+    "survival": {
+     "48h": {
+      "words_added": 676,
+      "words_surviving": 675,
+      "rate": 0.998521,
+      "vs_article": 1.070845
+     },
+     "30d": {
+      "words_added": 676,
+      "words_surviving": 674,
+      "rate": 0.997041,
+      "vs_article": 1.230491
+     },
+     "365d": {
+      "words_added": 676,
+      "words_surviving": 644,
+      "rate": 0.952663,
+      "vs_article": 1.441761
+     }
+    },
+    "top_revisions": [
+     13146670,
+     347741426,
+     39450904
+    ],
+    "added_by_year": {
+     "2005": 109,
+     "2006": 8,
+     "2008": 3,
+     "2009": 8,
+     "2010": 39,
+     "2022": 1
+    },
+    "citations_added": 3,
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=13146670",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=347741426",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=39450904"
+    ]
+   },
+   {
+    "label": "Editor 4",
+    "account_type": "registered",
+    "words": 108,
+    "share": 0.085782,
+    "lead_words": 108,
+    "lead_share": 0.696774,
+    "sanctioned": false,
+    "sanctions": [],
+    "survival": {
+     "48h": {
+      "words_added": 110,
+      "words_surviving": 110,
+      "rate": 1.0,
+      "vs_article": 1.072432
+     },
+     "30d": {
+      "words_added": 110,
+      "words_surviving": 110,
+      "rate": 1.0,
+      "vs_article": 1.234142
+     },
+     "365d": {
+      "words_added": 110,
+      "words_surviving": 110,
+      "rate": 1.0,
+      "vs_article": 1.513401
+     }
+    },
+    "top_revisions": [
+     1148872168
+    ],
+    "added_by_year": {
+     "2023": 108
+    },
+    "citations_added": 0,
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1148872168"
+    ]
+   },
+   {
+    "label": "Editor 5",
+    "account_type": "registered",
+    "words": 58,
+    "share": 0.046068,
+    "lead_words": 0,
+    "lead_share": 0.0,
+    "sanctioned": true,
+    "sanctions": [
+     {
+      "type": "sockpuppet",
+      "area": "",
+      "duration": "indefinite",
+      "date": "2023-02-18",
+      "end": null,
+      "end_basis": null,
+      "authority": "block log",
+      "source": "block_log",
+      "evidence": "https://en.wikipedia.org/wiki/Special:BlockList?wpTarget=%2318194640"
+     }
+    ],
+    "survival": {
+     "48h": {
+      "words_added": 132,
+      "words_surviving": 132,
+      "rate": 1.0,
+      "vs_article": 1.072432
+     },
+     "30d": {
+      "words_added": 132,
+      "words_surviving": 104,
+      "rate": 0.787879,
+      "vs_article": 0.972354
+     },
+     "365d": {
+      "words_added": 132,
+      "words_surviving": 104,
+      "rate": 0.787879,
+      "vs_article": 1.192377
+     }
+    },
+    "top_revisions": [
+     1140111789
+    ],
+    "added_by_year": {
+     "2023": 58
+    },
+    "citations_added": 1,
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1140111789",
+     "https://en.wikipedia.org/wiki/Special:BlockList?wpTarget=%2318194640"
+    ]
+   },
+   {
+    "label": "Editor 6",
+    "account_type": "ip",
+    "words": 41,
+    "share": 0.032566,
+    "lead_words": 0,
+    "lead_share": 0.0,
+    "sanctioned": false,
+    "sanctions": [],
+    "survival": {
+     "48h": {
+      "words_added": 59,
+      "words_surviving": 59,
+      "rate": 1.0,
+      "vs_article": 1.072432
+     },
+     "30d": {
+      "words_added": 59,
+      "words_surviving": 59,
+      "rate": 1.0,
+      "vs_article": 1.234142
+     },
+     "365d": {
+      "words_added": 0,
+      "words_surviving": 0,
+      "rate": null,
+      "vs_article": null
+     }
+    },
+    "top_revisions": [
+     1309928450
+    ],
+    "added_by_year": {
+     "2025": 41
+    },
+    "citations_added": 1,
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1309928450"
+    ]
+   },
+   {
+    "label": "Editor 7",
+    "account_type": "registered",
+    "words": 30,
+    "share": 0.023828,
+    "lead_words": 0,
+    "lead_share": 0.0,
+    "sanctioned": true,
+    "sanctions": [
+     {
+      "type": "sockpuppet",
+      "area": "",
+      "duration": "indefinite",
+      "date": "2025-02-26",
+      "end": null,
+      "end_basis": null,
+      "authority": "block log",
+      "source": "block_log",
+      "evidence": "https://en.wikipedia.org/wiki/Special:BlockList?wpTarget=%2325113359"
+     }
+    ],
+    "survival": {
+     "48h": {
+      "words_added": 52,
+      "words_surviving": 46,
+      "rate": 0.884615,
+      "vs_article": 0.94869
+     },
+     "30d": {
+      "words_added": 52,
+      "words_surviving": 46,
+      "rate": 0.884615,
+      "vs_article": 1.091741
+     },
+     "365d": {
+      "words_added": 52,
+      "words_surviving": 46,
+      "rate": 0.884615,
+      "vs_article": 1.338778
+     }
+    },
+    "top_revisions": [
+     1277325180,
+     1277325465
+    ],
+    "added_by_year": {
+     "2025": 30
+    },
+    "citations_added": 1,
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1277325180",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1277325465",
+     "https://en.wikipedia.org/wiki/Special:BlockList?wpTarget=%2325113359"
+    ]
+   },
+   {
+    "label": "Editor 8",
+    "account_type": "registered",
+    "words": 19,
+    "share": 0.015091,
+    "lead_words": 19,
+    "lead_share": 0.122581,
+    "sanctioned": true,
+    "sanctions": [
+     {
+      "type": "sockpuppet",
+      "area": "",
+      "duration": "indefinite",
+      "date": "2022-10-09",
+      "end": null,
+      "end_basis": null,
+      "authority": "block log",
+      "source": "block_log",
+      "evidence": "https://en.wikipedia.org/wiki/Special:BlockList?wpTarget=%2316573911"
+     }
+    ],
+    "survival": {
+     "48h": {
+      "words_added": 71,
+      "words_surviving": 67,
+      "rate": 0.943662,
+      "vs_article": 1.012013
+     },
+     "30d": {
+      "words_added": 71,
+      "words_surviving": 67,
+      "rate": 0.943662,
+      "vs_article": 1.164613
+     },
+     "365d": {
+      "words_added": 71,
+      "words_surviving": 47,
+      "rate": 0.661972,
+      "vs_article": 1.001829
+     }
+    },
+    "top_revisions": [
+     1065631022,
+     1065630197
+    ],
+    "added_by_year": {
+     "2022": 19
+    },
+    "citations_added": 0,
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1065631022",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1065630197",
+     "https://en.wikipedia.org/wiki/Special:BlockList?wpTarget=%2316573911"
+    ]
+   },
+   {
+    "label": "Editor 9",
+    "account_type": "registered",
+    "words": 17,
+    "share": 0.013503,
+    "lead_words": 0,
+    "lead_share": 0.0,
+    "sanctioned": true,
+    "sanctions": [
+     {
+      "type": "sockpuppet",
+      "area": "",
+      "duration": "indefinite",
+      "date": "2022-11-29",
+      "end": null,
+      "end_basis": null,
+      "authority": "block log",
+      "source": "block_log",
+      "evidence": "https://en.wikipedia.org/wiki/Special:BlockList?wpTarget=%2317216806"
+     }
+    ],
+    "survival": {
+     "48h": {
+      "words_added": 150,
+      "words_surviving": 131,
+      "rate": 0.873333,
+      "vs_article": 0.93659
+     },
+     "30d": {
+      "words_added": 150,
+      "words_surviving": 0,
+      "rate": 0.0,
+      "vs_article": 0.0
+     },
+     "365d": {
+      "words_added": 150,
+      "words_surviving": 20,
+      "rate": 0.133333,
+      "vs_article": 0.201787
+     }
+    },
+    "top_revisions": [
+     1123810447
+    ],
+    "added_by_year": {
+     "2022": 17
+    },
+    "citations_added": 0,
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1123810447",
+     "https://en.wikipedia.org/wiki/Special:BlockList?wpTarget=%2317216806"
+    ]
+   },
+   {
+    "label": "Editor 10",
+    "account_type": "registered",
+    "words": 17,
+    "share": 0.013503,
+    "lead_words": 0,
+    "lead_share": 0.0,
+    "sanctioned": false,
+    "sanctions": [],
+    "survival": {
+     "48h": {
+      "words_added": 17,
+      "words_surviving": 17,
+      "rate": 1.0,
+      "vs_article": 1.072432
+     },
+     "30d": {
+      "words_added": 17,
+      "words_surviving": 17,
+      "rate": 1.0,
+      "vs_article": 1.234142
+     },
+     "365d": {
+      "words_added": 0,
+      "words_surviving": 0,
+      "rate": null,
+      "vs_article": null
+     }
+    },
+    "top_revisions": [
+     1332603022
+    ],
+    "added_by_year": {
+     "2026": 17
+    },
+    "citations_added": 0,
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1332603022"
+    ]
+   },
+   {
+    "label": "Editor 11",
+    "account_type": "registered",
+    "words": 5,
+    "share": 0.003971,
+    "lead_words": 0,
+    "lead_share": 0.0,
+    "sanctioned": false,
+    "sanctions": [],
+    "survival": {
+     "48h": {
+      "words_added": 88,
+      "words_surviving": 88,
+      "rate": 1.0,
+      "vs_article": 1.072432
+     },
+     "30d": {
+      "words_added": 88,
+      "words_surviving": 5,
+      "rate": 0.056818,
+      "vs_article": 0.070122
+     },
+     "365d": {
+      "words_added": 5,
+      "words_surviving": 5,
+      "rate": 1.0,
+      "vs_article": 1.513401
+     }
+    },
+    "top_revisions": [
+     1023409150
+    ],
+    "added_by_year": {
+     "2021": 5
+    },
+    "citations_added": 0,
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1023409150"
+    ]
+   },
+   {
+    "label": "Editor 12",
+    "account_type": "ip",
+    "words": 5,
+    "share": 0.003971,
+    "lead_words": 0,
+    "lead_share": 0.0,
+    "sanctioned": false,
+    "sanctions": [],
+    "survival": {
+     "48h": {
+      "words_added": 46,
+      "words_surviving": 46,
+      "rate": 1.0,
+      "vs_article": 1.072432
+     },
+     "30d": {
+      "words_added": 46,
+      "words_surviving": 46,
+      "rate": 1.0,
+      "vs_article": 1.234142
+     },
+     "365d": {
+      "words_added": 46,
+      "words_surviving": 46,
+      "rate": 1.0,
+      "vs_article": 1.513401
+     }
+    },
+    "top_revisions": [
+     1088885431
+    ],
+    "added_by_year": {
+     "2022": 5
+    },
+    "citations_added": 0,
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1088885431"
+    ]
+   },
+   {
+    "label": "Editor 13",
+    "account_type": "ip",
+    "words": 4,
+    "share": 0.003177,
+    "lead_words": 0,
+    "lead_share": 0.0,
+    "sanctioned": false,
+    "sanctions": [],
+    "survival": {
+     "48h": {
+      "words_added": 4,
+      "words_surviving": 4,
+      "rate": 1.0,
+      "vs_article": 1.072432
+     },
+     "30d": {
+      "words_added": 4,
+      "words_surviving": 4,
+      "rate": 1.0,
+      "vs_article": 1.234142
+     },
+     "365d": {
+      "words_added": 4,
+      "words_surviving": 4,
+      "rate": 1.0,
+      "vs_article": 1.513401
+     }
+    },
+    "top_revisions": [
+     537078685
+    ],
+    "added_by_year": {
+     "2013": 4
+    },
+    "citations_added": 0,
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=537078685"
+    ]
+   },
+   {
+    "label": "Editor 14",
+    "account_type": "registered",
+    "words": 4,
+    "share": 0.003177,
+    "lead_words": 4,
+    "lead_share": 0.025806,
+    "sanctioned": false,
+    "sanctions": [],
+    "survival": {
+     "48h": {
+      "words_added": 33,
+      "words_surviving": 21,
+      "rate": 0.636364,
+      "vs_article": 0.682456
+     },
+     "30d": {
+      "words_added": 33,
+      "words_surviving": 21,
+      "rate": 0.636364,
+      "vs_article": 0.785363
+     },
+     "365d": {
+      "words_added": 33,
+      "words_surviving": 20,
+      "rate": 0.606061,
+      "vs_article": 0.917213
+     }
+    },
+    "top_revisions": [
+     1197679775,
+     1209387984
+    ],
+    "added_by_year": {
+     "2024": 4
+    },
+    "citations_added": 0,
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1197679775",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1209387984"
+    ]
+   },
+   {
+    "label": "Editor 15",
+    "account_type": "ip",
+    "words": 3,
+    "share": 0.002383,
+    "lead_words": 0,
+    "lead_share": 0.0,
+    "sanctioned": false,
+    "sanctions": [],
+    "survival": {
+     "48h": {
+      "words_added": 34,
+      "words_surviving": 30,
+      "rate": 0.882353,
+      "vs_article": 0.946263
+     },
+     "30d": {
+      "words_added": 34,
+      "words_surviving": 30,
+      "rate": 0.882353,
+      "vs_article": 1.088949
+     },
+     "365d": {
+      "words_added": 34,
+      "words_surviving": 30,
+      "rate": 0.882353,
+      "vs_article": 1.335354
+     }
+    },
+    "top_revisions": [
+     1088858914
+    ],
+    "added_by_year": {
+     "2022": 3
+    },
+    "citations_added": 1,
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1088858914"
+    ]
+   },
+   {
+    "label": "Editor 16",
+    "account_type": "registered",
+    "words": 2,
+    "share": 0.001589,
+    "lead_words": 0,
+    "lead_share": 0.0,
+    "sanctioned": false,
+    "sanctions": [],
+    "survival": {
+     "48h": {
+      "words_added": 2,
+      "words_surviving": 2,
+      "rate": 1.0,
+      "vs_article": 1.072432
+     },
+     "30d": {
+      "words_added": 2,
+      "words_surviving": 2,
+      "rate": 1.0,
+      "vs_article": 1.234142
+     },
+     "365d": {
+      "words_added": 2,
+      "words_surviving": 2,
+      "rate": 1.0,
+      "vs_article": 1.513401
+     }
+    },
+    "top_revisions": [
+     1014924477
+    ],
+    "added_by_year": {
+     "2021": 2
+    },
+    "citations_added": 0,
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1014924477"
+    ]
+   },
+   {
+    "label": "Editor 17",
+    "account_type": "registered",
+    "words": 2,
+    "share": 0.001589,
+    "lead_words": 2,
+    "lead_share": 0.012903,
+    "sanctioned": false,
+    "sanctions": [],
+    "survival": {
+     "48h": {
+      "words_added": 31,
+      "words_surviving": 31,
+      "rate": 1.0,
+      "vs_article": 1.072432
+     },
+     "30d": {
+      "words_added": 31,
+      "words_surviving": 10,
+      "rate": 0.322581,
+      "vs_article": 0.39811
+     },
+     "365d": {
+      "words_added": 31,
+      "words_surviving": 9,
+      "rate": 0.290323,
+      "vs_article": 0.439375
+     }
+    },
+    "top_revisions": [
+     1019564096
+    ],
+    "added_by_year": {
+     "2021": 2
+    },
+    "citations_added": 0,
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1019564096"
+    ]
+   },
+   {
+    "label": "Editor 18",
+    "account_type": "ip",
+    "words": 2,
+    "share": 0.001589,
+    "lead_words": 0,
+    "lead_share": 0.0,
+    "sanctioned": false,
+    "sanctions": [],
+    "survival": {
+     "48h": {
+      "words_added": 10,
+      "words_surviving": 10,
+      "rate": 1.0,
+      "vs_article": 1.072432
+     },
+     "30d": {
+      "words_added": 10,
+      "words_surviving": 10,
+      "rate": 1.0,
+      "vs_article": 1.234142
+     },
+     "365d": {
+      "words_added": 10,
+      "words_surviving": 9,
+      "rate": 0.9,
+      "vs_article": 1.362061
+     }
+    },
+    "top_revisions": [
+     1091854888
+    ],
+    "added_by_year": {
+     "2022": 2
+    },
+    "citations_added": 0,
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1091854888"
+    ]
+   },
+   {
+    "label": "Editor 19",
+    "account_type": "registered",
+    "words": 2,
+    "share": 0.001589,
+    "lead_words": 0,
+    "lead_share": 0.0,
+    "sanctioned": false,
+    "sanctions": [],
+    "survival": {
+     "48h": {
+      "words_added": 6,
+      "words_surviving": 6,
+      "rate": 1.0,
+      "vs_article": 1.072432
+     },
+     "30d": {
+      "words_added": 6,
+      "words_surviving": 2,
+      "rate": 0.333333,
+      "vs_article": 0.411381
+     },
+     "365d": {
+      "words_added": 6,
+      "words_surviving": 3,
+      "rate": 0.5,
+      "vs_article": 0.756701
+     }
+    },
+    "top_revisions": [
+     1140615460
+    ],
+    "added_by_year": {
+     "2023": 2
+    },
+    "citations_added": 0,
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1140615460"
+    ]
+   },
+   {
+    "label": "Editor 20",
+    "account_type": "registered",
+    "words": 2,
+    "share": 0.001589,
+    "lead_words": 0,
+    "lead_share": 0.0,
+    "sanctioned": true,
+    "sanctions": [
+     {
+      "type": "sockpuppet",
+      "area": "",
+      "duration": "indefinite",
+      "date": "2023-03-23",
+      "end": null,
+      "end_basis": null,
+      "authority": "block log",
+      "source": "block_log",
+      "evidence": "https://en.wikipedia.org/wiki/Special:BlockList?wpTarget=%2318914425"
+     }
+    ],
+    "survival": {
+     "48h": {
+      "words_added": 11,
+      "words_surviving": 11,
+      "rate": 1.0,
+      "vs_article": 1.072432
+     },
+     "30d": {
+      "words_added": 11,
+      "words_surviving": 0,
+      "rate": 0.0,
+      "vs_article": 0.0
+     },
+     "365d": {
+      "words_added": 11,
+      "words_surviving": 0,
+      "rate": 0.0,
+      "vs_article": 0.0
+     }
+    },
+    "top_revisions": [
+     1143439718
+    ],
+    "added_by_year": {
+     "2023": 2
+    },
+    "citations_added": 0,
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1143439718",
+     "https://en.wikipedia.org/wiki/Special:BlockList?wpTarget=%2318914425"
+    ]
+   },
+   {
+    "label": "Editor 21",
+    "account_type": "registered",
+    "words": 1,
+    "share": 0.000794,
+    "lead_words": 1,
+    "lead_share": 0.006452,
+    "sanctioned": false,
+    "sanctions": [],
+    "survival": {
+     "48h": {
+      "words_added": 41,
+      "words_surviving": 41,
+      "rate": 1.0,
+      "vs_article": 1.072432
+     },
+     "30d": {
+      "words_added": 41,
+      "words_surviving": 41,
+      "rate": 1.0,
+      "vs_article": 1.234142
+     },
+     "365d": {
+      "words_added": 41,
+      "words_surviving": 38,
+      "rate": 0.926829,
+      "vs_article": 1.402665
+     }
+    },
+    "top_revisions": [
+     66032623
+    ],
+    "added_by_year": {
+     "2006": 1
+    },
+    "citations_added": 0,
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=66032623"
+    ]
+   },
+   {
+    "label": "Editor 22",
+    "account_type": "registered",
+    "words": 1,
+    "share": 0.000794,
+    "lead_words": 0,
+    "lead_share": 0.0,
+    "sanctioned": false,
+    "sanctions": [],
+    "survival": {
+     "48h": {
+      "words_added": 2,
+      "words_surviving": 2,
+      "rate": 1.0,
+      "vs_article": 1.072432
+     },
+     "30d": {
+      "words_added": 2,
+      "words_surviving": 2,
+      "rate": 1.0,
+      "vs_article": 1.234142
+     },
+     "365d": {
+      "words_added": 2,
+      "words_surviving": 1,
+      "rate": 0.5,
+      "vs_article": 0.756701
+     }
+    },
+    "top_revisions": [
+     278622040
+    ],
+    "added_by_year": {
+     "2009": 1
+    },
+    "citations_added": 0,
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=278622040"
+    ]
+   },
+   {
+    "label": "Editor 23",
+    "account_type": "registered",
+    "words": 1,
+    "share": 0.000794,
+    "lead_words": 0,
+    "lead_share": 0.0,
+    "sanctioned": false,
+    "sanctions": [],
+    "survival": {
+     "48h": {
+      "words_added": 78,
+      "words_surviving": 75,
+      "rate": 0.961538,
+      "vs_article": 1.031184
+     },
+     "30d": {
+      "words_added": 78,
+      "words_surviving": 75,
+      "rate": 0.961538,
+      "vs_article": 1.186675
+     },
+     "365d": {
+      "words_added": 78,
+      "words_surviving": 58,
+      "rate": 0.74359,
+      "vs_article": 1.12535
+     }
+    },
+    "top_revisions": [
+     1091845985
+    ],
+    "added_by_year": {
+     "2022": 1
+    },
+    "citations_added": 1,
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1091845985"
+    ]
+   },
+   {
+    "label": "Editor 24",
+    "account_type": "registered",
+    "words": 1,
+    "share": 0.000794,
+    "lead_words": 0,
+    "lead_share": 0.0,
+    "sanctioned": false,
+    "sanctions": [],
+    "survival": {
+     "48h": {
+      "words_added": 3,
+      "words_surviving": 3,
+      "rate": 1.0,
+      "vs_article": 1.072432
+     },
+     "30d": {
+      "words_added": 3,
+      "words_surviving": 3,
+      "rate": 1.0,
+      "vs_article": 1.234142
+     },
+     "365d": {
+      "words_added": 3,
+      "words_surviving": 3,
+      "rate": 1.0,
+      "vs_article": 1.513401
+     }
+    },
+    "top_revisions": [
+     1138932309
+    ],
+    "added_by_year": {
+     "2023": 1
+    },
+    "citations_added": 0,
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1138932309"
+    ]
+   }
+  ],
+  "top_shares": {
+   "1": 0.440826,
+   "3": 0.741859,
+   "5": 0.873709,
+   "10": 0.9722
+  },
+  "hhi": 0.251995,
+  "editors_for_50pct": 2,
+  "editors_for_80pct": 4,
+  "lead": {
+   "top_shares": {
+    "1": 0.696774,
+    "3": 0.903226,
+    "5": 0.980645,
+    "10": 1.0
+   },
+   "hhi": 0.511093,
+   "editors_for_50pct": 1,
+   "editors_for_80pct": 2
+  },
+  "account_types": {
+   "ip": 0.043685,
+   "registered": 0.956315
+  },
+  "persistence": [
+   {
+    "years": 1,
+    "baseline": 1300227367,
+    "baseline_timestamp": "2025-07-13T01:55:48Z",
+    "words_then": 2307,
+    "still_present": 2116,
+    "share_still_present": 0.917208,
+    "words_now": 2196,
+    "share_of_current": 0.96357
+   },
+   {
+    "years": 2,
+    "baseline": 1216406974,
+    "baseline_timestamp": "2024-03-30T20:32:37Z",
+    "words_then": 1602,
+    "still_present": 1526,
+    "share_still_present": 0.952559,
+    "words_now": 2196,
+    "share_of_current": 0.6949
+   },
+   {
+    "years": 3,
+    "baseline": 1164841343,
+    "baseline_timestamp": "2023-07-11T12:03:09Z",
+    "words_then": 1650,
+    "still_present": 1131,
+    "share_still_present": 0.685455,
+    "words_now": 2196,
+    "share_of_current": 0.515027
+   },
+   {
+    "years": 5,
+    "baseline": 1034085748,
+    "baseline_timestamp": "2021-07-17T18:03:07Z",
+    "words_then": 680,
+    "still_present": 351,
+    "share_still_present": 0.516176,
+    "words_now": 2196,
+    "share_of_current": 0.159836
+   }
+  ],
+  "survival_article": {
+   "48h": {
+    "words_added": 5804,
+    "words_surviving": 5412,
+    "rate": 0.93246
+   },
+   "30d": {
+    "words_added": 5798,
+    "words_surviving": 4698,
+    "rate": 0.810279
+   },
+   "365d": {
+    "words_added": 4743,
+    "words_surviving": 3134,
+    "rate": 0.660763
+   }
+  },
+  "sanctioned_share": 0.267673,
+  "sanctioned_lead_share": 0.206452
+ },
+ "accountability": {
+  "sanctioned_words": 337,
+  "sanctioned_share": 0.267673,
+  "sanctioned_lead_words": 32,
+  "sanctioned_lead_share": 0.206452,
+  "by_type": {
+   "topic_ban": {
+    "words": 0,
+    "share": 0.0,
+    "lead_words": 0,
+    "lead_share": 0.0
+   },
+   "site_ban": {
+    "words": 0,
+    "share": 0.0,
+    "lead_words": 0,
+    "lead_share": 0.0
+   },
+   "sockpuppet": {
+    "words": 337,
+    "share": 0.267673,
+    "lead_words": 32,
+    "lead_share": 0.206452
+   }
+  },
+  "by_source": {
+   "seed_list": {
+    "words": 0,
+    "share": 0.0
+   },
+   "block_log": {
+    "words": 337,
+    "share": 0.267673
+   }
+  },
+  "timing": {
+   "added_before_sanction_words": 279,
+   "added_after_sanction_words": 58,
+   "added_during_sanction_words": 0,
+   "added_during_open_ended_sanction_words": 58,
+   "added_after_sanction_ended_words": 0,
+   "unknown_words": 0,
+   "lead_added_before_sanction_words": 32,
+   "lead_added_after_sanction_words": 0,
+   "lead_added_during_sanction_words": 0,
+   "lead_added_during_open_ended_sanction_words": 0
+  },
+  "sanctioned_editors": 6,
+  "rule": "topic bans count on articles in the same topic area; site bans and sockpuppetry findings count everywhere",
+  "sanctions_list": {
+   "seed_rows_total": 154,
+   "seed_rows_in_topic_area": 0,
+   "seed_rows_unresolved_accounts": 0,
+   "block_log_snapshot": "2026-11-04"
+  },
+  "concentration": {
+   "editor": "Editor 2",
+   "words": 211,
+   "share_of_article": 0.167593,
+   "share_of_sanctioned_text": 0.626113,
+   "sanctioned_editors": 6
+  }
+ },
+ "sentences": [
+  {
+   "id": "lead-1",
+   "section": "(lead)",
+   "text": "Sarsa Dengel ( ; 1550 – 4 October 1597), also known as Sarsa the Great, was Emperor of Ethiopia, and a member of the Solomonic dynasty.",
+   "words": 23,
+   "authors": [
+    "Editor 8",
+    "Editor 3",
+    "Editor 14",
+    "Editor 17",
+    "Editor 21"
+   ],
+   "author_words": [
+    10,
+    8,
+    2,
+    2,
+    1
+   ],
+   "author_sanctioned": true,
+   "sanctioned_words": 10,
+   "added_revision": 1065631022,
+   "revisions": [
+    1065631022,
+    13146670,
+    1019564096,
+    1209387984,
+    66032623
+   ],
+   "revision_words": [
+    10,
+    8,
+    2,
+    2,
+    1
+   ],
+   "added_before_sanction": true,
+   "sanctioned_words_before": 10,
+   "sanctioned_words_after": 0,
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2005-04-23",
+    "latest_removal": null,
+    "in_place_since": "2005-04-23",
+    "in_place_since_revision": 13146670,
+    "removals": []
+   }
+  },
+  {
+   "id": "lead-2",
+   "section": "(lead)",
+   "text": "His throne name was Malak Sagad I (መለክ ሰገድ ).",
+   "words": 9,
+   "authors": [
+    "Editor 8"
+   ],
+   "author_words": [
+    9
+   ],
+   "author_sanctioned": true,
+   "sanctioned_words": 9,
+   "added_revision": 1065630197,
+   "revisions": [
+    1065630197
+   ],
+   "revision_words": [
+    9
+   ],
+   "added_before_sanction": true,
+   "sanctioned_words_before": 9,
+   "sanctioned_words_after": 0,
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2022-01-14",
+    "latest_removal": null,
+    "in_place_since": "2022-01-14",
+    "in_place_since_revision": 1065630197,
+    "removals": []
+   }
+  },
+  {
+   "id": "lead-3",
+   "section": "(lead)",
+   "text": "He is considered one of the greatest warrior-kings of the Ethiopian Empire.",
+   "words": 13,
+   "authors": [
+    "Editor 2"
+   ],
+   "author_words": [
+    13
+   ],
+   "author_sanctioned": true,
+   "sanctioned_words": 13,
+   "added_revision": 1262119788,
+   "revisions": [
+    1262119788
+   ],
+   "revision_words": [
+    13
+   ],
+   "added_before_sanction": true,
+   "sanctioned_words_before": 13,
+   "sanctioned_words_after": 0,
+   "sanctioned_words_during": 0,
+   "footnotes": 2,
+   "works_cited": 2,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2024-12-09",
+    "latest_removal": null,
+    "in_place_since": "2024-12-09",
+    "in_place_since_revision": 1262119788,
+    "removals": []
+   }
+  },
+  {
+   "id": "lead-4",
+   "section": "(lead)",
+   "text": "Sarsa Dengel, the son of Emperor Menas and Empress Admas Mogasa, was elected king at the age of 14.",
+   "words": 19,
+   "authors": [
+    "Editor 4",
+    "Editor 14"
+   ],
+   "author_words": [
+    18,
+    1
+   ],
+   "author_sanctioned": false,
+   "sanctioned_words": 0,
+   "added_revision": 1148872168,
+   "revisions": [
+    1148872168,
+    1197679775
+   ],
+   "revision_words": [
+    18,
+    1
+   ],
+   "added_before_sanction": null,
+   "sanctioned_words_before": 0,
+   "sanctioned_words_after": 0,
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 3,
+    "back_within_24h": 1,
+    "out_24h_or_more": 2,
+    "removing_accounts": 2,
+    "restoring_accounts": 3,
+    "page_wide_removals": 0,
+    "first_added": "2023-04-08",
+    "latest_removal": "2023-11-21",
+    "in_place_since": "2023-11-21",
+    "in_place_since_revision": 1186233823,
+    "removals": [
+     [
+      1166504857,
+      1173732993,
+      1058.0
+     ],
+     [
+      1173865088,
+      1182437824,
+      1308.3
+     ],
+     [
+      1186233598,
+      1186233823,
+      0.0
+     ]
+    ]
+   }
+  },
+  {
+   "id": "lead-5",
+   "section": "(lead)",
+   "text": "As ruler, he faced several revolts and moved the empire's center from Shewa to Begemder.",
+   "words": 16,
+   "authors": [
+    "Editor 4"
+   ],
+   "author_words": [
+    16
+   ],
+   "author_sanctioned": false,
+   "sanctioned_words": 0,
+   "added_revision": 1148872168,
+   "revisions": [
+    1148872168
+   ],
+   "revision_words": [
+    16
+   ],
+   "added_before_sanction": null,
+   "sanctioned_words_before": 0,
+   "sanctioned_words_after": 0,
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 3,
+    "back_within_24h": 1,
+    "out_24h_or_more": 2,
+    "removing_accounts": 2,
+    "restoring_accounts": 3,
+    "page_wide_removals": 0,
+    "first_added": "2023-04-08",
+    "latest_removal": "2023-11-21",
+    "in_place_since": "2023-11-21",
+    "in_place_since_revision": 1186233823,
+    "removals": [
+     [
+      1166504857,
+      1173732993,
+      1058.0
+     ],
+     [
+      1173865088,
+      1182437824,
+      1308.3
+     ],
+     [
+      1186233598,
+      1186233823,
+      0.0
+     ]
+    ]
+   }
+  },
+  {
+   "id": "lead-6",
+   "section": "(lead)",
+   "text": "Sarsa Dengel fought against the Ottomans, defeating regional ruler Bahr Negus Yeshaq and Adal Sultan Muhammad V. He also repelled the Turkish invaders in Debarwa and Hirgigo.",
+   "words": 27,
+   "authors": [
+    "Editor 4"
+   ],
+   "author_words": [
+    27
+   ],
+   "author_sanctioned": false,
+   "sanctioned_words": 0,
+   "added_revision": 1148872168,
+   "revisions": [
+    1148872168
+   ],
+   "revision_words": [
+    27
+   ],
+   "added_before_sanction": null,
+   "sanctioned_words_before": 0,
+   "sanctioned_words_after": 0,
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 3,
+    "back_within_24h": 1,
+    "out_24h_or_more": 2,
+    "removing_accounts": 2,
+    "restoring_accounts": 3,
+    "page_wide_removals": 0,
+    "first_added": "2023-04-08",
+    "latest_removal": "2023-11-21",
+    "in_place_since": "2023-11-21",
+    "in_place_since_revision": 1186233823,
+    "removals": [
+     [
+      1166504857,
+      1173732993,
+      1058.0
+     ],
+     [
+      1173865088,
+      1182437824,
+      1308.3
+     ],
+     [
+      1186233598,
+      1186233823,
+      0.0
+     ]
+    ]
+   }
+  },
+  {
+   "id": "lead-7",
+   "section": "(lead)",
+   "text": "In addition, Sarsa Dengel led campaigns against the Oromo tribes who were migrating northward, successfully pushing them back.",
+   "words": 18,
+   "authors": [
+    "Editor 4",
+    "Editor 14"
+   ],
+   "author_words": [
+    17,
+    1
+   ],
+   "author_sanctioned": false,
+   "sanctioned_words": 0,
+   "added_revision": 1148872168,
+   "revisions": [
+    1148872168,
+    1197679775
+   ],
+   "revision_words": [
+    17,
+    1
+   ],
+   "added_before_sanction": null,
+   "sanctioned_words_before": 0,
+   "sanctioned_words_after": 0,
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 3,
+    "back_within_24h": 1,
+    "out_24h_or_more": 2,
+    "removing_accounts": 2,
+    "restoring_accounts": 3,
+    "page_wide_removals": 0,
+    "first_added": "2023-04-08",
+    "latest_removal": "2023-11-21",
+    "in_place_since": "2023-11-21",
+    "in_place_since_revision": 1186233823,
+    "removals": [
+     [
+      1166504857,
+      1173732993,
+      1058.0
+     ],
+     [
+      1173865088,
+      1182437824,
+      1308.3
+     ],
+     [
+      1186233598,
+      1186233823,
+      0.0
+     ]
+    ]
+   }
+  },
+  {
+   "id": "lead-8",
+   "section": "(lead)",
+   "text": "Despite his military successes, historians argue that his focus on northern campaigns instead of addressing the Oromo expansion in the south ultimately led to the decline of the Ethiopian Empire.",
+   "words": 30,
+   "authors": [
+    "Editor 4"
+   ],
+   "author_words": [
+    30
+   ],
+   "author_sanctioned": false,
+   "sanctioned_words": 0,
+   "added_revision": 1148872168,
+   "revisions": [
+    1148872168
+   ],
+   "revision_words": [
+    30
+   ],
+   "added_before_sanction": null,
+   "sanctioned_words_before": 0,
+   "sanctioned_words_after": 0,
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 3,
+    "back_within_24h": 1,
+    "out_24h_or_more": 2,
+    "removing_accounts": 2,
+    "restoring_accounts": 3,
+    "page_wide_removals": 0,
+    "first_added": "2023-04-08",
+    "latest_removal": "2023-11-21",
+    "in_place_since": "2023-11-21",
+    "in_place_since_revision": 1186233823,
+    "removals": [
+     [
+      1166504857,
+      1173732993,
+      1058.0
+     ],
+     [
+      1173865088,
+      1182437824,
+      1308.3
+     ],
+     [
+      1186233598,
+      1186233823,
+      0.0
+     ]
+    ]
+   }
+  },
+  {
+   "id": "sec2-1",
+   "section": "Accession to the Throne",
+   "text": "The son of Emperor Menas and Empress Admas Mogasa, Sarsa Dengel was elected king by the Shewan commanders of the army and the Dowager Empress.",
+   "words": 26,
+   "authors": [
+    "Editor 3",
+    "Editor 13",
+    "Editor 1"
+   ],
+   "author_words": [
+    21,
+    4,
+    1
+   ],
+   "author_sanctioned": false,
+   "sanctioned_words": 0,
+   "added_revision": 13146670,
+   "revisions": [
+    13146670,
+    537078685,
+    202419508,
+    303773864,
+    181954969,
+    1084485030,
+    1099434240
+   ],
+   "revision_words": [
+    15,
+    4,
+    2,
+    2,
+    1,
+    1,
+    1
+   ],
+   "added_before_sanction": null,
+   "sanctioned_words_before": 0,
+   "sanctioned_words_after": 0,
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2005-04-23",
+    "latest_removal": null,
+    "in_place_since": "2005-04-23",
+    "in_place_since_revision": 13146670,
+    "removals": []
+   }
+  },
+  {
+   "id": "sec2-2",
+   "section": "Accession to the Throne",
+   "text": "He was barely fourteen years old.",
+   "words": 6,
+   "authors": [
+    "Editor 1"
+   ],
+   "author_words": [
+    6
+   ],
+   "author_sanctioned": false,
+   "sanctioned_words": 0,
+   "added_revision": 1084485030,
+   "revisions": [
+    1084485030
+   ],
+   "revision_words": [
+    6
+   ],
+   "added_before_sanction": null,
+   "sanctioned_words_before": 0,
+   "sanctioned_words_after": 0,
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 3,
+    "back_within_24h": 0,
+    "out_24h_or_more": 3,
+    "removing_accounts": 3,
+    "restoring_accounts": 3,
+    "page_wide_removals": 0,
+    "first_added": "2022-04-24",
+    "latest_removal": "2023-09-24",
+    "in_place_since": "2023-09-28",
+    "in_place_since_revision": 1177533518,
+    "removals": [
+     [
+      1092204464,
+      1096117810,
+      567.8
+     ],
+     [
+      1107147652,
+      1107464569,
+      39.7
+     ],
+     [
+      1176929746,
+      1177533518,
+      74.8
+     ]
+    ]
+   }
+  },
+  {
+   "id": "sec2-3",
+   "section": "Accession to the Throne",
+   "text": "Upon his coming of age, Sarsa Dengel had to put down a number of revolts: such as his cousin Hamalmal in 1563 at the Battle of Endagabatan, and another by his cousin Fasil two years later.",
+   "words": 36,
+   "authors": [
+    "Editor 3",
+    "Editor 1",
+    "Editor 11"
+   ],
+   "author_words": [
+    16,
+    15,
+    5
+   ],
+   "author_sanctioned": false,
+   "sanctioned_words": 0,
+   "added_revision": 13146670,
+   "revisions": [
+    13146670,
+    1084480214,
+    1023409150,
+    1084485030,
+    1084527740
+   ],
+   "revision_words": [
+    16,
+    8,
+    5,
+    4,
+    3
+   ],
+   "added_before_sanction": null,
+   "sanctioned_words_before": 0,
+   "sanctioned_words_after": 0,
+   "sanctioned_words_during": 0,
+   "footnotes": 3,
+   "works_cited": 3,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2005-04-23",
+    "latest_removal": null,
+    "in_place_since": "2005-04-23",
+    "in_place_since_revision": 13146670,
+    "removals": []
+   }
+  },
+  {
+   "id": "sec3-1",
+   "section": "Campaigns",
+   "text": "In the 1570s several Oromo tribes had begun migrating north towards Abyssinia.",
+   "words": 12,
+   "authors": [
+    "Editor 1"
+   ],
+   "author_words": [
+    12
+   ],
+   "author_sanctioned": false,
+   "sanctioned_words": 0,
+   "added_revision": 1084480214,
+   "revisions": [
+    1084480214
+   ],
+   "revision_words": [
+    12
+   ],
+   "added_before_sanction": null,
+   "sanctioned_words_before": 0,
+   "sanctioned_words_after": 0,
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2022-04-24",
+    "latest_removal": null,
+    "in_place_since": "2022-04-24",
+    "in_place_since_revision": 1084480214,
+    "removals": []
+   }
+  },
+  {
+   "id": "sec3-2",
+   "section": "Campaigns",
+   "text": "In 1572 Sarsa Dengel fought off a raid by the Borana Oromo under a luba named Ambissa near Lake Zway.",
+   "words": 20,
+   "authors": [
+    "Editor 1",
+    "Editor 3",
+    "Editor 22"
+   ],
+   "author_words": [
+    13,
+    6,
+    1
+   ],
+   "author_sanctioned": false,
+   "sanctioned_words": 0,
+   "added_revision": 1084480214,
+   "revisions": [
+    1084480214,
+    13146670,
+    303773864,
+    278622040
+   ],
+   "revision_words": [
+    13,
+    4,
+    2,
+    1
+   ],
+   "added_before_sanction": null,
+   "sanctioned_words_before": 0,
+   "sanctioned_words_after": 0,
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2005-04-23",
+    "latest_removal": null,
+    "in_place_since": "2005-04-23",
+    "in_place_since_revision": 13146670,
+    "removals": []
+   }
+  },
+  {
+   "id": "sec3-3",
+   "section": "Campaigns",
+   "text": "In 1574, upon learning that the Oromo had conquered the province of Wej, the Emperor assembled his forces from across Ethiopia to create an army at Gind Beret.",
+   "words": 28,
+   "authors": [
+    "Editor 1",
+    "Editor 23"
+   ],
+   "author_words": [
+    27,
+    1
+   ],
+   "author_sanctioned": false,
+   "sanctioned_words": 0,
+   "added_revision": 1171126773,
+   "revisions": [
+    1171126773,
+    1091845985
+   ],
+   "revision_words": [
+    27,
+    1
+   ],
+   "added_before_sanction": null,
+   "sanctioned_words_before": 0,
+   "sanctioned_words_after": 0,
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 4,
+    "back_within_24h": 2,
+    "out_24h_or_more": 2,
+    "removing_accounts": 4,
+    "restoring_accounts": 2,
+    "page_wide_removals": 0,
+    "first_added": "2022-06-06",
+    "latest_removal": "2023-11-27",
+    "in_place_since": "2023-11-29",
+    "in_place_since_revision": 1187510550,
+    "removals": [
+     [
+      1171216968,
+      1171220397,
+      0.5
+     ],
+     [
+      1173732993,
+      1173865088,
+      19.3
+     ],
+     [
+      1182437824,
+      1186233598,
+      561.6
+     ],
+     [
+      1187088740,
+      1187510550,
+      54.9
+     ]
+    ]
+   }
+  },
+  {
+   "id": "sec3-4",
+   "section": "Campaigns",
+   "text": "From there, Sarsa Dengel headed south and discovered that the Oromo had also seized Maya.",
+   "words": 15,
+   "authors": [
+    "Editor 1"
+   ],
+   "author_words": [
+    15
+   ],
+   "author_sanctioned": false,
+   "sanctioned_words": 0,
+   "added_revision": 1171126773,
+   "revisions": [
+    1171126773,
+    1084485030
+   ],
+   "revision_words": [
+    13,
+    2
+   ],
+   "added_before_sanction": null,
+   "sanctioned_words_before": 0,
+   "sanctioned_words_after": 0,
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 4,
+    "back_within_24h": 2,
+    "out_24h_or_more": 2,
+    "removing_accounts": 4,
+    "restoring_accounts": 2,
+    "page_wide_removals": 0,
+    "first_added": "2022-04-24",
+    "latest_removal": "2023-11-27",
+    "in_place_since": "2023-11-29",
+    "in_place_since_revision": 1187510550,
+    "removals": [
+     [
+      1171216968,
+      1171220397,
+      0.5
+     ],
+     [
+      1173732993,
+      1173865088,
+      19.3
+     ],
+     [
+      1182437824,
+      1186233598,
+      561.6
+     ],
+     [
+      1187088740,
+      1187510550,
+      54.9
+     ]
+    ]
+   }
+  },
+  {
+   "id": "sec3-5",
+   "section": "Campaigns",
+   "text": "Sarsa Dengel successfully defeated the Oromo, compelling them to flee toward Fatager.",
+   "words": 12,
+   "authors": [
+    "Editor 1"
+   ],
+   "author_words": [
+    12
+   ],
+   "author_sanctioned": false,
+   "sanctioned_words": 0,
+   "added_revision": 1171126773,
+   "revisions": [
+    1171126773
+   ],
+   "revision_words": [
+    12
+   ],
+   "added_before_sanction": null,
+   "sanctioned_words_before": 0,
+   "sanctioned_words_after": 0,
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 4,
+    "back_within_24h": 2,
+    "out_24h_or_more": 2,
+    "removing_accounts": 4,
+    "restoring_accounts": 2,
+    "page_wide_removals": 0,
+    "first_added": "2023-08-19",
+    "latest_removal": "2023-11-27",
+    "in_place_since": "2023-11-29",
+    "in_place_since_revision": 1187510550,
+    "removals": [
+     [
+      1171216968,
+      1171220397,
+      0.5
+     ],
+     [
+      1173732993,
+      1173865088,
+      19.3
+     ],
+     [
+      1182437824,
+      1186233598,
+      561.6
+     ],
+     [
+      1187088740,
+      1187510550,
+      54.9
+     ]
+    ]
+   }
+  },
+  {
+   "id": "sec3-6",
+   "section": "Campaigns",
+   "text": "He later learned that the Adal Sultan, Muhammad ibn Nasir, had launched a Jihad and was campaigning in Hadiya.",
+   "words": 19,
+   "authors": [
+    "Editor 1",
+    "Editor 2"
+   ],
+   "author_words": [
+    14,
+    5
+   ],
+   "author_sanctioned": true,
+   "sanctioned_words": 5,
+   "added_revision": 1171126773,
+   "revisions": [
+    1171126773,
+    1263633328,
+    1171172557
+   ],
+   "revision_words": [
+    13,
+    5,
+    1
+   ],
+   "added_before_sanction": true,
+   "sanctioned_words_before": 5,
+   "sanctioned_words_after": 0,
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 5,
+    "back_within_24h": 2,
+    "out_24h_or_more": 3,
+    "removing_accounts": 5,
+    "restoring_accounts": 3,
+    "page_wide_removals": 0,
+    "first_added": "2023-08-19",
+    "latest_removal": "2025-10-15",
+    "in_place_since": "2025-11-25",
+    "in_place_since_revision": 1324161836,
+    "removals": [
+     [
+      1171216968,
+      1171220397,
+      0.5
+     ],
+     [
+      1173732993,
+      1173865088,
+      19.3
+     ],
+     [
+      1182437824,
+      1186233598,
+      561.6
+     ],
+     [
+      1187088740,
+      1187510550,
+      54.9
+     ],
+     [
+      1316911781,
+      1324161836,
+      1001.4
+     ]
+    ]
+   }
+  },
+  {
+   "id": "sec3-7",
+   "section": "Campaigns",
+   "text": "Subsequently, he confronted the Adalite army at the Battle of Webi River, where he decisively defeated them.",
+   "words": 17,
+   "authors": [
+    "Editor 1"
+   ],
+   "author_words": [
+    17
+   ],
+   "author_sanctioned": false,
+   "sanctioned_words": 0,
+   "added_revision": 1171126773,
+   "revisions": [
+    1171126773,
+    1084485030,
+    1177533603
+   ],
+   "revision_words": [
+    13,
+    2,
+    2
+   ],
+   "added_before_sanction": null,
+   "sanctioned_words_before": 0,
+   "sanctioned_words_after": 0,
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 5,
+    "back_within_24h": 2,
+    "out_24h_or_more": 3,
+    "removing_accounts": 5,
+    "restoring_accounts": 3,
+    "page_wide_removals": 0,
+    "first_added": "2022-04-24",
+    "latest_removal": "2025-10-15",
+    "in_place_since": "2025-11-25",
+    "in_place_since_revision": 1324161836,
+    "removals": [
+     [
+      1171216968,
+      1171220397,
+      0.5
+     ],
+     [
+      1173732993,
+      1173865088,
+      19.3
+     ],
+     [
+      1182437824,
+      1186233598,
+      561.6
+     ],
+     [
+      1187088740,
+      1187510550,
+      54.9
+     ],
+     [
+      1316911781,
+      1324161836,
+      1001.4
+     ]
+    ]
+   }
+  },
+  {
+   "id": "sec3-8",
+   "section": "Campaigns",
+   "text": "In the battle, the Emperor captured the Sultan and executed him along with most of the Adalite nobility, thereby ending Adal as a military power in the region.",
+   "words": 28,
+   "authors": [
+    "Editor 2"
+   ],
+   "author_words": [
+    28
+   ],
+   "author_sanctioned": true,
+   "sanctioned_words": 28,
+   "added_revision": 1263633328,
+   "revisions": [
+    1263633328,
+    1263633466
+   ],
+   "revision_words": [
+    27,
+    1
+   ],
+   "added_before_sanction": true,
+   "sanctioned_words_before": 28,
+   "sanctioned_words_after": 0,
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 1,
+    "back_within_24h": 0,
+    "out_24h_or_more": 1,
+    "removing_accounts": 1,
+    "restoring_accounts": 1,
+    "page_wide_removals": 0,
+    "first_added": "2024-12-17",
+    "latest_removal": "2025-10-15",
+    "in_place_since": "2025-11-25",
+    "in_place_since_revision": 1324161836,
+    "removals": [
+     [
+      1316911781,
+      1324161836,
+      1001.4
+     ]
+    ]
+   }
+  },
+  {
+   "id": "sec3-9",
+   "section": "Campaigns",
+   "text": "When the Ottomans withdrew from Debarwa, the local ruler Yeshaq promptly seized the opportunity to occupy it and forge an alliance with the Turks.",
+   "words": 24,
+   "authors": [
+    "Editor 1",
+    "Editor 3",
+    "Editor 18"
+   ],
+   "author_words": [
+    19,
+    3,
+    2
+   ],
+   "author_sanctioned": false,
+   "sanctioned_words": 0,
+   "added_revision": 1084480214,
+   "revisions": [
+    1084480214,
+    1171126773,
+    13146670,
+    1091854888,
+    30173972
+   ],
+   "revision_words": [
+    11,
+    8,
+    2,
+    2,
+    1
+   ],
+   "added_before_sanction": null,
+   "sanctioned_words_before": 0,
+   "sanctioned_words_after": 0,
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2005-04-23",
+    "latest_removal": null,
+    "in_place_since": "2005-04-23",
+    "in_place_since_revision": 13146670,
+    "removals": []
+   }
+  },
+  {
+   "id": "sec3-10",
+   "section": "Campaigns",
+   "text": "Sarsa Dengel, angered by what he perceived as his vassal's arrogance and betrayal, marched against them in 1577.",
+   "words": 19,
+   "authors": [
+    "Editor 1",
+    "Editor 3"
+   ],
+   "author_words": [
+    16,
+    3
+   ],
+   "author_sanctioned": false,
+   "sanctioned_words": 0,
+   "added_revision": 1084480214,
+   "revisions": [
+    1084480214,
+    1171126773,
+    13146670
+   ],
+   "revision_words": [
+    12,
+    4,
+    3
+   ],
+   "added_before_sanction": null,
+   "sanctioned_words_before": 0,
+   "sanctioned_words_after": 0,
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2005-04-23",
+    "latest_removal": null,
+    "in_place_since": "2005-04-23",
+    "in_place_since_revision": 13146670,
+    "removals": []
+   }
+  },
+  {
+   "id": "sec3-11",
+   "section": "Campaigns",
+   "text": "He defeated and liquidated the combined army of the Ottoman Empire and their rebellious allies at the Battle of Addi Qarro in Tigray, where he killed the Ottoman commander Ahmad Pasha along with the rebellious Bahr Negus Yeshaq.",
+   "words": 38,
+   "authors": [
+    "Editor 2",
+    "Editor 1",
+    "Editor 3"
+   ],
+   "author_words": [
+    32,
+    3,
+    3
+   ],
+   "author_sanctioned": true,
+   "sanctioned_words": 32,
+   "added_revision": 1262116080,
+   "revisions": [
+    1262116080,
+    13146670,
+    1084480214
+   ],
+   "revision_words": [
+    32,
+    3,
+    3
+   ],
+   "added_before_sanction": true,
+   "sanctioned_words_before": 32,
+   "sanctioned_words_after": 0,
+   "sanctioned_words_during": 0,
+   "footnotes": 3,
+   "works_cited": 3,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2005-04-23",
+    "latest_removal": null,
+    "in_place_since": "2005-04-23",
+    "in_place_since_revision": 13146670,
+    "removals": []
+   }
+  },
+  {
+   "id": "sec3-12",
+   "section": "Campaigns",
+   "text": "The victorious Emperor then advanced on Debarwa whereupon the Turkish garrison surrendered with all its firearms.",
+   "words": 16,
+   "authors": [
+    "Editor 1",
+    "Editor 24"
+   ],
+   "author_words": [
+    15,
+    1
+   ],
+   "author_sanctioned": false,
+   "sanctioned_words": 0,
+   "added_revision": 1084480214,
+   "revisions": [
+    1084480214,
+    1138932309
+   ],
+   "revision_words": [
+    15,
+    1
+   ],
+   "added_before_sanction": null,
+   "sanctioned_words_before": 0,
+   "sanctioned_words_after": 0,
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2022-04-24",
+    "latest_removal": null,
+    "in_place_since": "2022-04-24",
+    "in_place_since_revision": 1084480214,
+    "removals": []
+   }
+  },
+  {
+   "id": "sec3-13",
+   "section": "Campaigns",
+   "text": "Sarsa Dengel then seized the vast riches stored by the Turks in Debarwa and ordered the destruction of the mosque and the fort erected during the Ottoman occupation.",
+   "words": 28,
+   "authors": [
+    "Editor 1",
+    "Editor 3"
+   ],
+   "author_words": [
+    27,
+    1
+   ],
+   "author_sanctioned": false,
+   "sanctioned_words": 0,
+   "added_revision": 1084480214,
+   "revisions": [
+    1084480214,
+    13146670
+   ],
+   "revision_words": [
+    27,
+    1
+   ],
+   "added_before_sanction": null,
+   "sanctioned_words_before": 0,
+   "sanctioned_words_after": 0,
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2005-04-23",
+    "latest_removal": null,
+    "in_place_since": "2005-04-23",
+    "in_place_since_revision": 13146670,
+    "removals": []
+   }
+  },
+  {
+   "id": "sec3-14",
+   "section": "Campaigns",
+   "text": "The chronicler, who was greatly impressed by the Emperor's military victories exclaims: \"Who among the kings of Ethiopia has defeated the Turkish army supplied with rifles and cannons?",
+   "words": 29,
+   "authors": [
+    "Editor 1",
+    "Editor 15"
+   ],
+   "author_words": [
+    28,
+    1
+   ],
+   "author_sanctioned": false,
+   "sanctioned_words": 0,
+   "added_revision": 1171126773,
+   "revisions": [
+    1171126773,
+    1088858914
+   ],
+   "revision_words": [
+    28,
+    1
+   ],
+   "added_before_sanction": null,
+   "sanctioned_words_before": 0,
+   "sanctioned_words_after": 0,
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 4,
+    "back_within_24h": 2,
+    "out_24h_or_more": 2,
+    "removing_accounts": 4,
+    "restoring_accounts": 2,
+    "page_wide_removals": 0,
+    "first_added": "2022-05-20",
+    "latest_removal": "2023-11-27",
+    "in_place_since": "2023-11-29",
+    "in_place_since_revision": 1187510550,
+    "removals": [
+     [
+      1171216968,
+      1171220397,
+      0.5
+     ],
+     [
+      1173732993,
+      1173865088,
+      19.3
+     ],
+     [
+      1182437824,
+      1186233598,
+      561.6
+     ],
+     [
+      1187088740,
+      1187510550,
+      54.9
+     ]
+    ]
+   }
+  },
+  {
+   "id": "sec3-15",
+   "section": "Campaigns",
+   "text": "None has seen or heard of the victories of King Malak Sagad!\"",
+   "words": 12,
+   "authors": [
+    "Editor 1"
+   ],
+   "author_words": [
+    12
+   ],
+   "author_sanctioned": false,
+   "sanctioned_words": 0,
+   "added_revision": 1171126773,
+   "revisions": [
+    1171126773
+   ],
+   "revision_words": [
+    12
+   ],
+   "added_before_sanction": null,
+   "sanctioned_words_before": 0,
+   "sanctioned_words_after": 0,
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 4,
+    "back_within_24h": 2,
+    "out_24h_or_more": 2,
+    "removing_accounts": 4,
+    "restoring_accounts": 2,
+    "page_wide_removals": 0,
+    "first_added": "2023-08-19",
+    "latest_removal": "2023-11-27",
+    "in_place_since": "2023-11-29",
+    "in_place_since_revision": 1187510550,
+    "removals": [
+     [
+      1171216968,
+      1171220397,
+      0.5
+     ],
+     [
+      1173732993,
+      1173865088,
+      19.3
+     ],
+     [
+      1182437824,
+      1186233598,
+      561.6
+     ],
+     [
+      1187088740,
+      1187510550,
+      54.9
+     ]
+    ]
+   }
+  },
+  {
+   "id": "sec3-16",
+   "section": "Campaigns",
+   "text": "Upon defeating the Turks, Sarsa Dengel then held his coronation at Aksum and in 1580 he departed from Tigray to conduct a campaign against the Beta Israel in Semien province.",
+   "words": 30,
+   "authors": [
+    "Editor 1",
+    "Editor 15",
+    "Editor 12"
+   ],
+   "author_words": [
+    27,
+    2,
+    1
+   ],
+   "author_sanctioned": false,
+   "sanctioned_words": 0,
+   "added_revision": 1171126773,
+   "revisions": [
+    1171126773,
+    1171172557,
+    1088858914,
+    1088885431,
+    1169725453
+   ],
+   "revision_words": [
+    23,
+    3,
+    2,
+    1,
+    1
+   ],
+   "added_before_sanction": null,
+   "sanctioned_words_before": 0,
+   "sanctioned_words_after": 0,
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 4,
+    "back_within_24h": 2,
+    "out_24h_or_more": 2,
+    "removing_accounts": 4,
+    "restoring_accounts": 2,
+    "page_wide_removals": 0,
+    "first_added": "2022-05-20",
+    "latest_removal": "2023-11-27",
+    "in_place_since": "2023-11-29",
+    "in_place_since_revision": 1187510550,
+    "removals": [
+     [
+      1171216968,
+      1171220397,
+      0.5
+     ],
+     [
+      1173732993,
+      1173865088,
+      19.3
+     ],
+     [
+      1182437824,
+      1186233598,
+      561.6
+     ],
+     [
+      1187088740,
+      1187510550,
+      54.9
+     ]
+    ]
+   }
+  },
+  {
+   "id": "sec3-17",
+   "section": "Campaigns",
+   "text": "While on this campaign, Sarsa Dengel received information that the Borana Oromo were attacking the provinces of Shewa, Waj, and Damot.",
+   "words": 21,
+   "authors": [
+    "Editor 1",
+    "Editor 12"
+   ],
+   "author_words": [
+    17,
+    4
+   ],
+   "author_sanctioned": false,
+   "sanctioned_words": 0,
+   "added_revision": 1171126773,
+   "revisions": [
+    1171126773,
+    1088885431
+   ],
+   "revision_words": [
+    17,
+    4
+   ],
+   "added_before_sanction": null,
+   "sanctioned_words_before": 0,
+   "sanctioned_words_after": 0,
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 4,
+    "back_within_24h": 2,
+    "out_24h_or_more": 2,
+    "removing_accounts": 4,
+    "restoring_accounts": 2,
+    "page_wide_removals": 0,
+    "first_added": "2022-05-20",
+    "latest_removal": "2023-11-27",
+    "in_place_since": "2023-11-29",
+    "in_place_since_revision": 1187510550,
+    "removals": [
+     [
+      1171216968,
+      1171220397,
+      0.5
+     ],
+     [
+      1173732993,
+      1173865088,
+      19.3
+     ],
+     [
+      1182437824,
+      1186233598,
+      561.6
+     ],
+     [
+      1187088740,
+      1187510550,
+      54.9
+     ]
+    ]
+   }
+  },
+  {
+   "id": "sec3-18",
+   "section": "Campaigns",
+   "text": "Despite this, Sarsa Dengel declined to defend these territories against the Oromos and instead continued to focus his attention on the Beta Israel.",
+   "words": 23,
+   "authors": [
+    "Editor 1"
+   ],
+   "author_words": [
+    23
+   ],
+   "author_sanctioned": false,
+   "sanctioned_words": 0,
+   "added_revision": 1171126773,
+   "revisions": [
+    1171126773,
+    1084480214
+   ],
+   "revision_words": [
+    21,
+    2
+   ],
+   "added_before_sanction": null,
+   "sanctioned_words_before": 0,
+   "sanctioned_words_after": 0,
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 4,
+    "back_within_24h": 2,
+    "out_24h_or_more": 2,
+    "removing_accounts": 4,
+    "restoring_accounts": 2,
+    "page_wide_removals": 0,
+    "first_added": "2022-04-24",
+    "latest_removal": "2023-11-27",
+    "in_place_since": "2023-11-29",
+    "in_place_since_revision": 1187510550,
+    "removals": [
+     [
+      1171216968,
+      1171220397,
+      0.5
+     ],
+     [
+      1173732993,
+      1173865088,
+      19.3
+     ],
+     [
+      1182437824,
+      1186233598,
+      561.6
+     ],
+     [
+      1187088740,
+      1187510550,
+      54.9
+     ]
+    ]
+   }
+  },
+  {
+   "id": "sec3-19",
+   "section": "Campaigns",
+   "text": "This decision generated considerable frustration among his officials but the Emperor justified his action by stating: \"It is better for me that I fight with the enemies of the blood of Jesus Christ [i.e. Jews] than go to fight against the Galla.\"",
+   "words": 43,
+   "authors": [
+    "Editor 1"
+   ],
+   "author_words": [
+    43
+   ],
+   "author_sanctioned": false,
+   "sanctioned_words": 0,
+   "added_revision": 1171126773,
+   "revisions": [
+    1171126773,
+    1084480214,
+    1171172557
+   ],
+   "revision_words": [
+    40,
+    2,
+    1
+   ],
+   "added_before_sanction": null,
+   "sanctioned_words_before": 0,
+   "sanctioned_words_after": 0,
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 4,
+    "back_within_24h": 2,
+    "out_24h_or_more": 2,
+    "removing_accounts": 4,
+    "restoring_accounts": 2,
+    "page_wide_removals": 0,
+    "first_added": "2022-04-24",
+    "latest_removal": "2023-11-27",
+    "in_place_since": "2023-11-29",
+    "in_place_since_revision": 1187510550,
+    "removals": [
+     [
+      1171216968,
+      1171220397,
+      0.5
+     ],
+     [
+      1173732993,
+      1173865088,
+      19.3
+     ],
+     [
+      1182437824,
+      1186233598,
+      561.6
+     ],
+     [
+      1187088740,
+      1187510550,
+      54.9
+     ]
+    ]
+   }
+  },
+  {
+   "id": "sec3-20",
+   "section": "Campaigns",
+   "text": "Under luba Mul'eta the Borana Oromo crossed the Abay and invaded Gojjam in 1586, it was during this raid that the future Emperor Susenyos I would be captured by the Oromos.",
+   "words": 32,
+   "authors": [
+    "Editor 1"
+   ],
+   "author_words": [
+    32
+   ],
+   "author_sanctioned": false,
+   "sanctioned_words": 0,
+   "added_revision": 1171126773,
+   "revisions": [
+    1171126773
+   ],
+   "revision_words": [
+    32
+   ],
+   "added_before_sanction": null,
+   "sanctioned_words_before": 0,
+   "sanctioned_words_after": 0,
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 4,
+    "back_within_24h": 2,
+    "out_24h_or_more": 2,
+    "removing_accounts": 4,
+    "restoring_accounts": 2,
+    "page_wide_removals": 0,
+    "first_added": "2023-08-19",
+    "latest_removal": "2023-11-27",
+    "in_place_since": "2023-11-29",
+    "in_place_since_revision": 1187510550,
+    "removals": [
+     [
+      1171216968,
+      1171220397,
+      0.5
+     ],
+     [
+      1173732993,
+      1173865088,
+      19.3
+     ],
+     [
+      1182437824,
+      1186233598,
+      561.6
+     ],
+     [
+      1187088740,
+      1187510550,
+      54.9
+     ]
+    ]
+   }
+  },
+  {
+   "id": "sec3-21",
+   "section": "Campaigns",
+   "text": "Sarsa Dengel then took the initiative against the Oromo in the south, where he forced the Dawé Oromo in Wej to flee south.",
+   "words": 23,
+   "authors": [
+    "Editor 1",
+    "Editor 3"
+   ],
+   "author_words": [
+    21,
+    2
+   ],
+   "author_sanctioned": false,
+   "sanctioned_words": 0,
+   "added_revision": 1084480214,
+   "revisions": [
+    1084480214,
+    13146670,
+    1171126773
+   ],
+   "revision_words": [
+    20,
+    2,
+    1
+   ],
+   "added_before_sanction": null,
+   "sanctioned_words_before": 0,
+   "sanctioned_words_after": 0,
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2005-04-23",
+    "latest_removal": null,
+    "in_place_since": "2005-04-23",
+    "in_place_since_revision": 13146670,
+    "removals": []
+   }
+  },
+  {
+   "id": "sec3-22",
+   "section": "Campaigns",
+   "text": "Bahrey praised Sarsa Dengel's campaign, stating that he \"did not act according to the custom of the kings his ancestors, who, when making war were in the habit of sending their troops ahead, remaining themselves in the rear with the pick of their cavalry and infantry, praising those who went forward bravely and punishing those who lagged behind.\"",
+   "words": 59,
+   "authors": [
+    "Editor 1",
+    "Editor 3"
+   ],
+   "author_words": [
+    57,
+    2
+   ],
+   "author_sanctioned": false,
+   "sanctioned_words": 0,
+   "added_revision": 1084480214,
+   "revisions": [
+    1084480214,
+    13146670
+   ],
+   "revision_words": [
+    57,
+    2
+   ],
+   "added_before_sanction": null,
+   "sanctioned_words_before": 0,
+   "sanctioned_words_after": 0,
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2005-04-23",
+    "latest_removal": null,
+    "in_place_since": "2005-04-23",
+    "in_place_since_revision": 13146670,
+    "removals": []
+   }
+  },
+  {
+   "id": "sec3-23",
+   "section": "Campaigns",
+   "text": "In 1587, the Turks left the port of Hirgigo and advanced inland to take Debarwa again.",
+   "words": 16,
+   "authors": [
+    "Editor 1"
+   ],
+   "author_words": [
+    16
+   ],
+   "author_sanctioned": false,
+   "sanctioned_words": 0,
+   "added_revision": 1084480214,
+   "revisions": [
+    1084480214,
+    1084527740
+   ],
+   "revision_words": [
+    15,
+    1
+   ],
+   "added_before_sanction": null,
+   "sanctioned_words_before": 0,
+   "sanctioned_words_after": 0,
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2022-04-24",
+    "latest_removal": null,
+    "in_place_since": "2022-04-24",
+    "in_place_since_revision": 1084480214,
+    "removals": []
+   }
+  },
+  {
+   "id": "sec3-24",
+   "section": "Campaigns",
+   "text": "The Turks defeated the governor of Hamasien who fled to Tigray.",
+   "words": 11,
+   "authors": [
+    "Editor 1"
+   ],
+   "author_words": [
+    11
+   ],
+   "author_sanctioned": false,
+   "sanctioned_words": 0,
+   "added_revision": 1084480214,
+   "revisions": [
+    1084480214
+   ],
+   "revision_words": [
+    11
+   ],
+   "added_before_sanction": null,
+   "sanctioned_words_before": 0,
+   "sanctioned_words_after": 0,
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2022-04-24",
+    "latest_removal": null,
+    "in_place_since": "2022-04-24",
+    "in_place_since_revision": 1084480214,
+    "removals": []
+   }
+  },
+  {
+   "id": "sec3-25",
+   "section": "Campaigns",
+   "text": "Upon hearing this, Sarsa Dengel mobilized his forces and crossed the Mereb river to repel the Turkish invaders who were pillaging the countryside.",
+   "words": 23,
+   "authors": [
+    "Editor 1",
+    "Editor 3"
+   ],
+   "author_words": [
+    22,
+    1
+   ],
+   "author_sanctioned": false,
+   "sanctioned_words": 0,
+   "added_revision": 1084480214,
+   "revisions": [
+    1084480214,
+    25235207
+   ],
+   "revision_words": [
+    22,
+    1
+   ],
+   "added_before_sanction": null,
+   "sanctioned_words_before": 0,
+   "sanctioned_words_after": 0,
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2005-10-10",
+    "latest_removal": null,
+    "in_place_since": "2005-10-10",
+    "in_place_since_revision": 25235207,
+    "removals": []
+   }
+  },
+  {
+   "id": "sec3-26",
+   "section": "Campaigns",
+   "text": "He advanced to Debarwa and then launched a raid on the Ottoman fort at Hirgigo where he killed the Ottoman commander Kadawert Pasha.",
+   "words": 23,
+   "authors": [
+    "Editor 2",
+    "Editor 1",
+    "Editor 3"
+   ],
+   "author_words": [
+    13,
+    9,
+    1
+   ],
+   "author_sanctioned": true,
+   "sanctioned_words": 13,
+   "added_revision": 1084480214,
+   "revisions": [
+    1084480214,
+    1263633328,
+    1262116080,
+    13146670
+   ],
+   "revision_words": [
+    9,
+    7,
+    6,
+    1
+   ],
+   "added_before_sanction": true,
+   "sanctioned_words_before": 13,
+   "sanctioned_words_after": 0,
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2005-04-23",
+    "latest_removal": null,
+    "in_place_since": "2005-04-23",
+    "in_place_since_revision": 13146670,
+    "removals": []
+   }
+  },
+  {
+   "id": "sec3-27",
+   "section": "Campaigns",
+   "text": "The Turks then gave a peace offering to the Emperor and withdrew from Hirgigo, handing it over to a local Balaw chief.",
+   "words": 22,
+   "authors": [
+    "Editor 1"
+   ],
+   "author_words": [
+    22
+   ],
+   "author_sanctioned": false,
+   "sanctioned_words": 0,
+   "added_revision": 1171126773,
+   "revisions": [
+    1171126773
+   ],
+   "revision_words": [
+    22
+   ],
+   "added_before_sanction": null,
+   "sanctioned_words_before": 0,
+   "sanctioned_words_after": 0,
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 4,
+    "back_within_24h": 2,
+    "out_24h_or_more": 2,
+    "removing_accounts": 4,
+    "restoring_accounts": 2,
+    "page_wide_removals": 0,
+    "first_added": "2023-08-19",
+    "latest_removal": "2023-11-27",
+    "in_place_since": "2023-11-29",
+    "in_place_since_revision": 1187510550,
+    "removals": [
+     [
+      1171216968,
+      1171220397,
+      0.5
+     ],
+     [
+      1173732993,
+      1173865088,
+      19.3
+     ],
+     [
+      1182437824,
+      1186233598,
+      561.6
+     ],
+     [
+      1187088740,
+      1187510550,
+      54.9
+     ]
+    ]
+   }
+  },
+  {
+   "id": "sec3-28",
+   "section": "Campaigns",
+   "text": "On his final campaign against the Oromo in Damot, his Chronicle records, a group of monks tried to dissuade him from this expedition; failing that, they warned him not to eat fish from a certain river he would pass.",
+   "words": 39,
+   "authors": [
+    "Editor 3",
+    "Editor 1"
+   ],
+   "author_words": [
+    36,
+    3
+   ],
+   "author_sanctioned": false,
+   "sanctioned_words": 0,
+   "added_revision": 13146670,
+   "revisions": [
+    13146670,
+    303779553,
+    1152233390,
+    30173972,
+    39450904,
+    1171126773
+   ],
+   "revision_words": [
+    30,
+    4,
+    2,
+    1,
+    1,
+    1
+   ],
+   "added_before_sanction": null,
+   "sanctioned_words_before": 0,
+   "sanctioned_words_after": 0,
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2005-04-23",
+    "latest_removal": null,
+    "in_place_since": "2005-04-23",
+    "in_place_since_revision": 13146670,
+    "removals": []
+   }
+  },
+  {
+   "id": "sec3-29",
+   "section": "Campaigns",
+   "text": "Despite their warning, when he passed by the river the monks warned him about, he ate fish taken from this river and grew sick and died..",
+   "words": 26,
+   "authors": [
+    "Editor 3"
+   ],
+   "author_words": [
+    26
+   ],
+   "author_sanctioned": false,
+   "sanctioned_words": 0,
+   "added_revision": 13146670,
+   "revisions": [
+    13146670,
+    39450904
+   ],
+   "revision_words": [
+    19,
+    7
+   ],
+   "added_before_sanction": null,
+   "sanctioned_words_before": 0,
+   "sanctioned_words_after": 0,
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 1,
+    "back_within_24h": 0,
+    "out_24h_or_more": 1,
+    "removing_accounts": 1,
+    "restoring_accounts": 1,
+    "page_wide_removals": 0,
+    "first_added": "2005-04-23",
+    "latest_removal": "2021-09-17",
+    "in_place_since": "2021-10-27",
+    "in_place_since_revision": 1052183734,
+    "removals": [
+     [
+      1044804873,
+      1052183734,
+      975.6
+     ]
+    ]
+   }
+  },
+  {
+   "id": "sec3-30",
+   "section": "Campaigns",
+   "text": "His body was interred in Medhane Alem church on Rema Island.",
+   "words": 11,
+   "authors": [
+    "Editor 3"
+   ],
+   "author_words": [
+    11
+   ],
+   "author_sanctioned": false,
+   "sanctioned_words": 0,
+   "added_revision": 347741426,
+   "revisions": [
+    347741426
+   ],
+   "revision_words": [
+    11
+   ],
+   "added_before_sanction": null,
+   "sanctioned_words_before": 0,
+   "sanctioned_words_after": 0,
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2010-03-04",
+    "latest_removal": null,
+    "in_place_since": "2010-03-04",
+    "in_place_since_revision": 347741426,
+    "removals": []
+   }
+  },
+  {
+   "id": "sec3-31",
+   "section": "Campaigns",
+   "text": "When Robert Ernest Cheesman visited the church in March 1933, he was shown a blue-and-white porcelain jar, which his entrails were brought from the place of his death.",
+   "words": 30,
+   "authors": [
+    "Editor 3",
+    "Editor 16"
+   ],
+   "author_words": [
+    28,
+    2
+   ],
+   "author_sanctioned": false,
+   "sanctioned_words": 0,
+   "added_revision": 347741426,
+   "revisions": [
+    347741426,
+    1014924477
+   ],
+   "revision_words": [
+    28,
+    2
+   ],
+   "added_before_sanction": null,
+   "sanctioned_words_before": 0,
+   "sanctioned_words_after": 0,
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2010-03-04",
+    "latest_removal": null,
+    "in_place_since": "2010-03-04",
+    "in_place_since_revision": 347741426,
+    "removals": []
+   }
+  },
+  {
+   "id": "sec4-1",
+   "section": "Legacy",
+   "text": "Historian J. Spencer Trimingham hails Sarsa Dengel as one of the greatest warrior-kings to rule the Ethiopian Empire.",
+   "words": 19,
+   "authors": [
+    "Editor 2"
+   ],
+   "author_words": [
+    19
+   ],
+   "author_sanctioned": true,
+   "sanctioned_words": 19,
+   "added_revision": 1263604877,
+   "revisions": [
+    1263604877
+   ],
+   "revision_words": [
+    19
+   ],
+   "added_before_sanction": true,
+   "sanctioned_words_before": 19,
+   "sanctioned_words_after": 0,
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2024-12-17",
+    "latest_removal": null,
+    "in_place_since": "2024-12-17",
+    "in_place_since_revision": 1263604877,
+    "removals": []
+   }
+  },
+  {
+   "id": "sec4-2",
+   "section": "Legacy",
+   "text": "According to Paul B. Henze, Sarsa Dengel's reorganization of the Ethiopian army led to his successful defense of the empire from enemies in all directions.",
+   "words": 26,
+   "authors": [
+    "Editor 2"
+   ],
+   "author_words": [
+    26
+   ],
+   "author_sanctioned": true,
+   "sanctioned_words": 26,
+   "added_revision": 1263604877,
+   "revisions": [
+    1263604877
+   ],
+   "revision_words": [
+    26
+   ],
+   "added_before_sanction": true,
+   "sanctioned_words_before": 26,
+   "sanctioned_words_after": 0,
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2024-12-17",
+    "latest_removal": null,
+    "in_place_since": "2024-12-17",
+    "in_place_since_revision": 1263604877,
+    "removals": []
+   }
+  },
+  {
+   "id": "sec4-3",
+   "section": "Legacy",
+   "text": "German historian Franz Dombrowski credits Sarsa Dengel with ending the Ottoman threat to the independence of his Empire and restoring the powerful position of the Ethiopian Emperor in the region.",
+   "words": 30,
+   "authors": [
+    "Editor 7"
+   ],
+   "author_words": [
+    30
+   ],
+   "author_sanctioned": true,
+   "sanctioned_words": 30,
+   "added_revision": 1277325180,
+   "revisions": [
+    1277325180,
+    1277325465
+   ],
+   "revision_words": [
+    24,
+    6
+   ],
+   "added_before_sanction": true,
+   "sanctioned_words_before": 30,
+   "sanctioned_words_after": 0,
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2025-02-24",
+    "latest_removal": null,
+    "in_place_since": "2025-02-24",
+    "in_place_since_revision": 1277325180,
+    "removals": []
+   }
+  },
+  {
+   "id": "sec4-4",
+   "section": "Legacy",
+   "text": "According to Professor Mordechai Abir: \"the many historians who described Sersa Dangel as an able, heroic, and successful monarch completely distorted the truth.\"",
+   "words": 23,
+   "authors": [
+    "Editor 5",
+    "Editor 10"
+   ],
+   "author_words": [
+    22,
+    1
+   ],
+   "author_sanctioned": true,
+   "sanctioned_words": 22,
+   "added_revision": 1140111789,
+   "revisions": [
+    1140111789,
+    1332603022
+   ],
+   "revision_words": [
+    22,
+    1
+   ],
+   "added_before_sanction": false,
+   "sanctioned_words_before": 0,
+   "sanctioned_words_after": 22,
+   "sanctioned_words_during": 22,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2023-02-18",
+    "latest_removal": null,
+    "in_place_since": "2023-02-18",
+    "in_place_since_revision": 1140111789,
+    "removals": []
+   }
+  },
+  {
+   "id": "sec4-5",
+   "section": "Legacy",
+   "text": "Abir argues that Sarsa Dengel's obsession to consolidate his government in the Beta Israel provinces in the north, instead of focusing all of his resources and attention in the south to stop the Oromo expansions, was a turning point in Ethiopian history.",
+   "words": 43,
+   "authors": [
+    "Editor 5",
+    "Editor 10",
+    "Editor 19",
+    "Editor 20"
+   ],
+   "author_words": [
+    36,
+    3,
+    2,
+    2
+   ],
+   "author_sanctioned": true,
+   "sanctioned_words": 38,
+   "added_revision": 1140111789,
+   "revisions": [
+    1140111789,
+    1332603022,
+    1140615460,
+    1143439718
+   ],
+   "revision_words": [
+    36,
+    3,
+    2,
+    2
+   ],
+   "added_before_sanction": null,
+   "sanctioned_words_before": 2,
+   "sanctioned_words_after": 36,
+   "sanctioned_words_during": 36,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2023-02-18",
+    "latest_removal": null,
+    "in_place_since": "2023-02-18",
+    "in_place_since_revision": 1140111789,
+    "removals": []
+   }
+  },
+  {
+   "id": "sec4-6",
+   "section": "Legacy",
+   "text": "He describes the decision as \"disastrous\", arguing that it \"opened the Ethiopian plateau for the Oromo migration and sparked off a chain of reaction which lead to the final decline of the Ethiopian Empire.\"",
+   "words": 34,
+   "authors": [
+    "Editor 9",
+    "Editor 6",
+    "Editor 10"
+   ],
+   "author_words": [
+    17,
+    9,
+    8
+   ],
+   "author_sanctioned": true,
+   "sanctioned_words": 17,
+   "added_revision": 1123810447,
+   "revisions": [
+    1123810447,
+    1309928450,
+    1332603022
+   ],
+   "revision_words": [
+    17,
+    9,
+    8
+   ],
+   "added_before_sanction": true,
+   "sanctioned_words_before": 17,
+   "sanctioned_words_after": 0,
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 2,
+    "back_within_24h": 0,
+    "out_24h_or_more": 2,
+    "removing_accounts": 2,
+    "restoring_accounts": 2,
+    "page_wide_removals": 0,
+    "first_added": "2022-11-25",
+    "latest_removal": "2022-12-03",
+    "in_place_since": "2023-02-18",
+    "in_place_since_revision": 1140111789,
+    "removals": [
+     [
+      1124655029,
+      1124912747,
+      31.9
+     ],
+     [
+      1125329937,
+      1140111789,
+      1849.5
+     ]
+    ]
+   }
+  },
+  {
+   "id": "sec4-7",
+   "section": "Legacy",
+   "text": "The British historian Richard Pankhurst concurred, stating that Emperor Sarsa Dengel's victories in the far north against the Ottomans were achieved at the cost of abandoning effective resistance against the Oromo invasion from the south.",
+   "words": 36,
+   "authors": [
+    "Editor 6",
+    "Editor 10"
+   ],
+   "author_words": [
+    32,
+    4
+   ],
+   "author_sanctioned": false,
+   "sanctioned_words": 0,
+   "added_revision": 1309928450,
+   "revisions": [
+    1309928450,
+    1332603022
+   ],
+   "revision_words": [
+    32,
+    4
+   ],
+   "added_before_sanction": null,
+   "sanctioned_words_before": 0,
+   "sanctioned_words_after": 0,
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2025-09-06",
+    "latest_removal": null,
+    "in_place_since": "2025-09-06",
+    "in_place_since_revision": 1309928450,
+    "removals": []
+   }
+  },
+  {
+   "id": "sec4-8",
+   "section": "Legacy",
+   "text": "Robert Silverberg, however, argues that Sarsa Dengel died in 1597 having enlarged the realm he inherited.",
+   "words": 16,
+   "authors": [
+    "Editor 2"
+   ],
+   "author_words": [
+    16
+   ],
+   "author_sanctioned": true,
+   "sanctioned_words": 16,
+   "added_revision": 1263606427,
+   "revisions": [
+    1263606427
+   ],
+   "revision_words": [
+    16
+   ],
+   "added_before_sanction": true,
+   "sanctioned_words_before": 16,
+   "sanctioned_words_after": 0,
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2024-12-17",
+    "latest_removal": null,
+    "in_place_since": "2024-12-17",
+    "in_place_since_revision": 1263606427,
+    "removals": []
+   }
+  },
+  {
+   "id": "sec4-9",
+   "section": "Legacy",
+   "text": "Silverberg further calls the Emperor a valiant warrior and refers to his time on the throne as \"the 35 triumphant years\" during which Sarsa Dengel scored several decisive victories over his various enemies.",
+   "words": 33,
+   "authors": [
+    "Editor 2",
+    "Editor 10"
+   ],
+   "author_words": [
+    32,
+    1
+   ],
+   "author_sanctioned": true,
+   "sanctioned_words": 32,
+   "added_revision": 1263606427,
+   "revisions": [
+    1263606427,
+    1332603022
+   ],
+   "revision_words": [
+    32,
+    1
+   ],
+   "added_before_sanction": true,
+   "sanctioned_words_before": 32,
+   "sanctioned_words_after": 0,
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2024-12-17",
+    "latest_removal": null,
+    "in_place_since": "2024-12-17",
+    "in_place_since_revision": 1263606427,
+    "removals": []
+   }
+  },
+  {
+   "id": "sec4-10",
+   "section": "Legacy",
+   "text": "He thus argues that Sarsa Dengel left the Ethiopian Empire much stronger and larger than he found it at the time of his accession to the throne.",
+   "words": 27,
+   "authors": [
+    "Editor 2"
+   ],
+   "author_words": [
+    27
+   ],
+   "author_sanctioned": true,
+   "sanctioned_words": 27,
+   "added_revision": 1263606427,
+   "revisions": [
+    1263606427
+   ],
+   "revision_words": [
+    27
+   ],
+   "added_before_sanction": true,
+   "sanctioned_words_before": 27,
+   "sanctioned_words_after": 0,
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2024-12-17",
+    "latest_removal": null,
+    "in_place_since": "2024-12-17",
+    "in_place_since_revision": 1263606427,
+    "removals": []
+   }
+  }
+ ],
+ "inputs": {
+  "tool_version": "0.1.0",
+  "wikitext": "https://en.wikipedia.org/w/index.php?oldid=1364920495&action=raw",
+  "wikiwho_rev_content": "https://wikiwho-api.wmcloud.org/en/api/v1.0.0-beta/rev_content/rev_id/1364920495/",
+  "wikiwho_all_content": "https://wikiwho-api.wmcloud.org/en/api/v1.0.0-beta/all_content/page_id/1786636/",
+  "history_revisions": 394,
+  "sanctions_csv_sha256": "46ecf8bd2945ef432b9a5a9afcd72502654439f2b78b039f168883e847475a22",
+  "source_names_sha256": "1e0c7263959b899f0a4dd2a19e5f77b3d542f7e961d864fcb790974eb1ddbad0",
+  "books_sha256": "c82c512cf1e16abc1ab47c9aa152ce4df80360300d3c17f57b443a06ccaf46f6"
+ },
+ "quality": {
+  "wikiwho_tokens": 3322,
+  "unaligned_tokens": 0,
+  "skipped_chars": 0,
+  "words_outside_sentences": 0,
+  "survival_tokens_without_history": 0
+ },
+ "sources": {
+  "citations": 28,
+  "lead_citations": 2,
+  "short_footnotes": 6,
+  "with_link": 8,
+  "distinct_sources": 11,
+  "editors_adding_citations": 9,
+  "citation_only_editors": 1,
+  "flags": {
+   "opinion": 0,
+   "no_link": 20,
+   "book_without_page": 0,
+   "not_english": 0,
+   "not_english_no_quote": 0,
+   "dead_link_no_archive": 0,
+   "paywall_or_registration": 0
+  },
+  "flags_by_editor": {
+   "Editor 1": {
+    "citations": 10,
+    "opinion": 0,
+    "no_link": 7,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 2": {
+    "citations": 9,
+    "opinion": 0,
+    "no_link": 6,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 3": {
+    "citations": 3,
+    "opinion": 0,
+    "no_link": 2,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 5": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 1,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 6": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 1,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 7": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 1,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 15": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 1,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 23": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 25": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 1,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   }
+  },
+  "list": [
+   {
+    "source": "name:the red sea press",
+    "name_as_cited": "The Red Sea Press",
+    "citations": 7,
+    "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {
+     "no_link": 7
+    },
+    "added_by": {
+     "Editor 1": 5,
+     "Editor 6": 1,
+     "Editor 25": 1
+    }
+   },
+   {
+    "source": "unidentified",
+    "name_as_cited": "",
+    "citations": 5,
+    "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {
+     "no_link": 5
+    },
+    "added_by": {
+     "Editor 2": 2,
+     "Editor 3": 1,
+     "Editor 7": 1,
+     "Editor 15": 1
+    }
+   },
+   {
+    "source": "name:oxford university press",
+    "name_as_cited": "Oxford University Press",
+    "citations": 4,
+    "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {
+     "no_link": 4
+    },
+    "added_by": {
+     "Editor 1": 2,
+     "Editor 2": 1,
+     "Editor 3": 1
+    }
+   },
+   {
+    "source": "google.com.et",
+    "name_as_cited": "",
+    "citations": 3,
+    "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
+    "added_by": {
+     "Editor 2": 3
+    }
+   },
+   {
+    "source": "name:taylor & francis",
+    "name_as_cited": "Taylor & Francis",
+    "citations": 2,
+    "lead_citations": 1,
+    "opinion_citations": 0,
+    "flags": {
+     "no_link": 2
+    },
+    "added_by": {
+     "Editor 2": 2
+    }
+   },
+   {
+    "source": "soas.ac.uk",
+    "name_as_cited": "",
+    "citations": 2,
+    "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
+    "added_by": {
+     "Editor 1": 2
+    }
+   },
+   {
+    "source": "jstor.org",
+    "name_as_cited": "",
+    "citations": 1,
+    "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
+    "added_by": {
+     "Editor 3": 1
+    }
+   },
+   {
+    "source": "name:ccb publishing",
+    "name_as_cited": "CCB Publishing",
+    "citations": 1,
+    "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
+    "added_by": {
+     "Editor 23": 1
+    }
+   },
+   {
+    "source": "name:palgrave macmillan us",
+    "name_as_cited": "Palgrave Macmillan US",
+    "citations": 1,
+    "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "source": "name:springer international publishing",
+    "name_as_cited": "Springer International Publishing",
+    "citations": 1,
+    "lead_citations": 1,
+    "opinion_citations": 0,
+    "flags": {
+     "no_link": 1
+    },
+    "added_by": {
+     "Editor 2": 1
+    }
+   },
+   {
+    "source": "name:taylor & francis group",
+    "name_as_cited": "",
+    "citations": 1,
+    "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {
+     "no_link": 1
+    },
+    "publisher_from_isbn": {
+     "Open Library": 1
+    },
+    "publisher_name_from_isbn": "Taylor & Francis Group",
+    "added_by": {
+     "Editor 5": 1
+    }
+   }
+  ],
+  "citations_naming_an_author": 3,
+  "authors": [
+   {
+    "name": "Howard Gordon",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Mordechai Abir",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Richard Pankhurst",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   }
+  ],
+  "items": [
+   {
+    "id": "isbn:9780932415196",
+    "source": "name:the red sea press",
+    "citations": 1,
+    "flags": [
+     "no_link"
+    ],
+    "added_by": {
+     "Editor 25": 1
+    }
+   },
+   {
+    "id": "isbn:9781136280900",
+    "source": "name:taylor & francis group",
+    "citations": 1,
+    "flags": [
+     "no_link"
+    ],
+    "language_as_cited": "en",
+    "added_by": {
+     "Editor 5": 1
+    }
+   },
+   {
+    "id": "isbn:9781137117861",
+    "source": "name:palgrave macmillan us",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "isbn:9781926585215",
+    "source": "name:ccb publishing",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 23": 1
+    }
+   },
+   {
+    "id": "url:books.google.com.et/books?id=NXw_AQAAMAAJ&pg=PA120&dq=Sarsa+Dengel+the+great&hl=en&newbks=1&newbks_redir=0&source=gb_mobile_search&ovdme=1&sa=X&ved=2ahUKEwj_vpKtyq-KAxVDR_EDHU9YFTkQ6AF6BAgGEAM",
+    "source": "google.com.et",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 2": 1
+    }
+   },
+   {
+    "id": "url:books.google.com.et/books?id=gzwoedwOkQMC&pg=PA94&dq=sarsa+dengel&hl=en&newbks=1&newbks_redir=0&source=gb_mobile_search&ovdme=1&sa=X&ved=2ahUKEwjex4_vjq-KAxUbSPEDHbaBIW0Q6AF6BAgJEAM",
+    "source": "google.com.et",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 2": 1
+    }
+   },
+   {
+    "id": "url:books.google.com.et/books?id=l0vPEAAAQBAJ&pg=PT412&dq=sarsa+dengel&hl=en&newbks=1&newbks_redir=0&source=gb_mobile_search&ovdme=1&sa=X&ved=2ahUKEwiS65_Cka-KAxW-RvEDHX4xJF44ChDoAXoECAoQAw",
+    "source": "google.com.et",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 2": 1
+    }
+   },
+   {
+    "id": "url:eprints.soas.ac.uk/29226/1/10731321.pdf",
+    "source": "soas.ac.uk",
+    "citations": 2,
+    "flags": [],
+    "added_by": {
+     "Editor 1": 2
+    }
+   },
+   {
+    "id": "url:jstor.org/stable/1785868",
+    "source": "jstor.org",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 3": 1
+    }
+   }
+  ],
+  "bundles": {
+   "sentences_with_footnotes": 17,
+   "sentences_by_works_cited": {
+    "1": 14,
+    "2-4": 3,
+    "5-9": 0,
+    "10 or more": 0
+   },
+   "largest": []
+  }
+ },
+ "changes": {
+  "words_removed": 9362,
+  "words_removed_later_restored": 5754,
+  "source_links_removed": 18,
+  "editors_removing": 120,
+  "listed_terms": {
+   "inserted": {
+    "WTW: editorializing": 1,
+    "WTW: euphemisms": 1,
+    "WTW: puffery": 16,
+    "WTW: synonyms for said": 4,
+    "WTW: unsupported attributions": 1,
+    "contested: immigration": 3,
+    "contested: terms for deaths": 14,
+    "contested: terms for violent events": 8,
+    "contested: territory and control": 2
+   },
+   "removed": {
+    "WTW: editorializing": 5,
+    "WTW: euphemisms": 1,
+    "WTW: puffery": 15,
+    "WTW: synonyms for said": 10,
+    "WTW: unsupported attributions": 1,
+    "contested: immigration": 5,
+    "contested: terms for deaths": 17,
+    "contested: terms for violent events": 20,
+    "contested: territory and control": 1
+   }
+  },
+  "lists": {
+   "words_to_watch": {
+    "revision": 1382059772,
+    "url": "https://en.wikipedia.org/w/index.php?oldid=1382059772",
+    "sha256": "21e24e2898750322164b24947621630845d75cf8dd5adf3ec8cd860152449ea3"
+   },
+   "contested_terms": {
+    "sha256": "944606776be20b6b77dceb3ee5f6a29f8f5e196bf93cc16a4b6f2db6efe600c1"
+   }
+  },
+  "editors": [
+   {
+    "label": "Editor 1",
+    "words_removed": 2686,
+    "others_words_removed": 1470,
+    "words_removed_later_restored": 1738,
+    "removing_revisions": 24,
+    "sources_removed": {
+     "academia.edu": 1
+    },
+    "terms_inserted": {
+     "WTW: editorializing": {
+      "utterly": 1
+     },
+     "WTW: puffery": {
+      "great": 1
+     },
+     "WTW: synonyms for said": {
+      "find": 1
+     },
+     "contested: terms for deaths": {
+      "killed": 3
+     },
+     "contested: terms for violent events": {
+      "attack": 1,
+      "raid": 4
+     },
+     "contested: territory and control": {
+      "occupation": 1
+     }
+    },
+    "terms_removed": {
+     "WTW: editorializing": {
+      "utterly": 4
+     },
+     "WTW: puffery": {
+      "great": 2
+     },
+     "WTW: synonyms for said": {
+      "find": 4
+     },
+     "contested: immigration": {
+      "invasion": 3
+     },
+     "contested: terms for deaths": {
+      "executed": 4,
+      "killed": 2
+     },
+     "contested: terms for violent events": {
+      "raid": 9
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1186233598",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1173865088",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1187510550",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1171126773",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1084480214"
+    ]
+   },
+   {
+    "label": "Editor 26",
+    "words_removed": 855,
+    "others_words_removed": 855,
+    "words_removed_later_restored": 1,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "google.com.et": 2
+    },
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: puffery": {
+      "great": 2,
+      "notable": 1
+     },
+     "WTW: synonyms for said": {
+      "observe": 1
+     },
+     "WTW: unsupported attributions": {
+      "has been described as": 1
+     },
+     "contested: terms for deaths": {
+      "killed": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1324161836"
+    ]
+   },
+   {
+    "label": "Editor 27",
+    "words_removed": 528,
+    "others_words_removed": 528,
+    "words_removed_later_restored": 284,
+    "removing_revisions": 4,
+    "sources_removed": {
+     "wikimedia.org": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: euphemisms": {
+      "passed away": 1
+     },
+     "WTW: puffery": {
+      "great": 1,
+      "greatest": 1
+     },
+     "contested: terms for deaths": {
+      "executed": 1
+     },
+     "contested: terms for violent events": {
+      "attack": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1052183734",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1096117810",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1051564841",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1051974898"
+    ]
+   },
+   {
+    "label": "Editor 28",
+    "words_removed": 478,
+    "others_words_removed": 478,
+    "words_removed_later_restored": 248,
+    "removing_revisions": 10,
+    "sources_removed": {
+     "google.co.il": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {
+     "contested: immigration": {
+      "invasion": 2
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1125329937",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1146259947",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1157329310",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1152135135",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1159761639"
+    ]
+   },
+   {
+    "label": "Editor 29",
+    "words_removed": 447,
+    "others_words_removed": 447,
+    "words_removed_later_restored": 430,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: editorializing": {
+      "utterly": 1
+     },
+     "WTW: synonyms for said": {
+      "find": 1
+     },
+     "contested: terms for deaths": {
+      "executed": 1
+     },
+     "contested: terms for violent events": {
+      "raid": 2
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1171220397"
+    ]
+   },
+   {
+    "label": "Editor 30",
+    "words_removed": 437,
+    "others_words_removed": 437,
+    "words_removed_later_restored": 423,
+    "removing_revisions": 2,
+    "sources_removed": {
+     "soas.ac.uk": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: puffery": {
+      "great": 1
+     },
+     "contested: terms for violent events": {
+      "attack": 1,
+      "raid": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1182437824",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1182437773"
+    ]
+   },
+   {
+    "label": "Editor 31",
+    "words_removed": 413,
+    "others_words_removed": 413,
+    "words_removed_later_restored": 413,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "soas.ac.uk": 1
+    },
+    "terms_inserted": {
+     "contested: immigration": {
+      "invasion": 1
+     }
+    },
+    "terms_removed": {
+     "WTW: puffery": {
+      "great": 1
+     },
+     "contested: terms for violent events": {
+      "attack": 1,
+      "raid": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1173732993"
+    ]
+   },
+   {
+    "label": "Editor 32",
+    "words_removed": 411,
+    "others_words_removed": 411,
+    "words_removed_later_restored": 411,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "soas.ac.uk": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: puffery": {
+      "great": 1
+     },
+     "contested: terms for violent events": {
+      "attack": 1,
+      "raid": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1187088740"
+    ]
+   },
+   {
+    "label": "Editor 33",
+    "words_removed": 387,
+    "others_words_removed": 387,
+    "words_removed_later_restored": 387,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "soas.ac.uk": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: puffery": {
+      "great": 1
+     },
+     "contested: terms for deaths": {
+      "killed": 1
+     },
+     "contested: terms for violent events": {
+      "attack": 1,
+      "raid": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1171216968"
+    ]
+   },
+   {
+    "label": "Editor 34",
+    "words_removed": 293,
+    "others_words_removed": 293,
+    "words_removed_later_restored": 31,
+    "removing_revisions": 2,
+    "sources_removed": {
+     "wikimedia.org": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1107464569",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1051964123"
+    ]
+   },
+   {
+    "label": "Editor 35",
+    "words_removed": 169,
+    "others_words_removed": 159,
+    "words_removed_later_restored": 167,
+    "removing_revisions": 6,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: puffery": {
+      "great": 1,
+      "greatest": 1
+     },
+     "contested: terms for deaths": {
+      "executed": 1
+     },
+     "contested: terms for violent events": {
+      "attack": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1042961505",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1042949959",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1042954088",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1042968319",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1042959894"
+    ]
+   },
+   {
+    "label": "Editor 36",
+    "words_removed": 164,
+    "others_words_removed": 164,
+    "words_removed_later_restored": 23,
+    "removing_revisions": 4,
+    "sources_removed": {
+     "books.google": 2
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1316915301",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1164841343",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1148955459",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1088716024"
+    ]
+   },
+   {
+    "label": "Editor 14",
+    "words_removed": 157,
+    "others_words_removed": 145,
+    "words_removed_later_restored": 54,
+    "removing_revisions": 5,
+    "sources_removed": {
+     "jstor.org": 2
+    },
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: synonyms for said": {
+      "assert": 2,
+      "claim": 2
+     },
+     "contested: terms for deaths": {
+      "killed": 3
+     },
+     "contested: territory and control": {
+      "occupied": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1343535621",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1342972293",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1197545310",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1209387984",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1189433685"
+    ]
+   },
+   {
+    "label": "Editor 37",
+    "words_removed": 134,
+    "others_words_removed": 134,
+    "words_removed_later_restored": 85,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "books.google": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1124655029"
+    ]
+   },
+   {
+    "label": "Editor 25",
+    "words_removed": 114,
+    "others_words_removed": 114,
+    "words_removed_later_restored": 36,
+    "removing_revisions": 7,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1088528041",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1145843854",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1124057926",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1094314815",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1101056749"
+    ]
+   },
+   {
+    "label": "Editor 38",
+    "words_removed": 110,
+    "others_words_removed": 110,
+    "words_removed_later_restored": 110,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1166504857"
+    ]
+   },
+   {
+    "label": "Editor 3",
+    "words_removed": 94,
+    "others_words_removed": 35,
+    "words_removed_later_restored": 1,
+    "removing_revisions": 20,
+    "sources_removed": {
+     "books.google": 1
+    },
+    "terms_inserted": {
+     "contested: terms for deaths": {
+      "died": 1,
+      "killed": 1
+     },
+     "contested: terms for violent events": {
+      "raid": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=73881315",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=39450904",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1143458661",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1143457774",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=15408498"
+    ]
+   },
+   {
+    "label": "Editor 11",
+    "words_removed": 84,
+    "others_words_removed": 79,
+    "words_removed_later_restored": 79,
+    "removing_revisions": 3,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: synonyms for said": {
+      "assert": 1,
+      "claim": 1
+     },
+     "contested: terms for deaths": {
+      "killed": 2
+     },
+     "contested: territory and control": {
+      "occupied": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1145394470",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1343002321",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1343006218"
+    ]
+   },
+   {
+    "label": "Editor 39",
+    "words_removed": 81,
+    "others_words_removed": 81,
+    "words_removed_later_restored": 78,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1144089548"
+    ]
+   },
+   {
+    "label": "Editor 40",
+    "words_removed": 80,
+    "others_words_removed": 80,
+    "words_removed_later_restored": 80,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "google.ca": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1157277638"
+    ]
+   },
+   {
+    "label": "Editor 8",
+    "words_removed": 79,
+    "others_words_removed": 75,
+    "words_removed_later_restored": 22,
+    "removing_revisions": 5,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: puffery": {
+      "great": 1
+     }
+    },
+    "terms_removed": {
+     "WTW: puffery": {
+      "great": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1065630197",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1045233804",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1034085092",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1065631022",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1065630411"
+    ]
+   },
+   {
+    "label": "Editor 41",
+    "words_removed": 74,
+    "others_words_removed": 74,
+    "words_removed_later_restored": 74,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: puffery": {
+      "great": 2,
+      "notable": 1
+     },
+     "WTW: synonyms for said": {
+      "observe": 1
+     },
+     "WTW: unsupported attributions": {
+      "has been described as": 1
+     },
+     "contested: terms for deaths": {
+      "killed": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1316911781",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1316911163"
+    ]
+   },
+   {
+    "label": "Editor 17",
+    "words_removed": 63,
+    "others_words_removed": 63,
+    "words_removed_later_restored": 4,
+    "removing_revisions": 6,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1019564344",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1019564096",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1020460170",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1048839016",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1026709350"
+    ]
+   },
+   {
+    "label": "Editor 42",
+    "words_removed": 58,
+    "others_words_removed": 58,
+    "words_removed_later_restored": 58,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1104021463",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1104023602"
+    ]
+   },
+   {
+    "label": "Editor 43",
+    "words_removed": 40,
+    "others_words_removed": 40,
+    "words_removed_later_restored": 40,
+    "removing_revisions": 5,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1277170797",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1277171785",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1277171018",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1277171221",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1277171341"
+    ]
+   },
+   {
+    "label": "Editor 44",
+    "words_removed": 40,
+    "others_words_removed": 40,
+    "words_removed_later_restored": 40,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1107147652"
+    ]
+   },
+   {
+    "label": "Editor 45",
+    "words_removed": 39,
+    "others_words_removed": 39,
+    "words_removed_later_restored": 39,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1076831389"
+    ]
+   },
+   {
+    "label": "Editor 19",
+    "words_removed": 38,
+    "others_words_removed": 38,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1140615460"
+    ]
+   },
+   {
+    "label": "Editor 46",
+    "words_removed": 38,
+    "others_words_removed": 38,
+    "words_removed_later_restored": 38,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "contested: terms for deaths": {
+      "executed": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1048460606"
+    ]
+   },
+   {
+    "label": "Editor 47",
+    "words_removed": 35,
+    "others_words_removed": 34,
+    "words_removed_later_restored": 34,
+    "removing_revisions": 4,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1176873782",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1176874705",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1176874855",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1176874959"
+    ]
+   },
+   {
+    "label": "Editor 48",
+    "words_removed": 32,
+    "others_words_removed": 32,
+    "words_removed_later_restored": 32,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1092204464",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1092217923"
+    ]
+   },
+   {
+    "label": "Editor 49",
+    "words_removed": 32,
+    "others_words_removed": 32,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=704906160",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=660467915"
+    ]
+   },
+   {
+    "label": "Editor 50",
+    "words_removed": 31,
+    "others_words_removed": 31,
+    "words_removed_later_restored": 31,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1176929746"
+    ]
+   },
+   {
+    "label": "Editor 51",
+    "words_removed": 31,
+    "others_words_removed": 30,
+    "words_removed_later_restored": 30,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1051164286",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1051228318"
+    ]
+   },
+   {
+    "label": "Editor 52",
+    "words_removed": 30,
+    "others_words_removed": 30,
+    "words_removed_later_restored": 28,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1139020799",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1139021163"
+    ]
+   },
+   {
+    "label": "Editor 53",
+    "words_removed": 30,
+    "others_words_removed": 30,
+    "words_removed_later_restored": 30,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1051923371"
+    ]
+   },
+   {
+    "label": "Editor 54",
+    "words_removed": 29,
+    "others_words_removed": 29,
+    "words_removed_later_restored": 29,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1144625562"
+    ]
+   },
+   {
+    "label": "Editor 55",
+    "words_removed": 29,
+    "others_words_removed": 29,
+    "words_removed_later_restored": 29,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1148570966"
+    ]
+   },
+   {
+    "label": "Editor 56",
+    "words_removed": 27,
+    "others_words_removed": 27,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1263185353"
+    ]
+   },
+   {
+    "label": "Editor 57",
+    "words_removed": 25,
+    "others_words_removed": 25,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: puffery": {
+      "acclaimed": 1,
+      "great": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=985196397",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1088923035"
+    ]
+   },
+   {
+    "label": "Editor 58",
+    "words_removed": 23,
+    "others_words_removed": 23,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=829244510"
+    ]
+   },
+   {
+    "label": "Editor 2",
+    "words_removed": 22,
+    "others_words_removed": 20,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 3,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: puffery": {
+      "great": 1,
+      "greatest": 2
+     },
+     "contested: terms for deaths": {
+      "died": 1,
+      "executed": 1,
+      "killed": 2
+     },
+     "contested: terms for violent events": {
+      "raid": 1
+     }
+    },
+    "terms_removed": {
+     "contested: terms for deaths": {
+      "killed": 2
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1262116080",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1263633328",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1263633466"
+    ]
+   },
+   {
+    "label": "Editor 59",
+    "words_removed": 22,
+    "others_words_removed": 22,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: puffery": {
+      "great": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=988065821"
+    ]
+   },
+   {
+    "label": "Editor 60",
+    "words_removed": 20,
+    "others_words_removed": 20,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=541122566"
+    ]
+   },
+   {
+    "label": "Editor 61",
+    "words_removed": 20,
+    "others_words_removed": 20,
+    "words_removed_later_restored": 3,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=512519993",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=512520055"
+    ]
+   },
+   {
+    "label": "Editor 62",
+    "words_removed": 17,
+    "others_words_removed": 11,
+    "words_removed_later_restored": 14,
+    "removing_revisions": 3,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1093452009",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1093225593",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1093316938"
+    ]
+   },
+   {
+    "label": "Editor 18",
+    "words_removed": 15,
+    "others_words_removed": 15,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1091854888"
+    ]
+   },
+   {
+    "label": "Editor 63",
+    "words_removed": 15,
+    "others_words_removed": 15,
+    "words_removed_later_restored": 15,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1150091807",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1150090810"
+    ]
+   },
+   {
+    "label": "Editor 64",
+    "words_removed": 14,
+    "others_words_removed": 14,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=863654621"
+    ]
+   },
+   {
+    "label": "Editor 65",
+    "words_removed": 14,
+    "others_words_removed": 14,
+    "words_removed_later_restored": 4,
+    "removing_revisions": 3,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1364920495",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1092929550",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1364920484"
+    ]
+   },
+   {
+    "label": "Editor 66",
+    "words_removed": 13,
+    "others_words_removed": 13,
+    "words_removed_later_restored": 13,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: euphemisms": {
+      "passed away": 1
+     }
+    },
+    "terms_removed": {
+     "contested: terms for deaths": {
+      "died": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1044804873"
+    ]
+   },
+   {
+    "label": "Editor 67",
+    "words_removed": 12,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "redd.it": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1043766688"
+    ]
+   },
+   {
+    "label": "Editor 68",
+    "words_removed": 12,
+    "others_words_removed": 12,
+    "words_removed_later_restored": 12,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1058100958"
+    ]
+   },
+   {
+    "label": "Editor 10",
+    "words_removed": 11,
+    "others_words_removed": 11,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1332603022"
+    ]
+   },
+   {
+    "label": "Editor 6",
+    "words_removed": 10,
+    "others_words_removed": 10,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {
+     "contested: immigration": {
+      "invasion": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1309928450"
+    ]
+   },
+   {
+    "label": "Editor 69",
+    "words_removed": 9,
+    "others_words_removed": 9,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1314370518"
+    ]
+   },
+   {
+    "label": "Editor 4",
+    "words_removed": 8,
+    "others_words_removed": 8,
+    "words_removed_later_restored": 8,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1148872168"
+    ]
+   },
+   {
+    "label": "Editor 70",
+    "words_removed": 8,
+    "others_words_removed": 8,
+    "words_removed_later_restored": 8,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1090322459"
+    ]
+   },
+   {
+    "label": "Editor 71",
+    "words_removed": 8,
+    "others_words_removed": 8,
+    "words_removed_later_restored": 8,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1106455418"
+    ]
+   },
+   {
+    "label": "Editor 72",
+    "words_removed": 7,
+    "others_words_removed": 7,
+    "words_removed_later_restored": 7,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1103964908"
+    ]
+   },
+   {
+    "label": "Editor 73",
+    "words_removed": 7,
+    "others_words_removed": 7,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=317492811"
+    ]
+   },
+   {
+    "label": "Editor 74",
+    "words_removed": 7,
+    "others_words_removed": 7,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=283248030",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=283334375"
+    ]
+   },
+   {
+    "label": "Editor 7",
+    "words_removed": 6,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1277325465"
+    ]
+   },
+   {
+    "label": "Editor 75",
+    "words_removed": 6,
+    "others_words_removed": 6,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 4,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1145150463",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1145151237",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1145151505",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1145151983"
+    ]
+   },
+   {
+    "label": "Editor 76",
+    "words_removed": 6,
+    "others_words_removed": 6,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1038351476"
+    ]
+   },
+   {
+    "label": "Editor 77",
+    "words_removed": 6,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 3,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1157330041",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1260354482"
+    ]
+   },
+   {
+    "label": "Editor 78",
+    "words_removed": 6,
+    "others_words_removed": 6,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1363374480"
+    ]
+   },
+   {
+    "label": "Editor 21",
+    "words_removed": 5,
+    "others_words_removed": 2,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 3,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=63557272",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=54760029",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=66032623"
+    ]
+   },
+   {
+    "label": "Editor 79",
+    "words_removed": 5,
+    "others_words_removed": 5,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1091808206"
+    ]
+   },
+   {
+    "label": "Editor 80",
+    "words_removed": 5,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1075819380"
+    ]
+   },
+   {
+    "label": "Editor 81",
+    "words_removed": 5,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=210481525"
+    ]
+   },
+   {
+    "label": "Editor 82",
+    "words_removed": 5,
+    "others_words_removed": 5,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=484999816",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=485000204"
+    ]
+   },
+   {
+    "label": "Editor 15",
+    "words_removed": 4,
+    "others_words_removed": 2,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {
+     "contested: terms for deaths": {
+      "executed": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1088858914",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1088859055"
+    ]
+   },
+   {
+    "label": "Editor 23",
+    "words_removed": 4,
+    "others_words_removed": 1,
+    "words_removed_later_restored": 1,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1091845985",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1076858049"
+    ]
+   },
+   {
+    "label": "Editor 24",
+    "words_removed": 4,
+    "others_words_removed": 4,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1138932309"
+    ]
+   },
+   {
+    "label": "Editor 83",
+    "words_removed": 4,
+    "others_words_removed": 3,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=46992894",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=50664752"
+    ]
+   },
+   {
+    "label": "Editor 84",
+    "words_removed": 4,
+    "others_words_removed": 4,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1079704748"
+    ]
+   },
+   {
+    "label": "Editor 85",
+    "words_removed": 4,
+    "others_words_removed": 4,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=65166981"
+    ]
+   },
+   {
+    "label": "Editor 86",
+    "words_removed": 3,
+    "others_words_removed": 3,
+    "words_removed_later_restored": 3,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {
+     "contested: immigration": {
+      "invasion": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1159759809"
+    ]
+   },
+   {
+    "label": "Editor 87",
+    "words_removed": 3,
+    "others_words_removed": 2,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=36371442",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=36371765"
+    ]
+   },
+   {
+    "label": "Editor 88",
+    "words_removed": 3,
+    "others_words_removed": 3,
+    "words_removed_later_restored": 3,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1092688670",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1092688987"
+    ]
+   },
+   {
+    "label": "Editor 89",
+    "words_removed": 3,
+    "others_words_removed": 3,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=874456311"
+    ]
+   },
+   {
+    "label": "Editor 90",
+    "words_removed": 3,
+    "others_words_removed": 3,
+    "words_removed_later_restored": 3,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=99023142"
+    ]
+   },
+   {
+    "label": "Editor 91",
+    "words_removed": 3,
+    "others_words_removed": 3,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=142160058"
+    ]
+   },
+   {
+    "label": "Editor 92",
+    "words_removed": 3,
+    "others_words_removed": 3,
+    "words_removed_later_restored": 3,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1162994346"
+    ]
+   },
+   {
+    "label": "Editor 93",
+    "words_removed": 3,
+    "others_words_removed": 3,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1216406974"
+    ]
+   },
+   {
+    "label": "Editor 94",
+    "words_removed": 3,
+    "others_words_removed": 3,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=973427646"
+    ]
+   },
+   {
+    "label": "Editor 12",
+    "words_removed": 2,
+    "others_words_removed": 2,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1088885431"
+    ]
+   },
+   {
+    "label": "Editor 13",
+    "words_removed": 2,
+    "others_words_removed": 2,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=537078685"
+    ]
+   },
+   {
+    "label": "Editor 16",
+    "words_removed": 2,
+    "others_words_removed": 2,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1014924477"
+    ]
+   },
+   {
+    "label": "Editor 95",
+    "words_removed": 2,
+    "others_words_removed": 2,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=992002730"
+    ]
+   },
+   {
+    "label": "Editor 96",
+    "words_removed": 2,
+    "others_words_removed": 2,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=531835681"
+    ]
+   },
+   {
+    "label": "Editor 97",
+    "words_removed": 2,
+    "others_words_removed": 2,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1077226955"
+    ]
+   },
+   {
+    "label": "Editor 98",
+    "words_removed": 2,
+    "others_words_removed": 2,
+    "words_removed_later_restored": 2,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1104194884",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1106466408"
+    ]
+   },
+   {
+    "label": "Editor 99",
+    "words_removed": 2,
+    "others_words_removed": 2,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1302606673"
+    ]
+   },
+   {
+    "label": "Editor 100",
+    "words_removed": 2,
+    "others_words_removed": 2,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=315363688"
+    ]
+   },
+   {
+    "label": "Editor 101",
+    "words_removed": 2,
+    "others_words_removed": 2,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=432847079"
+    ]
+   },
+   {
+    "label": "Editor 102",
+    "words_removed": 1,
+    "others_words_removed": 1,
+    "words_removed_later_restored": 1,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1298359531"
+    ]
+   },
+   {
+    "label": "Editor 103",
+    "words_removed": 1,
+    "others_words_removed": 1,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1090040849"
+    ]
+   },
+   {
+    "label": "Editor 104",
+    "words_removed": 1,
+    "others_words_removed": 1,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=860044574"
+    ]
+   },
+   {
+    "label": "Editor 107",
+    "words_removed": 1,
+    "others_words_removed": 1,
+    "words_removed_later_restored": 1,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: puffery": {
+      "great": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=987993444"
+    ]
+   },
+   {
+    "label": "Editor 105",
+    "words_removed": 0,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 0,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: puffery": {
+      "acclaimed": 1,
+      "great": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": []
+   },
+   {
+    "label": "Editor 106",
+    "words_removed": 0,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 0,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: puffery": {
+      "great": 2
+     }
+    },
+    "terms_removed": {},
+    "evidence": []
+   },
+   {
+    "label": "Editor 108",
+    "words_removed": 0,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 0,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: puffery": {
+      "great": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": []
+   }
+  ],
+  "editors_shown": 104,
+  "sentence_history": {
+   "rule": "taken out and put back at least 2 times, not counting page-wide removals",
+   "sentences": 52,
+   "sentences_removed_and_restored_twice_or_more": 20,
+   "their_words": 453,
+   "share_of_words": 0.359809,
+   "in_opening_section": 5,
+   "median_days_in_place_since_last_restored": 962,
+   "sentences_removed_five_times_or_more": 2,
+   "sentences_removed_by_two_or_more_accounts": 20
+  }
+ },
+ "declared_interests": {
+  "article_tags": [],
+  "talk_page_revision": 1343535356,
+  "evidence": "https://en.wikipedia.org/w/index.php?oldid=1343535356",
+  "notices": []
+ },
+ "caveats": [
+  {
+   "code": "one_editor_dominates",
+   "applies_to": "sanctioned_share",
+   "text": "Most of this figure comes from one editor. Editor 2 alone wrote 16.8% of the article, which is 63% of all the text by sanctioned editors. Read it as one editor's contribution, not a pattern across many editors."
+  },
+  {
+   "code": "thin_sanctions_list",
+   "applies_to": "sanctioned_share",
+   "text": "The sanctions list for this topic area (HA) has only 0 hand-checked entries, against about a hundred for the Arab–Israeli conflict. This figure is likely an undercount, and comparing it with better-covered areas would overstate the difference."
+  },
+  {
+   "code": "minimum_figure",
+   "applies_to": "sanctioned_share",
+   "text": "Treat this as a minimum. The hand-checked list starts in 2023, so topic bans from earlier years are not counted. Long-established articles are affected most."
+  },
+  {
+   "code": "open_ended_sanctions",
+   "applies_to": "timing",
+   "text": "Indefinite sanctions are counted as in force from their start date unless the list records that they were lifted or overturned on appeal. Some may have ended without that being recorded yet, so part of the “while an open-ended sanction was in force” figure may belong under “after the sanctions had ended”."
+  }
+ ]
+}

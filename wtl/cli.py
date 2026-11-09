@@ -7,7 +7,10 @@
   check                                    totals, anonymity and reproducibility checks
   spotcheck [--n 20] [--seed 1]            sentence-level authorship hand-check helper
   site                                     build the public website in site/ from the stored JSON
-  candidates [--per-kind 25]               choose articles by rule -> data/candidates.csv
+  activity                                  how often each analysed article changes -> data/activity.json
+  stale                                     edits since each analysed revision -> data/stale.json
+  refresh [--n N]                           re-analyse articles with >= 20 edits since, or 90 days old
+  candidates [--per-kind 25] [--subjects SOC,ISL] choose articles by rule -> data/candidates.csv
   batch [--n 25] [--area A-I]              analyse the next N candidates not yet done, then rebuild
 """
 
@@ -59,6 +62,53 @@ def load_testset():
     return json.loads(TESTSET.read_text(encoding="utf-8"))
 
 
+def _save_entry(key, entry):
+    """Write one test-set entry, re-reading the file first so that two commands writing it
+    (a batch and a refresh) do not undo each other's entries."""
+    entries = load_testset()
+    entries[key] = entry
+    tmp = TESTSET.with_suffix(".tmp")
+    tmp.write_text(json.dumps(entries, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    tmp.replace(TESTSET)
+
+
+REFRESH_EDITS = 20     # re-analyse after this many edits since the analysed revision
+REFRESH_DAYS = 90      # or when the analysis is this old, whichever comes first
+
+
+def cmd_refresh(a):
+    """Re-analyse articles that meet the refresh rule (data/stale.json from `wtl stale`): at least
+    REFRESH_EDITS edits since the analysed revision, or an analysis REFRESH_DAYS days old."""
+    import datetime as dt
+    from . import activity
+    if not activity.STALE_JSON.exists():
+        sys.exit("run `wtl stale` first")
+    stale = json.loads(activity.STALE_JSON.read_text(encoding="utf-8"))["articles"]
+    today = dt.date.today()
+    due = []
+    for key, e in load_testset().items():
+        st = stale.get(e["article"]) or {}
+        p = OUT_DIR / json_writer.slug(e["article"]) / f"{e['revision']}.json"
+        computed = json.loads(p.read_text(encoding="utf-8")).get("computed", "") if p.exists() else ""
+        age = (today - dt.date.fromisoformat(computed)).days if computed else 0
+        edits = st.get("edits_since", 0) if st.get("analysed_revision") == e["revision"] else 0
+        if edits >= REFRESH_EDITS or age >= REFRESH_DAYS:
+            due.append((key, e, edits, age))
+    due.sort(key=lambda x: (-x[2], -x[3]))
+    print(f"{len(due)} articles due (>= {REFRESH_EDITS} edits since analysis, or >= {REFRESH_DAYS} days old)"
+          + (f"; doing {a.n}" if a.n and a.n < len(due) else ""))
+    for i, (key, e, edits, age) in enumerate(due[:a.n or None], 1):
+        print(f"[{i}] {e['article']}: {edits} edits since, analysis {age} days old", file=sys.stderr)
+        try:
+            rec = pipeline.analyse(e["article"], None, area=e.get("topic_area") or "")
+        except Exception as err:  # one bad page must not stop the run
+            print(f"  skipped: {err}", file=sys.stderr)
+            continue
+        json_writer.write(rec)
+        _save_entry(key, {**e, "revision": rec["revision"], "article": rec["article"]})
+    cmd_render(a)
+
+
 def cmd_testset(a):
     pinned = {} if a.refresh else load_testset()
     entries = dict(load_testset())   # keep batch-added articles; test-set rows are refreshed below
@@ -107,13 +157,13 @@ def cmd_site(a):
     recs, groups = stored_records()
     areas = {e["article"]: e.get("topic_area") or "" for e in load_testset().values()}
     kinds = {e["article"]: e.get("kind") or "" for e in load_testset().values()}
-    d = site.build(recs, groups, areas, elsewhere=a.elsewhere, kinds=kinds)
+    d = site.build(recs, groups, areas, elsewhere=a.elsewhere_sample or a.elsewhere, kinds=kinds)
     print(f"built site in {d} ({len(recs)} article pages); open {d / 'index.html'}")
 
 
 def cmd_candidates(a):
     from . import candidates as cd
-    chosen, counts = cd.build(a.per_kind)
+    chosen, counts = cd.build(a.per_kind, a.subjects.split(",") if a.subjects else None)
     for area, (name, _) in cd.AREAS.items():
         row = ", ".join(f"{cd.KIND_NAMES[k].split(',')[0].lower()} {counts.get((area, k), 0):,}"
                         for k in cd.KINDS)
@@ -152,7 +202,7 @@ def cmd_batch(a):
         entries[r["title"]] = {"article": rec["article"], "revision": rec["revision"],
                                "group": "topic" if r["area"] == "A-I" else r["area"],
                                "topic_area": r["area"], "kind": r["kind"], "reason": r["reason"]}
-        TESTSET.write_text(json.dumps(entries, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+        _save_entry(r["title"], entries[r["title"]])
     print(f"analysed {len(picked)}; {len(todo) - len(picked)} candidates left"
           + (f" in {a.area}" if a.area else ""))
     cmd_render(a)
@@ -233,6 +283,42 @@ def cmd_siteprobe(a):
     siteprobe.run(recs, snap.get("sources", {}), a.batch, retry=a.retry)
 
 
+def cmd_sitetrace(a):
+    """Fingerprints of cited websites that do not need the live site (data/sitetrace.json)."""
+    from . import sitetrace
+    recs, _ = stored_records()
+    if a.summary_only or not a.part:
+        s = sitetrace.write_summary(recs)
+        print(f"wrote {sitetrace.SITETRACE_JSON}: {len(s['sites']):,} sites")
+        return
+    if a.part == "at-addition":
+        n = sitetrace.titles_at_addition(sitetrace.load().get("sites", {}))
+        print(f"  looked up {n} archived home pages")
+        s = sitetrace.write_summary(recs)
+        print(f"wrote {sitetrace.SITETRACE_JSON}: {len(s['sites']):,} sites")
+        return
+    sitetrace.run(recs, a.part, a.batch)
+
+
+def cmd_activity(a):
+    """How often each analysed article changes (data/activity.json), from cached histories."""
+    from . import activity
+    recs, _ = stored_records()
+    d = activity.write(recs)
+    print(f"wrote {activity.ACTIVITY_JSON}: {len(d['articles']):,} articles")
+
+
+def cmd_stale(a):
+    """Edits to each analysed article since its analysed revision (data/stale.json)."""
+    from . import activity
+    recs, _ = stored_records()
+    d = activity.stale(recs)
+    rows = sorted(d["articles"].items(), key=lambda x: -x[1]["edits_since"])
+    print(f"wrote {activity.STALE_JSON}: {len(rows):,} articles; most edited since analysis:")
+    for t, x in rows[:15]:
+        print(f"  {x['edits_since']:5d} edits  {t}")
+
+
 def cmd_wpdiscuss(a):
     """Wikipedia's noticeboard mentions and spam-blacklist entries for cited sources."""
     from collections import Counter
@@ -271,6 +357,59 @@ def cmd_reuse(a):
     reuse.build(recs, snap.get("sources", {}))
 
 
+def cmd_talk(a):
+    """Talk-page decisions about each analysed article's text (data/talk.json)."""
+    from . import talk
+    recs, _ = stored_records()
+    d = talk.build(recs)
+    c = [x["counts"] for x in d["articles"].values()]
+    print(f"wrote {talk.TALK_JSON}: {len(c):,} articles; {sum(x['rfcs'] for x in c):,} requests for "
+          f"comment, {sum(x['moratorium_discussions'] for x in c):,} discussions about a moratorium")
+
+
+def cmd_then_now(a):
+    """The opening section on fixed dates, and its most-changed sentences (data/then_now.json)."""
+    from . import then_now
+    recs, _ = stored_records()
+    d = then_now.build(recs)
+    print(f"wrote {then_now.THEN_NOW_JSON}: {len(d['articles']):,} articles")
+
+
+def cmd_shortdesc(a):
+    """Every change to each article's short description (data/shortdesc.json)."""
+    from . import shortdesc
+    recs, _ = stored_records()
+    d = shortdesc.build(recs, only=set(a.only.split("|")) if a.only else None)
+    print(f"wrote {shortdesc.SHORTDESC_JSON} ({len(d['articles']):,} articles)")
+
+
+def cmd_voice(a):
+    """Wikipedia's voice check of every opening section (data/voice.json)."""
+    from . import voice
+    recs, _ = stored_records()
+    d = voice.build(recs)
+    print(f"wrote {voice.VOICE_JSON} ({len(d['articles']):,} articles)")
+
+
+def cmd_policies(a):
+    """Wikipedia's own standards, quoted with their versions (data/policies.json)."""
+    from . import policies
+    policies.build()
+
+
+def cmd_labels(a):
+    """Recorded labels of cited sources and authors, with Wikipedia's definitions (data/labels.json)."""
+    from . import labels
+    labels.build([])
+
+
+def cmd_authors(a):
+    """What Wikidata records about cited authors linked to Wikipedia (data/authors.json)."""
+    from . import people
+    recs, _ = stored_records()
+    people.build(recs)
+
+
 def cmd_outlets(a):
     from . import outlets
     recs, _ = stored_records()
@@ -303,6 +442,15 @@ def main(argv=None):
                    help="only records that lack this top-level field, e.g. --missing changes")
     p.set_defaults(fn=cmd_reanalyse)
     sub.add_parser("outlets").set_defaults(fn=cmd_outlets)
+    sub.add_parser("talk").set_defaults(fn=cmd_talk)
+    sub.add_parser("authors").set_defaults(fn=cmd_authors)
+    sub.add_parser("labels").set_defaults(fn=cmd_labels)
+    sub.add_parser("voice").set_defaults(fn=cmd_voice)
+    sp = sub.add_parser("shortdesc", help="every change to each article's short description")
+    sp.add_argument("--only", help="article titles separated by |")
+    sp.set_defaults(fn=cmd_shortdesc)
+    sub.add_parser("policies").set_defaults(fn=cmd_policies)
+    sub.add_parser("then-now").set_defaults(fn=cmd_then_now)
     sub.add_parser("source-names").set_defaults(fn=cmd_source_names)
     sub.add_parser("books").set_defaults(fn=cmd_books)
     sub.add_parser("reuse").set_defaults(fn=cmd_reuse)
@@ -317,9 +465,24 @@ def main(argv=None):
     p.add_argument("--fill-rdap", action="store_true",
                    help="look up domain registration again where none was recorded")
     p.set_defaults(fn=cmd_siteprobe)
+    p = sub.add_parser("sitetrace")
+    p.add_argument("--part", choices=["copies", "dns", "ct", "titles", "at-addition"],
+                   help="saved copies of unreadable sites, DNS records, or certificate logs")
+    p.add_argument("--batch", type=int, default=100, help="sites to do in this run")
+    p.add_argument("--summary-only", action="store_true", help="only rewrite data/sitetrace.json")
+    p.set_defaults(fn=cmd_sitetrace)
+    p = sub.add_parser("activity")
+    p.set_defaults(fn=cmd_activity)
+    p = sub.add_parser("stale")
+    p.set_defaults(fn=cmd_stale)
+    p = sub.add_parser("refresh")
+    p.add_argument("--n", type=int, default=0, help="at most this many articles (0 = all due)")
+    p.set_defaults(fn=cmd_refresh)
     p = sub.add_parser("site")
     p.add_argument("--elsewhere", action="store_true",
                    help="also fetch each listed editor's recent edits across Wikipedia (slow)")
+    p.add_argument("--elsewhere-sample", type=int, default=0, metavar="N",
+                   help="fetch them only for the N editors with the most text in each area")
     p.set_defaults(fn=cmd_site)
     p = sub.add_parser("batch")
     p.add_argument("--n", type=int, default=25)
@@ -327,6 +490,7 @@ def main(argv=None):
     p.set_defaults(fn=cmd_batch)
     p = sub.add_parser("candidates")
     p.add_argument("--per-kind", type=int, default=25)
+    p.add_argument("--subjects", help="only these subject areas, e.g. SOC,ISL (default: all)")
     p.set_defaults(fn=cmd_candidates)
     sub.add_parser("verify-sanctions").set_defaults(fn=lambda a: checks.verify_sanctions())
     sub.add_parser("check").set_defaults(fn=lambda a: checks.run_checks(load_testset()))

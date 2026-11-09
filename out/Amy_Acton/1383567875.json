@@ -3163,7 +3163,7 @@
   "sanctioned_editors": 4,
   "rule": "topic bans count on articles in the same topic area; site bans and sockpuppetry findings count everywhere",
   "sanctions_list": {
-   "seed_rows_total": 130,
+   "seed_rows_total": 154,
    "seed_rows_in_topic_area": 0,
    "seed_rows_unresolved_accounts": 0,
    "block_log_snapshot": "2026-11-03"
@@ -5637,7 +5637,9 @@
   "wikiwho_rev_content": "https://wikiwho-api.wmcloud.org/en/api/v1.0.0-beta/rev_content/rev_id/1383567875/",
   "wikiwho_all_content": "https://wikiwho-api.wmcloud.org/en/api/v1.0.0-beta/all_content/page_id/63391478/",
   "history_revisions": 731,
-  "sanctions_csv_sha256": "83c3c25da3d1338292d21c2b407f4fdc4aee5a973a0fa7ac6bb32e407de325dd"
+  "sanctions_csv_sha256": "46ecf8bd2945ef432b9a5a9afcd72502654439f2b78b039f168883e847475a22",
+  "source_names_sha256": "1e0c7263959b899f0a4dd2a19e5f77b3d542f7e961d864fcb790974eb1ddbad0",
+  "books_sha256": "9ccb7546d93ad0a25ee871dd8d562f8bf78c6f776f74610e68772e1310cb04be"
  },
  "quality": {
   "wikiwho_tokens": 10943,
@@ -5654,12 +5656,385 @@
   "distinct_sources": 49,
   "editors_adding_citations": 36,
   "citation_only_editors": 3,
+  "flags": {
+   "opinion": 1,
+   "no_link": 0,
+   "book_without_page": 0,
+   "not_english": 0,
+   "not_english_no_quote": 0,
+   "dead_link_no_archive": 0,
+   "paywall_or_registration": 1
+  },
+  "flags_by_editor": {
+   "Editor 1": {
+    "citations": 15,
+    "opinion": 1,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 1
+   },
+   "Editor 4": {
+    "citations": 6,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 6": {
+    "citations": 6,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 5": {
+    "citations": 3,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 16": {
+    "citations": 3,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 18": {
+    "citations": 3,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 7": {
+    "citations": 2,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 8": {
+    "citations": 2,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 9": {
+    "citations": 2,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 12": {
+    "citations": 2,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 15": {
+    "citations": 2,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 54": {
+    "citations": 2,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 74": {
+    "citations": 2,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 3": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 10": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 14": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 17": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 19": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 20": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 24": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 28": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 30": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 31": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 32": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 33": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 34": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 37": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 39": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 42": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 45": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 47": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 51": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 68": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 70": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 75": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 76": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   }
+  },
   "list": [
    {
     "source": "cincinnati.com",
     "name_as_cited": "Cincinnati Enquirer",
     "citations": 5,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 1": 2,
      "Editor 3": 1,
@@ -5672,6 +6047,8 @@
     "name_as_cited": "Cleveland Jewish News",
     "citations": 3,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 1": 1,
      "Editor 19": 1,
@@ -5683,6 +6060,8 @@
     "name_as_cited": "Dayton Daily News",
     "citations": 3,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 1": 1,
      "Editor 9": 1,
@@ -5694,6 +6073,8 @@
     "name_as_cited": "NBC4 WCMH-TV",
     "citations": 3,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 1": 1,
      "Editor 14": 1,
@@ -5705,6 +6086,8 @@
     "name_as_cited": "Ohio Capital Journal",
     "citations": 3,
     "lead_citations": 2,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 10": 1,
      "Editor 18": 1,
@@ -5716,6 +6099,8 @@
     "name_as_cited": "Signal Ohio",
     "citations": 3,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 5": 2,
      "Editor 24": 1
@@ -5723,9 +6108,11 @@
    },
    {
     "source": "thehill.com",
-    "name_as_cited": "[[The Hill (newspaper)",
+    "name_as_cited": "The Hill",
     "citations": 3,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 1": 1,
      "Editor 45": 1,
@@ -5737,6 +6124,8 @@
     "name_as_cited": "USA Today",
     "citations": 3,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 4": 1,
      "Editor 6": 1,
@@ -5748,6 +6137,8 @@
     "name_as_cited": "Ohio Public Radio",
     "citations": 3,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 1": 1,
      "Editor 4": 1,
@@ -5759,6 +6150,8 @@
     "name_as_cited": "The Columbus Dispatch",
     "citations": 2,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 6": 1,
      "Editor 34": 1
@@ -5769,6 +6162,8 @@
     "name_as_cited": "News 5 Cleveland",
     "citations": 2,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 9": 1,
      "Editor 16": 1
@@ -5779,6 +6174,8 @@
     "name_as_cited": "Ohio Department of Health",
     "citations": 2,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 6": 2
     }
@@ -5788,6 +6185,8 @@
     "name_as_cited": "The Buckeye Flame",
     "citations": 2,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 5": 1,
      "Editor 37": 1
@@ -5798,6 +6197,8 @@
     "name_as_cited": "Associated Press",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 54": 1
     }
@@ -5807,6 +6208,8 @@
     "name_as_cited": "al.com",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 4": 1
     }
@@ -5816,6 +6219,8 @@
     "name_as_cited": "Associated Press",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 15": 1
     }
@@ -5825,6 +6230,8 @@
     "name_as_cited": "BBC News",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 17": 1
     }
@@ -5834,6 +6241,8 @@
     "name_as_cited": "The Plain Dealer",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 4": 1
     }
@@ -5843,6 +6252,8 @@
     "name_as_cited": "CNN",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 1": 1
     }
@@ -5852,6 +6263,8 @@
     "name_as_cited": "Columbus Jewish News",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 33": 1
     }
@@ -5861,6 +6274,8 @@
     "name_as_cited": "The Daily Chronicle",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 1": 1
     }
@@ -5870,15 +6285,19 @@
     "name_as_cited": "Democrats Work for America",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 68": 1
     }
    },
    {
     "source": "go.com",
-    "name_as_cited": "[[ABC News (United States)",
+    "name_as_cited": "ABC News",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 1": 1
     }
@@ -5888,6 +6307,8 @@
     "name_as_cited": "The Columbus Dispatch",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 74": 1
     }
@@ -5897,6 +6318,8 @@
     "name_as_cited": "Huffington Post",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 4": 1
     }
@@ -5906,6 +6329,8 @@
     "name_as_cited": "insidephilanthropy.com",
     "citations": 1,
     "lead_citations": 1,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 1": 1
     }
@@ -5915,6 +6340,8 @@
     "name_as_cited": "John F. Kennedy Presidential Library and Museum",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 6": 1
     }
@@ -5924,6 +6351,8 @@
     "name_as_cited": "Legacy.com",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 70": 1
     }
@@ -5933,6 +6362,8 @@
     "name_as_cited": "NBC News",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 47": 1
     }
@@ -5942,6 +6373,8 @@
     "name_as_cited": "The Pulse",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 1": 1
     }
@@ -5951,6 +6384,8 @@
     "name_as_cited": "The Columbus Dispatch",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 6": 1
     }
@@ -5960,6 +6395,8 @@
     "name_as_cited": "The News-Herald",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 31": 1
     }
@@ -5969,6 +6406,8 @@
     "name_as_cited": "The New Yorker",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 16": 1
     }
@@ -5978,6 +6417,8 @@
     "name_as_cited": "",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 18": 1
     }
@@ -5987,6 +6428,11 @@
     "name_as_cited": "The New York Times",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 1,
+    "flags": {
+     "opinion": 1,
+     "paywall_or_registration": 1
+    },
     "added_by": {
      "Editor 1": 1
     }
@@ -5996,6 +6442,8 @@
     "name_as_cited": "Ohio State Alumni Magazine",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 51": 1
     }
@@ -6005,6 +6453,8 @@
     "name_as_cited": "Politico",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 32": 1
     }
@@ -6014,6 +6464,8 @@
     "name_as_cited": "spectrumnews1.com",
     "citations": 1,
     "lead_citations": 1,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 18": 1
     }
@@ -6023,6 +6475,8 @@
     "name_as_cited": "The Statehouse News Bureau",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 15": 1
     }
@@ -6032,6 +6486,8 @@
     "name_as_cited": "",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 28": 1
     }
@@ -6041,6 +6497,8 @@
     "name_as_cited": "The Vindicator",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 4": 1
     }
@@ -6050,15 +6508,19 @@
     "name_as_cited": "The Washington Post",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 54": 1
     }
    },
    {
     "source": "wcbe.org",
-    "name_as_cited": "[[WCBE",
+    "name_as_cited": "wcbe.org",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 1": 1
     }
@@ -6068,6 +6530,8 @@
     "name_as_cited": "WHIO-TV",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 8": 1
     }
@@ -6077,15 +6541,19 @@
     "name_as_cited": "Wired",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 39": 1
     }
    },
    {
     "source": "wkbn.com",
-    "name_as_cited": "[[WKBN-TV",
+    "name_as_cited": "WKBN",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 7": 1
     }
@@ -6095,6 +6563,8 @@
     "name_as_cited": "WKYC",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 1": 1
     }
@@ -6104,6 +6574,8 @@
     "name_as_cited": "WLWT",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 7": 1
     }
@@ -6113,11 +6585,2649 @@
     "name_as_cited": "WTOV-TV",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
+    "added_by": {
+     "Editor 8": 1
+    }
+   }
+  ],
+  "items": [
+   {
+    "id": "url:abcnews.com/Politics/wireStory/democrat-ohio-governors-race-pushes-back-unattributed-ad-137424257",
+    "source": "abcnews.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 54": 1
+    }
+   },
+   {
+    "id": "url:abcnews.go.com/US/amy-acton-ohios-embattled-health-director-resigns-amid/story?id=71202353",
+    "source": "go.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:al.com/politics/2026/10/democrats-estranged-mom-calls-her-liar-in-leaked-gop-attack-ad-experts-say-will-backfire.html",
+    "source": "al.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 4": 1
+    }
+   },
+   {
+    "id": "url:alumnimagazine.osu.edu/story/trusted-pathfinder",
+    "source": "osu.edu",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 51": 1
+    }
+   },
+   {
+    "id": "url:apnews.com/article/election-2026-governor-ohio-democrats-amy-acton-1c3c315b8534d3ac677fce3f77abca56",
+    "source": "apnews.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 15": 1
+    }
+   },
+   {
+    "id": "url:bbc.com/news/world-us-canada-52113186",
+    "source": "bbc.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-GB",
+    "added_by": {
+     "Editor 17": 1
+    }
+   },
+   {
+    "id": "url:cincinnati.com/story/news/2020/03/13/amy-acton-ohios-calming-leader-coronavirus-crisis/5044282002",
+    "source": "cincinnati.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:cincinnati.com/story/news/2020/05/20/ohio-senate-unanimously-votes-down-house-proposal-slash-dr-amy-actons-authority/5231460002",
+    "source": "cincinnati.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 3": 1
+    }
+   },
+   {
+    "id": "url:cincinnati.com/story/news/2020/06/12/why-ohio-health-department-director-amy-acton-quit/3174400001",
+    "source": "cincinnati.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 12": 1
+    }
+   },
+   {
+    "id": "url:cincinnati.com/story/news/politics/2020/03/13/coronavirus-impact-how-life-changes-when-virus-forces-us-apart/5042637002",
+    "source": "cincinnati.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:cincinnati.com/story/news/politics/2021/02/04/amy-acton-steps-down-columbus-foundation-senate-run/4387971001",
+    "source": "cincinnati.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 20": 1
+    }
+   },
+   {
+    "id": "url:cleveland.com/crime/2026/10/amy-actons-stepfather-fled-a-rape-charge-prosecution-was-far-from-guaranteed-in-the-1970s.html",
+    "source": "cleveland.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 4": 1
+    }
+   },
+   {
+    "id": "url:clevelandjewishnews.com/news/local_news/acton-opts-not-to-enter-senate-race/article_c3e034c6-9709-11eb-a08b-874482c9ae00.html",
+    "source": "clevelandjewishnews.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 30": 1
+    }
+   },
+   {
+    "id": "url:clevelandjewishnews.com/news/local_news/dr-amy-acton-says-virtual-seder-was-healing-in-a-time-of-covid-19/article_22809840-7b27-11ea-b723-37e35802ff18.html",
+    "source": "clevelandjewishnews.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:clevelandjewishnews.com/news/politics/cjn-goes-one-on-one-with-amy-acton-as-she-seeks-to-become-next-governor/article_3545e94a-f38a-11ef-ac3d-93b63940ba48.html",
+    "source": "clevelandjewishnews.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 19": 1
+    }
+   },
+   {
+    "id": "url:cnn.com/2020/04/09/us/amy-acton-ohio-medical-director/index.html",
+    "source": "cnn.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:columbusjewishnews.com/news/state/acton-to-lead-new-columbus-based-nonprofit-rapid-5/article_0480656b-f505-5289-a972-9d557564083f.html",
+    "source": "columbusjewishnews.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 33": 1
+    }
+   },
+   {
+    "id": "url:coronavirus.ohio.gov/static/publicorders/order-to-open-gyms.pdf",
+    "source": "ohio.gov",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 6": 1
+    }
+   },
+   {
+    "id": "url:dailytelegraph.com.au/lifestyle/health/ohio-health-official-estimates-100000-people-in-state-have-coronavirus/news-story/3535f6aa467279d9c2b81752ca4806b5",
+    "source": "dailytelegraph.com.au",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:daytondailynews.com/local/candidates-on-local-ballots-in-nov-weigh-in-on-end-of-tps-for-haiti/article_7c604aec-8dd8-59c8-8a11-7f09130ef0c8.html",
+    "source": "daytondailynews.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 9": 1
+    }
+   },
+   {
+    "id": "url:daytondailynews.com/news/once-homeless-doctor-now-lead-ohio-health-department/HInM0S0k8RCkmP9s14iHrM",
+    "source": "daytondailynews.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:daytondailynews.com/news/state--regional-govt--politics/coronavirus-who-amy-acton-leader-ohio-pandemic-response/adltAIcQBvznqpwNhewuwO",
+    "source": "daytondailynews.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 42": 1
+    }
+   },
+   {
+    "id": "url:democratsworkforamerica.org/candidates/2026/OH/Acton.html",
+    "source": "democratsworkforamerica.org",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 68": 1
+    }
+   },
+   {
+    "id": "url:dispatch.com/story/news/2022/05/05/amy-acton-lead-new-effort-link-parks-trails-and-waterways/9626477002",
+    "source": "dispatch.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 6": 1
+    }
+   },
+   {
+    "id": "url:dispatch.com/story/news/local/2023/05/09/amy-acton-leaves-as-president-and-ceo-of-rapid-5-group/70200956007",
+    "source": "dispatch.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 34": 1
+    }
+   },
+   {
+    "id": "url:governing.com/topics/health-human-services/tns-amy-acton-doctor-leads-ohio-doh.html",
+    "source": "governing.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 74": 1
+    }
+   },
+   {
+    "id": "url:huffingtonpost.co.uk/entry/amy-acton-mother-ad-ohio-governor_n_6ad78dc6e4b02def98682767",
+    "source": "huffingtonpost.co.uk",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 4": 1
+    }
+   },
+   {
+    "id": "url:insidephilanthropy.com/find-a-grant-places/ohio-grants/columbus-foundation",
+    "source": "insidephilanthropy.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:jfklibrary.org/events-and-awards/profile-in-courage-award/award-recipients/covid-courage",
+    "source": "jfklibrary.org",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 6": 1
+    }
+   },
+   {
+    "id": "url:legacy.com/us/obituaries/lvrj/name/gerald-stearns-obituary?id=18425259",
+    "source": "legacy.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 70": 1
+    }
+   },
+   {
+    "id": "url:nbc4i.com/community/health/coronavirus/dr-acton-says-shes-an-ordinary-person-in-an-extraordinary-moment",
+    "source": "nbc4i.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:nbc4i.com/news/local-news/dr-amy-acton-breaks-her-silence-about-stepping-down-as-ohios-health-director",
+    "source": "nbc4i.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 16": 1
+    }
+   },
+   {
+    "id": "url:nbc4i.com/news/your-local-election-hq/some-progressive-ohioans-frustrated-by-amy-actons-comment-on-trans-athletes",
+    "source": "nbc4i.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 14": 1
+    }
+   },
+   {
+    "id": "url:nbcnews.com/politics/2026-primary-elections/ohio-governor-results",
+    "source": "nbcnews.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 47": 1
+    }
+   },
+   {
+    "id": "url:newarkadvocate.com/story/news/local/2020/06/14/ohio-health-director-dr-amy-acton-went-unknown-icon/3177932001",
+    "source": "newarkadvocate.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 6": 1
+    }
+   },
+   {
+    "id": "url:news-herald.com/news/ohio-officials-appealing-grant-of-preliminary-injunction-in-gym-lawsuit/article_4a6b0938-bf99-11ea-9a5d-df9add5394bd.html",
+    "source": "news-herald.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 31": 1
+    }
+   },
+   {
+    "id": "url:news5cleveland.com/news/continuing-coverage/coronavirus/local-coronavirus-news/small-group-of-protesters-gather-in-dr-amy-actons-neighborhood",
+    "source": "news5cleveland.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 16": 1
+    }
+   },
+   {
+    "id": "url:news5cleveland.com/news/politics/ohio-politics/party-flip-democrat-acton-supports-ice-collaboration-as-gop-ramaswamy-concerned-about-flock-cameras",
+    "source": "news5cleveland.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 9": 1
+    }
+   },
+   {
+    "id": "url:newyorker.com/news/us-journal/how-america-can-avoid-dual-cataclysms",
+    "source": "newyorker.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-us",
+    "added_by": {
+     "Editor 16": 1
+    }
+   },
+   {
+    "id": "url:nypost.com/2026/03/28/us-news/put-me-in-coach-ohio-dem-candidates-sprint-to-marry-her-sons-cross-country-coach-five-months-after-his-divorce",
+    "source": "nypost.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 18": 1
+    }
+   },
+   {
+    "id": "url:nytimes.com/2020/05/05/opinion/coronavirus-ohio-amy-acton.html",
+    "source": "nytimes.com",
+    "citations": 1,
+    "flags": [
+     "opinion",
+     "paywall_or_registration"
+    ],
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:ohiocapitaljournal.com/2020/03/22/dewine-issues-stay-at-home-order-ohioans-to-shelter-in-place-through-at-least-april-6",
+    "source": "ohiocapitaljournal.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 75": 1
+    }
+   },
+   {
+    "id": "url:ohiocapitaljournal.com/2026/02/12/ohio-democratic-governor-candidate-amy-acton-makes-pitch-for-addressing-health-care-costs",
+    "source": "ohiocapitaljournal.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 10": 1
+    }
+   },
+   {
+    "id": "url:ohiocapitaljournal.com/2026/05/05/democrat-amy-acton-and-republican-vivek-ramaswamy-advance-in-ohio-election-for-governor",
+    "source": "ohiocapitaljournal.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 18": 1
+    }
+   },
+   {
+    "id": "url:politico.com/news/2026/10/20/amy-acton-campaign-ad",
+    "source": "politico.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 32": 1
+    }
+   },
+   {
+    "id": "url:radio.wosu.org/post/coronavirus-ohio-amy-acton-resigns-governors-chief-health-advisor",
+    "source": "wosu.org",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:radio.wosu.org/post/first-woman-appointed-lead-ohio-department-health",
+    "source": "wosu.org",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 74": 1
+    }
+   },
+   {
+    "id": "url:signalohio.org/amy-acton-backs-issue-3-voter-id-amendment-november-election-2026",
+    "source": "signalohio.org",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 5": 1
+    }
+   },
+   {
+    "id": "url:signalohio.org/amy-actons-fundraising-surges-democratic-field-clears-in-2026-ohio-governors-race-election-2026",
+    "source": "signalohio.org",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 24": 1
+    }
+   },
+   {
+    "id": "url:signalohio.org/top-ohio-democrats-retreat-on-transgender-issues-leaving-some-transgender-activists-feeling-abandoned",
+    "source": "signalohio.org",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 5": 1
+    }
+   },
+   {
+    "id": "url:spectrumnews1.com/oh/cleveland/news/2026/04/29/democratic-candidate-amy-acton-wins-primary-election",
+    "source": "spectrumnews1.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 18": 1
+    }
+   },
+   {
+    "id": "url:statenews.org/government-politics/2025-01-07/amy-acton-former-odh-director-to-run-for-ohio-governor-as-a-democrat",
+    "source": "statenews.org",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 15": 1
+    }
+   },
+   {
+    "id": "url:substack.com/home/post/p-181296173",
+    "source": "substack.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 28": 1
+    }
+   },
+   {
+    "id": "url:supremecourt.ohio.gov/rod/docs/pdf/11/2021/2021-Ohio-245.pdf",
+    "source": "ohio.gov",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 6": 1
+    }
+   },
+   {
+    "id": "url:thebuckeyeflame.com/2026/07/16/amy-acton-adds-lgbtq-equality-language-to-campaign-platform",
+    "source": "thebuckeyeflame.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 5": 1
+    }
+   },
+   {
+    "id": "url:thebuckeyeflame.com/2026/07/28/equality-ohio-changes-grade-for-dr-amy-acton-from-a-to-pending",
+    "source": "thebuckeyeflame.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 37": 1
+    }
+   },
+   {
+    "id": "url:thehill.com/homenews/campaign/5676722-ramaswamy-acton-running-mates-ohio-governor-race",
+    "source": "thehill.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 45": 1
+    }
+   },
+   {
+    "id": "url:thehill.com/policy/healthcare/487329-ohio-health-official-estimates-100000-people-in-state-have-coronavirus",
+    "source": "thehill.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:thehill.com/policy/healthcare/487684-illinois-ohio-closing-all-bars-restaurants-in-response-to-coronavirus",
+    "source": "thehill.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 76": 1
+    }
+   },
+   {
+    "id": "url:thepulse.neomed.edu/news/amy-stearns-acton-to-lead-ohio-dept-of-health",
+    "source": "neomed.edu",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:usatoday.com/story/news/factcheck/2020/06/23/fact-check-ohios-amy-acton-has-no-ties-abortion-charities-clinic/3241600001",
+    "source": "usatoday.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 12": 1
+    }
+   },
+   {
+    "id": "url:usatoday.com/story/news/politics/2026/10/20/amy-acton-brother-slams-ad-estranged-mother/92348069007",
+    "source": "usatoday.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 4": 1
+    }
+   },
+   {
+    "id": "url:usatoday.com/storytelling/grid/women-of-the-year-2022",
+    "source": "usatoday.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 6": 1
+    }
+   },
+   {
+    "id": "url:vindy.com/news/local-news/2026/10/actons-estranged-mother-calls-daughter-liar",
+    "source": "vindy.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 4": 1
+    }
+   },
+   {
+    "id": "url:washingtonpost.com/politics/2026/10/20/ohio-governors-race-uproar-over-video-featuring-democrats-estranged-mother",
+    "source": "washingtonpost.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 54": 1
+    }
+   },
+   {
+    "id": "url:wcbe.org/post/dewine-appoints-first-female-odh-director",
+    "source": "wcbe.org",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:whio.com/news/latest-election-still-tuesday-judge-says-governor-can-move/ApN0yeaA66RE3WPpeGIA2J",
+    "source": "whio.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 8": 1
+    }
+   },
+   {
+    "id": "url:wired.com/2008/03/inside-obamas-surging-net-roots-campaign",
+    "source": "wired.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 39": 1
+    }
+   },
+   {
+    "id": "url:wkbn.com/news/local-news/canfield-news/one-in-custody-after-altercation-during-amy-actons-fair-appearance",
+    "source": "wkbn.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 7": 1
+    }
+   },
+   {
+    "id": "url:wkyc.com/article/news/health/coronavirus/who-is-ohio-public-health-director-dr-amy-acton/95-930c562c-30ea-4cc9-96d6-0cf3d384247f",
+    "source": "wkyc.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:wlwt.com/article/amy-acton-attacked-at-campaign-event-near-youngstown/73625988",
+    "source": "wlwt.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 7": 1
+    }
+   },
+   {
+    "id": "url:wosu.org/politics-government/2026-10-20/amy-acton-responds-to-viral-video-where-her-estranged-mother-accuses-her-of-lying",
+    "source": "wosu.org",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 4": 1
+    }
+   },
+   {
+    "id": "url:wtov9.com/news/local/ohio-primary-election-absentee-ballot",
+    "source": "wtov9.com",
+    "citations": 1,
+    "flags": [],
     "added_by": {
      "Editor 8": 1
     }
    }
   ]
+ },
+ "changes": {
+  "words_removed": 11348,
+  "words_removed_later_restored": 3617,
+  "source_links_removed": 68,
+  "editors_removing": 186,
+  "listed_terms": {
+   "inserted": {
+    "WTW: contentious labels": 1,
+    "WTW: editorializing": 8,
+    "WTW: puffery": 10,
+    "WTW: synonyms for said": 15,
+    "contested: abortion": 1,
+    "contested: gender and sexuality": 10,
+    "contested: stances on Israel, Jews and Muslims": 2,
+    "contested: terms for violent events": 5,
+    "contested: territory and control": 3,
+    "contested: truth claims": 2
+   },
+   "removed": {
+    "WTW: contentious labels": 4,
+    "WTW: editorializing": 10,
+    "WTW: puffery": 14,
+    "WTW: synonyms for said": 15,
+    "contested: abortion": 2,
+    "contested: gender and sexuality": 10,
+    "contested: stances on Israel, Jews and Muslims": 3,
+    "contested: terms for violent events": 1,
+    "contested: territory and control": 5
+   }
+  },
+  "lists": {
+   "words_to_watch": {
+    "revision": 1382059772,
+    "url": "https://en.wikipedia.org/w/index.php?oldid=1382059772",
+    "sha256": "21e24e2898750322164b24947621630845d75cf8dd5adf3ec8cd860152449ea3"
+   },
+   "contested_terms": {
+    "sha256": "944606776be20b6b77dceb3ee5f6a29f8f5e196bf93cc16a4b6f2db6efe600c1"
+   }
+  },
+  "editors": [
+   {
+    "label": "Editor 53",
+    "words_removed": 1910,
+    "others_words_removed": 1904,
+    "words_removed_later_restored": 1217,
+    "removing_revisions": 11,
+    "sources_removed": {
+     "thebuckeyeflame.com": 7,
+     "advocate.com": 5,
+     "bsky.app": 1,
+     "nbc4i.com": 1,
+     "signalohio.org": 1,
+     "statenews.org": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: contentious labels": {
+      "controversial": 4
+     },
+     "WTW: puffery": {
+      "prominent": 4
+     },
+     "contested: gender and sexuality": {
+      "transgender": 7
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1369719595",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1373103080",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1372068768",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1372888163",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1369718803"
+    ]
+   },
+   {
+    "label": "Editor 31",
+    "words_removed": 911,
+    "others_words_removed": 811,
+    "words_removed_later_restored": 343,
+    "removing_revisions": 5,
+    "sources_removed": {
+     "cincinnati.com": 3,
+     "cleveland.com": 1,
+     "reason.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=962349168",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=962353897",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=962362238",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=962354371",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=962361618"
+    ]
+   },
+   {
+    "label": "Editor 2",
+    "words_removed": 883,
+    "others_words_removed": 875,
+    "words_removed_later_restored": 215,
+    "removing_revisions": 3,
+    "sources_removed": {
+     "cincinnati.com": 1,
+     "cleveland.com": 1,
+     "dispatch.com": 1,
+     "nbc4i.com": 1,
+     "news5cleveland.com": 1,
+     "newyorker.com": 1,
+     "twitter.com": 1
+    },
+    "terms_inserted": {
+     "WTW: editorializing": {
+      "only": 1
+     }
+    },
+    "terms_removed": {
+     "WTW: editorializing": {
+      "only": 2
+     },
+     "WTW: puffery": {
+      "extraordinary": 2
+     },
+     "WTW: synonyms for said": {
+      "confirm": 5
+     },
+     "contested: stances on Israel, Jews and Muslims": {
+      "antisemitic": 2
+     },
+     "contested: territory and control": {
+      "neighborhood": 2
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1312802740",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1320246644",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1312803377"
+    ]
+   },
+   {
+    "label": "Editor 77",
+    "words_removed": 535,
+    "others_words_removed": 533,
+    "words_removed_later_restored": 533,
+    "removing_revisions": 3,
+    "sources_removed": {
+     "cincinnati.com": 1,
+     "cleveland.com": 1,
+     "dispatch.com": 1,
+     "news5cleveland.com": 1,
+     "newyorker.com": 1,
+     "thehill.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: editorializing": {
+      "only": 1
+     },
+     "WTW: synonyms for said": {
+      "confirm": 3
+     },
+     "contested: territory and control": {
+      "neighborhood": 2
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1312684286",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1312684411",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1312684682"
+    ]
+   },
+   {
+    "label": "Editor 5",
+    "words_removed": 458,
+    "others_words_removed": 402,
+    "words_removed_later_restored": 113,
+    "removing_revisions": 3,
+    "sources_removed": {
+     "bsky.app": 1,
+     "erininthemorning.com": 1,
+     "thebuckeyeflame.com": 1
+    },
+    "terms_inserted": {
+     "contested: gender and sexuality": {
+      "transgender": 6
+     }
+    },
+    "terms_removed": {
+     "contested: gender and sexuality": {
+      "transgender": 2
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1367016209",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1367018444",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1367832619"
+    ]
+   },
+   {
+    "label": "Editor 6",
+    "words_removed": 367,
+    "others_words_removed": 328,
+    "words_removed_later_restored": 13,
+    "removing_revisions": 12,
+    "sources_removed": {
+     "bbc.com": 2,
+     "newyorker.com": 1,
+     "wired.com": 1
+    },
+    "terms_inserted": {
+     "WTW: editorializing": {
+      "interestingly": 1
+     },
+     "WTW: synonyms for said": {
+      "confirm": 1
+     }
+    },
+    "terms_removed": {
+     "WTW: editorializing": {
+      "interestingly": 1
+     },
+     "WTW: synonyms for said": {
+      "confirm": 2
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1146120207",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1146121396",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1146111531",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1146129993",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1095796011"
+    ]
+   },
+   {
+    "label": "Editor 78",
+    "words_removed": 330,
+    "others_words_removed": 328,
+    "words_removed_later_restored": 20,
+    "removing_revisions": 8,
+    "sources_removed": {
+     "cdc.gov": 1,
+     "ohio.gov": 1,
+     "ohiocapitaljournal.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1360011174",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1360011555",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1360010933",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1360010627",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1360012476"
+    ]
+   },
+   {
+    "label": "Editor 62",
+    "words_removed": 324,
+    "others_words_removed": 324,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 5,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=953986197",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1292735189",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1308993707",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1315704002",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1306943257"
+    ]
+   },
+   {
+    "label": "Editor 79",
+    "words_removed": 266,
+    "others_words_removed": 266,
+    "words_removed_later_restored": 266,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "cincinnati.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=962347444"
+    ]
+   },
+   {
+    "label": "Editor 1",
+    "words_removed": 259,
+    "others_words_removed": 150,
+    "words_removed_later_restored": 11,
+    "removing_revisions": 34,
+    "sources_removed": {
+     "theminnesotasun.com": 1
+    },
+    "terms_inserted": {
+     "WTW: editorializing": {
+      "only": 1
+     },
+     "WTW: puffery": {
+      "extraordinary": 2
+     },
+     "WTW: synonyms for said": {
+      "claim": 2,
+      "confirm": 5
+     }
+    },
+    "terms_removed": {
+     "WTW: synonyms for said": {
+      "claim": 2
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1268368901",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=962362773",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=945994709",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=946881979",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=952343295"
+    ]
+   },
+   {
+    "label": "Editor 12",
+    "words_removed": 197,
+    "others_words_removed": 197,
+    "words_removed_later_restored": 4,
+    "removing_revisions": 2,
+    "sources_removed": {
+     "ohiocapitaljournal.com": 1,
+     "thehill.com": 1
+    },
+    "terms_inserted": {
+     "contested: truth claims": {
+      "fact-check": 2
+     }
+    },
+    "terms_removed": {
+     "WTW: editorializing": {
+      "interestingly": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1322589441",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1322507025"
+    ]
+   },
+   {
+    "label": "Editor 23",
+    "words_removed": 197,
+    "others_words_removed": 197,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: puffery": {
+      "prestigious": 1,
+      "prominent": 1
+     },
+     "WTW: synonyms for said": {
+      "find": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1304969567",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1304971200"
+    ]
+   },
+   {
+    "label": "Editor 74",
+    "words_removed": 186,
+    "others_words_removed": 186,
+    "words_removed_later_restored": 4,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "apnews.com": 1,
+     "governing.com": 1,
+     "wcbe.org": 1,
+     "wosu.org": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1308450273"
+    ]
+   },
+   {
+    "label": "Editor 80",
+    "words_removed": 183,
+    "others_words_removed": 179,
+    "words_removed_later_restored": 1,
+    "removing_revisions": 3,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1327016443",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1013665351",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1013664856"
+    ]
+   },
+   {
+    "label": "Editor 68",
+    "words_removed": 182,
+    "others_words_removed": 146,
+    "words_removed_later_restored": 55,
+    "removing_revisions": 4,
+    "sources_removed": {
+     "democratsworkforamerica.org": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1338220079",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1338219275",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1338219330",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1338220200"
+    ]
+   },
+   {
+    "label": "Editor 81",
+    "words_removed": 177,
+    "others_words_removed": 177,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "cnn.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: editorializing": {
+      "clearly": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1338563738"
+    ]
+   },
+   {
+    "label": "Editor 82",
+    "words_removed": 171,
+    "others_words_removed": 171,
+    "words_removed_later_restored": 95,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "thebuckeyeflame.com": 1
+    },
+    "terms_inserted": {
+     "WTW: contentious labels": {
+      "controversial": 1
+     },
+     "WTW: puffery": {
+      "prominent": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1367534411"
+    ]
+   },
+   {
+    "label": "Editor 11",
+    "words_removed": 168,
+    "others_words_removed": 168,
+    "words_removed_later_restored": 4,
+    "removing_revisions": 9,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: editorializing": {
+      "only": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1357538068",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1364919081",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1373962554",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1365951706",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1381723107"
+    ]
+   },
+   {
+    "label": "Editor 14",
+    "words_removed": 150,
+    "others_words_removed": 5,
+    "words_removed_later_restored": 4,
+    "removing_revisions": 4,
+    "sources_removed": {
+     "signalohio.org": 1
+    },
+    "terms_inserted": {
+     "contested: gender and sexuality": {
+      "transgender": 2
+     }
+    },
+    "terms_removed": {
+     "contested: gender and sexuality": {
+      "transgender": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1364278850",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1361685816",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1361761032",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1364596921"
+    ]
+   },
+   {
+    "label": "Editor 83",
+    "words_removed": 150,
+    "others_words_removed": 150,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "wkyc.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1381282800"
+    ]
+   },
+   {
+    "label": "Editor 50",
+    "words_removed": 146,
+    "others_words_removed": 145,
+    "words_removed_later_restored": 23,
+    "removing_revisions": 5,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: editorializing": {
+      "only": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=955808901",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=955846045",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1287041565",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1346792560",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1383243814"
+    ]
+   },
+   {
+    "label": "Editor 84",
+    "words_removed": 146,
+    "others_words_removed": 144,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 3,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: puffery": {
+      "extraordinary": 1
+     }
+    },
+    "terms_removed": {
+     "WTW: puffery": {
+      "extraordinary": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1381813524",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1381813860",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1381814063"
+    ]
+   },
+   {
+    "label": "Editor 43",
+    "words_removed": 142,
+    "others_words_removed": 142,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=958017195"
+    ]
+   },
+   {
+    "label": "Editor 22",
+    "words_removed": 135,
+    "others_words_removed": 131,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 3,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: editorializing": {
+      "only": 1
+     },
+     "WTW: puffery": {
+      "prestigious": 1,
+      "prominent": 1
+     },
+     "WTW: synonyms for said": {
+      "confirm": 2,
+      "find": 1
+     },
+     "contested: territory and control": {
+      "neighborhood": 1
+     }
+    },
+    "terms_removed": {
+     "WTW: puffery": {
+      "leading": 1
+     },
+     "contested: territory and control": {
+      "neighborhood": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1302131271",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1302137007",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1302127351"
+    ]
+   },
+   {
+    "label": "Editor 3",
+    "words_removed": 119,
+    "others_words_removed": 119,
+    "words_removed_later_restored": 3,
+    "removing_revisions": 3,
+    "sources_removed": {
+     "cincinnati.com": 1,
+     "ohio.gov": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=977487313",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=977485727",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=977487402"
+    ]
+   },
+   {
+    "label": "Editor 85",
+    "words_removed": 113,
+    "others_words_removed": 113,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=991771833",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1001887490"
+    ]
+   },
+   {
+    "label": "Editor 66",
+    "words_removed": 107,
+    "others_words_removed": 104,
+    "words_removed_later_restored": 14,
+    "removing_revisions": 4,
+    "sources_removed": {
+     "dispatch.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1291341182",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1329825832",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1329825740",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1291523948"
+    ]
+   },
+   {
+    "label": "Editor 86",
+    "words_removed": 105,
+    "others_words_removed": 105,
+    "words_removed_later_restored": 1,
+    "removing_revisions": 5,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "contested: abortion": {
+      "pro-choice": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=946728867",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=946728764",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=947170127",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=945895135",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=947740660"
+    ]
+   },
+   {
+    "label": "Editor 55",
+    "words_removed": 103,
+    "others_words_removed": 3,
+    "words_removed_later_restored": 20,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {
+     "contested: abortion": {
+      "pro-choice": 1
+     }
+    },
+    "terms_removed": {
+     "contested: abortion": {
+      "pro-choice": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=946706475",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=946706774"
+    ]
+   },
+   {
+    "label": "Editor 59",
+    "words_removed": 92,
+    "others_words_removed": 92,
+    "words_removed_later_restored": 71,
+    "removing_revisions": 12,
+    "sources_removed": {
+     "wikipedia.org": 2
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1309289293",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1309470846",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1309655540",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1311225640",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1311572134"
+    ]
+   },
+   {
+    "label": "Editor 25",
+    "words_removed": 83,
+    "others_words_removed": 83,
+    "words_removed_later_restored": 58,
+    "removing_revisions": 3,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1371109796",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1307104152",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1381658178"
+    ]
+   },
+   {
+    "label": "Editor 87",
+    "words_removed": 81,
+    "others_words_removed": 81,
+    "words_removed_later_restored": 81,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "wired.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=955413846"
+    ]
+   },
+   {
+    "label": "Editor 88",
+    "words_removed": 81,
+    "others_words_removed": 81,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=971712480"
+    ]
+   },
+   {
+    "label": "Editor 89",
+    "words_removed": 77,
+    "others_words_removed": 77,
+    "words_removed_later_restored": 16,
+    "removing_revisions": 2,
+    "sources_removed": {
+     "wired.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=948410615",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=948410962"
+    ]
+   },
+   {
+    "label": "Editor 29",
+    "words_removed": 72,
+    "others_words_removed": 72,
+    "words_removed_later_restored": 21,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=962071988"
+    ]
+   },
+   {
+    "label": "Editor 26",
+    "words_removed": 70,
+    "others_words_removed": 69,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 4,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1357798134",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1357797895",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1357798613",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1357812771"
+    ]
+   },
+   {
+    "label": "Editor 4",
+    "words_removed": 66,
+    "others_words_removed": 51,
+    "words_removed_later_restored": 6,
+    "removing_revisions": 4,
+    "sources_removed": {},
+    "terms_inserted": {
+     "contested: terms for violent events": {
+      "attack": 2
+     }
+    },
+    "terms_removed": {
+     "contested: terms for violent events": {
+      "attack": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1381406173",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1381419281",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1381409404",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1381454057"
+    ]
+   },
+   {
+    "label": "Editor 90",
+    "words_removed": 62,
+    "others_words_removed": 62,
+    "words_removed_later_restored": 4,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "the-sun.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=971526004"
+    ]
+   },
+   {
+    "label": "Editor 91",
+    "words_removed": 55,
+    "others_words_removed": 55,
+    "words_removed_later_restored": 55,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "twitter.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {
+     "contested: stances on Israel, Jews and Muslims": {
+      "antisemitic": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=989456185"
+    ]
+   },
+   {
+    "label": "Editor 18",
+    "words_removed": 52,
+    "others_words_removed": 37,
+    "words_removed_later_restored": 1,
+    "removing_revisions": 10,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1352553342",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1350308040",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1342128765",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1352746449",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1366830695"
+    ]
+   },
+   {
+    "label": "Editor 92",
+    "words_removed": 52,
+    "others_words_removed": 52,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1005499017"
+    ]
+   },
+   {
+    "label": "Editor 93",
+    "words_removed": 50,
+    "others_words_removed": 50,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=954709013"
+    ]
+   },
+   {
+    "label": "Editor 52",
+    "words_removed": 44,
+    "others_words_removed": 44,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1353116920"
+    ]
+   },
+   {
+    "label": "Editor 94",
+    "words_removed": 39,
+    "others_words_removed": 39,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=951548327"
+    ]
+   },
+   {
+    "label": "Editor 37",
+    "words_removed": 38,
+    "others_words_removed": 38,
+    "words_removed_later_restored": 35,
+    "removing_revisions": 3,
+    "sources_removed": {},
+    "terms_inserted": {
+     "contested: gender and sexuality": {
+      "transgender": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1372989300",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1372812057",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1370995840"
+    ]
+   },
+   {
+    "label": "Editor 95",
+    "words_removed": 37,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: editorializing": {
+      "clearly": 1
+     },
+     "WTW: puffery": {
+      "prominent": 1
+     }
+    },
+    "terms_removed": {
+     "WTW: puffery": {
+      "prominent": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1338557197"
+    ]
+   },
+   {
+    "label": "Editor 96",
+    "words_removed": 37,
+    "others_words_removed": 37,
+    "words_removed_later_restored": 3,
+    "removing_revisions": 4,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=946873694",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=952589411",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=955804321",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1292865202"
+    ]
+   },
+   {
+    "label": "Editor 97",
+    "words_removed": 36,
+    "others_words_removed": 36,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=946175703"
+    ]
+   },
+   {
+    "label": "Editor 98",
+    "words_removed": 36,
+    "others_words_removed": 36,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 13,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=955586817",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1343001562",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1343004402",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=992056399",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=955149207"
+    ]
+   },
+   {
+    "label": "Editor 99",
+    "words_removed": 33,
+    "others_words_removed": 33,
+    "words_removed_later_restored": 2,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "thecincinnatiherald.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: synonyms for said": {
+      "claim": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1005500684"
+    ]
+   },
+   {
+    "label": "Editor 100",
+    "words_removed": 31,
+    "others_words_removed": 23,
+    "words_removed_later_restored": 23,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1320508115",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1320508141"
+    ]
+   },
+   {
+    "label": "Editor 101",
+    "words_removed": 28,
+    "others_words_removed": 28,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: editorializing": {
+      "only": 1
+     },
+     "WTW: synonyms for said": {
+      "confirm": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=946237797"
+    ]
+   },
+   {
+    "label": "Editor 28",
+    "words_removed": 27,
+    "others_words_removed": 27,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1341930056"
+    ]
+   },
+   {
+    "label": "Editor 58",
+    "words_removed": 27,
+    "others_words_removed": 26,
+    "words_removed_later_restored": 26,
+    "removing_revisions": 6,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1303832287",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1303699840",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1305445962",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1303700117",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1304751398"
+    ]
+   },
+   {
+    "label": "Editor 102",
+    "words_removed": 26,
+    "others_words_removed": 26,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "constantcontact.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1005504227"
+    ]
+   },
+   {
+    "label": "Editor 103",
+    "words_removed": 25,
+    "others_words_removed": 25,
+    "words_removed_later_restored": 23,
+    "removing_revisions": 5,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1309404453",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1309509516",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1309702072",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1311540423",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1311583572"
+    ]
+   },
+   {
+    "label": "Editor 49",
+    "words_removed": 24,
+    "others_words_removed": 24,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=952338448"
+    ]
+   },
+   {
+    "label": "Editor 104",
+    "words_removed": 24,
+    "others_words_removed": 24,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=951549690"
+    ]
+   },
+   {
+    "label": "Editor 105",
+    "words_removed": 24,
+    "others_words_removed": 24,
+    "words_removed_later_restored": 24,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1336497653"
+    ]
+   },
+   {
+    "label": "Editor 106",
+    "words_removed": 24,
+    "others_words_removed": 24,
+    "words_removed_later_restored": 1,
+    "removing_revisions": 7,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1364405073",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=994105154",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1108392039",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=953066566",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1008481310"
+    ]
+   },
+   {
+    "label": "Editor 107",
+    "words_removed": 23,
+    "others_words_removed": 23,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: puffery": {
+      "great": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=945945819"
+    ]
+   },
+   {
+    "label": "Editor 19",
+    "words_removed": 21,
+    "others_words_removed": 6,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 4,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: synonyms for said": {
+      "find": 1,
+      "note": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1381677338",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1382535976",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1381667650",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1381668377"
+    ]
+   },
+   {
+    "label": "Editor 108",
+    "words_removed": 21,
+    "others_words_removed": 21,
+    "words_removed_later_restored": 21,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=954634391"
+    ]
+   },
+   {
+    "label": "Editor 109",
+    "words_removed": 21,
+    "others_words_removed": 21,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=958098330",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=955268216"
+    ]
+   },
+   {
+    "label": "Editor 110",
+    "words_removed": 20,
+    "others_words_removed": 20,
+    "words_removed_later_restored": 20,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1013566607"
+    ]
+   },
+   {
+    "label": "Editor 111",
+    "words_removed": 20,
+    "others_words_removed": 20,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1346213926"
+    ]
+   },
+   {
+    "label": "Editor 13",
+    "words_removed": 19,
+    "others_words_removed": 19,
+    "words_removed_later_restored": 5,
+    "removing_revisions": 3,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1133318783",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1104014872",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1104015409"
+    ]
+   },
+   {
+    "label": "Editor 112",
+    "words_removed": 19,
+    "others_words_removed": 19,
+    "words_removed_later_restored": 8,
+    "removing_revisions": 3,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1332745451",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1293569837",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1294946935"
+    ]
+   },
+   {
+    "label": "Editor 113",
+    "words_removed": 18,
+    "others_words_removed": 18,
+    "words_removed_later_restored": 18,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=946898280"
+    ]
+   },
+   {
+    "label": "Editor 114",
+    "words_removed": 18,
+    "others_words_removed": 18,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1381270350",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1381270668"
+    ]
+   },
+   {
+    "label": "Editor 115",
+    "words_removed": 18,
+    "others_words_removed": 18,
+    "words_removed_later_restored": 10,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1304751474",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1352877932"
+    ]
+   },
+   {
+    "label": "Editor 38",
+    "words_removed": 17,
+    "others_words_removed": 17,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: puffery": {
+      "leading": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=945923332"
+    ]
+   },
+   {
+    "label": "Editor 116",
+    "words_removed": 17,
+    "others_words_removed": 17,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=954703929"
+    ]
+   },
+   {
+    "label": "Editor 117",
+    "words_removed": 15,
+    "others_words_removed": 15,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1352826095"
+    ]
+   },
+   {
+    "label": "Editor 17",
+    "words_removed": 14,
+    "others_words_removed": 12,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=958635318",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=958636492"
+    ]
+   },
+   {
+    "label": "Editor 21",
+    "words_removed": 14,
+    "others_words_removed": 14,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 4,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1381370905",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1381371142",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1381370607",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1381378342"
+    ]
+   },
+   {
+    "label": "Editor 7",
+    "words_removed": 13,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 3,
+    "sources_removed": {},
+    "terms_inserted": {
+     "contested: terms for violent events": {
+      "attack": 2
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1373600591",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1373600286",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1373651360"
+    ]
+   },
+   {
+    "label": "Editor 118",
+    "words_removed": 13,
+    "others_words_removed": 13,
+    "words_removed_later_restored": 13,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1167012389"
+    ]
+   },
+   {
+    "label": "Editor 119",
+    "words_removed": 13,
+    "others_words_removed": 13,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=951548643",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=951549008"
+    ]
+   },
+   {
+    "label": "Editor 120",
+    "words_removed": 13,
+    "others_words_removed": 13,
+    "words_removed_later_restored": 13,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=952670979"
+    ]
+   },
+   {
+    "label": "Editor 121",
+    "words_removed": 13,
+    "others_words_removed": 13,
+    "words_removed_later_restored": 10,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1334906941",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1330881585"
+    ]
+   },
+   {
+    "label": "Editor 65",
+    "words_removed": 12,
+    "others_words_removed": 12,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1007660325"
+    ]
+   },
+   {
+    "label": "Editor 76",
+    "words_removed": 12,
+    "others_words_removed": 12,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1312823573"
+    ]
+   },
+   {
+    "label": "Editor 122",
+    "words_removed": 12,
+    "others_words_removed": 7,
+    "words_removed_later_restored": 7,
+    "removing_revisions": 3,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=952937701",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=952937576",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=952937835"
+    ]
+   },
+   {
+    "label": "Editor 123",
+    "words_removed": 12,
+    "others_words_removed": 12,
+    "words_removed_later_restored": 2,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1321108364"
+    ]
+   },
+   {
+    "label": "Editor 124",
+    "words_removed": 11,
+    "others_words_removed": 11,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=954191572"
+    ]
+   },
+   {
+    "label": "Editor 125",
+    "words_removed": 11,
+    "others_words_removed": 11,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1038300217"
+    ]
+   },
+   {
+    "label": "Editor 126",
+    "words_removed": 11,
+    "others_words_removed": 11,
+    "words_removed_later_restored": 11,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1291363037"
+    ]
+   },
+   {
+    "label": "Editor 56",
+    "words_removed": 10,
+    "others_words_removed": 10,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=955075611",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=955468496"
+    ]
+   },
+   {
+    "label": "Editor 127",
+    "words_removed": 10,
+    "others_words_removed": 10,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=951548890"
+    ]
+   },
+   {
+    "label": "Editor 128",
+    "words_removed": 9,
+    "others_words_removed": 9,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=948801151"
+    ]
+   },
+   {
+    "label": "Editor 129",
+    "words_removed": 9,
+    "others_words_removed": 9,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: editorializing": {
+      "only": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=946147085"
+    ]
+   },
+   {
+    "label": "Editor 27",
+    "words_removed": 8,
+    "others_words_removed": 8,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1381246149"
+    ]
+   },
+   {
+    "label": "Editor 64",
+    "words_removed": 8,
+    "others_words_removed": 8,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 3,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=962039256",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=962036660",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=962037407"
+    ]
+   },
+   {
+    "label": "Editor 130",
+    "words_removed": 8,
+    "others_words_removed": 8,
+    "words_removed_later_restored": 4,
+    "removing_revisions": 3,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1292661384",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1306868620",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1308913689"
+    ]
+   },
+   {
+    "label": "Editor 131",
+    "words_removed": 8,
+    "others_words_removed": 8,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1171557331"
+    ]
+   },
+   {
+    "label": "Editor 132",
+    "words_removed": 8,
+    "others_words_removed": 8,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1312684692"
+    ]
+   },
+   {
+    "label": "Editor 133",
+    "words_removed": 7,
+    "others_words_removed": 7,
+    "words_removed_later_restored": 7,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: synonyms for said": {
+      "claim": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1005504144",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1005498328"
+    ]
+   },
+   {
+    "label": "Editor 134",
+    "words_removed": 7,
+    "others_words_removed": 7,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1268537381"
+    ]
+   },
+   {
+    "label": "Editor 135",
+    "words_removed": 7,
+    "others_words_removed": 7,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=952343850",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=952942462"
+    ]
+   },
+   {
+    "label": "Editor 139",
+    "words_removed": 6,
+    "others_words_removed": 6,
+    "words_removed_later_restored": 6,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: puffery": {
+      "leading": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=952589149",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=952589353"
+    ]
+   },
+   {
+    "label": "Editor 138",
+    "words_removed": 3,
+    "others_words_removed": 3,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: editorializing": {
+      "only": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1318436323"
+    ]
+   },
+   {
+    "label": "Editor 54",
+    "words_removed": 1,
+    "others_words_removed": 1,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {
+     "contested: terms for violent events": {
+      "attack": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1381236227"
+    ]
+   },
+   {
+    "label": "Editor 137",
+    "words_removed": 1,
+    "others_words_removed": 1,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: puffery": {
+      "leading": 1
+     }
+    },
+    "terms_removed": {
+     "WTW: puffery": {
+      "leading": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=952943542"
+    ]
+   },
+   {
+    "label": "Editor 141",
+    "words_removed": 1,
+    "others_words_removed": 1,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {
+     "contested: stances on Israel, Jews and Muslims": {
+      "antisemitic": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1072413833"
+    ]
+   },
+   {
+    "label": "Editor 142",
+    "words_removed": 1,
+    "others_words_removed": 1,
+    "words_removed_later_restored": 1,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {
+     "contested: gender and sexuality": {
+      "transgender": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1371499229"
+    ]
+   },
+   {
+    "label": "Editor 8",
+    "words_removed": 0,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 0,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: editorializing": {
+      "only": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": []
+   },
+   {
+    "label": "Editor 16",
+    "words_removed": 0,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 0,
+    "sources_removed": {},
+    "terms_inserted": {
+     "contested: stances on Israel, Jews and Muslims": {
+      "antisemitic": 1
+     },
+     "contested: territory and control": {
+      "neighborhood": 2
+     }
+    },
+    "terms_removed": {},
+    "evidence": []
+   },
+   {
+    "label": "Editor 136",
+    "words_removed": 0,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 0,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: editorializing": {
+      "only": 1
+     },
+     "WTW: synonyms for said": {
+      "confirm": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": []
+   },
+   {
+    "label": "Editor 140",
+    "words_removed": 0,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 0,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: puffery": {
+      "great": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": []
+   }
+  ],
+  "editors_shown": 110
+ },
+ "declared_interests": {
+  "article_tags": [],
+  "talk_page_revision": 1383315330,
+  "evidence": "https://en.wikipedia.org/w/index.php?oldid=1383315330",
+  "notices": []
  },
  "caveats": [
   {

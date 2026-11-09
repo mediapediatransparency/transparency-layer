@@ -52,6 +52,9 @@ AREAS = {
     "SY": ("Syrian civil war and ISIL", {"scwisil", "scw", "syria", "isil"}),
     "HA": ("Horn of Africa", {"horn"}),
     "TT": ("The Troubles (Northern Ireland)", {"tt"}),
+    # Wikipedia's name for this topic; its notice also sits on Second World War and Holocaust
+    # articles (Adolf Hitler, Auschwitz). Added 2026-11-05.
+    "APL": ("Antisemitism in Poland (Wikipedia's topic; also covers Holocaust and Second World War articles)", {"apl"}),
 }
 # Second rule: areas chosen by subject. WikiProject banners on talk pages place an article under
 # a subject; Wikipedia gives these subjects no contentious-topic designation.
@@ -62,9 +65,18 @@ SUBJECTS = {
     "SOC": ("Socialism, communism and Marxism (chosen by subject)",
             ["Category:WikiProject Socialism articles"]),
     "ISL": ("Islam (chosen by subject)", ["Category:WikiProject Islam articles"]),
+    # added 2026-11-05 at the user's request, so that right-wing, liberal and antisemitism topics
+    # are covered as socialism is
+    "CON": ("Conservatism and the right (chosen by subject)", ["Category:WikiProject Conservatism articles"]),
+    "DIS": ("Discrimination, including antisemitism and the far right (chosen by subject)",
+            ["Category:WikiProject Discrimination articles"]),
+    "LIB": ("Libertarianism, which on Wikipedia also covers liberalism (chosen by subject)",
+            ["Category:WikiProject Libertarianism articles"]),
 }
 AREAS.update({k: (name, set()) for k, (name, _) in SUBJECTS.items()})
-RULE = {k: ("subject" if k in SUBJECTS else "contentious tag") for k in AREAS}
+# Articles added on request that fall in none of the areas.
+AREAS["REQ"] = ("Added on request, outside the areas", set())
+RULE = {k: ("subject" if k in SUBJECTS else "requested" if k == "REQ" else "contentious tag") for k in AREAS}
 CODE_AREA = {c: k for k, (_, cs) in AREAS.items() for c in cs}
 AI_TEMPLATES = re.compile(r"\{\{\s*(?:ArbCom Arab-Israeli enforcement|Contentious topics/Arab-Israeli"
                           r"|ARBPIA|Arab-Israeli Arbitration Enforcement)", re.I)
@@ -92,6 +104,26 @@ CLASSES = [
 # Occupations (P106) that make a person a journalist or commentator; labels checked on Wikidata:
 # journalist, columnist, political commentator, news presenter, pundit.
 JOURNALIST_OCCUPATIONS = ["Q1930187", "Q1086863", "Q11499163", "Q270389", "Q1642960"]
+# Wikidata lists journalism among the occupations of many people known for something else (Marx,
+# Gandhi, Mussolini). A person counts as a journalist or commentator only when, as well, Wikidata's
+# one-line English description of them names one of these (changed 2026-11-05).
+JOURNALIST_WORDS = re.compile(r"\b(?:journalist|columnist|commentator|pundit|reporter|correspondent|"
+                              r"news ?(?:presenter|anchor|reader)|newscaster|broadcast journalist)s?\b", re.I)
+# Wikidata files social and political movements (Socialism, Anarchism, the Cultural Revolution)
+# under "organisation" as well as under ideas and movements. An item in both is kept with
+# organisations only when Wikidata records something an organisation has: a headquarters (P159),
+# a chairperson (P488) or a member count (P2124); otherwise it goes with ideas and movements
+# (changed 2026-11-05; before, every such item was an organisation).
+ORG_SIGNS = ["P159", "P488", "P2124"]
+IDEA_CLASSES = dict(CLASSES)["idea"]
+# Words in a Wikidata description that name a career in the arts, entertainment or sport. Used only
+# to report how many such people the subject lists hold (data/categories.json); nobody is removed.
+ENTERTAIN_WORDS = re.compile(r"\b(?:actor|actress|singer|songwriter|musician|rapper|comedian|band|"
+                             r"composer|guitarist|drummer|film ?maker|film director|screenwriter|"
+                             r"television (?:host|presenter|personality)|model|footballer|athlete|"
+                             r"boxer|wrestler|basketball|tennis|cricketer|youtuber|streamer|"
+                             r"influencer|dancer|poet|novelist|painter)s?\b", re.I)
+CATEGORIES_JSON = ROOT / "data" / "categories.json"
 
 
 
@@ -188,12 +220,14 @@ def project_articles(category: str) -> list[str]:
     return out
 
 
-def subject_rows(per_kind: int) -> list[dict]:
+def subject_rows(per_kind: int, only: list[str] | None = None) -> list[dict]:
     """Rows for the subject areas. Kinds are looked up from the most-read article down until
     every kind has per_kind articles (or the subject runs out), so the result is the same as
     classifying every article, at a fraction of the Wikidata queries."""
     rows = []
     for area, (_, cats) in SUBJECTS.items():
+        if only is not None and area not in only:
+            continue
         titles = sorted({t for c in cats for t in project_articles(c)})
         log(f"{area}: {len(titles):,} articles under {len(cats)} WikiProject banner(s)")
         info = article_info(titles)
@@ -203,24 +237,57 @@ def subject_rows(per_kind: int) -> list[dict]:
             if (not i or i["missing"] or i["title"].startswith(("List of ", "Lists of "))
                     or i["title"] in seen):
                 continue
+            if i["title"] != t:
+                # the banner is on a redirect's talk page, not on the article's own
+                REDIRECTED.append({"area": area, "tagged_page": t, "article": i["title"],
+                                   "views_60d": i["views"]})
+                continue
             seen.add(i["title"])
             pool.append(i)
         pool.sort(key=lambda i: (-i["views"], i["title"]))
         got, j, step = {k: 0 for k in KINDS}, 0, 1500
         while j < len(pool) and min(got.values()) < per_kind:
             chunk = pool[j:j + step]
-            kd = kinds([i["qid"] for i in chunk if i["qid"]])
+            qs = [i["qid"] for i in chunk if i["qid"]]
+            kd = kinds(qs)
+            kd = {q: kd[q] for q in qs if q in kd}
+            ex = extras(kd)
             for i in chunk:
-                k = (kd.get(i["qid"]) if i["qid"] else None) or {"kind": "other", "journalist": False}
-                kind = "journalist" if k["kind"] == "person" and k["journalist"] else k["kind"]
+                k = kd.get(i["qid"]) if i["qid"] else None
+                kind, why = resolve(k, ex.get(i["qid"]))
                 rows.append({"area": area, "kind": kind, "title": i["title"], "views_60d": i["views"],
-                             "wikidata": i["qid"] or "", "journalist": k["journalist"]})
+                             "wikidata": i["qid"] or "", "journalist": bool(k and k["journalist"]),
+                             "kind_note": why})
                 if kind in got:
                     got[kind] += 1
             j += step
         # kinds still short were classified to the end of the pool; the rest are not needed
         log(f"  {area}: classified {min(j, len(pool)):,} of {len(pool):,} by readership")
     return rows
+
+
+def resolve_batch(batch: list[str], q: dict) -> dict[str, dict]:
+    """Each requested title -> the page it ends on, from one API query result.
+    Every title is followed on its own (normalised, then redirected), so a batch holding an
+    article together with redirects to it gives each of them that article. A reverse map keeps
+    only one source per page, which marked the article itself missing when a redirect to it
+    shared its batch."""
+    norm = {n["from"]: n["to"] for n in q.get("normalized", [])}
+    redir = {r["from"]: r["to"] for r in q.get("redirects", [])}
+    pages = {pg["title"]: pg for pg in q.get("pages", [])}
+    out = {}
+    for t in batch:
+        n, hops = norm.get(t, t), 0
+        while n in redir and hops < 5:  # the API lists each hop of a double redirect
+            n, hops = redir[n], hops + 1
+        pg = pages.get(n)
+        if pg is None:
+            out[t] = {"title": t, "missing": True, "views": 0, "qid": None}
+            continue
+        out[t] = {"title": pg["title"], "missing": pg.get("missing", False),
+                  "views": sum(v or 0 for v in (pg.get("pageviews") or {}).values()),
+                  "qid": (pg.get("pageprops") or {}).get("wikibase_item")}
+    return out
 
 
 def article_info(titles: list[str]) -> dict[str, dict]:
@@ -249,16 +316,8 @@ def article_info(titles: list[str]) -> dict[str, dict]:
                 break
             cont = part["continue"]
         q = d.get("query", {})
-        back = {r["to"]: r["from"] for r in q.get("redirects", [])}
-        back.update({n["to"]: n["from"] for n in q.get("normalized", [])})
-        for pg in q.get("pages", []):
-            src = back.get(pg["title"], pg["title"])
-            info[src] = {"title": pg["title"], "missing": pg.get("missing", False),
-                         "views": sum(v or 0 for v in (pg.get("pageviews") or {}).values()),
-                         "qid": (pg.get("pageprops") or {}).get("wikibase_item")}
-        for t in batch:
-            info.setdefault(t, {"title": t, "missing": True, "views": 0, "qid": None})
-        if (i // 50) % 40 == 0:
+        info.update(resolve_batch(batch, q))
+        if (i // 50) % 10 == 0:
             log(f"  page views: {min(i + 50, len(todo)):,} of {len(todo):,}")
             cache.save(p, info)
     cache.save(p, info)
@@ -298,6 +357,78 @@ def kinds(qids: list[str]) -> dict[str, dict]:
     return known
 
 
+def extras(kd: dict, also_desc: set[str] = frozenset()) -> dict[str, dict]:
+    """Wikidata ID -> {idea, orgattr} for items filed as organisations, and {desc} (English
+    description) for people with a journalism occupation and for any IDs in also_desc."""
+    p = cache.path("candidates", "kinds_extra")
+    known = cache.load(p) or {}
+    org = sorted(q for q, k in kd.items() if k["kind"] == "organisation" and "idea" not in known.get(q, {}))
+    want_desc = {q for q, k in kd.items() if k["kind"] == "person" and k["journalist"]} | set(also_desc)
+    desc = sorted(q for q in want_desc if q and "desc" not in known.get(q, {}))
+    ideas = " ".join("wd:" + c for c in IDEA_CLASSES)
+    signs = "|".join("wdt:" + s for s in ORG_SIGNS)
+    jobs = [("org", org[i:i + 60]) for i in range(0, len(org), 60)]
+    jobs += [("desc", desc[i:i + 200]) for i in range(0, len(desc), 200)]
+    n = 0
+    while jobs:
+        what, batch = jobs.pop(0)
+        n += 1
+        items = " ".join("wd:" + q for q in batch)
+        if what == "org":
+            query = (f"SELECT ?item ?idea ?org WHERE {{ VALUES ?item {{ {items} }} "
+                     f"BIND(EXISTS {{ VALUES ?c {{ {ideas} }} ?item wdt:P31/wdt:P279* ?c }} AS ?idea) "
+                     f"BIND(EXISTS {{ ?item {signs} [] }} AS ?org) }}")
+        else:
+            query = (f"SELECT ?item ?d WHERE {{ VALUES ?item {{ {items} }} OPTIONAL {{ ?item "
+                     f"schema:description ?d FILTER(lang(?d) = \"en\") }} }}")
+        try:
+            d = get_json(SPARQL, {"query": query, "format": "json"}, timeout=120)
+        except Exception as err:  # noqa: BLE001  a cut-off answer (query timeout): split and retry
+            log(f"  Wikidata query failed ({str(err)[:60]}); retrying in smaller parts")
+            time.sleep(10)
+            if len(batch) == 1:   # one item Wikidata cannot answer for: left as it was
+                known.setdefault(batch[0], {}).update(
+                    {"idea": False, "orgattr": False, "query_failed": True} if what == "org" else {"desc": ""})
+                continue
+            h = len(batch) // 2
+            jobs[:0] = [(what, batch[:h]), (what, batch[h:])]
+            continue
+        for b in d["results"]["bindings"]:
+            q = b["item"]["value"].rsplit("/", 1)[1]
+            e = known.setdefault(q, {})
+            if what == "org":
+                e["idea"] = b["idea"]["value"] == "true"
+                e["orgattr"] = b["org"]["value"] == "true"
+            else:
+                e["desc"] = (b.get("d") or {}).get("value", "")
+        for q in batch:
+            known.setdefault(q, {}).setdefault("idea" if what == "org" else "desc",
+                                               False if what == "org" else "")
+            if what == "org":
+                known[q].setdefault("orgattr", False)
+        if n % 10 == 0:
+            log(f"  Wikidata classes and descriptions: {n} queries done, {len(jobs)} to go")
+            cache.save(p, known)
+        time.sleep(1)
+    if n:
+        cache.save(p, known)
+    return known
+
+
+def resolve(k: dict | None, e: dict | None) -> tuple[str, str]:
+    """(kind, note). note says which 2026-11-05 rule changed the kind, if any."""
+    k = k or {"kind": "other", "journalist": False}
+    e = e or {}
+    kind = k["kind"]
+    if kind == "organisation" and e.get("idea") and not e.get("orgattr"):
+        return "idea", "movement"
+    if kind == "person" and k["journalist"]:
+        if JOURNALIST_WORDS.search(e.get("desc", "")):
+            return "journalist", ""
+        return "person", "journalism occupation only"
+    return kind, ""
+
+
 def requested() -> list[dict]:
     if not REQUESTED_CSV.exists():
         return []
@@ -305,7 +436,14 @@ def requested() -> list[dict]:
         return list(csv.DictReader(f))
 
 
-def build(per_kind: int = 25) -> list[dict]:
+# Tags and banners found on the talk pages of redirects. The article a redirect points to is not
+# counted for that area unless its own talk page carries the tag too; these are listed instead.
+REDIRECTED: list[dict] = []
+
+
+def build(per_kind: int = 25, subjects: list[str] | None = None) -> list[dict]:
+    """subjects: build only these subject areas (None = all); the others are left out of the list."""
+    REDIRECTED.clear()
     talk = tagged_talk_pages(CT_CATEGORY)
     for src in (ECR_CATEGORY, GS_TEMPLATE):
         for t, w in tagged_talk_pages(src).items():
@@ -320,22 +458,30 @@ def build(per_kind: int = 25) -> list[dict]:
             areas[t[len("Talk:"):]] = a
     log(f"{len(talk):,} tagged talk pages; {len(areas):,} articles in the political areas")
     info = article_info(sorted(areas))
-    kd = kinds([i["qid"] for i in info.values() if i["qid"]])
+    qs = [i["qid"] for i in info.values() if i["qid"]]
+    kd = kinds(qs)
+    kd = {q: kd[q] for q in qs if q in kd}
+    ex = extras(kd)
     rows, seen_title = [], set()
     for art, ars in sorted(areas.items()):
         i = info.get(art)
         if not i or i["missing"] or i["title"].startswith(("List of ", "Lists of ")):
             continue
+        if i["title"] != art:
+            # the notice is on a redirect's talk page, not on the article's own
+            REDIRECTED.extend({"area": a, "tagged_page": art, "article": i["title"],
+                               "views_60d": i["views"]} for a in ars)
+            continue
         k = kd.get(i["qid"]) if i["qid"] else None
-        k = k or {"kind": "other", "journalist": False}
-        kind = "journalist" if k["kind"] == "person" and k["journalist"] else k["kind"]
+        kind, why = resolve(k, ex.get(i["qid"]))
         for a in ars:
-            if (a, i["title"]) in seen_title:   # several talk pages can redirect to one article
+            if (a, i["title"]) in seen_title:
                 continue
             seen_title.add((a, i["title"]))
             rows.append({"area": a, "kind": kind, "title": i["title"], "views_60d": i["views"],
-                         "wikidata": i["qid"] or "", "journalist": k["journalist"]})
-    rows += subject_rows(per_kind)
+                         "wikidata": i["qid"] or "", "journalist": bool(k and k["journalist"]),
+                         "kind_note": why})
+    rows += subject_rows(per_kind, subjects)
     chosen, seen = [], set()
     for a in AREAS:
         for kind in KINDS:
@@ -354,12 +500,70 @@ def build(per_kind: int = 25) -> list[dict]:
                            "views_60d": "", "wikidata": "", "journalist": "", "rank": "", "of": "",
                            "reason": "requested", "rule": RULE.get(q["area"], "")})
     cols = ["area", "kind", "rank", "of", "title", "views_60d", "journalist", "wikidata", "reason",
-            "rule"]
-    with open(CANDIDATES_CSV, "w", newline="", encoding="utf-8") as f:
+            "rule", "kind_note"]
+    tmp = CANDIDATES_CSV.with_suffix(".tmp")  # replaced in one step: a running batch never reads half a file
+    with open(tmp, "w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=cols, extrasaction="ignore")
         w.writeheader()
         w.writerows(chosen)
+    tmp.replace(CANDIDATES_CSV)
     counts = {}
     for r in rows:
         counts[(r["area"], r["kind"])] = counts.get((r["area"], r["kind"]), 0) + 1
+    write_categories(rows, chosen, counts, per_kind)
     return chosen, counts
+
+
+def write_categories(rows, chosen, counts, per_kind, top=40):
+    """How the sorting rules placed articles: the facts behind the site's Categories page."""
+    import datetime as dt
+    import json
+    picked = {(r["area"], r["title"]) for r in chosen if r.get("reason") == "most-read"}
+    ex = extras({}, {r["wikidata"] for r in chosen if r.get("wikidata")}
+                | {r["wikidata"] for r in rows if r.get("kind_note") and r.get("wikidata")})
+    def item(r):
+        return {"area": r["area"], "title": r["title"], "kind": r["kind"], "views_60d": r["views_60d"],
+                "wikidata": r["wikidata"], "description": (ex.get(r["wikidata"]) or {}).get("desc", ""),
+                "chosen": (r["area"], r["title"]) in picked}
+    def by_views(rs):
+        return sorted(rs, key=lambda r: (-r["views_60d"], r["title"]))
+    moved = [r for r in rows if r.get("kind_note") == "movement"]
+    jocc = [r for r in rows if r.get("kind_note") == "journalism occupation only"]
+    jok = [r for r in rows if r["kind"] == "journalist"]
+    ent = [r for r in chosen if r.get("reason") == "most-read" and r.get("wikidata")
+           and ENTERTAIN_WORDS.search((ex.get(r["wikidata"]) or {}).get("desc", ""))]
+    left = [r for r in rows if r["kind"] not in KINDS]
+    own = {(r["area"], r["title"]) for r in rows}
+    via = [r for r in REDIRECTED if (r["area"], r["article"]) not in own]
+    via_seen, via_items = set(), []
+    for r in sorted(via, key=lambda r: (-r["views_60d"], r["article"], r["tagged_page"])):
+        if (r["area"], r["article"]) not in via_seen:
+            via_seen.add((r["area"], r["article"]))
+        via_items.append(r)
+    areas = {}
+    for a, (name, _) in AREAS.items():
+        areas[a] = {"name": name, "rule": RULE[a],
+                    "kinds": {k: counts.get((a, k), 0) for k in KINDS + ["place", "other"]},
+                    "pool_complete": a not in SUBJECTS}
+    out = {
+        "built": dt.date.today().isoformat(), "per_kind": per_kind,
+        "rules": {"classes": [{"kind": k, "wikidata_classes": cs} for k, cs in CLASSES],
+                  "journalist_occupations": JOURNALIST_OCCUPATIONS,
+                  "journalist_words": JOURNALIST_WORDS.pattern,
+                  "organisation_signs": ORG_SIGNS, "entertainment_words": ENTERTAIN_WORDS.pattern},
+        "areas": areas,
+        "movements": {"count": len(moved), "chosen": sum((r["area"], r["title"]) in picked for r in moved),
+                      "examples": [item(r) for r in by_views(moved)[:top]]},
+        "journalists": {"by_occupation": len(jocc) + len(jok), "by_occupation_and_description": len(jok),
+                        "occupation_only_examples": [item(r) for r in by_views(jocc)[:top]]},
+        "arts_entertainment_sport": {"chosen": len(ent), "by_area": {a: sum(r["area"] == a for r in ent)
+                                                                     for a in AREAS},
+                                     "examples": [item(r) for r in by_views(ent)[:top * 2]]},
+        "via_redirect": {"articles": len(via_seen), "redirects": len(via_items),
+                         "by_area": {a: len({x["article"] for x in via_items if x["area"] == a}) for a in AREAS},
+                         "examples": {a: [x for x in via_items if x["area"] == a][:15] for a in AREAS}},
+        "left_out": {"count": len(left), "by_kind": {k: sum(r["kind"] == k for r in left) for k in ("place", "other")},
+                     "examples": {a: [item(r) for r in by_views(x for x in left if x["area"] == a)[:10]]
+                                  for a in AREAS}},
+    }
+    CATEGORIES_JSON.write_text(json.dumps(out, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")

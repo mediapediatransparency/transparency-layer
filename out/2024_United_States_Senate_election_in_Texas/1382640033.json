@@ -1854,6 +1854,48 @@
    "ip": 0.07496,
    "registered": 0.92504
   },
+  "persistence": [
+   {
+    "years": 1,
+    "baseline": 1318448612,
+    "baseline_timestamp": "2025-10-23T22:42:23Z",
+    "words_then": 29567,
+    "still_present": 29356,
+    "share_still_present": 0.992864,
+    "words_now": 29661,
+    "share_of_current": 0.989717
+   },
+   {
+    "years": 2,
+    "baseline": 1253965054,
+    "baseline_timestamp": "2024-10-28T19:47:09Z",
+    "words_then": 12085,
+    "still_present": 10821,
+    "share_still_present": 0.895408,
+    "words_now": 29661,
+    "share_of_current": 0.364822
+   },
+   {
+    "years": 3,
+    "baseline": 1182195014,
+    "baseline_timestamp": "2023-10-27T18:51:13Z",
+    "words_then": 4618,
+    "still_present": 3326,
+    "share_still_present": 0.720225,
+    "words_now": 29661,
+    "share_of_current": 0.112134
+   },
+   {
+    "years": 5,
+    "baseline": 1046117092,
+    "baseline_timestamp": "2021-09-24T01:51:21Z",
+    "words_then": 551,
+    "still_present": 180,
+    "share_still_present": 0.326679,
+    "words_now": 29661,
+    "share_of_current": 0.006069
+   }
+  ],
   "survival_article": {
    "48h": {
     "words_added": 52789,
@@ -1924,7 +1966,7 @@
   "sanctioned_editors": 1,
   "rule": "topic bans count on articles in the same topic area; site bans and sockpuppetry findings count everywhere",
   "sanctions_list": {
-   "seed_rows_total": 130,
+   "seed_rows_total": 154,
    "seed_rows_in_topic_area": 0,
    "seed_rows_unresolved_accounts": 0,
    "block_log_snapshot": "2026-11-04"
@@ -1965,7 +2007,33 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 2,
+    "back_within_24h": 2,
+    "out_24h_or_more": 0,
+    "removing_accounts": 2,
+    "restoring_accounts": 2,
+    "page_wide_removals": 0,
+    "first_added": "2021-07-09",
+    "latest_removal": "2024-06-12",
+    "in_place_since": "2024-06-12",
+    "in_place_since_revision": 1228606716,
+    "removals": [
+     [
+      1061323563,
+      1061323926,
+      0.0
+     ],
+     [
+      1228606157,
+      1228606716,
+      0.1
+     ]
+    ]
+   }
   },
   {
    "id": "lead-2",
@@ -2014,7 +2082,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 3,
+   "works_cited": 3,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2021-07-09",
+    "latest_removal": null,
+    "in_place_since": "2021-07-09",
+    "in_place_since_revision": 1032681913,
+    "removals": []
+   }
   },
   {
    "id": "lead-3",
@@ -2051,7 +2134,48 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 5,
+    "back_within_24h": 4,
+    "out_24h_or_more": 1,
+    "removing_accounts": 2,
+    "restoring_accounts": 3,
+    "page_wide_removals": 0,
+    "first_added": "2023-08-06",
+    "latest_removal": "2024-10-03",
+    "in_place_since": "2024-10-03",
+    "in_place_since_revision": 1249152529,
+    "removals": [
+     [
+      1228606157,
+      1228606716,
+      0.1
+     ],
+     [
+      1248619619,
+      1248868683,
+      30.6
+     ],
+     [
+      1248917849,
+      1248968911,
+      8.5
+     ],
+     [
+      1248997678,
+      1249001413,
+      0.4
+     ],
+     [
+      1249116288,
+      1249152529,
+      6.2
+     ]
+    ]
+   }
   },
   {
    "id": "lead-4",
@@ -2090,7 +2214,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2024-09-23",
+    "latest_removal": null,
+    "in_place_since": "2024-09-23",
+    "in_place_since_revision": 1247147696,
+    "removals": []
+   }
   },
   {
    "id": "lead-5",
@@ -2127,7 +2266,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 2,
+   "works_cited": 2,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2024-11-08",
+    "latest_removal": null,
+    "in_place_since": "2024-11-08",
+    "in_place_since_revision": 1256198020,
+    "removals": []
+   }
   },
   {
    "id": "sec1-1",
@@ -2160,7 +2314,53 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 6,
+    "back_within_24h": 5,
+    "out_24h_or_more": 1,
+    "removing_accounts": 3,
+    "restoring_accounts": 6,
+    "page_wide_removals": 0,
+    "first_added": "2023-04-16",
+    "latest_removal": "2025-01-07",
+    "in_place_since": "2025-01-07",
+    "in_place_since_revision": 1267984114,
+    "removals": [
+     [
+      1219016476,
+      1219017189,
+      0.0
+     ],
+     [
+      1219019294,
+      1219019328,
+      0.0
+     ],
+     [
+      1228606252,
+      1228606716,
+      0.1
+     ],
+     [
+      1233097212,
+      1233783755,
+      86.1
+     ],
+     [
+      1243031979,
+      1243032228,
+      0.0
+     ],
+     [
+      1267955596,
+      1267984114,
+      3.0
+     ]
+    ]
+   }
   },
   {
    "id": "sec1-2",
@@ -2199,7 +2399,53 @@
    "added_before_sanction": true,
    "sanctioned_words_before": 7,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 6,
+    "back_within_24h": 5,
+    "out_24h_or_more": 1,
+    "removing_accounts": 3,
+    "restoring_accounts": 6,
+    "page_wide_removals": 0,
+    "first_added": "2023-04-16",
+    "latest_removal": "2025-01-07",
+    "in_place_since": "2025-01-07",
+    "in_place_since_revision": 1267984114,
+    "removals": [
+     [
+      1219016476,
+      1219017189,
+      0.0
+     ],
+     [
+      1219019294,
+      1219019328,
+      0.0
+     ],
+     [
+      1228606252,
+      1228606716,
+      0.1
+     ],
+     [
+      1233097212,
+      1233783755,
+      86.1
+     ],
+     [
+      1243031979,
+      1243032228,
+      0.0
+     ],
+     [
+      1267955596,
+      1267984114,
+      3.0
+     ]
+    ]
+   }
   },
   {
    "id": "sec1-3",
@@ -2240,7 +2486,53 @@
    "added_before_sanction": true,
    "sanctioned_words_before": 1,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 2,
+   "works_cited": 2,
+   "history": {
+    "removed": 6,
+    "back_within_24h": 5,
+    "out_24h_or_more": 1,
+    "removing_accounts": 3,
+    "restoring_accounts": 6,
+    "page_wide_removals": 0,
+    "first_added": "2023-04-16",
+    "latest_removal": "2025-01-07",
+    "in_place_since": "2025-01-07",
+    "in_place_since_revision": 1267984114,
+    "removals": [
+     [
+      1219016476,
+      1219017189,
+      0.0
+     ],
+     [
+      1219019294,
+      1219019328,
+      0.0
+     ],
+     [
+      1228606252,
+      1228606716,
+      0.1
+     ],
+     [
+      1233097212,
+      1233783755,
+      86.1
+     ],
+     [
+      1243031979,
+      1243032228,
+      0.0
+     ],
+     [
+      1267955596,
+      1267984114,
+      3.0
+     ]
+    ]
+   }
   },
   {
    "id": "sec1-4",
@@ -2265,7 +2557,33 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 2,
+   "works_cited": 2,
+   "history": {
+    "removed": 2,
+    "back_within_24h": 2,
+    "out_24h_or_more": 0,
+    "removing_accounts": 2,
+    "restoring_accounts": 2,
+    "page_wide_removals": 0,
+    "first_added": "2024-07-10",
+    "latest_removal": "2025-01-07",
+    "in_place_since": "2025-01-07",
+    "in_place_since_revision": 1267984114,
+    "removals": [
+     [
+      1243031979,
+      1243032228,
+      0.0
+     ],
+     [
+      1267955596,
+      1267984114,
+      3.0
+     ]
+    ]
+   }
   },
   {
    "id": "sec1-5",
@@ -2304,7 +2622,53 @@
    "added_before_sanction": true,
    "sanctioned_words_before": 3,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 6,
+    "back_within_24h": 5,
+    "out_24h_or_more": 1,
+    "removing_accounts": 3,
+    "restoring_accounts": 6,
+    "page_wide_removals": 0,
+    "first_added": "2023-04-16",
+    "latest_removal": "2025-01-07",
+    "in_place_since": "2025-01-07",
+    "in_place_since_revision": 1267984114,
+    "removals": [
+     [
+      1219016476,
+      1219017189,
+      0.0
+     ],
+     [
+      1219019294,
+      1219019328,
+      0.0
+     ],
+     [
+      1228606252,
+      1228606716,
+      0.1
+     ],
+     [
+      1233097212,
+      1233783755,
+      86.1
+     ],
+     [
+      1243031979,
+      1243032228,
+      0.0
+     ],
+     [
+      1267955596,
+      1267984114,
+      3.0
+     ]
+    ]
+   }
   },
   {
    "id": "sec4-1",
@@ -2333,7 +2697,53 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 6,
+    "back_within_24h": 6,
+    "out_24h_or_more": 0,
+    "removing_accounts": 3,
+    "restoring_accounts": 6,
+    "page_wide_removals": 0,
+    "first_added": "2021-07-09",
+    "latest_removal": "2024-07-07",
+    "in_place_since": "2024-07-07",
+    "in_place_since_revision": 1233097386,
+    "removals": [
+     [
+      1061323611,
+      1061323926,
+      0.0
+     ],
+     [
+      1219016621,
+      1219017189,
+      0.0
+     ],
+     [
+      1219020245,
+      1219020301,
+      0.0
+     ],
+     [
+      1219021347,
+      1219021391,
+      0.0
+     ],
+     [
+      1228606318,
+      1228606716,
+      0.1
+     ],
+     [
+      1233097280,
+      1233097386,
+      0.0
+     ]
+    ]
+   }
   },
   {
    "id": "sec5-1",
@@ -2358,7 +2768,48 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 5,
+    "back_within_24h": 5,
+    "out_24h_or_more": 0,
+    "removing_accounts": 2,
+    "restoring_accounts": 5,
+    "page_wide_removals": 0,
+    "first_added": "2023-12-08",
+    "latest_removal": "2024-07-07",
+    "in_place_since": "2024-07-07",
+    "in_place_since_revision": 1233097386,
+    "removals": [
+     [
+      1219016621,
+      1219017189,
+      0.0
+     ],
+     [
+      1219020245,
+      1219020301,
+      0.0
+     ],
+     [
+      1219021347,
+      1219021391,
+      0.0
+     ],
+     [
+      1228606318,
+      1228606716,
+      0.1
+     ],
+     [
+      1233097280,
+      1233097386,
+      0.0
+     ]
+    ]
+   }
   },
   {
    "id": "sec5-2",
@@ -2383,7 +2834,48 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 5,
+    "back_within_24h": 5,
+    "out_24h_or_more": 0,
+    "removing_accounts": 2,
+    "restoring_accounts": 5,
+    "page_wide_removals": 0,
+    "first_added": "2023-12-08",
+    "latest_removal": "2024-07-07",
+    "in_place_since": "2024-07-07",
+    "in_place_since_revision": 1233097386,
+    "removals": [
+     [
+      1219016621,
+      1219017189,
+      0.0
+     ],
+     [
+      1219020245,
+      1219020301,
+      0.0
+     ],
+     [
+      1219021347,
+      1219021391,
+      0.0
+     ],
+     [
+      1228606318,
+      1228606716,
+      0.1
+     ],
+     [
+      1233097280,
+      1233097386,
+      0.0
+     ]
+    ]
+   }
   },
   {
    "id": "sec6-1",
@@ -2420,7 +2912,48 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 5,
+    "back_within_24h": 5,
+    "out_24h_or_more": 0,
+    "removing_accounts": 2,
+    "restoring_accounts": 5,
+    "page_wide_removals": 0,
+    "first_added": "2022-09-24",
+    "latest_removal": "2024-07-07",
+    "in_place_since": "2024-07-07",
+    "in_place_since_revision": 1233097386,
+    "removals": [
+     [
+      1219016621,
+      1219017189,
+      0.0
+     ],
+     [
+      1219020245,
+      1219020301,
+      0.0
+     ],
+     [
+      1219021347,
+      1219021391,
+      0.0
+     ],
+     [
+      1228606318,
+      1228606716,
+      0.1
+     ],
+     [
+      1233097280,
+      1233097386,
+      0.0
+     ]
+    ]
+   }
   },
   {
    "id": "sec6-2",
@@ -2449,7 +2982,48 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 5,
+    "back_within_24h": 5,
+    "out_24h_or_more": 0,
+    "removing_accounts": 2,
+    "restoring_accounts": 5,
+    "page_wide_removals": 0,
+    "first_added": "2023-11-02",
+    "latest_removal": "2024-07-07",
+    "in_place_since": "2024-07-07",
+    "in_place_since_revision": 1233097386,
+    "removals": [
+     [
+      1219016621,
+      1219017189,
+      0.0
+     ],
+     [
+      1219020245,
+      1219020301,
+      0.0
+     ],
+     [
+      1219021347,
+      1219021391,
+      0.0
+     ],
+     [
+      1228606318,
+      1228606716,
+      0.1
+     ],
+     [
+      1233097280,
+      1233097386,
+      0.0
+     ]
+    ]
+   }
   },
   {
    "id": "sec13-1",
@@ -2482,7 +3056,33 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 2,
+    "back_within_24h": 2,
+    "out_24h_or_more": 0,
+    "removing_accounts": 2,
+    "restoring_accounts": 2,
+    "page_wide_removals": 0,
+    "first_added": "2022-06-02",
+    "latest_removal": "2024-06-12",
+    "in_place_since": "2024-06-12",
+    "in_place_since_revision": 1228606716,
+    "removals": [
+     [
+      1219017080,
+      1219017189,
+      0.0
+     ],
+     [
+      1228606521,
+      1228606716,
+      0.0
+     ]
+    ]
+   }
   },
   {
    "id": "sec14-1",
@@ -2511,7 +3111,33 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 2,
+    "back_within_24h": 2,
+    "out_24h_or_more": 0,
+    "removing_accounts": 2,
+    "restoring_accounts": 2,
+    "page_wide_removals": 0,
+    "first_added": "2023-12-16",
+    "latest_removal": "2024-06-12",
+    "in_place_since": "2024-06-12",
+    "in_place_since_revision": 1228606716,
+    "removals": [
+     [
+      1219017080,
+      1219017189,
+      0.0
+     ],
+     [
+      1228606521,
+      1228606716,
+      0.0
+     ]
+    ]
+   }
   },
   {
    "id": "sec14-2",
@@ -2536,7 +3162,33 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 2,
+    "back_within_24h": 2,
+    "out_24h_or_more": 0,
+    "removing_accounts": 2,
+    "restoring_accounts": 2,
+    "page_wide_removals": 0,
+    "first_added": "2023-09-05",
+    "latest_removal": "2024-06-12",
+    "in_place_since": "2024-06-12",
+    "in_place_since_revision": 1228606716,
+    "removals": [
+     [
+      1219017080,
+      1219017189,
+      0.0
+     ],
+     [
+      1228606521,
+      1228606716,
+      0.0
+     ]
+    ]
+   }
   },
   {
    "id": "sec14-3",
@@ -2561,7 +3213,38 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 3,
+    "back_within_24h": 2,
+    "out_24h_or_more": 1,
+    "removing_accounts": 3,
+    "restoring_accounts": 3,
+    "page_wide_removals": 0,
+    "first_added": "2023-04-15",
+    "latest_removal": "2024-06-12",
+    "in_place_since": "2024-06-12",
+    "in_place_since_revision": 1228606716,
+    "removals": [
+     [
+      1150803986,
+      1151084087,
+      36.6
+     ],
+     [
+      1219017080,
+      1219017189,
+      0.0
+     ],
+     [
+      1228606521,
+      1228606716,
+      0.0
+     ]
+    ]
+   }
   },
   {
    "id": "sec14-4",
@@ -2590,7 +3273,33 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 2,
+    "back_within_24h": 2,
+    "out_24h_or_more": 0,
+    "removing_accounts": 2,
+    "restoring_accounts": 2,
+    "page_wide_removals": 0,
+    "first_added": "2023-12-08",
+    "latest_removal": "2024-06-12",
+    "in_place_since": "2024-06-12",
+    "in_place_since_revision": 1228606716,
+    "removals": [
+     [
+      1219017080,
+      1219017189,
+      0.0
+     ],
+     [
+      1228606521,
+      1228606716,
+      0.0
+     ]
+    ]
+   }
   },
   {
    "id": "sec14-5",
@@ -2615,7 +3324,33 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 2,
+    "back_within_24h": 2,
+    "out_24h_or_more": 0,
+    "removing_accounts": 2,
+    "restoring_accounts": 2,
+    "page_wide_removals": 0,
+    "first_added": "2023-07-07",
+    "latest_removal": "2024-06-12",
+    "in_place_since": "2024-06-12",
+    "in_place_since_revision": 1228606716,
+    "removals": [
+     [
+      1219017080,
+      1219017189,
+      0.0
+     ],
+     [
+      1228606521,
+      1228606716,
+      0.0
+     ]
+    ]
+   }
   },
   {
    "id": "sec14-6",
@@ -2644,7 +3379,38 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 3,
+    "back_within_24h": 3,
+    "out_24h_or_more": 0,
+    "removing_accounts": 3,
+    "restoring_accounts": 3,
+    "page_wide_removals": 0,
+    "first_added": "2022-06-21",
+    "latest_removal": "2024-06-12",
+    "in_place_since": "2024-06-12",
+    "in_place_since_revision": 1228606716,
+    "removals": [
+     [
+      1121126023,
+      1121126045,
+      0.0
+     ],
+     [
+      1219017080,
+      1219017189,
+      0.0
+     ],
+     [
+      1228606521,
+      1228606716,
+      0.0
+     ]
+    ]
+   }
   },
   {
    "id": "sec14-7",
@@ -2679,7 +3445,33 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 2,
+    "back_within_24h": 2,
+    "out_24h_or_more": 0,
+    "removing_accounts": 2,
+    "restoring_accounts": 2,
+    "page_wide_removals": 0,
+    "first_added": "2023-06-27",
+    "latest_removal": "2024-06-12",
+    "in_place_since": "2024-06-12",
+    "in_place_since_revision": 1228606716,
+    "removals": [
+     [
+      1219017080,
+      1219017189,
+      0.0
+     ],
+     [
+      1228606521,
+      1228606716,
+      0.0
+     ]
+    ]
+   }
   },
   {
    "id": "sec14-8",
@@ -2704,7 +3496,33 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 2,
+    "back_within_24h": 2,
+    "out_24h_or_more": 0,
+    "removing_accounts": 2,
+    "restoring_accounts": 2,
+    "page_wide_removals": 0,
+    "first_added": "2023-07-07",
+    "latest_removal": "2024-06-12",
+    "in_place_since": "2024-06-12",
+    "in_place_since_revision": 1228606716,
+    "removals": [
+     [
+      1219017080,
+      1219017189,
+      0.0
+     ],
+     [
+      1228606521,
+      1228606716,
+      0.0
+     ]
+    ]
+   }
   },
   {
    "id": "sec15-1",
@@ -2733,7 +3551,33 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 2,
+   "works_cited": 2,
+   "history": {
+    "removed": 2,
+    "back_within_24h": 2,
+    "out_24h_or_more": 0,
+    "removing_accounts": 2,
+    "restoring_accounts": 2,
+    "page_wide_removals": 0,
+    "first_added": "2022-03-15",
+    "latest_removal": "2024-06-12",
+    "in_place_since": "2024-06-12",
+    "in_place_since_revision": 1228606716,
+    "removals": [
+     [
+      1219017080,
+      1219017189,
+      0.0
+     ],
+     [
+      1228606521,
+      1228606716,
+      0.0
+     ]
+    ]
+   }
   },
   {
    "id": "sec16-1",
@@ -2778,7 +3622,33 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 2,
+    "back_within_24h": 2,
+    "out_24h_or_more": 0,
+    "removing_accounts": 2,
+    "restoring_accounts": 2,
+    "page_wide_removals": 0,
+    "first_added": "2022-03-15",
+    "latest_removal": "2024-06-12",
+    "in_place_since": "2024-06-12",
+    "in_place_since_revision": 1228606716,
+    "removals": [
+     [
+      1219017080,
+      1219017189,
+      0.0
+     ],
+     [
+      1228606521,
+      1228606716,
+      0.0
+     ]
+    ]
+   }
   },
   {
    "id": "sec16-2",
@@ -2809,7 +3679,33 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 2,
+    "back_within_24h": 2,
+    "out_24h_or_more": 0,
+    "removing_accounts": 2,
+    "restoring_accounts": 2,
+    "page_wide_removals": 0,
+    "first_added": "2023-05-04",
+    "latest_removal": "2024-06-12",
+    "in_place_since": "2024-06-12",
+    "in_place_since_revision": 1228606716,
+    "removals": [
+     [
+      1219017080,
+      1219017189,
+      0.0
+     ],
+     [
+      1228606521,
+      1228606716,
+      0.0
+     ]
+    ]
+   }
   },
   {
    "id": "sec17-1",
@@ -2834,7 +3730,43 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 4,
+    "back_within_24h": 2,
+    "out_24h_or_more": 2,
+    "removing_accounts": 3,
+    "restoring_accounts": 4,
+    "page_wide_removals": 0,
+    "first_added": "2022-12-26",
+    "latest_removal": "2024-06-12",
+    "in_place_since": "2024-06-12",
+    "in_place_since_revision": 1228606716,
+    "removals": [
+     [
+      1135685873,
+      1135845379,
+      24.3
+     ],
+     [
+      1135895406,
+      1137119305,
+      151.6
+     ],
+     [
+      1219017080,
+      1219017189,
+      0.0
+     ],
+     [
+      1228606521,
+      1228606716,
+      0.0
+     ]
+    ]
+   }
   },
   {
    "id": "sec17-2",
@@ -2871,7 +3803,33 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 2,
+    "back_within_24h": 2,
+    "out_24h_or_more": 0,
+    "removing_accounts": 2,
+    "restoring_accounts": 2,
+    "page_wide_removals": 0,
+    "first_added": "2023-04-15",
+    "latest_removal": "2024-06-12",
+    "in_place_since": "2024-06-12",
+    "in_place_since_revision": 1228606716,
+    "removals": [
+     [
+      1219017080,
+      1219017189,
+      0.0
+     ],
+     [
+      1228606521,
+      1228606716,
+      0.0
+     ]
+    ]
+   }
   },
   {
    "id": "sec17-3",
@@ -2900,7 +3858,33 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 2,
+    "back_within_24h": 2,
+    "out_24h_or_more": 0,
+    "removing_accounts": 2,
+    "restoring_accounts": 2,
+    "page_wide_removals": 0,
+    "first_added": "2023-03-23",
+    "latest_removal": "2024-06-12",
+    "in_place_since": "2024-06-12",
+    "in_place_since_revision": 1228606716,
+    "removals": [
+     [
+      1219017080,
+      1219017189,
+      0.0
+     ],
+     [
+      1228606521,
+      1228606716,
+      0.0
+     ]
+    ]
+   }
   },
   {
    "id": "sec23-1",
@@ -2929,7 +3913,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2024-06-27",
+    "latest_removal": null,
+    "in_place_since": "2024-06-27",
+    "in_place_since_revision": 1231231919,
+    "removals": []
+   }
   },
   {
    "id": "sec25-1",
@@ -2954,7 +3953,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2024-07-14",
+    "latest_removal": null,
+    "in_place_since": "2024-07-14",
+    "in_place_since_revision": 1234396343,
+    "removals": []
+   }
   },
   {
    "id": "sec25-2",
@@ -2979,7 +3993,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2024-10-03",
+    "latest_removal": null,
+    "in_place_since": "2024-10-03",
+    "in_place_since_revision": 1249231333,
+    "removals": []
+   }
   },
   {
    "id": "sec31-1",
@@ -3004,7 +4033,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 2,
+   "works_cited": 2,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2024-08-06",
+    "latest_removal": null,
+    "in_place_since": "2024-08-06",
+    "in_place_since_revision": 1239011807,
+    "removals": []
+   }
   },
   {
    "id": "sec31-2",
@@ -3029,7 +4073,26 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 2,
+   "works_cited": 2,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2023-12-19",
+    "latest_removal": null,
+    "in_place_since": "2023-12-19",
+    "in_place_since_revision": 1190794245,
+    "removals": []
+   },
+   "hidden_notes": [
+    "= = = don't edit the line below = = =",
+    "= = = don't edit the line above = = ="
+   ]
   },
   {
    "id": "sec34-1",
@@ -3054,7 +4117,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2024-11-23",
+    "latest_removal": null,
+    "in_place_since": "2024-11-23",
+    "in_place_since_revision": 1259070107,
+    "removals": []
+   }
   },
   {
    "id": "sec34-2",
@@ -3079,7 +4157,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2024-11-23",
+    "latest_removal": null,
+    "in_place_since": "2024-11-23",
+    "in_place_since_revision": 1259070107,
+    "removals": []
+   }
   },
   {
    "id": "sec34-3",
@@ -3104,7 +4197,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2024-11-23",
+    "latest_removal": null,
+    "in_place_since": "2024-11-23",
+    "in_place_since_revision": 1259070107,
+    "removals": []
+   }
   },
   {
    "id": "sec34-4",
@@ -3129,7 +4237,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2024-11-23",
+    "latest_removal": null,
+    "in_place_since": "2024-11-23",
+    "in_place_since_revision": 1259070107,
+    "removals": []
+   }
   },
   {
    "id": "sec34-5",
@@ -3154,7 +4277,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2024-11-23",
+    "latest_removal": null,
+    "in_place_since": "2024-11-23",
+    "in_place_since_revision": 1259070107,
+    "removals": []
+   }
   },
   {
    "id": "sec34-6",
@@ -3179,7 +4317,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2024-11-23",
+    "latest_removal": null,
+    "in_place_since": "2024-11-23",
+    "in_place_since_revision": 1259070107,
+    "removals": []
+   }
   },
   {
    "id": "sec34-7",
@@ -3204,7 +4357,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2024-11-23",
+    "latest_removal": null,
+    "in_place_since": "2024-11-23",
+    "in_place_since_revision": 1259070107,
+    "removals": []
+   }
   },
   {
    "id": "sec34-8",
@@ -3229,7 +4397,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2024-11-23",
+    "latest_removal": null,
+    "in_place_since": "2024-11-23",
+    "in_place_since_revision": 1259070107,
+    "removals": []
+   }
   },
   {
    "id": "sec34-9",
@@ -3254,7 +4437,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2024-11-23",
+    "latest_removal": null,
+    "in_place_since": "2024-11-23",
+    "in_place_since_revision": 1259070107,
+    "removals": []
+   }
   },
   {
    "id": "sec34-10",
@@ -3279,7 +4477,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2024-11-23",
+    "latest_removal": null,
+    "in_place_since": "2024-11-23",
+    "in_place_since_revision": 1259070107,
+    "removals": []
+   }
   },
   {
    "id": "sec34-11",
@@ -3304,7 +4517,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2024-11-23",
+    "latest_removal": null,
+    "in_place_since": "2024-11-23",
+    "in_place_since_revision": 1259070107,
+    "removals": []
+   }
   },
   {
    "id": "sec34-12",
@@ -3329,7 +4557,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2024-11-23",
+    "latest_removal": null,
+    "in_place_since": "2024-11-23",
+    "in_place_since_revision": 1259070107,
+    "removals": []
+   }
   },
   {
    "id": "sec34-13",
@@ -3354,7 +4597,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2024-11-23",
+    "latest_removal": null,
+    "in_place_since": "2024-11-23",
+    "in_place_since_revision": 1259070107,
+    "removals": []
+   }
   },
   {
    "id": "sec35-1",
@@ -3379,7 +4637,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2025-02-03",
+    "latest_removal": null,
+    "in_place_since": "2025-02-03",
+    "in_place_since_revision": 1273723715,
+    "removals": []
+   }
   },
   {
    "id": "sec36-1",
@@ -3412,7 +4685,22 @@
    "added_before_sanction": true,
    "sanctioned_words_before": 3,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 1,
+   "works_cited": 1,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2024-11-23",
+    "latest_removal": null,
+    "in_place_since": "2024-11-23",
+    "in_place_since_revision": 1259068185,
+    "removals": []
+   }
   },
   {
    "id": "sec36-2",
@@ -3451,7 +4739,22 @@
    "added_before_sanction": true,
    "sanctioned_words_before": 14,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 0,
+   "works_cited": 0,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2024-12-14",
+    "latest_removal": null,
+    "in_place_since": "2024-12-14",
+    "in_place_since_revision": 1263098718,
+    "removals": []
+   }
   },
   {
    "id": "sec36-3",
@@ -3480,7 +4783,22 @@
    "added_before_sanction": null,
    "sanctioned_words_before": 0,
    "sanctioned_words_after": 0,
-   "sanctioned_words_during": 0
+   "sanctioned_words_during": 0,
+   "footnotes": 2,
+   "works_cited": 2,
+   "history": {
+    "removed": 0,
+    "back_within_24h": 0,
+    "out_24h_or_more": 0,
+    "removing_accounts": 0,
+    "restoring_accounts": 0,
+    "page_wide_removals": 0,
+    "first_added": "2026-05-28",
+    "latest_removal": null,
+    "in_place_since": "2026-05-28",
+    "in_place_since_revision": 1356617364,
+    "removals": []
+   }
   }
  ],
  "inputs": {
@@ -3489,7 +4807,9 @@
   "wikiwho_rev_content": "https://wikiwho-api.wmcloud.org/en/api/v1.0.0-beta/rev_content/rev_id/1382640033/",
   "wikiwho_all_content": "https://wikiwho-api.wmcloud.org/en/api/v1.0.0-beta/all_content/page_id/61246185/",
   "history_revisions": 1289,
-  "sanctions_csv_sha256": "83c3c25da3d1338292d21c2b407f4fdc4aee5a973a0fa7ac6bb32e407de325dd"
+  "sanctions_csv_sha256": "46ecf8bd2945ef432b9a5a9afcd72502654439f2b78b039f168883e847475a22",
+  "source_names_sha256": "1e0c7263959b899f0a4dd2a19e5f77b3d542f7e961d864fcb790974eb1ddbad0",
+  "books_sha256": "c82c512cf1e16abc1ab47c9aa152ce4df80360300d3c17f57b443a06ccaf46f6"
  },
  "quality": {
   "wikiwho_tokens": 66301,
@@ -3506,12 +4826,555 @@
   "distinct_sources": 107,
   "editors_adding_citations": 53,
   "citation_only_editors": 36,
+  "flags": {
+   "opinion": 14,
+   "no_link": 5,
+   "book_without_page": 0,
+   "not_english": 0,
+   "not_english_no_quote": 0,
+   "dead_link_no_archive": 0,
+   "paywall_or_registration": 1
+  },
+  "flags_by_editor": {
+   "Editor 45": {
+    "citations": 34,
+    "opinion": 5,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 46": {
+    "citations": 29,
+    "opinion": 2,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 47": {
+    "citations": 13,
+    "opinion": 0,
+    "no_link": 4,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 48": {
+    "citations": 12,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 1": {
+    "citations": 8,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 7": {
+    "citations": 7,
+    "opinion": 1,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 1
+   },
+   "Editor 22": {
+    "citations": 5,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 49": {
+    "citations": 5,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 50": {
+    "citations": 5,
+    "opinion": 4,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 3": {
+    "citations": 4,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 10": {
+    "citations": 4,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 12": {
+    "citations": 4,
+    "opinion": 0,
+    "no_link": 1,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 2": {
+    "citations": 3,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 14": {
+    "citations": 3,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 51": {
+    "citations": 3,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 52": {
+    "citations": 3,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 16": {
+    "citations": 2,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 53": {
+    "citations": 2,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 54": {
+    "citations": 2,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 55": {
+    "citations": 2,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 56": {
+    "citations": 2,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 57": {
+    "citations": 2,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 58": {
+    "citations": 2,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 4": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 13": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 15": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 19": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 21": {
+    "citations": 1,
+    "opinion": 1,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 24": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 28": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 31": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 59": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 60": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 61": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 62": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 63": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 64": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 65": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 66": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 67": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 68": {
+    "citations": 1,
+    "opinion": 1,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 69": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 70": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 71": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 72": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 73": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 74": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 75": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 76": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 77": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 78": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 79": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   },
+   "Editor 80": {
+    "citations": 1,
+    "opinion": 0,
+    "no_link": 0,
+    "book_without_page": 0,
+    "not_english": 0,
+    "not_english_no_quote": 0,
+    "dead_link_no_archive": 0,
+    "paywall_or_registration": 0
+   }
+  },
   "list": [
    {
     "source": "texastribune.org",
     "name_as_cited": "The Texas Tribune",
     "citations": 15,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 49": 3,
      "Editor 1": 2,
@@ -3531,6 +5394,8 @@
     "name_as_cited": "The New York Times",
     "citations": 8,
     "lead_citations": 1,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 3": 2,
      "Editor 46": 2,
@@ -3545,6 +5410,10 @@
     "name_as_cited": "University of Texas at Austin",
     "citations": 6,
     "lead_citations": 0,
+    "opinion_citations": 2,
+    "flags": {
+     "opinion": 2
+    },
     "added_by": {
      "Editor 7": 2,
      "Editor 46": 2,
@@ -3557,6 +5426,8 @@
     "name_as_cited": "ActiVote",
     "citations": 5,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 46": 4,
      "Editor 48": 1
@@ -3567,6 +5438,10 @@
     "name_as_cited": "The Dallas Morning News",
     "citations": 5,
     "lead_citations": 0,
+    "opinion_citations": 2,
+    "flags": {
+     "opinion": 2
+    },
     "added_by": {
      "Editor 2": 1,
      "Editor 45": 1,
@@ -3580,6 +5455,8 @@
     "name_as_cited": "Politico",
     "citations": 5,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 10": 1,
      "Editor 22": 1,
@@ -3593,6 +5470,10 @@
     "name_as_cited": "Twitter",
     "citations": 5,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {
+     "no_link": 5
+    },
     "added_by": {
      "Editor 47": 4,
      "Editor 12": 1
@@ -3603,6 +5484,10 @@
     "name_as_cited": "El Paso Times",
     "citations": 4,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {
+     "paywall_or_registration": 1
+    },
     "added_by": {
      "Editor 47": 2,
      "Editor 1": 1,
@@ -3614,6 +5499,8 @@
     "name_as_cited": "Emerson College Polling",
     "citations": 4,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 46": 3,
      "Editor 78": 1
@@ -3624,6 +5511,8 @@
     "name_as_cited": "University of Houston",
     "citations": 4,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 46": 3,
      "Editor 48": 1
@@ -3634,6 +5523,8 @@
     "name_as_cited": "FiveThirtyEight",
     "citations": 3,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 46": 1,
      "Editor 53": 1,
@@ -3645,6 +5536,10 @@
     "name_as_cited": "Houston Chronicle",
     "citations": 3,
     "lead_citations": 0,
+    "opinion_citations": 2,
+    "flags": {
+     "opinion": 2
+    },
     "added_by": {
      "Editor 45": 1,
      "Editor 49": 1,
@@ -3656,6 +5551,10 @@
     "name_as_cited": "Fort Worth Star Telegram",
     "citations": 3,
     "lead_citations": 0,
+    "opinion_citations": 2,
+    "flags": {
+     "opinion": 2
+    },
     "added_by": {
      "Editor 24": 1,
      "Editor 45": 1,
@@ -3667,6 +5566,8 @@
     "name_as_cited": "The Hill",
     "citations": 3,
     "lead_citations": 1,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 14": 1,
      "Editor 48": 1,
@@ -3678,6 +5579,8 @@
     "name_as_cited": "University of Texas at Tyler",
     "citations": 3,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 7": 2,
      "Editor 48": 1
@@ -3688,6 +5591,8 @@
     "name_as_cited": "Diamond Eye Candidate Report",
     "citations": 3,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 1": 3
     }
@@ -3697,6 +5602,8 @@
     "name_as_cited": "WFAA",
     "citations": 3,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 46": 1,
      "Editor 72": 1,
@@ -3708,6 +5615,8 @@
     "name_as_cited": "Austin Chronicle",
     "citations": 2,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 45": 1,
      "Editor 50": 1
@@ -3718,6 +5627,8 @@
     "name_as_cited": "Clean and Prosperous America",
     "citations": 2,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 48": 1,
      "Editor 54": 1
@@ -3728,6 +5639,8 @@
     "name_as_cited": "",
     "citations": 2,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 46": 2
     }
@@ -3737,6 +5650,10 @@
     "name_as_cited": "San Antonio Express-News",
     "citations": 2,
     "lead_citations": 0,
+    "opinion_citations": 2,
+    "flags": {
+     "opinion": 2
+    },
     "added_by": {
      "Editor 45": 1,
      "Editor 68": 1
@@ -3747,6 +5664,8 @@
     "name_as_cited": "Inside Elections",
     "citations": 2,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 16": 1,
      "Editor 52": 1
@@ -3757,16 +5676,20 @@
     "name_as_cited": "Instagram",
     "citations": 2,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 45": 1,
      "Editor 47": 1
     }
    },
    {
-    "source": "marist.edu",
+    "source": "maristpoll.marist.edu",
     "name_as_cited": "Marist Poll",
     "citations": 2,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 46": 1,
      "Editor 51": 1
@@ -3777,6 +5700,8 @@
     "name_as_cited": "Maryland Matters",
     "citations": 2,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 22": 2
     }
@@ -3786,6 +5711,8 @@
     "name_as_cited": "Newsweek",
     "citations": 2,
     "lead_citations": 1,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 15": 1,
      "Editor 59": 1
@@ -3796,6 +5723,8 @@
     "name_as_cited": "RealClearPolitics",
     "citations": 2,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 31": 1,
      "Editor 57": 1
@@ -3806,6 +5735,8 @@
     "name_as_cited": "",
     "citations": 2,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 46": 2
     }
@@ -3815,6 +5746,8 @@
     "name_as_cited": "Texas Secretary of State",
     "citations": 2,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 1": 1,
      "Editor 46": 1
@@ -3825,6 +5758,8 @@
     "name_as_cited": "Texas Hispanic Policy Foundation",
     "citations": 2,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 46": 1,
      "Editor 64": 1
@@ -3835,6 +5770,8 @@
     "name_as_cited": "Twitter",
     "citations": 2,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 28": 1,
      "Editor 58": 1
@@ -3845,8 +5782,21 @@
     "name_as_cited": "270toWin",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 48": 1
+    }
+   },
+   {
+    "source": "abcnews.go.com",
+    "name_as_cited": "FiveThirtyEight",
+    "citations": 1,
+    "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
+    "added_by": {
+     "Editor 12": 1
     }
    },
    {
@@ -3854,6 +5804,8 @@
     "name_as_cited": "Association of Flight Attendants-CWA",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 45": 1
     }
@@ -3863,6 +5815,8 @@
     "name_as_cited": "American Fuel and Petrochemical Manufacturers",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 46": 1
     }
@@ -3872,6 +5826,8 @@
     "name_as_cited": "AIPAC PAC",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 47": 1
     }
@@ -3881,6 +5837,10 @@
     "name_as_cited": "The Amarillo Pioneer",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 1,
+    "flags": {
+     "opinion": 1
+    },
     "added_by": {
      "Editor 7": 1
     }
@@ -3890,6 +5850,8 @@
     "name_as_cited": "AP News",
     "citations": 1,
     "lead_citations": 1,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 14": 1
     }
@@ -3899,15 +5861,19 @@
     "name_as_cited": "AtlasIntel",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 51": 1
     }
    },
    {
     "source": "axios.com",
-    "name_as_cited": "[[Axios (website)",
+    "name_as_cited": "Axios",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 12": 1
     }
@@ -3917,6 +5883,8 @@
     "name_as_cited": "John Bolton PAC",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 66": 1
     }
@@ -3926,6 +5894,8 @@
     "name_as_cited": "Sabato's Crystal Ball",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 56": 1
     }
@@ -3935,6 +5905,8 @@
     "name_as_cited": "Club for Growth",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 45": 1
     }
@@ -3944,6 +5916,8 @@
     "name_as_cited": "CNalysis",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 73": 1
     }
@@ -3953,6 +5927,8 @@
     "name_as_cited": "Cook Political Report",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 56": 1
     }
@@ -3962,6 +5938,8 @@
     "name_as_cited": "Cygnal",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 46": 1
     }
@@ -3971,6 +5949,8 @@
     "name_as_cited": "Daily Kos",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 61": 1
     }
@@ -3980,6 +5960,8 @@
     "name_as_cited": "Dave's Redistricting",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 16": 1
     }
@@ -3989,6 +5971,8 @@
     "name_as_cited": "Elections Daily",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 57": 1
     }
@@ -3998,6 +5982,8 @@
     "name_as_cited": "Emgage PAC",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 45": 1
     }
@@ -4007,6 +5993,8 @@
     "name_as_cited": "End Citizens United",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 45": 1
     }
@@ -4016,6 +6004,8 @@
     "name_as_cited": "Facebook",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 47": 1
     }
@@ -4025,6 +6015,8 @@
     "name_as_cited": "FAU Polling",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 48": 1
     }
@@ -4034,6 +6026,8 @@
     "name_as_cited": "fec.gov",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 75": 1
     }
@@ -4043,6 +6037,8 @@
     "name_as_cited": "Fight Like Hell PAC",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 22": 1
     }
@@ -4052,6 +6048,8 @@
     "name_as_cited": "KDFW",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 2": 1
     }
@@ -4061,6 +6059,8 @@
     "name_as_cited": "Fox News",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 60": 1
     }
@@ -4070,6 +6070,8 @@
     "name_as_cited": "Giffords",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 45": 1
     }
@@ -4079,17 +6081,10 @@
     "name_as_cited": "The Gilmer Mirror",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 45": 1
-    }
-   },
-   {
-    "source": "go.com",
-    "name_as_cited": "FiveThirtyEight",
-    "citations": 1,
-    "lead_citations": 0,
-    "added_by": {
-     "Editor 12": 1
     }
    },
    {
@@ -4097,6 +6092,10 @@
     "name_as_cited": "GoodPartyOrg",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 1,
+    "flags": {
+     "opinion": 1
+    },
     "added_by": {
      "Editor 21": 1
     }
@@ -4106,6 +6105,8 @@
     "name_as_cited": "Human Rights Campaign",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 45": 1
     }
@@ -4115,6 +6116,8 @@
     "name_as_cited": "The Independent",
     "citations": 1,
     "lead_citations": 1,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 14": 1
     }
@@ -4124,6 +6127,8 @@
     "name_as_cited": "JACPA",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 45": 1
     }
@@ -4133,6 +6138,8 @@
     "name_as_cited": "J Street",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 10": 1
     }
@@ -4142,6 +6149,8 @@
     "name_as_cited": "JStreetPAC",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 45": 1
     }
@@ -4151,6 +6160,8 @@
     "name_as_cited": "KIII",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 1": 1
     }
@@ -4160,6 +6171,8 @@
     "name_as_cited": "KXAN",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 47": 1
     }
@@ -4169,6 +6182,8 @@
     "name_as_cited": "Latino Victory",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 45": 1
     }
@@ -4178,6 +6193,8 @@
     "name_as_cited": "League of Conservation Voters",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 45": 1
     }
@@ -4187,6 +6204,8 @@
     "name_as_cited": "Council for a Livable World",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 45": 1
     }
@@ -4196,6 +6215,8 @@
     "name_as_cited": "Manhattan Institute",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 46": 1
     }
@@ -4205,6 +6226,8 @@
     "name_as_cited": "Marshall News Messenger",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 13": 1
     }
@@ -4214,6 +6237,8 @@
     "name_as_cited": "Midwest Values PAC",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 45": 1
     }
@@ -4223,15 +6248,19 @@
     "name_as_cited": "Morning Consult",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 48": 1
     }
    },
    {
     "source": "myrgv.com",
-    "name_as_cited": "[[The Monitor (Texas)",
+    "name_as_cited": "My RGV: The Monitor",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 45": 1
     }
@@ -4241,6 +6270,8 @@
     "name_as_cited": "Robert Reich",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 58": 1
     }
@@ -4250,6 +6281,8 @@
     "name_as_cited": "YouTube",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 80": 1
     }
@@ -4259,6 +6292,8 @@
     "name_as_cited": "Napolitan Institute",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 48": 1
     }
@@ -4268,6 +6303,8 @@
     "name_as_cited": "National Public Affairs",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 46": 1
     }
@@ -4277,6 +6314,8 @@
     "name_as_cited": "Commonwealth of Texas by county",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 76": 1
     }
@@ -4286,6 +6325,8 @@
     "name_as_cited": "NCPSSM",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 45": 1
     }
@@ -4295,6 +6336,8 @@
     "name_as_cited": "National Conference of State Legislatures",
     "citations": 1,
     "lead_citations": 1,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 3": 1
     }
@@ -4304,6 +6347,8 @@
     "name_as_cited": "NRA-PVF",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 45": 1
     }
@@ -4313,6 +6358,8 @@
     "name_as_cited": "Claremont McKenna College Rose Institute of State and Local Government",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 48": 1
     }
@@ -4322,6 +6369,8 @@
     "name_as_cited": "Peace Action",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 45": 1
     }
@@ -4331,6 +6380,8 @@
     "name_as_cited": "People for the American Way",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 22": 1
     }
@@ -4340,6 +6391,8 @@
     "name_as_cited": "Rasmussen Reports",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 51": 1
     }
@@ -4349,6 +6402,8 @@
     "name_as_cited": "Retired Americans",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 45": 1
     }
@@ -4358,15 +6413,19 @@
     "name_as_cited": "Republican Jewish Coalition",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 45": 1
     }
    },
    {
     "source": "rockportdems.org",
-    "name_as_cited": "[[Rockport, Massachusetts",
+    "name_as_cited": "Rockport, MA Democrats",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 62": 1
     }
@@ -4376,6 +6435,8 @@
     "name_as_cited": "San Antonio Report",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 49": 1
     }
@@ -4385,6 +6446,8 @@
     "name_as_cited": "Senate Conservatives Fund",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 45": 1
     }
@@ -4394,8 +6457,21 @@
     "name_as_cited": "Split Ticket",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 55": 1
+    }
+   },
+   {
+    "source": "state.tx.us",
+    "name_as_cited": "",
+    "citations": 1,
+    "lead_citations": 1,
+    "opinion_citations": 0,
+    "flags": {},
+    "added_by": {
+     "Editor 69": 1
     }
    },
    {
@@ -4403,6 +6479,10 @@
     "name_as_cited": "Austin American-Statesman",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 1,
+    "flags": {
+     "opinion": 1
+    },
     "added_by": {
      "Editor 50": 1
     }
@@ -4412,6 +6492,8 @@
     "name_as_cited": "Stonewall Democrats of Dallas",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 47": 1
     }
@@ -4421,6 +6503,10 @@
     "name_as_cited": "Stonewall Democrats of San Antonio",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 1,
+    "flags": {
+     "opinion": 1
+    },
     "added_by": {
      "Editor 45": 1
     }
@@ -4430,6 +6516,8 @@
     "name_as_cited": "Tampa Free Press",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 46": 1
     }
@@ -4439,6 +6527,8 @@
     "name_as_cited": "Texas Alliance for Life",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 45": 1
     }
@@ -4448,6 +6538,8 @@
     "name_as_cited": "Texas Progressive Caucus",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 47": 1
     }
@@ -4457,6 +6549,8 @@
     "name_as_cited": "Texas Scorecard",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 48": 1
     }
@@ -4466,6 +6560,8 @@
     "name_as_cited": "Houston LGBTQ+ Political Caucus",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 45": 1
     }
@@ -4475,15 +6571,19 @@
     "name_as_cited": "The Center Square",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 7": 1
     }
    },
    {
     "source": "themessenger.com",
-    "name_as_cited": "[[The Messenger (website)",
+    "name_as_cited": "The Messenger",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 47": 1
     }
@@ -4493,17 +6593,10 @@
     "name_as_cited": "Turning Point Action",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 45": 1
-    }
-   },
-   {
-    "source": "tx.us",
-    "name_as_cited": "",
-    "citations": 1,
-    "lead_citations": 1,
-    "added_by": {
-     "Editor 69": 1
     }
    },
    {
@@ -4511,6 +6604,8 @@
     "name_as_cited": "UAW Endorsements",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 45": 1
     }
@@ -4520,11 +6615,4176 @@
     "name_as_cited": "Young Conservatives of Texas",
     "citations": 1,
     "lead_citations": 0,
+    "opinion_citations": 0,
+    "flags": {},
     "added_by": {
      "Editor 45": 1
     }
    }
-  ]
+  ],
+  "citations_naming_an_author": 81,
+  "authors": [
+   {
+    "name": "Victor Allis",
+    "wikipedia": null,
+    "citations": 5,
+    "lead_citations": 0,
+    "works": 5
+   },
+   {
+    "name": "Adam Powell",
+    "wikipedia": null,
+    "citations": 4,
+    "lead_citations": 0,
+    "works": 4
+   },
+   {
+    "name": "Patrick Svitek",
+    "wikipedia": null,
+    "citations": 4,
+    "lead_citations": 0,
+    "works": 4
+   },
+   {
+    "name": "Matthew Choi",
+    "wikipedia": null,
+    "citations": 3,
+    "lead_citations": 0,
+    "works": 3
+   },
+   {
+    "name": "Gromer Jeffers Jr",
+    "wikipedia": null,
+    "citations": 2,
+    "lead_citations": 0,
+    "works": 2
+   },
+   {
+    "name": "Josh Kurtz",
+    "wikipedia": null,
+    "citations": 2,
+    "lead_citations": 0,
+    "works": 2
+   },
+   {
+    "name": "@PatrickSvitek on X",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Adrian Carrasquillo",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Al Franken",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Al Weaver",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 1,
+    "works": 1
+   },
+   {
+    "name": "Alana Caesar",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Alex Isenstadt",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Ally Mutnick",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Andrea Drusch",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Austin American-Statesman Editorial Board",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Austin Young Democrats",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Bethany Blankley",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "By Kayla Guo",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Choi, Steven",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Congressional Black Caucus PAC",
+    "wikipedia": "Congressional Black Caucus PAC",
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Dallas Morning News Editorial",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Dina Arévalo",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Donaldson Jones",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Emily Dexter",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Eric Garcia",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 1,
+    "works": 1
+   },
+   {
+    "name": "Erica Pauda",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Erin Covey",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Eugene Daniels",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Express-News Editorial Board",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   },
+   {
+    "name": "Frisk, Garrett",
+    "wikipedia": null,
+    "citations": 1,
+    "lead_citations": 0,
+    "works": 1
+   }
+  ],
+  "items": [
+   {
+    "id": "url:270towin.com/2024-senate-polls/texas",
+    "source": "270towin.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 48": 1
+    }
+   },
+   {
+    "id": "url:abcnews.go.com/538/adam-kinzinger-muses-love-run-ted-cruz/story?id=104577461",
+    "source": "abcnews.go.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 12": 1
+    }
+   },
+   {
+    "id": "url:activote.net/cruz-and-trump-lead-comfortably-in-texas",
+    "source": "activote.net",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 46": 1
+    }
+   },
+   {
+    "id": "url:activote.net/cruz-extends-lead-in-texas",
+    "source": "activote.net",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 46": 1
+    }
+   },
+   {
+    "id": "url:activote.net/cruz-has-a-small-lead-in-texas",
+    "source": "activote.net",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 48": 1
+    }
+   },
+   {
+    "id": "url:activote.net/cruz-stays-ahead-in-texas",
+    "source": "activote.net",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 46": 1
+    }
+   },
+   {
+    "id": "url:activote.net/cruz-still-ahead-in-texas",
+    "source": "activote.net",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 46": 1
+    }
+   },
+   {
+    "id": "url:afacwa.org/afa_endorsed_candidates_for_2024_election",
+    "source": "afacwa.org",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en",
+    "added_by": {
+     "Editor 45": 1
+    }
+   },
+   {
+    "id": "url:afpm.org/sites/default/files/issue_resources/AFPM%208%20States%20Survey%20Memo-FINAL.pdf",
+    "source": "afpm.org",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 46": 1
+    }
+   },
+   {
+    "id": "url:amarillopioneer.com/blog/2024/4/15/texas-libertarian-party-announces-statewide-nominees",
+    "source": "amarillopioneer.com",
+    "citations": 1,
+    "flags": [
+     "opinion"
+    ],
+    "added_by": {
+     "Editor 7": 1
+    }
+   },
+   {
+    "id": "url:apnews.com/article/texas-senate-race-call-explainer-cruz-allred-2d942196ee0dee5d4c77fa3b88d20196",
+    "source": "apnews.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en",
+    "added_by": {
+     "Editor 14": 1
+    }
+   },
+   {
+    "id": "url:austinchronicle.com/news/2024-02-16/march-2024-primary-election-endorsements",
+    "source": "austinchronicle.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 45": 1
+    }
+   },
+   {
+    "id": "url:austinchronicle.com/news/2024-10-18/endorsements-for-the-november-2024-general-election",
+    "source": "austinchronicle.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 50": 1
+    }
+   },
+   {
+    "id": "url:axios.com/local/dallas/2024/10/30/mark-cuban-vice-president-harris",
+    "source": "axios.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 12": 1
+    }
+   },
+   {
+    "id": "url:boltonpac.com/our-candidates",
+    "source": "boltonpac.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 66": 1
+    }
+   },
+   {
+    "id": "url:candidate.texas-election.com/Elections/getQualifiedCandidatesInfo.do",
+    "source": "texas-election.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:candidates.aipacpac.org/page/featured",
+    "source": "aipacpac.org",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 47": 1
+    }
+   },
+   {
+    "id": "url:cdn.atlasintel.org/616d82d3-e782-4d6e-b690-9eed1523fe75.pdf",
+    "source": "atlasintel.org",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 51": 1
+    }
+   },
+   {
+    "id": "url:centerforpolitics.org/crystalball/2024-senate",
+    "source": "centerforpolitics.org",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 56": 1
+    }
+   },
+   {
+    "id": "url:cleanprosperousamerica.org/wp-content/uploads/CaPA-FL-TX-Poll-Memo-Sept-29-2024.pdf",
+    "source": "cleanprosperousamerica.org",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 54": 1
+    }
+   },
+   {
+    "id": "url:cleanprosperousamerica.org/wp-content/uploads/CaPA-FL-TX-Polls-Aug-2024.pdf",
+    "source": "cleanprosperousamerica.org",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 48": 1
+    }
+   },
+   {
+    "id": "url:clubforgrowth.org/club-for-growth-pac-endorses-cruz-in-tx-senate-race",
+    "source": "clubforgrowth.org",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 45": 1
+    }
+   },
+   {
+    "id": "url:cookpolitical.com/ratings/senate-race-ratings",
+    "source": "cookpolitical.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en",
+    "added_by": {
+     "Editor 56": 1
+    }
+   },
+   {
+    "id": "url:cygn.al/wp-content/uploads/2024/04/Cygnal-Statewide-Deck-April-24.pdf",
+    "source": "cygn.al",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 46": 1
+    }
+   },
+   {
+    "id": "url:dailykos.com/stories/2023/8/15/2187537/-TX-Sen-Jon-Tester-helps-Colin-Allred-D-fire-Ted-Cruz",
+    "source": "dailykos.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 61": 1
+    }
+   },
+   {
+    "id": "url:dallasnews.com/news/politics/2023/05/03/rep-colin-allred-announces-senate-bid-to-oust-ted-cruz",
+    "source": "dallasnews.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en",
+    "added_by": {
+     "Editor 52": 1
+    }
+   },
+   {
+    "id": "url:dallasnews.com/news/politics/2023/07/05/ted-cruz-colin-allred-preparing-for-senate-showdown-as-others-plan-to-join-the-race",
+    "source": "dallasnews.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 79": 1
+    }
+   },
+   {
+    "id": "url:dallasnews.com/news/politics/2024/11/07/hispanic-voters-shift-to-the-right-leaving-texas-democrats-seeking-answers",
+    "source": "dallasnews.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 2": 1
+    }
+   },
+   {
+    "id": "url:dallasnews.com/opinion/editorials/2024/02/18/our-recommendation-in-the-democratic-primary-for-us-senate",
+    "source": "dallasnews.com",
+    "citations": 1,
+    "flags": [
+     "opinion"
+    ],
+    "language_as_cited": "en",
+    "added_by": {
+     "Editor 45": 1
+    }
+   },
+   {
+    "id": "url:dallasnews.com/opinion/we-recommend/2024/10/20/our-recommendation-for-us-senate",
+    "source": "dallasnews.com",
+    "citations": 1,
+    "flags": [
+     "opinion"
+    ],
+    "added_by": {
+     "Editor 50": 1
+    }
+   },
+   {
+    "id": "url:davesredistricting.org/maps",
+    "source": "davesredistricting.org",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 16": 1
+    }
+   },
+   {
+    "id": "url:diamondeyecandidatereport.weebly.com/home/more-democrats-announce-for-2024-texas-senate-race",
+    "source": "weebly.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:diamondeyecandidatereport.weebly.com/home/texas-house-candidate-roundup-may-30-2023",
+    "source": "weebly.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:diamondeyecandidatereport.weebly.com/home/these-four-democrats-want-to-unseat-ted-cruz",
+    "source": "weebly.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:elections-daily.com/election-ratings",
+    "source": "elections-daily.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 57": 1
+    }
+   },
+   {
+    "id": "url:elections2024.thehill.com/predictions/senate",
+    "source": "thehill.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 67": 1
+    }
+   },
+   {
+    "id": "url:elections2024.thehill.com/texas/texas-senate-cruz-allred",
+    "source": "thehill.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 48": 1
+    }
+   },
+   {
+    "id": "url:elpasotimes.com/story/news/politics/2023/08/10/u-s-rep-colin-allred-campaign-nabs-support-from-el-paso-veronica-escobar-cesar-blanco-ted-cruz/70569514007",
+    "source": "elpasotimes.com",
+    "citations": 1,
+    "flags": [
+     "paywall_or_registration"
+    ],
+    "added_by": {
+     "Editor 7": 1
+    }
+   },
+   {
+    "id": "url:elpasotimes.com/story/news/politics/elections/2023/07/03/retired-navy-captain-democrat-steven-keough-looks-to-unseat-texas-republican-sen-ted-cruz-next-year/70365023007",
+    "source": "elpasotimes.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:elpasotimes.com/story/news/politics/elections/2023/10/10/democratic-texas-sen-roland-gutierrez-looking-to-move-to-u-s-senate/70993326007",
+    "source": "elpasotimes.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 47": 1
+    }
+   },
+   {
+    "id": "url:elpasotimes.com/story/news/politics/elections/2024/02/07/election-2024-eastside-democrats-endorsements-for-super-tuesday/72507690007",
+    "source": "elpasotimes.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 47": 1
+    }
+   },
+   {
+    "id": "url:emersoncollegepolling.com/october-2024-texas-poll-trump-53-harris-46",
+    "source": "emersoncollegepolling.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 78": 1
+    }
+   },
+   {
+    "id": "url:emersoncollegepolling.com/september-2024-texas-poll-trump-51-harris-46cruz-49-allred-45",
+    "source": "emersoncollegepolling.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 46": 1
+    }
+   },
+   {
+    "id": "url:emersoncollegepolling.com/september-state-polling-california-florida-ohio-texas",
+    "source": "emersoncollegepolling.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 46": 1
+    }
+   },
+   {
+    "id": "url:emersoncollegepolling.com/texas-2024-poll-allred-leads-democratic-senate-primary-plurality-are-undecided",
+    "source": "emersoncollegepolling.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 46": 1
+    }
+   },
+   {
+    "id": "url:emgagepac.org/emgage-pac-endorsements-for-2024-march-primary-elections",
+    "source": "emgagepac.org",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 45": 1
+    }
+   },
+   {
+    "id": "url:endcitizensunited.org/latest-news/press-releases/endorses-congressman-colin-allred",
+    "source": "endcitizensunited.org",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 45": 1
+    }
+   },
+   {
+    "id": "url:expressnews.com/opinion/editorial/article/colin-allred-endorsement-senate-19814404.php",
+    "source": "expressnews.com",
+    "citations": 1,
+    "flags": [
+     "opinion"
+    ],
+    "added_by": {
+     "Editor 68": 1
+    }
+   },
+   {
+    "id": "url:expressnews.com/opinion/editorial/article/colin-allred-senate-democrats-18655814.php",
+    "source": "expressnews.com",
+    "citations": 1,
+    "flags": [
+     "opinion"
+    ],
+    "language_as_cited": "en",
+    "added_by": {
+     "Editor 45": 1
+    }
+   },
+   {
+    "id": "url:facebook.com/photo?fbid=776608847844519",
+    "source": "facebook.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 47": 1
+    }
+   },
+   {
+    "id": "url:faupolling.com/wp-content/uploads/2024/10/Mainstreet_TX_Oct_2024_Public.pdf",
+    "source": "faupolling.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 48": 1
+    }
+   },
+   {
+    "id": "url:fec.gov/data/elections/senate/TX/2024",
+    "source": "fec.gov",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 75": 1
+    }
+   },
+   {
+    "id": "url:fightlikehellpac.org",
+    "source": "fightlikehellpac.org",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 22": 1
+    }
+   },
+   {
+    "id": "url:fox4news.com/news/barack-obama-colin-allred-senate-texas.amp",
+    "source": "fox4news.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 2": 1
+    }
+   },
+   {
+    "id": "url:foxnews.com/politics/fox-news-power-rankings-harris-ticks-up-senate-republicans-take-charge",
+    "source": "foxnews.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 60": 1
+    }
+   },
+   {
+    "id": "url:giffords.org/articles/giffords-pac-endorses-colin-allred-for-us-senate",
+    "source": "giffords.org",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 45": 1
+    }
+   },
+   {
+    "id": "url:gilmermirror.com/2024/01/30/in-another-sign-of-strong-momentum-allred-earns-backing-of-texas-afl-cio",
+    "source": "gilmermirror.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 45": 1
+    }
+   },
+   {
+    "id": "url:goodparty.org/blog/article/5-goodparty-org-certified-candidates-running-for-congress-2024",
+    "source": "goodparty.org",
+    "citations": 1,
+    "flags": [
+     "opinion"
+    ],
+    "language_as_cited": "en",
+    "added_by": {
+     "Editor 21": 1
+    }
+   },
+   {
+    "id": "url:houstonchronicle.com/opinion/endorsements/article/allred-colin-democrat-texas-primary-18655703.php",
+    "source": "houstonchronicle.com",
+    "citations": 1,
+    "flags": [
+     "opinion"
+    ],
+    "language_as_cited": "en",
+    "added_by": {
+     "Editor 45": 1
+    }
+   },
+   {
+    "id": "url:houstonchronicle.com/opinion/endorsements/article/colin-allred-ted-cruz-texas-senator-19840911.php",
+    "source": "houstonchronicle.com",
+    "citations": 1,
+    "flags": [
+     "opinion"
+    ],
+    "added_by": {
+     "Editor 50": 1
+    }
+   },
+   {
+    "id": "url:houstonchronicle.com/politics/election/2024/article/willie-nelson-backs-colin-allred-texas-senate-19792621.php",
+    "source": "houstonchronicle.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 49": 1
+    }
+   },
+   {
+    "id": "url:hrc.org/press-releases/human-rights-campaign-pac-endorses-u-s-representative-colin-allred-for-senate",
+    "source": "hrc.org",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 45": 1
+    }
+   },
+   {
+    "id": "url:independent.co.uk/news/world/americas/us-politics/texas-senate-results-ted-cruz-colin-allred-b2637827.html",
+    "source": "independent.co.uk",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en",
+    "added_by": {
+     "Editor 14": 1
+    }
+   },
+   {
+    "id": "url:insideelections.com/news/article/texas-senate-always-on-democrats-mind",
+    "source": "insideelections.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 52": 1
+    }
+   },
+   {
+    "id": "url:insideelections.com/ratings/senate",
+    "source": "insideelections.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 16": 1
+    }
+   },
+   {
+    "id": "url:instagram.com/p/C3ECqUUOqnn",
+    "source": "instagram.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 45": 1
+    }
+   },
+   {
+    "id": "url:instagram.com/stonewalldemselp/p/C3GmmjFPlYR",
+    "source": "instagram.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 47": 1
+    }
+   },
+   {
+    "id": "url:jacpac.org/story/23/06/28/meet-jacs-2024-candidates",
+    "source": "jacpac.org",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 45": 1
+    }
+   },
+   {
+    "id": "url:jstreet.org/press-releases/j-street-endorses-60-percent-of-senate-and-house-democrats",
+    "source": "jstreet.org",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 10": 1
+    }
+   },
+   {
+    "id": "url:jstreetpac.org/candidate/colin-allred",
+    "source": "jstreetpac.org",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 45": 1
+    }
+   },
+   {
+    "id": "url:kiiitv.com/article/news/local/district-attorney-mark-gonzalez-resigns-to-run-for-us-senate-against-ted-cruz/503-c006bbb9-43cd-4078-9b7c-4a5e861a600b",
+    "source": "kiiitv.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:kxan.com/news/texas-politics/cleat-endorses-sen-ted-cruz-for-reelection",
+    "source": "kxan.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 47": 1
+    }
+   },
+   {
+    "id": "url:latinovictory.org/latino-victory-fund-endorses-texas-slate",
+    "source": "latinovictory.org",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 45": 1
+    }
+   },
+   {
+    "id": "url:lcv.org/media-center/lcv-action-fund-endorses-colin-allred-for-senate",
+    "source": "lcv.org",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 45": 1
+    }
+   },
+   {
+    "id": "url:livableworld.org/meet-the-candidates/senate-candidates",
+    "source": "livableworld.org",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 45": 1
+    }
+   },
+   {
+    "id": "url:manhattan.institute/article/testing-texas",
+    "source": "manhattan.institute",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 46": 1
+    }
+   },
+   {
+    "id": "url:maristpoll.marist.edu/polls/the-battleground-2024-texas",
+    "source": "maristpoll.marist.edu",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 46": 1
+    }
+   },
+   {
+    "id": "url:maristpoll.marist.edu/polls/u-s-presidential-contest-texas-october-2024",
+    "source": "maristpoll.marist.edu",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 51": 1
+    }
+   },
+   {
+    "id": "url:marshallnewsmessenger.com/2024/02/27/andrus-misses-primary-election-will-be-write-in-candidate-for-u-s-senate-seat",
+    "source": "marshallnewsmessenger.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en",
+    "added_by": {
+     "Editor 13": 1
+    }
+   },
+   {
+    "id": "url:marylandmatters.org/2024/09/05/munoz-quits-house-huntley-steps-up-to-council-boafo-launches-federal-pac-more-moves",
+    "source": "marylandmatters.org",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 22": 1
+    }
+   },
+   {
+    "id": "url:marylandmatters.org/briefs/dunns-new-pac-backs-10-democratic-senate-candidates-including-alsobrooks",
+    "source": "marylandmatters.org",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 22": 1
+    }
+   },
+   {
+    "id": "url:midwestvaluespac.org/why-i-hate-ted-cruz",
+    "source": "midwestvaluespac.org",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 45": 1
+    }
+   },
+   {
+    "id": "url:myrgv.com/featured/2023/09/11/ted-cruz-challenger-roland-gutierrez-stumps-in-the-rgv",
+    "source": "myrgv.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 45": 1
+    }
+   },
+   {
+    "id": "url:napolitaninstitute.org/wp-content/uploads/2024/10/GCM24-TX09-Mini-Toplines-Senate.pdf",
+    "source": "napolitaninstitute.org",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 48": 1
+    }
+   },
+   {
+    "id": "url:natpublicaffairs.com/wp-content/uploads/2024/02/TX-Statewide-Topline-Final-02092024-For-Release.pdf",
+    "source": "natpublicaffairs.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 46": 1
+    }
+   },
+   {
+    "id": "url:nbcnews.com/politics/2024-elections/texas-senate-results",
+    "source": "nbcnews.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 76": 1
+    }
+   },
+   {
+    "id": "url:ncpssm.org/documents/news-releases/leading-social-security-medicare-advocacy-group-proudly-endorses-colin-allred-for-u-s-senate",
+    "source": "ncpssm.org",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 45": 1
+    }
+   },
+   {
+    "id": "url:ncsl.org/elections-and-campaigns/2024-state-primary-election-dates",
+    "source": "ncsl.org",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 3": 1
+    }
+   },
+   {
+    "id": "url:newsweek.com/colin-allred-republican-support-texas-senate-ted-cruz-1963982",
+    "source": "newsweek.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 59": 1
+    }
+   },
+   {
+    "id": "url:newsweek.com/texas-senate-election-ted-cruz-colin-allred-1957284",
+    "source": "newsweek.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en",
+    "added_by": {
+     "Editor 15": 1
+    }
+   },
+   {
+    "id": "url:nrapvf.org/grades/texas",
+    "source": "nrapvf.org",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en",
+    "added_by": {
+     "Editor 45": 1
+    }
+   },
+   {
+    "id": "url:nytimes.com/2022/11/09/us/texas-beto-orourke-abbott.html",
+    "source": "nytimes.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 3": 1
+    }
+   },
+   {
+    "id": "url:nytimes.com/2024/09/24/us/politics/ted-cruz-colin-allred-texas-senate.html",
+    "source": "nytimes.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 70": 1
+    }
+   },
+   {
+    "id": "url:nytimes.com/2025/07/01/us/politics/colin-allred-texas-senate.html",
+    "source": "nytimes.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 10": 1
+    }
+   },
+   {
+    "id": "url:nytimes.com/elections/2012/results/states/texas.html",
+    "source": "nytimes.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 3": 1
+    }
+   },
+   {
+    "id": "url:nytimes.com/interactive/2024/03/05/us/elections/results-texas-us-senate.html",
+    "source": "nytimes.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 46": 1
+    }
+   },
+   {
+    "id": "url:nytimes.com/interactive/2024/10/10/us/elections/times-siena-poll-florida-crosstabs.html",
+    "source": "nytimes.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 48": 1
+    }
+   },
+   {
+    "id": "url:nytimes.com/interactive/2024/10/28/us/elections/times-siena-texas-poll-crosstabs.html",
+    "source": "nytimes.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 46": 1
+    }
+   },
+   {
+    "id": "url:nytimes.com/interactive/2024/11/05/us/elections/results-texas-us-senate.html",
+    "source": "nytimes.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 2": 1
+    }
+   },
+   {
+    "id": "url:pac.thecaucus.org/endorsements",
+    "source": "thecaucus.org",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 45": 1
+    }
+   },
+   {
+    "id": "url:peaceaction.org/2024endorsements",
+    "source": "peaceaction.org",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 45": 1
+    }
+   },
+   {
+    "id": "url:peoplefor.org/people-american-way-endorses-seven-new-and-incumbent-senate-candidates-defend-senate-campaign",
+    "source": "peoplefor.org",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 22": 1
+    }
+   },
+   {
+    "id": "url:politico.com/election-results/2018/texas/senate",
+    "source": "politico.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en",
+    "added_by": {
+     "Editor 10": 1
+    }
+   },
+   {
+    "id": "url:politico.com/f?id=00000192-d09b-d2db-afbb-d99f35ce0000",
+    "source": "politico.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 46": 1
+    }
+   },
+   {
+    "id": "url:politico.com/live-updates/2024/10/15/2024-elections-live-coverage-updates-analysis/john-thune-super-pac-donations-00183824",
+    "source": "politico.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en",
+    "added_by": {
+     "Editor 63": 1
+    }
+   },
+   {
+    "id": "url:politico.com/news/2024/09/02/ben-shapiro-gop-fundraiser-00176942?nid=0000014f-1646-d88f-a1cf-5f46b7bd0000&nlid=630318&nname=playbook&nrid=0000014e-f0f2-dd93-ad7f-f8f7d7c80003",
+    "source": "politico.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 77": 1
+    }
+   },
+   {
+    "id": "url:politico.com/newsletters/playbook/2024/09/10/another-gop-spending-plan-goes-poof-00178132",
+    "source": "politico.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 22": 1
+    }
+   },
+   {
+    "id": "url:pro.morningconsult.com/trackers/2024-election-state-polls",
+    "source": "morningconsult.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 48": 1
+    }
+   },
+   {
+    "id": "url:projects.cnalysis.com/23-24/senate",
+    "source": "cnalysis.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 73": 1
+    }
+   },
+   {
+    "id": "url:projects.fivethirtyeight.com/2024-election-forecast/senate",
+    "source": "fivethirtyeight.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 54": 1
+    }
+   },
+   {
+    "id": "url:projects.fivethirtyeight.com/polls/20240229_TX_UTTyler.pdf",
+    "source": "fivethirtyeight.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 53": 1
+    }
+   },
+   {
+    "id": "url:projects.fivethirtyeight.com/polls/senate/2024/texas/general",
+    "source": "fivethirtyeight.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 46": 1
+    }
+   },
+   {
+    "id": "url:quantus.substack.com/p/trump-and-cruz-lead-comfortably-in",
+    "source": "substack.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 46": 1
+    }
+   },
+   {
+    "id": "url:rasmussenreports.com/public_content/politics/partner_surveys/election_2024_harris_48_trump_46_in_virginia_cruz_4_in_texas",
+    "source": "rasmussenreports.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 51": 1
+    }
+   },
+   {
+    "id": "url:realclearpolling.com/maps/senate/2024/toss-up",
+    "source": "realclearpolling.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 57": 1
+    }
+   },
+   {
+    "id": "url:realclearpolling.com/polls/senate/general/2024/texas/cruz-vs-allred",
+    "source": "realclearpolling.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 31": 1
+    }
+   },
+   {
+    "id": "url:results.texas-election.com/races",
+    "source": "texas-election.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 46": 1
+    }
+   },
+   {
+    "id": "url:retiredamericans.org/retiree-group-endorses-colin-allred-for-election-to-u-s-senate",
+    "source": "retiredamericans.org",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 45": 1
+    }
+   },
+   {
+    "id": "url:rjchq.org/rjc_pac_endorses_champions_of_the_jewish_community_senators_ted_cruz_and_rick_scott_for_re_election",
+    "source": "rjchq.org",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en",
+    "added_by": {
+     "Editor 45": 1
+    }
+   },
+   {
+    "id": "url:rockportdems.org/2023/05/18/moulton-backs-allred-and-promotes-ma-convention",
+    "source": "rockportdems.org",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 62": 1
+    }
+   },
+   {
+    "id": "url:s10294.pcdn.co/wp-content/uploads/2024/10/TX_CMC-Rose-State-Poll-Fact-Sheet_RFR.pdf",
+    "source": "pcdn.co",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 48": 1
+    }
+   },
+   {
+    "id": "url:s3.documentcloud.org/documents/24679427/2024_texas_lyceum_poll_toplines.pdf",
+    "source": "documentcloud.org",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 46": 1
+    }
+   },
+   {
+    "id": "url:s3.documentcloud.org/documents/24766602/202406_poll_topline.pdf",
+    "source": "documentcloud.org",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 46": 1
+    }
+   },
+   {
+    "id": "url:sanantonioreport.org/san-antonio-bexar-county-leaders-back-democrat-colin-allred",
+    "source": "sanantonioreport.org",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 49": 1
+    }
+   },
+   {
+    "id": "url:senateconservatives.com",
+    "source": "senateconservatives.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 45": 1
+    }
+   },
+   {
+    "id": "url:sos.state.tx.us/elections/historical/70-92.shtml",
+    "source": "state.tx.us",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 69": 1
+    }
+   },
+   {
+    "id": "url:split-ticket.org/senate-2024-ratings",
+    "source": "split-ticket.org",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 55": 1
+    }
+   },
+   {
+    "id": "url:star-telegram.com/news/politics-government/state-politics/article293541534.html",
+    "source": "star-telegram.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 24": 1
+    }
+   },
+   {
+    "id": "url:star-telegram.com/opinion/election-recommendations/article285475022.html",
+    "source": "star-telegram.com",
+    "citations": 1,
+    "flags": [
+     "opinion"
+    ],
+    "added_by": {
+     "Editor 45": 1
+    }
+   },
+   {
+    "id": "url:star-telegram.com/opinion/election-recommendations/article294127409.html",
+    "source": "star-telegram.com",
+    "citations": 1,
+    "flags": [
+     "opinion"
+    ],
+    "added_by": {
+     "Editor 50": 1
+    }
+   },
+   {
+    "id": "url:statesman.com/story/opinion/editorials/2024/10/20/endorsement-us-senate-race-candidate-colin-allred-texas-election-2024/75263094007",
+    "source": "statesman.com",
+    "citations": 1,
+    "flags": [
+     "opinion"
+    ],
+    "added_by": {
+     "Editor 50": 1
+    }
+   },
+   {
+    "id": "url:stonewalldemocratsofdallas.org/endorsements",
+    "source": "stonewalldemocratsofdallas.org",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 47": 1
+    }
+   },
+   {
+    "id": "url:stonewallsa.org/blog/2024/1/28/devcwdenzjrdyjkii4s7cp84zxhrzm",
+    "source": "stonewallsa.org",
+    "citations": 1,
+    "flags": [
+     "opinion"
+    ],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 45": 1
+    }
+   },
+   {
+    "id": "url:tampafp.com/new-texas-poll-shows-strong-republican-lead-amid-harriss-rally-and-voter-priorities",
+    "source": "tampafp.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 46": 1
+    }
+   },
+   {
+    "id": "url:texasallianceforlife.org/news/news-release-texas-alliance-for-life-releases-first-round-of-endorsements-in-the-primary-elections",
+    "source": "texasallianceforlife.org",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en",
+    "added_by": {
+     "Editor 45": 1
+    }
+   },
+   {
+    "id": "url:texaspolitics.utexas.edu/blog/donald-trump-maintains-lead-texas-kamala-harris-narrows-gap-amidst-surge-democratic-enthusiasm",
+    "source": "utexas.edu",
+    "citations": 1,
+    "flags": [
+     "opinion"
+    ],
+    "added_by": {
+     "Editor 46": 1
+    }
+   },
+   {
+    "id": "url:texaspolitics.utexas.edu/blog/voting-about-start-texas-trump-and-cruz-maintain-single-digit-leads-new-university-texastexas",
+    "source": "utexas.edu",
+    "citations": 1,
+    "flags": [
+     "opinion"
+    ],
+    "added_by": {
+     "Editor 46": 1
+    }
+   },
+   {
+    "id": "url:texaspolitics.utexas.edu/sites/texaspolitics.utexas.edu/files/202310_poll_topline.pdf",
+    "source": "utexas.edu",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 7": 1
+    }
+   },
+   {
+    "id": "url:texaspolitics.utexas.edu/sites/texaspolitics.utexas.edu/files/202312_poll_topline.pdf",
+    "source": "utexas.edu",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 7": 1
+    }
+   },
+   {
+    "id": "url:texaspolitics.utexas.edu/sites/texaspolitics.utexas.edu/files/202402_poll_topline.pdf",
+    "source": "utexas.edu",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 53": 1
+    }
+   },
+   {
+    "id": "url:texaspolitics.utexas.edu/sites/texaspolitics.utexas.edu/files/202404_poll_topline.pdf",
+    "source": "utexas.edu",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 65": 1
+    }
+   },
+   {
+    "id": "url:texasprogressivecaucus.org/endorsements",
+    "source": "texasprogressivecaucus.org",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 47": 1
+    }
+   },
+   {
+    "id": "url:texaspublicopinionresearch.substack.com/p/introducing-texas-public-opinion",
+    "source": "substack.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 46": 1
+    }
+   },
+   {
+    "id": "url:texasscorecard.com/wp-content/uploads/2024/10/tx-gun-rights-poll.pdf",
+    "source": "texasscorecard.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 48": 1
+    }
+   },
+   {
+    "id": "url:texastribune.org/2022/09/23/dan-crenshaw-texas-tribune-festival",
+    "source": "texastribune.org",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 19": 1
+    }
+   },
+   {
+    "id": "url:texastribune.org/2022/11/09/texas-election-results",
+    "source": "texastribune.org",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en",
+    "added_by": {
+     "Editor 4": 1
+    }
+   },
+   {
+    "id": "url:texastribune.org/2022/11/19/ted-cruz-third-term-senate",
+    "source": "texastribune.org",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 52": 1
+    }
+   },
+   {
+    "id": "url:texastribune.org/2023/03/30/ted-cruz-colin-allred-beto-orourke-senate-2024",
+    "source": "texastribune.org",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en",
+    "added_by": {
+     "Editor 3": 1
+    }
+   },
+   {
+    "id": "url:texastribune.org/2023/05/03/ted-cruz-colin-allred-2024",
+    "source": "texastribune.org",
+    "citations": 2,
+    "flags": [],
+    "added_by": {
+     "Editor 1": 1,
+     "Editor 45": 1
+    }
+   },
+   {
+    "id": "url:texastribune.org/2023/07/10/roland-gutierrez-election-ted-cruz",
+    "source": "texastribune.org",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 12": 1
+    }
+   },
+   {
+    "id": "url:texastribune.org/2023/09/09/carl-sherman-2024-senate-democrat",
+    "source": "texastribune.org",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 1": 1
+    }
+   },
+   {
+    "id": "url:texastribune.org/2024/01/26/colin-allred-roland-gutierrez-democratic-senate-primary",
+    "source": "texastribune.org",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en",
+    "added_by": {
+     "Editor 45": 1
+    }
+   },
+   {
+    "id": "url:texastribune.org/2024/03/05/colin-allred-roland-gutierrez-ted-cruz-primary",
+    "source": "texastribune.org",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 71": 1
+    }
+   },
+   {
+    "id": "url:texastribune.org/2024/08/06/ted-cruz-kim-ogg-houston-senate-endorsement-democrat",
+    "source": "texastribune.org",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 55": 1
+    }
+   },
+   {
+    "id": "url:texastribune.org/2024/09/09/walz-texas-senate-race",
+    "source": "texastribune.org",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 49": 1
+    }
+   },
+   {
+    "id": "url:texastribune.org/2024/10/02/adam-kinzinger-republicans-colin-allred-texas",
+    "source": "texastribune.org",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 49": 1
+    }
+   },
+   {
+    "id": "url:texastribune.org/2024/10/22/kamala-harris-texas-visit-houston-rally",
+    "source": "texastribune.org",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 49": 1
+    }
+   },
+   {
+    "id": "url:texastribune.org/2025/07/01/colin-allred-texas-us-senate-democrat-2026-cornyn-paxton",
+    "source": "texastribune.org",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en",
+    "added_by": {
+     "Editor 10": 1
+    }
+   },
+   {
+    "id": "url:thecentersquare.com/texas/article_92598e34-6a50-11ef-8de9-631cdbfceac2.html",
+    "source": "thecentersquare.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 7": 1
+    }
+   },
+   {
+    "id": "url:thehill.com/homenews/campaign/4964222-ted-cruz-wins-texas-senate-race",
+    "source": "thehill.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 14": 1
+    }
+   },
+   {
+    "id": "url:themessenger.com/politics/hispanic-caucus-super-pac-under-fire-from-democrats-for-not-backing-latino-candidate-to-unseat-sen-ted-cruz-exclusive",
+    "source": "themessenger.com",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 47": 1
+    }
+   },
+   {
+    "id": "url:tpaction.com/endorsements",
+    "source": "tpaction.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 45": 1
+    }
+   },
+   {
+    "id": "url:txhpf.org/wp-content/uploads/2023/05/TxHPF-Spring23-Report-2.pdf",
+    "source": "txhpf.org",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 46": 1
+    }
+   },
+   {
+    "id": "url:txhpf.org/wp-content/uploads/2024/04/TXHPFPresidentSenateApr2024.pdf",
+    "source": "txhpf.org",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 64": 1
+    }
+   },
+   {
+    "id": "url:uawendorsements.org/map/texas",
+    "source": "uawendorsements.org",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en-US",
+    "added_by": {
+     "Editor 45": 1
+    }
+   },
+   {
+    "id": "url:uh.edu/hobby/texas2024/statewide.pdf",
+    "source": "uh.edu",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 48": 1
+    }
+   },
+   {
+    "id": "url:uh.edu/hobby/txprimary2024/president.pdf",
+    "source": "uh.edu",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 46": 1
+    }
+   },
+   {
+    "id": "url:uh.edu/hobby/txtrends/2024",
+    "source": "uh.edu",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 46": 1
+    }
+   },
+   {
+    "id": "url:uh.edu/hobby/txtrends/election.pdf",
+    "source": "uh.edu",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 46": 1
+    }
+   },
+   {
+    "id": "url:uttyler.edu/academics/colleges-schools/arts-sciences/departments/political-science/files/pollingcenter/center-for-opinion-research-june-2024-poll.pdf",
+    "source": "uttyler.edu",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 7": 1
+    }
+   },
+   {
+    "id": "url:uttyler.edu/academics/colleges-schools/arts-sciences/departments/political-science/files/uttyler-poll-202410-v2.pdf",
+    "source": "uttyler.edu",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 48": 1
+    }
+   },
+   {
+    "id": "url:uttyler.edu/politicalscience/files/uttylerpoll_2023may.pdf",
+    "source": "uttyler.edu",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 7": 1
+    }
+   },
+   {
+    "id": "url:wfaa.com/article/news/politics/elections/donald-trump-ted-cruz-endorsement-texas-debate-colin-allred-kamala-harris/287-aa623349-d17d-4646-ab2f-e2771701f808",
+    "source": "wfaa.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 72": 1
+    }
+   },
+   {
+    "id": "url:wfaa.com/article/news/politics/elections/liz-cheney-endorses-democrat-colin-allred-texas-senate-race-father-will-vote-kamala-harris/287-a053aa95-60aa-467a-b313-5187f0821e84",
+    "source": "wfaa.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 74": 1
+    }
+   },
+   {
+    "id": "url:wfaa.com/article/news/politics/ted-cruz-colin-allred-poll-results-texas-us-senate-race-election/287-e11369f6-de65-4178-ac62-c5bc525e5c8f",
+    "source": "wfaa.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 46": 1
+    }
+   },
+   {
+    "id": "url:x.com/PatrickSvitek/status/1848418777823617444",
+    "source": "x.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 28": 1
+    }
+   },
+   {
+    "id": "url:x.com/jamestalarico/status/1852355660945543428",
+    "source": "x.com",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 58": 1
+    }
+   },
+   {
+    "id": "url:yct.org/young-conservatives-of-texas-announces-first-round-of-2024-endorsements",
+    "source": "yct.org",
+    "citations": 1,
+    "flags": [],
+    "language_as_cited": "en",
+    "added_by": {
+     "Editor 45": 1
+    }
+   },
+   {
+    "id": "url:youtube.com/watch?v=T_dxwNWG1Ho",
+    "source": "name:robert reich",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 58": 1
+    }
+   },
+   {
+    "id": "url:youtube.com/watch?v=c81VAcf9-_4",
+    "source": "name:youtube",
+    "citations": 1,
+    "flags": [],
+    "added_by": {
+     "Editor 80": 1
+    }
+   }
+  ],
+  "bundles": {
+   "sentences_with_footnotes": 35,
+   "sentences_by_works_cited": {
+    "1": 27,
+    "2-4": 8,
+    "5-9": 0,
+    "10 or more": 0
+   },
+   "largest": []
+  }
+ },
+ "changes": {
+  "words_removed": 84582,
+  "words_removed_later_restored": 61452,
+  "source_links_removed": 363,
+  "editors_removing": 234,
+  "listed_terms": {
+   "inserted": {
+    "WTW: editorializing": 11,
+    "WTW: euphemisms": 10,
+    "WTW: puffery": 26,
+    "WTW: synonyms for said": 6,
+    "contested: gender and sexuality": 1,
+    "contested: political labels": 2,
+    "contested: stances on Israel, Jews and Muslims": 2,
+    "contested: territory and control": 1
+   },
+   "removed": {
+    "WTW: editorializing": 17,
+    "WTW: euphemisms": 16,
+    "WTW: puffery": 55,
+    "WTW: synonyms for said": 13,
+    "contested: political labels": 6,
+    "contested: stances on Israel, Jews and Muslims": 6,
+    "contested: territory and control": 1
+   }
+  },
+  "lists": {
+   "words_to_watch": {
+    "revision": 1382059772,
+    "url": "https://en.wikipedia.org/w/index.php?oldid=1382059772",
+    "sha256": "21e24e2898750322164b24947621630845d75cf8dd5adf3ec8cd860152449ea3"
+   },
+   "contested_terms": {
+    "sha256": "944606776be20b6b77dceb3ee5f6a29f8f5e196bf93cc16a4b6f2db6efe600c1"
+   }
+  },
+  "editors": [
+   {
+    "label": "Editor 81",
+    "words_removed": 42409,
+    "others_words_removed": 42402,
+    "words_removed_later_restored": 39948,
+    "removing_revisions": 6,
+    "sources_removed": {
+     "nbcnews.com": 3,
+     "nytimes.com": 2,
+     "texastribune.org": 2,
+     "politico.com": 1
+    },
+    "terms_inserted": {
+     "WTW: editorializing": {
+      "only": 1
+     },
+     "contested: territory and control": {
+      "occupied": 1
+     }
+    },
+    "terms_removed": {
+     "WTW: editorializing": {
+      "only": 1
+     },
+     "WTW: synonyms for said": {
+      "speculate": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1283427039",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1283205422",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1283269626",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1267955596",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1261141193"
+    ]
+   },
+   {
+    "label": "Editor 82",
+    "words_removed": 9337,
+    "others_words_removed": 9337,
+    "words_removed_later_restored": 9337,
+    "removing_revisions": 17,
+    "sources_removed": {
+     "texastribune.org": 10,
+     "utexas.edu": 6,
+     "elpasotimes.com": 4,
+     "fec.gov": 4,
+     "nytimes.com": 4,
+     "aipacpac.org": 3,
+     "archive.org": 3,
+     "clubforgrowth.org": 3,
+     "go.com": 3,
+     "kxan.com": 3,
+     "nrapvf.org": 3,
+     "rjchq.org": 3,
+     "senateconservatives.com": 3,
+     "texas-election.com": 3,
+     "texasallianceforlife.org": 3,
+     "tpaction.com": 3,
+     "yct.org": 3,
+     "dallasnews.com": 2,
+     "instagram.com": 2,
+     "politico.com": 2,
+     "themessenger.com": 2,
+     "afacwa.org": 1,
+     "austinchronicle.com": 1,
+     "colinallred.com": 1,
+     "collectivepac.org": 1,
+     "dailykos.com": 1,
+     "emersoncollegepolling.com": 1,
+     "emgagepac.org": 1,
+     "endcitizensunited.org": 1,
+     "expressnews.com": 1,
+     "facebook.com": 1,
+     "fivethirtyeight.com": 1,
+     "gilmermirror.com": 1,
+     "houstonchronicle.com": 1,
+     "hrc.org": 1,
+     "insideelections.com": 1,
+     "jacpac.org": 1,
+     "jstreetpac.org": 1,
+     "kiiitv.com": 1,
+     "latinovictory.org": 1,
+     "lcv.org": 1,
+     "livableworld.org": 1,
+     "midwestvaluespac.org": 1,
+     "myrgv.com": 1,
+     "ncpssm.org": 1,
+     "peaceaction.org": 1,
+     "star-telegram.com": 1,
+     "stonewalldemocratsofdallas.org": 1,
+     "stonewallsa.org": 1,
+     "tedcruz.org": 1,
+     "texasprogressivecaucus.org": 1,
+     "thecaucus.org": 1,
+     "txhpf.org": 1,
+     "uawendorsements.org": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: editorializing": {
+      "only": 2
+     },
+     "WTW: euphemisms": {
+      "challenge": 3
+     },
+     "WTW: puffery": {
+      "best": 2,
+      "great": 1,
+      "leading": 2,
+      "popular": 13
+     },
+     "WTW: synonyms for said": {
+      "confirm": 3,
+      "find": 1,
+      "note": 1
+     },
+     "contested: political labels": {
+      "woke": 3
+     },
+     "contested: stances on Israel, Jews and Muslims": {
+      "pro-israel": 3
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1219017080",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1219016621",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1219020245",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1219021347",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1219016476"
+    ]
+   },
+   {
+    "label": "Editor 83",
+    "words_removed": 8441,
+    "others_words_removed": 8441,
+    "words_removed_later_restored": 8402,
+    "removing_revisions": 20,
+    "sources_removed": {
+     "texastribune.org": 12,
+     "nytimes.com": 6,
+     "utexas.edu": 5,
+     "elpasotimes.com": 4,
+     "fec.gov": 4,
+     "politico.com": 3,
+     "aipacpac.org": 2,
+     "archive.org": 2,
+     "clubforgrowth.org": 2,
+     "dallasnews.com": 2,
+     "go.com": 2,
+     "instagram.com": 2,
+     "kxan.com": 2,
+     "nrapvf.org": 2,
+     "rjchq.org": 2,
+     "senateconservatives.com": 2,
+     "texas-election.com": 2,
+     "texasallianceforlife.org": 2,
+     "themessenger.com": 2,
+     "tpaction.com": 2,
+     "yct.org": 2,
+     "afacwa.org": 1,
+     "austinchronicle.com": 1,
+     "boltonpac.com": 1,
+     "cbsnews.com": 1,
+     "colinallred.com": 1,
+     "collectivepac.org": 1,
+     "dailykos.com": 1,
+     "emersoncollegepolling.com": 1,
+     "emgagepac.org": 1,
+     "endcitizensunited.org": 1,
+     "expressnews.com": 1,
+     "facebook.com": 1,
+     "fivethirtyeight.com": 1,
+     "gilmermirror.com": 1,
+     "houstonchronicle.com": 1,
+     "hrc.org": 1,
+     "insideelections.com": 1,
+     "jacpac.org": 1,
+     "jstreetpac.org": 1,
+     "kiiitv.com": 1,
+     "latinovictory.org": 1,
+     "lcv.org": 1,
+     "livableworld.org": 1,
+     "midwestvaluespac.org": 1,
+     "myrgv.com": 1,
+     "ncpssm.org": 1,
+     "ncsl.org": 1,
+     "peaceaction.org": 1,
+     "star-telegram.com": 1,
+     "stonewalldemocratsofdallas.org": 1,
+     "stonewallsa.org": 1,
+     "tedcruz.org": 1,
+     "texasprogressivecaucus.org": 1,
+     "thecaucus.org": 1,
+     "txhpf.org": 1,
+     "uawendorsements.org": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: editorializing": {
+      "only": 3
+     },
+     "WTW: euphemisms": {
+      "challenge": 4
+     },
+     "WTW: puffery": {
+      "best": 2,
+      "great": 1,
+      "leading": 2,
+      "popular": 1
+     },
+     "WTW: synonyms for said": {
+      "confirm": 2,
+      "find": 1,
+      "note": 1,
+      "speculate": 1
+     },
+     "contested: political labels": {
+      "woke": 2
+     },
+     "contested: stances on Israel, Jews and Muslims": {
+      "pro-israel": 2
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1228606521",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1228606318",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1233097280",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1243031979",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1228606252"
+    ]
+   },
+   {
+    "label": "Editor 1",
+    "words_removed": 6680,
+    "others_words_removed": 5947,
+    "words_removed_later_restored": 604,
+    "removing_revisions": 90,
+    "sources_removed": {
+     "serveamericapac.com": 6,
+     "dallasnews.com": 5,
+     "twitter.com": 3,
+     "collectivepac.org": 2,
+     "expressnews.com": 2,
+     "fec.gov": 2,
+     "kxan.com": 2,
+     "afacwa.org": 1,
+     "aipacpac.org": 1,
+     "businessinsider.com": 1,
+     "cbsaustin.com": 1,
+     "clubforgrowth.org": 1,
+     "dailykos.com": 1,
+     "democratsserve.org": 1,
+     "diamondeyecandidatereport.com": 1,
+     "elpasotimes.com": 1,
+     "endcitizensunited.org": 1,
+     "gilmermirror.com": 1,
+     "google.com": 1,
+     "houstonchronicle.com": 1,
+     "hrc.org": 1,
+     "instagram.com": 1,
+     "jacpac.org": 1,
+     "jewishdems.org": 1,
+     "jstreetpac.org": 1,
+     "justthenews.com": 1,
+     "ktalnews.com": 1,
+     "lcv.org": 1,
+     "livableworld.org": 1,
+     "midwestvaluespac.org": 1,
+     "ncpssm.org": 1,
+     "nowpac.org": 1,
+     "nrapvf.org": 1,
+     "peaceaction.org": 1,
+     "plannedparenthoodaction.org": 1,
+     "politico.com": 1,
+     "politicususa.com": 1,
+     "reproductivefreedomforall.org": 1,
+     "rjchq.org": 1,
+     "rockportdems.org": 1,
+     "senateconservatives.com": 1,
+     "split-ticket.org": 1,
+     "star-telegram.com": 1,
+     "texasallianceforlife.org": 1,
+     "texasmonthly.com": 1,
+     "texassignal.com": 1,
+     "texastribune.org": 1,
+     "thecentersquare.com": 1,
+     "themessenger.com": 1,
+     "tpaction.com": 1,
+     "txsolidarity.party": 1,
+     "uawendorsements.org": 1,
+     "uschamber.com": 1,
+     "wispolitics.com": 1,
+     "yct.org": 1
+    },
+    "terms_inserted": {
+     "WTW: editorializing": {
+      "only": 2
+     },
+     "WTW: euphemisms": {
+      "challenge": 3
+     },
+     "WTW: synonyms for said": {
+      "confirm": 1,
+      "speculate": 1
+     }
+    },
+    "terms_removed": {
+     "WTW: editorializing": {
+      "only": 2
+     },
+     "WTW: euphemisms": {
+      "challenge": 5
+     },
+     "WTW: puffery": {
+      "best": 2,
+      "leading": 2,
+      "popular": 1
+     },
+     "WTW: synonyms for said": {
+      "speculate": 1
+     },
+     "contested: stances on Israel, Jews and Muslims": {
+      "pro-israel": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1233615014",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1190506910",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1217786404",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1122845418",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1177806789"
+    ]
+   },
+   {
+    "label": "Editor 76",
+    "words_removed": 3561,
+    "others_words_removed": 35,
+    "words_removed_later_restored": 185,
+    "removing_revisions": 13,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1283097514",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1283028132",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1282948857",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1282929249",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1282940827"
+    ]
+   },
+   {
+    "label": "Editor 10",
+    "words_removed": 3113,
+    "others_words_removed": 3113,
+    "words_removed_later_restored": 4,
+    "removing_revisions": 2,
+    "sources_removed": {
+     "foxnews.com": 1,
+     "politico.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: editorializing": {
+      "only": 1
+     },
+     "contested: territory and control": {
+      "occupied": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1298346116",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1309133546"
+    ]
+   },
+   {
+    "label": "Editor 84",
+    "words_removed": 853,
+    "others_words_removed": 853,
+    "words_removed_later_restored": 533,
+    "removing_revisions": 4,
+    "sources_removed": {
+     "texasobserver.org": 2,
+     "thehofstrachronicle.com": 2,
+     "aldianews.com": 1,
+     "texasmonthly.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1135685873",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1111932283",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1135895406",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1112082832"
+    ]
+   },
+   {
+    "label": "Editor 46",
+    "words_removed": 739,
+    "others_words_removed": 638,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 4,
+    "sources_removed": {
+     "activote.net": 3,
+     "utexas.edu": 2,
+     "emersoncollegepolling.com": 1,
+     "google.com": 1,
+     "natpublicaffairs.com": 1,
+     "nytimes.com": 1,
+     "politico.com": 1,
+     "txhpf.org": 1,
+     "uh.edu": 1
+    },
+    "terms_inserted": {
+     "contested: gender and sexuality": {
+      "transgender": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1281394778",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1281372462",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1230162835",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1196802483"
+    ]
+   },
+   {
+    "label": "Editor 48",
+    "words_removed": 534,
+    "others_words_removed": 68,
+    "words_removed_later_restored": 90,
+    "removing_revisions": 37,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1250477446",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1253913307",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1251359092",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1255486733",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1252929625"
+    ]
+   },
+   {
+    "label": "Editor 20",
+    "words_removed": 419,
+    "others_words_removed": 411,
+    "words_removed_later_restored": 319,
+    "removing_revisions": 11,
+    "sources_removed": {
+     "ncsl.org": 4
+    },
+    "terms_inserted": {
+     "WTW: euphemisms": {
+      "challenge": 1
+     }
+    },
+    "terms_removed": {
+     "WTW: euphemisms": {
+      "challenge": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1249116288",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1248997678",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1248619619",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1248917849",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1240477106"
+    ]
+   },
+   {
+    "label": "Editor 3",
+    "words_removed": 412,
+    "others_words_removed": 354,
+    "words_removed_later_restored": 76,
+    "removing_revisions": 17,
+    "sources_removed": {
+     "fec.gov": 1,
+     "helifortexas.comhelirodriguez-prilliman(d)for": 1,
+     "johnlovefortexas.comjohnloveiii(d)for": 1,
+     "josiahingalls.com": 1,
+     "markagonzalez.com": 1,
+     "politico.com": 1,
+     "texas-election.com": 1,
+     "tracyandrusforsenate.com": 1
+    },
+    "terms_inserted": {
+     "WTW: puffery": {
+      "popular": 6
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1190247994",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1214760991",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1212087485",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1192673300",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1168420942"
+    ]
+   },
+   {
+    "label": "Editor 7",
+    "words_removed": 399,
+    "others_words_removed": 325,
+    "words_removed_later_restored": 30,
+    "removing_revisions": 31,
+    "sources_removed": {
+     "elpasotimes.com": 1,
+     "statesman.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1129501285",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1171229718",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1253460505",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1131545575",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1129130789"
+    ]
+   },
+   {
+    "label": "Editor 85",
+    "words_removed": 389,
+    "others_words_removed": 389,
+    "words_removed_later_restored": 92,
+    "removing_revisions": 3,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: editorializing": {
+      "only": 3
+     },
+     "WTW: synonyms for said": {
+      "find": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1165238575",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1134473894",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1134848834"
+    ]
+   },
+   {
+    "label": "Editor 86",
+    "words_removed": 363,
+    "others_words_removed": 235,
+    "words_removed_later_restored": 35,
+    "removing_revisions": 5,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: puffery": {
+      "popular": 3
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1224086064",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1224086623",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1224086990",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1224085810",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1224086382"
+    ]
+   },
+   {
+    "label": "Editor 87",
+    "words_removed": 337,
+    "others_words_removed": 336,
+    "words_removed_later_restored": 107,
+    "removing_revisions": 9,
+    "sources_removed": {
+     "politicususa.com": 2,
+     "texasmonthly.com": 1,
+     "twitter.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1134240931",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1092861184",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1092861258",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1135920880",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1114152132"
+    ]
+   },
+   {
+    "label": "Editor 2",
+    "words_removed": 326,
+    "others_words_removed": 268,
+    "words_removed_later_restored": 14,
+    "removing_revisions": 19,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: editorializing": {
+      "notably": 1,
+      "only": 1
+     },
+     "WTW: synonyms for said": {
+      "note": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1122006629",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1091062489",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1158625743",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1255708836",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1256088996"
+    ]
+   },
+   {
+    "label": "Editor 16",
+    "words_removed": 315,
+    "others_words_removed": 251,
+    "words_removed_later_restored": 9,
+    "removing_revisions": 15,
+    "sources_removed": {
+     "x.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1300669523",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1139188303",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1133040700",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1277795329",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1093003876"
+    ]
+   },
+   {
+    "label": "Editor 88",
+    "words_removed": 313,
+    "others_words_removed": 313,
+    "words_removed_later_restored": 313,
+    "removing_revisions": 2,
+    "sources_removed": {
+     "aldianews.com": 1,
+     "amarillonaacp.org": 1,
+     "fec.gov": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1121126023",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1121120617"
+    ]
+   },
+   {
+    "label": "Editor 78",
+    "words_removed": 266,
+    "others_words_removed": 266,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "emersoncollegepolling.com": 3,
+     "politico.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1262011330"
+    ]
+   },
+   {
+    "label": "Editor 51",
+    "words_removed": 255,
+    "others_words_removed": 227,
+    "words_removed_later_restored": 26,
+    "removing_revisions": 9,
+    "sources_removed": {
+     "cleanprosperousamerica.org": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1252923363",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1252923819",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1254188235",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1194280814",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1250508075"
+    ]
+   },
+   {
+    "label": "Editor 12",
+    "words_removed": 237,
+    "others_words_removed": 211,
+    "words_removed_later_restored": 37,
+    "removing_revisions": 8,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: puffery": {
+      "great": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1164687884",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1211721382",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1156847373",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1183210529",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1154534316"
+    ]
+   },
+   {
+    "label": "Editor 47",
+    "words_removed": 215,
+    "others_words_removed": 184,
+    "words_removed_later_restored": 1,
+    "removing_revisions": 6,
+    "sources_removed": {
+     "twitter.com": 1
+    },
+    "terms_inserted": {
+     "WTW: synonyms for said": {
+      "find": 1
+     },
+     "contested: political labels": {
+      "populist": 1
+     },
+     "contested: stances on Israel, Jews and Muslims": {
+      "pro-israel": 1
+     }
+    },
+    "terms_removed": {
+     "contested: political labels": {
+      "populist": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1206398046",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1206398960",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1179007030",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1175727274",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1155119744"
+    ]
+   },
+   {
+    "label": "Editor 89",
+    "words_removed": 197,
+    "others_words_removed": 197,
+    "words_removed_later_restored": 197,
+    "removing_revisions": 2,
+    "sources_removed": {
+     "dallasnews.com": 1,
+     "expressnews.com": 1,
+     "houstonchronicle.com": 1,
+     "star-telegram.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: puffery": {
+      "best": 2
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1217718581",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1217718386"
+    ]
+   },
+   {
+    "label": "Editor 52",
+    "words_removed": 190,
+    "others_words_removed": 190,
+    "words_removed_later_restored": 6,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "insideelections.com": 1,
+     "ktalnews.com": 1,
+     "politico.com": 1,
+     "texassignal.com": 1,
+     "texastribune.org": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1150704366"
+    ]
+   },
+   {
+    "label": "Editor 90",
+    "words_removed": 189,
+    "others_words_removed": 189,
+    "words_removed_later_restored": 189,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "dallasnews.com": 1,
+     "expressnews.com": 1,
+     "houstonchronicle.com": 1,
+     "star-telegram.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: puffery": {
+      "best": 2
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1213401345"
+    ]
+   },
+   {
+    "label": "Editor 4",
+    "words_removed": 176,
+    "others_words_removed": 176,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 2,
+    "sources_removed": {
+     "texasmonthly.com": 1
+    },
+    "terms_inserted": {
+     "WTW: synonyms for said": {
+      "speculate": 1
+     }
+    },
+    "terms_removed": {
+     "WTW: editorializing": {
+      "only": 2
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1204968651",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1205555532"
+    ]
+   },
+   {
+    "label": "Editor 91",
+    "words_removed": 175,
+    "others_words_removed": 173,
+    "words_removed_later_restored": 173,
+    "removing_revisions": 8,
+    "sources_removed": {
+     "twitter.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1061323563",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1061323834",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1061323611",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1061279988",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1061280711"
+    ]
+   },
+   {
+    "label": "Editor 92",
+    "words_removed": 169,
+    "others_words_removed": 169,
+    "words_removed_later_restored": 13,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: puffery": {
+      "popular": 3
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1224086128"
+    ]
+   },
+   {
+    "label": "Editor 93",
+    "words_removed": 117,
+    "others_words_removed": 117,
+    "words_removed_later_restored": 5,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: puffery": {
+      "popular": 7
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1219017189"
+    ]
+   },
+   {
+    "label": "Editor 94",
+    "words_removed": 116,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 1,
+    "removing_revisions": 3,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1183897384",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1202054196",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1202609268"
+    ]
+   },
+   {
+    "label": "Editor 95",
+    "words_removed": 115,
+    "others_words_removed": 113,
+    "words_removed_later_restored": 113,
+    "removing_revisions": 3,
+    "sources_removed": {
+     "thehofstrachronicle.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1093513604",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1093513641",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1093513666"
+    ]
+   },
+   {
+    "label": "Editor 96",
+    "words_removed": 107,
+    "others_words_removed": 107,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1261037742"
+    ]
+   },
+   {
+    "label": "Editor 97",
+    "words_removed": 106,
+    "others_words_removed": 62,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 6,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1212205157",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1216111182",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1212101956",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1212728607",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1218908727"
+    ]
+   },
+   {
+    "label": "Editor 98",
+    "words_removed": 94,
+    "others_words_removed": 94,
+    "words_removed_later_restored": 48,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "nytimes.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1258513170"
+    ]
+   },
+   {
+    "label": "Editor 72",
+    "words_removed": 93,
+    "others_words_removed": 93,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 4,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1258325950",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1250525265",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1311422136",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1320289673"
+    ]
+   },
+   {
+    "label": "Editor 99",
+    "words_removed": 91,
+    "others_words_removed": 91,
+    "words_removed_later_restored": 50,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: puffery": {
+      "popular": 4
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1218188912",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1152694518"
+    ]
+   },
+   {
+    "label": "Editor 14",
+    "words_removed": 83,
+    "others_words_removed": 78,
+    "words_removed_later_restored": 2,
+    "removing_revisions": 3,
+    "sources_removed": {
+     "cbsnews.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: euphemisms": {
+      "challenge": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1255766897",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1255766603",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1255697629"
+    ]
+   },
+   {
+    "label": "Editor 100",
+    "words_removed": 82,
+    "others_words_removed": 82,
+    "words_removed_later_restored": 82,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1281384114"
+    ]
+   },
+   {
+    "label": "Editor 101",
+    "words_removed": 82,
+    "others_words_removed": 82,
+    "words_removed_later_restored": 2,
+    "removing_revisions": 2,
+    "sources_removed": {
+     "cwfpac.com": 1,
+     "nabpac.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1176751663",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1215096186"
+    ]
+   },
+   {
+    "label": "Editor 102",
+    "words_removed": 80,
+    "others_words_removed": 80,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1239036237",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1239036905"
+    ]
+   },
+   {
+    "label": "Editor 103",
+    "words_removed": 78,
+    "others_words_removed": 78,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "instagram.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1226429119"
+    ]
+   },
+   {
+    "label": "Editor 104",
+    "words_removed": 76,
+    "others_words_removed": 76,
+    "words_removed_later_restored": 76,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "expressnews.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: euphemisms": {
+      "challenge": 2
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1150803986"
+    ]
+   },
+   {
+    "label": "Editor 18",
+    "words_removed": 69,
+    "others_words_removed": 69,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1336615102",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1336614922"
+    ]
+   },
+   {
+    "label": "Editor 105",
+    "words_removed": 65,
+    "others_words_removed": 65,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "twitter.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1127951486"
+    ]
+   },
+   {
+    "label": "Editor 29",
+    "words_removed": 57,
+    "others_words_removed": 55,
+    "words_removed_later_restored": 27,
+    "removing_revisions": 7,
+    "sources_removed": {
+     "txhpf.org": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1157043452",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1186380443",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1188157980",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1194067123",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1212082023"
+    ]
+   },
+   {
+    "label": "Editor 71",
+    "words_removed": 55,
+    "others_words_removed": 55,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: euphemisms": {
+      "challenge": 1
+     },
+     "WTW: puffery": {
+      "best": 2,
+      "leading": 2
+     },
+     "contested: stances on Israel, Jews and Muslims": {
+      "pro-israel": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1208968954",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1208969738"
+    ]
+   },
+   {
+    "label": "Editor 106",
+    "words_removed": 53,
+    "others_words_removed": 53,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: puffery": {
+      "best": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1134322723",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1134322905"
+    ]
+   },
+   {
+    "label": "Editor 107",
+    "words_removed": 50,
+    "others_words_removed": 50,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1149231830"
+    ]
+   },
+   {
+    "label": "Editor 108",
+    "words_removed": 49,
+    "others_words_removed": 49,
+    "words_removed_later_restored": 5,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "texastribune.org": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1250310816"
+    ]
+   },
+   {
+    "label": "Editor 109",
+    "words_removed": 47,
+    "others_words_removed": 47,
+    "words_removed_later_restored": 3,
+    "removing_revisions": 4,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: euphemisms": {
+      "challenge": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1195064863",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1153038237",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1153038069",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1164964090"
+    ]
+   },
+   {
+    "label": "Editor 110",
+    "words_removed": 47,
+    "others_words_removed": 47,
+    "words_removed_later_restored": 46,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: puffery": {
+      "popular": 3
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1218180978"
+    ]
+   },
+   {
+    "label": "Editor 111",
+    "words_removed": 44,
+    "others_words_removed": 44,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1188168236"
+    ]
+   },
+   {
+    "label": "Editor 8",
+    "words_removed": 43,
+    "others_words_removed": 39,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 7,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: editorializing": {
+      "only": 3
+     }
+    },
+    "terms_removed": {
+     "WTW: editorializing": {
+      "only": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1253450074",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1157495130",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1154004374",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1263099047",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1154004571"
+    ]
+   },
+   {
+    "label": "Editor 68",
+    "words_removed": 41,
+    "others_words_removed": 32,
+    "words_removed_later_restored": 1,
+    "removing_revisions": 2,
+    "sources_removed": {
+     "substack.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1251427434",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1251427978"
+    ]
+   },
+   {
+    "label": "Editor 112",
+    "words_removed": 41,
+    "others_words_removed": 41,
+    "words_removed_later_restored": 21,
+    "removing_revisions": 5,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1154300531",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1153095545",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1149718335",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1150010821",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1150168148"
+    ]
+   },
+   {
+    "label": "Editor 44",
+    "words_removed": 39,
+    "others_words_removed": 39,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1380943227",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1380943708"
+    ]
+   },
+   {
+    "label": "Editor 113",
+    "words_removed": 39,
+    "others_words_removed": 39,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: synonyms for said": {
+      "find": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1165114159",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1165114093"
+    ]
+   },
+   {
+    "label": "Editor 114",
+    "words_removed": 39,
+    "others_words_removed": 39,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 4,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1122003241",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1138079474",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1148308509",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1122003348"
+    ]
+   },
+   {
+    "label": "Editor 115",
+    "words_removed": 39,
+    "others_words_removed": 39,
+    "words_removed_later_restored": 3,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "racetothewh.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1201965027"
+    ]
+   },
+   {
+    "label": "Editor 116",
+    "words_removed": 38,
+    "others_words_removed": 38,
+    "words_removed_later_restored": 2,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1194207589"
+    ]
+   },
+   {
+    "label": "Editor 117",
+    "words_removed": 37,
+    "others_words_removed": 37,
+    "words_removed_later_restored": 4,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "morningconsult.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1246619074"
+    ]
+   },
+   {
+    "label": "Editor 118",
+    "words_removed": 36,
+    "others_words_removed": 36,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1121126045"
+    ]
+   },
+   {
+    "label": "Editor 119",
+    "words_removed": 36,
+    "others_words_removed": 36,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 2,
+    "sources_removed": {
+     "fec.gov": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1233602110",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1233602147"
+    ]
+   },
+   {
+    "label": "Editor 80",
+    "words_removed": 35,
+    "others_words_removed": 35,
+    "words_removed_later_restored": 1,
+    "removing_revisions": 3,
+    "sources_removed": {},
+    "terms_inserted": {
+     "contested: political labels": {
+      "woke": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1255280904",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1148994338",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1206482431"
+    ]
+   },
+   {
+    "label": "Editor 120",
+    "words_removed": 35,
+    "others_words_removed": 35,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1241669289",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1241669387"
+    ]
+   },
+   {
+    "label": "Editor 66",
+    "words_removed": 33,
+    "others_words_removed": 1,
+    "words_removed_later_restored": 33,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "boltonpac.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1217538000"
+    ]
+   },
+   {
+    "label": "Editor 121",
+    "words_removed": 32,
+    "others_words_removed": 30,
+    "words_removed_later_restored": 4,
+    "removing_revisions": 4,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1259318834",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1264328399",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1260239595",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1264328697"
+    ]
+   },
+   {
+    "label": "Editor 122",
+    "words_removed": 31,
+    "others_words_removed": 31,
+    "words_removed_later_restored": 31,
+    "removing_revisions": 1,
+    "sources_removed": {
+     "realclearpolling.com": 1
+    },
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1246613532"
+    ]
+   },
+   {
+    "label": "Editor 123",
+    "words_removed": 28,
+    "others_words_removed": 28,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1061948425",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1061948527"
+    ]
+   },
+   {
+    "label": "Editor 124",
+    "words_removed": 26,
+    "others_words_removed": 26,
+    "words_removed_later_restored": 3,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1129828318"
+    ]
+   },
+   {
+    "label": "Editor 125",
+    "words_removed": 26,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 4,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1130572726",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1130563831",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1130572165",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1130572261"
+    ]
+   },
+   {
+    "label": "Editor 49",
+    "words_removed": 25,
+    "others_words_removed": 22,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 6,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1233505420",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1212104873",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1233505383",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1239653833",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1247981118"
+    ]
+   },
+   {
+    "label": "Editor 126",
+    "words_removed": 25,
+    "others_words_removed": 25,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1219895808"
+    ]
+   },
+   {
+    "label": "Editor 70",
+    "words_removed": 24,
+    "others_words_removed": 7,
+    "words_removed_later_restored": 1,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1247696378"
+    ]
+   },
+   {
+    "label": "Editor 127",
+    "words_removed": 24,
+    "others_words_removed": 24,
+    "words_removed_later_restored": 2,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1243031952",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1243032228"
+    ]
+   },
+   {
+    "label": "Editor 128",
+    "words_removed": 22,
+    "others_words_removed": 22,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1236271127",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1236271265"
+    ]
+   },
+   {
+    "label": "Editor 129",
+    "words_removed": 22,
+    "others_words_removed": 22,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1067192782"
+    ]
+   },
+   {
+    "label": "Editor 79",
+    "words_removed": 20,
+    "others_words_removed": 20,
+    "words_removed_later_restored": 7,
+    "removing_revisions": 6,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1202896370",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1204979275",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1135849760",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1135905557",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1164690095"
+    ]
+   },
+   {
+    "label": "Editor 130",
+    "words_removed": 20,
+    "others_words_removed": 20,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1248807645"
+    ]
+   },
+   {
+    "label": "Editor 131",
+    "words_removed": 20,
+    "others_words_removed": 20,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1075451956"
+    ]
+   },
+   {
+    "label": "Editor 132",
+    "words_removed": 19,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 4,
+    "removing_revisions": 5,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1241658345",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1241658521",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1241658566",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1241658635",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1241658435"
+    ]
+   },
+   {
+    "label": "Editor 133",
+    "words_removed": 19,
+    "others_words_removed": 19,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1251928389"
+    ]
+   },
+   {
+    "label": "Editor 134",
+    "words_removed": 19,
+    "others_words_removed": 17,
+    "words_removed_later_restored": 2,
+    "removing_revisions": 5,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1252096702",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1251697398",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1251697875",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1251783859",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1251784010"
+    ]
+   },
+   {
+    "label": "Editor 135",
+    "words_removed": 18,
+    "others_words_removed": 18,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1233098393",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1133266053"
+    ]
+   },
+   {
+    "label": "Editor 136",
+    "words_removed": 18,
+    "others_words_removed": 18,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1224250030",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1223925646"
+    ]
+   },
+   {
+    "label": "Editor 137",
+    "words_removed": 17,
+    "others_words_removed": 17,
+    "words_removed_later_restored": 8,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1106244422"
+    ]
+   },
+   {
+    "label": "Editor 138",
+    "words_removed": 17,
+    "others_words_removed": 17,
+    "words_removed_later_restored": 3,
+    "removing_revisions": 3,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1219020301",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1219020716",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1219019328"
+    ]
+   },
+   {
+    "label": "Editor 139",
+    "words_removed": 17,
+    "others_words_removed": 17,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1365217886",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1365572590"
+    ]
+   },
+   {
+    "label": "Editor 140",
+    "words_removed": 17,
+    "others_words_removed": 17,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1343856909"
+    ]
+   },
+   {
+    "label": "Editor 141",
+    "words_removed": 16,
+    "others_words_removed": 16,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1254290583"
+    ]
+   },
+   {
+    "label": "Editor 142",
+    "words_removed": 15,
+    "others_words_removed": 15,
+    "words_removed_later_restored": 15,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1305946871"
+    ]
+   },
+   {
+    "label": "Editor 143",
+    "words_removed": 15,
+    "others_words_removed": 15,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1122173278"
+    ]
+   },
+   {
+    "label": "Editor 60",
+    "words_removed": 14,
+    "others_words_removed": 14,
+    "words_removed_later_restored": 4,
+    "removing_revisions": 3,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1227082519",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1246537558",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1246537669"
+    ]
+   },
+   {
+    "label": "Editor 144",
+    "words_removed": 14,
+    "others_words_removed": 14,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1306086881"
+    ]
+   },
+   {
+    "label": "Editor 145",
+    "words_removed": 14,
+    "others_words_removed": 14,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1367739617",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1175117717"
+    ]
+   },
+   {
+    "label": "Editor 146",
+    "words_removed": 14,
+    "others_words_removed": 14,
+    "words_removed_later_restored": 2,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1152964125"
+    ]
+   },
+   {
+    "label": "Editor 34",
+    "words_removed": 13,
+    "others_words_removed": 13,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1178141009"
+    ]
+   },
+   {
+    "label": "Editor 147",
+    "words_removed": 13,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 4,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1114120546",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1114120315",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1114120478",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1114119866"
+    ]
+   },
+   {
+    "label": "Editor 148",
+    "words_removed": 13,
+    "others_words_removed": 13,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1244365694"
+    ]
+   },
+   {
+    "label": "Editor 149",
+    "words_removed": 13,
+    "others_words_removed": 13,
+    "words_removed_later_restored": 13,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1201125712"
+    ]
+   },
+   {
+    "label": "Editor 24",
+    "words_removed": 12,
+    "others_words_removed": 12,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: editorializing": {
+      "only": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1278217121",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1328938923"
+    ]
+   },
+   {
+    "label": "Editor 5",
+    "words_removed": 6,
+    "others_words_removed": 2,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: puffery": {
+      "popular": 2
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1032823582",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1032681913"
+    ]
+   },
+   {
+    "label": "Editor 38",
+    "words_removed": 6,
+    "others_words_removed": 6,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 2,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: editorializing": {
+      "notably": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1260150071",
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1260149830"
+    ]
+   },
+   {
+    "label": "Editor 45",
+    "words_removed": 6,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: euphemisms": {
+      "challenge": 1
+     },
+     "WTW: puffery": {
+      "best": 2,
+      "leading": 2
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1174935685"
+    ]
+   },
+   {
+    "label": "Editor 154",
+    "words_removed": 6,
+    "others_words_removed": 6,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {},
+    "terms_removed": {
+     "WTW: puffery": {
+      "award-winning": 1
+     }
+    },
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1156905781"
+    ]
+   },
+   {
+    "label": "Editor 150",
+    "words_removed": 5,
+    "others_words_removed": 5,
+    "words_removed_later_restored": 5,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: puffery": {
+      "popular": 7
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1218171711"
+    ]
+   },
+   {
+    "label": "Editor 15",
+    "words_removed": 3,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: editorializing": {
+      "actually": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1247147848"
+    ]
+   },
+   {
+    "label": "Editor 152",
+    "words_removed": 2,
+    "others_words_removed": 2,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 1,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: editorializing": {
+      "only": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": [
+     "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1153710067"
+    ]
+   },
+   {
+    "label": "Editor 151",
+    "words_removed": 0,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 0,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: euphemisms": {
+      "challenge": 2
+     }
+    },
+    "terms_removed": {},
+    "evidence": []
+   },
+   {
+    "label": "Editor 153",
+    "words_removed": 0,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 0,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: puffery": {
+      "award-winning": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": []
+   },
+   {
+    "label": "Editor 155",
+    "words_removed": 0,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 0,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: puffery": {
+      "best": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": []
+   },
+   {
+    "label": "Editor 156",
+    "words_removed": 0,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 0,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: euphemisms": {
+      "challenge": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": []
+   },
+   {
+    "label": "Editor 157",
+    "words_removed": 0,
+    "others_words_removed": 0,
+    "words_removed_later_restored": 0,
+    "removing_revisions": 0,
+    "sources_removed": {},
+    "terms_inserted": {
+     "WTW: editorializing": {
+      "only": 1
+     }
+    },
+    "terms_removed": {},
+    "evidence": []
+   }
+  ],
+  "editors_shown": 113,
+  "sentence_history": {
+   "rule": "taken out and put back at least 2 times, not counting page-wide removals",
+   "sentences": 52,
+   "sentences_removed_and_restored_twice_or_more": 27,
+   "their_words": 362,
+   "share_of_words": 0.577352,
+   "in_opening_section": 2,
+   "median_days_in_place_since_last_restored": 869,
+   "sentences_removed_five_times_or_more": 10,
+   "sentences_removed_by_two_or_more_accounts": 27
+  }
+ },
+ "declared_interests": {
+  "article_tags": [],
+  "talk_page_revision": 1342292688,
+  "evidence": "https://en.wikipedia.org/w/index.php?oldid=1342292688",
+  "notices": []
  },
  "caveats": [
   {

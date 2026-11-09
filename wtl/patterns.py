@@ -1,16 +1,16 @@
 """Editors across articles.
 
-Three levels:
-1. Article overlap (public): how much of one article's text is by editors who also wrote in
-   another. Describes articles, not people.
-2. Sanctioned editors across articles (public): Wikipedia has already ruled on them.
-3. Substantial contributors across articles (public, with friction): every editor with at least
-   MIN_SHARE of the text in at least MIN_ARTICLES analysed articles, under a pattern ID.
+One fingerprint per editor: every editor with at least MIN_SHARE of the text of an analysed
+article, and every editor Wikipedia has sanctioned who has text in one, under a pattern ID. Each
+fingerprint lists the analysed articles the editor wrote in (share as a range), the topic groups
+of those articles, the sources they cited, and any sanctions. Each article lists its editors.
+(Until 2026-11-05 editors not sanctioned were shown only by topic group; the owner chose to list
+them by article.)
 
-Friction for level 3, stated openly on the page because it is not real anonymity:
+Friction, stated openly on the page because it is not real anonymity:
 - pattern IDs are a keyed hash of the account, with a secret key kept only locally
   (.wtl-secret), so they cannot be reversed by trying account numbers;
-- no links, and no connection to the per-article "Editor N" labels;
+- no connection to the per-article "Editor N" labels;
 - shares are shown as ranges, not exact figures.
 The same rule applies to every editor. No pattern is labelled or interpreted.
 """
@@ -73,6 +73,91 @@ def editor_shares(rec: dict, area: str) -> dict:
 
 
 EDIT_CAP = 10000
+MIN_SCORED = 5   # an editor counts toward a writers' figure with at least this many rated citations
+LEAN_LABELS = {"mbfc": ("left", "left-center", "least biased", "right-center", "right"),
+               "allsides_2018": ("left", "lean left", "centre", "lean right", "right")}
+
+
+def _rated(o: dict) -> dict:
+    """The ratings of one source that writers' figures use, each on its assessor's own scale."""
+    out = {}
+    if o.get("audience_leaning"):
+        out["audience_leaning"] = o["audience_leaning"]["score"]
+    if o.get("audience_leaning_dd"):
+        out["audience_leaning_dd"] = o["audience_leaning_dd"]["score"]
+    if o.get("independent_quality"):
+        out["independent_quality"] = o["independent_quality"]["score"]
+    lvl = (o.get("academic_level") or {}).get("level")
+    if isinstance(lvl, int) and not isinstance(lvl, bool):
+        out["academic_level"] = lvl   # Publication Forum (JUFO) level, 0 to 3
+    b = (o.get("mbfc") or {}).get("bias")
+    if b:
+        b = {"far left": "left", "far right": "right", "extreme left": "left",
+             "extreme right": "right"}.get(b, b)
+        if b in LEAN_LABELS["mbfc"]:
+            out["mbfc"] = b
+    if o.get("allsides_2018") in LEAN_LABELS["allsides_2018"]:
+        out["allsides_2018"] = o["allsides_2018"]
+    wr = o.get("wikipedia_rating")
+    out["wikipedia_rating"] = wr["status"] if wr else "not listed"
+    if o.get("affiliation"):   # a list: a source can carry several recorded labels
+        from .affiliation import show
+        out["affiliation"] = [show(l) for l in o["affiliation"]["labels"]]
+    return out
+
+
+def editor_ratings(cites: dict, outlets: dict) -> dict:
+    """One editor's citations, across all analysed articles, summarised per assessor: a
+    citation-weighted mean for numeric scales, a citation-weighted mix for label scales. Each
+    entry also gives how many of the editor's citations that assessor rates."""
+    num, lab = {}, {}
+    for k, n in cites.items():
+        for f, v in _rated(outlets.get(k) or {}).items():
+            if isinstance(v, (int, float)):
+                t = num.setdefault(f, [0.0, 0])
+                t[0] += v * n
+                t[1] += n
+            else:   # a label, or several labels sharing the citation equally
+                vs = v if isinstance(v, list) else [v]
+                for x in vs:
+                    lab.setdefault(f, {}).setdefault(x, 0)
+                    lab[f][x] += n / len(vs)
+    out = {f: {"mean": t[0] / t[1], "rated": t[1]} for f, t in num.items()}
+    for f, c in lab.items():
+        tot = sum(c.values())
+        out[f] = {"mix": {k: v / tot for k, v in c.items()}, "rated": tot}
+    return out
+
+
+def writers_figures(per_article: dict, ratings: dict) -> dict:
+    """For one article: each assessor's figure for the sources its writers cite, weighting each
+    writer by their share of the article's text. Writers with fewer than MIN_SCORED citations
+    rated by that assessor are left out; 'text_covered' is the share of the text by writers who
+    count."""
+    out = {}
+    fields = {f for k in per_article for f in (ratings.get(k) or {})}
+    for f in sorted(fields):
+        w, acc, mix, n = 0.0, 0.0, {}, 0
+        for k, v in per_article.items():
+            r = (ratings.get(k) or {}).get(f)
+            if not r or r["rated"] < MIN_SCORED:
+                continue
+            w += v["share"]
+            n += 1
+            if "mean" in r:
+                acc += v["share"] * r["mean"]
+            else:
+                for lbl, x in r["mix"].items():
+                    mix[lbl] = mix.get(lbl, 0) + v["share"] * x
+        if not w:
+            continue
+        e = {"text_covered": round(w, 4), "writers": n}
+        if mix:
+            e["mix"] = {k: round(x / w, 4) for k, x in sorted(mix.items(), key=lambda x: -x[1])}
+        else:
+            e["mean"] = round(acc / w, 3)
+        out[f] = e
+    return out
 
 
 def editor_sources(rec: dict, area: str) -> dict:
@@ -103,20 +188,18 @@ def citations_range(n: int) -> str:
 
 def source_profile(cites: dict, outlets: dict) -> dict:
     """Across-article profile of the sources one editor cited, coarsened like the rest of the
-    page: counts as ranges, shares as ranges, medians to one decimal place."""
+    page: counts as ranges, shares as ranges, medians to one decimal place. No leaning or
+    political-alignment figure is kept for a single editor (owner's decision, 2026-11-06): those
+    are published only blended into each article's writers' figure (writers_figures)."""
     from collections import Counter
     tot = sum(cites.values())
-    rating, q, a, align, kinds = Counter(), [], [], Counter(), Counter()
+    rating, q, kinds = Counter(), [], Counter()
     for k, n in cites.items():
         o = outlets.get(k) or {}
         wr = o.get("wikipedia_rating")
         rating[wr["status"] if wr else "not listed"] += n
         if o.get("independent_quality"):
             q += [o["independent_quality"]["score"]] * n
-        if o.get("audience_leaning"):
-            a += [o["audience_leaning"]["score"]] * n
-        for x in o.get("political_alignment") or ["none recorded"]:
-            align[x] += n
         kinds[o.get("kind") or "not classified"] += n
 
     def med(v):
@@ -131,9 +214,6 @@ def source_profile(cites: dict, outlets: dict) -> dict:
         "wikipedia_rating": {k: share_range(v / tot) for k, v in rating.most_common()},
         "independent_quality_median": med(q),
         "independent_quality_coverage": share_range(len(q) / tot),
-        "audience_leaning_median": med(a),
-        "audience_leaning_coverage": share_range(len(a) / tot),
-        "alignment": {k: share_range(v / tot) for k, v in align.most_common() if v / tot >= MIN_SHARE},
         "kinds": {k: share_range(v / tot) for k, v in kinds.most_common() if v / tot >= MIN_SHARE},
         "most_cited": {(outlets.get(k) or {}).get("name") or k: share_range(n / tot) for k, n in top},
     }
@@ -243,7 +323,23 @@ def topic_buckets(arts: list[str], areas: dict, kinds: dict) -> dict:
     return {a: (label(x), size[x]) if size[x] >= MIN_BUCKET else None for a, x in b.items()}
 
 
-def compute(recs: list[dict], groups: dict, areas: dict, elsewhere: bool = False,
+def sample_keys(per: dict, areas: dict, n: int) -> set:
+    """The n registered editors with the most words in each area's analysed articles (ties by
+    account key, so the choice is fixed). Unregistered editors are left out: an IP address's
+    edits elsewhere need not be the same person's."""
+    tot = {}
+    for a, eds in per.items():
+        ar = areas.get(a) or ""
+        if not ar:
+            continue
+        for k, v in eds.items():
+            if k.startswith("u"):
+                d = tot.setdefault(ar, {})
+                d[k] = d.get(k, 0) + v["words"]
+    return {k for d in tot.values() for k, _ in sorted(d.items(), key=lambda x: (-x[1], x[0]))[:n]}
+
+
+def compute(recs: list[dict], groups: dict, areas: dict, elsewhere: bool | int = False,
             kinds: dict | None = None, outlets: dict | None = None) -> dict:
     secret = _secret()
     arts = [r["article"] for r in recs]
@@ -256,25 +352,18 @@ def compute(recs: list[dict], groups: dict, areas: dict, elsewhere: bool = False
                 for src, n in d.items():
                     c[src] = c.get(src, 0) + n
 
-    # level 1: overlap between articles
-    overlap = {a: {b: round(sum(v["share"] for k, v in per[a].items() if k in per[b]), 6)
-                   for b in arts if b != a} for a in arts}
-
-    # levels 2 and 3: one row per editor that qualifies
+    # one row per editor with at least MIN_SHARE of an analysed article's text, and every
+    # editor Wikipedia has sanctioned who has text in one
     buckets = topic_buckets(arts, areas, kinds or {})
-    keys = set().union(*per.values()) if per else set()
+    by_key = {}
+    for a in arts:
+        for k, v in per[a].items():
+            by_key.setdefault(k, {})[a] = v
     rows = []
-    for k in keys:
-        present = {a: per[a][k] for a in arts if k in per[a]}
+    for k, present in by_key.items():
         sanctioned = any(v["sanctioned"] for v in present.values())
         substantial = [a for a, v in present.items() if v["share"] >= MIN_SHARE]
-        # Sanctioned editors (level 2) show when they wrote in more than one analysed article or
-        # a substantial share of one; everyone else (level 3) needs a substantial share in at
-        # least MIN_ARTICLES articles.
-        if sanctioned:
-            if len(present) < 2 and not substantial:
-                continue
-        elif len(substantial) < MIN_ARTICLES:
+        if not sanctioned and not substantial:
             continue
         shown = {a: v for a, v in present.items() if v["share"] >= MIN_SHARE or sanctioned}
         rows.append({
@@ -283,29 +372,59 @@ def compute(recs: list[dict], groups: dict, areas: dict, elsewhere: bool = False
             "types": sorted({t for v in present.values() for t in v["types"]}),
             "articles_with_text": len(present),
             "articles_substantial": len(substantial),
-            # Sanctioned editors (Wikipedia's own findings) are shown by article. Everyone else
-            # is shown only by topic group, so the row cannot be matched to an article page.
             "shares": {a: share_range(v["share"]) for a, v in sorted(
-                shown.items(), key=lambda x: -x[1]["share"])} if sanctioned else {},
-            "topics": {} if sanctioned else _topic_counts(substantial, buckets),
+                shown.items(), key=lambda x: -x[1]["share"])},
+            "topics": _topic_counts(substantial, buckets),
             "groups": sorted({groups.get(a, "") for a in substantial}),
             "sources": source_profile(cites[k], outlets) if cites.get(k) else None,
             "_key": k,
+            "_share": {a: v["share"] for a, v in shown.items()},
             "_order": (-len(substantial), -sum(v["share"] for v in present.values())),
         })
     rows.sort(key=lambda r: (r["_order"], r["id"]))
+    # each article's editors, largest share first; editors below MIN_SHARE are counted together
+    by_article = {a: {"editors": [], "rest_editors": 0, "rest_share": 0.0} for a in arts}
+    listed, shown_keys = {}, {}
+    for r in rows:
+        for a, v in r["_share"].items():
+            listed.setdefault(a, []).append((v, r["id"]))
+            shown_keys.setdefault(a, set()).add(r["_key"])
+    for a in arts:
+        got = sorted(listed.get(a, []), key=lambda x: (-x[0], x[1]))
+        by_article[a]["editors"] = [[i, share_range(v)] for v, i in got]
+        rest = [v for k, v in per[a].items() if k not in shown_keys.get(a, ())]
+        by_article[a]["rest_editors"] = len(rest)
+        by_article[a]["rest_share"] = round(sum(x["share"] for x in rest), 4)
+    if outlets:
+        ratings = {k: editor_ratings(c, outlets) for k, c in cites.items()}
+        for a in arts:
+            by_article[a]["writers"] = writers_figures(per[a], ratings)
+        # Each editor's own scores are kept, but only here: under cache/ (git-ignored), keyed by
+        # pattern ID, never written to the site or its data. They are what the article figures
+        # are built from, saved so any figure can be checked by hand.
+        cache.save(cache.path("patterns", "editor_ratings"), {
+            "note": "Private. Per-editor source ratings behind the writers' figures; not published.",
+            "editors": {pattern_id(k, secret): {"citations": sum(cites[k].values()), "ratings": v,
+                                                "articles": {a: round(per[a][k]["share"], 4)
+                                                             for a in by_key.get(k, {})}}
+                        for k, v in ratings.items() if v}})
+    # elsewhere=True: every listed editor; an int n: a sample, the n with most text per area
+    n_sample = elsewhere if type(elsewhere) is int else None
+    sample = sample_keys(per, areas, n_sample) if n_sample else None
     amap = area_map() if elsewhere else {}
     for r in rows:
         k = r.pop("_key")
-        del r["_order"]
-        if amap and k.startswith("u"):
+        del r["_order"], r["_share"]
+        if amap and k.startswith("u") and (sample is None or k in sample):
             titles = recent_article_edits(k[1:])
             spread = edit_spread(titles, amap)
             r["elsewhere"] = {"edits": edits_range(len(titles)),
                               "areas": {a: share_range(v) for a, v in spread.items()
                                         if v >= MIN_SHARE}}
-    return {"overlap": overlap, "editors": rows,
-            "rule": {"min_share": MIN_SHARE, "min_articles": MIN_ARTICLES, "edit_cap": EDIT_CAP,
+    return {"editors": rows, "by_article": by_article,
+            "rule": {"min_scored": MIN_SCORED, "min_share": MIN_SHARE, "min_articles": MIN_ARTICLES, "edit_cap": EDIT_CAP,
                      "min_group": MIN_BUCKET,
                      "elsewhere": bool(amap),
+                     "elsewhere_sample": n_sample if amap else None,
+                     "elsewhere_editors": sum(1 for r in rows if r.get("elsewhere")),
                      "articles_analysed": len(arts)}}
