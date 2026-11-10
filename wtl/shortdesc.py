@@ -13,7 +13,8 @@ Method, by fixed rules:
   from its predecessor's.
 - Limits: a change undone before the next checkpoint (for example vandalism and its repair) can
   be missed when both checkpoints show the same text; the gap between checkpoints is stated with
-  the result. A revision whose text Wikipedia has hidden is skipped. A maintenance tag inside the
+  the result. A revision whose text Wikipedia has hidden is skipped; when a change falls inside a run
+  of hidden revisions, it is dated to the first visible revision after them. A maintenance tag inside the
   description (such as {{Disputed inline}}) is shown by name. Until about 2018 most short
   descriptions came from Wikidata rather than the article; those are not in the article's
   history and are not tracked here.
@@ -150,6 +151,8 @@ def changes(pageid: int, upto: int) -> dict:
                 for a, b in diff:
                     narrow(a, b)
                 return
+            if diff[0] == (lo, hi):   # every revision between is hidden: the change is somewhere in them
+                break
             lo, hi = diff[0]
         found.append(hi)
 
