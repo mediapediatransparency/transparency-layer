@@ -26,6 +26,16 @@ RATING_CATS = [("gr", "Generally reliable", st.RAMP[0]), ("nc", "No consensus, o
                ("none", "Not on Wikipedia's list", st.REST)]
 
 
+def _timing_lines(t) -> str:
+    tot = sum(t.values())
+    if not tot:
+        return "<p class='q'>No text by sanctioned editors in the analysed articles.</p>"
+    rows = [("before", "added before the sanction"), ("during", "added while the sanction was in force"),
+            ("after", "added after the sanction ended")]
+    return ("<ul class='q' style='margin:0 0 12px;padding-left:18px'>" + "".join(
+        f"<li><b>{t[k]:,}</b> words ({100 * t[k] / tot:.1f}%) {d}</li>" for k, d in rows) + "</ul>")
+
+
 def _family(kind):
     if not kind:
         return "unknown"
@@ -213,7 +223,7 @@ def sources_overview(ctx) -> str:
             continue
         if r == "gr" and q < 0.6 and len(hi) < 8:
             hi.append((k, c, q, r))
-        if r in ("gu", "d") and q >= 0.7 and len(lo) < 8:
+        if r in ("gu", "d") and q >= 0.6 and len(lo) < 8:
             lo.append((k, c, q, r))
 
     def dlist(xs):
@@ -228,7 +238,7 @@ def sources_overview(ctx) -> str:
         "Wikipedia's list and an independent quality score (Lin et al., 0 to 1, for news websites) mostly agree. "
         "These are the most-cited sources where they do not. Neither rater is taken as right.",
         st.grid(st.card("Wikipedia: generally reliable · independent score below 0.6", dlist(hi)),
-                st.card("Wikipedia: unreliable or deprecated · independent score 0.7 or above", dlist(lo)))))
+                st.card("Wikipedia: unreliable or deprecated · independent score 0.6 or above", dlist(lo)))))
 
     body.append(st.tech("The full detail",
                         "Every rater and what it measures, the most-cited sources in each area with every rating, "
@@ -336,7 +346,9 @@ def leaning_overview(ctx) -> str:
         "Each dot is one article: the average for the websites it cites (DomainDemo, 2025). Left means the people "
         "sharing those sites are mostly Democrats, right mostly Republicans. The dark tick is the middle article "
         "of each area; the dashed line is the average across everything cited. Click a dot to open the article.",
-        st.card("By topic area", st.dotstrip(groups, -0.8, 0.8, ticks, ref=bl, ref_label="average", fmt=lambda v: _dr(v)),
+        st.card("By topic area", st.dotstrip(groups, -0.8, 0.8, ticks, ref=bl, ref_label="average", fmt=lambda v: _dr(v),
+                            axis="← sites shared mostly by Democrats · sites shared mostly by Republicans →",
+                            ref_key="the average across all rated citations, on every analysed article"),
                 note=f"Only articles where at least {st.pct(LEAN_MIN_COVER)} of citations go to rated websites are "
                      "drawn; many articles rest mostly on books, which no open dataset rates. Most large news "
                      "sites fall left of the middle on this measure, so compare with the average line.",
@@ -394,13 +406,13 @@ def editors_overview(ctx) -> str:
     sanc = [e for e in eds if e["sanctioned"]]
     conc, sgroups, pairs_lead = [], [], []
     halves = Counter()
-    types_area, timing = [], Counter()
+    types_area, timing, timing_area = [], Counter(), []
     one_wrote_half = 0
     TYPES = [("topic_ban", "Banned from the topic", st.CAT[0]), ("site_ban", "Banned from Wikipedia", st.CAT[1]),
              ("sockpuppet", "Ran extra accounts (sockpuppets)", st.CAT[2])]
     hbins = [(1, 1, "1"), (2, 2, "2"), (3, 3, "3"), (4, 5, "4–5"), (6, 10, "6–10"), (11, 20, "11–20"), (21, 10**9, "21+")]
     for a, recs in _by_area(ctx, min_n=1):
-        pts, spts, sa, sl, ty = [], [], [], [], Counter()
+        pts, spts, sa, sl, ty, tma = [], [], [], [], Counter(), Counter()
         for r in recs:
             au, ac = r["authorship"], r["accountability"]
             t1 = (au.get("top_shares") or {}).get("1")
@@ -420,9 +432,10 @@ def editors_overview(ctx) -> str:
             for k, _, _ in TYPES:
                 ty[k] += ((ac.get("by_type") or {}).get(k) or {}).get("words", 0)
             tm = ac.get("timing") or {}
-            timing["before"] += tm.get("added_before_sanction_words", 0)
-            timing["during"] += tm.get("added_during_sanction_words", 0) + tm.get("added_during_open_ended_sanction_words", 0)
-            timing["after"] += tm.get("added_after_sanction_ended_words", 0)
+            tma["before"] += tm.get("added_before_sanction_words", 0)
+            tma["during"] += tm.get("added_during_sanction_words", 0) + tm.get("added_during_open_ended_sanction_words", 0)
+            tma["after"] += tm.get("added_after_sanction_ended_words", 0)
+        timing.update(tma)
         if len(recs) < MIN_AREA:
             continue
         lab, sub = _area_label(a, recs)
@@ -432,6 +445,7 @@ def editors_overview(ctx) -> str:
         pairs_lead.append((lab, sub, mean(sa), mean(sl), f"{lab}: on average {st.pct(mean(sa), 1)} of the whole "
                            f"text and {st.pct(mean(sl), 1)} of the opening section by editors Wikipedia sanctioned"))
         types_area.append((lab, sub, ty))
+        timing_area.append((lab, sub, tma))
     many = Counter()
     mbins = [(1, 1, "1"), (2, 2, "2"), (3, 4, "3–4"), (5, 9, "5–9"), (10, 19, "10–19"), (20, 10**9, "20+")]
     for e in subst:
@@ -453,10 +467,11 @@ def editors_overview(ctx) -> str:
                     ("lead", "Whole article and opening"), ("many", "Editors across articles")])]
     body.append(st.section(
         "conc", "How concentrated the writing is",
-        "Each dot is one article: the share of today's text written by its main writer. A dot far to the right means "
-        "one person wrote most of what readers see.",
+        "Each dot is one article: the share of today's text written by its main writer. A dot at 50% means one editor "
+        "wrote half of the words readers see today.",
         st.card("Main writer's share of today's text, by topic area",
-                st.dotstrip(conc, 0, 1, [0, .25, .5, .75, 1], fmt=lambda v: st.pct(v)), wide=True)
+                st.dotstrip(conc, 0, 1, [0, .25, .5, .75, 1], fmt=lambda v: st.pct(v),
+                            axis="Share of today's text written by the article's main writer → further right, more of the text is one person's"), wide=True)
         + "<div style='height:16px'></div>"
         + st.grid(st.card("How many editors wrote half of the text",
                           st.histogram([(l, halves[l], f"{halves[l]:,} articles where {l} editor"
@@ -472,15 +487,18 @@ def editors_overview(ctx) -> str:
         "accounts. Each dot is one article: the share of its text written by such editors. A sanction is about how "
         "someone behaved on Wikipedia, not proof that what they wrote is wrong.",
         st.card("Share of today's text by sanctioned editors, by topic area",
-                st.dotstrip(sgroups, 0, 0.5, [0, .1, .2, .3, .4, .5], fmt=lambda v: st.pct(v)), wide=True,
+                st.dotstrip(sgroups, 0, 0.5, [0, .1, .2, .3, .4, .5], fmt=lambda v: st.pct(v),
+                            axis="Share of today's text written by editors Wikipedia later sanctioned → further right, more"), wide=True,
                 note="Articles above 50% are drawn at the right edge.")
         + "<div style='height:16px'></div>"
         + st.grid(st.card("By kind of sanction", st.stacks(types_area, TYPES),
                           q="Words by sanctioned editors, split by the kind of sanction"),
-                  st.card("When it was written", st.stacks([("All areas", "", timing)], [
-                      ("before", "Before the sanction", st.RAMP[1]), ("during", "During it", st.RAMP[0]),
+                  st.card("When it was written", _timing_lines(timing) + st.stacks(
+                      [("All areas", "", timing)] + timing_area, [
+                      ("before", "Before the sanction", st.RAMP[1]), ("during", "While it was in force", st.RAMP[0]),
                       ("after", "After it ended", st.RAMP[3])]),
-                          q="Words by sanctioned editors, by when they were added"))))
+                          q="Words by sanctioned editors in today's text, by when they were added. "
+                            "Point at a bar for its figures."))))
     body.append(st.section(
         "lead", "The whole article and its opening section",
         "The opening section is what most readers, search engines and AI assistants see first. For each area, the "

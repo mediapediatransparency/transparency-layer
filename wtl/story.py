@@ -20,7 +20,7 @@ CSS = GLANCE_CSS + """<style>
 .st-hero .kicker{font:600 .72rem/1 system-ui,-apple-system,"Segoe UI",sans-serif;letter-spacing:.16em;
  text-transform:uppercase;color:var(--accent);margin:0 0 12px}
 .st-hero h1{font-size:clamp(1.9rem,3.6vw,2.8rem);line-height:1.1;letter-spacing:-.012em;margin:0 0 14px;max-width:24ch}
-.st-hero .lede{font-size:1.1rem;color:var(--muted);max-width:68ch;margin:0}
+.st-hero .lede{font-size:1.1rem;color:var(--muted);max-width:none;margin:0}
 .st-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:0;
  border:1px solid var(--line);border-radius:14px;overflow:hidden;margin:22px 0 0}
 .st-stats div{background:var(--bg);padding:16px 18px;box-shadow:1px 0 0 var(--line),0 1px 0 var(--line)}
@@ -31,7 +31,7 @@ CSS = GLANCE_CSS + """<style>
 .st-toc a:hover{background:var(--soft)}
 .st-sec{margin:52px 0 0;scroll-margin-top:20px}
 .st-sec>h2{border:0;font-size:1.45rem;margin:0 0 4px}
-.st-sec>.one{color:var(--muted);margin:0 0 16px;max-width:80ch}
+.st-sec>.one{color:var(--muted);margin:0 0 16px;max-width:none}
 .st-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
 .st-grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
 .st-card{border:1px solid var(--line);border-radius:14px;padding:18px 20px;background:var(--bg);min-width:0;overflow-x:auto}
@@ -51,7 +51,13 @@ CSS = GLANCE_CSS + """<style>
 .sr{display:grid;grid-template-columns:minmax(110px,220px) minmax(0,1fr);gap:6px 14px;align-items:center;font-size:.86rem}
 .sr .l{line-height:1.25}
 .sr .l small{display:block;color:var(--muted);font-size:.74rem}
-.sr .bar{display:flex;gap:2px;height:22px;margin:0}
+.sr{position:relative}.sr .bar{display:flex;gap:2px;height:22px;margin:0}
+.sr .sc{position:relative;height:1.1em;font:.72rem/1 system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--muted)}
+.sr .sc span{position:absolute;top:0;transform:translateX(-50%);font-variant-numeric:tabular-nums}
+.sr .sc span:first-child{transform:none}.sr .sc span:last-child{transform:translateX(-100%)}
+.sr .bar,.sr .sc{position:relative}
+.sr .bar::after,.sr .sc::after{content:'';position:absolute;left:0;right:0;top:-4px;bottom:-4px;pointer-events:none;z-index:1;background:linear-gradient(90deg,var(--muted) 1px,transparent 1px) -.5px 0/25% 100% repeat-x,linear-gradient(90deg,transparent calc(100% - 1px),var(--muted) 0);opacity:.5}
+.sr .sc::after{top:auto;height:4px;bottom:-6px}.sr .sc+.l~.sc::after{top:-6px;bottom:auto}
 .sr .seg{border-radius:3px;min-width:0;cursor:default}
 .sr .seg:focus-visible{outline:2px solid var(--fg);outline-offset:1px}
 .st-legend{display:flex;flex-wrap:wrap;gap:4px 14px;font:.8rem system-ui,-apple-system,"Segoe UI",sans-serif;
@@ -65,6 +71,13 @@ CSS = GLANCE_CSS + """<style>
 .ds .trk{stroke:var(--line);stroke-width:1}
 .ds .ref{stroke:var(--fg);stroke-width:1;stroke-dasharray:3 3;opacity:.7}
 .ds .med{stroke:var(--fg);stroke-width:2.5;stroke-linecap:round}
+.ds .mv{fill:var(--fg);font-size:12px;font-weight:600;font-variant-numeric:tabular-nums}
+.ds .mh{fill:var(--muted);font-size:10.5px}
+.ds .axt{fill:var(--fg);font-size:12px}
+.dskey{display:flex;flex-wrap:wrap;gap:6px 22px;margin:0 0 10px;font:.84rem/1.4 system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--muted)}
+.dskey span{display:inline-flex;align-items:center;gap:6px}
+.dskey .kd{fill:var(--g-o2);fill-opacity:.55}.dskey .km{stroke:var(--fg);stroke-width:2.5}
+.dskey .kr{stroke:var(--fg);stroke-width:1;stroke-dasharray:3 3}
 .ds circle{fill:var(--g-o2);fill-opacity:.55;stroke:var(--bg);stroke-width:.8}
 .ds a:hover circle,.ds a:focus circle{fill-opacity:1;stroke:var(--fg)}
 .ds.db circle.d1{fill:var(--bg);fill-opacity:1;stroke:var(--g-o2);stroke-width:2.2}
@@ -172,7 +185,10 @@ def hbars(rows, fmt=lambda v: f"{v:,}", top=None, colour=None) -> str:
 def stacks(rows, cats, show_legend=True) -> str:
     """100% stacked bars, one per row. rows: [(label, sub, {cat key: value})];
     cats: [(key, name, colour)] in a fixed order."""
-    out = [legend([(n, c) for _, n, c in cats]) if show_legend else "", "<div class='sr'>"]
+    scale = ("<div></div><div class='sc' aria-hidden='true'>"
+             + "".join(f"<span style='left:{t}%'>{t}%</span>" for t in (0, 25, 50, 75, 100)) + "</div>")
+    out = [legend([(n, c) for _, n, c in cats]) if show_legend else "",
+           "<div class='sr'>", scale]
     for lab, sub, vals in rows:
         tot = sum(vals.get(k, 0) for k, _, _ in cats)
         out.append(f"<div class='l'>{escape(lab)}" + (f"<small>{escape(sub)}</small>" if sub else "") + "</div>")
@@ -188,23 +204,30 @@ def stacks(rows, cats, show_legend=True) -> str:
             segs.append(f"<div class='seg' tabindex='0' style='flex:{100 * v / tot:.2f};background:{c}' "
                         f"data-tip='{escape(tip, quote=True)}'></div>")
         out.append(f"<div class='bar' role='img' aria-label='{escape(lab, quote=True)}'>{''.join(segs)}</div>")
-    out.append("</div>")
+    out.append(scale + "</div>")
     return "".join(out)
 
 
-def dotstrip(groups, lo, hi, ticks, ref=None, ref_label="", fmt=lambda v: f"{v:+.2f}") -> str:
+def dotstrip(groups, lo, hi, ticks, ref=None, ref_label="", fmt=lambda v: f"{v:+.2f}", axis="",
+             ref_key="") -> str:
     """One row per group, each article a dot on a common axis, with the group's median as a tick.
     groups: [(label, sub, [(value, tooltip, href)])]."""
-    W, L, R, rowh, top = 900, 230, 20, 30, 22
-    H = top + rowh * len(groups) + 26
+    W, L, R, rowh, top = 900, 230, 96, 30, 40
+    H = top + rowh * len(groups) + (44 if axis else 26)
     x = lambda v: L + (min(max(v, lo), hi) - lo) / (hi - lo) * (W - L - R)  # noqa: E731
+    ay = top + rowh * len(groups)  # bottom of the rows
     out = [f"<svg class='ds' viewBox='0 0 {W} {H}' role='img' aria-label='Each dot is one article'>"]
     for t in ticks:
-        out.append(f"<line class='trk' x1='{x(t):.1f}' x2='{x(t):.1f}' y1='{top - 6}' y2='{H - 22}'/>"
-                   f"<text class='ax' x='{x(t):.1f}' y='{H - 6}' text-anchor='middle'>{escape(fmt(t))}</text>")
+        out.append(f"<line class='trk' x1='{x(t):.1f}' x2='{x(t):.1f}' y1='{top - 6}' y2='{ay + 4}'/>"
+                   f"<text class='ax' x='{x(t):.1f}' y='{top - 10}' text-anchor='middle'>{escape(fmt(t))}</text>"
+                   f"<text class='ax' x='{x(t):.1f}' y='{ay + 18}' text-anchor='middle'>{escape(fmt(t))}</text>")
+    if axis:
+        out.append(f"<text class='axt' x='{(L + W - R) / 2:.1f}' y='{ay + 38}' text-anchor='middle'>"
+                   f"{escape(axis)}</text>")
+    out.append(f"<text class='mh' x='{W - R + 12}' y='{top - 8}'>middle article</text>")
     if ref is not None:
-        out.append(f"<line class='ref' x1='{x(ref):.1f}' x2='{x(ref):.1f}' y1='{top - 14}' y2='{H - 22}'/>"
-                   f"<text class='ax' x='{x(ref):.1f}' y='{top - 16}' text-anchor='middle'>{escape(ref_label)}</text>")
+        out.append(f"<line class='ref' x1='{x(ref):.1f}' x2='{x(ref):.1f}' y1='{top - 22}' y2='{ay + 4}'/>"
+                   f"<text class='ax' x='{x(ref):.1f}' y='{top - 26}' text-anchor='middle'>{escape(ref_label)}</text>")
     for i, (lab, sub, pts) in enumerate(groups):
         cy = top + rowh * i + rowh / 2
         out.append(f"<text class='lab' x='{L - 12}' y='{cy + 1}' text-anchor='end'>{escape(lab[:34])}</text>"
@@ -218,9 +241,18 @@ def dotstrip(groups, lo, hi, ticks, ref=None, ref_label="", fmt=lambda v: f"{v:+
         if vals:
             m = vals[len(vals) // 2] if len(vals) % 2 else (vals[len(vals) // 2 - 1] + vals[len(vals) // 2]) / 2
             out.append(f"<line class='med' x1='{x(m):.1f}' x2='{x(m):.1f}' y1='{cy - 9:.1f}' y2='{cy + 9:.1f}'>"
-                       f"<title>{escape(lab)}: middle article {fmt(m)}</title></line>")
+                       f"<title>{escape(lab)}: middle article {fmt(m)}</title></line>"
+                       f"<text class='mv' x='{W - R + 12}' y='{cy + 4:.1f}'>{escape(fmt(m))}</text>")
     out.append("</svg>")
-    return "".join(out)
+    key = ("<div class='dskey'><span><svg width='12' height='12' aria-hidden='true'><circle cx='6' cy='6' r='4.2' "
+           "class='kd'/></svg> one article (point at it for its name and figure; click to open it)</span>"
+           "<span><svg width='8' height='18' aria-hidden='true'><line x1='4' x2='4' y1='0' y2='18' class='km'/></svg> "
+           "the middle article of the area: half of its articles are to the left, half to the right. "
+           "Its figure is printed at the end of the row</span>"
+           + (f"<span><svg width='8' height='18' aria-hidden='true'><line x1='4' x2='4' y1='0' y2='18' class='kr'/>"
+              f"</svg> {escape(ref_key)}</span>" if ref is not None and ref_key else "")
+           + "</div>")
+    return key + "".join(out)
 
 
 def histogram(bins, label="", fmt=lambda v: f"{v:,}") -> str:
@@ -268,16 +300,17 @@ def _plain(s: str) -> str:
 def dumbbell(rows, lo, hi, ticks, names, fmt=lambda v: f"{v:+.2f}", ref=None, ref_label="") -> str:
     """Two values per row joined by a line: names = (first, second); first is a hollow dot, second solid.
     rows: [(label, sub, first or None, second or None, tooltip)]."""
-    W, L, R, rowh, top = 900, 230, 20, 30, 26
+    W, L, R, rowh, top = 900, 230, 20, 30, 44
     H = top + rowh * len(rows) + 26
     x = lambda v: L + (min(max(v, lo), hi) - lo) / (hi - lo) * (W - L - R)  # noqa: E731
     out = [f"<svg class='ds db' viewBox='0 0 {W} {H}' role='img' aria-label='{escape(names[0])} and {escape(names[1])}'>"]
     for t in ticks:
         out.append(f"<line class='trk' x1='{x(t):.1f}' x2='{x(t):.1f}' y1='{top - 6}' y2='{H - 22}'/>"
+                   f"<text class='ax' x='{x(t):.1f}' y='{top - 10}' text-anchor='middle'>{escape(fmt(t))}</text>"
                    f"<text class='ax' x='{x(t):.1f}' y='{H - 6}' text-anchor='middle'>{escape(fmt(t))}</text>")
     if ref is not None:
-        out.append(f"<line class='ref' x1='{x(ref):.1f}' x2='{x(ref):.1f}' y1='{top - 14}' y2='{H - 22}'/>"
-                   f"<text class='ax' x='{x(ref):.1f}' y='{top - 16}' text-anchor='middle'>{escape(ref_label)}</text>")
+        out.append(f"<line class='ref' x1='{x(ref):.1f}' x2='{x(ref):.1f}' y1='{top - 24}' y2='{H - 22}'/>"
+                   f"<text class='ax' x='{x(ref):.1f}' y='{top - 28}' text-anchor='middle'>{escape(ref_label)}</text>")
     for i, (lab, sub, a, b, tip) in enumerate(rows):
         cy = top + rowh * i + rowh / 2
         out.append(f"<g tabindex='0'><title>{escape(tip)}</title>"

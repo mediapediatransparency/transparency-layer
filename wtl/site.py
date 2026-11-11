@@ -105,7 +105,7 @@ details.pop .popb p{margin:4px 0}details.pop .popb a{font-size:.78rem;white-spac
 h1{font-size:2rem;line-height:1.2;margin:8px 0 6px}
 h2{font-size:1.35rem;margin:40px 0 10px;padding-top:14px;border-top:1px solid var(--line)}
 h3{font-size:1.08rem;margin:24px 0 6px}
-p,li{max-width:70ch}
+p,li{max-width:none;line-height:1.75}
 a{color:var(--link)}
 .sans,table,.meta,.small,.note,.fig,details summary,footer{font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
 .meta{color:var(--muted);font-size:.9rem}
@@ -115,7 +115,7 @@ tr.sum td{background:var(--soft);border-top:1px solid var(--line)}
 sup a{text-decoration:none;font-size:.75em;padding:0 1px}
 .detail-banner{max-width:none;margin:0 0 18px;padding:10px 14px;border-radius:10px;background:var(--soft);
 font:.88rem/1.45 system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--muted)}
-ol.refs li{margin:0 0 8px;max-width:90ch}
+ol.refs li{margin:0 0 8px;max-width:none}
 .brief{background:var(--soft);border:1px solid var(--line);border-radius:8px;padding:6px 20px;margin:18px 0}
 .brief li{margin:8px 0}
 .fig{display:flex;flex-wrap:wrap;gap:12px;margin:14px 0}
@@ -124,7 +124,7 @@ ol.refs li{margin:0 0 8px;max-width:90ch}
 .fig .lbl{font-size:.88rem}
 .fig .cmp{font-size:.82rem;color:var(--muted);margin-top:4px}
 .note{background:var(--note);border-left:4px solid var(--noteline);padding:8px 14px;margin:12px 0;
-font-size:.92rem;border-radius:0 6px 6px 0;max-width:70ch}
+font-size:.92rem;border-radius:0 6px 6px 0;max-width:none}
 .note b{font-weight:600}
 .scroll,.ft{overflow:auto;-webkit-overflow-scrolling:touch;margin:10px 0;max-height:75vh;
 border:1px solid var(--line);border-radius:6px}
@@ -176,8 +176,9 @@ footer .in{max-width:1240px;margin:0 auto;padding:16px}
 NAV_GROUPS = [
     ("Articles", [("compare.html", "All articles and their figures"), ("articles.html", "Which articles, and why"),
                   ("categories.html", "Categories")]),
-    ("Editors", [("editors.html", "Overview"), ("editor.html", "Look up an editor")]),
-    ("Sources", [("sources.html", "Sources")]),
+    ("Editors", [("editors.html", "Overview"), ("editors-across.html", "Editors across topics"),
+                 ("editor.html", "Look up an editor")]),
+    ("Sources", [("sources.html", "Overview"), ("sources-affiliations.html", "Affiliations")]),
     ("Leaning", [("leaning.html", "Leaning")]),
     ("About", [("about.html", "About this project"), ("objective.html", "Why this matters for AI"),
                ("how-it-works.html", "How it works")]),
@@ -4775,7 +4776,7 @@ HOME_CSS = """<style>
  color:var(--accent);margin:0 0 14px}
 .hero .ht{grid-column:1/-1}
 .hero h1{font-size:clamp(2.1rem,4.2vw,3.4rem);line-height:1.08;letter-spacing:-.015em;margin:0;font-weight:600;max-width:22ch}
-.hero .lede{font-size:1.16rem;color:var(--muted);max-width:56ch;margin:0}
+.hero .lede{font-size:1.16rem;color:var(--muted);max-width:none;margin:0}
 .hero .sf{margin:22px 0 0}
 .hero .sf input{padding:14px 18px;border-radius:999px;font-size:1.02rem;background:var(--bg)}
 .hero .sf button{border-radius:999px;padding:10px 22px;background:var(--fg);color:var(--bg);border-color:var(--fg)}
@@ -4796,7 +4797,7 @@ HOME_CSS = """<style>
 .feat a::after{content:" →"}
 .principle{margin:44px 0 0;padding:22px 26px;border-radius:14px;background:var(--soft);display:grid;
  grid-template-columns:minmax(0,1fr) auto;gap:10px 30px;align-items:center}
-.principle p{margin:0;font-size:1.05rem;max-width:72ch}
+.principle p{margin:0;font-size:1.05rem;max-width:none}
 .principle nav{display:flex;flex-wrap:wrap;gap:6px 18px;font:.88rem system-ui,-apple-system,"Segoe UI",sans-serif}
 .principle nav a{text-decoration:none}
 .areas{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px}
@@ -4825,20 +4826,26 @@ def home_page(ctx: Context):
     areas = _area_order(ctx)
     if preview:
         kicker, title = "Wikipedia's own standards, and the record", "How did this article come to say what it says?"
-        lede = ("Wikipedia sets itself written standards: contested views are attributed to who holds them, "
-                "every significant view gets due weight, anyone can check the sources, no one owns an article. "
-                "We set each article beside those standards, quoted word for word, using Wikipedia's own public records.")
+        lede = ("Wikipedia sets itself written standards: contested views should be attributed to who holds them, "
+                "every significant view should get due weight, anyone can check the sources, no one owns an article. "
+                "We set each article beside those standards, quoted word for word, and check it against them "
+                "using Wikipedia's own public records.")
     else:
         kicker, title = "From Wikipedia's public records", "Who wrote what you read on Wikipedia?"
         lede = ("Wikipedia shows you what an article says today, but not how it came to say it. We work that out "
                 "from Wikipedia's own public records, with a link to the evidence for every number.")
-    feats = [("1", "The opening", "Does the summary everyone sees first name who holds contested views?",
-              "The first paragraph in 2015, 2019, 2023 and today, side by side, and how it changed.",
+    feats = [("1", "The opening",
+              "Does it name who holds contested views, or state one view in Wikipedia's own voice?",
+              "The first paragraph in 2015, 2019, 2023 and today, side by side: what changed, which sources "
+              "were taken out, and which sentences state contested views without saying whose they are.",
               "how-it-works.html#voice"),
-             ("2", "What it rests on", "Which sources does it cite, and can a reader check them?",
-              "Each source with what Wikipedia's list and outside raters say about it.", "sources.html"),
-             ("3", "Who wrote it", "Who wrote the words you are reading?",
-              "How concentrated the writing is, and how much is by editors Wikipedia later sanctioned.",
+             ("2", "What it rests on", "How authoritative are its sources, what leanings are recorded for "
+              "them, and can a reader check them?",
+              "Each source with Wikipedia's own reliability rating, academic level, outside raters' scores, "
+              "recorded political labels, and whether the footnote can be checked.", "sources.html"),
+             ("3", "Who wrote it", "Who wrote the words you are reading, and what does Wikipedia record about them?",
+              "How concentrated the writing is, how much is by editors Wikipedia later sanctioned, interests "
+              "editors declared on Wikipedia, and where else they write. Editors are never named.",
               "editors.html"),
              ("4", "How it changes", "What was fought over, and what kept text in place?",
               "How often it is edited, what was taken out and put back, and the rules applied.",
@@ -5422,6 +5429,9 @@ def _write(SITE_DIR, clean, ctx):
     (SITE_DIR / "editors-detail.html").write_text(
         _detail(editors_page(ctx), "editors.html", "Editors", "editors-detail.html"), encoding="utf-8")
     (SITE_DIR / "editor.html").write_text(editor_lookup_page(ctx), encoding="utf-8")
+    from . import fingerprints
+    (SITE_DIR / "editors-across.html").write_text(fingerprints.editors_across(ctx), encoding="utf-8")
+    (SITE_DIR / "sources-affiliations.html").write_text(fingerprints.sources_affiliations(ctx), encoding="utf-8")
     (SITE_DIR / "leaning.html").write_text(_rd.leaning_overview(ctx), encoding="utf-8")
     (SITE_DIR / "leaning-detail.html").write_text(
         _detail(leaning_page(ctx), "leaning.html", "Leaning", "leaning-detail.html"), encoding="utf-8")
