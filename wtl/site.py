@@ -899,7 +899,14 @@ def choose_page(ctx: Context):
          "and the redirects that carry the tags.</p>"
          "<p><b>The lists are drawn again from time to time</b>, with fresh page views, so an "
          "article can enter or leave a list as readership changes. An article analysed earlier "
-         "keeps its page on this site after it leaves a list.</p>",
+         "keeps its page on this site after it leaves a list.</p>"
+         "<p><b>Kept articles.</b> When a redrawn list no longer includes an article that has "
+         "already been analysed, it stays on the list, marked “kept” in the Rank column. The "
+         "reason is only technical: the analysis was already done, so keeping it costs nothing. "
+         "It says nothing about the article. Most kept articles dropped out on 11 November 2026, "
+         "when new kinds of events and ideas were added (genocides, famines, mass shootings, "
+         "assassinations, pogroms, riots, genocide denial) and pushed less-read articles below "
+         "the top 25. An article that was never analysed is simply dropped.</p>",
          "<h2>A second rule, for subjects Wikipedia does not tag</h2>"
          "<p>Wikipedia does not mark some subjects as contentious, or marks only a small part of "
          "them. These are: China (beyond the Uyghur and Xinjiang area), socialism, Islam, "
@@ -949,7 +956,7 @@ def choose_page(ctx: Context):
                         st += f" <span class='small'>(shown under {escape(area_name(where.get(t)))})</span>"
                 else:
                     st = "<span class='small'>queued</span>"
-                rank = c.get("rank") or "on request"
+                rank = c.get("rank") or ("kept" if c.get("reason") == "kept" else "on request")
                 views = f"{int(c['views_60d']):,}" if c.get("views_60d") else "–"
                 h.append(f"<tr><td class='n'>{escape(str(rank))}</td><td>{escape(t)}</td>"
                          f"<td class='n'>{views}</td><td>{st}</td></tr>")

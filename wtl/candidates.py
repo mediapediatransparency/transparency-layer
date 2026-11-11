@@ -94,12 +94,18 @@ CLASSES = [
     ("person", ["Q5"]),
     ("media", ["Q11033", "Q1193236", "Q1002697", "Q11032", "Q41298", "Q192283", "Q15265344",
                "Q2001305", "Q1153191"]),
+    # Added 2026-11-11 (before, these fell under "other" and were left out: The Holocaust,
+    # Holodomor, September 11 attacks): genocide, famine, mass murder, crime against humanity,
+    # suicide attack, assassination, mass shooting, pogrom, riot, forced displacement.
     ("event", ["Q350604", "Q198", "Q178561", "Q645883", "Q2223653", "Q3199915", "Q40231",
-               "Q273120", "Q124734", "Q2334719"]),
+               "Q273120", "Q124734", "Q2334719",
+               "Q41397", "Q168247", "Q750215", "Q173462", "Q217327", "Q3882219", "Q21480300",
+               "Q177716", "Q124757", "Q837556"]),
     ("place", ["Q6256", "Q3624078", "Q7275", "Q486972", "Q2221906", "Q17334923"]),
     ("organisation", ["Q43229"]),
+    # genocide denial (Q339452) added 2026-11-11
     ("idea", ["Q7257", "Q12909644", "Q49773", "Q2738074", "Q9174", "Q2198855", "Q2915955",
-              "Q1387659"]),
+              "Q1387659", "Q339452"]),
 ]
 # Occupations (P106) that make a person a journalist or commentator; labels checked on Wikidata:
 # journalist, columnist, political commentator, news presenter, pundit.
@@ -140,7 +146,9 @@ def codes_in(wikitext: str) -> set[str]:
         for part in (m.group(1) or "").split("|"):
             v = part.split("=", 1)
             key, val = (v[0].strip().lower(), v[1]) if len(v) == 2 else ("", v[0])
-            if key not in ("", "topic", "topic2", "topic3", "1", "2", "3"):
+            # "t", "t2"… are the notice's short parameter names (Talk:The Holocaust uses
+            # t=apl|t2=ee); they were ignored before 2026-11-11.
+            if key not in ("", "topic", "topic2", "topic3", "t", "t1", "t2", "t3", "1", "2", "3"):
                 continue
             for tok in re.split(r"[,\s]+", val.strip().lower()):
                 if tok in CODE_AREA:
@@ -326,8 +334,14 @@ def article_info(titles: list[str]) -> dict[str, dict]:
 
 def kinds(qids: list[str]) -> dict[str, dict]:
     """Wikidata ID -> {kind, journalist}."""
-    p = cache.path("candidates", "kinds_v2")
-    known = cache.load(p) or {}
+    p = cache.path("candidates", "kinds_v3")
+    known = cache.load(p)
+    if known is None:
+        # v3 (2026-11-11) added event and idea classes. Kinds checked before "event" (person,
+        # media) and items already found to be events cannot change, so they carry over;
+        # everything else is looked up again.
+        old = cache.load(cache.path("candidates", "kinds_v2")) or {}
+        known = {q: v for q, v in old.items() if v["kind"] in ("person", "media", "event")}
     todo = sorted({q for q in qids if q and q not in known})
     order = {k: i for i, (k, _) in enumerate(CLASSES)}
     values = " ".join(f"(wd:{c} \"{k}\")" for k, cs in CLASSES for c in cs)
@@ -436,6 +450,32 @@ def requested() -> list[dict]:
         return list(csv.DictReader(f))
 
 
+def kept(chosen: list[dict], previous: list[dict] | None = None) -> list[dict]:
+    """Rows of the previous list that are no longer chosen but are already analysed.
+
+    Owner's rule (2026-11-11): an article that has dropped below the cut-off, usually because a
+    list rebuild added new kinds or readership shifted, stays on the list when keeping it costs
+    no extra work. Such rows are marked reason "kept"; the reason is technical, not a judgement
+    about the article. Articles never analysed are dropped as before."""
+    import json
+    if previous is None:
+        if not CANDIDATES_CSV.exists():
+            return []
+        with open(CANDIDATES_CSV, newline="", encoding="utf-8") as f:
+            previous = list(csv.DictReader(f))
+    ts = ROOT / "out" / "testset.json"
+    entries = json.loads(ts.read_text(encoding="utf-8")) if ts.exists() else {}
+    done = {e.get("article") for e in entries.values()} | set(entries)
+    have = {(r["area"], r["title"]) for r in chosen}
+    out = []
+    for r in previous:
+        if (r["area"], r["title"]) in have or r["title"] not in done:
+            continue
+        have.add((r["area"], r["title"]))
+        out.append({**r, "rank": "", "of": "", "reason": "kept"})
+    return out
+
+
 # Tags and banners found on the talk pages of redirects. The article a redirect points to is not
 # counted for that area unless its own talk page carries the tag too; these are listed instead.
 REDIRECTED: list[dict] = []
@@ -499,6 +539,7 @@ def build(per_kind: int = 25, subjects: list[str] | None = None) -> list[dict]:
             chosen.append({"area": q["area"], "kind": q.get("kind", ""), "title": q["title"],
                            "views_60d": "", "wikidata": "", "journalist": "", "rank": "", "of": "",
                            "reason": "requested", "rule": RULE.get(q["area"], "")})
+    chosen += kept(chosen)
     cols = ["area", "kind", "rank", "of", "title", "views_60d", "journalist", "wikidata", "reason",
             "rule", "kind_note"]
     tmp = CANDIDATES_CSV.with_suffix(".tmp")  # replaced in one step: a running batch never reads half a file
