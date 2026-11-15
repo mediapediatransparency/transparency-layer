@@ -2091,6 +2091,14 @@ def then_now_top(rec, ctx) -> str:
 _SD: dict = {}
 
 
+def _study_refs() -> str:
+    """The two audience-leaning studies, cited in full (wtl/outlets.py DD_REF, ROB_REF), DOIs linked."""
+    import re as _re
+    from .outlets import DD_REF, ROB_REF
+    link = lambda t: _re.sub(r"(https://doi\.org/\S+)", r"<a href='\1'>\1</a>", escape(t))  # noqa: E731
+    return f"<br><span class='small'>Cited: {link(DD_REF)}. {link(ROB_REF)}.</span>"
+
+
 def _shortdesc_of(rec):
     """This article's entry in data/shortdesc.json (wtl/shortdesc.py), for the analysed revision."""
     if "d" not in _SD:
@@ -5111,7 +5119,7 @@ def how_page(ctx: Context):
          "Republicans = (1 + score) ÷ 2 × 100. So −0.4 means about 70 Democrats and 30 "
          "Republicans. It describes who shares a website, not what the website says, and covers "
          "only websites. Two studies are used: DomainDemo (Yang and colleagues, 2025) and an "
-         "older one from 2017 Twitter data (Robertson and colleagues, 2018).</li>"
+         "older one from 2017 Twitter data (Robertson and colleagues, 2018)." + _study_refs() + "</li>"
          "<li><b>Media Bias/Fact Check and AllSides.</b> Two organisations that label news "
          "outlets (left, centre, right, and how factual). Their labels are shown as they give "
          "them.</li>"
