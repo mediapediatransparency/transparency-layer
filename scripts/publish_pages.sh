@@ -5,7 +5,8 @@
 # article records in this repository (out/<article>/<revision>.json, at the commit being
 # published) instead of copying them beside the pages, which keeps the site under GitHub Pages'
 # 1 GB limit. Then pushes that folder as the only commit of the gh-pages branch (history is not
-# kept there, so the repository does not grow with every publish).
+# kept there, so the repository does not grow with every publish). The push goes through this
+# repository's own git settings, so it uses the project's GitHub account.
 #
 # Run from anywhere:  scripts/publish_pages.sh
 set -eu
@@ -30,12 +31,13 @@ export WTL_DATA_BASE="https://raw.githubusercontent.com/$REPO_PATH/$SHA/out"
 touch out/site-public/.nojekyll      # serve files as they are (no Jekyll processing)
 du -sh out/site-public
 
-cd out/site-public
-rm -rf .git
-git init -q -b gh-pages
-git add -A
-git -c user.name="$(git -C ../.. log -1 --format=%an)" -c user.email="$(git -C ../.. log -1 --format=%ae)" \
-    commit -q -m "Publish site from $SHA"
-git push -f "$REMOTE" gh-pages
-rm -rf .git
+# Commit the folder from this repository (so the push uses this repository's GitHub account and
+# settings), as a commit with no parent, and make it the whole of the gh-pages branch.
+TMP_INDEX=$(mktemp)
+rm -f "$TMP_INDEX"
+GIT_INDEX_FILE="$TMP_INDEX" git --work-tree=out/site-public add -A
+TREE=$(GIT_INDEX_FILE="$TMP_INDEX" git write-tree)
+rm -f "$TMP_INDEX"
+COMMIT=$(git commit-tree "$TREE" -m "Publish site from $SHA")
+git push -f origin "$COMMIT:refs/heads/gh-pages"
 echo "Published from $SHA."
