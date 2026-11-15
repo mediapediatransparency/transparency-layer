@@ -1,4 +1,4 @@
-# Wikipedia Transparency Layer — Metrics & Display Spec
+# Transparency Layer for Wikipedia — Metrics & Display Spec
 
 3 Nov 2026 · exported from the planning doc
 

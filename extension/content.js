@@ -1,4 +1,4 @@
-// Wikipedia Transparency Layer: a badge of three dials on analysed articles, opening a panel.
+// Transparency Layer for Wikipedia: a badge of three dials on analysed articles, opening a panel.
 // All data is inside the add-on (data.js); nothing is fetched and nothing is sent anywhere.
 (function () {
   "use strict";

@@ -1,4 +1,4 @@
-# Wikipedia Transparency Layer — project brief for Claude Code
+# Transparency Layer for Wikipedia — project brief for Claude Code
 
 ## What this project is
 

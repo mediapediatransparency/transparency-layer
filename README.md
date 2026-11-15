@@ -1,4 +1,4 @@
-# Wikipedia Transparency Layer — Phase 1
+# Transparency Layer for Wikipedia — Phase 1
 
 Who wrote the Wikipedia text you are reading, and did Wikipedia later sanction any of those
 editors? Give the tool an article title and it writes:

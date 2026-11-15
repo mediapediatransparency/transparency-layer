@@ -23,7 +23,7 @@ from .report.html import TYPE_NAMES, get, link, pct
 ROOT = Path(__file__).resolve().parent.parent
 SITE_DIR = ROOT / "site"
 DOCS = ROOT / "docs"
-NAME = "Wikipedia Transparency Layer"
+NAME = "Transparency Layer for Wikipedia"
 REPO = "https://github.com/mediapediatransparency/wikipedia-transparency"
 WIKI = "https://en.wikipedia.org"
 
@@ -250,7 +250,7 @@ def page(title, body, current, depth=0, json_alt=None, description=""):
             f"<meta name='description' content='{escape(description, quote=True)}'>{alt}"
             f"<style>{CSS}{_redact.CSS}</style></head><body>"
             f"<header class='site'><div class='in'><a class='brand' href='{up}index.html' aria-label='{escape(NAME)}, home'>"
-            f"{MARK_SVG}<span class='bt'><small>Wikipedia</small>Transparency Layer</span></a>"
+            f"{MARK_SVG}<span class='bt'>Transparency Layer<small>for Wikipedia</small></span></a>"
             f"<nav aria-label='Site'>{nav}</nav><a class='srch' href='{up}search.html'"
             + (" aria-current='page'" if current == "search.html" else "")
             + f">{SEARCH_SVG}<span>Search</span></a></div></header><main>{_in_short(body, current)}</main>"
@@ -5117,7 +5117,10 @@ def how_page(ctx: Context):
          "them.</li>"
          "<li><b>Academic level.</b> Finland's Publication Forum, where panels of university "
          "researchers grade publishers and journals: 3 top, 2 leading, 1 basic scholarly, 0 below "
-         "the scholarly bar.</li>"
+         "the scholarly bar. Levels from the Publication forum "
+         "(<a href='https://julkaisufoorumi.fi/en'>julkaisufoorumi.fi</a>), licensed "
+         "<a href='https://creativecommons.org/licenses/by/4.0/'>CC BY 4.0</a>; changes: this site matches "
+         "them to the publishers and journals an article cites and counts citations by level.</li>"
          "<li><b>Recorded left–right position.</b> Where a source's recorded labels put it, "
          "from far left to far right, out of every 100 citations that can be placed. Labels that are "
          "positions (far-left, left-wing, centre-left, centrist, centre-right, right-wing, far-right) "
