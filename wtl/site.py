@@ -24,7 +24,7 @@ ROOT = Path(__file__).resolve().parent.parent
 SITE_DIR = ROOT / "site"
 DOCS = ROOT / "docs"
 NAME = "Transparency Layer for Wikipedia"
-REPO = "https://github.com/mediapediatransparency/wikipedia-transparency"
+REPO = "https://github.com/mediapediatransparency/transparency-layer"
 # Where each article's full record (JSON) is linked. Unset: a copy in site/data/ beside the pages.
 # Set (e.g. the repository's raw out/ folder) for a public build: the copies are left out, which
 # keeps the published site under GitHub Pages' 1 GB limit; the records are the same bytes.
