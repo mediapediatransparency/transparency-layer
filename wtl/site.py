@@ -16,6 +16,7 @@ from urllib.parse import quote
 from pathlib import Path
 
 from .config import OUT_DIR
+from . import redact as _redact
 from .report import json_writer
 from .report.html import TYPE_NAMES, get, link, pct
 
@@ -247,7 +248,7 @@ def page(title, body, current, depth=0, json_alt=None, description=""):
             f"<meta name='viewport' content='width=device-width,initial-scale=1'>"
             f"<title>{escape(title)}</title>"
             f"<meta name='description' content='{escape(description, quote=True)}'>{alt}"
-            f"<style>{CSS}</style></head><body>"
+            f"<style>{CSS}{_redact.CSS}</style></head><body>"
             f"<header class='site'><div class='in'><a class='brand' href='{up}index.html' aria-label='{escape(NAME)}, home'>"
             f"{MARK_SVG}<span class='bt'><small>Wikipedia</small>Transparency Layer</span></a>"
             f"<nav aria-label='Site'>{nav}</nav><a class='srch' href='{up}search.html'"
@@ -1831,6 +1832,8 @@ def _then_now(ctx):
     if not hasattr(ctx, "_tnd"):
         p = ROOT / "data" / "then_now.json"
         ctx._tnd = json.loads(p.read_text(encoding="utf-8")).get("articles", {}) if p.exists() else {}
+        for a, e in ctx._tnd.items():
+            _redact.then_now_entry(e, a)
     return ctx._tnd
 
 
@@ -2094,7 +2097,7 @@ def _shortdesc_of(rec):
         p = ROOT / "data" / "shortdesc.json"
         _SD["d"] = json.loads(p.read_text(encoding="utf-8")).get("articles", {}) if p.exists() else {}
     e = _SD["d"].get(rec["article"])
-    return e if e and e.get("revision") == rec["revision"] else None
+    return _redact.shortdesc_entry(e, rec["article"]) if e and e.get("revision") == rec["revision"] else None
 
 
 def _undone_within_a_day(chs):
@@ -5015,7 +5018,11 @@ def how_page(ctx: Context):
          "missed. Changes put back to the earlier wording within a day are shown separately, because that "
          "is how vandalism and its repair usually look. Before about 2018 most short descriptions came "
          "from Wikidata, not the article, and are not tracked. Edit summaries are used only to choose "
-         "which edits to check and are not kept; no account names are kept.</li>"
+         "which edits to check and are not kept; no account names are kept. Words that would disclose "
+         "a person are replaced by a <span class='redacted'>redacted</span> tag naming the reason: "
+         "links to an editor's page and IP addresses always, and personal details of private people "
+         "that vandals wrote in, passage by passage (listed in <code>data/redactions.json</code>). "
+         "The rest of the wording is shown as it was; Wikipedia's page history keeps the original.</li>"
          "<li id='framed'><b>The two template columns beside the opening.</b> Both are today's first "
          "paragraph rewritten by fixed rules; neither is written by a person or by AI, and neither is a "
          "proposed edit. “With sources named”: each sentence marked by the check above gets its cited "
@@ -5407,7 +5414,8 @@ def _detail(html: str, overview: str, name: str, here: str) -> str:
 
 def _write(SITE_DIR, clean, ctx):
     for r in clean:
-        (SITE_DIR / "articles" / f"{slug(r['article'])}.html").write_text(article_page(r, ctx), encoding="utf-8")
+        (SITE_DIR / "articles" / f"{slug(r['article'])}.html").write_text(_redact.render(article_page(r, ctx)),
+                                                                         encoding="utf-8")
         (SITE_DIR / "data" / f"{slug(r['article'])}.json").write_text(json_writer.dumps(r), encoding="utf-8")
     shutil.copy(OUT_DIR / "summary.json", SITE_DIR / "data" / "summary.json")
     (SITE_DIR / "index.html").write_text(home_page(ctx), encoding="utf-8")

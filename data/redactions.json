@@ -1,0 +1,49 @@
+{
+ "rule": "Passages of quoted Wikipedia text that this site does not repeat (wtl/redact.py). Each is kept here only as the SHA-256 of its exact text and its length in characters, so this file does not repeat it either; a passage of that length whose hash matches is replaced by a 'redacted' tag with its reason, and the rest of the quoted text stays. Editor links and IP addresses are redacted automatically and are not listed here.",
+ "articles": {
+  "Pacific War": [
+   {
+    "reason": "personal-details",
+    "added": "2026-11-15",
+    "where": "short description, vandalised 2022-12-05, reverted after about a minute",
+    "sha256": "27d576b5ffd0459d4b87d7513ab3be2c4ad0f1d360847dcea6b4924662bec507",
+    "length": 15
+   },
+   {
+    "reason": "personal-details",
+    "added": "2026-11-15",
+    "where": "same edit",
+    "sha256": "61ee288abad6f655049fa1702387f350c17532605f1efcfaac9446ed47b487e8",
+    "length": 13
+   },
+   {
+    "reason": "personal-details",
+    "added": "2026-11-15",
+    "where": "same edit",
+    "sha256": "bf5bea315c5e94a6bc5ddff75d8c0c300377a96185502063f5d081dbbf1542f9",
+    "length": 12
+   },
+   {
+    "reason": "personal-details",
+    "added": "2026-11-15",
+    "where": "same edit",
+    "sha256": "a73575e4f0db3c97dd395a04bf4d5ec21805453d1d1e8c81ff0c50cfddce043c",
+    "length": 7
+   },
+   {
+    "reason": "personal-details",
+    "added": "2026-11-15",
+    "where": "same edit",
+    "sha256": "44b2b1eb83f6dd12b6dcf49536a6c75d528a127f679c5b0b35854f0f6302cf85",
+    "length": 17
+   },
+   {
+    "reason": "personal-details",
+    "added": "2026-11-15",
+    "where": "same edit",
+    "sha256": "69202d625b0d7abb02d404f100f1caa6c0baee3571e5106d89ddfda699cfd451",
+    "length": 57
+   }
+  ]
+ }
+}

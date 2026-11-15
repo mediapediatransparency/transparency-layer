@@ -306,6 +306,9 @@ def build(records: list[dict], log=print) -> dict:
 def _write(arts):
     d = {"built": dt.date.today().isoformat(), "dates": DATES, "rule": __doc__.strip(),
          "articles": dict(sorted(arts.items()))}
+    from . import redact
+    for _a, _e in d["articles"].items():   # disclosing quoted text is not kept (wtl/redact.py)
+        redact.then_now_entry(_e, _a)
     THEN_NOW_JSON.write_text(json.dumps(d, ensure_ascii=False, indent=0, sort_keys=True) + "\n",
                              encoding="utf-8")
     return d

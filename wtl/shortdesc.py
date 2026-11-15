@@ -194,5 +194,8 @@ def build(records: list[dict], log=print, only: set | None = None) -> dict:
 
 def _write(arts):
     d = {"built": dt.date.today().isoformat(), "rule": __doc__.strip(), "articles": dict(sorted(arts.items()))}
+    from . import redact
+    for _a, _e in d["articles"].items():   # disclosing quoted text is not kept (wtl/redact.py)
+        redact.shortdesc_entry(_e, _a)
     SHORTDESC_JSON.write_text(json.dumps(d, ensure_ascii=False, indent=0, sort_keys=True) + "\n", encoding="utf-8")
     return d
