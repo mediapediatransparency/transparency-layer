@@ -1,0 +1,173 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>Transparency Layer for Wikipedia</title><meta name='description' content='How Wikipedia articles came to say what they say, from Wikipedia&#x27;s public records.'><style>
+:root{--bg:#fbfbf9;--fg:#1d1d1b;--muted:#5d5d58;--line:#dcdbd5;--soft:#f1f0eb;--link:#1f4e8c;--accent:#2a78d6;
+--bar:#4a6fa5;--bar2:#b9c7dc;--note:#fff8e6;--noteline:#e2c46f}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#171715;--fg:#e9e8e3;
+--muted:#a8a79f;--line:#3a3935;--soft:#22221f;--link:#93b8ec;--bar:#7f9fd0;--bar2:#3b4a62;
+--note:#2a2516;--noteline:#7a6524;--accent:#5598e7}}
+:root[data-theme="dark"]{--bg:#171715;--fg:#e9e8e3;--muted:#a8a79f;--line:#3a3935;--soft:#22221f;
+--link:#93b8ec;--bar:#7f9fd0;--bar2:#3b4a62;--note:#2a2516;--noteline:#7a6524;--accent:#5598e7}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 Georgia,"Iowan Old Style",serif}
+header.site{border-bottom:1px solid var(--line);background:color-mix(in srgb,var(--bg) 92%,var(--soft));
+position:relative;z-index:50}
+header.site .in{max-width:1240px;margin:0 auto;padding:0 16px;min-height:64px;display:flex;align-items:center;
+gap:8px 28px;flex-wrap:wrap;font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
+header.site .brand{display:flex;align-items:center;gap:10px;color:var(--fg);text-decoration:none;margin-right:auto;
+padding:10px 0}
+header.site .mark{width:26px;height:26px;flex:none;color:var(--fg)}
+header.site .bt{display:flex;flex-direction:column;line-height:1.05;font:600 1.06rem/1.1 Georgia,"Iowan Old Style",serif;
+letter-spacing:-.005em}
+header.site .bt small{font:600 .62rem/1.2 system-ui,-apple-system,"Segoe UI",sans-serif;letter-spacing:.14em;
+text-transform:uppercase;color:var(--muted)}
+header.site nav{display:flex;align-items:center;gap:2px;flex-wrap:wrap}
+header.site .top{display:inline-block;padding:8px 12px;border-radius:8px;color:var(--fg);text-decoration:none;
+font-size:.92rem;cursor:pointer;list-style:none;position:relative}
+header.site .top::-webkit-details-marker{display:none}
+header.site summary.top::after{content:"";display:inline-block;width:6px;height:6px;margin-left:7px;
+border-right:1.5px solid var(--muted);border-bottom:1.5px solid var(--muted);transform:translateY(-3px) rotate(45deg)}
+header.site .top:hover,header.site details[open]>.top{background:var(--soft)}
+header.site .top[aria-current]::before,header.site .top[data-here]::before{content:"";position:absolute;left:12px;
+right:12px;bottom:2px;height:2px;border-radius:2px;background:var(--accent)}
+header.site details.dd{position:relative}
+header.site .menu{position:absolute;top:calc(100% + 6px);left:0;min-width:230px;padding:6px;background:var(--bg);
+border:1px solid var(--line);border-radius:12px;box-shadow:0 12px 32px rgba(0,0,0,.14)}
+header.site .menu a{display:block;padding:8px 10px;border-radius:8px;color:var(--fg);text-decoration:none;font-size:.9rem}
+header.site .menu a:hover{background:var(--soft)}
+header.site .menu a[aria-current]{color:var(--link);font-weight:600}
+header.site .srch{display:inline-flex;align-items:center;gap:7px;padding:7px 14px;border:1px solid var(--line);
+border-radius:999px;color:var(--muted);text-decoration:none;font-size:.88rem;background:var(--bg)}
+header.site .srch:hover,header.site .srch[aria-current]{color:var(--fg);border-color:var(--muted)}
+header.site a:focus-visible,header.site summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+@media (max-width:760px){header.site .in{gap:0 8px;padding-bottom:4px}header.site nav{order:3;width:100%;
+flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin:0 -8px}header.site nav::-webkit-scrollbar{display:none}
+header.site .top{padding:8px 9px;white-space:nowrap}header.site .srch span{display:none}header.site .srch{padding:8px 10px}
+header.site .menu{position:fixed;left:16px;right:16px;top:auto}}
+main{max-width:1240px;margin:0 auto;padding:24px 16px 64px}
+details.pop{display:inline-block;position:relative;font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
+details.pop>summary{cursor:pointer;list-style:none;color:var(--link);font-size:.8rem;white-space:nowrap}
+details.pop>summary::-webkit-details-marker{display:none}
+details.pop .popb{position:absolute;z-index:40;left:0;top:1.6em;width:min(360px,80vw);background:var(--bg);
+color:var(--fg);border:1px solid var(--line);border-radius:8px;padding:8px 12px;box-shadow:0 6px 22px rgba(0,0,0,.18);
+font:.86rem/1.45 Georgia,"Iowan Old Style",serif;text-transform:none;letter-spacing:0}
+details.pop .popb p{margin:4px 0}details.pop .popb a{font-size:.78rem;white-space:nowrap}
+h1{font-size:2rem;line-height:1.2;margin:8px 0 6px}
+h2{font-size:1.35rem;margin:40px 0 10px;padding-top:14px;border-top:1px solid var(--line)}
+h3{font-size:1.08rem;margin:24px 0 6px}
+p,li{max-width:none;line-height:1.75}
+a{color:var(--link)}
+.sans,table,.meta,.small,.note,.fig,details summary,footer{font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
+.meta{color:var(--muted);font-size:.9rem}
+.small{font-size:.88rem;color:var(--muted)}
+tr.sum td{background:var(--soft);border-top:1px solid var(--line)}
+.lede{font-size:1.12rem}
+sup a{text-decoration:none;font-size:.75em;padding:0 1px}
+.detail-banner{max-width:none;margin:0 0 18px;padding:10px 14px;border-radius:10px;background:var(--soft);
+font:.88rem/1.45 system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--muted)}
+ol.refs li{margin:0 0 8px;max-width:none}
+.brief{background:var(--soft);border:1px solid var(--line);border-radius:8px;padding:6px 20px;margin:18px 0}
+.brief li{margin:8px 0}
+.fig{display:flex;flex-wrap:wrap;gap:12px;margin:14px 0}
+.fig .box{flex:1 1 180px;border:1px solid var(--line);border-radius:8px;padding:10px 14px}
+.fig .num{font-size:1.7rem;font-weight:700;font-variant-numeric:tabular-nums;line-height:1.2}
+.fig .lbl{font-size:.88rem}
+.fig .cmp{font-size:.82rem;color:var(--muted);margin-top:4px}
+.note{background:var(--note);border-left:4px solid var(--noteline);padding:8px 14px;margin:12px 0;
+font-size:.92rem;border-radius:0 6px 6px 0;max-width:none}
+.note b{font-weight:600}
+.scroll,.ft{overflow:auto;-webkit-overflow-scrolling:touch;margin:10px 0;max-height:75vh;
+border:1px solid var(--line);border-radius:6px}
+.scroll table,.ft table{border-collapse:separate;border-spacing:0}
+.scroll tr:first-child>th,.ft tr:first-child>th{position:sticky;top:0;background:var(--soft);z-index:2}
+.scroll td:first-child,.scroll th:first-child,.ft td:first-child,.ft th:first-child{position:sticky;
+left:0;background:var(--bg);z-index:1;max-width:38vw}
+.scroll tr:first-child>th:first-child,.ft tr:first-child>th:first-child{background:var(--soft);z-index:3}
+.clamp{display:-webkit-box;-webkit-line-clamp:3;line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.clamp.open{display:block;overflow:visible}
+.inshort{background:var(--soft);border-left:3px solid var(--bar);padding:6px 10px;border-radius:4px;margin:6px 0 10px}
+dl.gloss dt{font-weight:600;margin-top:8px}dl.gloss dd{margin:0 0 4px 0}
+button.more{border:0;background:none;color:var(--link);padding:0;margin-top:2px;cursor:pointer;
+font:inherit;font-size:.78rem;text-decoration:underline}
+table{border-collapse:collapse;width:100%;font-size:.88rem}
+th,td{text-align:left;vertical-align:top;padding:6px 8px;border-bottom:1px solid var(--line)}
+th{font-weight:600;color:var(--muted);font-size:.78rem;text-transform:uppercase;letter-spacing:.03em}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+td.expl{color:var(--muted);font-size:.82rem;min-width:220px}
+.tag{display:inline-block;border:1px solid var(--muted);border-radius:3px;padding:0 5px;font-size:.76rem;white-space:nowrap}
+.bars{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;font-size:.85rem;margin:10px 0}
+.bars .row{display:grid;grid-template-columns:84px 1fr 54px;gap:8px;align-items:center;margin:3px 0}
+.bars .track{background:var(--soft);border-radius:3px;height:14px;overflow:hidden}
+.bars .fill{background:var(--bar);height:100%}
+.bars .fill.s{background:repeating-linear-gradient(45deg,var(--bar) 0 4px,var(--bar2) 4px 8px)}
+.bars .v{text-align:right;font-variant-numeric:tabular-nums}
+details{margin:12px 0}
+details summary{cursor:pointer;color:var(--link)}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px;margin:12px 0}
+.card{border:1px solid var(--line);border-radius:8px;padding:12px 14px}
+.card h3{margin:0 0 4px}
+.card p{margin:4px 0;font-size:.92rem}
+footer{border-top:1px solid var(--line);color:var(--muted);font-size:.82rem}
+footer .in{max-width:1240px;margin:0 auto;padding:16px}
+@media (max-width:520px){h1{font-size:1.6rem}.bars .row{grid-template-columns:70px 1fr 48px}}
+.lbl{position:relative;display:inline-block;padding:1px 8px;margin:1px 2px;border:1px solid var(--line);border-radius:999px;
+ background:var(--soft);font-size:.82rem;cursor:help;white-space:nowrap}
+.lbl:focus{outline:2px solid var(--link);outline-offset:1px}
+.pill{display:inline-block;padding:1px 8px;margin:1px 2px;border:1px solid var(--line);border-radius:999px;font-size:.8rem;cursor:help}
+.pill.rate{background:var(--soft)}.pill.cflag{border-style:dashed}
+.lbl .def{display:none;position:absolute;left:0;top:calc(100% + 6px);z-index:30;width:min(320px,80vw);white-space:normal;
+ padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--fg);
+ box-shadow:0 6px 18px rgba(0,0,0,.18);font-size:.82rem;line-height:1.4;cursor:auto}
+.lbl:hover .def,.lbl:focus .def,.lbl:focus-within .def{display:block}
+.lbl .def b{font-weight:600}.lbl .def .src{display:block;margin-top:6px;color:var(--muted);font-size:.75rem}
+.redacted{display:inline-block;padding:0 6px;border-radius:4px;font-size:.85em;background:var(--fg,#222);color:var(--bg,#fff);letter-spacing:.02em;cursor:help}</style></head><body><header class='site'><div class='in'><a class='brand' href='index.html' aria-label='Transparency Layer for Wikipedia, home'><svg class='mark' viewBox='0 0 24 24' aria-hidden='true'><rect x='2.5' y='2.5' width='19' height='19' rx='5' fill='none' stroke='currentColor' stroke-width='1.6'/><path d='M7 8.5h10M7 12h7M7 15.5h8.5' stroke='currentColor' stroke-width='1.6' stroke-linecap='round'/><path d='M7 12h7' stroke='var(--accent)' stroke-width='2.6' stroke-linecap='round'/></svg><span class='bt'>Transparency Layer<small>for Wikipedia</small></span></a><nav aria-label='Site'><details class='dd'><summary class='top'>Articles</summary><div class='menu'><a href='compare.html'>All articles and their figures</a><a href='articles.html'>Which articles, and why</a><a href='categories.html'>Categories</a></div></details><details class='dd'><summary class='top'>Editors</summary><div class='menu'><a href='editors.html'>Overview</a><a href='editors-across.html'>Editors across topics</a><a href='editor.html'>Look up an editor</a></div></details><details class='dd'><summary class='top'>Sources</summary><div class='menu'><a href='sources.html'>Overview</a><a href='sources-affiliations.html'>Affiliations</a></div></details><a class='top' href='leaning.html'>Leaning</a><details class='dd'><summary class='top'>About</summary><div class='menu'><a href='about.html'>About this project</a><a href='objective.html'>Why this matters for AI</a><a href='how-it-works.html'>How it works</a></div></details><details class='dd'><summary class='top'>Data &amp; method</summary><div class='menu'><a href='how-it-works.html'>How it works</a><a href='compare-detail.html'>Every figure, every article</a><a href='sources-detail.html'>Sources in detail</a><a href='leaning-detail.html'>Leaning in detail</a><a href='editors-detail.html'>Editors in detail</a><a href='articles-detail.html'>Full article lists</a><a href='categories.html'>Categories</a></div></details></nav><a class='srch' href='search.html'><svg viewBox='0 0 24 24' width='16' height='16' aria-hidden='true'><circle cx='10.5' cy='10.5' r='6.5' fill='none' stroke='currentColor' stroke-width='2'/><path d='M15.5 15.5 20 20' stroke='currentColor' stroke-width='2' stroke-linecap='round'/></svg><span>Search</span></a></div></header><main><style>
+.hero{padding:36px 0 8px;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:22px 48px;align-items:end}
+.hero .kicker{font:600 .72rem/1 system-ui,-apple-system,"Segoe UI",sans-serif;letter-spacing:.16em;text-transform:uppercase;
+ color:var(--accent);margin:0 0 14px}
+.hero .ht{grid-column:1/-1}
+.hero h1{font-size:clamp(2.1rem,4.2vw,3.4rem);line-height:1.08;letter-spacing:-.015em;margin:0;font-weight:600;max-width:22ch}
+.hero .lede{font-size:1.16rem;color:var(--muted);max-width:none;margin:0}
+.hero .sf{margin:22px 0 0}
+.hero .sf input{padding:14px 18px;border-radius:999px;font-size:1.02rem;background:var(--bg)}
+.hero .sf button{border-radius:999px;padding:10px 22px;background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);
+ border-radius:14px;overflow:hidden}
+.stats div{background:var(--bg);padding:18px 20px}
+.stats b{display:block;font:600 1.9rem/1.1 Georgia,"Iowan Old Style",serif;letter-spacing:-.01em;font-variant-numeric:tabular-nums}
+.stats span{font:.8rem/1.3 system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--muted)}
+.hsec{margin:56px 0 0}
+.hsec>h2{border:0;font-size:1.5rem;margin:0 0 4px}
+.hsec>.sub{color:var(--muted);margin:0 0 18px}
+.feats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.feat{border:1px solid var(--line);border-radius:14px;padding:18px 18px 16px;background:var(--bg);display:flex;flex-direction:column}
+.feat .no{font:600 .72rem/1 system-ui,-apple-system,"Segoe UI",sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.feat h3{font-size:1.08rem;margin:10px 0 8px;line-height:1.3}
+.feat p{font-size:.92rem;color:var(--muted);margin:0 0 12px;flex:1}
+.feat a{font:.86rem system-ui,-apple-system,"Segoe UI",sans-serif;text-decoration:none}
+.feat a::after{content:" →"}
+.principle{margin:44px 0 0;padding:22px 26px;border-radius:14px;background:var(--soft);display:grid;
+ grid-template-columns:minmax(0,1fr) auto;gap:10px 30px;align-items:center}
+.principle p{margin:0;font-size:1.05rem;max-width:none}
+.principle nav{display:flex;flex-wrap:wrap;gap:6px 18px;font:.88rem system-ui,-apple-system,"Segoe UI",sans-serif}
+.principle nav a{text-decoration:none}
+.areas{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px}
+.area{display:block;border:1px solid var(--line);border-radius:14px;padding:18px 20px;color:var(--fg);text-decoration:none;
+ transition:border-color .15s,transform .15s}
+.area:hover{border-color:var(--muted);transform:translateY(-1px)}
+.area h3{font-size:1.06rem;margin:0 0 12px;line-height:1.3}
+.area .n{font:600 2rem/1 Georgia,"Iowan Old Style",serif;font-variant-numeric:tabular-nums}
+.area .n small{font:.82rem system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--muted);margin-left:6px}
+.area .kinds{display:flex;flex-wrap:wrap;gap:4px;margin:12px 0 0}
+.area .kinds span{font:.74rem/1.2 system-ui,-apple-system,"Segoe UI",sans-serif;padding:3px 8px;border-radius:999px;
+ background:var(--soft);color:var(--muted)}
+.area .q{font:.78rem system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--muted);margin:10px 0 0}
+.allbtn{display:inline-block;margin:18px 0 0;font:.92rem system-ui,-apple-system,"Segoe UI",sans-serif;text-decoration:none}
+.allbtn::after{content:" →"}
+@media (max-width:980px){.hero{grid-template-columns:1fr;gap:24px}.feats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.feats{grid-template-columns:1fr}.principle{grid-template-columns:1fr}}
+</style><style>.sf{display:flex;gap:8px;margin:14px 0}.sf input{flex:1;min-width:0;font-size:1.05rem;padding:10px 12px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--fg)}.sf button{font-size:1rem;padding:8px 16px;border:1px solid var(--line);border-radius:6px;background:var(--soft);color:var(--fg);cursor:pointer}.hit{padding:8px 0;border-bottom:1px solid var(--line)}.hit .small a{margin-right:10px}</style><section class='hero'><div class='ht'><p class='kicker'>From Wikipedia&#x27;s public records</p><h1>Who wrote what you read on Wikipedia?</h1></div><div><p class='lede'>Wikipedia shows you what an article says today, but not how it came to say it. We work that out from Wikipedia&#x27;s own public records, with a link to the evidence for every number.</p><form class='sf' action='search.html' method='get' role='search'><input name='q' type='search' placeholder='Search a topic, article, source or pattern ID' aria-label='Search' autocomplete='off'><button type='submit'>Search</button></form></div><div class='stats' aria-label='The record so far'><div><b>2,054</b><span>articles analysed</span></div><div><b>23</b><span>topic areas</span></div><div><b>6,083,279</b><span>revisions read</span></div><div><b>38,627</b><span>different sources cited</span></div></div></section><section class='hsec'><h2>What each article page shows</h2><p class='sub'>Four questions, each answered from the record, with a link to the evidence for every number.</p><div class='feats'><div class='feat'><span class='no'>1 · The opening</span><h3>Does it name who holds contested views, or state one view in Wikipedia&#x27;s own voice?</h3><p>The first paragraph in 2015, 2019, 2023 and today, side by side: what changed, which sources were taken out, and which sentences state contested views without saying whose they are.</p><a href='how-it-works.html#voice'>How it is measured</a></div><div class='feat'><span class='no'>2 · What it rests on</span><h3>How authoritative are its sources, what leanings are recorded for them, and can a reader check them?</h3><p>Each source with Wikipedia&#x27;s own reliability rating, academic level, outside raters&#x27; scores, recorded political labels, and whether the footnote can be checked.</p><a href='sources.html'>How it is measured</a></div><div class='feat'><span class='no'>3 · Who wrote it</span><h3>Who wrote the words you are reading, and what does Wikipedia record about them?</h3><p>How concentrated the writing is, how much is by editors Wikipedia later sanctioned, interests editors declared on Wikipedia, and where else they write. Editors are never named.</p><a href='editors.html'>How it is measured</a></div><div class='feat'><span class='no'>4 · How it changes</span><h3>What was fought over, and what kept text in place?</h3><p>How often it is edited, what was taken out and put back, and the rules applied.</p><a href='how-it-works.html#numbers'>How it is measured</a></div></div></section><div class='principle'><p>We do not judge whether an article is right, or whether its editors are good or bad. We show where the record and Wikipedia's own standards can be set side by side.</p><nav><a href='how-it-works.html'>How it works</a><a href='articles.html'>Which articles, and why</a><a href='objective.html'>Why this matters for AI</a></nav></div><section class='hsec'><h2>Topic areas</h2><p class='sub'>2,054 articles analysed so far, grouped like with like.</p><div class='areas'><a class='area' href='compare.html#area-A-I'><h3>Arab–Israeli conflict</h3><div class='n'>181<small>analysed</small></div><div class='kinds'><span>Journalists and commentators 41</span><span>Other public figures 26</span><span>News outlets and media 25</span><span>Organisations 27</span><span>Ideas, ideologies and movements 34</span><span>Events 27</span><span>Other articles 1</span></div></a><a class='area' href='compare.html#area-AP'><h3>US politics (includes DEI)</h3><div class='n'>175<small>analysed</small></div><div class='kinds'><span>Journalists and commentators 37</span><span>Other public figures 23</span><span>News outlets and media 25</span><span>Organisations 31</span><span>Ideas, ideologies and movements 26</span><span>Events 33</span></div></a><a class='area' href='compare.html#area-GS'><h3>Gender and sexuality (includes transgender topics)</h3><div class='n'>124<small>analysed</small></div><div class='kinds'><span>Journalists and commentators 25</span><span>Other public figures 25</span><span>News outlets and media 3</span><span>Organisations 35</span><span>Ideas, ideologies and movements 13</span><span>Events 23</span></div></a><a class='area' href='compare.html#area-EE'><h3>Eastern Europe and the Balkans (includes Russia and Ukraine)</h3><div class='n'>135<small>analysed</small></div><div class='kinds'><span>Journalists and commentators 18</span><span>Other public figures 26</span><span>News outlets and media 12</span><span>Organisations 28</span><span>Ideas, ideologies and movements 24</span><span>Events 27</span></div></a><a class='area' href='compare.html#area-AB'><h3>Abortion</h3><div class='n'>56<small>analysed</small></div><div class='kinds'><span>Other public figures 26</span><span>Organisations 25</span><span>Events 5</span></div></a><a class='area' href='compare.html#area-RI'><h3>Race and intelligence</h3><div class='n'>28<small>analysed</small></div><div class='kinds'><span>Journalists and commentators 2</span><span>Other public figures 8</span><span>Organisations 17</span><span>Ideas, ideologies and movements 1</span></div></a><a class='area' href='compare.html#area-IR'><h3>Iranian politics</h3><div class='n'>75<small>analysed</small></div><div class='kinds'><span>Journalists and commentators 1</span><span>Other public figures 23</span><span>News outlets and media 3</span><span>Organisations 25</span><span>Events 23</span></div></a><a class='area' href='compare.html#area-KU'><h3>Kurds and Kurdistan</h3><div class='n'>77<small>analysed</small></div><div class='kinds'><span>Other public figures 25</span><span>News outlets and media 1</span><span>Organisations 21</span><span>Ideas, ideologies and movements 2</span><span>Events 28</span></div></a><a class='area' href='compare.html#area-SA'><h3>South Asia</h3><div class='n'>147<small>analysed</small></div><div class='kinds'><span>Journalists and commentators 19</span><span>Other public figures 25</span><span>News outlets and media 23</span><span>Organisations 26</span><span>Ideas, ideologies and movements 27</span><span>Events 26</span><span>Other articles 1</span></div></a><a class='area' href='compare.html#area-AA'><h3>Armenia and Azerbaijan</h3><div class='n'>73<small>analysed</small></div><div class='kinds'><span>Journalists and commentators 2</span><span>Other public figures 21</span><span>Organisations 21</span><span>Ideas, ideologies and movements 3</span><span>Events 26</span></div></a><a class='area' href='compare.html#area-CN'><h3>China: Uyghurs and Xinjiang</h3><div class='n'>66<small>analysed</small></div><div class='kinds'><span>Journalists and commentators 1</span><span>Other public figures 25</span><span>News outlets and media 7</span><span>Organisations 26</span><span>Ideas, ideologies and movements 3</span><span>Events 4</span></div></a><a class='area' href='compare.html#area-SY'><h3>Syrian civil war and ISIL</h3><div class='n'>82<small>analysed</small></div><div class='kinds'><span>Journalists and commentators 4</span><span>Other public figures 24</span><span>News outlets and media 3</span><span>Organisations 23</span><span>Ideas, ideologies and movements 5</span><span>Events 23</span></div></a><a class='area' href='compare.html#area-HA'><h3>Horn of Africa</h3><div class='n'>58<small>analysed</small></div><div class='kinds'><span>Other public figures 22</span><span>Organisations 12</span><span>Events 24</span></div></a><a class='area' href='compare.html#area-TT'><h3>The Troubles (Northern Ireland)</h3><div class='n'>8<small>analysed</small></div><div class='kinds'><span>Journalists and commentators 1</span><span>Other public figures 3</span><span>Organisations 3</span><span>Ideas, ideologies and movements 1</span></div><p class='q'>1 more queued</p></a><a class='area' href='compare.html#area-APL'><h3>Antisemitism in Poland (Wikipedia&#x27;s topic; also covers Holocaust and Second World War articles)</h3><div class='n'>20<small>analysed</small></div><div class='kinds'><span>Other public figures 8</span><span>Organisations 4</span><span>Events 8</span></div></a><a class='area' href='compare.html#area-CNX'><h3>China, Taiwan, Hong Kong and Tibet (chosen by subject)</h3><div class='n'>119<small>analysed</small></div><div class='kinds'><span>Journalists and commentators 25</span><span>Other public figures 18</span><span>News outlets and media 19</span><span>Organisations 20</span><span>Ideas, ideologies and movements 20</span><span>Events 17</span></div></a><a class='area' href='compare.html#area-SOC'><h3>Socialism, communism and Marxism (chosen by subject)</h3><div class='n'>165<small>analysed</small></div><div class='kinds'><span>Journalists and commentators 41</span><span>Other public figures 22</span><span>News outlets and media 23</span><span>Organisations 24</span><span>Ideas, ideologies and movements 32</span><span>Events 23</span></div></a><a class='area' href='compare.html#area-ISL'><h3>Islam (chosen by subject)</h3><div class='n'>145<small>analysed</small></div><div class='kinds'><span>Journalists and commentators 38</span><span>Other public figures 17</span><span>News outlets and media 24</span><span>Organisations 21</span><span>Ideas, ideologies and movements 32</span><span>Events 13</span></div></a><a class='area' href='compare.html#area-CON'><h3>Conservatism and the right (chosen by subject)</h3><div class='n'>96<small>analysed</small></div><div class='kinds'><span>Journalists and commentators 13</span><span>Other public figures 13</span><span>News outlets and media 17</span><span>Organisations 15</span><span>Ideas, ideologies and movements 9</span><span>Events 29</span></div><p class='q'>1 more queued</p></a><a class='area' href='compare.html#area-DIS'><h3>Discrimination, including antisemitism and the far right (chosen by subject)</h3><div class='n'>93<small>analysed</small></div><div class='kinds'><span>Journalists and commentators 15</span><span>Other public figures 15</span><span>News outlets and media 21</span><span>Organisations 8</span><span>Ideas, ideologies and movements 11</span><span>Events 23</span></div></a><a class='area' href='compare.html#area-LIB'><h3>Libertarianism, which on Wikipedia also covers liberalism (chosen by subject)</h3><div class='n'>129<small>analysed</small></div><div class='kinds'><span>Journalists and commentators 19</span><span>Other public figures 23</span><span>News outlets and media 21</span><span>Organisations 23</span><span>Ideas, ideologies and movements 11</span><span>Events 32</span></div><p class='q'>1 more queued</p></a><a class='area' href='compare.html#area-REQ'><h3>Added on request, outside the areas</h3><div class='n'>1<small>analysed</small></div><div class='kinds'><span>Ideas, ideologies and movements 1</span></div></a><a class='area' href='compare.html#area-none'><h3>No contentious topic area</h3><div class='n'>1<small>analysed</small></div><div class='kinds'><span>Other articles 1</span></div></a></div><a class='allbtn' href='compare.html'>See all articles and their figures</a></section></main><footer><div class='in'>An independent project. Not affiliated with Wikipedia or the Wikimedia Foundation. Figures are computed by open code from Wikipedia's public records; <a href="https://github.com/mediapediatransparency/transparency-layer">source code and data</a>.</div></footer><script>(function(){var L=200;function fit(td,d,b){if(d.clientHeight&&d.scrollHeight<=d.clientHeight+2&&!d.classList.contains('open')){td.removeChild(b);d.className='';}}function run(root){if(!root.querySelectorAll)return;root.querySelectorAll('td:not([data-c])').forEach(function(td){td.setAttribute('data-c','');if(td.textContent.length<L)return;var d=document.createElement('div');d.className='clamp';while(td.firstChild)d.appendChild(td.firstChild);td.appendChild(d);var b=document.createElement('button');b.type='button';b.className='more';b.textContent='more';b.setAttribute('aria-expanded','false');b.onclick=function(){var o=d.classList.toggle('open');b.textContent=o?'less':'more';b.setAttribute('aria-expanded',o);};td.appendChild(b);requestAnimationFrame(function(){fit(td,d,b);});});}run(document);new MutationObserver(function(ms){ms.forEach(function(m){m.addedNodes.forEach(run);});}).observe(document.body,{childList:true,subtree:true});})();document.querySelectorAll('header.site details.dd').forEach(function(d){
+ d.addEventListener('toggle',function(){if(d.open)document.querySelectorAll('header.site details.dd[open]')
+  .forEach(function(o){if(o!==d)o.open=false})})});
+document.addEventListener('click',function(e){if(!e.target.closest('header.site details.dd'))
+ document.querySelectorAll('header.site details.dd[open]').forEach(function(o){o.open=false})});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')document.querySelectorAll(
+ 'header.site details.dd[open]').forEach(function(o){o.open=false;o.querySelector('summary').focus()})});</script></body></html>

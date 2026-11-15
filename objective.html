@@ -1,0 +1,128 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>Objective · Transparency Layer for Wikipedia</title><meta name='description' content='Why the provenance of Wikipedia text matters for AI.'><style>
+:root{--bg:#fbfbf9;--fg:#1d1d1b;--muted:#5d5d58;--line:#dcdbd5;--soft:#f1f0eb;--link:#1f4e8c;--accent:#2a78d6;
+--bar:#4a6fa5;--bar2:#b9c7dc;--note:#fff8e6;--noteline:#e2c46f}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#171715;--fg:#e9e8e3;
+--muted:#a8a79f;--line:#3a3935;--soft:#22221f;--link:#93b8ec;--bar:#7f9fd0;--bar2:#3b4a62;
+--note:#2a2516;--noteline:#7a6524;--accent:#5598e7}}
+:root[data-theme="dark"]{--bg:#171715;--fg:#e9e8e3;--muted:#a8a79f;--line:#3a3935;--soft:#22221f;
+--link:#93b8ec;--bar:#7f9fd0;--bar2:#3b4a62;--note:#2a2516;--noteline:#7a6524;--accent:#5598e7}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 Georgia,"Iowan Old Style",serif}
+header.site{border-bottom:1px solid var(--line);background:color-mix(in srgb,var(--bg) 92%,var(--soft));
+position:relative;z-index:50}
+header.site .in{max-width:1240px;margin:0 auto;padding:0 16px;min-height:64px;display:flex;align-items:center;
+gap:8px 28px;flex-wrap:wrap;font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
+header.site .brand{display:flex;align-items:center;gap:10px;color:var(--fg);text-decoration:none;margin-right:auto;
+padding:10px 0}
+header.site .mark{width:26px;height:26px;flex:none;color:var(--fg)}
+header.site .bt{display:flex;flex-direction:column;line-height:1.05;font:600 1.06rem/1.1 Georgia,"Iowan Old Style",serif;
+letter-spacing:-.005em}
+header.site .bt small{font:600 .62rem/1.2 system-ui,-apple-system,"Segoe UI",sans-serif;letter-spacing:.14em;
+text-transform:uppercase;color:var(--muted)}
+header.site nav{display:flex;align-items:center;gap:2px;flex-wrap:wrap}
+header.site .top{display:inline-block;padding:8px 12px;border-radius:8px;color:var(--fg);text-decoration:none;
+font-size:.92rem;cursor:pointer;list-style:none;position:relative}
+header.site .top::-webkit-details-marker{display:none}
+header.site summary.top::after{content:"";display:inline-block;width:6px;height:6px;margin-left:7px;
+border-right:1.5px solid var(--muted);border-bottom:1.5px solid var(--muted);transform:translateY(-3px) rotate(45deg)}
+header.site .top:hover,header.site details[open]>.top{background:var(--soft)}
+header.site .top[aria-current]::before,header.site .top[data-here]::before{content:"";position:absolute;left:12px;
+right:12px;bottom:2px;height:2px;border-radius:2px;background:var(--accent)}
+header.site details.dd{position:relative}
+header.site .menu{position:absolute;top:calc(100% + 6px);left:0;min-width:230px;padding:6px;background:var(--bg);
+border:1px solid var(--line);border-radius:12px;box-shadow:0 12px 32px rgba(0,0,0,.14)}
+header.site .menu a{display:block;padding:8px 10px;border-radius:8px;color:var(--fg);text-decoration:none;font-size:.9rem}
+header.site .menu a:hover{background:var(--soft)}
+header.site .menu a[aria-current]{color:var(--link);font-weight:600}
+header.site .srch{display:inline-flex;align-items:center;gap:7px;padding:7px 14px;border:1px solid var(--line);
+border-radius:999px;color:var(--muted);text-decoration:none;font-size:.88rem;background:var(--bg)}
+header.site .srch:hover,header.site .srch[aria-current]{color:var(--fg);border-color:var(--muted)}
+header.site a:focus-visible,header.site summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+@media (max-width:760px){header.site .in{gap:0 8px;padding-bottom:4px}header.site nav{order:3;width:100%;
+flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin:0 -8px}header.site nav::-webkit-scrollbar{display:none}
+header.site .top{padding:8px 9px;white-space:nowrap}header.site .srch span{display:none}header.site .srch{padding:8px 10px}
+header.site .menu{position:fixed;left:16px;right:16px;top:auto}}
+main{max-width:1240px;margin:0 auto;padding:24px 16px 64px}
+details.pop{display:inline-block;position:relative;font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
+details.pop>summary{cursor:pointer;list-style:none;color:var(--link);font-size:.8rem;white-space:nowrap}
+details.pop>summary::-webkit-details-marker{display:none}
+details.pop .popb{position:absolute;z-index:40;left:0;top:1.6em;width:min(360px,80vw);background:var(--bg);
+color:var(--fg);border:1px solid var(--line);border-radius:8px;padding:8px 12px;box-shadow:0 6px 22px rgba(0,0,0,.18);
+font:.86rem/1.45 Georgia,"Iowan Old Style",serif;text-transform:none;letter-spacing:0}
+details.pop .popb p{margin:4px 0}details.pop .popb a{font-size:.78rem;white-space:nowrap}
+h1{font-size:2rem;line-height:1.2;margin:8px 0 6px}
+h2{font-size:1.35rem;margin:40px 0 10px;padding-top:14px;border-top:1px solid var(--line)}
+h3{font-size:1.08rem;margin:24px 0 6px}
+p,li{max-width:none;line-height:1.75}
+a{color:var(--link)}
+.sans,table,.meta,.small,.note,.fig,details summary,footer{font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
+.meta{color:var(--muted);font-size:.9rem}
+.small{font-size:.88rem;color:var(--muted)}
+tr.sum td{background:var(--soft);border-top:1px solid var(--line)}
+.lede{font-size:1.12rem}
+sup a{text-decoration:none;font-size:.75em;padding:0 1px}
+.detail-banner{max-width:none;margin:0 0 18px;padding:10px 14px;border-radius:10px;background:var(--soft);
+font:.88rem/1.45 system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--muted)}
+ol.refs li{margin:0 0 8px;max-width:none}
+.brief{background:var(--soft);border:1px solid var(--line);border-radius:8px;padding:6px 20px;margin:18px 0}
+.brief li{margin:8px 0}
+.fig{display:flex;flex-wrap:wrap;gap:12px;margin:14px 0}
+.fig .box{flex:1 1 180px;border:1px solid var(--line);border-radius:8px;padding:10px 14px}
+.fig .num{font-size:1.7rem;font-weight:700;font-variant-numeric:tabular-nums;line-height:1.2}
+.fig .lbl{font-size:.88rem}
+.fig .cmp{font-size:.82rem;color:var(--muted);margin-top:4px}
+.note{background:var(--note);border-left:4px solid var(--noteline);padding:8px 14px;margin:12px 0;
+font-size:.92rem;border-radius:0 6px 6px 0;max-width:none}
+.note b{font-weight:600}
+.scroll,.ft{overflow:auto;-webkit-overflow-scrolling:touch;margin:10px 0;max-height:75vh;
+border:1px solid var(--line);border-radius:6px}
+.scroll table,.ft table{border-collapse:separate;border-spacing:0}
+.scroll tr:first-child>th,.ft tr:first-child>th{position:sticky;top:0;background:var(--soft);z-index:2}
+.scroll td:first-child,.scroll th:first-child,.ft td:first-child,.ft th:first-child{position:sticky;
+left:0;background:var(--bg);z-index:1;max-width:38vw}
+.scroll tr:first-child>th:first-child,.ft tr:first-child>th:first-child{background:var(--soft);z-index:3}
+.clamp{display:-webkit-box;-webkit-line-clamp:3;line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.clamp.open{display:block;overflow:visible}
+.inshort{background:var(--soft);border-left:3px solid var(--bar);padding:6px 10px;border-radius:4px;margin:6px 0 10px}
+dl.gloss dt{font-weight:600;margin-top:8px}dl.gloss dd{margin:0 0 4px 0}
+button.more{border:0;background:none;color:var(--link);padding:0;margin-top:2px;cursor:pointer;
+font:inherit;font-size:.78rem;text-decoration:underline}
+table{border-collapse:collapse;width:100%;font-size:.88rem}
+th,td{text-align:left;vertical-align:top;padding:6px 8px;border-bottom:1px solid var(--line)}
+th{font-weight:600;color:var(--muted);font-size:.78rem;text-transform:uppercase;letter-spacing:.03em}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+td.expl{color:var(--muted);font-size:.82rem;min-width:220px}
+.tag{display:inline-block;border:1px solid var(--muted);border-radius:3px;padding:0 5px;font-size:.76rem;white-space:nowrap}
+.bars{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;font-size:.85rem;margin:10px 0}
+.bars .row{display:grid;grid-template-columns:84px 1fr 54px;gap:8px;align-items:center;margin:3px 0}
+.bars .track{background:var(--soft);border-radius:3px;height:14px;overflow:hidden}
+.bars .fill{background:var(--bar);height:100%}
+.bars .fill.s{background:repeating-linear-gradient(45deg,var(--bar) 0 4px,var(--bar2) 4px 8px)}
+.bars .v{text-align:right;font-variant-numeric:tabular-nums}
+details{margin:12px 0}
+details summary{cursor:pointer;color:var(--link)}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px;margin:12px 0}
+.card{border:1px solid var(--line);border-radius:8px;padding:12px 14px}
+.card h3{margin:0 0 4px}
+.card p{margin:4px 0;font-size:.92rem}
+footer{border-top:1px solid var(--line);color:var(--muted);font-size:.82rem}
+footer .in{max-width:1240px;margin:0 auto;padding:16px}
+@media (max-width:520px){h1{font-size:1.6rem}.bars .row{grid-template-columns:70px 1fr 48px}}
+.lbl{position:relative;display:inline-block;padding:1px 8px;margin:1px 2px;border:1px solid var(--line);border-radius:999px;
+ background:var(--soft);font-size:.82rem;cursor:help;white-space:nowrap}
+.lbl:focus{outline:2px solid var(--link);outline-offset:1px}
+.pill{display:inline-block;padding:1px 8px;margin:1px 2px;border:1px solid var(--line);border-radius:999px;font-size:.8rem;cursor:help}
+.pill.rate{background:var(--soft)}.pill.cflag{border-style:dashed}
+.lbl .def{display:none;position:absolute;left:0;top:calc(100% + 6px);z-index:30;width:min(320px,80vw);white-space:normal;
+ padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--fg);
+ box-shadow:0 6px 18px rgba(0,0,0,.18);font-size:.82rem;line-height:1.4;cursor:auto}
+.lbl:hover .def,.lbl:focus .def,.lbl:focus-within .def{display:block}
+.lbl .def b{font-weight:600}.lbl .def .src{display:block;margin-top:6px;color:var(--muted);font-size:.75rem}
+.redacted{display:inline-block;padding:0 6px;border-radius:4px;font-size:.85em;background:var(--fg,#222);color:var(--bg,#fff);letter-spacing:.02em;cursor:help}</style></head><body><header class='site'><div class='in'><a class='brand' href='index.html' aria-label='Transparency Layer for Wikipedia, home'><svg class='mark' viewBox='0 0 24 24' aria-hidden='true'><rect x='2.5' y='2.5' width='19' height='19' rx='5' fill='none' stroke='currentColor' stroke-width='1.6'/><path d='M7 8.5h10M7 12h7M7 15.5h8.5' stroke='currentColor' stroke-width='1.6' stroke-linecap='round'/><path d='M7 12h7' stroke='var(--accent)' stroke-width='2.6' stroke-linecap='round'/></svg><span class='bt'>Transparency Layer<small>for Wikipedia</small></span></a><nav aria-label='Site'><details class='dd'><summary class='top'>Articles</summary><div class='menu'><a href='compare.html'>All articles and their figures</a><a href='articles.html'>Which articles, and why</a><a href='categories.html'>Categories</a></div></details><details class='dd'><summary class='top'>Editors</summary><div class='menu'><a href='editors.html'>Overview</a><a href='editors-across.html'>Editors across topics</a><a href='editor.html'>Look up an editor</a></div></details><details class='dd'><summary class='top'>Sources</summary><div class='menu'><a href='sources.html'>Overview</a><a href='sources-affiliations.html'>Affiliations</a></div></details><a class='top' href='leaning.html'>Leaning</a><details class='dd'><summary class='top' data-here>About</summary><div class='menu'><a href='about.html'>About this project</a><a href='objective.html' aria-current='page'>Why this matters for AI</a><a href='how-it-works.html'>How it works</a></div></details><details class='dd'><summary class='top'>Data &amp; method</summary><div class='menu'><a href='how-it-works.html'>How it works</a><a href='compare-detail.html'>Every figure, every article</a><a href='sources-detail.html'>Sources in detail</a><a href='leaning-detail.html'>Leaning in detail</a><a href='editors-detail.html'>Editors in detail</a><a href='articles-detail.html'>Full article lists</a><a href='categories.html'>Categories</a></div></details></nav><a class='srch' href='search.html'><svg viewBox='0 0 24 24' width='16' height='16' aria-hidden='true'><circle cx='10.5' cy='10.5' r='6.5' fill='none' stroke='currentColor' stroke-width='2'/><path d='M15.5 15.5 20 20' stroke='currentColor' stroke-width='2' stroke-linecap='round'/></svg><span>Search</span></a></div></header><main><h1>Objective</h1><p class='lede'>AI assistants and search engines lean heavily on Wikipedia. They learn from it<sup><a href='#ref1'>1</a>,<a href='#ref2'>2</a>,<a href='#ref3'>3</a></sup>, and they quote and summarise it, increasingly without sending readers to it<sup><a href='#ref4'>4</a>,<a href='#ref5'>5</a></sup>. They take in the text, but not how it got there.</p><p>For most articles that doesn't matter much. For contested subjects it can: a sentence might be the settled work of hundreds of editors, or the wording of a single editor that nobody has yet challenged. Readers, and the AI systems that read on their behalf, have no easy way to tell the difference.</p><h2>What this project adds</h2><p>For each article it analyses, it publishes how the text came to be, as plain pages and as structured data that software can read:</p><ul><li>who wrote the current text, and how concentrated that writing is;</li><li>how much comes from editors Wikipedia itself later sanctioned;</li><li>how long new text lasts, and how often the article changes;</li><li>which sources it rests on, and what outside raters say about them;</li><li>what was removed and argued over.</li></ul><p>Anyone who reads an article, whether a person, a journalist or an AI system, can then also read how it was made, and decide for themselves how much weight to give it.</p><h2>What it is not</h2><p>It does not decide what is true, rate articles as biased or neutral, or pass judgment on editors. It cannot make AI objective on its own. What it can do is make one of AI's main sources more transparent, so that people and machines can judge for themselves.</p><h2>Where it is going</h2><ol><li><b>Now:</b> authorship and sanctions for the most-read articles in Wikipedia's contentious topic areas (this site).</li><li><b>Next:</b> a free browser add-on that shows this panel on the Wikipedia page itself, plus edit wars, removed content and source inventories.</li><li><b>Later:</b> who set Wikipedia's source ratings, coordination signals, and checks of whether sentences match their sources.</li></ol><h2 id='sources'>Sources</h2><ol class='refs small'><li id='ref1'>Brown, T. et al. (2020). <a href="https://arxiv.org/abs/2005.14165">Language Models are Few-Shot Learners</a>. NeurIPS 2020. The GPT-3 paper names English Wikipedia as one of the five sources of its training text (section 2.2).</li><li id='ref2'>Touvron, H. et al. (2023). <a href="https://arxiv.org/abs/2302.13971">LLaMA: Open and Efficient Foundation Language Models</a>. Wikipedia is 4.5% of the training text (Table 1), and is one of the two parts read about twice during training.</li><li id='ref3'>Mueller, B., Danis, C. and Lavagetto, G. (1 April 2025). <a href="https://diff.wikimedia.org/2025/04/01/how-crawlers-impact-the-operations-of-the-wikimedia-projects/">How crawlers impact the operations of the Wikimedia projects</a>. Wikimedia Foundation. Reports a sharp rise in automated scraping, largely to collect training data for AI models; at least 65% of the most resource-heavy traffic comes from bots.</li><li id='ref4'>McMahon, C., Johnson, I. and Hecht, B. (2017). <a href="https://ojs.aaai.org/index.php/ICWSM/article/view/14883">The Substantial Interdependence of Wikipedia and Google: A Case Study on the Relationship Between Peer Production Communities and Information Technologies</a>. ICWSM 2017. Finds that the quality of Google's search results depends heavily on Wikipedia, and that Google showing Wikipedia content on its own pages appears to reduce visits to Wikipedia.</li><li id='ref5'>Miller, M. (17 October 2025). <a href="https://diff.wikimedia.org/2025/10/17/new-user-trends-on-wikipedia/">New user trends on Wikipedia</a>. Wikimedia Foundation. Human page views fell by roughly 8% compared with the same months of 2024, which the Foundation links to search engines answering questions directly with generative AI instead of linking to Wikipedia, and to social video.</li></ol></main><footer><div class='in'>An independent project. Not affiliated with Wikipedia or the Wikimedia Foundation. Figures are computed by open code from Wikipedia's public records; <a href="https://github.com/mediapediatransparency/transparency-layer">source code and data</a>.</div></footer><script>(function(){var L=200;function fit(td,d,b){if(d.clientHeight&&d.scrollHeight<=d.clientHeight+2&&!d.classList.contains('open')){td.removeChild(b);d.className='';}}function run(root){if(!root.querySelectorAll)return;root.querySelectorAll('td:not([data-c])').forEach(function(td){td.setAttribute('data-c','');if(td.textContent.length<L)return;var d=document.createElement('div');d.className='clamp';while(td.firstChild)d.appendChild(td.firstChild);td.appendChild(d);var b=document.createElement('button');b.type='button';b.className='more';b.textContent='more';b.setAttribute('aria-expanded','false');b.onclick=function(){var o=d.classList.toggle('open');b.textContent=o?'less':'more';b.setAttribute('aria-expanded',o);};td.appendChild(b);requestAnimationFrame(function(){fit(td,d,b);});});}run(document);new MutationObserver(function(ms){ms.forEach(function(m){m.addedNodes.forEach(run);});}).observe(document.body,{childList:true,subtree:true});})();document.querySelectorAll('header.site details.dd').forEach(function(d){
+ d.addEventListener('toggle',function(){if(d.open)document.querySelectorAll('header.site details.dd[open]')
+  .forEach(function(o){if(o!==d)o.open=false})})});
+document.addEventListener('click',function(e){if(!e.target.closest('header.site details.dd'))
+ document.querySelectorAll('header.site details.dd[open]').forEach(function(o){o.open=false})});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')document.querySelectorAll(
+ 'header.site details.dd[open]').forEach(function(o){o.open=false;o.querySelector('summary').focus()})});</script></body></html>

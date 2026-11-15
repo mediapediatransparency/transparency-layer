@@ -1,0 +1,270 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>Which articles · Transparency Layer for Wikipedia</title><meta name='description' content='How articles are chosen for analysis.'><style>
+:root{--bg:#fbfbf9;--fg:#1d1d1b;--muted:#5d5d58;--line:#dcdbd5;--soft:#f1f0eb;--link:#1f4e8c;--accent:#2a78d6;
+--bar:#4a6fa5;--bar2:#b9c7dc;--note:#fff8e6;--noteline:#e2c46f}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#171715;--fg:#e9e8e3;
+--muted:#a8a79f;--line:#3a3935;--soft:#22221f;--link:#93b8ec;--bar:#7f9fd0;--bar2:#3b4a62;
+--note:#2a2516;--noteline:#7a6524;--accent:#5598e7}}
+:root[data-theme="dark"]{--bg:#171715;--fg:#e9e8e3;--muted:#a8a79f;--line:#3a3935;--soft:#22221f;
+--link:#93b8ec;--bar:#7f9fd0;--bar2:#3b4a62;--note:#2a2516;--noteline:#7a6524;--accent:#5598e7}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 Georgia,"Iowan Old Style",serif}
+header.site{border-bottom:1px solid var(--line);background:color-mix(in srgb,var(--bg) 92%,var(--soft));
+position:relative;z-index:50}
+header.site .in{max-width:1240px;margin:0 auto;padding:0 16px;min-height:64px;display:flex;align-items:center;
+gap:8px 28px;flex-wrap:wrap;font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
+header.site .brand{display:flex;align-items:center;gap:10px;color:var(--fg);text-decoration:none;margin-right:auto;
+padding:10px 0}
+header.site .mark{width:26px;height:26px;flex:none;color:var(--fg)}
+header.site .bt{display:flex;flex-direction:column;line-height:1.05;font:600 1.06rem/1.1 Georgia,"Iowan Old Style",serif;
+letter-spacing:-.005em}
+header.site .bt small{font:600 .62rem/1.2 system-ui,-apple-system,"Segoe UI",sans-serif;letter-spacing:.14em;
+text-transform:uppercase;color:var(--muted)}
+header.site nav{display:flex;align-items:center;gap:2px;flex-wrap:wrap}
+header.site .top{display:inline-block;padding:8px 12px;border-radius:8px;color:var(--fg);text-decoration:none;
+font-size:.92rem;cursor:pointer;list-style:none;position:relative}
+header.site .top::-webkit-details-marker{display:none}
+header.site summary.top::after{content:"";display:inline-block;width:6px;height:6px;margin-left:7px;
+border-right:1.5px solid var(--muted);border-bottom:1.5px solid var(--muted);transform:translateY(-3px) rotate(45deg)}
+header.site .top:hover,header.site details[open]>.top{background:var(--soft)}
+header.site .top[aria-current]::before,header.site .top[data-here]::before{content:"";position:absolute;left:12px;
+right:12px;bottom:2px;height:2px;border-radius:2px;background:var(--accent)}
+header.site details.dd{position:relative}
+header.site .menu{position:absolute;top:calc(100% + 6px);left:0;min-width:230px;padding:6px;background:var(--bg);
+border:1px solid var(--line);border-radius:12px;box-shadow:0 12px 32px rgba(0,0,0,.14)}
+header.site .menu a{display:block;padding:8px 10px;border-radius:8px;color:var(--fg);text-decoration:none;font-size:.9rem}
+header.site .menu a:hover{background:var(--soft)}
+header.site .menu a[aria-current]{color:var(--link);font-weight:600}
+header.site .srch{display:inline-flex;align-items:center;gap:7px;padding:7px 14px;border:1px solid var(--line);
+border-radius:999px;color:var(--muted);text-decoration:none;font-size:.88rem;background:var(--bg)}
+header.site .srch:hover,header.site .srch[aria-current]{color:var(--fg);border-color:var(--muted)}
+header.site a:focus-visible,header.site summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+@media (max-width:760px){header.site .in{gap:0 8px;padding-bottom:4px}header.site nav{order:3;width:100%;
+flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin:0 -8px}header.site nav::-webkit-scrollbar{display:none}
+header.site .top{padding:8px 9px;white-space:nowrap}header.site .srch span{display:none}header.site .srch{padding:8px 10px}
+header.site .menu{position:fixed;left:16px;right:16px;top:auto}}
+main{max-width:1240px;margin:0 auto;padding:24px 16px 64px}
+details.pop{display:inline-block;position:relative;font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
+details.pop>summary{cursor:pointer;list-style:none;color:var(--link);font-size:.8rem;white-space:nowrap}
+details.pop>summary::-webkit-details-marker{display:none}
+details.pop .popb{position:absolute;z-index:40;left:0;top:1.6em;width:min(360px,80vw);background:var(--bg);
+color:var(--fg);border:1px solid var(--line);border-radius:8px;padding:8px 12px;box-shadow:0 6px 22px rgba(0,0,0,.18);
+font:.86rem/1.45 Georgia,"Iowan Old Style",serif;text-transform:none;letter-spacing:0}
+details.pop .popb p{margin:4px 0}details.pop .popb a{font-size:.78rem;white-space:nowrap}
+h1{font-size:2rem;line-height:1.2;margin:8px 0 6px}
+h2{font-size:1.35rem;margin:40px 0 10px;padding-top:14px;border-top:1px solid var(--line)}
+h3{font-size:1.08rem;margin:24px 0 6px}
+p,li{max-width:none;line-height:1.75}
+a{color:var(--link)}
+.sans,table,.meta,.small,.note,.fig,details summary,footer{font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
+.meta{color:var(--muted);font-size:.9rem}
+.small{font-size:.88rem;color:var(--muted)}
+tr.sum td{background:var(--soft);border-top:1px solid var(--line)}
+.lede{font-size:1.12rem}
+sup a{text-decoration:none;font-size:.75em;padding:0 1px}
+.detail-banner{max-width:none;margin:0 0 18px;padding:10px 14px;border-radius:10px;background:var(--soft);
+font:.88rem/1.45 system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--muted)}
+ol.refs li{margin:0 0 8px;max-width:none}
+.brief{background:var(--soft);border:1px solid var(--line);border-radius:8px;padding:6px 20px;margin:18px 0}
+.brief li{margin:8px 0}
+.fig{display:flex;flex-wrap:wrap;gap:12px;margin:14px 0}
+.fig .box{flex:1 1 180px;border:1px solid var(--line);border-radius:8px;padding:10px 14px}
+.fig .num{font-size:1.7rem;font-weight:700;font-variant-numeric:tabular-nums;line-height:1.2}
+.fig .lbl{font-size:.88rem}
+.fig .cmp{font-size:.82rem;color:var(--muted);margin-top:4px}
+.note{background:var(--note);border-left:4px solid var(--noteline);padding:8px 14px;margin:12px 0;
+font-size:.92rem;border-radius:0 6px 6px 0;max-width:none}
+.note b{font-weight:600}
+.scroll,.ft{overflow:auto;-webkit-overflow-scrolling:touch;margin:10px 0;max-height:75vh;
+border:1px solid var(--line);border-radius:6px}
+.scroll table,.ft table{border-collapse:separate;border-spacing:0}
+.scroll tr:first-child>th,.ft tr:first-child>th{position:sticky;top:0;background:var(--soft);z-index:2}
+.scroll td:first-child,.scroll th:first-child,.ft td:first-child,.ft th:first-child{position:sticky;
+left:0;background:var(--bg);z-index:1;max-width:38vw}
+.scroll tr:first-child>th:first-child,.ft tr:first-child>th:first-child{background:var(--soft);z-index:3}
+.clamp{display:-webkit-box;-webkit-line-clamp:3;line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.clamp.open{display:block;overflow:visible}
+.inshort{background:var(--soft);border-left:3px solid var(--bar);padding:6px 10px;border-radius:4px;margin:6px 0 10px}
+dl.gloss dt{font-weight:600;margin-top:8px}dl.gloss dd{margin:0 0 4px 0}
+button.more{border:0;background:none;color:var(--link);padding:0;margin-top:2px;cursor:pointer;
+font:inherit;font-size:.78rem;text-decoration:underline}
+table{border-collapse:collapse;width:100%;font-size:.88rem}
+th,td{text-align:left;vertical-align:top;padding:6px 8px;border-bottom:1px solid var(--line)}
+th{font-weight:600;color:var(--muted);font-size:.78rem;text-transform:uppercase;letter-spacing:.03em}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+td.expl{color:var(--muted);font-size:.82rem;min-width:220px}
+.tag{display:inline-block;border:1px solid var(--muted);border-radius:3px;padding:0 5px;font-size:.76rem;white-space:nowrap}
+.bars{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;font-size:.85rem;margin:10px 0}
+.bars .row{display:grid;grid-template-columns:84px 1fr 54px;gap:8px;align-items:center;margin:3px 0}
+.bars .track{background:var(--soft);border-radius:3px;height:14px;overflow:hidden}
+.bars .fill{background:var(--bar);height:100%}
+.bars .fill.s{background:repeating-linear-gradient(45deg,var(--bar) 0 4px,var(--bar2) 4px 8px)}
+.bars .v{text-align:right;font-variant-numeric:tabular-nums}
+details{margin:12px 0}
+details summary{cursor:pointer;color:var(--link)}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px;margin:12px 0}
+.card{border:1px solid var(--line);border-radius:8px;padding:12px 14px}
+.card h3{margin:0 0 4px}
+.card p{margin:4px 0;font-size:.92rem}
+footer{border-top:1px solid var(--line);color:var(--muted);font-size:.82rem}
+footer .in{max-width:1240px;margin:0 auto;padding:16px}
+@media (max-width:520px){h1{font-size:1.6rem}.bars .row{grid-template-columns:70px 1fr 48px}}
+.lbl{position:relative;display:inline-block;padding:1px 8px;margin:1px 2px;border:1px solid var(--line);border-radius:999px;
+ background:var(--soft);font-size:.82rem;cursor:help;white-space:nowrap}
+.lbl:focus{outline:2px solid var(--link);outline-offset:1px}
+.pill{display:inline-block;padding:1px 8px;margin:1px 2px;border:1px solid var(--line);border-radius:999px;font-size:.8rem;cursor:help}
+.pill.rate{background:var(--soft)}.pill.cflag{border-style:dashed}
+.lbl .def{display:none;position:absolute;left:0;top:calc(100% + 6px);z-index:30;width:min(320px,80vw);white-space:normal;
+ padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--fg);
+ box-shadow:0 6px 18px rgba(0,0,0,.18);font-size:.82rem;line-height:1.4;cursor:auto}
+.lbl:hover .def,.lbl:focus .def,.lbl:focus-within .def{display:block}
+.lbl .def b{font-weight:600}.lbl .def .src{display:block;margin-top:6px;color:var(--muted);font-size:.75rem}
+.redacted{display:inline-block;padding:0 6px;border-radius:4px;font-size:.85em;background:var(--fg,#222);color:var(--bg,#fff);letter-spacing:.02em;cursor:help}</style></head><body><header class='site'><div class='in'><a class='brand' href='index.html' aria-label='Transparency Layer for Wikipedia, home'><svg class='mark' viewBox='0 0 24 24' aria-hidden='true'><rect x='2.5' y='2.5' width='19' height='19' rx='5' fill='none' stroke='currentColor' stroke-width='1.6'/><path d='M7 8.5h10M7 12h7M7 15.5h8.5' stroke='currentColor' stroke-width='1.6' stroke-linecap='round'/><path d='M7 12h7' stroke='var(--accent)' stroke-width='2.6' stroke-linecap='round'/></svg><span class='bt'>Transparency Layer<small>for Wikipedia</small></span></a><nav aria-label='Site'><details class='dd'><summary class='top' data-here>Articles</summary><div class='menu'><a href='compare.html'>All articles and their figures</a><a href='articles.html' aria-current='page'>Which articles, and why</a><a href='categories.html'>Categories</a></div></details><details class='dd'><summary class='top'>Editors</summary><div class='menu'><a href='editors.html'>Overview</a><a href='editors-across.html'>Editors across topics</a><a href='editor.html'>Look up an editor</a></div></details><details class='dd'><summary class='top'>Sources</summary><div class='menu'><a href='sources.html'>Overview</a><a href='sources-affiliations.html'>Affiliations</a></div></details><a class='top' href='leaning.html'>Leaning</a><details class='dd'><summary class='top'>About</summary><div class='menu'><a href='about.html'>About this project</a><a href='objective.html'>Why this matters for AI</a><a href='how-it-works.html'>How it works</a></div></details><details class='dd'><summary class='top'>Data &amp; method</summary><div class='menu'><a href='how-it-works.html'>How it works</a><a href='compare-detail.html'>Every figure, every article</a><a href='sources-detail.html'>Sources in detail</a><a href='leaning-detail.html'>Leaning in detail</a><a href='editors-detail.html'>Editors in detail</a><a href='articles-detail.html'>Full article lists</a><a href='categories.html'>Categories</a></div></details></nav><a class='srch' href='search.html'><svg viewBox='0 0 24 24' width='16' height='16' aria-hidden='true'><circle cx='10.5' cy='10.5' r='6.5' fill='none' stroke='currentColor' stroke-width='2'/><path d='M15.5 15.5 20 20' stroke='currentColor' stroke-width='2' stroke-linecap='round'/></svg><span>Search</span></a></div></header><main><style>
+:root{--g-o1:#104281;--g-o2:#256abf;--g-o3:#5598e7;--g-o4:#86b6ef;--g-o1i:#fff;--g-o2i:#fff;--g-o3i:#fff;--g-o4i:#0b0b0b;
+--g-c1:#2a78d6;--g-c2:#eb6834;--g-c3:#1baf7a;--g-c4:#eda100;--g-c5:#e87ba4;--g-rest:#dcdbd5;--g-resti:#0b0b0b;
+--g-dem:#2a78d6;--g-rep:#e34948;--g-sanc:#e34948;--g-card:#fcfcfb;--g-soft:#f1f0eb}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--g-o1:#9ec5f4;--g-o2:#5598e7;--g-o3:#256abf;--g-o4:#184f95;
+--g-o1i:#0b0b0b;--g-o2i:#0b0b0b;--g-o3i:#fff;--g-o4i:#fff;--g-c1:#3987e5;--g-c2:#d95926;--g-c3:#199e70;--g-c4:#c98500;
+--g-c5:#d55181;--g-rest:#383835;--g-resti:#f0efec;--g-dem:#3987e5;--g-rep:#e66767;--g-sanc:#e66767;--g-card:#1a1a19;--g-soft:#22221f}}
+:root[data-theme="dark"]{--g-o1:#9ec5f4;--g-o2:#5598e7;--g-o3:#256abf;--g-o4:#184f95;
+--g-o1i:#0b0b0b;--g-o2i:#0b0b0b;--g-o3i:#fff;--g-o4i:#fff;--g-c1:#3987e5;--g-c2:#d95926;--g-c3:#199e70;--g-c4:#c98500;
+--g-c5:#d55181;--g-rest:#383835;--g-resti:#f0efec;--g-dem:#3987e5;--g-rep:#e66767;--g-sanc:#e66767;--g-card:#1a1a19;--g-soft:#22221f}
+.gl{display:grid;grid-template-columns:1fr;gap:14px;margin:14px 0 8px}
+.gl .card{background:var(--g-card);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+.gl .card h3{font-size:1.05rem;margin:0 0 4px;line-height:1.3;border:0}
+.gl .big{margin:0 0 10px;max-width:none}
+.gl .bar{display:flex;gap:2px;height:28px;margin:6px 0 4px;min-width:0}
+.gl .seg{border-radius:4px;display:flex;align-items:center;padding:0 6px;font-size:.8rem;font-weight:600;color:#fff;
+white-space:nowrap;min-width:0;overflow:hidden;cursor:default}
+.gl .seg.nolabel{color:transparent!important}
+.gl .seg:focus-visible{outline:2px solid var(--fg);outline-offset:2px}
+.gl .seg.rest{background:var(--g-rest);color:var(--g-resti)}
+.gl .rowlabel{font-size:.84rem;color:var(--muted);margin:10px 0 0}
+.gl .legend{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:.82rem;color:var(--muted);margin:6px 0 2px;padding:0;list-style:none}
+.gl .legend li{display:flex;align-items:center;gap:6px;max-width:none}
+.gl .sw{width:10px;height:10px;border-radius:3px;display:inline-block;flex:none}
+.gl .what{font-size:.86rem;color:var(--muted);margin:10px 0 0;max-width:none}
+.gl .facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:8px;margin:10px 0 0}
+.gl .fact{background:var(--g-soft);border-radius:8px;padding:8px 10px}
+.gl .fact .v{font-size:1.3rem;font-weight:650;line-height:1.2}
+.gl .fact .l{font-size:.8rem;color:var(--muted)}
+.gl .mid{position:relative}
+.gl .mid::after{content:"";position:absolute;left:50%;top:-4px;bottom:-4px;border-left:2px dashed var(--fg);opacity:.55}
+.gl .scale{display:flex;justify-content:space-between;font-size:.76rem;color:var(--muted)}
+#gtip{position:fixed;pointer-events:none;background:var(--fg);color:var(--bg);font-size:.8rem;padding:5px 8px;
+border-radius:6px;max-width:260px;display:none;z-index:9;line-height:1.35}
+</style><style>
+.st-hero{padding:22px 0 6px}
+.st-hero .kicker{font:600 .72rem/1 system-ui,-apple-system,"Segoe UI",sans-serif;letter-spacing:.16em;
+ text-transform:uppercase;color:var(--accent);margin:0 0 12px}
+.st-hero h1{font-size:clamp(1.9rem,3.6vw,2.8rem);line-height:1.1;letter-spacing:-.012em;margin:0 0 14px;max-width:24ch}
+.st-hero .lede{font-size:1.1rem;color:var(--muted);max-width:none;margin:0}
+.st-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:0;
+ border:1px solid var(--line);border-radius:14px;overflow:hidden;margin:22px 0 0}
+.st-stats div{background:var(--bg);padding:16px 18px;box-shadow:1px 0 0 var(--line),0 1px 0 var(--line)}
+.st-stats b{display:block;font:600 1.7rem/1.1 Georgia,"Iowan Old Style",serif;font-variant-numeric:tabular-nums}
+.st-stats span{font:.8rem/1.35 system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--muted)}
+.st-toc{display:flex;flex-wrap:wrap;gap:6px;margin:22px 0 0;font:.86rem system-ui,-apple-system,"Segoe UI",sans-serif}
+.st-toc a{padding:6px 12px;border:1px solid var(--line);border-radius:999px;text-decoration:none;color:var(--fg)}
+.st-toc a:hover{background:var(--soft)}
+.st-sec{margin:52px 0 0;scroll-margin-top:20px}
+.st-sec>h2{border:0;font-size:1.45rem;margin:0 0 4px}
+.st-sec>.one{color:var(--muted);margin:0 0 16px;max-width:none}
+.st-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.st-grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+.st-card{border:1px solid var(--line);border-radius:14px;padding:18px 20px;background:var(--bg);min-width:0;overflow-x:auto}
+.st-card.wide{grid-column:1/-1}
+.st-card h3{font-size:1.05rem;margin:0 0 4px;line-height:1.3;border:0}
+.st-card .q{font-size:.88rem;color:var(--muted);margin:0 0 14px;max-width:none}
+.st-card .fnote{font-size:.8rem;color:var(--muted);margin:12px 0 0;max-width:none}
+.st-more{display:inline-block;margin:14px 0 0;font:.88rem system-ui,-apple-system,"Segoe UI",sans-serif;text-decoration:none}
+.st-more::after{content:" →"}
+.hb{display:grid;grid-template-columns:minmax(120px,max-content) minmax(0,1fr) auto;gap:5px 12px;align-items:center;
+ font-size:.88rem}
+.hb .l{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:260px}
+.hb .t{height:14px;background:var(--g-soft);border-radius:4px;position:relative;min-width:0}
+.hb .t i{position:absolute;left:0;top:0;bottom:0;border-radius:4px;background:var(--g-o2)}
+.hb .v{font:600 .82rem system-ui,-apple-system,"Segoe UI",sans-serif;font-variant-numeric:tabular-nums;text-align:right}
+.hb .s{grid-column:1/-1;font-size:.74rem;color:var(--muted);margin:-3px 0 4px}
+.sr{display:grid;grid-template-columns:minmax(110px,220px) minmax(0,1fr);gap:6px 14px;align-items:center;font-size:.86rem}
+.sr .l{line-height:1.25}
+.sr .l small{display:block;color:var(--muted);font-size:.74rem}
+.sr{position:relative}.sr .bar{display:flex;gap:2px;height:22px;margin:0}
+.sr .sc{position:relative;height:1.1em;font:.72rem/1 system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--muted)}
+.sr .sc span{position:absolute;top:0;transform:translateX(-50%);font-variant-numeric:tabular-nums}
+.sr .sc span:first-child{transform:none}.sr .sc span:last-child{transform:translateX(-100%)}
+.sr .bar,.sr .sc{position:relative}
+.sr .bar::after,.sr .sc::after{content:'';position:absolute;left:0;right:0;top:-4px;bottom:-4px;pointer-events:none;z-index:1;background:linear-gradient(90deg,var(--muted) 1px,transparent 1px) -.5px 0/25% 100% repeat-x,linear-gradient(90deg,transparent calc(100% - 1px),var(--muted) 0);opacity:.5}
+.sr .sc::after{top:auto;height:4px;bottom:-6px}.sr .sc+.l~.sc::after{top:-6px;bottom:auto}
+.sr .seg{border-radius:3px;min-width:0;cursor:default}
+.sr .seg:focus-visible{outline:2px solid var(--fg);outline-offset:1px}
+.st-legend{display:flex;flex-wrap:wrap;gap:4px 14px;font:.8rem system-ui,-apple-system,"Segoe UI",sans-serif;
+ color:var(--muted);margin:0 0 12px;padding:0;list-style:none}
+.st-legend li{display:flex;align-items:center;gap:6px}
+.st-legend i{width:10px;height:10px;border-radius:3px;display:inline-block}
+.ds{width:100%;height:auto;display:block;overflow:visible}
+.ds .lab{fill:var(--fg);font-size:12px}
+.ds .sub{fill:var(--muted);font-size:10.5px}
+.ds .ax{fill:var(--muted);font-size:10.5px}
+.ds .trk{stroke:var(--line);stroke-width:1}
+.ds .ref{stroke:var(--fg);stroke-width:1;stroke-dasharray:3 3;opacity:.7}
+.ds .med{stroke:var(--fg);stroke-width:2.5;stroke-linecap:round}
+.ds .mv{fill:var(--fg);font-size:12px;font-weight:600;font-variant-numeric:tabular-nums}
+.ds .mh{fill:var(--muted);font-size:10.5px}
+.ds .axt{fill:var(--fg);font-size:12px}
+.dskey{display:flex;flex-wrap:wrap;gap:6px 22px;margin:0 0 10px;font:.84rem/1.4 system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--muted)}
+.dskey span{display:inline-flex;align-items:center;gap:6px}
+.dskey .kd{fill:var(--g-o2);fill-opacity:.55}.dskey .km{stroke:var(--fg);stroke-width:2.5}
+.dskey .kr{stroke:var(--fg);stroke-width:1;stroke-dasharray:3 3}
+.ds circle{fill:var(--g-o2);fill-opacity:.55;stroke:var(--bg);stroke-width:.8}
+.ds a:hover circle,.ds a:focus circle{fill-opacity:1;stroke:var(--fg)}
+.ds.db circle.d1{fill:var(--bg);fill-opacity:1;stroke:var(--g-o2);stroke-width:2.2}
+.ds.db circle.d2{fill:var(--g-c2);fill-opacity:1;stroke:var(--bg);stroke-width:1}
+.ds.db g:focus{outline:none}.ds.db g:focus .lab,.ds.db g:hover .lab{text-decoration:underline}
+:root{--lr-l:#2a78d6;--lr-c:#b4b3ad;--lr-r:#e34948}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--lr-l:#3987e5;--lr-c:#56554f;--lr-r:#e66767}}
+:root[data-theme="dark"]{--lr-l:#3987e5;--lr-c:#56554f;--lr-r:#e66767}
+.hist{width:100%;height:auto;display:block}
+.hist .b{fill:var(--g-o2)}
+.hist g:hover .b,.hist g:focus .b{fill:var(--g-o1)}
+.hist g:focus{outline:none}
+.hist text{fill:var(--muted);font-size:10.5px}
+.hist .val{fill:var(--fg)}
+.st-tech{margin:56px 0 0;padding:20px 24px;border-radius:14px;background:var(--soft)}
+.st-tech h2{border:0;font-size:1.1rem;margin:0 0 6px}
+.st-tech p{margin:0 0 10px;color:var(--muted)}
+.st-tech .links{display:flex;flex-wrap:wrap;gap:8px}
+.st-tech .links a{padding:7px 12px;border-radius:999px;background:var(--bg);border:1px solid var(--line);
+ text-decoration:none;font:.86rem system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--fg)}
+#stip{position:fixed;pointer-events:none;background:var(--fg);color:var(--bg);font:.8rem/1.35 system-ui,-apple-system,"Segoe UI",sans-serif;
+ padding:5px 8px;border-radius:6px;max-width:280px;display:none;z-index:60}
+@media (max-width:900px){.st-grid,.st-grid.three{grid-template-columns:1fr}}
+@media (max-width:560px){.sr{grid-template-columns:1fr}.hb .l{max-width:150px}}
+@media (max-width:760px){.ds{min-width:720px}}
+</style><div class='st'><style>
+.flow{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;margin:8px 0 0;counter-reset:f}
+.flow>div{position:relative;padding:18px 26px 18px 20px;border:1px solid var(--line);background:var(--bg);margin-right:18px;
+ border-radius:14px}
+.flow>div:not(:last-child)::after{content:"";position:absolute;right:-17px;top:50%;width:16px;height:2px;background:var(--line)}
+.flow>div:not(:last-child)::before{content:"";position:absolute;right:-17px;top:calc(50% - 4px);border:5px solid transparent;
+ border-left-color:var(--line);transform:translateX(9px)}
+.flow .n{font:600 .7rem system-ui,-apple-system,"Segoe UI",sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+.flow h3{font-size:1.02rem;margin:8px 0 6px;line-height:1.3;border:0}
+.flow p{font-size:.88rem;color:var(--muted);margin:0}
+.flow b.big{display:block;font:600 1.5rem/1.1 Georgia,"Iowan Old Style",serif;margin:12px 0 0;color:var(--fg)}
+@media (max-width:900px){.flow{grid-template-columns:1fr;gap:12px}.flow>div{margin:0}.flow>div::after,.flow>div::before{display:none}}
+</style><section class='st-hero'><p class='kicker'>Which articles, and why</p><h1>Chosen by a fixed rule, not by hand</h1><p class='lede'>So that the selection does not depend on what anyone expects to find, articles are picked by the same four steps in every topic area.</p></section><section class='st-sec' id='rule'><h2>The rule</h2><p class='one'>Four steps, the same for every area.</p><div class='flow'><div><span class='n'>Step 1</span><h3>Wikipedia marks contested subjects</h3><p>A notice on an article's talk page puts it under special editing rules for a contentious topic area. For a few subjects Wikipedia does not mark, a WikiProject's own tags are used instead.</p><b class='big'>22</b><p>topic areas</p></div><div><span class='n'>Step 2</span><h3>Sorted by kind of subject</h3><p>Journalist or commentator, other public figure, news outlet, organisation, idea or movement, event; from Wikidata. Lists and articles that fit none are left out.</p><b class='big'>6</b><p>kinds of subject</p></div><div><span class='n'>Step 3</span><h3>The most read are chosen</h3><p>In each area, for each kind, the 25 articles read most over the previous 60 days. A few are added on request, and marked.</p><b class='big'>1,880</b><p>articles chosen</p></div><div><span class='n'>Step 4</span><h3>Analysed in batches</h3><p>Each chosen article is analysed from one exact version, with the same code and rules as every other.</p><b class='big'>1,877</b><p>analysed so far</p></div></div></section><section class='st-sec' id='chosen'><h2>What was chosen in each area</h2><p class='one'>The chosen articles in each topic area, by kind of subject, with how many are analysed so far. Some areas have few news outlets or ideas tagged, so their mix differs.</p><div class='st-card'><h3>Chosen articles, by kind of subject</h3><ul class='st-legend'><li><i style='background:var(--g-c1)'></i>People: journalists, commentators, public figures</li><li><i style='background:var(--g-c2)'></i>News outlets and media</li><li><i style='background:var(--g-c3)'></i>Organisations</li><li><i style='background:var(--g-c4)'></i>Ideas, ideologies and movements</li><li><i style='background:var(--g-c5)'></i>Events</li><li><i style='background:var(--g-rest)'></i>Other</li></ul><div class='sr'><div></div><div class='sc' aria-hidden='true'><span style='left:0%'>0%</span><span style='left:25%'>25%</span><span style='left:50%'>50%</span><span style='left:75%'>75%</span><span style='left:100%'>100%</span></div><div class='l'>Arab–Israeli conflict<small>154 of 154 analysed</small></div><div class='bar' role='img' aria-label='Arab–Israeli conflict'><div class='seg' tabindex='0' style='flex:33.12;background:var(--g-c1)' data-tip='Arab–Israeli conflict: People: journalists, commentators, public figures, 33% (51)'></div><div class='seg' tabindex='0' style='flex:16.23;background:var(--g-c2)' data-tip='Arab–Israeli conflict: News outlets and media, 16% (25)'></div><div class='seg' tabindex='0' style='flex:16.23;background:var(--g-c3)' data-tip='Arab–Israeli conflict: Organisations, 16% (25)'></div><div class='seg' tabindex='0' style='flex:16.88;background:var(--g-c4)' data-tip='Arab–Israeli conflict: Ideas, ideologies and movements, 17% (26)'></div><div class='seg' tabindex='0' style='flex:17.53;background:var(--g-c5)' data-tip='Arab–Israeli conflict: Events, 18% (27)'></div></div><div class='l'>US politics<small>156 of 156 analysed</small></div><div class='bar' role='img' aria-label='US politics'><div class='seg' tabindex='0' style='flex:32.05;background:var(--g-c1)' data-tip='US politics: People: journalists, commentators, public figures, 32% (50)'></div><div class='seg' tabindex='0' style='flex:16.03;background:var(--g-c2)' data-tip='US politics: News outlets and media, 16% (25)'></div><div class='seg' tabindex='0' style='flex:16.03;background:var(--g-c3)' data-tip='US politics: Organisations, 16% (25)'></div><div class='seg' tabindex='0' style='flex:16.03;background:var(--g-c4)' data-tip='US politics: Ideas, ideologies and movements, 16% (25)'></div><div class='seg' tabindex='0' style='flex:19.87;background:var(--g-c5)' data-tip='US politics: Events, 20% (31)'></div></div><div class='l'>Gender and sexuality<small>119 of 119 analysed</small></div><div class='bar' role='img' aria-label='Gender and sexuality'><div class='seg' tabindex='0' style='flex:34.45;background:var(--g-c1)' data-tip='Gender and sexuality: People: journalists, commentators, public figures, 34% (41)'></div><div class='seg' tabindex='0' style='flex:2.52;background:var(--g-c2)' data-tip='Gender and sexuality: News outlets and media, 3% (3)'></div><div class='seg' tabindex='0' style='flex:21.01;background:var(--g-c3)' data-tip='Gender and sexuality: Organisations, 21% (25)'></div><div class='seg' tabindex='0' style='flex:21.01;background:var(--g-c4)' data-tip='Gender and sexuality: Ideas, ideologies and movements, 21% (25)'></div><div class='seg' tabindex='0' style='flex:21.01;background:var(--g-c5)' data-tip='Gender and sexuality: Events, 21% (25)'></div></div><div class='l'>Eastern Europe and the Balkans<small>128 of 128 analysed</small></div><div class='bar' role='img' aria-label='Eastern Europe and the Balkans'><div class='seg' tabindex='0' style='flex:27.34;background:var(--g-c1)' data-tip='Eastern Europe and the Balkans: People: journalists, commentators, public figures, 27% (35)'></div><div class='seg' tabindex='0' style='flex:11.72;background:var(--g-c2)' data-tip='Eastern Europe and the Balkans: News outlets and media, 12% (15)'></div><div class='seg' tabindex='0' style='flex:19.53;background:var(--g-c3)' data-tip='Eastern Europe and the Balkans: Organisations, 20% (25)'></div><div class='seg' tabindex='0' style='flex:19.53;background:var(--g-c4)' data-tip='Eastern Europe and the Balkans: Ideas, ideologies and movements, 20% (25)'></div><div class='seg' tabindex='0' style='flex:21.88;background:var(--g-c5)' data-tip='Eastern Europe and the Balkans: Events, 22% (28)'></div></div><div class='l'>Abortion<small>60 of 60 analysed</small></div><div class='bar' role='img' aria-label='Abortion'><div class='seg' tabindex='0' style='flex:41.67;background:var(--g-c1)' data-tip='Abortion: People: journalists, commentators, public figures, 42% (25)'></div><div class='seg' tabindex='0' style='flex:1.67;background:var(--g-c2)' data-tip='Abortion: News outlets and media, 2% (1)'></div><div class='seg' tabindex='0' style='flex:41.67;background:var(--g-c3)' data-tip='Abortion: Organisations, 42% (25)'></div><div class='seg' tabindex='0' style='flex:5.00;background:var(--g-c4)' data-tip='Abortion: Ideas, ideologies and movements, 5% (3)'></div><div class='seg' tabindex='0' style='flex:10.00;background:var(--g-c5)' data-tip='Abortion: Events, 10% (6)'></div></div><div class='l'>Race and intelligence<small>28 of 28 analysed</small></div><div class='bar' role='img' aria-label='Race and intelligence'><div class='seg' tabindex='0' style='flex:35.71;background:var(--g-c1)' data-tip='Race and intelligence: People: journalists, commentators, public figures, 36% (10)'></div><div class='seg' tabindex='0' style='flex:57.14;background:var(--g-c3)' data-tip='Race and intelligence: Organisations, 57% (16)'></div><div class='seg' tabindex='0' style='flex:7.14;background:var(--g-c4)' data-tip='Race and intelligence: Ideas, ideologies and movements, 7% (2)'></div></div><div class='l'>Iranian politics<small>81 of 81 analysed</small></div><div class='bar' role='img' aria-label='Iranian politics'><div class='seg' tabindex='0' style='flex:30.86;background:var(--g-c1)' data-tip='Iranian politics: People: journalists, commentators, public figures, 31% (25)'></div><div class='seg' tabindex='0' style='flex:3.70;background:var(--g-c2)' data-tip='Iranian politics: News outlets and media, 4% (3)'></div><div class='seg' tabindex='0' style='flex:29.63;background:var(--g-c3)' data-tip='Iranian politics: Organisations, 30% (24)'></div><div class='seg' tabindex='0' style='flex:4.94;background:var(--g-c4)' data-tip='Iranian politics: Ideas, ideologies and movements, 5% (4)'></div><div class='seg' tabindex='0' style='flex:30.86;background:var(--g-c5)' data-tip='Iranian politics: Events, 31% (25)'></div></div><div class='l'>Kurds and Kurdistan<small>80 of 80 analysed</small></div><div class='bar' role='img' aria-label='Kurds and Kurdistan'><div class='seg' tabindex='0' style='flex:31.25;background:var(--g-c1)' data-tip='Kurds and Kurdistan: People: journalists, commentators, public figures, 31% (25)'></div><div class='seg' tabindex='0' style='flex:1.25;background:var(--g-c2)' data-tip='Kurds and Kurdistan: News outlets and media, 1% (1)'></div><div class='seg' tabindex='0' style='flex:28.75;background:var(--g-c3)' data-tip='Kurds and Kurdistan: Organisations, 29% (23)'></div><div class='seg' tabindex='0' style='flex:3.75;background:var(--g-c4)' data-tip='Kurds and Kurdistan: Ideas, ideologies and movements, 4% (3)'></div><div class='seg' tabindex='0' style='flex:35.00;background:var(--g-c5)' data-tip='Kurds and Kurdistan: Events, 35% (28)'></div></div><div class='l'>South Asia<small>132 of 132 analysed</small></div><div class='bar' role='img' aria-label='South Asia'><div class='seg' tabindex='0' style='flex:24.24;background:var(--g-c1)' data-tip='South Asia: People: journalists, commentators, public figures, 24% (32)'></div><div class='seg' tabindex='0' style='flex:17.42;background:var(--g-c2)' data-tip='South Asia: News outlets and media, 17% (23)'></div><div class='seg' tabindex='0' style='flex:18.94;background:var(--g-c3)' data-tip='South Asia: Organisations, 19% (25)'></div><div class='seg' tabindex='0' style='flex:18.94;background:var(--g-c4)' data-tip='South Asia: Ideas, ideologies and movements, 19% (25)'></div><div class='seg' tabindex='0' style='flex:20.45;background:var(--g-c5)' data-tip='South Asia: Events, 20% (27)'></div></div><div class='l'>Armenia and Azerbaijan<small>76 of 76 analysed</small></div><div class='bar' role='img' aria-label='Armenia and Azerbaijan'><div class='seg' tabindex='0' style='flex:31.58;background:var(--g-c1)' data-tip='Armenia and Azerbaijan: People: journalists, commentators, public figures, 32% (24)'></div><div class='seg' tabindex='0' style='flex:22.37;background:var(--g-c3)' data-tip='Armenia and Azerbaijan: Organisations, 22% (17)'></div><div class='seg' tabindex='0' style='flex:9.21;background:var(--g-c4)' data-tip='Armenia and Azerbaijan: Ideas, ideologies and movements, 9% (7)'></div><div class='seg' tabindex='0' style='flex:36.84;background:var(--g-c5)' data-tip='Armenia and Azerbaijan: Events, 37% (28)'></div></div><div class='l'>China: Uyghurs and Xinjiang<small>69 of 69 analysed</small></div><div class='bar' role='img' aria-label='China: Uyghurs and Xinjiang'><div class='seg' tabindex='0' style='flex:37.68;background:var(--g-c1)' data-tip='China: Uyghurs and Xinjiang: People: journalists, commentators, public figures, 38% (26)'></div><div class='seg' tabindex='0' style='flex:11.59;background:var(--g-c2)' data-tip='China: Uyghurs and Xinjiang: News outlets and media, 12% (8)'></div><div class='seg' tabindex='0' style='flex:36.23;background:var(--g-c3)' data-tip='China: Uyghurs and Xinjiang: Organisations, 36% (25)'></div><div class='seg' tabindex='0' style='flex:7.25;background:var(--g-c4)' data-tip='China: Uyghurs and Xinjiang: Ideas, ideologies and movements, 7% (5)'></div><div class='seg' tabindex='0' style='flex:7.25;background:var(--g-c5)' data-tip='China: Uyghurs and Xinjiang: Events, 7% (5)'></div></div><div class='l'>Syrian civil war and ISIL<small>90 of 90 analysed</small></div><div class='bar' role='img' aria-label='Syrian civil war and ISIL'><div class='seg' tabindex='0' style='flex:32.22;background:var(--g-c1)' data-tip='Syrian civil war and ISIL: People: journalists, commentators, public figures, 32% (29)'></div><div class='seg' tabindex='0' style='flex:3.33;background:var(--g-c2)' data-tip='Syrian civil war and ISIL: News outlets and media, 3% (3)'></div><div class='seg' tabindex='0' style='flex:27.78;background:var(--g-c3)' data-tip='Syrian civil war and ISIL: Organisations, 28% (25)'></div><div class='seg' tabindex='0' style='flex:7.78;background:var(--g-c4)' data-tip='Syrian civil war and ISIL: Ideas, ideologies and movements, 8% (7)'></div><div class='seg' tabindex='0' style='flex:28.89;background:var(--g-c5)' data-tip='Syrian civil war and ISIL: Events, 29% (26)'></div></div><div class='l'>Horn of Africa<small>59 of 59 analysed</small></div><div class='bar' role='img' aria-label='Horn of Africa'><div class='seg' tabindex='0' style='flex:37.29;background:var(--g-c1)' data-tip='Horn of Africa: People: journalists, commentators, public figures, 37% (22)'></div><div class='seg' tabindex='0' style='flex:15.25;background:var(--g-c3)' data-tip='Horn of Africa: Organisations, 15% (9)'></div><div class='seg' tabindex='0' style='flex:47.46;background:var(--g-c5)' data-tip='Horn of Africa: Events, 47% (28)'></div></div><div class='l'>The Troubles<small>8 of 9 analysed</small></div><div class='bar' role='img' aria-label='The Troubles'><div class='seg' tabindex='0' style='flex:55.56;background:var(--g-c1)' data-tip='The Troubles: People: journalists, commentators, public figures, 56% (5)'></div><div class='seg' tabindex='0' style='flex:22.22;background:var(--g-c3)' data-tip='The Troubles: Organisations, 22% (2)'></div><div class='seg' tabindex='0' style='flex:22.22;background:var(--g-c4)' data-tip='The Troubles: Ideas, ideologies and movements, 22% (2)'></div></div><div class='l'>Antisemitism in Poland<small>25 of 25 analysed</small></div><div class='bar' role='img' aria-label='Antisemitism in Poland'><div class='seg' tabindex='0' style='flex:36.00;background:var(--g-c1)' data-tip='Antisemitism in Poland: People: journalists, commentators, public figures, 36% (9)'></div><div class='seg' tabindex='0' style='flex:24.00;background:var(--g-c3)' data-tip='Antisemitism in Poland: Organisations, 24% (6)'></div><div class='seg' tabindex='0' style='flex:40.00;background:var(--g-c5)' data-tip='Antisemitism in Poland: Events, 40% (10)'></div></div><div class='l'>China, Taiwan, Hong Kong and Tibet<small>152 of 152 analysed · chosen by subject</small></div><div class='bar' role='img' aria-label='China, Taiwan, Hong Kong and Tibet'><div class='seg' tabindex='0' style='flex:32.89;background:var(--g-c1)' data-tip='China, Taiwan, Hong Kong and Tibet: People: journalists, commentators, public figures, 33% (50)'></div><div class='seg' tabindex='0' style='flex:16.45;background:var(--g-c2)' data-tip='China, Taiwan, Hong Kong and Tibet: News outlets and media, 16% (25)'></div><div class='seg' tabindex='0' style='flex:16.45;background:var(--g-c3)' data-tip='China, Taiwan, Hong Kong and Tibet: Organisations, 16% (25)'></div><div class='seg' tabindex='0' style='flex:16.45;background:var(--g-c4)' data-tip='China, Taiwan, Hong Kong and Tibet: Ideas, ideologies and movements, 16% (25)'></div><div class='seg' tabindex='0' style='flex:17.76;background:var(--g-c5)' data-tip='China, Taiwan, Hong Kong and Tibet: Events, 18% (27)'></div></div><div class='l'>Socialism, communism and Marxism<small>154 of 154 analysed · chosen by subject</small></div><div class='bar' role='img' aria-label='Socialism, communism and Marxism'><div class='seg' tabindex='0' style='flex:33.12;background:var(--g-c1)' data-tip='Socialism, communism and Marxism: People: journalists, commentators, public figures, 33% (51)'></div><div class='seg' tabindex='0' style='flex:16.23;background:var(--g-c2)' data-tip='Socialism, communism and Marxism: News outlets and media, 16% (25)'></div><div class='seg' tabindex='0' style='flex:16.23;background:var(--g-c3)' data-tip='Socialism, communism and Marxism: Organisations, 16% (25)'></div><div class='seg' tabindex='0' style='flex:16.23;background:var(--g-c4)' data-tip='Socialism, communism and Marxism: Ideas, ideologies and movements, 16% (25)'></div><div class='seg' tabindex='0' style='flex:18.18;background:var(--g-c5)' data-tip='Socialism, communism and Marxism: Events, 18% (28)'></div></div><div class='l'>Islam<small>154 of 154 analysed · chosen by subject</small></div><div class='bar' role='img' aria-label='Islam'><div class='seg' tabindex='0' style='flex:32.47;background:var(--g-c1)' data-tip='Islam: People: journalists, commentators, public figures, 32% (50)'></div><div class='seg' tabindex='0' style='flex:16.23;background:var(--g-c2)' data-tip='Islam: News outlets and media, 16% (25)'></div><div class='seg' tabindex='0' style='flex:16.23;background:var(--g-c3)' data-tip='Islam: Organisations, 16% (25)'></div><div class='seg' tabindex='0' style='flex:16.23;background:var(--g-c4)' data-tip='Islam: Ideas, ideologies and movements, 16% (25)'></div><div class='seg' tabindex='0' style='flex:18.83;background:var(--g-c5)' data-tip='Islam: Events, 19% (29)'></div></div><div class='l'>Conservatism and the right<small>154 of 155 analysed · chosen by subject</small></div><div class='bar' role='img' aria-label='Conservatism and the right'><div class='seg' tabindex='0' style='flex:32.26;background:var(--g-c1)' data-tip='Conservatism and the right: People: journalists, commentators, public figures, 32% (50)'></div><div class='seg' tabindex='0' style='flex:16.13;background:var(--g-c2)' data-tip='Conservatism and the right: News outlets and media, 16% (25)'></div><div class='seg' tabindex='0' style='flex:16.13;background:var(--g-c3)' data-tip='Conservatism and the right: Organisations, 16% (25)'></div><div class='seg' tabindex='0' style='flex:16.13;background:var(--g-c4)' data-tip='Conservatism and the right: Ideas, ideologies and movements, 16% (25)'></div><div class='seg' tabindex='0' style='flex:19.35;background:var(--g-c5)' data-tip='Conservatism and the right: Events, 19% (30)'></div></div><div class='l'>Discrimination, including antisemitism and the far right<small>158 of 158 analysed · chosen by subject</small></div><div class='bar' role='img' aria-label='Discrimination, including antisemitism and the far right'><div class='seg' tabindex='0' style='flex:27.85;background:var(--g-c1)' data-tip='Discrimination, including antisemitism and the far right: People: journalists, commentators, public figures, 28% (44)'></div><div class='seg' tabindex='0' style='flex:15.82;background:var(--g-c2)' data-tip='Discrimination, including antisemitism and the far right: News outlets and media, 16% (25)'></div><div class='seg' tabindex='0' style='flex:15.82;background:var(--g-c3)' data-tip='Discrimination, including antisemitism and the far right: Organisations, 16% (25)'></div><div class='seg' tabindex='0' style='flex:16.46;background:var(--g-c4)' data-tip='Discrimination, including antisemitism and the far right: Ideas, ideologies and movements, 16% (26)'></div><div class='seg' tabindex='0' style='flex:24.05;background:var(--g-c5)' data-tip='Discrimination, including antisemitism and the far right: Events, 24% (38)'></div></div><div class='l'>Libertarianism, which on Wikipedia also covers liberalism<small>149 of 150 analysed · chosen by subject</small></div><div class='bar' role='img' aria-label='Libertarianism, which on Wikipedia also covers liberalism'><div class='seg' tabindex='0' style='flex:33.33;background:var(--g-c1)' data-tip='Libertarianism, which on Wikipedia also covers liberalism: People: journalists, commentators, public figures, 33% (50)'></div><div class='seg' tabindex='0' style='flex:16.67;background:var(--g-c2)' data-tip='Libertarianism, which on Wikipedia also covers liberalism: News outlets and media, 17% (25)'></div><div class='seg' tabindex='0' style='flex:16.67;background:var(--g-c3)' data-tip='Libertarianism, which on Wikipedia also covers liberalism: Organisations, 17% (25)'></div><div class='seg' tabindex='0' style='flex:16.67;background:var(--g-c4)' data-tip='Libertarianism, which on Wikipedia also covers liberalism: Ideas, ideologies and movements, 17% (25)'></div><div class='seg' tabindex='0' style='flex:16.67;background:var(--g-c5)' data-tip='Libertarianism, which on Wikipedia also covers liberalism: Events, 17% (25)'></div></div><div></div><div class='sc' aria-hidden='true'><span style='left:0%'>0%</span><span style='left:25%'>25%</span><span style='left:50%'>50%</span><span style='left:75%'>75%</span><span style='left:100%'>100%</span></div></div><p class='fnote'>Areas marked “chosen by subject” use a WikiProject's tags, because Wikipedia does not mark those subjects as contentious; here we chose the subjects.</p></div></section><aside class='st-tech'><h2>The full detail</h2><p>The rule in full, with its exceptions, and every chosen article ranked by page views in each area and kind, with its status. How the categories are drawn, and which articles each rule moves.</p><div class='links'><a href='articles-detail.html'>Full article lists</a><a href='categories.html'>Categories</a><a href='compare.html'>All analysed articles</a></div></aside></div><div id="stip" role="tooltip"></div><script>
+(function(){var t=document.getElementById('stip');
+function show(e){var s=e.target.closest('[data-tip]');if(!s)return;t.textContent=s.dataset.tip;t.style.display='block';
+ var r=s.getBoundingClientRect(),x=(e.clientX||r.left+r.width/2)+12,y=(e.clientY||r.bottom)+14;
+ t.style.left=Math.max(8,Math.min(x,innerWidth-t.offsetWidth-8))+'px';t.style.top=Math.min(y,innerHeight-t.offsetHeight-8)+'px';}
+function hide(){t.style.display='none';}
+document.querySelectorAll('.st [data-tip]').forEach(function(s){if(!s.getAttribute('aria-label'))s.setAttribute('aria-label',s.dataset.tip);
+ s.addEventListener('mousemove',show);s.addEventListener('mouseleave',hide);s.addEventListener('focus',show);s.addEventListener('blur',hide);});})();
+</script></main><footer><div class='in'>An independent project. Not affiliated with Wikipedia or the Wikimedia Foundation. Figures are computed by open code from Wikipedia's public records; <a href="https://github.com/mediapediatransparency/transparency-layer">source code and data</a>.</div></footer><script>(function(){var L=200;function fit(td,d,b){if(d.clientHeight&&d.scrollHeight<=d.clientHeight+2&&!d.classList.contains('open')){td.removeChild(b);d.className='';}}function run(root){if(!root.querySelectorAll)return;root.querySelectorAll('td:not([data-c])').forEach(function(td){td.setAttribute('data-c','');if(td.textContent.length<L)return;var d=document.createElement('div');d.className='clamp';while(td.firstChild)d.appendChild(td.firstChild);td.appendChild(d);var b=document.createElement('button');b.type='button';b.className='more';b.textContent='more';b.setAttribute('aria-expanded','false');b.onclick=function(){var o=d.classList.toggle('open');b.textContent=o?'less':'more';b.setAttribute('aria-expanded',o);};td.appendChild(b);requestAnimationFrame(function(){fit(td,d,b);});});}run(document);new MutationObserver(function(ms){ms.forEach(function(m){m.addedNodes.forEach(run);});}).observe(document.body,{childList:true,subtree:true});})();document.querySelectorAll('header.site details.dd').forEach(function(d){
+ d.addEventListener('toggle',function(){if(d.open)document.querySelectorAll('header.site details.dd[open]')
+  .forEach(function(o){if(o!==d)o.open=false})})});
+document.addEventListener('click',function(e){if(!e.target.closest('header.site details.dd'))
+ document.querySelectorAll('header.site details.dd[open]').forEach(function(o){o.open=false})});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')document.querySelectorAll(
+ 'header.site details.dd[open]').forEach(function(o){o.open=false;o.querySelector('summary').focus()})});</script></body></html>
