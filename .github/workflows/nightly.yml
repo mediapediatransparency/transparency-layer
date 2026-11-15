@@ -2,12 +2,14 @@
 #  1. If there is no article list yet, build it (`wtl candidates`); otherwise analyse the next
 #     batch of articles from it (`wtl batch`).
 #  2. Rebuild the website from all stored records and save the new records to the repository.
-#  3. Publish the website to GitHub Pages (only once the repository is public).
 # Downloaded Wikipedia data is kept between runs in the Actions cache, never in the repository.
+#
+# Not on a schedule: a run starts with an empty cache, and rebuilding the site would download every
+# analysed article's history again (longer than the time limit). Start it by hand (Actions → Run
+# workflow) once the cache is warm. The website is published from the maintainer's computer with
+# scripts/publish_pages.sh (GitHub Pages, gh-pages branch).
 name: Nightly analysis
 on:
-  schedule:
-    - cron: "15 1 * * *"
   workflow_dispatch:
     inputs:
       task:
@@ -18,8 +20,6 @@ on:
         default: "25"
 permissions:
   contents: write
-  pages: write
-  id-token: write
 concurrency:
   group: nightly
   cancel-in-progress: false
@@ -27,8 +27,6 @@ jobs:
   run:
     runs-on: ubuntu-latest
     timeout-minutes: 340
-    environment:
-      name: github-pages
     env:
       WTL_CONTACT: ${{ secrets.WTL_CONTACT }}
       WTL_SECRET: ${{ secrets.WTL_SECRET }}
@@ -62,7 +60,7 @@ jobs:
           path: cache
           key: wtl-cache-${{ github.run_id }}
       - name: Build the website
-        run: python -m wtl site --elsewhere
+        run: python -m wtl site --elsewhere-sample 5
       - name: Save new records to the repository
         run: |
           git config user.name "github-actions[bot]"
@@ -70,11 +68,3 @@ jobs:
           git add data out
           git diff --cached --quiet || git commit -m "Nightly analysis $(date -u +%F)"
           git push
-      - name: Package the website
-        if: ${{ !github.event.repository.private }}
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: site
-      - name: Publish the website
-        if: ${{ !github.event.repository.private }}
-        uses: actions/deploy-pages@v4

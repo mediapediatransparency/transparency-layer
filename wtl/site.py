@@ -25,6 +25,16 @@ SITE_DIR = ROOT / "site"
 DOCS = ROOT / "docs"
 NAME = "Transparency Layer for Wikipedia"
 REPO = "https://github.com/mediapediatransparency/wikipedia-transparency"
+# Where each article's full record (JSON) is linked. Unset: a copy in site/data/ beside the pages.
+# Set (e.g. the repository's raw out/ folder) for a public build: the copies are left out, which
+# keeps the published site under GitHub Pages' 1 GB limit; the records are the same bytes.
+DATA_BASE = os.environ.get("WTL_DATA_BASE", "").rstrip("/")
+
+
+def data_href(rec, up: str = "../") -> str:
+    if DATA_BASE:
+        return f"{DATA_BASE}/{slug(rec['article'])}/{rec['revision']}.json"
+    return f"{up}data/{slug(rec['article'])}.json"
 WIKI = "https://en.wikipedia.org"
 
 GROUP_NAMES = {"topic": "Arab–Israeli conflict articles", "control": "comparison articles"}
@@ -509,7 +519,7 @@ def article_page(rec, ctx: Context):
     h.append(f"<h1>{escape(title)}</h1>")
     h.append(f"<p class='meta'>Figures describe the article as it stood on {escape(date)} "
              f"({link(rec['permalink'], 'that exact version')}). Computed {escape(rec['computed'])}. "
-             f"{link(f'../data/{slug(title)}.json', 'Full data (JSON)')}.</p>")
+             f"{link(data_href(rec), 'Full data (JSON)')}.</p>")
 
     # ---- the opening then and now (whole first paragraph, side by side)
     h.append(then_now_top(rec, ctx))
@@ -740,7 +750,7 @@ def article_page(rec, ctx: Context):
              f"the article's history, the word-level authorship service WikiWho, and a "
              f"hand-checked list of sanctions. No AI is used to produce any figure. See "
              f"{link('../how-it-works.html', 'How it works')} for the method and its limits, and "
-             f"the {link(f'../data/{slug(title)}.json', 'full data')} for every number with its "
+             f"the {link(data_href(rec), 'full data')} for every number with its "
              f"source.</p>")
     desc = f"Who wrote the Wikipedia article {title}: authorship, concentration and sanctioned editors."
     body = "".join(h)
@@ -753,7 +763,7 @@ def article_page(rec, ctx: Context):
         cards["peers_s"] = peers.card(rec, ctx, "sources")
         body = layout.regroup(body, cards, g.GLANCE_CSS + peers.CSS, g.GLANCE_JS)
     return page(f"{title} · {NAME}", body, "", depth=1,
-                json_alt=f"../data/{slug(title)}.json", description=desc)
+                json_alt=data_href(rec), description=desc)
 
 
 # ---------------------------------------------------------------- compare page
@@ -2779,7 +2789,7 @@ def contested_section(rec, ctx) -> str:
         h.append("</table></div>")
         if len(top) > 15:
             h.append(f"<p class='small'>{num(len(top) - 15)} more are in the "
-                     f"{link(f'../data/{slug(rec['article'])}.json', 'full data')} (each sentence's “history”).</p>")
+                     f"{link(data_href(rec), 'full data')} (each sentence's “history”).</p>")
     return "".join(h)
 
 
@@ -3076,7 +3086,7 @@ def sources_section(rec, ctx):
     h.append("</table></div>")
     h.append(_non_source_line(allc, s["citations"]))
     if len(listed) > 25:
-        data = link(f"../data/{slug(rec['article'])}.json", "full data")
+        data = link(data_href(rec), "full data")
         h.append(f"<p class='small'>{len(listed) - 25} further sources are in the {data}.</p>")
     if ctx.outlets:
         h.append(MEANS_NOTE)
@@ -4493,13 +4503,15 @@ def search_index(ctx: Context) -> dict:
     S.sort(key=lambda x: (-x[2], x[0]))
     R = {a: area_name(a) for a in _area_order(ctx)}
     P = [[h, n] for h, n in PAGES if h != "search.html"]
-    return {"A": A, "Q": Q, "S": S, "R": R, "P": P}
+    for a, r in zip(A, arts):   # last item: the analysed revision, for the record's address
+        a.append(r["revision"])
+    return {"A": A, "Q": Q, "S": S, "R": R, "P": P, "DB": DATA_BASE}
 
 
 SEARCH_JS = r"""
 <script>
 (function(){
-var A=WTLS.A,Q=WTLS.Q,S=WTLS.S,R=WTLS.R,P=WTLS.P;
+var A=WTLS.A,Q=WTLS.Q,S=WTLS.S,R=WTLS.R,P=WTLS.P,DB=WTLS.DB||'';
 var box=document.getElementById('q'),out=document.getElementById('res');
 function esc(s){return String(s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
 function norm(s){return String(s).normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase().replace(/[‐-―\-_]/g,' ').replace(/[^\w\s.+]/g,' ').replace(/\s+/g,' ').trim();}
@@ -4527,7 +4539,7 @@ function run(){
   var fa=find(nA,q,toks,60);
   h+=sec('Analysed articles',fa[0],fa[1].length,fa[1].map(function(i){var a=A[i];
     var also=a[4]&&a[4].length?'; also on the '+a[4].map(function(k){return esc(R[k]||k);}).join(', ')+' list':'';
-    return '<div class="hit">'+arts(i)+' <span class="small">'+esc(a[3])+(a[2]?' · '+esc(R[a[2]]||a[2]):'')+also+'</span><div class="small"><a href="articles/'+esc(a[1])+'.html">report</a><a href="editor.html#a='+esc(a[1])+'">editors</a><a href="data/'+esc(a[1])+'.json">data (JSON)</a><a href="'+wp(a[0])+'">on Wikipedia</a></div></div>';}).join(''));
+    return '<div class="hit">'+arts(i)+' <span class="small">'+esc(a[3])+(a[2]?' · '+esc(R[a[2]]||a[2]):'')+also+'</span><div class="small"><a href="articles/'+esc(a[1])+'.html">report</a><a href="editor.html#a='+esc(a[1])+'">editors</a><a href="'+(DB?DB+'/'+esc(a[1])+'/'+a[a.length-1]+'.json':'data/'+esc(a[1])+'.json')+'">data (JSON)</a><a href="'+wp(a[0])+'">on Wikipedia</a></div></div>';}).join(''));
   var fq=find(nQ,q,toks,30);
   h+=sec('On a list, not analysed yet',fq[0],fq[1].length,fq[1].map(function(i){var x=Q[i];
     return '<div class="hit">'+esc(x[0])+' <span class="small">queued · '+x[1].map(function(k){return '<a href="articles-detail.html#list-'+esc(k)+'">'+esc(R[k]||k)+'</a>';}).join(', ')+' · <a href="'+wp(x[0])+'">on Wikipedia</a></span></div>';}).join(''));
@@ -5427,7 +5439,8 @@ def _write(SITE_DIR, clean, ctx):
     for r in clean:
         (SITE_DIR / "articles" / f"{slug(r['article'])}.html").write_text(_redact.render(article_page(r, ctx)),
                                                                          encoding="utf-8")
-        (SITE_DIR / "data" / f"{slug(r['article'])}.json").write_text(json_writer.dumps(r), encoding="utf-8")
+        if not DATA_BASE:
+            (SITE_DIR / "data" / f"{slug(r['article'])}.json").write_text(json_writer.dumps(r), encoding="utf-8")
     shutil.copy(OUT_DIR / "summary.json", SITE_DIR / "data" / "summary.json")
     (SITE_DIR / "index.html").write_text(home_page(ctx), encoding="utf-8")
     from . import readers as _rd

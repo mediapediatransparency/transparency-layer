@@ -157,7 +157,8 @@ def cmd_site(a):
     recs, groups = stored_records()
     areas = {e["article"]: e.get("topic_area") or "" for e in load_testset().values()}
     kinds = {e["article"]: e.get("kind") or "" for e in load_testset().values()}
-    d = site.build(recs, groups, areas, elsewhere=a.elsewhere_sample or a.elsewhere, kinds=kinds)
+    d = site.build(recs, groups, areas, elsewhere=a.elsewhere_sample or a.elsewhere, kinds=kinds,
+                   out_dir=a.out)
     print(f"built site in {d} ({len(recs)} article pages); open {d / 'index.html'}")
 
 
@@ -483,6 +484,7 @@ def main(argv=None):
                    help="also fetch each listed editor's recent edits across Wikipedia (slow)")
     p.add_argument("--elsewhere-sample", type=int, default=0, metavar="N",
                    help="fetch them only for the N editors with the most text in each area")
+    p.add_argument("--out", help="build into this folder instead of site/ (e.g. the public build)")
     p.set_defaults(fn=cmd_site)
     p = sub.add_parser("batch")
     p.add_argument("--n", type=int, default=25)
