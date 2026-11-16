@@ -40,4 +40,5 @@ TREE=$(GIT_INDEX_FILE="$TMP_INDEX" git write-tree)
 rm -f "$TMP_INDEX"
 COMMIT=$(git commit-tree "$TREE" -m "Publish site from $SHA")
 git push -f origin "$COMMIT:refs/heads/gh-pages"
+rm -rf out/site-public          # rebuilt on every publish; not kept on disk
 echo "Published from $SHA."
